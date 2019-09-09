@@ -1,11 +1,34 @@
 install.packages("devtools")
+install.packages("tidyverse","readr")
 devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 
 library(nflscrapR)
 library(tidyverse)
-setwd("/Users/ColinWelsh/Documents/dev/")
+library(readr)
+setwd("/Volumes/HDD/Users/colinwelsh/Documents/dev/")
+
+##laptop = /Volumes/HDD/Users/colinwelsh/Documents/dev/
+##iMac = Users/colinwelsh/Documents/dev/
+
+#season play by play
+pbp_data <- read.csv(file ="football/data/season_total/season2019.csv")
 pbp_data <- scrape_season_play_by_play(2019)
-write.csv(pbp_data, file = "/GitHub/ff19/scrape/season2019.csv",row.names=FALSE)
+write.csv(pbp_data, file = "football/data/season_total/season2019.csv",row.names=FALSE)
+
+##game ID scrape
+game_ids2019 <- read.csv("data/games/game_ids2019.csv")
+
+##Get Game IDs for given week
+week <- 1
+selectedWeek <- game_ids2019$week == week
+
+#create new data.frame
+gameID_loop <- game_ids2019[selectedWeek,]
+
+##Loop through game IDs and scrap json
+for (i in selectedWeek) {
+  gameID <- 
+}
 
 ##  Note: the pbp_data line will take a long time; that's normal. On the write.csv line, change the part in "quotes"
 ##  to match where you want to save.
@@ -16,13 +39,13 @@ library(nflscrapR)
 library(tidyverse)
 
 # get season game IDs
-game_ids2019 <- scrape_game_ids(2019, weeks = 1:17)
-game_ids2018 <- scrape_game_ids(2018, weeks = 1:17)
-write.csv(game_ids2019, file = "football/data/games/game_ids2019.csv",row.names=FALSE)
-write.csv(game_ids2018, file = "football/data/games/game_ids2018.csv",row.names=FALSE)
+year <- 2019
+game_ids <- read.csv(file = paste("football/data/games/game_ids",year,".csv", sep =""))
+game_ids <- scrape_game_ids(year, weeks = 1:17)
+write.csv(game_ids, file = paste("football/data/games/game_ids",year,".csv", sep =""),row.names=FALSE)
 
-pbp_data <- scrape_json_play_by_play(2019090500)
-write.csv(pbp_data, file = "football/data/games/2019090500.csv",row.names=FALSE)
+pbp_data <- scrape_json_play_by_play(2019090806)
+write.csv(pbp_data, file = "football/data/games/2019090806.csv",row.names=FALSE)
 write.csv(pbp_data, file = "football/data/season_total/season2019.csv",row.names=FALSE)
 season2019 <- read.csv(file = "football/data/season_total/season2019.csv")
 merge(pbp_data, season2019, all.y = TRUE)
