@@ -5,30 +5,44 @@ devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 library(nflscrapR)
 library(tidyverse)
 library(readr)
-setwd("/Volumes/HDD/Users/colinwelsh/Documents/dev/")
 
-##laptop = /Volumes/HDD/Users/colinwelsh/Documents/dev/
-##iMac = Users/colinwelsh/Documents/dev/
+##laptop
+##setwd("/Volumes/HDD/Users/colinwelsh/Documents/dev/")
+##iMac
+setwd("Users/colinwelsh/Documents/dev/")
+##make this an if statement
+
 
 #season play by play
 pbp_data <- read.csv(file ="football/data/season_total/season2019.csv")
 pbp_data <- scrape_season_play_by_play(2019)
 write.csv(pbp_data, file = "football/data/season_total/season2019.csv",row.names=FALSE)
 
+
 ##game ID scrape
-game_ids2019 <- read.csv("data/games/game_ids2019.csv")
+game_ids2019 <- read.csv("football/data/games/game_ids2019.csv")
 
 ##Get Game IDs for given week
 week <- 1
 selectedWeek <- game_ids2019$week == week
 
 #create new data.frame
-gameID_loop <- game_ids2019[selectedWeek,]
+game_id_loop <- game_ids2019[selectedWeek,]
+
+game_id_loop$game_id
+
+n_complete_games <- game_id_loop$state_of_game == "POST"
+
+nrow(game_id_loop)
+nrow(n_complete_games)
 
 ##Loop through game IDs and scrap json
-for (i in selectedWeek) {
-  gameID <- 
+for (game_id_loop$game_id in game_id_loop) {
+  
 }
+
+
+
 
 ##  Note: the pbp_data line will take a long time; that's normal. On the write.csv line, change the part in "quotes"
 ##  to match where you want to save.
