@@ -23,14 +23,32 @@ length(gameIDvalue)
 
 
 #get postgame only
+game_ids2019 <- read.csv("data/games/game_ids2019.csv")
 pg_id <- game_id_loop$state_of_game == "POST"
 postgame_id <- game_id_loop[pg_id,]
+
+sort(postgame_id$game_id, decreasing = FALSE, na.last = TRUE)
 
 n_complete_games <- length(which(pg_id))
 
 
+gameIDselector <- 1
+gameIDpbploop <- gameIDvalue[gameIDselector]
 
+while(gameIDselector <= n_complete_games) {
+  gameIDpbploop <- gameIDvalue[gameIDselector]
+  print(gameIDpbploop)
+  pbp_data <- scrape_json_play_by_play(gameIDpbploop)
+  write.csv(pbp_data, file= paste("data/games/", gameIDpbploop, ".csv", sep = ""))
+  ##write.csv(pbp_data, file = "data/season_total/season2019.csv",row.names=FALSE)
+  #season2019 <- read.csv(file = "data/season_total/season2019.csv")
+  #merge(pbp_data, season2019, all.y = TRUE)
+  print("PBP gathered for Game ID:", gameIDpbploop)
+  gameIDselector = gameIDselector + 1
+}
 
+pbp_data <- scrape_json_play_by_play(2019090901)
+write.csv(pbp_data, file= paste("data/games/", 2019090901, ".csv", sep = ""))
 
 
 ##Loop through game IDs and scrap json
