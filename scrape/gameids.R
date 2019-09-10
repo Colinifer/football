@@ -17,23 +17,24 @@ game_id_loop <- game_ids2019[selectedWeek,]
 #sort by game ID
 sort(game_id_loop$game_id, decreasing = FALSE, na.last = TRUE)
 
-gameIDvalue<- game_id_loop$game_id
+gameIDvalue <- game_id_loop$game_id
 
-function(gameIDvalue) {
-  
-}
-  
-
+length(gameIDvalue)
 
 
 #get postgame only
 pg_id <- game_id_loop$state_of_game == "POST"
 postgame_id <- game_id_loop[pg_id,]
 
-n_complete_games<- table(game_id_loop$state_of_game)["POST"]
+n_complete_games <- length(which(pg_id))
+
+
+
+
+
 
 ##Loop through game IDs and scrap json
-for (i in 1:n_complete_games()) {
+for (i in 1:n_complete_games) {
 # get season game IDs
   selectedYear <- 2019
   selectedWeeks <- 1

@@ -13,5 +13,5 @@
 "reg","2019090810","DAL","NYG",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090810/2019090810_gtd.json",35,17
 "reg","2019090809","ARI","DET",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090809/2019090809_gtd.json",27,27
 "reg","2019090812","NE","PIT",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090812/2019090812_gtd.json",33,3
-"reg","2019090900","NO","HOU",1,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019090900/2019090900_gtd.json",NA,NA
+"reg","2019090900","NO","HOU",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090900/2019090900_gtd.json",30,28
 "reg","2019090901","OAK","DEN",1,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019090901/2019090901_gtd.json",NA,NA
