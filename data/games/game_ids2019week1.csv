@@ -1,0 +1,17 @@
+"type","game_id","home_team","away_team","week","season","state_of_game","game_url","home_score","away_score"
+"reg","2019090500","CHI","GB",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090500/2019090500_gtd.json",3,10
+"reg","2019090800","CAR","LA",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090800/2019090800_gtd.json",27,30
+"reg","2019090806","PHI","WAS",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090806/2019090806_gtd.json",32,27
+"reg","2019090805","NYJ","BUF",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090805/2019090805_gtd.json",16,17
+"reg","2019090804","MIN","ATL",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090804/2019090804_gtd.json",28,12
+"reg","2019090803","MIA","BAL",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090803/2019090803_gtd.json",10,59
+"reg","2019090802","JAX","KC",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090802/2019090802_gtd.json",26,40
+"reg","2019090801","CLE","TEN",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090801/2019090801_gtd.json",13,43
+"reg","2019090807","LAC","IND",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090807/2019090807_gtd.json",30,24
+"reg","2019090808","SEA","CIN",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090808/2019090808_gtd.json",21,20
+"reg","2019090811","TB","SF",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090811/2019090811_gtd.json",17,31
+"reg","2019090810","DAL","NYG",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090810/2019090810_gtd.json",35,17
+"reg","2019090809","ARI","DET",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090809/2019090809_gtd.json",27,27
+"reg","2019090812","NE","PIT",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090812/2019090812_gtd.json",33,3
+"reg","2019090900","NO","HOU",1,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019090900/2019090900_gtd.json",NA,NA
+"reg","2019090901","OAK","DEN",1,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019090901/2019090901_gtd.json",NA,NA

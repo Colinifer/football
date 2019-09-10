@@ -31,10 +31,15 @@ game_id_loop <- game_ids2019[selectedWeek,]
 
 game_id_loop$game_id
 
-n_complete_games <- game_id_loop$state_of_game == "POST"
+#get postgame only
+pg_id <- game_id_loop$state_of_game == "POST"
+postgame_id <- game_id_loop[pg_id,]
+
+
+n_complete_games <- game_id_loop$game_id
 
 nrow(game_id_loop)
-nrow(n_complete_games)
+table(game_id_loop$state_of_game)["POST"]
 
 ##Loop through game IDs and scrap json
 for (game_id_loop$game_id in game_id_loop) {
@@ -42,21 +47,12 @@ for (game_id_loop$game_id in game_id_loop) {
 }
 
 
-
-
-##  Note: the pbp_data line will take a long time; that's normal. On the write.csv line, change the part in "quotes"
-##  to match where you want to save.
-
-##  4. To get ONE GAME of data (lots faster). In R (again, change part in quotes to save to directory on your computer)
-
-library(nflscrapR)
-library(tidyverse)
-
 # get season game IDs
-year <- 2019
-game_ids <- read.csv(file = paste("football/data/games/game_ids",year,".csv", sep =""))
-game_ids <- scrape_game_ids(year, weeks = 1:17)
-write.csv(game_ids, file = paste("football/data/games/game_ids",year,".csv", sep =""),row.names=FALSE)
+selectedYear <- 2019
+selectedWeeks <- 1
+game_ids <- read.csv(file = paste("football/data/games/game_ids",selectedYear, "week",selectedWeeks, ".csv", sep =""))
+game_ids <- scrape_game_ids(year, weeks = selectedWeeks)
+write.csv(game_ids, file = paste("football/data/games/game_ids", selectedYear, "week", selectedWeeks, ".csv", sep =""),row.names=FALSE)
 
 pbp_data <- scrape_json_play_by_play(2019090806)
 write.csv(pbp_data, file = "football/data/games/2019090806.csv",row.names=FALSE)
