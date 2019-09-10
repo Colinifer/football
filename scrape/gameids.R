@@ -1,18 +1,3 @@
-install.packages("devtools")
-install.packages("tidyverse","readr")
-devtools::install_github(repo = "maksimhorowitz/nflscrapR")
-
-library(nflscrapR)
-library(tidyverse)
-library(readr)
-
-##laptop
-##setwd("/Volumes/HDD/Users/colinwelsh/Documents/dev/")
-##iMac
-setwd("Users/colinwelsh/Documents/dev/")
-##make this an if statement
-
-
 #season play by play
 pbp_data <- read.csv(file ="football/data/season_total/season2019.csv")
 pbp_data <- scrape_season_play_by_play(2019)
