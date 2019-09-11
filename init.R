@@ -1,9 +1,17 @@
-##install.packages("devtools", "tidyverse", "readr")
+install.packages("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools")
 ##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 
 library(nflscrapR)
 library(tidyverse)
 library(readr)
+library(pander)
+
+library(tidyverse)
+library(dplyr)
+library(na.tools)
+library(ggimage)
+
+
 
 ##Likely directories
 id <- "~/"
