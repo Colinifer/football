@@ -1,26 +1,19 @@
-install.packages("devtools")
-install.packages("tidyverse","readr")
-devtools::install_github(repo = "maksimhorowitz/nflscrapR")
+##install.packages("devtools", "tidyverse", "readr")
+##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 
 library(nflscrapR)
 library(tidyverse)
 library(readr)
 
-##laptop
-##setwd("/Volumes/HDD/Users/colinwelsh/Documents/dev/")
-##iMac
-setwd("Users/colinwelsh/Documents/dev/")
-##make this an if statement
-
 
 #season play by play
-pbp_data <- read.csv(file ="football/data/season_total/season2019.csv")
+pbp_data <- read.csv(file ="data/season_total/season2019.csv")
 pbp_data <- scrape_season_play_by_play(2019)
-write.csv(pbp_data, file = "football/data/season_total/season2019.csv",row.names=FALSE)
+write.csv(pbp_data, file = "data/season_total/season2019.csv",row.names=FALSE)
 
 
 ##game ID scrape
-game_ids2019 <- read.csv("football/data/games/game_ids2019.csv")
+game_ids2019 <- read.csv("data/games/game_ids2019.csv")
 
 ##Get Game IDs for given week
 week <- 1
@@ -29,30 +22,48 @@ selectedWeek <- game_ids2019$week == week
 #create new data.frame
 game_id_loop <- game_ids2019[selectedWeek,]
 
-game_id_loop$game_id
+#sort by game ID
+sort(game_id_loop$game_id, decreasing = FALSE, na.last = TRUE)
+
+gameIDvalue <- game_id_loop$game_id
+
+length(gameIDvalue)
+
 
 #get postgame only
+game_ids2019 <- read.csv("data/games/game_ids2019.csv")
 pg_id <- game_id_loop$state_of_game == "POST"
 postgame_id <- game_id_loop[pg_id,]
 
+sort(postgame_id$game_id, decreasing = FALSE, na.last = TRUE)
 
-n_complete_games <- game_id_loop$game_id
+n_complete_games <- length(which(pg_id))
 
-nrow(game_id_loop)
-table(game_id_loop$state_of_game)["POST"]
 
-##Loop through game IDs and scrap json
-for (game_id_loop$game_id in game_id_loop) {
-  
+gameIDselector <- 1
+gameIDpbploop <- gameIDvalue[gameIDselector]
+season2019 <- pbp_data
+
+while(gameIDselector <= n_complete_games) {
+  gameIDpbploop <- gameIDvalue[gameIDselector]
+  print(gameIDpbploop)
+  pbp_data <- scrape_json_play_by_play(gameIDpbploop)
+  #write.csv(pbp_data, file= paste("data/games/", gameIDpbploop, ".csv", sep = ""))
+  ##write.csv(pbp_data, file = "data/season_total/season2019.csv",row.names=FALSE)
+  #season2019 <- read.csv(file = "data/season_total/season2019.csv")
+  season2019 <- rbind(season2019, pbp_data)
+  write.csv(season2019, "data/season_total/season2019.csv")
+  print(paste("Play by play gathered for", gameIDpbploop, sep = " "))
+  gameIDselector = gameIDselector + 1
 }
 
+pbp_data <- scrape_json_play_by_play(2019090901)
+write.csv(pbp_data, file= paste("data/games/", 2019090901, ".csv", sep = ""))
 
-# get season game IDs
-selectedYear <- 2019
-selectedWeeks <- 1
-game_ids <- read.csv(file = paste("football/data/games/game_ids",selectedYear, "week",selectedWeeks, ".csv", sep =""))
-game_ids <- scrape_game_ids(year, weeks = selectedWeeks)
-write.csv(game_ids, file = paste("football/data/games/game_ids", selectedYear, "week", selectedWeeks, ".csv", sep =""),row.names=FALSE)
+
+game_ids <- scrape_game_ids(selectedYear, weeks = selectedWeeks)
+write.csv(game_ids, file = paste("data/games_data/reg_season/reg_games_", selectedYear, ".csv", sep =""),row.names=FALSE)
+
 
 pbp_data <- scrape_json_play_by_play(2019090806)
 write.csv(pbp_data, file = "football/data/games/2019090806.csv",row.names=FALSE)
