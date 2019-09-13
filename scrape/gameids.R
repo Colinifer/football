@@ -12,12 +12,15 @@ pbp_data <- scrape_season_play_by_play(2019)
 write.csv(pbp_data, file = "data/season_total/season2019.csv",row.names=FALSE)
 
 
+##make a function
+
+
 ##game ID scrape
-game_ids2019 <- read.csv("data/games/game_ids2019.csv")
+games <- read.csv("data/games/game_ids2019.csv")
 
 ##Get Game IDs for given week
 week <- 1
-selectedWeek <- game_ids2019$week == week
+selectedWeek <- games$week == week
 
 #create new data.frame
 game_id_loop <- game_ids2019[selectedWeek,]
