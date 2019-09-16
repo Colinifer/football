@@ -5,8 +5,6 @@ library(nflscrapR)
 library(tidyverse)
 library(readr)
 library(pander)
-
-library(tidyverse)
 library(dplyr)
 library(na.tools)
 library(ggimage)
