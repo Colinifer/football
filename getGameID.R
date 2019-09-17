@@ -5,27 +5,47 @@ library(nflscrapR)
 library(tidyverse)
 library(readr)
 
+##set custom variables
+  userYear <- 2019
+  userWeek <- 2
+  today <- Sys.Date()
+  
+  #test date
+  #date <- 20190915
+  date <- format(today, format="%Y%m%d")
+  
+game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
+  
+  currentGameIDs <- game_ids$game_id
+  currentGames <- grep(date, currentGameIDs)
+  games_in_play <- currentGameIDs[currentGames]
+  games_in_play
+  nplay <- length(games_in_play)
+  nplayLoop <- 2
+##
 
-##Loop through game IDs and scrap json
-# get season game IDs
+ntrue <- (which(currentGames==TRUE))
 
 
-userYear <- 2019
-userWeek <- 2
-today <- Sys.Date()
-date <- 20190915
-date <- format(today, format="%Y%m%d")
-trueLoop <- 1
-currentGameIDs <- game_ids$game_id
-currentGames <- grepl(date, currentGameIDs)
-nTRUE <- length(which(currentGames==TRUE))
+#end of night
+game_ids <- scrape_game_ids(userYear)
+game_ids[currentGames , "state_of_game"] <- "POST"
+game_ids[game_ids$week==userWeek , "state_of_game"]
+write.csv(game_ids, file = paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep = ""),row.names=FALSE)
+
+#need new loop for the currentGameIDS to scrape
+#don't scrape if state_of_game POST
+pbp <- scrape_json_play_by_play(games_in_play)
+write.csv(pbp, file = paste("data/games_data/", userYear,"/", games_in_play, ".csv", sep = ""))
+
+
 nGames <- game_idRows[trueLoop]
 currentGameIDs[trueLoop]
-while (userYear <= 2019) {
-  print(userYear)
+#while (userYear <= 2019) {
+#  print(userYear)
   game_ids <- scrape_game_ids(userYear, weeks = userWeek)
   #if (file.exists("data/games_data/reg_season/reg_games_2019.csv")) {
-    while (trueLoop <= 16) {
+  for (tru in trueLoop) {
       if (currentGames[trueLoop] == TRUE) {
         print(paste("Scraping game ", currentGameIDs[trueLoop], sep = ""))
         pbp <- scrape_json_play_by_play(currentGameIDs[trueLoop])
@@ -39,7 +59,7 @@ while (userYear <= 2019) {
         print(paste("trueLoop:", trueLoop, sep = " "))
       }
     }
-}
+#}
   #write.csv(game_ids, file = paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep = ""),row.names=FALSE)
   #print(paste("Game IDs gathered for", userYear, sep = " "))
   #userYear = userYear + 1
@@ -49,7 +69,7 @@ gameIDselector <- 1
 gameIDpbploop <- gameIDvalue[gameIDselector]
 season2019 <- pbp_data
 
-while(trueLoop <= nTRUE) {
+while(trueLoop <= ntrue) {
   gameIDpbploop <- game_ids[trueLoop]
   print(gameIDpbploop)
   pbp_data <- scrape_json_play_by_play(gameIDpbploop)
