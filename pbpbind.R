@@ -1,5 +1,5 @@
 userYear <- 2019
-userWeek <- 2
+userWeek <- 3
 
 g <- read.csv(paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep = ""))
 g <- g %>% filter(state_of_game == "POST")
@@ -13,5 +13,4 @@ for (x in id) {
 
 write.csv(new_plays, paste("data/games_data/", userYear, "/pbp", userYear, ".csv", sep = ""))
 
-
-read.csv(paste("data/games_data/", userYear, "/", sep = "")
+seasonpbp <- read.csv(paste("data/games_data/", userYear, "/pbp", userYear, ".csv", sep = ""))

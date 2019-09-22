@@ -11,7 +11,7 @@ library(readr)
   today <- Sys.Date()
   
   #test date
-  #date <- 20190915
+  date <- 20190919
   date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
