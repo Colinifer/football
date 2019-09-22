@@ -28,11 +28,12 @@ for (x in games_in_play) {
   #if pbp has END GAME change state_of_game to POST
   if(any(endGame == TRUE)) {
     game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
-    print(paste("Change state of game for ", x, " to POST" sep = ""))
-    } else {
-      #scrape
-      print(paste("Scraping game ", x, sep = ""))
-      y <- scrape_json_play_by_play(x)
-      write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
-    }
+    print(paste("Change state of game for ", x, " to POST", sep = ""))
+  } else {
+    #scrape
+    #check for end game and add post status if scrape includes
+    print(paste("Scraping game ", x, sep = ""))
+    y <- scrape_json_play_by_play(x)
+    write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
   }
+}
