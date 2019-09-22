@@ -7,7 +7,7 @@ library(readr)
 
 ##set custom variables
   userYear <- 2019
-  userWeek <- 2
+  userWeek <- 3
   today <- Sys.Date()
   
   #test date
@@ -21,7 +21,7 @@ game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
   games_in_play <- currentGameIDs[currentGames]
   games_in_play
   nplay <- length(games_in_play)
-  nplayLoop <- 2
+  nplayLoop <- 1
 ##
 
 ntrue <- (which(currentGames==TRUE))
@@ -39,21 +39,18 @@ pbp <- scrape_json_play_by_play(games_in_play)
 write.csv(pbp, file = paste("data/games_data/", userYear,"/", games_in_play, ".csv", sep = ""))
 
 
-nGames <- game_idRows[trueLoop]
-currentGameIDs[trueLoop]
-#while (userYear <= 2019) {
-#  print(userYear)
-  game_ids <- scrape_game_ids(userYear, weeks = userWeek)
-  #if (file.exists("data/games_data/reg_season/reg_games_2019.csv")) {
-  for (tru in trueLoop) {
-      if (currentGames[trueLoop] == TRUE) {
-        print(paste("Scraping game ", currentGameIDs[trueLoop], sep = ""))
-        pbp <- scrape_json_play_by_play(currentGameIDs[trueLoop])
-        write.csv(pbp, file = paste("data/games_data/", userYear,"/", currentGameIDs[trueLoop], ".csv", sep = ""))
-        trueLoop <- trueLoop + 1
-        game_idRows[trueLoop]
-        print(paste("trueLoop:", trueLoop, sep = " "))
-      } else if (currentGames[trueLoop] == FALSE) { 
+#scrape pbp of active games
+for (x in games_in_play) {
+  print(paste("Scraping game ", x, sep = ""))
+  y <- scrape_json_play_by_play(x)
+  write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
+}
+#if pbp has END GAME
+for (x in games_in_play) {
+    
+  }
+  
+  else if (currentGames[trueLoop] == FALSE) { 
         trueLoop <- trueLoop + 1
         game_idRows[trueLoop]
         print(paste("trueLoop:", trueLoop, sep = " "))
