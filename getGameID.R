@@ -45,9 +45,12 @@ for (x in games_in_play) {
   y <- scrape_json_play_by_play(x)
   write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
 }
-#if pbp has END GAME
+#if pbp has END GAME change state_of_game to POST
 for (x in games_in_play) {
-    
+  y <- read.csv(paste("data/games_data/", userYear, "/", x, ".csv", sep = ""))
+  endGame <- grepl("END GAME", y$desc)
+  if(any(endGame == TRUE))
+    game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
   }
   
   else if (currentGames[trueLoop] == FALSE) { 

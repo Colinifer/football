@@ -1,4 +1,4 @@
-install.packages("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools")
+##install.packages("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools")
 ##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 
 library(nflscrapR)
@@ -10,14 +10,14 @@ library(na.tools)
 library(ggimage)
 
 
+gid <- paste(getwd())
 
-##Likely directories
-id <- "~/"
-wd <- "/Users/colinwelsh/Documents/dev/football/"
-
-setwd(id)
-setwd(wd)
-
-getwd()
-rm(wd, id)
-print("Ready for some football")
+if (gid == "/Volumes/HDD/Users/colinwelsh") {
+  ##Maverick - MBP
+  setwd("~/Documents/dev/football")
+  print("Maverick is ready for some football")
+} else if (gid == "") {
+  ##Goose - iMac
+  
+  ##add Goose
+}
