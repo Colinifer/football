@@ -27,3 +27,4 @@ if (gid == "/Volumes/HDD/Users/colinwelsh") {
   ##add Goose
 } 
 print(paste(device, "is ready for some football", sep = " "))
+rm(gid, device)
