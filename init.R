@@ -9,15 +9,21 @@ library(dplyr)
 library(na.tools)
 library(ggimage)
 
+  ##test
+  ##setwd("~/")
 
 gid <- paste(getwd())
+gid
+device <- ""
 
 if (gid == "/Volumes/HDD/Users/colinwelsh") {
   ##Maverick - MBP
   setwd("~/Documents/dev/football")
-  print("Maverick is ready for some football")
-} else if (gid == "") {
+  device <- "Maverick (MBP)"
+} else if (gid == "/Users/ColinWelsh") {
   ##Goose - iMac
-  
+  setwd("~/Documents/dev/football")
+  device <- "Goose (iMac)"
   ##add Goose
-}
+} 
+print(paste(device, "is ready for some football", sep = " "))
