@@ -1,4 +1,4 @@
-##install.packages("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools")
+##install.packages("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors")
 ##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 
 library(nflscrapR)
@@ -8,6 +8,7 @@ library(pander)
 library(dplyr)
 library(na.tools)
 library(ggimage)
+library(teamcolors)
 
   ##test
   ##setwd("~/")
