@@ -61,15 +61,13 @@ for (x in games_in_play) {
   }
 }
   
+  
 ##  game_ids[game_ids$game_id == 2019092300, "state_of_game"] <- "PRE"
 ##  write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
   
   
-
-  
-  
-  
-  # Pull out the Steelers and Chief colors:
+  # note: Pull out the Bears and Redskins colors:
+  # note: Make this dynamic across games and add to loop
   nfl_teamcolors <- teamcolors %>% filter(league == "nfl")
   chi_color <- nfl_teamcolors %>%
     filter(name == "Chicago Bears") %>%
@@ -112,9 +110,12 @@ for (x in games_in_play) {
 
 ##print the last 3 plays
   
-  ##class/function this somehow??
+  ## note: class/function this somehow??
   
   print("Last play:")
   print(paste("EPA Added:", y$epa[nrow(y)-2], ",", y$desc[nrow(y)-2], sep = " "))
   print(paste("EPA Added:", y$epa[nrow(y)-1], ",", y$desc[nrow(y)-1], sep = " "))
   print(paste("EPA Added:", y$epa[nrow(y)], ",", y$desc[nrow(y)], sep = " "))
+  
+## note: print winner and score
+  endGame == TRUE
