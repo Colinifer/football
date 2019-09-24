@@ -10,6 +10,8 @@ library(tidyverse)
 # pbp_19 <- scrape_season_play_by_play(2019)
 # But this takes awhile, instead can directly access data I've already scraped:
 userYear <- 2019
+userWeek <- 3
+chartTitle <- paste("Through week", userWeek, "of", userYear, "NFL season", sep = " ")
 
 pbp_19 <- read.csv(paste("data/games_data/", userYear, "/pbp", userYear, ".csv", sep = ""))
 
@@ -213,7 +215,7 @@ chart_summary_data %>%
        y = "Defensive EPA per game",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive EPA per game for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -231,7 +233,7 @@ chart_summary_data %>%
        y = "Defensive EPA per pass and run play",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive EPA per pass and run plays for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -249,7 +251,7 @@ chart_summary_data %>%
        y = "Defensive success rate for pass and run plays",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive success rate for pass and run plays for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0.5, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0.5, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -267,7 +269,7 @@ chart_summary_data %>%
        y = "Defensive EPA per dropback",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive EPA per dropback for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -284,7 +286,7 @@ chart_summary_data %>%
        y = "Defensive dropback success rate",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive dropback success rates for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0.5, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0.5, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -302,7 +304,7 @@ chart_summary_data %>%
        y = "Defensive air EPA per completion",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive air EPA per completion for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -320,7 +322,7 @@ chart_summary_data %>%
        y = "Defensive yac EPA per completion",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive yac EPA per completion for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   #geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   #geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -338,7 +340,7 @@ chart_summary_data %>%
        y = "Defensive EPA per designed run",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive EPA per designed run for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -354,7 +356,7 @@ chart_summary_data %>%
        y = "Defensive designed run success rate",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive designed run success rates for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0.5, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0.5, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -373,7 +375,7 @@ chart_summary_data %>%
        y = "Defensive EPA per sack",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive EPA per sack for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -391,7 +393,7 @@ chart_summary_data %>%
        y = "Defensive EPA per sack (lost fumbles excluded)",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive EPA per sack (lost fumbles excluded) for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -410,7 +412,7 @@ chart_summary_data %>%
        y = "Defensive EPA per punt",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive EPA per punt for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = chartTitle) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +
@@ -428,7 +430,7 @@ chart_summary_data %>%
        y = "Defensive EPA per kickoff",
        caption = "Data from nflscrapR",
        title = "Offensive and Defensive EPA per kickoff for each team",
-       subtitle = "Through week 8 of 2019 NFL season") +
+       subtitle = paste("Through week", userWeek, "of", userYear, "NFL season", sep = " ")) +
   geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
   geom_vline(xintercept = 0, color = "red", linetype = "dashed") +
   theme_bw() +

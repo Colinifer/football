@@ -61,20 +61,8 @@ for (x in games_in_play) {
   }
 }
   
-
-
-  
 ##  game_ids[game_ids$game_id == 2019092300, "state_of_game"] <- "PRE"
 ##  write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
 
@@ -120,6 +108,13 @@ for (x in games_in_play) {
     ) + theme_bw()
   
   
-  print("Last play:")
-  print(y$desc[nrow(y)])
   
+
+##print the last 3 plays
+  
+  ##class/function this somehow??
+  
+  print("Last play:")
+  print(paste("EPA Added:", y$epa[nrow(y)-2], ",", y$desc[nrow(y)-2], sep = " "))
+  print(paste("EPA Added:", y$epa[nrow(y)-1], ",", y$desc[nrow(y)-1], sep = " "))
+  print(paste("EPA Added:", y$epa[nrow(y)], ",", y$desc[nrow(y)], sep = " "))
