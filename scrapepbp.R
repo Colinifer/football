@@ -4,16 +4,16 @@
   today <- Sys.Date()
   
   #test date
-  ##date <- 20190922
-  date <- format(today, format="%Y%m%d")
+  date <- 20190922
+  ##date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
   
-  currentGameIDs <- game_ids$game_id
-  #pull games in 2019 season that match today's date
-  currentGames <- grep(date, currentGameIDs)
-  games_in_play <- currentGameIDs[currentGames]
+currentGameIDs <- game_ids$game_id
+#pull games in 2019 season that match today's date
+currentGames <- grep(date, currentGameIDs)
+games_in_play <- currentGameIDs[currentGames]
 
 ##can't figure this out yet
 ##  
@@ -25,12 +25,10 @@ game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
 
 #scrape pbp of active games
 for (x in games_in_play) {
+  f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
   #read game csv
-  if (file.exists(f)) {
+  if (file.exists(f)==TRUE) {
     y <- read.csv(f)
-    #check if y$desc contains "END GAME"
-    endGame <- grepl("END GAME", y$desc)
-    y <- game_ids
     #check if y$desc contains "END GAME"
     endGame <- grepl("END GAME", y$desc)
   } else {
@@ -40,7 +38,7 @@ for (x in games_in_play) {
   }
   #if x has END GAME change state_of_game to POST
   if(any(endGame == TRUE)) {
-    f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
+    f
     game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
     print(paste("Changing the state of game for ", x, " to POST", sep = ""))
     ##save changes to season game_ids
@@ -61,12 +59,17 @@ for (x in games_in_play) {
   }
 }
   
-  
 ##  game_ids[game_ids$game_id == 2019092300, "state_of_game"] <- "PRE"
 ##  write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
+
+# Make teams dynamic and according to x in loop
+homeTeam <- game_ids[game_ids$game_id == x, "home_team"]
+awayTeam <- game_ids[game_ids$game_id == x, "away_team"]
+
+# note: home/awayTeam currently grabs abbrev name, need to get full name.
   
-  
-  # note: Pull out the Bears and Redskins colors:
+
+  # note: Pull out the Home and Away colors:
   # note: Make this dynamic across games and add to loop
   nfl_teamcolors <- teamcolors %>% filter(league == "nfl")
   chi_color <- nfl_teamcolors %>%
