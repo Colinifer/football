@@ -4,7 +4,7 @@
   today <- Sys.Date()
   
   #test date
-  date <- 20190922
+  date <- 2019092200
   ##date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
@@ -24,92 +24,93 @@ games_in_play <- currentGameIDs[currentGames]
 ##
 
 #scrape pbp of active games
+
+#if 0 games, scrape scores
 for (x in games_in_play) {
-  f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
   #read game csv
+  f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
   if (file.exists(f)==TRUE) {
     y <- read.csv(f)
+    
     #check if y$desc contains "END GAME"
-    endGame <- grepl("END GAME", y$desc)
-  } else {
-    y <- game_ids
-    #check if y$desc contains "END GAME"
-    endGame <- 2 > 3
-  }
-  #if x has END GAME change state_of_game to POST
-  if(any(endGame == TRUE)) {
-    f
-    game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
-    print(paste("Changing the state of game for ", x, " to POST", sep = ""))
-    ##save changes to season game_ids
-    write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
-  } else {
-    #scrape
-    print(paste("Scraping game ", x, sep = ""))
-    y <- scrape_json_play_by_play(x)
-    write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
-    print("Last play:")
-    print(y$desc[nrow(y)])
-    endGame <- grepl("END GAME", y$desc)
-    #check for end game and add post status if scrape includes
-    if(any(endGame == TRUE)) {
+    #if x has END GAME change state_of_game to POST
+    if(grepl("END GAME", y$desc[nrow(y)]) == TRUE) {
+      print(paste("Game", x, "is over.", sep = " "))
       game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
       print(paste("Changing the state of game for ", x, " to POST", sep = ""))
+      ##save changes to season game_ids
+      write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
+    } else {
+      #scrape
+      print(paste("Scraping game ", x, sep = ""))
+      y <- scrape_json_play_by_play(x)
+      write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
+      print("Last play:")
+      print(y$desc[nrow(y)])
     }
+    
+    homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
+    awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
+    teamAbbr <- read.csv(paste("data/games_data/", userYear, "/team_abbr.csv", sep = ""))
+    homeTeamInt <- grep(homeTeam_abbr, teamAbbr$nflscrapr_abbrev)
+    awayTeamInt <- grep(awayTeam_abbr, teamAbbr$nflscrapr_abbrev)
+    homeTeam_fullname <- teamAbbr$full_name[homeTeamInt]
+    awayTeam_fullname <- teamAbbr$full_name[awayTeamInt]
+    homeTeam_logo <- nfl_teamcolors$logo[homeTeamInt]
+    awayTeam_logo <- nfl_teamcolors$logo[awayTeamInt]
+    
+    # note: home/awayTeam currently grabs abbrev name, need to get full name.
+    
+    # note: Pull out the Home and Away colors:
+    # note: Make this dynamic across games and add to loop
+    nfl_teamcolors <- teamcolors %>% filter(league == "nfl")
+    homeTeam_color <- nfl_teamcolors %>%
+      filter(name == homeTeam_fullname) %>%
+      pull(primary)
+    awayTeam_color <- nfl_teamcolors %>%
+      filter(name == awayTeam_fullname) %>%
+      pull(primary)
+    
+    # Now generate the win probability chart:
+    y %>%
+      filter(!is.na(home_wp),
+             !is.na(away_wp)) %>%
+      dplyr::select(game_seconds_remaining,
+                    home_wp,
+                    away_wp) %>%
+      gather(team, wpa, -game_seconds_remaining) %>%
+      ggplot(aes(x = game_seconds_remaining, y = wpa, color = team)) +
+      geom_line(size = 2) +
+      geom_hline(yintercept = 0.5, color = "gray", linetype = "dashed") +
+      scale_color_manual(labels = c(homeTeam_abbr, awayTeam_abbr),
+                         values = c(awayTeam_color, homeTeam_color),
+                         guide = FALSE) +
+      scale_x_reverse(breaks = seq(0, 3600, 300)) + 
+      annotate("text", x = 3000, y = .75, label = homeTeam_abbr, color = homeTeam_color, size = 8) + 
+      annotate("text", x = 3000, y = .25, label = awayTeam_abbr, color = awayTeam_color, size = 8) +
+      geom_vline(xintercept = 900, linetype = "dashed", black) + 
+      geom_vline(xintercept = 1800, linetype = "dashed", black) + 
+      geom_vline(xintercept = 2700, linetype = "dashed", black) + 
+      geom_vline(xintercept = 0, linetype = "dashed", black) + 
+      labs(
+        x = "Time Remaining (seconds)",
+        y = "Win Probability",
+        title = paste("Week", userWeek, "Win Probability Chart", sep = " "),
+        subtitle = paste(homeTeam_fullname, "vs.", awayTeam_fullname, sep = " "),
+        caption = "Data from nflscrapR"
+      ) + theme_bw()
+    
+  } else {
+    print(paste("Scraping game", x, sep = " "))
+    y <- scrape_json_play_by_play(x)
+    write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
   }
 }
-  
+
+
+
 ##  game_ids[game_ids$game_id == 2019092300, "state_of_game"] <- "PRE"
 ##  write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
-
-# Make teams dynamic and according to x in loop
-homeTeam <- game_ids[game_ids$game_id == x, "home_team"]
-awayTeam <- game_ids[game_ids$game_id == x, "away_team"]
-
-# note: home/awayTeam currently grabs abbrev name, need to get full name.
-  
-
-  # note: Pull out the Home and Away colors:
-  # note: Make this dynamic across games and add to loop
-  nfl_teamcolors <- teamcolors %>% filter(league == "nfl")
-  chi_color <- nfl_teamcolors %>%
-    filter(name == "Chicago Bears") %>%
-    pull(primary)
-  was_color <- nfl_teamcolors %>%
-    filter(name == "Washington Redskins") %>%
-    pull(primary)
-  
-  # Now generate the win probability chart:
-  y %>%
-    filter(!is.na(home_wp),
-           !is.na(away_wp)) %>%
-    dplyr::select(game_seconds_remaining,
-                  home_wp,
-                  away_wp) %>%
-    gather(team, wpa, -game_seconds_remaining) %>%
-    ggplot(aes(x = game_seconds_remaining, y = wpa, color = team)) +
-    geom_line(size = 2) +
-    geom_hline(yintercept = 0.5, color = "gray", linetype = "dashed") +
-    scale_color_manual(labels = c("CHI", "WAS"),
-                       values = c(chi_color, was_color),
-                       guide = FALSE) +
-    scale_x_reverse(breaks = seq(0, 3600, 300)) + 
-    annotate("text", x = 3000, y = .75, label = "CHI", color = chi_color, size = 8) + 
-    annotate("text", x = 3000, y = .25, label = "WAS", color = was_color, size = 8) +
-    geom_vline(xintercept = 900, linetype = "dashed", black) + 
-    geom_vline(xintercept = 1800, linetype = "dashed", black) + 
-    geom_vline(xintercept = 2700, linetype = "dashed", black) + 
-    geom_vline(xintercept = 0, linetype = "dashed", black) + 
-    labs(
-      x = "Time Remaining (seconds)",
-      y = "Win Probability",
-      title = paste("Week", userWeek, "Win Probability Chart", sep = " "),
-      subtitle = "Chicago Bears vs. Washington Redskins",
-      caption = "Data from nflscrapR"
-    ) + theme_bw()
-  
-  
-  
 
 ##print the last 3 plays
   
@@ -121,4 +122,4 @@ awayTeam <- game_ids[game_ids$game_id == x, "away_team"]
   print(paste("EPA Added:", y$epa[nrow(y)], ",", y$desc[nrow(y)], sep = " "))
   
 ## note: print winner and score
-  endGame == TRUE
+##  endGame == TRUE
