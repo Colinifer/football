@@ -4,7 +4,7 @@
   today <- Sys.Date()
   
   #test date
-  date <- 2019092200
+  date <- 20190922
   ##date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
@@ -28,6 +28,7 @@ games_in_play <- currentGameIDs[currentGames]
 #if 0 games, scrape scores
 for (x in games_in_play) {
   #read game csv
+  
   f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
   if (file.exists(f)==TRUE) {
     y <- read.csv(f)
@@ -40,7 +41,7 @@ for (x in games_in_play) {
       print(paste("Changing the state of game for ", x, " to POST", sep = ""))
       ##save changes to season game_ids
       write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
-    } else {
+    }} else {
       #scrape
       print(paste("Scraping game ", x, sep = ""))
       y <- scrape_json_play_by_play(x)
@@ -48,7 +49,6 @@ for (x in games_in_play) {
       print("Last play:")
       print(y$desc[nrow(y)])
     }
-    
     homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
     awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
     teamAbbr <- read.csv(paste("data/games_data/", userYear, "/team_abbr.csv", sep = ""))
@@ -73,17 +73,17 @@ for (x in games_in_play) {
     
     # Now generate the win probability chart:
     y %>%
-      filter(!is.na(home_wp),
-             !is.na(away_wp)) %>%
+      filter(!is.na(away_wp),
+             !is.na(home_wp)) %>%
       dplyr::select(game_seconds_remaining,
-                    home_wp,
-                    away_wp) %>%
+                    away_wp,
+                    home_wp) %>%
       gather(team, wpa, -game_seconds_remaining) %>%
       ggplot(aes(x = game_seconds_remaining, y = wpa, color = team)) +
       geom_line(size = 2) +
       geom_hline(yintercept = 0.5, color = "gray", linetype = "dashed") +
       scale_color_manual(labels = c(homeTeam_abbr, awayTeam_abbr),
-                         values = c(awayTeam_color, homeTeam_color),
+                         values = c(homeTeam_color, awayTeam_color),
                          guide = FALSE) +
       scale_x_reverse(breaks = seq(0, 3600, 300)) + 
       annotate("text", x = 3000, y = .75, label = homeTeam_abbr, color = homeTeam_color, size = 8) + 
@@ -96,7 +96,7 @@ for (x in games_in_play) {
         x = "Time Remaining (seconds)",
         y = "Win Probability",
         title = paste("Week", userWeek, "Win Probability Chart", sep = " "),
-        subtitle = paste(homeTeam_fullname, "vs.", awayTeam_fullname, sep = " "),
+        subtitle = paste(awayTeam_fullname, "vs.", homeTeam_fullname, sep = " "),
         caption = "Data from nflscrapR"
       ) + theme_bw()
     
@@ -105,7 +105,6 @@ for (x in games_in_play) {
     y <- scrape_json_play_by_play(x)
     write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
   }
-}
 
 
 
