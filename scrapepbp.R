@@ -4,7 +4,7 @@
   today <- Sys.Date()
   
   #test date
-  ##date <- 20190922
+  ##date <- 20190929
   date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
@@ -27,10 +27,11 @@ games_in_play <- currentGameIDs[currentGames]
 
 #if 0 games, scrape scores
 for (x in games_in_play) {
-  #read game csv
-  
   f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
+  
   if (file.exists(f)==TRUE) {
+    
+    #read game csv
     y <- read.csv(f)
     
     #check if y$desc contains "END GAME"

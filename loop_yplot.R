@@ -1,4 +1,4 @@
-yplot <- function(yplot) {
+for(x in games_in_play) {
   ## graph new scrape
   homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
   awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
@@ -29,7 +29,7 @@ yplot <- function(yplot) {
                   away_wp,
                   home_wp) %>%
     gather(team, wpa, -game_seconds_remaining) %>%
-    ggplot(aes(x = game_seconds_remaining, y = wpa, color = team)) +
+    ggplot(aes_(x = game_seconds_remaining, y = wpa, color = team)) +
     geom_line(size = 2) +
     geom_hline(yintercept = 0.5, color = "gray", linetype = "dashed") +
     scale_color_manual(labels = c(awayTeam_abbr, homeTeam_abbr),
@@ -49,10 +49,4 @@ yplot <- function(yplot) {
       subtitle = paste(awayTeam_fullname, "vs.", homeTeam_fullname, sep = " "),
       caption = "Data from nflscrapR"
     ) + theme_bw()
-  
-  print(plot())
-}
-
-for (x in games_in_play) {
-  yplot
 }
