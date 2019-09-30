@@ -1,11 +1,11 @@
 ##set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 3 ##not necessary at the moment
+  userWeek <- 4 ##not necessary at the moment
   today <- Sys.Date()
   
   #test date
-  date <- 20190922
-  ##date <- format(today, format="%Y%m%d")
+  ##date <- 20190922
+  date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
@@ -41,14 +41,15 @@ for (x in games_in_play) {
       print(paste("Changing the state of game for ", x, " to POST", sep = ""))
       ##save changes to season game_ids
       write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
-    }} else {
+    } else {
       #scrape
       print(paste("Scraping game ", x, sep = ""))
       y <- scrape_json_play_by_play(x)
+      
       write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
       print("Last play:")
       print(y$desc[nrow(y)])
-    }
+    }}}
     homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
     awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
     teamAbbr <- read.csv(paste("data/games_data/", userYear, "/team_abbr.csv", sep = ""))
