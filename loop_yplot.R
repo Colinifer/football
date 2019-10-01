@@ -21,6 +21,8 @@ for(x in games_in_play) {
   homeTeam_color <- nfl_teamcolors %>%
     filter(name == homeTeam_fullname) %>%
     pull(primary)
+    ##
+    ##
   
   y %>%
     filter(!is.na(away_wp),

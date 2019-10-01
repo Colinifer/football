@@ -80,7 +80,7 @@ awayTeam_logo <- nfl_teamcolors$logo[awayTeamInt]
 nfl_teamcolors <- teamcolors %>% filter(league == "nfl")
 awayTeam_color <- nfl_teamcolors %>%
   filter(name == awayTeam_fullname) %>%
-  pull(primary)
+  pull(secondary)
 homeTeam_color <- nfl_teamcolors %>%
   filter(name == homeTeam_fullname) %>%
   pull(primary)
