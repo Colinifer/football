@@ -1,13 +1,13 @@
-##set custom variables
+# set custom variables
   userYear <- 2019 ##necessary for saved 
   userWeek <- 4 ##not necessary at the moment
   today <- Sys.Date()
   
-  #test date
-  ##date <- 20190929
+    # test date
+  #date <- 20190930
   date <- format(today, format="%Y%m%d")
   
-game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
+game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv", row.names = FALSE, check.names = FALSE)
 
 currentGameIDs <- game_ids$game_id
 #pull games in 2019 season that match today's date
@@ -15,23 +15,23 @@ currentGames <- grep(date, currentGameIDs)
 games_in_play <- currentGameIDs[currentGames]
 
 ##can't figure this out yet
-##  
-##  games_in_play <- game_ids$state_of_game[currentGames] != "POST"
-##
-##  nplay <- length(games_in_play)
-##  nplayLoop <- 1
-##
+#  
+#  games_in_play <- game_ids$state_of_game[currentGames] != "POST"
+#
+#  nplay <- length(games_in_play)
+#  nplayLoop <- 1
+#
 
-#scrape pbp of active games
+# scrape pbp of active games
 
-#if 0 games, scrape scores
+# if 0 games, scrape scores
 for (x in games_in_play) {
   f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
   
   if (file.exists(f)==TRUE) {
     
     #read game csv
-    y <- read.csv(f)
+    y <- read.csv(f, check.names=FALSE)
     
     #check if y$desc contains "END GAME"
     #if x has END GAME change state_of_game to POST
@@ -46,18 +46,16 @@ for (x in games_in_play) {
         print(paste("Game", x, "is over.", sep = " "))
         game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
         print(paste("Changing the state of game for ", x, " to POST", sep = ""))
-        ##save changes to season game_ids
-        game_ids$X <- NULL ## annoying glitch
-        write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
+        write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv", row.names=FALSE)
         }
-      write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
+      write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
       print(paste("Last play:", y$desc[nrow(y)], sep=""))
     }
   }
   else {
     print(paste("Scraping game", x, sep = " "))
     y <- scrape_json_play_by_play(x)
-    write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
+    write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
   }
 }
 
