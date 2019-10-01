@@ -1,4 +1,4 @@
-"","type","game_id","home_team","away_team","week","season","state_of_game","game_url","home_score","away_score"
+"Row"type","game_id","home_team","away_team","week","season","state_of_game","game_url","home_score","away_score"
 "1","reg",2019090500,"CHI","GB",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090500/2019090500_gtd.json",3,10
 "2","reg",2019090800,"CAR","LA",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090800/2019090800_gtd.json",27,30
 "3","reg",2019090806,"PHI","WAS",1,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019090806/2019090806_gtd.json",32,27

@@ -10,9 +10,8 @@ library(na.tools)
 library(ggimage)
 library(teamcolors)
 
-  ##test
-  ##setwd("~/")
-
+##reset
+setwd("~/")
 gid <- paste(getwd())
 gid
 device <- ""
