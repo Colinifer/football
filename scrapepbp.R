@@ -8,8 +8,7 @@
   date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
-game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv")
-  
+
 currentGameIDs <- game_ids$game_id
 #pull games in 2019 season that match today's date
 currentGames <- grep(date, currentGameIDs)
@@ -42,16 +41,17 @@ for (x in games_in_play) {
       #scrape
       print(paste("Scraping game ", x, sep = ""))
       y <- scrape_json_play_by_play(x)
+      game_ids$X <- NULL ## annoying glitch
       if(grepl("END GAME", y$desc[nrow(y)]) == TRUE) {
         print(paste("Game", x, "is over.", sep = " "))
         game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
         print(paste("Changing the state of game for ", x, " to POST", sep = ""))
         ##save changes to season game_ids
+        game_ids$X <- NULL ## annoying glitch
         write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
         }
       write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""))
-      print("Last play:")
-      print(y$desc[nrow(y)])
+      print(paste("Last play:", y$desc[nrow(y)], sep=""))
     }
   }
   else {
@@ -115,14 +115,12 @@ y %>%
   ) + theme_bw()
 
 
-##  game_ids[game_ids$game_id == 2019092300, "state_of_game"] <- "PRE"
+##  game_ids[game_ids$game_id == 2019093000, "state_of_game"] <- "PRE"
 ##  write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv")
 
 ##print the last 3 plays
   
   ## note: class/function this somehow??
-  
-
 print("Last play:")
 print(paste("EPA Added:", y$epa[nrow(y)-2], ",", y$desc[nrow(y)-2], sep = " "))
 print(paste("EPA Added:", y$epa[nrow(y)-1], ",", y$desc[nrow(y)-1], sep = " "))
