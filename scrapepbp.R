@@ -4,8 +4,8 @@
   today <- Sys.Date()
   
     # test date
-  #date <- 20190930
-  date <- format(today, format="%Y%m%d")
+  date <- 201909
+  #date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv", row.names = FALSE, check.names = FALSE)
 
