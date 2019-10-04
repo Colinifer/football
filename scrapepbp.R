@@ -1,13 +1,13 @@
 # set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 4 ##not necessary at the moment
+  userWeek <- 5 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
-  date <- 201909
-  #date <- format(today, format="%Y%m%d")
+  #date <- 201909
+  date <- format(today, format="%Y%m%d")
   
-game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv", row.names = FALSE, check.names = FALSE)
+game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv", check.names = FALSE)
 
 currentGameIDs <- game_ids$game_id
 #pull games in 2019 season that match today's date
@@ -66,6 +66,7 @@ awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
 teamAbbr <- read.csv(paste("data/games_data/", userYear, "/team_abbr.csv", sep = ""))
 homeTeamInt <- grep(homeTeam_abbr, teamAbbr$nflscrapr_abbrev)
 awayTeamInt <- grep(awayTeam_abbr, teamAbbr$nflscrapr_abbrev)
+awayTeamInt <- 24
 homeTeam_fullname <- teamAbbr$full_name[homeTeamInt]
 awayTeam_fullname <- teamAbbr$full_name[awayTeamInt]
 homeTeam_logo <- nfl_teamcolors$logo[homeTeamInt]
@@ -78,10 +79,10 @@ awayTeam_logo <- nfl_teamcolors$logo[awayTeamInt]
 nfl_teamcolors <- teamcolors %>% filter(league == "nfl")
 awayTeam_color <- nfl_teamcolors %>%
   filter(name == awayTeam_fullname) %>%
-  pull(secondary)
+  pull(primary)
 homeTeam_color <- nfl_teamcolors %>%
   filter(name == homeTeam_fullname) %>%
-  pull(primary)
+  pull(secondary)
 
 # Now generate the win probability chart:
 y %>%
