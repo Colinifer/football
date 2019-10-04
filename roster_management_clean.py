@@ -9,6 +9,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# League IDs
+beepboop = 1339642
+family = 1339642
+drinkerspub = 62746259
 
 # In[2]:
 
@@ -29,14 +33,14 @@ slotcodes = {
 # In[3]:
 
 
-swid = "your swid"
-espn = "your espn cookie"
+swid = "{2BA315B4-5941-4B1C-A315-B459416B1CC1}"
+espn = "AEA8%2F3vR4C6lyB6ITArEvV8MmKsjZ%2FN%2BNRb0n9VkEWLhabMbqute2%2BjBtBXLEICrYkmVtR5%2Fl5Jw207crpRhgpT22LEo%2FW%2Bo8t0Bes3SeCuG1a8QGyFwW3WnTRYRh5tThjvoG61WF58pcsC7YgswHjIYQve%2B1WCYKXSIm9dCp5b%2FnmvKf0ig7yss8tF%2BC71DKPprgOhOqjDIBWdsvAGA8imaVNZfnbMqAdsL%2BASZ4C%2B3mjI%2F8u1Zme9rtS1NTgN1q%2BR2OGraqHYALADiJfclezOL"
 
 
 # In[4]:
 
 
-def get_matchups(league_id, season, week, swid='', espn=''):
+def get_matchups(beepboop, 2019, 4, swid, espn):
     ''' 
     Pull full JSON of matchup data from ESPN API for a particular week.
     '''
