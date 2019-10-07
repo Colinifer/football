@@ -4,8 +4,8 @@
   today <- Sys.Date()
   
     # test date
-  #date <- 201909
-  date <- format(today, format="%Y%m%d")
+  date <- 201910
+  #date <- format(today, format="%Y%m%d")
   
 game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv", check.names = FALSE)
 
@@ -63,10 +63,14 @@ for (x in games_in_play) {
 ## graph new scrape
 homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
 awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
+
+homeTeam_abbr <- y$home_team[1]
+awayTeam_abbr <- y$away_team[1]
+
 teamAbbr <- read.csv(paste("data/games_data/", userYear, "/team_abbr.csv", sep = ""))
 homeTeamInt <- grep(homeTeam_abbr, teamAbbr$nflscrapr_abbrev)
 awayTeamInt <- grep(awayTeam_abbr, teamAbbr$nflscrapr_abbrev)
-awayTeamInt <- 24
+# awayTeamInt <- 24 # if Rams
 homeTeam_fullname <- teamAbbr$full_name[homeTeamInt]
 awayTeam_fullname <- teamAbbr$full_name[awayTeamInt]
 homeTeam_logo <- nfl_teamcolors$logo[homeTeamInt]
@@ -82,7 +86,7 @@ awayTeam_color <- nfl_teamcolors %>%
   pull(primary)
 homeTeam_color <- nfl_teamcolors %>%
   filter(name == homeTeam_fullname) %>%
-  pull(secondary)
+  pull(primary)
 
 # Now generate the win probability chart:
 y %>%
@@ -131,3 +135,12 @@ print(paste(homeTeam_fullname, "Win Probability:", y$home_wp[nrow(y)], sep = " "
  
 ## note: print winner and score
 ##  endGame == TRUE
+
+
+
+
+sum(y$penalty_yards[!is.na(y$penalty_yards)] & y$penalty_team == "DAL")
+
+
+y$penalty_team=="DAL"[penalty_yards[!is.na(y$penalty_yards)]]
+game_ids[game_ids$game_id == x, "state_of_game"]
