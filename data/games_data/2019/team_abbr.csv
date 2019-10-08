@@ -1,33 +1,33 @@
-full_name,mascot,city,thescore_abbrev,nflscrapr_abbrev
-San Francisco 49ers,49ers,San Francisco,SF,SF
-Chicago Bears,Bears,Chicago,CHI,CHI
-Cincinnati Bengals,Bengals,Cincinnati,CIN,CIN
-Buffalo Bills,Bills,Buffalo,BUF,BUF
-Denver Broncos,Broncos,Denver,DEN,DEN
-Cleveland Browns,Browns,Cleveland,CLE,CLE
-Tampa Bay Buccaneers,Buccaneers,Tampa Bay,TB,TB
-Arizona Cardinals,Cardinals,Arizona,ARI,ARI
-Los Angeles Chargers,Chargers,Los Angeles C,LAC,LAC
-Kansas City Chiefs,Chiefs,Kansas City,KC,KC
-Indianapolis Colts,Colts,Indianapolis,IND,IND
-Dallas Cowboys,Cowboys,Dallas,DAL,DAL
-Miami Dolphins,Dolphins,Miami,MIA,MIA
-Philadelphia Eagles,Eagles,Philadelphia,PHI,PHI
-Atlanta Falcons,Falcons,Atlanta,ATL,ATL
-New York Giants,Giants,New York,NYG,NYG
-Jacksonville Jaguars,Jaguars,Jacksonville,JAG,JAX
-New York Jets,Jets,New York,NYJ,NYJ
-Detroit Lions,Lions,Detroit,DET,DET
-Green Bay Packers,Packers,Green Bay,GB,GB
-Carolina Panthers,Panthers,Carolina,CAR,CAR
-New England Patriots,Patriots,New England,NE,NE
-Oakland Raiders,Raiders,Oakland,OAK,OAK
-Los Angeles Rams,Rams,Los Angeles R,LAR,LA
-Baltimore Ravens,Ravens,Baltimore,BAL,BAL
-Washington Redskins,Redskins,Washington,WAS,WAS
-New Orleans Saints,Saints,New Orleans,NO,NO
-Seattle Seahawks,Seahawks,Seattle,SEA,SEA
-Pittsburgh Steelers,Steelers,Pittsburgh,PIT,PIT
-Houston Texans,Texans,Houston,HOU,HOU
-Tennessee Titans,Titans,Tennessee,TEN,TEN
-Minnesota Vikings,Vikings,Minnesota,MIN,MIN
+full_name,mascot,city,thescore_abbrev,nflscrapr_abbrev,logo
+San Francisco 49ers,49ers,San Francisco,SF,SF,http://content.sportslogos.net/logos/7/179/full/9455_san_francisco_49ers-primary-2009.png
+Chicago Bears,Bears,Chicago,CHI,CHI,http://content.sportslogos.net/logos/7/169/full/364.png
+Cincinnati Bengals,Bengals,Cincinnati,CIN,CIN,http://content.sportslogos.net/logos/7/154/full/403.png
+Buffalo Bills,Bills,Buffalo,BUF,BUF,http://content.sportslogos.net/logos/7/149/full/n0fd1z6xmhigb0eej3323ebwq.png
+Denver Broncos,Broncos,Denver,DEN,DEN,http://content.sportslogos.net/logos/7/161/full/9ebzja2zfeigaziee8y605aqp.png
+Cleveland Browns,Browns,Cleveland,CLE,CLE,http://content.sportslogos.net/logos/7/155/full/7855_cleveland_browns-primary-2015.png
+Tampa Bay Buccaneers,Buccaneers,Tampa Bay,TB,TB,http://content.sportslogos.net/logos/7/176/full/3670_tampa_bay_buccaneers-primary-2014.png
+Arizona Cardinals,Cardinals,Arizona,ARI,ARI,http://content.sportslogos.net/logos/7/177/full/kwth8f1cfa2sch5xhjjfaof90.png
+Los Angeles Chargers,Chargers,Los Angeles C,LAC,LAC,http://content.sportslogos.net/logos/7/6446/full/2415_los_angeles__chargers-primary-2017.png
+Kansas City Chiefs,Chiefs,Kansas City,KC,KC,http://content.sportslogos.net/logos/7/162/full/857.png
+Indianapolis Colts,Colts,Indianapolis,IND,IND,http://content.sportslogos.net/logos/7/158/full/593.png
+Dallas Cowboys,Cowboys,Dallas,DAL,DAL,http://content.sportslogos.net/logos/7/165/full/406.png
+Miami Dolphins,Dolphins,Miami,MIA,MIA,http://content.sportslogos.net/logos/7/150/full/7306_miami_dolphins-primary-2018.png
+Philadelphia Eagles,Eagles,Philadelphia,PHI,PHI,http://content.sportslogos.net/logos/7/167/full/960.png
+Atlanta Falcons,Falcons,Atlanta,ATL,ATL,http://content.sportslogos.net/logos/7/173/full/299.png
+New York Giants,Giants,New York,NYG,NYG,http://content.sportslogos.net/logos/7/166/full/919.gif
+Jacksonville Jaguars,Jaguars,Jacksonville,JAG,JAX,http://content.sportslogos.net/logos/7/159/full/8856_jacksonville_jaguars-alternate-2013.png
+New York Jets,Jets,New York,NYJ,NYJ,http://content.sportslogos.net/logos/7/152/full/9116_new_york_jets-primary-2019.png
+Detroit Lions,Lions,Detroit,DET,DET,http://content.sportslogos.net/logos/7/170/full/1398_detroit_lions-primary-2017.png
+Green Bay Packers,Packers,Green Bay,GB,GB,http://content.sportslogos.net/logos/7/171/full/dcy03myfhffbki5d7il3.png
+Carolina Panthers,Panthers,Carolina,CAR,CAR,http://content.sportslogos.net/logos/7/174/full/f1wggq2k8ql88fe33jzhw641u.png
+New England Patriots,Patriots,New England,NE,NE,http://content.sportslogos.net/logos/7/151/full/y71myf8mlwlk8lbgagh3fd5e0.png
+Oakland Raiders,Raiders,Oakland,OAK,OAK,http://content.sportslogos.net/logos/7/163/full/g9mgk6x3ge26t44cccm9oq1vl.png
+Los Angeles Rams,Rams,Los Angeles R,LAR,LA,http://content.sportslogos.net/logos/7/5941/full/7953_los_angeles_rams-primary-2017.png
+Baltimore Ravens,Ravens,Baltimore,BAL,BAL,http://content.sportslogos.net/logos/7/153/full/318.png
+Washington Redskins,Redskins,Washington,WAS,WAS,http://content.sportslogos.net/logos/7/168/full/im5xz2q9bjbg44xep08bf5czq.png
+New Orleans Saints,Saints,New Orleans,NO,NO,http://content.sportslogos.net/logos/7/175/full/907.png
+Seattle Seahawks,Seahawks,Seattle,SEA,SEA,http://content.sportslogos.net/logos/7/180/full/pfiobtreaq7j0pzvadktsc6jv.png
+Pittsburgh Steelers,Steelers,Pittsburgh,PIT,PIT,http://content.sportslogos.net/logos/7/156/full/970.png
+Houston Texans,Texans,Houston,HOU,HOU,http://content.sportslogos.net/logos/7/157/full/570.png
+Tennessee Titans,Titans,Tennessee,TEN,TEN,http://content.sportslogos.net/logos/7/160/full/1053.png
+Minnesota Vikings,Vikings,Minnesota,MIN,MIN,http://content.sportslogos.net/logos/7/172/full/2704_minnesota_vikings-primary-2013.png

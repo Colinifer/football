@@ -73,8 +73,13 @@ awayTeamInt <- grep(awayTeam_abbr, teamAbbr$nflscrapr_abbrev)
 # awayTeamInt <- 24 # if Rams
 homeTeam_fullname <- teamAbbr$full_name[homeTeamInt]
 awayTeam_fullname <- teamAbbr$full_name[awayTeamInt]
-homeTeam_logo <- nfl_teamcolors$logo[homeTeamInt]
-awayTeam_logo <- nfl_teamcolors$logo[awayTeamInt]
+homeTeam_logo <- teamAbbr[teamAbbr$nflscrapr_abbrev == homeTeam_abbr, "logo"]
+awayTeam_logo <- teamAbbr[teamAbbr$nflscrapr_abbrev == awayTeam_abbr, "logo"]
+
+# awayImage <- download.file(paste("", awayTeam_logo, "", sep = ""), destfile = "tmp.png")
+# homeImage <- download.file(paste("", homeTeam_logo, "", sep = ""), destfile = "tmp1.png")
+
+game_ids[game_ids$game_id == x, "state_of_game"]
 
 # note: home/awayTeam currently grabs abbrev name, need to get full name.
 
@@ -104,7 +109,9 @@ y %>%
                      guide = FALSE) +
   scale_x_reverse(breaks = seq(0, 3600, 300)) + 
   annotate("text", x = 3000, y = .75, label = awayTeam_abbr, color = awayTeam_color, size = 8) + 
+#  annotation_custom(awayImage ) + 
   annotate("text", x = 3000, y = .25, label = homeTeam_abbr, color = homeTeam_color, size = 8) +
+#  annotation_custom(homeImage ) + 
   geom_vline(xintercept = 900, linetype = "dashed", black) + 
   geom_vline(xintercept = 1800, linetype = "dashed", black) + 
   geom_vline(xintercept = 2700, linetype = "dashed", black) + 
