@@ -1,6 +1,6 @@
 # set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 5 ##not necessary at the moment
+  userWeek <- 6 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
@@ -61,6 +61,9 @@ for (x in games_in_play) {
 
 
 ## graph new scrape
+x <- 2019101306
+y <- scrape_json_play_by_play(x)
+
 homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
 awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
 

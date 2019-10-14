@@ -1,5 +1,7 @@
-x2 <- 2019092902
+x2 <- 2019101308
+y2 <- scrape_json_play_by_play(x2)
 f2 <- paste("data/games_data/", userYear, "/", x2, ".csv", sep = "")
+write.csv(y2, f2)
 #read game csv
 y2 <- read.csv(f2)
 y2colnames <- colnames(y2)
@@ -24,7 +26,7 @@ awayTeam_logo <- nfl_teamcolors$logo[awayTeamInt]
 nfl_teamcolors <- teamcolors %>% filter(league == "nfl")
 awayTeam_color <- nfl_teamcolors %>%
   filter(name == awayTeam_fullname) %>%
-  pull(secondary)
+  pull(primary)
 homeTeam_color <- nfl_teamcolors %>%
   filter(name == homeTeam_fullname) %>%
   pull(primary)
