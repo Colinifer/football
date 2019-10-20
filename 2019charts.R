@@ -10,7 +10,7 @@ library(tidyverse)
 # pbp_19 <- scrape_season_play_by_play(2019)
 # But this takes awhile, instead can directly access data I've already scraped:
 userYear <- 2019
-userWeek <- 3
+userWeek <- 7
 chartTitle <- paste("Through week", userWeek, "of", userYear, "NFL season", sep = " ")
 
 pbp_19 <- read.csv(paste("data/games_data/", userYear, "/pbp", userYear, ".csv", sep = ""))

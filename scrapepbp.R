@@ -1,6 +1,6 @@
 # set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 6 ##not necessary at the moment
+  userWeek <- 7 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
@@ -40,10 +40,28 @@ for (x in games_in_play) {
     } else {
       #scrape
       print(paste("Scraping game ", x, sep = ""))
+      print(
+        paste(
+          game_ids[
+            game_ids$game_id == x, "away_team"], 
+          "vs", 
+          game_ids[game_ids$game_id == x, "home_team"], 
+          sep = " "
+        )
+      )
       y <- scrape_json_play_by_play(x)
       game_ids$X <- NULL ## annoying glitch
       if(grepl("END GAME", y$desc[nrow(y)]) == TRUE) {
         print(paste("Game", x, "is over.", sep = " "))
+          print(
+            paste(
+              game_ids[
+                game_ids$game_id == x, "away_team"], 
+              "vs", 
+              game_ids[game_ids$game_id == x, "home_team"], 
+              sep = " "
+            )
+          )
         game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
         print(paste("Changing the state of game for ", x, " to POST", sep = ""))
         write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv", row.names=FALSE)
@@ -54,6 +72,15 @@ for (x in games_in_play) {
   }
   else {
     print(paste("Scraping game", x, sep = " "))
+    print(
+      paste(
+        game_ids[
+        game_ids$game_id == x, "away_team"], 
+        "vs", 
+        game_ids[game_ids$game_id == x, "home_team"], 
+        sep = " "
+        )
+      )
     y <- scrape_json_play_by_play(x)
     write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
   }
@@ -61,7 +88,7 @@ for (x in games_in_play) {
 
 
 ## graph new scrape
-x <- 2019101306
+x <- 2019102009
 y <- scrape_json_play_by_play(x)
 
 homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
