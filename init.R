@@ -9,6 +9,8 @@ library(dplyr)
 library(na.tools)
 library(ggimage)
 library(teamcolors)
+library(plyr)
+library(readr)
 
 ##reset
 setwd("~/")

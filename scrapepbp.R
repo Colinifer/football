@@ -88,7 +88,7 @@ for (x in games_in_play) {
 
 
 ## graph new scrape
-x <- 2019102009
+x <- 2019102011
 y <- scrape_json_play_by_play(x)
 
 homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
