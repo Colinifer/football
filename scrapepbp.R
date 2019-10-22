@@ -88,7 +88,7 @@ for (x in games_in_play) {
 
 
 ## graph new scrape
-x <- 2019102011
+x <- 2019102100
 y <- scrape_json_play_by_play(x)
 
 homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
@@ -97,7 +97,7 @@ awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
 homeTeam_abbr <- y$home_team[1]
 awayTeam_abbr <- y$away_team[1]
 
-teamAbbr <- read.csv(paste("data/games_data/", userYear, "/team_abbr.csv", sep = ""))
+teamAbbr <- read.csv(paste("data/season_total/team_abbr.csv", sep = ""))
 homeTeamInt <- grep(homeTeam_abbr, teamAbbr$nflscrapr_abbrev)
 awayTeamInt <- grep(awayTeam_abbr, teamAbbr$nflscrapr_abbrev)
 # awayTeamInt <- 24 # if Rams
