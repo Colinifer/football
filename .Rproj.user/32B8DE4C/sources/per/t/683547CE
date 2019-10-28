@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1572236268396.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1957156517",
+    "id" : "683547CE",
+    "lastKnownWriteTime" : 1572235042,
+    "last_content_update" : 1572235042,
+    "path" : "~/Documents/dev/football/loop_yplot.R",
+    "project_path" : "loop_yplot.R",
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1572236263466.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3939890020",
+    "id" : "20DB4372",
+    "lastKnownWriteTime" : 1572235241,
+    "last_content_update" : 1572235241,
+    "path" : "~/Documents/dev/football/scrapegameids.R",
+    "project_path" : "scrapegameids.R",
+    "properties" : {
+        "cursorPosition" : "4,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

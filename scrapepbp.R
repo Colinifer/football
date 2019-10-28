@@ -1,13 +1,16 @@
 # set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 7 ##not necessary at the moment
+  userWeek <- 8 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
-  date <- 201910
-  #date <- format(today, format="%Y%m%d")
+  date <- 2019
+##  date <- format(today, format="%Y%m%d")
   
-game_ids <- read.csv("data/games_data/reg_season/reg_games_2019.csv", check.names = FALSE)
+  fgame_ids <- paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep ="")
+  
+  
+game_ids <- read.csv(fgame_ids, check.names = FALSE)
 
 currentGameIDs <- game_ids$game_id
 #pull games in 2019 season that match today's date
@@ -36,7 +39,11 @@ for (x in games_in_play) {
     #check if y$desc contains "END GAME"
     #if x has END GAME change state_of_game to POST
     if(grepl("END GAME", y$desc[nrow(y)]) == TRUE) {
-      print(paste("Game", x, "is over.", sep = " "))
+      print(paste("Game", x, "is over.", sep = " "))game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
+      game_ids[game_ids$game_id == x, "away_score"] <- y$total_away_score[nrow(y)]
+      game_ids[game_ids$game_id == x, "home_score"] <- y$total_home_score[nrow(y)]
+      print(paste("Changing the state of game for ", x, " to POST", sep = ""))
+      write.csv(game_ids, fgame_ids, row.names=FALSE)
     } else {
       #scrape
       print(paste("Scraping game ", x, sep = ""))
@@ -63,11 +70,12 @@ for (x in games_in_play) {
             )
           )
         game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
+        game_ids[game_ids$game_id == x, "away_score"] <- y$total_away_score[nrow(y)]
+        game_ids[game_ids$game_id == x, "home_score"] <- y$total_home_score[nrow(y)]
         print(paste("Changing the state of game for ", x, " to POST", sep = ""))
-        write.csv(game_ids, "data/games_data/reg_season/reg_games_2019.csv", row.names=FALSE)
+        write.csv(game_ids, fgame_ids, row.names=FALSE)
         }
       write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
-      print(paste("Last play:", y$desc[nrow(y)], sep=""))
     }
   }
   else {
@@ -84,12 +92,37 @@ for (x in games_in_play) {
     y <- scrape_json_play_by_play(x)
     write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
   }
+  xawayscore <- y$total_away_score[nrow(y)]
+  xawayteam <- y$away_team[1]
+  xhomescore <- y$total_home_score[nrow(y)]
+  xhometeam <- y$home_team[1]
+  print(paste(xawayteam, ": ", xawayscore, " @ ", xhometeam, ": ", xhomescore, sep = ""))
+  
+  print(paste("Last play:", y$desc[nrow(y)], sep=""))
 }
 
 
+## start season merge
+
+
+pbp2019 <- list.files(paste("data/games_data/", userYear, "/", sep = ""),
+                        pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+pbp2019
+write.csv(pbp2019, file = paste("data/season_total/pbp", userYear,".csv", sep = ""), row.names=FALSE)
+
+
+##end season merge
+
+week_game_ids <- filter(game_ids, week == 8)
+games_in_play <- week_game_ids$game_id
+## currentGames <- 
+
 ## graph new scrape
-x <- 2019102100
+## x <- 2019102100
 y <- scrape_json_play_by_play(x)
+write.csv(y, f, row.names = FALSE)
 
 homeTeam_abbr <- game_ids[game_ids$game_id == x, "home_team"]
 awayTeam_abbr <- game_ids[game_ids$game_id == x, "away_team"]
@@ -161,10 +194,20 @@ y %>%
 ##print the last 3 plays
   
   ## note: class/function this somehow??
+
+xawayscore <- y$total_away_score[nrow(y)]
+xawayteam <- y$away_team[1]
+xhomescore <- y$total_home_score[nrow(y)]
+xhometeam <- y$home_team[1]
+
 print("Last play:")
 print(paste("EPA Added:", y$epa[nrow(y)-2], ",", y$desc[nrow(y)-2], sep = " "))
 print(paste("EPA Added:", y$epa[nrow(y)-1], ",", y$desc[nrow(y)-1], sep = " "))
 print(paste("EPA Added:", y$epa[nrow(y)], ",", y$desc[nrow(y)], sep = " "))
+tail(y$desc, 3)
+print("Score:")
+print(paste(awayTeam_fullname, ": ", xawayscore, sep = ""))
+print(paste(homeTeam_fullname, ": ", xhomescore, sep = ""))
 
 print(paste(awayTeam_fullname, "Win Probability:", y$away_wp[nrow(y)], sep=" "))
 print(paste(homeTeam_fullname, "Win Probability:", y$home_wp[nrow(y)], sep = " "))
@@ -173,11 +216,9 @@ print(paste(homeTeam_fullname, "Win Probability:", y$home_wp[nrow(y)], sep = " "
 ## note: print winner and score
 ##  endGame == TRUE
 
-
-
-
-sum(y$penalty_yards[!is.na(y$penalty_yards)] & y$penalty_team == "DAL")
-
-
-y$penalty_team=="DAL"[penalty_yards[!is.na(y$penalty_yards)]]
-game_ids[game_ids$game_id == x, "state_of_game"]
+yawaypen <- filter(y, penalty_team == xawayteam)
+sum(yawaypen$penalty_yards)
+yhomepen <- filter(y, penalty_team == xhometeam)
+sum(yhomepen$penalty_yards)
+sum(y$penalty_yards)
+sum(y$penalty_yards[!is.na(y$penalty_yards)])

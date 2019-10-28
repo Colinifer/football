@@ -1,12 +1,12 @@
-x2 <- 2019101400
-y2 <- scrape_json_play_by_play(x2)
+x2 <- 2019102701
+#y2 <- scrape_json_play_by_play(x2)
 f2 <- paste("data/games_data/", userYear, "/", x2, ".csv", sep = "")
 write.csv(y2, f2)
 #read game csv
 y2 <- read.csv(f2)
 y2colnames <- colnames(y2)
 
-y3 <- select(y2, home_team, away_team, desc, play_type, game_seconds_remaining, wp, wpa)
+y3 <- select(y2, away_team, total_away_score, away_wp, home_team, total_home_score, home_wp, desc, play_type, game_seconds_remaining, wp, wpa)
 
 ## graph new scrape
 homeTeam_abbr <- game_ids[game_ids$game_id == x2, "home_team"]
@@ -27,7 +27,7 @@ nfl_teamcolors <- teamcolors %>% filter(league == "nfl")
 
 awayTeam_color <- nfl_teamcolors %>%
   filter(name == awayTeam_fullname) %>%
-  pull(secondary)
+  pull(primary)
 awayTeam_secondarycolor <- nfl_teamcolors %>%
   filter(name == awayTeam_fullname) %>%
   pull(primary)
@@ -71,10 +71,25 @@ y2 %>%
     caption = "Data from nflscrapR"
   ) + theme_bw()
 
+xawayscore <- y2$total_away_score[nrow(y2)]
+xawayteam <- y2$away_team[1]
+xhomescore <- y2$total_home_score[nrow(y2)]
+xhometeam <- y2$home_team[1]
+
 print("Last play:")
-print(paste("EPA Added:", y2$epa[nrow(y2)-2], ",", y2$desc[nrow(y2)-2], sep = " "))
-print(paste("EPA Added:", y2$epa[nrow(y2)-1], ",", y2$desc[nrow(y2)-1], sep = " "))
-print(paste("EPA Added:", y2$epa[nrow(y2)], ",", y2$desc[nrow(y2)], sep = " "))
+print(paste("EPA Added:", y2$epa[nrow(y2)-2], ",", y$desc[nrow(y2)-2], sep = " "))
+print(paste("EPA Added:", y2$epa[nrow(y2)-1], ",", y$desc[nrow(y2)-1], sep = " "))
+print(paste("EPA Added:", y2$epa[nrow(y2)], ",", y$desc[nrow(y2)], sep = " "))
+print("Score:")
+print(paste(awayTeam_fullname, ": ", xawayscore, sep = ""))
+print(paste(homeTeam_fullname, ": ", xhomescore, sep = ""))
 
 print(paste(awayTeam_fullname, "Win Probability:", y2$away_wp[nrow(y2)], sep=" "))
 print(paste(homeTeam_fullname, "Win Probability:", y2$home_wp[nrow(y2)], sep = " "))
+
+y2awaypen <- filter(y2, penalty_team == xawayteam)
+sum(y2awaypen$penalty_yards)
+yhomepen <- filter(y2, penalty_team == xhometeam)
+sum(y2homepen$penalty_yards)
+sum(y2$penalty_yards)
+sum(y2$penalty_yards[!is.na(y$penalty_yards)])

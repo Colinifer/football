@@ -70,8 +70,8 @@ pbp_data <- scrape_json_play_by_play(2019090901)
 write.csv(pbp_data, file= paste("data/games/", 2019090901, ".csv", sep = ""))
 
 
-game_ids <- scrape_game_ids(selectedYear, weeks = selectedWeeks)
-write.csv(game_ids, file = paste("data/games_data/reg_season/reg_games_", selectedYear, ".csv", sep =""),row.names=FALSE)
+game_ids <- scrape_game_ids(userYear)
+write.csv(game_ids, file = paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep =""),row.names=FALSE)
 
 
 pbp_data <- scrape_json_play_by_play(2019090806)

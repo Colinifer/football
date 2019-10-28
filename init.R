@@ -30,3 +30,9 @@ if (gid == "/Volumes/HDD/Users/colinwelsh") {
 } 
 print(paste(device, "is ready for some football", sep = " "))
 rm(gid, device)
+
+
+
+# other dependent variables
+
+fgame_ids <- paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep ="")
