@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1572657351580.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "663251162",
+    "id" : "10FCCC03",
+    "lastKnownWriteTime" : 1572578001,
+    "last_content_update" : 1572578001,
+    "path" : "~/Documents/dev/football/init.R",
+    "project_path" : "init.R",
+    "properties" : {
+        "cursorPosition" : "42,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

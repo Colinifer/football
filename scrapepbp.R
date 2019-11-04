@@ -4,8 +4,8 @@
   today <- Sys.Date()
   
     # test date
-##  date <- 2019
-  date <- format(today, format="%Y%m%d")
+  date <- 201911
+##  date <- format(today, format="%Y%m%d")
   
   fgame_ids <- paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep ="")
   
@@ -37,6 +37,7 @@ for (x in games_in_play)
     
     #read game csv
     y <- read.csv(f, check.names=FALSE)
+    tail(y)
     
     #check if y$desc contains "END GAME"
     #if x has END GAME change state_of_game to POST
@@ -55,6 +56,7 @@ for (x in games_in_play)
       print(paste("Scraping game ", x, sep = ""))
       print(paste(game_ids[game_ids$game_id == x, "away_team"], "vs", game_ids[game_ids$game_id == x, "home_team"], sep = " "))
       y <- scrape_json_play_by_play(x)
+      tail(y)
       game_ids$X <- NULL ## annoying glitch
       if (grepl("END GAME", y$desc[nrow(y)]) == TRUE) {
         print(paste("Game", x, "is over.", sep = " "))
@@ -81,6 +83,7 @@ for (x in games_in_play)
         )
       )
     y <- scrape_json_play_by_play(x)
+    tail(y)
     write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
     }
   xawayscore <- y$total_away_score[nrow(y)]
