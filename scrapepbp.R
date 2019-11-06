@@ -1,13 +1,13 @@
 # set custom variables
-  userYear <- 2019 ##necessary for saved 
+  userYear <- 2009 ##necessary for saved 
   userWeek <- 8 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
-  date <- 2019
+  date <- 2009
 ##  date <- format(today, format="%Y%m%d")
   
-  fgame_ids <- paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep ="")
+  fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
   
   
 game_ids <- read.csv(fgame_ids, check.names = FALSE)
@@ -30,8 +30,8 @@ games_in_play <- currentGameIDs[currentGames]
 # if 0 games, scrape scores
 for (x in games_in_play)
   {
-  f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
-  fplayers <-  paste("data/games_data/", userYear, "/", x, "players", ".csv", sep = "")
+  f <- paste("data/games/", userYear, "/", x, ".csv", sep = "")
+  fplayers <-  paste("data/players/", userYear, "/", x, "players", ".csv", sep = "")
   
   if (file.exists(fplayers)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
   {
@@ -74,7 +74,7 @@ for (x in games_in_play)
         print(paste("Changing the state of game for ", x, " to POST", sep = ""))
         write.csv(game_ids, fgame_ids, row.names=FALSE)
         }
-      write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
+      write.csv(y, file = paste("data/games/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
       }
   }
   else
@@ -91,7 +91,7 @@ for (x in games_in_play)
       )
     y <- scrape_json_play_by_play(x)
     tail(y)
-    write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
+    write.csv(y, file = paste("data/games/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
     }
   xawayscore <- y$total_away_score[nrow(y)]
   xawayteam <- y$away_team[1]
