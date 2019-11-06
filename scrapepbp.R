@@ -4,7 +4,7 @@
   today <- Sys.Date()
   
     # test date
-  date <- 201911
+  date <- 2019
 ##  date <- format(today, format="%Y%m%d")
   
   fgame_ids <- paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep ="")
@@ -31,6 +31,13 @@ games_in_play <- currentGameIDs[currentGames]
 for (x in games_in_play)
   {
   f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
+  fplayers <-  paste("data/games_data/", userYear, "/", x, "players", ".csv", sep = "")
+  
+  if (file.exists(fplayers)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
+  {
+    xplayers <- player_game(x)
+    write.csv(xplayers, fplayers)
+  }
   
   if (file.exists(f)==TRUE)
     {

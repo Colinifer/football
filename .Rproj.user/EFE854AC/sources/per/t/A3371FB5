@@ -1,18 +1,18 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1572311249616.000,
+    "created" : 1572919124009.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "663251162",
-    "id" : "CD033030",
+    "id" : "A3371FB5",
     "lastKnownWriteTime" : 1572318629,
-    "last_content_update" : 1572318629107,
+    "last_content_update" : 1572318629,
     "path" : "~/Documents/dev/football/init.R",
     "project_path" : "init.R",
     "properties" : {
-        "cursorPosition" : "40,43",
+        "cursorPosition" : "42,0",
         "scrollLine" : "17"
     },
     "read_only" : false,
