@@ -1,10 +1,10 @@
 # set custom variables
-  userYear <- 2009 ##necessary for saved 
-  userWeek <- 8 ##not necessary at the moment
+  userYear <- 2019 ##necessary for saved 
+  userWeek <- 10 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
-  date <- 2009
+  date <- 201911
 ##  date <- format(today, format="%Y%m%d")
   
   fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
@@ -36,7 +36,10 @@ for (x in games_in_play)
   if (file.exists(fplayers)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
   {
     xplayers <- player_game(x)
-    write.csv(xplayers, fplayers)
+    write.csv(xplayers, fplayers, row.names = FALSE)
+  } else {
+    xplayers <- player_game(x)
+    write.csv(xplayers, fplayers, row.names = FALSE)
   }
   
   if (file.exists(f)==TRUE)
@@ -105,6 +108,7 @@ for (x in games_in_play)
 
 ## start season merge
 
+## PBP Merge
 
 pbp2019 <- list.files(paste("data/games_data/", userYear, "/", sep = ""),
                         pattern = "*.csv", full.names = TRUE) %>%
@@ -112,6 +116,30 @@ pbp2019 <- list.files(paste("data/games_data/", userYear, "/", sep = ""),
   bind_rows
 pbp2019
 write.csv(pbp2019, file = paste("data/season_total/pbp", userYear,".csv", sep = ""), row.names=FALSE)
+
+## Players Merge
+
+players2019 <- list.files(paste("data/players/", userYear, "/", sep = ""),
+                      pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+players2019
+write.csv(players2019, file = paste("data/season_total/players", userYear,".csv", sep = ""), row.names=FALSE)
+
+for (x in teamAbbr$nflscrapr_abbrev) {
+  ## doesn't work yet
+  ##  print(paste("Getting roster for the", userYear, teamAbbr$full_name == x))
+  xroster <- season_rosters(userYear, teams = x)
+  froster <- paste("data/teams/", userYear, "/", x, userYear, "roster", ".csv", sep = "")
+  write.csv(xroster, file = froster, row.names = FALSE)
+}
+
+teams <- list.files(paste("data/players/", userYear, "/", sep = ""),
+                          pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+players2019
+write.csv(teams, file = paste("data/season_total/players", userYear,".csv", sep = ""), row.names=FALSE)
 
 
 ##end season merge

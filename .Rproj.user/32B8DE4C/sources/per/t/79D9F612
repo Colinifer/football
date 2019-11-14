@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2591327588",
+    "hash" : "287993236",
     "id" : "79D9F612",
-    "lastKnownWriteTime" : 1573014360,
-    "last_content_update" : 1573014360757,
+    "lastKnownWriteTime" : 1573533390,
+    "last_content_update" : 1573533390760,
     "path" : "~/Documents/dev/football/scrapepbp.R",
     "project_path" : "scrapepbp.R",
     "properties" : {
-        "cursorPosition" : "102,3",
-        "scrollLine" : "73"
+        "cursorPosition" : "105,3",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [

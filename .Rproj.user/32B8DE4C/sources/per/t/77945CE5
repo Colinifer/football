@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2686859896",
+    "hash" : "3809012255",
     "id" : "77945CE5",
-    "lastKnownWriteTime" : 1573014360,
-    "last_content_update" : 1573014360738,
+    "lastKnownWriteTime" : 1573530311,
+    "last_content_update" : 1573530311706,
     "path" : "~/Documents/dev/football/init.R",
     "project_path" : "init.R",
     "properties" : {
-        "cursorPosition" : "39,20",
+        "cursorPosition" : "42,0",
         "scrollLine" : "0"
     },
     "read_only" : false,

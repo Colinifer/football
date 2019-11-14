@@ -1,4 +1,4 @@
-##install.packages("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animation")
+##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr"))
 ##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 
 library(nflscrapR)
