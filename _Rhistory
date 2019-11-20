@@ -1,3 +1,4 @@
+<<<<<<< HEAD:.Rhistory
 nfl_logos_df <- read_csv("https://raw.githubusercontent.com/statsbylopez/BlogPosts/master/nfl_teamlogos.csv")
 chart <- chart_data %>% left_join(nfl_logos_df, by = c("posteam" = "team_code"))
 chart %>%
@@ -201,6 +202,8 @@ games_in_play <- currentGameIDs[currentGames]
 #
 #  games_in_play <- game_ids$state_of_game[currentGames] != "POST"
 #
+=======
+>>>>>>> 7be7a63ed01903b9600cba9d97508bf5c4794404:_Rhistory
 #  nplay <- length(games_in_play)
 #  nplayLoop <- 1
 #
@@ -510,3 +513,193 @@ xhometeam <- y$home_team[1]
 print(paste(xawayteam, ": ", xawayscore, " @ ", xhometeam, ": ", xhomescore, sep = ""))
 print(paste("Last play:", y$desc[nrow(y)], sep=""))
 }
+<<<<<<< HEAD:.Rhistory
+=======
+pbp_all <- dplyr::bind_rows(datalist)
+pbp_all %>% group_by(home_team) %>%summarize(n=n(), seasons=n_distinct(season), minyr=min(season), maxyr=max(season)) %>%
+arrange(seasons)
+pbp_all <- pbp_all %>%
+mutate_at(vars(home_team, away_team, posteam, defteam), funs(case_when(
+. %in% "JAX" ~ "JAC",
+. %in% "STL" ~ "LA",
+. %in% "SD" ~ "LAC",
+TRUE ~ .
+)))
+saveRDS(pbp_all, file="ben_mutations.rds")
+pbp_all <- readRDS("ben_mutations.rds")
+pbp_all_rp <- pbp_all %>%
+filter(!is_na(epa), !is_na(posteam), play_type=="no_play" | play_type=="pass" | play_type=="run") %>%
+mutate(
+pass = if_else(str_detect(desc, "( pass)|(sacked)|(scramble)"), 1, 0),
+rush = if_else(str_detect(desc, "(left end)|(left tackle)|(left guard)|(up the middle)|(right guard)|(right tackle)|(right end)") & pass == 0, 1, 0),
+success = ifelse(epa>0, 1 , 0),
+passer_player_name = ifelse(play_type == "no_play" & pass == 1,
+str_extract(desc, "(?<=\\s)[A-Z][a-z]*\\.\\s?[A-Z][A-z]+(\\s(I{2,3})|(IV))?(?=\\s((pass)|(sack)|(scramble)))"),
+passer_player_name),
+receiver_player_name = ifelse(play_type == "no_play" & str_detect(desc, "pass"),
+str_extract(desc, "(?<=to\\s)[A-Z][a-z]*\\.\\s?[A-Z][A-z]+(\\s(I{2,3})|(IV))?"),
+receiver_player_name),
+rusher_player_name = ifelse(play_type == "no_play" & rush == 1,
+str_extract(desc, "(?<=\\s)[A-Z][a-z]*\\.\\s?[A-Z][A-z]+(\\s(I{2,3})|(IV))?(?=\\s((left end)|(left tackle)|(left guard)|		      (up the middle)|(right guard)|(right tackle)|(right end)))"),
+rusher_player_name),
+name = ifelse(!is_na(passer_player_name), passer_player_name, rusher_player_name),
+yards_gained=ifelse(play_type=="no_play",NA,yards_gained),
+play=1
+) %>%
+filter(pass==1 | rush==1)
+tail(pbp_all_rp)
+##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr"))
+##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
+library(nflscrapR)
+library(tidyverse)
+library(readr)
+library(pander)
+library(dplyr)
+library(na.tools)
+library(ggimage)
+library(teamcolors)
+library(plyr)
+library(readr)
+library(glue)
+library(animate)
+##reset
+setwd("~/")
+gid <- paste(getwd())
+gid
+device <- ""
+if (gid == "/Volumes/HDD/Users/colinwelsh") {
+##Maverick - MBP
+setwd("~/Documents/dev/football")
+device <- "Maverick (MBP)"
+} else if (gid == "/Users/ColinWelsh") {
+##Goose - iMac
+setwd("~/Documents/dev/football")
+device <- "Goose (iMac)"
+##add Goose
+}
+print(paste(device, "is ready for some football", sep = " "))
+rm(gid, device)
+# other dependent variables
+userYear <- 2019 ##necessary for saved
+userWeek <- 10 ##not necessary at the moment
+fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
+# set custom variables
+userYear <- 2019 ##necessary for saved
+userWeek <- 11 ##not necessary at the moment
+today <- Sys.Date()
+# test date
+date <- 201911
+##  date <- format(today, format="%Y%m%d")
+fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
+game_ids <- read.csv(fgame_ids, check.names = FALSE)
+currentGameIDs <- game_ids$game_id
+#pull games in 2019 season that match today's date
+currentGames <- grep(date, currentGameIDs)
+games_in_play <- currentGameIDs[currentGames]
+##can't figure this out yet
+#
+#  games_in_play <- game_ids$state_of_game[currentGames] != "POST"
+#
+#  nplay <- length(games_in_play)
+#  nplayLoop <- 1
+#
+# scrape pbp of active games
+# if 0 games, scrape scores
+for (x in games_in_play)
+{
+f <- paste("data/games/", userYear, "/", x, ".csv", sep = "")
+fplayers <-  paste("data/players/", userYear, "/", x, "players", ".csv", sep = "")
+if (file.exists(fplayers)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
+{
+xplayers <- player_game(x)
+write.csv(xplayers, fplayers, row.names = FALSE)
+} else {
+xplayers <- player_game(x)
+write.csv(xplayers, fplayers, row.names = FALSE)
+}
+if (file.exists(f)==TRUE)
+{
+#read game csv
+y <- read.csv(f, check.names=FALSE)
+tail(y)
+#check if y$desc contains "END GAME"
+#if x has END GAME change state_of_game to POST
+if (grepl("END GAME", y$desc[nrow(y)]) == TRUE)
+{
+print(paste("Game", x, "is over.", sep = " "))
+game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
+game_ids[game_ids$game_id == x, "away_score"] <- y$total_away_score[nrow(y)]
+game_ids[game_ids$game_id == x, "home_score"] <- y$total_home_score[nrow(y)]
+print(paste("Changing the state of game for", x, "to POST", sep = " "))
+write.csv(game_ids, fgame_ids, row.names = FALSE)
+}
+else
+{
+#scrape
+print(paste("Scraping game ", x, sep = ""))
+print(paste(game_ids[game_ids$game_id == x, "away_team"], "vs", game_ids[game_ids$game_id == x, "home_team"], sep = " "))
+y <- scrape_json_play_by_play(x)
+tail(y)
+game_ids$X <- NULL ## annoying glitch
+if (grepl("END GAME", y$desc[nrow(y)]) == TRUE) {
+print(paste("Game", x, "is over.", sep = " "))
+print(paste(game_ids[game_ids$game_id == x, "away_team"], "vs", game_ids[game_ids$game_id == x, "home_team"], sep = " "))
+game_ids[game_ids$game_id == x, "state_of_game"] <- "POST"
+game_ids[game_ids$game_id == x, "away_score"] <- y$total_away_score[nrow(y)]
+game_ids[game_ids$game_id == x, "home_score"] <- y$total_home_score[nrow(y)]
+print(paste("Changing the state of game for ", x, " to POST", sep = ""))
+write.csv(game_ids, fgame_ids, row.names=FALSE)
+}
+write.csv(y, file = paste("data/games/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
+}
+}
+else
+{
+print(paste("Scraping game", x, sep = " "))
+print(
+paste(
+game_ids[
+game_ids$game_id == x, "away_team"],
+"vs",
+game_ids[game_ids$game_id == x, "home_team"],
+sep = " "
+)
+)
+y <- scrape_json_play_by_play(x)
+tail(y)
+write.csv(y, file = paste("data/games/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
+}
+xawayscore <- y$total_away_score[nrow(y)]
+xawayteam <- y$away_team[1]
+xhomescore <- y$total_home_score[nrow(y)]
+xhometeam <- y$home_team[1]
+print(paste(xawayteam, ": ", xawayscore, " @ ", xhometeam, ": ", xhomescore, sep = ""))
+print(paste("Last play:", y$desc[nrow(y)], sep=""))
+}
+pbp2019 <- list.files(paste("data/games_data/", userYear, "/", sep = ""),
+pattern = "*.csv", full.names = TRUE) %>%
+lapply(read_csv) %>%
+bind_rows
+pbp2019
+write.csv(pbp2019, file = paste("data/season_total/pbp", userYear,".csv", sep = ""), row.names=FALSE)
+## Players Merge
+players2019 <- list.files(paste("data/players/", userYear, "/", sep = ""),
+pattern = "*.csv", full.names = TRUE) %>%
+lapply(read_csv) %>%
+bind_rows
+players2019
+write.csv(players2019, file = paste("data/season_total/players", userYear,".csv", sep = ""), row.names=FALSE)
+for (x in teamAbbr$nflscrapr_abbrev) {
+## doesn't work yet
+##  print(paste("Getting roster for the", userYear, teamAbbr$full_name == x))
+xroster <- season_rosters(userYear, teams = x)
+froster <- paste("data/teams/", userYear, "/", x, userYear, "roster", ".csv", sep = "")
+write.csv(xroster, file = froster, row.names = FALSE)
+}
+teams <- list.files(paste("data/players/", userYear, "/", sep = ""),
+pattern = "*.csv", full.names = TRUE) %>%
+lapply(read_csv) %>%
+bind_rows
+players2019
+write.csv(teams, file = paste("data/season_total/players", userYear,".csv", sep = ""), row.names=FALSE)
+>>>>>>> 7be7a63ed01903b9600cba9d97508bf5c4794404:_Rhistory

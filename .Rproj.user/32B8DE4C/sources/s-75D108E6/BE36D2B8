@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573533942387.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BE36D2B8",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1573533942387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "1B81F740",
+        "caption" : "pbp_rp",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=pbp_rp&cache_key=1B81F740",
+        "displayedObservations" : 17789,
+        "environment" : "",
+        "expression" : "pbp_rp",
+        "object" : "pbp_rp",
+        "preview" : 0,
+        "totalObservations" : 17789,
+        "variables" : 259
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
