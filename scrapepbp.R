@@ -9,8 +9,13 @@
   
   fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
   
-  
+
+  ## read Game IDs
 game_ids <- read.csv(fgame_ids, check.names = FALSE)
+## save Game IDs 
+# write.csv(game_ids, file = fgame_ids, row.names = FALSE)
+
+
 
 currentGameIDs <- game_ids$game_id
 #pull games in 2019 season that match today's date
