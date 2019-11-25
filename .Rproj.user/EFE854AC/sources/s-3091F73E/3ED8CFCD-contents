@@ -1,16 +1,21 @@
 # set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 8 ##not necessary at the moment
+  userWeek <- 10 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
-  date <- 2019
+  date <- 201911
 ##  date <- format(today, format="%Y%m%d")
   
-  fgame_ids <- paste("data/games_data/reg_season/reg_games_", userYear, ".csv", sep ="")
+  fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
   
-  
+
+  ## read Game IDs
 game_ids <- read.csv(fgame_ids, check.names = FALSE)
+## save Game IDs 
+# write.csv(game_ids, file = fgame_ids, row.names = FALSE)
+
+
 
 currentGameIDs <- game_ids$game_id
 #pull games in 2019 season that match today's date
@@ -30,13 +35,16 @@ games_in_play <- currentGameIDs[currentGames]
 # if 0 games, scrape scores
 for (x in games_in_play)
   {
-  f <- paste("data/games_data/", userYear, "/", x, ".csv", sep = "")
-  fplayers <-  paste("data/games_data/", userYear, "/", x, "players", ".csv", sep = "")
+  f <- paste("data/games/", userYear, "/", x, ".csv", sep = "")
+  fplayers <-  paste("data/players/", userYear, "/", x, "players", ".csv", sep = "")
   
   if (file.exists(fplayers)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
   {
     xplayers <- player_game(x)
-    write.csv(xplayers, fplayers)
+    write.csv(xplayers, fplayers, row.names = FALSE)
+  } else {
+    xplayers <- player_game(x)
+    write.csv(xplayers, fplayers, row.names = FALSE)
   }
   
   if (file.exists(f)==TRUE)
@@ -74,7 +82,7 @@ for (x in games_in_play)
         print(paste("Changing the state of game for ", x, " to POST", sep = ""))
         write.csv(game_ids, fgame_ids, row.names=FALSE)
         }
-      write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
+      write.csv(y, file = paste("data/games/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
       }
   }
   else
@@ -91,7 +99,7 @@ for (x in games_in_play)
       )
     y <- scrape_json_play_by_play(x)
     tail(y)
-    write.csv(y, file = paste("data/games_data/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
+    write.csv(y, file = paste("data/games/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
     }
   xawayscore <- y$total_away_score[nrow(y)]
   xawayteam <- y$away_team[1]
@@ -105,6 +113,7 @@ for (x in games_in_play)
 
 ## start season merge
 
+## PBP Merge
 
 pbp2019 <- list.files(paste("data/games_data/", userYear, "/", sep = ""),
                         pattern = "*.csv", full.names = TRUE) %>%
@@ -112,6 +121,30 @@ pbp2019 <- list.files(paste("data/games_data/", userYear, "/", sep = ""),
   bind_rows
 pbp2019
 write.csv(pbp2019, file = paste("data/season_total/pbp", userYear,".csv", sep = ""), row.names=FALSE)
+
+## Players Merge
+
+players2019 <- list.files(paste("data/players/", userYear, "/", sep = ""),
+                      pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+players2019
+write.csv(players2019, file = paste("data/season_total/players", userYear,".csv", sep = ""), row.names=FALSE)
+
+for (x in teamAbbr$nflscrapr_abbrev) {
+  ## doesn't work yet
+  ##  print(paste("Getting roster for the", userYear, teamAbbr$full_name == x))
+  xroster <- season_rosters(userYear, teams = x)
+  froster <- paste("data/teams/", userYear, "/", x, userYear, "roster", ".csv", sep = "")
+  write.csv(xroster, file = froster, row.names = FALSE)
+}
+
+teams <- list.files(paste("data/players/", userYear, "/", sep = ""),
+                          pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+players2019
+write.csv(teams, file = paste("data/season_total/players", userYear,".csv", sep = ""), row.names=FALSE)
 
 
 ##end season merge

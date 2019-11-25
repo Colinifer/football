@@ -170,8 +170,8 @@
 "reg",2019112405,"NO","CAR",12,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019112405/2019112405_gtd.json",34,31
 "reg",2019112407,"WAS","DET",12,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019112407/2019112407_gtd.json",19,16
 "reg",2019112406,"NYJ","OAK",12,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019112406/2019112406_gtd.json",34,3
-"reg",2019112408,"TEN","JAX",12,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019112408/2019112408_gtd.json",NA,NA
-"reg",2019112409,"NE","DAL",12,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019112409/2019112409_gtd.json",NA,NA
+"reg",2019112408,"TEN","JAX",12,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019112408/2019112408_gtd.json",42,20
+"reg",2019112409,"NE","DAL",12,2019,"POST","http://www.nfl.com/liveupdate/game-center/2019112409/2019112409_gtd.json",13,9
 "reg",2019112410,"SF","GB",12,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019112410/2019112410_gtd.json",NA,NA
 "reg",2019112411,"PHI","SEA",12,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019112411/2019112411_gtd.json",NA,NA
 "reg",2019112500,"LA","BAL",12,2019,"PRE","http://www.nfl.com/liveupdate/game-center/2019112500/2019112500_gtd.json",NA,NA

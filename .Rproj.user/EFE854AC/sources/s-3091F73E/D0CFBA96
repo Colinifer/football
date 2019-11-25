@@ -5,13 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3939890020",
+    "hash" : "0",
     "id" : "D0CFBA96",
-    "lastKnownWriteTime" : 1572310202,
-    "last_content_update" : 1572310202,
+    "lastKnownWriteTime" : 1572228040,
+    "last_content_update" : 1572228040,
     "path" : "~/Documents/dev/football/scrapegameids.R",
     "project_path" : "scrapegameids.R",
     "properties" : {
+        "cursorPosition" : "4,0",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
