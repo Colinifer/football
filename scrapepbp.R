@@ -1,6 +1,6 @@
 # set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 10 ##not necessary at the moment
+  userWeek <- 12 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
@@ -15,6 +15,7 @@ game_ids <- read.csv(fgame_ids, check.names = FALSE)
 ## save Game IDs 
 # write.csv(game_ids, file = fgame_ids, row.names = FALSE)
 
+y <- data.frame()
 
 
 currentGameIDs <- game_ids$game_id
