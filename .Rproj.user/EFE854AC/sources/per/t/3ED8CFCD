@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1572919127457.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2809359873",
+    "id" : "3ED8CFCD",
+    "lastKnownWriteTime" : 1574655322,
+    "last_content_update" : 1574655322537,
+    "path" : "~/Documents/dev/football/scrapepbp.R",
+    "project_path" : "scrapepbp.R",
+    "properties" : {
+        "cursorPosition" : "110,3",
+        "scrollLine" : "101"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

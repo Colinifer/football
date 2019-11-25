@@ -1,6 +1,0 @@
-games <- list.files(paste("data/players/", userYear, "/", sep = ""),
-                    pattern = "*.csv", full.names = TRUE) %>%
-  lapply(read_csv) %>%
-  bind_rows
-players2019
-write.csv(teams, file = paste("data/season_total/play
