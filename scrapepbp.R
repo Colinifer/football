@@ -1,6 +1,6 @@
 # set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 12 ##not necessary at the moment
+  userWeek <- 13 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
@@ -38,15 +38,6 @@ for (x in games_in_play)
   {
   f <- paste("data/games/", userYear, "/", x, ".csv", sep = "")
   fplayers <-  paste("data/players/", userYear, "/", x, "players", ".csv", sep = "")
-  
-  if (file.exists(fplayers)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
-  {
-    xplayers <- player_game(x)
-    write.csv(xplayers, fplayers, row.names = FALSE)
-  } else {
-    xplayers <- player_game(x)
-    write.csv(xplayers, fplayers, row.names = FALSE)
-  }
   
   if (file.exists(f)==TRUE)
     {
@@ -109,7 +100,20 @@ for (x in games_in_play)
   print(paste(xawayteam, ": ", xawayscore, " @ ", xhometeam, ": ", xhomescore, sep = ""))
   
   print(paste("Last play:", y$desc[nrow(y)], sep=""))
+  
+  ## add to the normal scrape functions
+  if (file.exists(fplayers)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
+  {
+    xplayers <- player_game(x)
+    write.csv(xplayers, fplayers, row.names = FALSE)
+  } else {
+    xplayers <- player_game(x)
+    write.csv(xplayers, fplayers, row.names = FALSE)
   }
+}
+
+
+
 
 
 ## start season merge
