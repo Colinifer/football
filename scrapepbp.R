@@ -4,7 +4,7 @@
   today <- Sys.Date()
   
     # test date
-  date <- 2019112
+  date <- 201912
 ##  date <- format(today, format="%Y%m%d")
   
   fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")

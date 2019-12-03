@@ -40,3 +40,4 @@ rm(gid, device)
 userYear <- 2019 ##necessary for saved 
 userWeek <- 11 ##not necessary at the moment
 fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
+
