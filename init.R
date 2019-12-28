@@ -38,6 +38,7 @@ rm(gid, device)
 # other dependent variables
 
 userYear <- 2019 ##necessary for saved 
-userWeek <- 11 ##not necessary at the moment
+userWeek <- 16 ##not necessary at the moment
 fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
 
+source("functions/addTargets.R")

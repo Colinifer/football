@@ -1,6 +1,6 @@
 # set custom variables
   userYear <- 2019 ##necessary for saved 
-  userWeek <- 13 ##not necessary at the moment
+  userWeek <- 16 ##not necessary at the moment
   today <- Sys.Date()
   
     # test date
@@ -106,13 +106,32 @@ for (x in games_in_play)
   {
     xplayers <- player_game(x)
     write.csv(xplayers, fplayers, row.names = FALSE)
+    print(paste("X =", x))
+    xpbp <- game_play_by_play(x)
+    addTargets(x)
   } else {
+    ## scrape player stats
     xplayers <- player_game(x)
-    write.csv(xplayers, fplayers, row.names = FALSE)
+    print(paste("X =", x))
+    xpbp <- game_play_by_play(x)
+    addTargets(x)
   }
+  
+  addTargets(x)
 }
 
 
+## xpbp <- game_play_by_play(2019122300)
+xreceivers <- unique(targets$Receiver_ID)
+for (x in xreceivers) {
+  xplayers[xplayers$playerID == x, "targets"] <- sum(x)
+}
+
+for (x in xreceivers) {
+  xplayers[xplayers$playerID == x, "targets"] <- sum(targets$Receiver_ID == x)
+}
+## bring targets column next to the receptions
+xplayers <- xplayers[,c(1:20,ncol(xplayers),22:ncol(xplayers)-1)]
 
 
 
@@ -120,7 +139,7 @@ for (x in games_in_play)
 
 ## PBP Merge
 
-pbp2019 <- list.files(paste("data/games_data/", userYear, "/", sep = ""),
+pbp2019 <- list.files(paste("data/games/", userYear, "/", sep = ""),
                         pattern = "*.csv", full.names = TRUE) %>%
   lapply(read_csv) %>%
   bind_rows
@@ -154,7 +173,7 @@ write.csv(teams, file = paste("data/season_total/players", userYear,".csv", sep 
 
 ##end season merge
 
-week_game_ids <- filter(game_ids, week == 8)
+week_game_ids <- fiter(game_ids, week == 8)
 games_in_play <- week_game_ids$game_id
 ## currentGames <- 
 
