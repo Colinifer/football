@@ -36,9 +36,16 @@ rm(gid, device)
 
 
 # other dependent variables
+today <- Sys.Date()
 
+#   test date
+##  date <- 201912
+date <- format(today, format="%Y%m%d")
 userYear <- 2019 ##necessary for saved 
-userWeek <- 16 ##not necessary at the moment
+userWeek <- 17 ##not necessary at the moment
 fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
 
+source("functions/scrapePBP.R")
+scrapePBP(date)
 source("functions/addTargets.R")
+

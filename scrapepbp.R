@@ -1,16 +1,16 @@
 # set custom variables
-  userYear <- 2019 ##necessary for saved 
-  userWeek <- 16 ##not necessary at the moment
-  today <- Sys.Date()
-  
-    # test date
-  date <- 201912
-##  date <- format(today, format="%Y%m%d")
-  
-  fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
+userYear <- 2019 ##necessary for saved 
+userWeek <- 16 ##not necessary at the moment
+today <- Sys.Date()
+
+# test date
+##  date <- 201912
+date <- format(today, format="%Y%m%d")
+
+fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
   
 
-  ## read Game IDs
+## read Game IDs
 game_ids <- read.csv(fgame_ids, check.names = FALSE)
 ## save Game IDs 
 # write.csv(game_ids, file = fgame_ids, row.names = FALSE)
