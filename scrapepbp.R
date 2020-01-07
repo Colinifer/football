@@ -4,14 +4,19 @@ userWeek <- 16 ##not necessary at the moment
 today <- Sys.Date()
 
 # test date
-##  date <- 201912
+##  date <- 2019
 date <- format(today, format="%Y%m%d")
 
 fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
+fpost_game_ids <- paste("data/games/post_season/post_games_", userYear, ".csv", sep ="")
   
 
 ## read Game IDs
+# if reg_season
 game_ids <- read.csv(fgame_ids, check.names = FALSE)
+# if post_season
+game_ids <- read.csv(fpost_game_ids, check.names = FALSE)
+
 ## save Game IDs 
 # write.csv(game_ids, file = fgame_ids, row.names = FALSE)
 
@@ -32,6 +37,9 @@ games_in_play <- currentGameIDs[currentGames]
 #
 
 # scrape pbp of active games
+#time the length of the loop
+tic('Optional helpful name here')
+aLongRunningExpression()
 
 # if 0 games, scrape scores
 for (x in games_in_play)
@@ -120,6 +128,7 @@ for (x in games_in_play)
   addTargets(x)
 }
 
+toc()
 
 ## xpbp <- game_play_by_play(2019122300)
 xreceivers <- unique(targets$Receiver_ID)

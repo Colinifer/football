@@ -1,4 +1,4 @@
-##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr"))
+##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
 ##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 
 library(nflscrapR)
@@ -13,6 +13,8 @@ library(plyr)
 library(readr)
 library(glue)
 library(animate)
+library(animation)
+library(tictoc)
 
 ##reset
 setwd("~/")
@@ -34,7 +36,6 @@ print(paste(device, "is ready for some football", sep = " "))
 rm(gid, device)
 
 
-
 # other dependent variables
 today <- Sys.Date()
 
@@ -43,9 +44,10 @@ today <- Sys.Date()
 date <- format(today, format="%Y%m%d")
 userYear <- 2019 ##necessary for saved 
 userWeek <- 17 ##not necessary at the moment
-fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
+seasonState <- "post"
+fgame_ids <- paste("data/games/", seasonState, "_season/", seasonState, "_games_", userYear, ".csv", sep ="")
+game_ids <- read.csv(fgame_ids)
 
 source("functions/scrapePBP.R")
-scrapePBP(date)
 source("functions/addTargets.R")
-
+scrapePBP(date)
