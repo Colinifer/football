@@ -8,8 +8,9 @@ scrapePBP <- function(date) {
   
   currentGameIDs <- game_ids$game_id
   #pull games in 2019 season that match today's date
-  currentGames <- grep(date, currentGameIDs)
-  games_in_play <- currentGameIDs[currentGames]
+  ##currentGames <- grep(date, currentGameIDs)
+  currentGames <- currentGameIDs <= date
+  games_in_play <- currentGameIDs[currentGames == TRUE]
   
   ##can't figure this out yet
   #  

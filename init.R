@@ -1,3 +1,5 @@
+pkgs <- c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation")
+
 ##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
 ##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 
@@ -47,6 +49,8 @@ userWeek <- 17 ##not necessary at the moment
 seasonState <- "post"
 fgame_ids <- paste("data/games/", seasonState, "_season/", seasonState, "_games_", userYear, ".csv", sep ="")
 game_ids <- read.csv(fgame_ids)
+game_ids <- scrape_game_ids(userYear, type = seasonState)
+write.csv(game_ids, fgame_ids)
 
 source("functions/scrapePBP.R")
 source("functions/addTargets.R")
