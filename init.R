@@ -55,3 +55,24 @@ write.csv(game_ids, fgame_ids)
 source("functions/scrapePBP.R")
 source("functions/addTargets.R")
 scrapePBP(date)
+
+pbpSeason <- list.files(paste("data/games/", userYear, "/", sep = ""),
+                      pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+pbpSeason
+write.csv(pbpSeason, file = paste("data/season_total/", userYear,"pbp.csv", sep = ""), row.names=FALSE)
+
+playerSeason <- list.files(paste("data/players/", userYear, "/", sep = ""),
+                      pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+playerSeason
+write.csv(playerSeason, file = paste("data/season_total/", userYear, "players.csv", sep = ""), row.names=FALSE)
+
+rosterSeason <- list.files(paste("data/teams/", userYear, "/", sep = ""),
+                           pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+rosterSeason
+write.csv(rosterSeason, file = paste("data/season_total/", userYear, "roster.csv", sep = ""), row.names=FALSE)
