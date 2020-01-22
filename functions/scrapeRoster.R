@@ -5,7 +5,7 @@ positions <- c(
   "PUNTER", "PUNT_RETURNER", "FIELD_GOAL_KICKER"
 )
 
-for (x in teams$nflscrapr_abbrev[17:nrow(teams)]) {
+for (x in teams$nflscrapr_abbrev[19:nrow(teams)]) {
   print(paste("Scraping ", x, " ", userYear, " roster. ", "Row #", which(teams$nflscrapr_abbrev == x), sep = ""))
   for (p in positions) {
     roster <- get_season_rosters(userYear, teams = x, positions = p)

@@ -144,7 +144,5 @@ scrapePBP <- function(date) {
       xpbp <- game_play_by_play(x)
       addTargets(x)
     }
-    
-    addTargets(x)
   }
 }
