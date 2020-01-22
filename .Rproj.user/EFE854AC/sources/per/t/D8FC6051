@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1579660771492.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3940137857",
+    "id" : "D8FC6051",
+    "lastKnownWriteTime" : 1579664569,
+    "last_content_update" : 1579664569382,
+    "path" : "~/Documents/dev/football/functions/scrapeRoster.R",
+    "project_path" : "functions/scrapeRoster.R",
+    "properties" : {
+        "cursorPosition" : "7,0",
+        "scrollLine" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

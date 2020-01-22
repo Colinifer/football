@@ -5,4 +5,4 @@ compile_pdf_state="{\"errors\":[],\"output\":\"\",\"running\":false,\"tab_visibl
 files.monitored-path=""
 find-in-files-state="{\"handle\":\"\",\"input\":\"\",\"path\":\"\",\"regex\":true,\"results\":{\"file\":[],\"line\":[],\"lineValue\":[],\"matchOff\":[],\"matchOn\":[]},\"running\":false}"
 imageDirtyState="1"
-saveActionState="-1"
+saveActionState="1"
