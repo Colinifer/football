@@ -48,6 +48,7 @@ userYear <- 2019 ##necessary for saved
 userWeek <- 17 ##not necessary at the moment
 seasonState <- "post"
 fgame_ids <- paste("data/games/", seasonState, "_season/", seasonState, "_games_", userYear, ".csv", sep ="")
+fteamabbr <- paste("data/season_total/team_abbr.csv", sep = "")
 game_ids <- read.csv(fgame_ids)
 game_ids <- scrape_game_ids(userYear, type = seasonState)
 write.csv(game_ids, fgame_ids)
