@@ -5,7 +5,7 @@ positions <- c(
   "PUNTER", "PUNT_RETURNER", "FIELD_GOAL_KICKER"
 )
 
-for (x in teams$nflscrapr_abbrev[19:nrow(teams)]) {
+for (x in teams$nflscrapr_abbrev[20:nrow(teams)]) {
   print(paste("Scraping ", x, " ", userYear, " roster. ", "Row #", which(teams$nflscrapr_abbrev == x), sep = ""))
   for (p in positions) {
     roster <- get_season_rosters(userYear, teams = x, positions = p)
@@ -18,11 +18,4 @@ for (x in teams$nflscrapr_abbrev[19:nrow(teams)]) {
     }
     write.csv(roster, froster, row.names = FALSE)
     }
-}
-
-for (x in teams$nflscrapr_abbrev[6:14]) {
-  froster <- paste("data/teams/", userYear, "/", x, userYear, "roster.csv", sep = "") #ARI2019roster.csv
-  roster <- read.csv(froster)
-  roster <- roster[!duplicated(roster),]
-  write.csv(roster, file = froster)
 }

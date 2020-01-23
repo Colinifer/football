@@ -14,7 +14,7 @@ library(teamcolors)
 library(plyr)
 library(readr)
 library(glue)
-library(animate)
+##library(animate)
 library(animation)
 library(tictoc)
 
