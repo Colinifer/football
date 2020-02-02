@@ -1,4 +1,11 @@
-pkgs <- c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation")
+pkgs <- c("devtools", "tidyverse", "readr",
+          "pander", "na.tools", "ggimage",
+          "devtools", "teamcolors", "glue",
+          "animate", "dplyr", "tictoc",
+          "animation", "gt", "DT",
+          "ggthemes", "bbplot", "ggtext",
+          "ggforce", "ggridges", "ggrepel",
+          "ggbeeswarm", "extrafont")
 
 ##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
 ##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
@@ -10,13 +17,23 @@ library(pander)
 library(dplyr)
 library(na.tools)
 library(ggimage)
-library(teamcolors)
+library(teamcolors) # NFL team colors and logos
 library(plyr)
 library(readr)
 library(glue)
 ##library(animate)
 library(animation)
 library(tictoc)
+library(gt) # beautiful tables
+library(DT) # beautiful interactive tables
+library(ggthemes) # custom pre-built themes
+library(bbplot) # more themes
+library(ggtext) # custom text color
+library(ggforce) # better annotations
+library(ggridges) # many distributions at once
+library(ggrepel) # better labels
+library(ggbeeswarm) # beeswarm plots
+library(extrafont) # for extra fonts
 
 
 
@@ -65,18 +82,18 @@ pbpSeason <- list.files(paste("data/games/", userYear, "/", sep = ""),
   lapply(read_csv) %>%
   bind_rows
 pbpSeason
-write.csv(pbpSeason, file = paste("data/season_total/", userYear,"pbp.csv", sep = ""), row.names=FALSE)
+write.csv(pbpSeason, file = paste("data/season_total/", userYear,"pbp.csv", sep = ""), row.names = FALSE)
 
 playerSeason <- list.files(paste("data/players/", userYear, "/", sep = ""),
                       pattern = "*.csv", full.names = TRUE) %>%
   lapply(read_csv) %>%
   bind_rows
 playerSeason
-write.csv(playerSeason, file = paste("data/season_total/", userYear, "players.csv", sep = ""), row.names=FALSE)
+write.csv(playerSeason, file = paste("data/season_total/", userYear, "players.csv", sep = ""), row.names = FALSE)
 
 rosterSeason <- list.files(paste("data/teams/", userYear, "/", sep = ""),
                            pattern = "*.csv", full.names = TRUE) %>%
   lapply(read_csv) %>%
   bind_rows
 rosterSeason
-write.csv(rosterSeason, file = paste("data/season_total/", userYear, "roster.csv", sep = ""), row.names=FALSE)
+write.csv(rosterSeason, file = paste("data/season_total/", userYear, "roster.csv", sep = ""), row.names = FALSE)
