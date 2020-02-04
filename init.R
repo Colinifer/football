@@ -61,7 +61,7 @@ rm(gid, device)
 today <- Sys.Date()
 
 #   test date
-##  date <- 201912
+##  date <- 202001
 date <- format(today, format="%Y%m%d")
 userYear <- 2019 ##necessary for saved 
 userWeek <- 17 ##not necessary at the moment

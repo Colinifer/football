@@ -1,4 +1,6 @@
 addTargets <- function(x) {
+  
+  fplayers <- paste("data/players/", userYear, "/", x, "players.csv", sep = "")
   ## create targets dataframe
   targets <- filter(xpbp, PlayType == "Pass" & Receiver != "NA")
   xreceivers <- unique(targets$Receiver_ID)
