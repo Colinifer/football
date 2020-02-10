@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581295638222.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2520105279",
+    "id" : "2D7A1336",
+    "lastKnownWriteTime" : 1581296997,
+    "last_content_update" : 1581296997413,
+    "path" : "~/Documents/dev/football/functions/addTargets.R",
+    "project_path" : "functions/addTargets.R",
+    "properties" : {
+        "cursorPosition" : "2,52",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

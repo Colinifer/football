@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2907332117",
+    "hash" : "3365899125",
     "id" : "A3371FB5",
-    "lastKnownWriteTime" : 1579662035,
-    "last_content_update" : 1579662035960,
+    "lastKnownWriteTime" : 1581295171,
+    "last_content_update" : 1581295171,
     "path" : "~/Documents/dev/football/init.R",
     "project_path" : "init.R",
     "properties" : {
-        "cursorPosition" : "57,32",
-        "scrollLine" : "48"
+        "cursorPosition" : "86,16",
+        "scrollLine" : "71"
     },
     "read_only" : false,
     "read_only_alternatives" : [

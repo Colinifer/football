@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581295447109.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1782336331",
+    "id" : "DCE5FA9C",
+    "lastKnownWriteTime" : 1581308030,
+    "last_content_update" : 1581308030429,
+    "path" : "~/Documents/dev/football/targetsWIP.R",
+    "project_path" : "targetsWIP.R",
+    "properties" : {
+        "cursorPosition" : "57,26",
+        "scrollLine" : "32"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
