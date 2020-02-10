@@ -1,8 +1,11 @@
-addTargets <- function(x) {
-  
+for (x in game_ids$game_id) {
   fplayers <- paste("data/players/", userYear, "/", x, "players.csv", sep = "")
+  xplayers <- player_game(x)
+  write.csv(xplayers, fplayers, row.names = FALSE)
+  print(paste("X =", x))
   ## create targets dataframe
-  xpbp <- read.csv(paste("data/games/", userYear, "/", x, ".csv", sep = ""))
+  fpbp = paste("data/games/", userYear, "/", x, ".csv", sep = "")
+  xpbp <- read.csv(fpbp)
   targets <- filter(xpbp, play_type == "pass" & receiver_player_id != "NA")
   xreceivers <- unique(targets$Receiver_ID)
   
@@ -12,8 +15,7 @@ addTargets <- function(x) {
   }
   
   ## bring targets column next to the receptions
-  xplayers <- read.csv(paste("data/players/", userYear , "/", x , "players.csv", sep = ""))
   xplayers <- xplayers[,c(1:20,ncol(xplayers),22:ncol(xplayers)-1)]
-  playerSeason$targets[is.na(playerSeason$targets)] <- 0
+  xplayers$targets[is.na(xplayers$targets)] <- 0
   write.csv(xplayers, fplayers, row.names = FALSE)
 }
