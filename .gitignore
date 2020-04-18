@@ -76,3 +76,5 @@ data/games/.DS_Store
 .Rproj.user/EFE854AC/sources/s-E464CE76/FE707B21-contents
 .Rproj.user/shared/notebooks/paths
 *.pper
+.Rproj.user
+*.csv

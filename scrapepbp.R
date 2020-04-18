@@ -7,18 +7,18 @@ today <- Sys.Date()
 ##  date <- 2019
 date <- format(today, format="%Y%m%d")
 
-fgame_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
-fpost_game_ids <- paste("data/games/post_season/post_games_", userYear, ".csv", sep ="")
+f.game_ids <- paste("data/games/reg_season/reg_games_", userYear, ".csv", sep ="")
+f.post_game_ids <- paste("data/games/post_season/post_games_", userYear, ".csv", sep ="")
   
 
 ## read Game IDs
 # if reg_season
-game_ids <- read.csv(fgame_ids, check.names = FALSE)
+game_ids <- read.csv(f.game_ids, check.names = FALSE)
 # if post_season
-game_ids <- read.csv(fpost_game_ids, check.names = FALSE)
+game_ids <- read.csv(f.post_game_ids, check.names = FALSE)
 
 ## save Game IDs 
-# write.csv(game_ids, file = fgame_ids, row.names = FALSE)
+# write.csv(game_ids, file = f.game_ids, row.names = FALSE)
 
 y <- data.frame()
 
@@ -45,7 +45,7 @@ aLongRunningExpression()
 for (x in games_in_play)
   {
   f <- paste("data/games/", userYear, "/", x, ".csv", sep = "")
-  fplayers <-  paste("data/players/", userYear, "/", x, "players", ".csv", sep = "")
+  f.players <-  paste("data/players/", userYear, "/", x, "players", ".csv", sep = "")
   
   if (file.exists(f)==TRUE)
     {
@@ -63,7 +63,7 @@ for (x in games_in_play)
       game_ids[game_ids$game_id == x, "away_score"] <- y$total_away_score[nrow(y)]
       game_ids[game_ids$game_id == x, "home_score"] <- y$total_home_score[nrow(y)]
       print(paste("Changing the state of game for", x, "to POST", sep = " "))
-      write.csv(game_ids, fgame_ids, row.names = FALSE)
+      write.csv(game_ids, f.game_ids, row.names = FALSE)
     }
     else
       {
@@ -80,7 +80,7 @@ for (x in games_in_play)
         game_ids[game_ids$game_id == x, "away_score"] <- y$total_away_score[nrow(y)]
         game_ids[game_ids$game_id == x, "home_score"] <- y$total_home_score[nrow(y)]
         print(paste("Changing the state of game for ", x, " to POST", sep = ""))
-        write.csv(game_ids, fgame_ids, row.names=FALSE)
+        write.csv(game_ids, f.game_ids, row.names=FALSE)
         }
       write.csv(y, file = paste("data/games/", userYear,"/", x, ".csv", sep = ""), row.names=FALSE)
       }
@@ -110,16 +110,16 @@ for (x in games_in_play)
   print(paste("Last play:", y$desc[nrow(y)], sep=""))
   
   ## add to the normal scrape functions
-  if (file.exists(fplayers)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
+  if (file.exists(f.players)==TRUE & grepl("END GAME", y$desc[nrow(y)]) == TRUE)
   {
-    xplayers <- player_game(x)
-    write.csv(xplayers, fplayers, row.names = FALSE)
+    x.players <- player_game(x)
+    write.csv(x.players, f.players, row.names = FALSE)
     print(paste("X =", x))
     xpbp <- game_play_by_play(x)
     addTargets(x)
   } else {
     ## scrape player stats
-    xplayers <- player_game(x)
+    x.players <- player_game(x)
     print(paste("X =", x))
     xpbp <- game_play_by_play(x)
     addTargets(x)
@@ -133,14 +133,14 @@ toc()
 ## xpbp <- game_play_by_play(2019122300)
 xreceivers <- unique(targets$Receiver_ID)
 for (x in xreceivers) {
-  xplayers[xplayers$playerID == x, "targets"] <- sum(x)
+  x.players[x.players$playerID == x, "targets"] <- sum(x)
 }
 
 for (x in xreceivers) {
-  xplayers[xplayers$playerID == x, "targets"] <- sum(targets$Receiver_ID == x)
+  x.players[x.players$playerID == x, "targets"] <- sum(targets$Receiver_ID == x)
 }
 ## bring targets column next to the receptions
-xplayers <- xplayers[,c(1:20,ncol(xplayers),22:ncol(xplayers)-1)]
+x.players <- x.players[,c(1:20,ncol(x.players),22:ncol(x.players)-1)]
 
 
 

@@ -1,47 +1,3 @@
-## devtools::install_github(repo = "maksimhorowitz/nflscrapR")
-
-pkgs <- c("devtools", "tidyverse", "readr",
-          "pander", "na.tools", "ggimage",
-          "devtools", "teamcolors", "glue",
-          "dplyr", "tictoc", "animation", 
-          "gt", "DT", "ggthemes", 
-          "bbplot", "ggtext", "ggforce", 
-          "ggridges", "ggrepel", "ggbeeswarm", 
-          "extrafont")
-installed_packages <- pkgs %in%
-  rownames(installed.packages())
-if (any(installed_packages == FALSE)) {
-  install.packages(pkgs[!installed_packages])
-}
-invisible(lapply(pkgs, library, character.only = TRUE))
-library("nflscrapR")
-
-##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
-##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
-
-##reset
-setwd("~/")
-gid <- paste(getwd())
-gid
-device <- ""
-
-if (gid == "/Volumes/HDD/Users/colinwelsh") {
-  ## Maverick - MBP
-  setwd("~/Documents/dev/football")
-  device <- "Maverick (MBP)"
-} else if (gid == "/Users/ColinWelsh") {
-  ## Goose - iMac
-  setwd("~/Documents/dev/football")
-  device <- "Goose (iMac)"
-} else if (gid == "/home/rstudio-user") {
-  ## RStudio Cloud
-  setwd("/cloud/project")
-  device <- "RStudio Cloud"
-}
-print(paste(device, "is ready for some football", sep = " "))
-rm(gid, device)
-
-
 #   Formate today for latest scrape
 today <- format(Sys.Date(), "%Y%d%m")
 
@@ -57,10 +13,6 @@ all_game_ids <- list.files(paste("data/games/", season_state, "_season", sep = "
 
 all_game_ids <- all_game_ids$game_id
 all_game_ids <- all_game_ids[all_game_ids <= today]
-## Remove broken games
-##broken_games <- c(2014081503, )
-##all_game_ids <- all_game_ids[!broken_games]
-
 all_files <- c()
 
 
@@ -97,7 +49,7 @@ all_files <- unlist(all_files)
 
 scrape_all_files <- function(x) {
   if (file.exists(x) == TRUE) {
-    ## print(paste("All", x, "files exist"))
+    print(paste("All", x, "files exist"))
   }
   if (file.exists(x) == FALSE) {
     ## tf.pbp_file <- paste("data/games/", t.year, "/", t.game_id, ".csv", sep = "")
@@ -106,7 +58,6 @@ scrape_all_files <- function(x) {
     ## Game logic
     if (substr(x, 6, 6) == "g") {
       t.game_id <- x %>% substr(17, 26) %>% as.integer()
-      ## game_date <- format(as.Date(substr(x, 1, 8)), "%Y-%d-%m")
       t.year <- get_t.year(t.game_id)
       paste("Scraping game data for", t.game_id, sep = " ") %>% print()
       tf.df <- nflscrapR::scrape_json_play_by_play(t.game_id)
