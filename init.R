@@ -4,16 +4,15 @@ pkgs <- c("devtools", "tidyverse", "readr",
           "pander", "na.tools", "ggimage",
           "devtools", "teamcolors", "glue",
           "dplyr", "tictoc", "animation", 
-          "gt", "DT", "ggthemes", 
-          "bbplot", "ggtext", "ggforce", 
+          "gt", "DT", "ggthemes", "ggforce", 
           "ggridges", "ggrepel", "ggbeeswarm", 
-          "extrafont")
+          "extrafont", "tidytext")
 installed_packages <- pkgs %in%
   rownames(installed.packages())
 if (any(installed_packages == FALSE)) {
   install.packages(pkgs[!installed_packages])
 }
-invisible(lapply(pkgs, library, character.only = TRUE))
+lapply(pkgs, library, character.only = TRUE)
 library("nflscrapR")
 
 ##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
@@ -58,8 +57,9 @@ all_game_ids <- list.files(paste("data/games/", season_state, "_season", sep = "
 all_game_ids <- all_game_ids$game_id
 all_game_ids <- all_game_ids[all_game_ids <= today]
 ## Remove broken games
-##broken_games <- c(2014081503, )
-##all_game_ids <- all_game_ids[!broken_games]
+
+broken_games <- c(2014081503, 2016080751)
+all_game_ids <- all_game_ids[! all_game_ids %in% broken_games]
 
 all_files <- c()
 
