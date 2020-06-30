@@ -1,13 +1,13 @@
 {
-    "path" : "~/Documents/dev/football/playground",
-    "sortOrder" : [
+    "path": "~/Documents/dev/football/playground",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "ascending": true,
+            "columnIndex": 2
         },
         {
-            "ascending" : true,
-            "columnIndex" : 4
+            "ascending": true,
+            "columnIndex": 4
         }
     ]
 }

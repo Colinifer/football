@@ -1,26 +1,31 @@
-## devtools::install_github(repo = "maksimhorowitz/nflscrapR")
-## devtools::install_github("mrcaseb/nflfastR")
-## devtools::install_github("dynastyprocess/ffscrapr")
+# Packages & Init Setup ---------------------------------------------------
 
-pkgs <- c("devtools", "tidyverse", "readr",
-          "pander", "na.tools", "ggimage",
-          "devtools", "teamcolors", "glue",
-          "dplyr", "tictoc", "animation", 
-          "gt", "DT", "ggthemes", "ggforce", 
-          "ggridges", "ggrepel", "ggbeeswarm", 
-          "extrafont", "tidytext")
+# devtools::install_github(repo = "maksimhorowitz/nflscrapR")
+# devtools::install_github("mrcaseb/nflfastR")
+# devtools::install_github("dynastyprocess/ffscrapr")
+
+pkgs <- c(
+  "devtools", "tidyverse", "readr",
+  "pander", "na.tools", "ggimage",
+  "devtools", "teamcolors", "glue",
+  "dplyr", "tictoc", "animation",
+  "gt", "DT", "ggthemes",
+  "ggforce", "ggridges", "ggrepel",
+  "ggbeeswarm", "extrafont", "tidytext",
+  "RCurl"
+)
 installed_packages <- pkgs %in%
   rownames(installed.packages())
 if (any(installed_packages == FALSE)) {
   install.packages(pkgs[!installed_packages])
 }
 lapply(pkgs, library, character.only = TRUE)
-library("nflscrapR")
+# library("nflscrapR")
 library("nflfastR")
 library("ffscrapr")
 
-##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
-##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
+# pkgs2 <- c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
+# compare pkgs2 to pkgs to get missing packages
 
 ##reset
 setwd("~/")
@@ -45,17 +50,22 @@ print(paste(device, "is ready for some football", sep = " "))
 rm(gid, device)
 
 
-#   Formate today for latest scrape
+# Get Data ----------------------------------------------------------------
+
+#   Format today for latest scrape
 today <- format(Sys.Date(), "%Y%d%m")
 
+# Create list of Game IDs -------------------------------------------------
 
-## Create a list of Game IDs
-###############
 season_state <- c("pre", "reg", "post")
 
-all_game_ids <- list.files(paste("data/games/", season_state, "_season", sep = ""),
-                           pattern = "*.csv", full.names = TRUE) %>%
-  lapply(read_csv) %>% 
+all_game_ids <-
+  list.files(
+    paste("data/games/", season_state, "_season", sep = ""),
+    pattern = "*.csv",
+    full.names = TRUE
+  ) %>%
+  lapply(read_csv) %>%
   bind_rows()
 
 all_game_ids <- all_game_ids$game_id
@@ -63,7 +73,7 @@ all_game_ids <- all_game_ids[all_game_ids <= today]
 ## Remove broken games
 
 broken_games <- c(2014081503, 2016080751)
-all_game_ids <- all_game_ids[! all_game_ids %in% broken_games]
+all_game_ids <- all_game_ids[!all_game_ids %in% broken_games]
 
 all_files <- c()
 
