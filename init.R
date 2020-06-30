@@ -1,4 +1,6 @@
 ## devtools::install_github(repo = "maksimhorowitz/nflscrapR")
+## devtools::install_github("mrcaseb/nflfastR")
+## devtools::install_github("dynastyprocess/ffscrapr")
 
 pkgs <- c("devtools", "tidyverse", "readr",
           "pander", "na.tools", "ggimage",
@@ -14,6 +16,8 @@ if (any(installed_packages == FALSE)) {
 }
 lapply(pkgs, library, character.only = TRUE)
 library("nflscrapR")
+library("nflfastR")
+library("ffscrapr")
 
 ##install.packages(c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
 ##devtools::install_github(repo = "maksimhorowitz/nflscrapR")
