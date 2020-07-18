@@ -1,6 +1,5 @@
 # Packages & Init Setup ---------------------------------------------------
 
-# devtools::install_github(repo = "maksimhorowitz/nflscrapR")
 # devtools::install_github("mrcaseb/nflfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
 
@@ -9,6 +8,7 @@ pkgs <- c(
   "tidyverse",
   "readr",
   "pander",
+  "furrr",
   "na.tools",
   "ggimage",
   "teamcolors",
@@ -33,12 +33,9 @@ if (any(installed_packages == FALSE)) {
   install.packages(pkgs[!installed_packages])
 }
 lapply(pkgs, library, character.only = TRUE)
-# library("nflscrapR")
+# library("nflscrapR") # doesn't work anymore
 library("nflfastR")
 library("ffscrapr")
-
-# pkgs2 <- c("devtools", "tidyverse", "readr", "pander", "na.tools", "ggimage", "devtools", "teamcolors", "glue", "animate", "dplyr", "tictoc", "animation"))
-# compare pkgs2 to pkgs to get missing packages
 
 ##reset
 setwd("~/")
@@ -63,104 +60,43 @@ print(paste(device, "is ready for some football", sep = " "))
 rm(gid, device)
 
 
-# Get Data ----------------------------------------------------------------
+# Create standard objects -------------------------------------------------
 
-#   Format today for latest scrape
-today <- format(Sys.Date(), "%Y%d%m")
+teams_colors_logos <- teams_colors_logos
+today <- format(Sys.Date(), "%Y/%d/%m")
+years <- c(2000:2019)
 
-# Create list of Game IDs -------------------------------------------------
-
-season_state <- c("pre", "reg", "post")
-
-all_game_ids <-
-  list.files(
-    paste("data/games/", season_state, "_season", sep = ""),
-    pattern = "*.csv",
-    full.names = TRUE
-  ) %>%
-  lapply(read_csv) %>%
-  bind_rows()
-
-all_game_ids <- all_game_ids$game_id
-all_game_ids <- all_game_ids[all_game_ids <= today]
-## Remove broken games
-
-broken_games <- c(2014081503, 2016080751)
-all_game_ids <- all_game_ids[!all_game_ids %in% broken_games]
-
-all_files <- c()
-
-
-## Solved postseason year filepath bug
-###############
-
-get_t.year <- function(x) {
-  if(as.integer(substr(x, 5, 6)) < 3) {
-    invisible(as.integer(substr(x, 1, 4)) - 1)
-  }
-  else {
-    invisible(substr(x, 1, 4))
-  }
+get_pbp <- function(x) {
+  paste0("https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_", x, ".rds") %>% 
+    url() %>% 
+    readRDS()
 }
 
+f.pbp_db <- paste0("data/pbp_db.rds")
 
-## Create a list of all files
-###############
+ifelse(
+  file.exists(f.pbp_db) == TRUE,
+  pbp_db <-
+    readRDS(f.pbp_db),
+  pbp_db <-
+    rbind %>%
+    do.call(years %>%
+              lapply(get_pbp)) %>%
+    saveRDS(f.pbp_db)
+)
 
-name_all_files <- function(x) {
-  t.year <- get_t.year(x)
-  f.pbp_x <- paste("data/games/", t.year, "/", x, ".csv", sep = "")
-  f.players_x <- paste("data/players/", t.year, "/", x, "players.csv", sep = "")
-  all_files <- append(all_files, f.pbp_x)
-  all_files <- append(all_files, f.players_x)
-}
+# Obsolete code, consolidated by function above
+# This is useful if you need the pbp_list
+# 
+# pbp_list <- years %>% 
+#   lapply(get_pbp)
+# 
+# pbp_db <- do.call(rbind, pbp_list)
+# 
+# f.pbp_db <- paste0("data/pbp_db.rds")
+# pbp_db %>% saveRDS(file = f.pbp_db)
 
-all_files <- all_game_ids %>% lapply(name_all_files)
-all_files <- unlist(all_files)
 
+# Live scrape # need games on date in vector ------------------------------
 
-## Scrape all files
-###############
-
-scrape_all_files <- function(x) {
-  if (file.exists(x) == TRUE) {
-    ## print(paste("All", x, "files exist"))
-  }
-  if (file.exists(x) == FALSE) {
-    ## tf.pbp_file <- paste("data/games/", t.year, "/", t.game_id, ".csv", sep = "")
-    ## tf.player_file <- paste("data/players/", t.year, "/", t.game_id, "players.csv", sep = "")
-    
-    ## Game logic
-    if (substr(x, 6, 6) == "g") {
-      t.game_id <- x %>% substr(17, 26) %>% as.integer()
-      ## game_date <- format(as.Date(substr(x, 1, 8)), "%Y-%d-%m")
-      t.year <- get_t.year(t.game_id)
-      paste("Scraping game data for", t.game_id, sep = " ") %>% print()
-      tf.df <- nflscrapR::scrape_json_play_by_play(t.game_id)
-      print("Successfully scraped pbp!")
-    }
-    ## Player logic
-    if (substr(x, 6, 6) == "p") {
-      t.game_id <- x %>% substr(19, 28) %>% as.integer()
-      tf.pbp_file <- paste("data/games/", get_t.year(t.game_id), "/", t.game_id, ".csv", sep = "")
-      paste("Scraping player data for", t.game_id, sep = " ") %>% print()
-      tf.df <- player_game(t.game_id)
-      print("Successfully scraped player game!")
-      targets <- read_csv(tf.pbp_file) %>% filter(play_type == "pass" & receiver_player_id != "NA")
-      tf.targets <- tibble(
-        playerID = unique(targets$receiver_player_id),
-        targets = integer(length(unique(targets$receiver_player_id)))
-      )
-      add_targets <- function(x){
-        tf.targets[tf.targets$playerID == x, "targets"] <- sum(targets$receiver_player_id == x)
-      }
-      tf.targets$playerID %>% lapply(add_targets)
-      tf.targets$targets <- unlist(tf.targets$playerID %>% lapply(add_targets))
-      tf.df <- dplyr::left_join(tf.df, tf.targets, by = "playerID")
-      print("Successfully joined targets to player game!")
-    }
-    write.csv(tf.df, file = x, row.names = FALSE)
-  }
-}
-
-lapply(all_files, scrape_all_files)
+schedules <- fast_scraper_schedules(years, pp = TRUE)
