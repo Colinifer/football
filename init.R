@@ -5,13 +5,26 @@
 # devtools::install_github("dynastyprocess/ffscrapr")
 
 pkgs <- c(
-  "devtools", "tidyverse", "readr",
-  "pander", "na.tools", "ggimage",
-  "devtools", "teamcolors", "glue",
-  "dplyr", "tictoc", "animation",
-  "gt", "DT", "ggthemes",
-  "ggforce", "ggridges", "ggrepel",
-  "ggbeeswarm", "extrafont", "tidytext",
+  "devtools",
+  "tidyverse",
+  "readr",
+  "pander",
+  "na.tools",
+  "ggimage",
+  "teamcolors",
+  "glue",
+  "dplyr",
+  "tictoc",
+  "animation",
+  "gt",
+  "DT",
+  "ggthemes",
+  "ggforce",
+  "ggridges",
+  "ggrepel",
+  "ggbeeswarm",
+  "extrafont",
+  "tidytext",
   "RCurl"
 )
 installed_packages <- pkgs %in%
