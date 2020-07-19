@@ -6,6 +6,9 @@
 pkgs <- c(
   "devtools",
   "tidyverse",
+  "DBI",
+  "odbc",
+  "RMariaDB",
   "readr",
   "pander",
   "furrr",
@@ -35,7 +38,7 @@ if (any(installed_packages == FALSE)) {
 lapply(pkgs, library, character.only = TRUE)
 # library("nflscrapR") # doesn't work anymore
 library("nflfastR")
-library("ffscrapr")
+# library("ffscrapr")
 
 ##reset
 setwd("~/")
@@ -72,18 +75,25 @@ get_pbp <- function(x) {
     readRDS()
 }
 
-f.pbp_db <- paste0("data/pbp_db.rds")
+f.pbp_db_rds <- paste0("data/pbp_db.rds")
+f.pbp_db_csv <- paste0("data/pbp_db.csv")
 
 ifelse(
   file.exists(f.pbp_db) == TRUE,
   pbp_db <-
-    readRDS(f.pbp_db),
+    readRDS(f.pbp_db_rds),
   pbp_db <-
     rbind %>%
     do.call(years %>%
               lapply(get_pbp)) %>%
-    saveRDS(f.pbp_db)
+    saveRDS(f.pbp_db_rds)
 )
+
+# convert rds to csv
+write_csv(readRDS(f.pbp_db_rds), f.pbp_db_csv)
+
+# write table
+dbWriteTable(con, "pbp", readRDS(f.pbp_db_rds))
 
 # Obsolete code, consolidated by function above
 # This is useful if you need the pbp_list
