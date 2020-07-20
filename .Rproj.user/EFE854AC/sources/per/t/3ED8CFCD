@@ -1,25 +1,24 @@
 {
-    "collab_server" : "",
-    "contents" : "",
-    "created" : 1572919127457.000,
-    "dirty" : false,
-    "encoding" : "UTF-8",
-    "folds" : "",
-    "hash" : "1667449218",
-    "id" : "3ED8CFCD",
-    "lastKnownWriteTime" : 1579659864,
-    "last_content_update" : 1579659864,
-    "path" : "~/Documents/dev/football/scrapepbp.R",
-    "project_path" : "scrapepbp.R",
-    "properties" : {
-        "cursorPosition" : "103,39",
-        "scrollLine" : "0"
+    "id": "3ED8CFCD",
+    "path": "~/Documents/dev/football/scrapepbp.R",
+    "project_path": "scrapepbp.R",
+    "type": "r_source",
+    "hash": "1667449218",
+    "contents": "",
+    "dirty": false,
+    "created": 1572919127457.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "cursorPosition": "103,39",
+        "scrollLine": "0"
     },
-    "read_only" : false,
-    "read_only_alternatives" : [
-    ],
-    "relative_order" : 3,
-    "source_on_save" : false,
-    "source_window" : "",
-    "type" : "r_source"
+    "folds": "",
+    "lastKnownWriteTime": 1579659864,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1579659864,
+    "read_only": false,
+    "read_only_alternatives": []
 }

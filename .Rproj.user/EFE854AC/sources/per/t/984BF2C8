@@ -1,26 +1,25 @@
 {
-    "collab_server" : "",
-    "contents" : "",
-    "created" : 1574653717234.000,
-    "dirty" : false,
-    "encoding" : "UTF-8",
-    "folds" : "",
-    "hash" : "1386524841",
-    "id" : "984BF2C8",
-    "lastKnownWriteTime" : 1574655345,
-    "last_content_update" : 1574655345901,
-    "path" : "~/Documents/dev/football/messing around/SF schedule.R",
-    "project_path" : "messing around/SF schedule.R",
-    "properties" : {
-        "cursorPosition" : "3,0",
-        "scrollLine" : "0",
-        "tempName" : "Untitled1"
+    "id": "984BF2C8",
+    "path": "~/Documents/dev/football/messing around/SF schedule.R",
+    "project_path": "messing around/SF schedule.R",
+    "type": "r_source",
+    "hash": "1386524841",
+    "contents": "",
+    "dirty": false,
+    "created": 1574653717234.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "cursorPosition": "3,0",
+        "scrollLine": "0",
+        "tempName": "Untitled1"
     },
-    "read_only" : false,
-    "read_only_alternatives" : [
-    ],
-    "relative_order" : 5,
-    "source_on_save" : false,
-    "source_window" : "",
-    "type" : "r_source"
+    "folds": "",
+    "lastKnownWriteTime": 1574655345,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1574655345901,
+    "read_only": false,
+    "read_only_alternatives": []
 }

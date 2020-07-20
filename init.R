@@ -65,6 +65,12 @@ rm(gid, device)
 
 # Create standard objects -------------------------------------------------
 
+source("con.R")
+dbListTables(con)
+dbListObjects(con)
+dbListFields(con, "pbp")
+dbListFields(con, "schedule")
+
 teams_colors_logos <- teams_colors_logos
 today <- format(Sys.Date(), "%Y/%d/%m")
 years <- c(2000:2019)
@@ -93,7 +99,8 @@ ifelse(
 write_csv(readRDS(f.pbp_db_rds), f.pbp_db_csv)
 
 # write table
-dbWriteTable(con, "pbp", readRDS(f.pbp_db_rds))
+RMariaDB::dbWriteTable(con, "pbp", readRDS(f.pbp_db_rds), overwrite =)
+RMariaDB::dbWriteTable(con, "schedule", fast_scraper_schedules(years, pp = TRUE))
 
 # Obsolete code, consolidated by function above
 # This is useful if you need the pbp_list

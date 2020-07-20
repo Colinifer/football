@@ -1,25 +1,24 @@
 {
-    "collab_server" : "",
-    "contents" : "",
-    "created" : 1572919126569.000,
-    "dirty" : false,
-    "encoding" : "UTF-8",
-    "folds" : "",
-    "hash" : "3939890020",
-    "id" : "D0CFBA96",
-    "lastKnownWriteTime" : 1572228040,
-    "last_content_update" : 1572228040,
-    "path" : "~/Documents/dev/football/scrapegameids.R",
-    "project_path" : "scrapegameids.R",
-    "properties" : {
-        "cursorPosition" : "4,0",
-        "scrollLine" : "0"
+    "id": "D0CFBA96",
+    "path": "~/Documents/dev/football/scrapegameids.R",
+    "project_path": "scrapegameids.R",
+    "type": "r_source",
+    "hash": "3939890020",
+    "contents": "",
+    "dirty": false,
+    "created": 1572919126569.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "cursorPosition": "4,0",
+        "scrollLine": "0"
     },
-    "read_only" : false,
-    "read_only_alternatives" : [
-    ],
-    "relative_order" : 2,
-    "source_on_save" : false,
-    "source_window" : "",
-    "type" : "r_source"
+    "folds": "",
+    "lastKnownWriteTime": 1572228040,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1572228040,
+    "read_only": false,
+    "read_only_alternatives": []
 }

@@ -1,9 +1,9 @@
 {
-    "path" : "~/Documents/dev/football",
-    "sortOrder" : [
+    "path": "~/Documents/dev/football",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }
