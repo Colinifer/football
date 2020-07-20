@@ -60,12 +60,12 @@ if (gid == "/Volumes/HDD/Users/colinwelsh") {
   device <- "RStudio Cloud"
 }
 print(paste(device, "is ready for some football", sep = " "))
-rm(gid, device)
+rm(gid)
 
 
 # Create standard objects -------------------------------------------------
 
-source("con.R")
+source("con.R") # set condition based on device to update local vs remote connections to document
 dbListTables(con)
 dbListObjects(con)
 dbListFields(con, "pbp")
