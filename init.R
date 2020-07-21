@@ -66,9 +66,9 @@ rm(gid)
 
 
 # Create standard objects -------------------------------------------------
-
 source("../initR/con.R") # set condition based on device to update local vs remote connections to document
-dbListTables(con)
+length(dbListTables(con))
+dbTables <- dbListTables(con)[1:length(dbListTables(con))]
 dbListObjects(con)
 dbListFields(con, "pbp")
 dbListFields(con, "schedule")

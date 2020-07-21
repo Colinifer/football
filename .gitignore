@@ -1,4 +1,8 @@
 .Rproj.user/
+Rproj.user/
+.Rdata
+.RData.Tmp
+.Rhistory
 data/
 *.pper
 *.csv
