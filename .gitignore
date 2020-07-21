@@ -1,8 +1,10 @@
 .Rproj.user/
+*.Rproj.user/
 Rproj.user/
 .Rdata
 .RData.Tmp
 .Rhistory
+.DS_Store
 data/
 *.pper
 *.csv
