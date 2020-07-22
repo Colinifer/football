@@ -19,6 +19,7 @@ pkgs <- c(
   "glue",
   "dplyr",
   "jsonlite",
+  "RJSONIO",
   "tictoc",
   "animation",
   "gt",
@@ -29,6 +30,7 @@ pkgs <- c(
   "ggrepel",
   "ggbeeswarm",
   "extrafont",
+  "shadowtext",
   "tidytext",
   "RCurl"
 )

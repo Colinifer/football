@@ -3,7 +3,7 @@
 # chmod u+w /usr/local/share/man/man5 /usr/local/share/man/man7
 
 db_user <- "publiccolin"
-<<<<<<< HEAD
+
 con <- dbConnect(
   RMariaDB::MariaDB(),
   host = rstudioapi::askForSecret("Enter Iceman IP address",
@@ -18,7 +18,6 @@ con <- dbConnect(
   dbname = proj_name,
   Trusted_Connection = "True"
 )
-=======
 
 con <- dbConnect(RMariaDB::MariaDB(),
                  host = "72.78.233.235",
@@ -30,6 +29,5 @@ con <- dbConnect(RMariaDB::MariaDB(),
                  # Server = "localhost\\SQLEXPRESS", 
                  # Database = "datawarehouse", 
                  Trusted_Connection = "True")
->>>>>>> 53d376610f0aab5b10d76b9f0d58bf2a7841d1ca
 
 # all_projectsDb <- dbConnect(RMariaDB::MariaDB(), user='user', password=localuserpassword, dbname='projects', host='localhost')
