@@ -1,3 +1,5 @@
+# Packages & Init Setup ---------------------------------------------------
+
 proj_name <- "football"
 print(proj_name)
 
@@ -75,6 +77,7 @@ source("../initR/con.R")
 
 tic()
 yr <- 2019
+tm_abbrev <- "WAS"
 team_df <- read.csv('plots/assets/nfl_logo.csv', stringsAsFactors = F)
 pff_id <- read.csv('data/players/All_Player_Info.csv', stringsAsFactors = F)
 
@@ -84,8 +87,8 @@ pff_id$team.abbreviation[which(pff_id$team.abbreviation=='OAK')] <- 'LV'
 pff_id$team.city[which(pff_id$team.city=='Oakland')] <- 'Las Vegas'
 pff_id$team.slug[which(pff_id$team.slug=='okland-raiders')] <- 'las-vegas-raiders'
 
-yr_pbp <- lapply(2019, function(yr) {
-  dbGetQuery(con, paste0("SELECT * FROM `football`.`pbp` WHERE `game_id` LIKE '%",yr, "%'"), stringsAsFactors=F)
+yr_pbp <- lapply(yr, function(x) {
+  dbGetQuery(con, paste0("SELECT * FROM `football`.`pbp` WHERE `game_id` LIKE '%", x, "%'"), stringsAsFactors=F)
 })
 dbDisconnect(con)
 pbp_NFL <- yr_pbp[[1]]
@@ -95,22 +98,35 @@ pbp_NFL$posteam[which(pbp_NFL$posteam=='JAC')] <- 'JAX'
 pbp_NFL$posteam[which(pbp_NFL$posteam=='STL')] <- 'LA'
 pbp_NFL$posteam[which(pbp_NFL$posteam=='OAK')] <- 'LV'
 
-pbp_NFL$team_player <- paste0(pbp_NFL$receiver_player_id,'_',pbp_NFL$posteam)
+if (tm_abbrev > 0) {
+  pbp_tm_abbrev <- pbp_NFL %>% filter(posteam == tm_abbrev)
+} else {
+  pbp_tm_abbrev <- pbp_NFL
+}
+
+team_df <- team_df %>% filter(team_code == tm_abbrev)
+
+pbp_tm_abbrev$team_player <- paste0(pbp_tm_abbrev$receiver_player_id,'_',pbp_tm_abbrev$posteam)
 
 # need to map correct IDs
-adot_agg_df <- aggregate(cbind(air_yards,pass_attempt) ~ receiver_player_id + posteam + team_player + receiver_player_name, data = pbp_NFL, FUN = sum)
+adot_agg_df <- aggregate(cbind(air_yards,pass_attempt) ~ receiver_player_id + posteam + team_player + receiver_player_name, data = pbp_tm_abbrev, FUN = sum)
 #adot_agg_df <- adot_agg_df[which(adot_agg_df$pass_attempt>=40),]
 adot_agg_df <- adot_agg_df[order(-adot_agg_df$pass_attempt),]
 adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))
 adot_agg_df <- adot_agg_df[which(adot_agg_df$tm_targ_order <= 5),]
 adot_agg_df$ADOT <- adot_agg_df$air_yards / adot_agg_df$pass_attempt
+# Order by ADOT
 adot_agg_df <- adot_agg_df[order(adot_agg_df$ADOT),]
 adot_agg_df$tm_ADOT_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))
+# Order by Pass Attempt
+adot_agg_df <- adot_agg_df[order(adot_agg_df$pass_attempt),]
+adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))
 
-freq_passers <- pbp_NFL[which(pbp_NFL$team_player %in% adot_agg_df$team_player),]
+freq_passers <- pbp_tm_abbrev[which(pbp_tm_abbrev$team_player %in% adot_agg_df$team_player),]
 freq_passers$full_name <- pff_id$full_name[match(freq_passers$receiver_player_id, pff_id$nflfastR_id)]
 freq_passers <- merge(freq_passers, adot_agg_df, by = 'team_player', suffixes = c('','_agg'))
 freq_passers$tm_ADOT_order <- factor(freq_passers$tm_ADOT_order,1:5)
+freq_passers$tm_targ_order <- factor(freq_passers$tm_targ_order,1:5)
 freq_passers$posteam <- factor(freq_passers$posteam, team_df$team_code[order(team_df$division)])
 
 fill_col <- team_df$primary
@@ -120,12 +136,14 @@ names(outline_col) <- team_df$team_code
 
 headshot_df <-
   data.frame(
+    'full_name' = adot_agg_df$receiver_player_name,
     pff_url = paste0(
       'http://media.pff.com/player-photos/nfl/',
       pff_id$id[match(adot_agg_df$receiver_player_id, pff_id$nflfastR_id)],
       '.png'
     ),
     'posteam' = adot_agg_df$posteam,
+    'tm_targ_order' = factor(adot_agg_df$tm_targ_order, 1:5),
     'tm_ADOT_order' = factor(adot_agg_df$tm_ADOT_order, 1:5),
     stringsAsFactors = F
   )
@@ -139,8 +157,10 @@ headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-ph
 headshot_df$posteam <-
   factor(headshot_df$posteam, team_df$team_code[order(team_df$division)])
 
+headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/NA.png')] <- "plots/assets/na.png"
+
 unmatched <- adot_agg_df$receiver_player_id[is.na(match(adot_agg_df$receiver_player_id, pff_id$GSIS_ID))]
-#pbp_NFL$receiver_player_name[match(unmatched, pbp_NFL$receiver_player_id)]
+# pbp_NFL$receiver_player_name[match(unmatched, pbp_NFL$receiver_player_id)]
 
 
 team_df$posteam <- factor(team_df$team_code, team_df$team_code[order(team_df$division)])
@@ -148,51 +168,89 @@ team_df$posteam <- factor(team_df$team_code, team_df$team_code[order(team_df$div
 toc()
 img_size_adj <- 100/(8*4)
 
+# Plot size
+aspect_1 <- 14/3
+aspect_2 <- 14/3
+
 tic()
-p_new <- ggplot(freq_passers, aes(y = tm_ADOT_order, x = air_yards)) +
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 2.8), size = 0.80) +
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 2.8), size = 0.80, color = 'white', alpha = 0.8) +
-  geom_image(data = headshot_df, aes(image = pff_url, x = 38, y = tm_ADOT_order), size = 0.25, nudge_y = 0.5) +
-  geom_density_ridges2(aes(y = tm_ADOT_order, fill = posteam, color = posteam), scale = 1.7, size = 0.2, na.rm = T, show.legend = F, bandwidth = 2, panel_scaling = F) +
+team_dot <- ggplot(freq_passers, aes(y = tm_targ_order, x = air_yards)) +
+  # Team Logo
+  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80) +
+  # Team logo washed
+  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80, color = 'white', alpha = 0.8) +
+  # Player headshot
+  geom_image(data = headshot_df, aes(image = pff_url, x = 38, y = tm_targ_order), size = 0.25, nudge_y = 0.5) +
+  geom_density_ridges2(aes(y = tm_targ_order, fill = posteam, color = posteam), scale = 1.7, size = 0.2, na.rm = T, show.legend = F, bandwidth = 2, panel_scaling = F) +
+  # ---------
   # geom_text(aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 0.8 * img_size_adj, color = 'darkblue') +
   # geom_text(data = team_df, aes(label = posteam, x = -1, y = 4.8), angle = 45, size = 1.5 * img_size_adj, color = 'darkblue') +
   # geom_text(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +
   # geom_text(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +
   # geom_text(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +
   # geom_text(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +
-  geom_shadowtext(aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 0.8 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
-  geom_shadowtext(data = team_df, aes(label = posteam, x = -1, y = 4.8), angle = 45, size = 1.5 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.1, na.rm = TRUE) +
-  geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
-  geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
-  geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
-  geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 1 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # ---------
+  # Player full name
+  geom_shadowtext(data = headshot_df, aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 1.1 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # Team name
+  # geom_shadowtext(data = team_df, aes(label = posteam, x = -1, y = 5.7), angle = 45, size = 1.5 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.1, na.rm = TRUE) +
+  # # X Axis Labels
+  # geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # # Y Axis Labels
+  # geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # geom_shadowtext(aes(label = 10, x = 1, y = 10), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # geom_shadowtext(aes(label = 20, x = 1, y = 20), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  # geom_shadowtext(aes(label = 30, x = 1, y = 30), nudge_y = -0.15, size = 1 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
   scale_color_manual(values = outline_col) + 
-  scale_fill_manual(values = fill_col) + 
-  facet_wrap( ~ posteam, ncol = 4, shrink= FALSE) +
-  labs(title = 'Receiver Depth of Target Distribution', 
-       subtitle = paste0(yr, " NFL Regular Season"), 
-       x = 'Air Yards') +
-  scale_x_continuous(limits = c(-5,40), expand = c(0,0)) +
-  scale_y_discrete(expand = expansion(add = c(0.3, 1))) +
-  theme_bw() +
-  theme(
-    text = element_text(color='black'),
-    plot.background = element_rect(fill = 'grey95', color = 'grey95'),
-    panel.border = element_rect(color = 'black'),
-    axis.ticks = element_blank(),
-    axis.title = element_blank(),
-    axis.text = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank(),
-    plot.title = element_text(size = 14),
-    plot.subtitle = element_text(size = 8),
-    plot.caption = element_text(size = 5),
-    legend.background = element_rect(fill = 'grey90',color = 'black'),
-    legend.key = element_blank(),
-    strip.background = element_blank(),
-    strip.text.x = element_blank(),
-    panel.spacing = unit(0.1, "lines")
-  )
-#save your plot
-ggsave(paste0("plots/desktop/", yr, "_team_ridge_DOT.png"), plot = p_new, width = 10, height = 19, dpi = 100, limitsize = FALSE)
+  scale_fill_manual(values = fill_col)
+toc()
+
+tic()
+ggsave(
+  paste0(
+    "plots/desktop/",
+    ifelse(tm_abbrev > 0, paste0("teams/"), ""),
+    yr,
+    ifelse(tm_abbrev > 0, paste0("_", tm_abbrev), ""),
+    "_ridge_DOT_no_images.png"
+  ),
+  plot = team_dot +
+    # facet_wrap(~ posteam, ncol = 8, shrink = FALSE) +
+    labs(
+      title = 'Receiver Depth of Target Distribution',
+      subtitle = paste0(yr, " NFL Regular Season"),
+      x = 'Air Yards'
+    ) +
+    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +
+    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +
+    theme_bw() +
+    theme(
+      text = element_text(color = 'black'),
+      plot.background = element_rect(fill = 'grey95', color = 'grey95'),
+      panel.border = element_rect(color = 'black'),
+      axis.ticks = element_blank(),
+      # axis.title = element_blank(),
+      # axis.text = element_blank(),
+      # axis.title.x = "Depth of Target",
+      # axis.text.x = element_blank(),
+      axis.title.y = element_blank(),
+      axis.text.y = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.y = element_blank(),
+      plot.title = element_text(size = 18),
+      plot.subtitle = element_text(size = 12),
+      plot.caption = element_text(size = 7),
+      legend.background = element_rect(fill = 'grey90', color = 'black'),
+      legend.key = element_blank(),
+      strip.background = element_blank(),
+      # strip.text.x = element_blank(),
+      panel.spacing = unit(0.1, "lines")
+    ),
+  width = aspect_1,
+  height = aspect_2,
+  dpi = 100,
+  limitsize = FALSE
+)
 toc()
