@@ -2,8 +2,8 @@
   title: "A beginner's guide to nflfastR"
 author: Ben Baldwin
 output:
-  github_document:
   toc: true
+  github_document:
 toc_depth: 3
 ---
   
