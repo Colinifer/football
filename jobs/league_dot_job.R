@@ -173,7 +173,7 @@ p_new <- ggplot(freq_passers, aes(y = tm_targ_order, x = air_yards)) +
   # geom_text(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +
   # ---------
   # Player full name
-  geom_shadowtext(aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 1.1 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
+  geom_shadowtext(data = headshot_df, aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 1.1 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +
   # Team name
   # geom_shadowtext(data = team_df, aes(label = posteam, x = -1, y = 5.7), angle = 45, size = 1.5 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.1, na.rm = TRUE) +
   # X Axis Labels
