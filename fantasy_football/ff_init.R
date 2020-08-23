@@ -1,10 +1,13 @@
 library(tidyverse)
 library(httr)
 library(jsonlite)
-library(sqldf)
+# library(sqldf)
 library(gt)
 detach(package:purrr)
 library(purrr)
+
+
+# Create variables --------------------------------------------------------
 
 cookies = c(`SWID` = swid,
             `espn_s2` = espn_s2)
@@ -43,6 +46,14 @@ ESPNPlayerFromJSON <- jsonlite::fromJSON(ESPNPlayerRaw)
 
 # write_json(ESPNRaw, path = glue("espnRaw{year}.json"))
 
+# Format data -------------------------------------------------------------
+
+ESPNPlayerFromJSON <- readRDS("fantasy_football/data/ESPNPlayerFromJSON.rds")
+ESPNPlayers_raw <- ESPNPlayerFromJSON$players$player %>% tibble()
+ESPNPlayers_clean <- ESPNPlayers_raw %>% merge(ESPNPlayers_raw$draftRanksByRankType$PPR)
+
+
+ESPNPlayers %>% colnames()
 
 # Functions ---------------------------------------------------------------
 
