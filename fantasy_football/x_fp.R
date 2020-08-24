@@ -214,7 +214,7 @@ make_model_mutations <- function(pbp) {
 fant_pt_avg_df <- pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0) %>% 
   add_xyac2 %>% 
-  select(season, game_id, play_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
+  select(season = season.x, game_id, play_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(
     gain = ifelse(yardline_100==air_yards, yardline_100, gain),
     yac_prob = ifelse(yardline_100==air_yards, 1, yac_prob),
@@ -248,7 +248,8 @@ p <- fant_pt_avg_df %>%
   filter(!is.na(receiver_id) & targets >= 75 & teamPlayers.position == 'WR') %>% 
   ggplot(aes(x = PPR_pts, y = exp_PPR_pts, label = abbr.name)) +
   geom_grob(aes(x = PPR_pts, y = exp_PPR_pts, label = grob_img_adj(ESPN_logo_url(team.abbr), alpha = .4), vp.height = 0.06)) +
-  geom_text_repel(aes(label = abbr.name), color = 'darkblue', size = 1.3, family = font_SB, bg.color = 'white', bg.r = 0.2, point.padding = 0, min.segment.length = 10, box.padding = 0.1) +
+  # geom_text_repel(aes(label = abbr.name), color = 'darkblue', size = 1.3, family = font_SB, bg.color = 'white', bg.r = 0.2, point.padding = 0, min.segment.length = 10, box.padding = 0.1) +
+  geom_text_repel(aes(label = abbr.name), color = 'darkblue', size = 1.3, point.padding = 0, min.segment.length = 10, box.padding = 0.1) +
   scale_x_continuous(limits = properLims) +
   scale_y_continuous(limits =properLims) +
   labs(title = 'Expected & Actual WR Fantasy Points, 2019',
@@ -265,7 +266,7 @@ brand_plot(p, save_name = 'exp PPR WR.png', data_home = 'Data: @nflfastR', fade_
 #############
 library(ggridges)
 roster_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/roster-data/roster.rds')) %>% 
-  left_join(readRDS(url('https://raw.githubusercontent.com/ajreinhard/NFL/master/nflfastR ID mapping/gsis_map.rds')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
+  left_join(readRDS("../GitHub/NFL-ajreinhard/nflfastR ID mapping/gsis_map.rds"), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
   mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
 
 fant_pt_dist_df <- pbp_df %>% 
@@ -383,7 +384,7 @@ p <- sim_df %>%
     size = 0.3,
     show.legend = F
   ) +
-  geom_shadowtext(aes(label = pl_lab, x = label_quant), color = 'darkblue', family = font_SB, nudge_y = 0.6, size = 1.7, hjust = 1, bg.color = 'white', bg.r = 0.2) +
+  geom_shadowtext(aes(label = pl_lab, x = label_quant), color = 'darkblue', family = "DIN Condensed", nudge_y = 0.6, size = 1.7, hjust = 1, bg.color = 'white', bg.r = 0.2) +
   geom_spoke(aes(x = PPR_pg, angle = pi/2, radius = 0.5), color = 'darkblue') +
   geom_grob(data = WR_rank_df %>% slice(1:30), aes(x = PPR_pg, y = as.numeric(factor(receiver_id, rev(use_WR))) + 0.5, label = grob_img_adj(teamPlayers.headshot_url)), vp.height = 0.015) +
   scale_fill_manual(values = c(alpha(color_SB[1], 0.4),alpha(color_SB[4], 0.4),alpha('grey60', 0.4),alpha(color_SB[4], 0.4),alpha(color_SB[1], 0.4))) +
@@ -773,7 +774,7 @@ p <- sim_df %>%
     size = 0.3,
     show.legend = F
   ) +
-  geom_shadowtext(aes(label = pl_lab, x = label_quant), color = 'darkblue', family = font_SB, nudge_y = 0.6, size = 1.7, hjust = 1, bg.color = 'white', bg.r = 0.2) +
+  geom_shadowtext(aes(label = pl_lab, x = label_quant), color = 'darkblue', family = "DIN Condensed", nudge_y = 0.6, size = 1.7, hjust = 1, bg.color = 'white', bg.r = 0.2) +
   geom_spoke(aes(x = PPR_pg, angle = pi/2, radius = 0.5), color = 'darkblue') +
   geom_grob(data = WR_rank_df %>% slice(1:30), aes(x = PPR_pg, y = as.numeric(factor(rev(season))) + 0.5, label = grob_img_adj(ESPN_logo_url(team.abbr))), vp.height = 0.04) +
   scale_fill_manual(values = c(alpha(color_SB[1], 0.4),alpha(color_SB[4], 0.4),alpha('grey60', 0.4),alpha(color_SB[4], 0.4),alpha(color_SB[1], 0.4))) +
@@ -808,7 +809,7 @@ p <- fant_pt_avg_df %>%
   ) %>% 
   ggplot(aes(x = pl_lab, y = exp_PPR_pts, color = team.abbr, fill = team.abbr, label = pl_lab)) +
   geom_bar(stat = 'identity', show.legend = F, width = 0.8, size = 0.5) +
-  geom_text(aes(y = exp_PPR_pts - max(exp_PPR_pts) * 0.02), size = 2.4, family = font_SB, color = 'white', hjust = 1, show.legend = F) + 
+  geom_text(aes(y = exp_PPR_pts - max(exp_PPR_pts) * 0.02), size = 2.4, family = "DIN Condensed", color = 'white', hjust = 1, show.legend = F) + 
   geom_grob(aes(x = pl_lab, y = exp_PPR_pts + max(exp_PPR_pts) * 0.04, label = grob_img_adj(ESPN_logo_url(team.abbr))), vp.height = 0.03) +
   coord_flip() +
   scale_x_discrete(expand = expansion(add = c(0.5, 0.5))) +
