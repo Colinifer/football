@@ -28,6 +28,7 @@ pkgs <- c(
   "ggforce",
   "ggridges",
   "ggrepel",
+  "ggpmisc",
   "ggbeeswarm",
   "cowplot",
   "gridExtra",
