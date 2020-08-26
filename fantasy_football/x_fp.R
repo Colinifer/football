@@ -1,9 +1,36 @@
-setwd('C:/Users/rei1740/Desktop/Anthony/nfl')
 source('https://github.com/ajreinhard/data-viz/raw/master/ggplot/plot_SB.R')
 
 library(nflfastR)
 
+
+# Get data ----------------------------------------------------------------
+
+# Get PBP and Roster data
 pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2019.rds'))
+roster_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/roster-data/roster.rds')) %>% 
+  left_join(readRDS("../GitHub/Cloned/ajrein-NFL/nflfastR ID mapping/gsis_map.rds"), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
+  mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
+
+url <- "https://fantasyfootballcalculator.com/api/v1/adp/"
+type = "standard"
+team_count = 10
+year = 2020
+adp_df <- GET(glue(url, type, "?teams=", team_count, "&year=", year)) %>% content(as = "parsed", type = "application/json")
+adp_df$players %>% 
+  
+# Test
+adp_df$players %>% 
+unlist(recursive = FALSE) %>%
+as.data.frame %>%
+select(starts_with("player_id"))
+
+map_dfc(adp_df$players, `[`, 1)
+# 
+
+response_json <- content(GET(glue::glue(nhl_api, "/", game, "/", id, "/", boxscore)), as = "parsed", type = "application/json")
+
+
+# Clean data --------------------------------------------------------------
 
 drop.cols.xyac <- c(
   "xyac_epa", "xyac_mean_yardage", "xyac_median_yardage", "xyac_success", "xyac_fd", ".groups"
@@ -210,7 +237,6 @@ make_model_mutations <- function(pbp) {
 
 
 
-
 fant_pt_avg_df <- pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0) %>% 
   add_xyac2 %>% 
@@ -237,6 +263,34 @@ fant_pt_avg_df <- pbp_df %>%
 
 #fant_pt_avg_df %>% view
 
+properLims <- function(vec) {
+  labs <- labeling::extended(min(vec, na.rm = T), max(vec, na.rm = T), m = 5)
+  gap <- diff(labs[1:2])
+  plot_max <- ifelse(rev(labs)[1] < max(vec, na.rm = T), rev(labs)[1] + gap, rev(labs)[1])
+  plot_min <- ifelse(labs[1] > min(vec, na.rm = T), labs[1] - gap, labs[1])
+  return(c(plot_min,plot_max))
+} 
+
+grob_img_adj <- function(img_url,
+                         alpha = 0,
+                         whitewash = 0) {
+  return(lapply(img_url, function(x) {
+    if (is.na(x)) {
+      return(NULL)
+    } else{
+      img <- image_read(x)[[1]]
+      img[1, , ] <-
+        as.raw(255 - (255 - as.integer(img[1, , ])) * (1 - whitewash))
+      img[2, , ] <-
+        as.raw(255 - (255 - as.integer(img[2, , ])) * (1 - whitewash))
+      img[3, , ] <-
+        as.raw(255 - (255 - as.integer(img[3, , ])) * (1 - whitewash))
+      img[4, , ] <- as.raw(as.integer(img[4, , ]) * (1 - alpha))
+      return(grid::rasterGrob(image = image_read(img)))
+    }
+  }))
+}
+
 p <- fant_pt_avg_df %>% 
   mutate(
     season = 2019,
@@ -251,7 +305,7 @@ p <- fant_pt_avg_df %>%
   # geom_text_repel(aes(label = abbr.name), color = 'darkblue', size = 1.3, family = font_SB, bg.color = 'white', bg.r = 0.2, point.padding = 0, min.segment.length = 10, box.padding = 0.1) +
   geom_text_repel(aes(label = abbr.name), color = 'darkblue', size = 1.3, point.padding = 0, min.segment.length = 10, box.padding = 0.1) +
   scale_x_continuous(limits = properLims) +
-  scale_y_continuous(limits =properLims) +
+  scale_y_continuous(limits = properLims) +
   labs(title = 'Expected & Actual WR Fantasy Points, 2019',
        subtitle = 'min. 75 Targets',
        x = 'Actual PPR Fantasy Points',
