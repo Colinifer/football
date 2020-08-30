@@ -9,12 +9,13 @@ library(purrr)
 
 # Create variables --------------------------------------------------------
 
+# ESPN Fantasy Football
 cookies = c(`SWID` = swid,
             `espn_s2` = espn_s2)
 cookie <- paste(names(cookies), cookies, sep = "=", collapse = ";")
 
 base = "http://fantasy.espn.com/apis/v3/games/ffl/seasons/"
-year = "2019"
+year = "2020"
 mid = "/segments/0/leagues/"
 # leagueID = "1000432"
 tail = "?view=mDraftDetail&view=mLiveScoring&view=mMatchupScore&view=mPendingTransactions&view=mPositionalRatings&view=mSettings&view=mTeam&view=modular&view=mNav&view=mMatchupScore"
@@ -45,6 +46,26 @@ ESPNFromJSON <- jsonlite::fromJSON(ESPNRaw)
 ESPNPlayerFromJSON <- jsonlite::fromJSON(ESPNPlayerRaw)
 
 # write_json(ESPNRaw, path = glue("espnRaw{year}.json"))
+
+
+# Fantasy Football Calc
+url <- "https://fantasyfootballcalculator.com/api/v1/adp/"
+type = "standard"
+team_count = 10
+year = 2020
+adp_df <- GET(glue(url, type, "?teams=", team_count, "&year=", year)) %>% content(as = "parsed", type = "application/json")
+adp_df$players %>% 
+  
+  # Test
+  adp_df$players %>% 
+  unlist(recursive = FALSE) %>%
+  as.data.frame %>%
+  select(starts_with("player_id"))
+
+map_dfc(adp_df$players, `[`, 1)
+#
+
+
 
 # Format data -------------------------------------------------------------
 

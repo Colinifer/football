@@ -25,9 +25,7 @@ as.data.frame %>%
 select(starts_with("player_id"))
 
 map_dfc(adp_df$players, `[`, 1)
-# 
-
-response_json <- content(GET(glue::glue(nhl_api, "/", game, "/", id, "/", boxscore)), as = "parsed", type = "application/json")
+#
 
 
 # Clean data --------------------------------------------------------------
