@@ -74,6 +74,18 @@ ESPNPlayers_raw <- ESPNPlayerFromJSON$players$player %>% tibble()
 ESPNPlayers_clean <- ESPNPlayers_raw %>% merge(ESPNPlayers_raw$draftRanksByRankType$PPR)
 
 
+player_rankings <- ESPNPlayerFromJSON$players$player$fullName %>% as.data.frame()
+player_rankings <- player_rankings %>% rename(full_name = '.')
+player_rankings$positional_ranking <- ESPNPlayerFromJSON$players$ratings$'0'$positionalRanking
+player_rankings$total_ranking <- ESPNPlayerFromJSON$players$ratings$'0'$totalRanking
+player_rankings$total_rating <- ESPNPlayerFromJSON$players$ratings$'0'$totalRating
+player_rankings$team_id <- ESPNPlayerFromJSON$players$player$proTeamId
+player_rankings$position_id <- ESPNPlayerFromJSON$players$player$defaultPositionId
+
+player_rankings <- player_rankings %>% filter(positional_ranking > 0)
+saveRDS(player_rankings, "fantasy_football/data/player_rankings.rds")
+
+
 ESPNPlayers %>% colnames()
 
 # Functions ---------------------------------------------------------------
