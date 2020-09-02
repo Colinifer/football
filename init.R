@@ -6,9 +6,11 @@ proj_name <- "football"
 pkgs <- c(
   "devtools",
   "tidyverse",
+  "nflfastR",
   "DBI",
   "odbc",
   "RMariaDB",
+  "distill",
   "httr",
   "readr",
   "pander",
