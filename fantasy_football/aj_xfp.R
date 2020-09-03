@@ -68,14 +68,16 @@ avg_exp_fp_df <- pbp_df %>%
     exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T)
   ) %>% 
   mutate(
-    exp_pts_diff = half_PPR_pts - exp_half_PPR_pts
+    half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
+    ppr_pts_diff = PPR_pts - exp_PPR_pts
   ) %>% 
   ungroup
 
 
-library(gt)
 
+library(gt)
 # make the table
+# 1/2 PPR xFP table
 avg_exp_fp_df %>%
   select(
     games,
@@ -90,7 +92,7 @@ avg_exp_fp_df %>%
     exp_yards,
     exp_td,
     exp_half_PPR_pts,
-    exp_pts_diff
+    half_ppr_pts_diff
   ) %>%
   arrange(-exp_half_PPR_pts) %>% 
   dplyr::slice(1:50) %>% 
@@ -111,9 +113,9 @@ avg_exp_fp_df %>%
     exp_yards = 'Yds',
     exp_td = 'TD',
     exp_half_PPR_pts = 'FP',
-    exp_pts_diff = "Pts Diff."
+    half_ppr_pts_diff = "Pts Diff."
   ) %>% 
-  fmt_number(columns = vars(exp_td, half_PPR_pts, exp_half_PPR_pts, exp_pts_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(exp_td, half_PPR_pts, exp_half_PPR_pts, half_ppr_pts_diff), decimals = 1) %>% 
   fmt_number(columns = vars(yards, exp_yards, exp_catches), decimals = 0, sep_mark = ',') %>% 
   tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
   tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
@@ -127,8 +129,8 @@ avg_exp_fp_df %>%
     autocolor_text = FALSE
   ) %>%
   data_color(
-    columns = vars(exp_pts_diff),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$exp_pts_diff), min(avg_exp_fp_df$exp_pts_diff))),
+    columns = vars(half_ppr_pts_diff),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$half_ppr_pts_diff), min(avg_exp_fp_df$half_ppr_pts_diff))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -155,7 +157,90 @@ avg_exp_fp_df %>%
     row.striping.background_color = '#FFFFFF',
     row.striping.include_table_body = TRUE
   ) %>% 
-  gtsave(filename = paste0("xFP_share_", pbp_df$season[1], ".png"), path = "plots")
+  gtsave(filename = paste0("xFP_share_half_ppr_", pbp_df$season[1], ".png"), path = "fantasy_football/plots")
+
+
+# Full PPR xFP table
+avg_exp_fp_df %>%
+  select(
+    games,
+    receiver,
+    posteam,
+    targets,
+    catches,
+    yards,
+    td,
+    PPR_pts,
+    exp_catches,
+    exp_yards,
+    exp_td,
+    exp_PPR_pts,
+    ppr_pts_diff
+  ) %>%
+  arrange(-exp_PPR_pts) %>% 
+  dplyr::slice(1:50) %>% 
+  mutate(Rank = paste0('#',row_number())) %>%
+  gt() %>%
+  tab_header(title = 'Expected Receiving PPR Fantasy Points, 2019') %>% 
+  cols_move_to_start(columns = vars(Rank)) %>% 
+  cols_label(
+    games = 'GP',
+    receiver = '',
+    posteam = '',
+    targets = 'Targ',
+    catches = 'Rec',
+    yards = 'Yds',
+    td = 'TD',
+    PPR_pts = 'FP',
+    exp_catches = 'Rec',
+    exp_yards = 'Yds',
+    exp_td = 'TD',
+    exp_PPR_pts = 'FP',
+    ppr_pts_diff = "Pts Diff."
+  ) %>% 
+  fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, ppr_pts_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(yards, exp_yards, exp_catches), decimals = 0, sep_mark = ',') %>% 
+  tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
+  tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
+  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(receiver))) %>% 
+  tab_spanner(label = 'Actual', columns = vars(catches, yards, td, PPR_pts)) %>% 
+  tab_spanner(label = 'Expected', columns = vars(exp_catches, exp_yards, exp_td, exp_PPR_pts)) %>% 
+  tab_source_note(source_note = '') %>% 
+  data_color(
+    columns = vars(PPR_pts, exp_PPR_pts),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(100, 380)),
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(ppr_pts_diff),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$ppr_pts_diff), min(avg_exp_fp_df$ppr_pts_diff))),
+    autocolor_text = FALSE
+  ) %>% 
+  text_transform(
+    locations = cells_body(vars(posteam)),
+    fn = function(x) web_image(url = paste0('https://a.espncdn.com/i/teamlogos/nfl/500/',x,'.png'))
+  ) %>% 
+  cols_width(vars(posteam) ~ px(45)) %>% 
+  tab_options(
+    table.font.color = 'darkblue',
+    data_row.padding = '2px',
+    row_group.padding = '3px',
+    column_labels.border.bottom.color = 'darkblue',
+    column_labels.border.bottom.width = 1.4,
+    table_body.border.top.color = 'darkblue',
+    row_group.border.top.width = 1.5,
+    row_group.border.top.color = '#999999',
+    table_body.border.bottom.width = 0.7,
+    table_body.border.bottom.color = '#999999',
+    row_group.border.bottom.width = 1,
+    row_group.border.bottom.color = 'darkblue',
+    table.border.top.color = 'transparent',
+    table.background.color = '#F2F2F2',
+    table.border.bottom.color = 'transparent',
+    row.striping.background_color = '#FFFFFF',
+    row.striping.include_table_body = TRUE
+  ) %>% 
+  gtsave(filename = paste0("xFP_share_ppr_", pbp_df$season[1], ".png"), path = "fantasy_football/plots")
 
 # requires:
 # install.packages("webshot")
