@@ -1,3 +1,7 @@
+# NOTES
+# 
+# Adjust color scale automatically based on points and columns
+
 library(tidyverse)
 
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
@@ -125,7 +129,7 @@ avg_exp_fp_df %>%
   tab_source_note(source_note = '') %>% 
   data_color(
     columns = vars(half_PPR_pts, exp_half_PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(100, 380)),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(100, 380)), # anyway to automate?
     autocolor_text = FALSE
   ) %>%
   data_color(
@@ -208,7 +212,7 @@ avg_exp_fp_df %>%
   tab_source_note(source_note = '') %>% 
   data_color(
     columns = vars(PPR_pts, exp_PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(100, 380)),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(100, 380)), # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
