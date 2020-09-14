@@ -30,6 +30,7 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 # Data --------------------------------------------------------------------
 
 pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2019.rds'))
+pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'))
 
 avg_exp_fp_df <- pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
