@@ -5,14 +5,15 @@ library(jsonlite)
 library(gt)
 detach(package:purrr)
 library(purrr)
+library(glue)
 
 
 # Create variables --------------------------------------------------------
-
-
 ff_fantasy_key <- "fantasy_football/data/fantasy_key.csv"
 swid  <-  "{2BA315B4-5941-4B1C-A315-B459416B1CC1}"
 espn_s2 <- "AEBtGuDXUCKk6SpqlY71qdBDW%2BYc5KGa80m%2F0EVX9NCF%2FIFBM5b8ZMKgrMovpUeUqFTp4M%2BrPbM1I4rT1Ra2oXbM847nUp25DBY9Q%2FsAPChAykF5VNEZ05VjF6Vu3thAU0WkzQeBbjkdzNGqfbmPtMNzrBy8oV7fcAlwh4X89q4XlfPNED8ppKynNj5admyBk7WaqNzQtZJLlStpyOjz3F3d5BwUtQ8kh390OPB5HEEPfiH4%2FBftKqsLF%2BlyhTFaDiM%3D"
+kona_v3_environment <- '{"leagueId":1034400,"seasonId":null}'
+kona_v3_teamcontrol <- '{"leagueId":1034400,"seasonId":2020,"teamId":8}'
 # league_id <- c("1034400", "62746259", "39973580")
 # team_id <- c("8", "9", "10")
 # league_name <- c("Colin's Minions", "Drinker's Slushy Beer", "Family League 3.0")
@@ -22,7 +23,9 @@ espn_s2 <- "AEBtGuDXUCKk6SpqlY71qdBDW%2BYc5KGa80m%2F0EVX9NCF%2FIFBM5b8ZMKgrMovpU
 
 # ESPN Fantasy Football
 cookies = c(`SWID` = swid,
-            `espn_s2` = espn_s2)
+            `espn_s2` = espn_s2,
+            'kona_v3_environment_season_ffl' = kona_v3_environment,
+            'kona_v3_teamcontrol_ffl' = kona_v3_teamcontrol)
 cookie <- paste(names(cookies), cookies, sep = "=", collapse = ";")
 fantasy_key <- ff_fantasy_key %>% read_csv()
 
@@ -35,6 +38,16 @@ player_tail = "?view=kona_player_info"
 wl_tail = "?view=proTeamSchedules_wl"
 user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:75.0) Gecko/20100101 Firefox/75.0"
 url = paste0(base,year,mid,leagueID,tail)
+
+# 2020 nflfastr roster data
+# https://github.com/mrcaseb/nflfastR-roster/blob/master/data/nflfastR-roster.rds?raw=true
+
+# Jeremy roster data
+# https://gist.githubusercontent.com/jeremyabramson
+# https://gist.githubusercontent.com/jeremyabramson/c93abcf602809c9a2d7d225c8dd012e1/raw/0b0cd7aae3725b18b857080aff36b172fe0cf35a/10160000-0581-684c-9751-8a12a25d9dc8_roster.json
+
+
+# Get data ----------------------------------------------------------------
 
 # Get league info
 ESPNget = GET (
@@ -50,37 +63,37 @@ ESPNFromJSON <- jsonlite::fromJSON(ESPNRaw)
 # Get all players
 url = paste0(base, year, mid, leagueID, player_tail)
 source('~/Documents/dev/football/fantasy_football/data/ff_all_players.R')
+x_fantasy_filter <- jsonlite::fromJSON("fantasy_football/data/espn_all_players.json")
+x_fantasy_filter <- '{"players":{"filterSlotIds":{"value":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,23,24]},"filterRanksForScoringPeriodIds":{"value":[2]},"limit":100,"offset":0,"sortPercOwned":{"sortAsc":false,"sortPriority":1},"sortDraftRanks":{"sortPriority":100,"sortAsc":true,"value":"STANDARD"},"filterRanksForRankTypes":{"value":["PPR"]},"filterRanksForSlotIds":{"value":[0,2,4,6,17,16]},"filterStatsForTopScoringPeriodIds":{"value":2,"additionalValue":["002020","102020","002019","1120202","022020"]}}}'
 Playersget = GET (
   url,
   config = httr::config(cookie = cookie),
   content_type_json(),
   user_agent(user_agent),
-  header = add_headers(.headers = c(
-    "Host" = "fantasy.espn.com",
-    "X-Fantasy-Filter" = jsonlite::toJSON(x_fantasy_filter),
+  header = httr::add_headers(.headers = c(
+    "X-Fantasy-Filter" = x_fantasy_filter,
     "X-Fantasy-Platform" = "kona-PROD-b3dba77950fd9b6a22ba3b8228a699d8bb974072",
     "X-Fantasy-Source" = "kona",
-    "Connection" = "keep-alive",
-    "Referer" = glue("https://fantasy.espn.com/football/players/add?leagueId={fantasy_key$league_id[1]}"),
+    "Referer" = glue("https://fantasy.espn.com/football/players/add?leagueId={fantasy_key$league_id[1]}")
     ))
   )
 Playersget$status_code
-ESPNPlayerRaw <- rawToChar(Playersget$content)
-ESPNPlayersFromJSON <- jsonlite::fromJSON(ESPNPlayerRaw)
+ESPNPlayersRaw <- rawToChar(Playersget$content)
+ESPNPlayersFromJSON <- jsonlite::fromJSON(ESPNPlayersRaw)
 
 players <- data.frame(
-    ESPNPlayerFromJSON$players$player$id,
-    ESPNPlayerFromJSON$players$player$injured,
-    ESPNPlayerFromJSON$players$player$firstName,
-    ESPNPlayerFromJSON$players$player$lastName,
-    ESPNPlayerFromJSON$players$player$ownership$percentChange,
-    ESPNPlayerFromJSON$players$player$ownership$percentOwned,
-    ESPNPlayerFromJSON$players$player$ownership$percentStarted,
-    ESPNPlayerFromJSON$players$player$proTeamId,
-    ESPNPlayerFromJSON$players$ratings$'0'$positionalRanking,
-    ESPNPlayerFromJSON$players$ratings$'0'$totalRanking,
-    ESPNPlayerFromJSON$players$ratings$'0'$totalRating,
-    ESPNPlayerFromJSON$players$status
+    ESPNPlayersFromJSON$players$player$id,
+    ESPNPlayersFromJSON$players$player$injured,
+    ESPNPlayersFromJSON$players$player$firstName,
+    ESPNPlayersFromJSON$players$player$lastName,
+    ESPNPlayersFromJSON$players$player$ownership$percentChange,
+    ESPNPlayersFromJSON$players$player$ownership$percentOwned,
+    ESPNPlayersFromJSON$players$player$ownership$percentStarted,
+    ESPNPlayersFromJSON$players$player$proTeamId,
+    ESPNPlayersFromJSON$players$ratings$'0'$positionalRanking,
+    ESPNPlayersFromJSON$players$ratings$'0'$totalRanking,
+    ESPNPlayersFromJSON$players$ratings$'0'$totalRating,
+    ESPNPlayersFromJSON$players$status
     )
 colnames(players) <-  c(
   "id",
