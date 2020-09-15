@@ -9,41 +9,93 @@ library(purrr)
 
 # Create variables --------------------------------------------------------
 
+
+ff_fantasy_key <- "fantasy_football/data/fantasy_key.csv"
+swid  <-  "{2BA315B4-5941-4B1C-A315-B459416B1CC1}"
+espn_s2 <- "AEBtGuDXUCKk6SpqlY71qdBDW%2BYc5KGa80m%2F0EVX9NCF%2FIFBM5b8ZMKgrMovpUeUqFTp4M%2BrPbM1I4rT1Ra2oXbM847nUp25DBY9Q%2FsAPChAykF5VNEZ05VjF6Vu3thAU0WkzQeBbjkdzNGqfbmPtMNzrBy8oV7fcAlwh4X89q4XlfPNED8ppKynNj5admyBk7WaqNzQtZJLlStpyOjz3F3d5BwUtQ8kh390OPB5HEEPfiH4%2FBftKqsLF%2BlyhTFaDiM%3D"
+# league_id <- c("1034400", "62746259", "39973580")
+# team_id <- c("8", "9", "10")
+# league_name <- c("Colin's Minions", "Drinker's Slushy Beer", "Family League 3.0")
+# team_name <- c("Rhule Tide", "Golden Rhule", "Matt Rhules")
+# fantasy_key <- data.frame(league_id, league_name, team_id, team_name)
+# fantasy_key %>% write_csv(ff_fantasy_key)
+
 # ESPN Fantasy Football
 cookies = c(`SWID` = swid,
             `espn_s2` = espn_s2)
 cookie <- paste(names(cookies), cookies, sep = "=", collapse = ";")
+fantasy_key <- ff_fantasy_key %>% read_csv()
 
 base = "http://fantasy.espn.com/apis/v3/games/ffl/seasons/"
-year = "2020"
+year = Sys.Date() %>% format(format = "%Y")
 mid = "/segments/0/leagues/"
-# leagueID = "1000432"
+leagueID <- fantasy_key$league_id[1]
 tail = "?view=mDraftDetail&view=mLiveScoring&view=mMatchupScore&view=mPendingTransactions&view=mPositionalRatings&view=mSettings&view=mTeam&view=modular&view=mNav&view=mMatchupScore"
 player_tail = "?view=kona_player_info"
 wl_tail = "?view=proTeamSchedules_wl"
 user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:75.0) Gecko/20100101 Firefox/75.0"
 url = paste0(base,year,mid,leagueID,tail)
 
+# Get league info
 ESPNget = GET (
   url,
   config = httr::config(cookie = cookie),
   content_type_json(),
   user_agent(user_agent)
   )
+ESPNget$status_code
+ESPNRaw <- rawToChar(ESPNget$content)
+ESPNFromJSON <- jsonlite::fromJSON(ESPNRaw)
 
+# Get all players
 url = paste0(base, year, mid, leagueID, player_tail)
-
-Playerget = GET (
+source('~/Documents/dev/football/fantasy_football/data/ff_all_players.R')
+Playersget = GET (
   url,
   config = httr::config(cookie = cookie),
   content_type_json(),
-  user_agent(user_agent)
-)
+  user_agent(user_agent),
+  header = add_headers(.headers = c(
+    "Host" = "fantasy.espn.com",
+    "X-Fantasy-Filter" = jsonlite::toJSON(x_fantasy_filter),
+    "X-Fantasy-Platform" = "kona-PROD-b3dba77950fd9b6a22ba3b8228a699d8bb974072",
+    "X-Fantasy-Source" = "kona",
+    "Connection" = "keep-alive",
+    "Referer" = glue("https://fantasy.espn.com/football/players/add?leagueId={fantasy_key$league_id[1]}"),
+    ))
+  )
+Playersget$status_code
+ESPNPlayerRaw <- rawToChar(Playersget$content)
+ESPNPlayersFromJSON <- jsonlite::fromJSON(ESPNPlayerRaw)
 
-ESPNRaw <- rawToChar(ESPNget$content)
-ESPNPlayerRaw <- rawToChar(Playerget$content)
-ESPNFromJSON <- jsonlite::fromJSON(ESPNRaw)
-ESPNPlayerFromJSON <- jsonlite::fromJSON(ESPNPlayerRaw)
+players <- data.frame(
+    ESPNPlayerFromJSON$players$player$id,
+    ESPNPlayerFromJSON$players$player$injured,
+    ESPNPlayerFromJSON$players$player$firstName,
+    ESPNPlayerFromJSON$players$player$lastName,
+    ESPNPlayerFromJSON$players$player$ownership$percentChange,
+    ESPNPlayerFromJSON$players$player$ownership$percentOwned,
+    ESPNPlayerFromJSON$players$player$ownership$percentStarted,
+    ESPNPlayerFromJSON$players$player$proTeamId,
+    ESPNPlayerFromJSON$players$ratings$'0'$positionalRanking,
+    ESPNPlayerFromJSON$players$ratings$'0'$totalRanking,
+    ESPNPlayerFromJSON$players$ratings$'0'$totalRating,
+    ESPNPlayerFromJSON$players$status
+    )
+colnames(players) <-  c(
+  "id",
+  "injured",
+  "firstName",
+  "lastName",
+  "percentChange",
+  "percentOwned",
+  "percentStarted",
+  "proTeamId",
+  "positionalRanking",
+  "totalRanking",
+  "totalRating",
+  "status"
+  )
 
 # write_json(ESPNRaw, path = glue("espnRaw{year}.json"))
 

@@ -76,7 +76,7 @@ source("../initR/con.R")
 tic()
 yr <- 2018
 team_df <- read.csv('plots/assets/nfl_logo.csv', stringsAsFactors = F)
-pff_id <- read.csv('data/players/All_Player_Info.csv', stringsAsFactors = F)
+pff_id <- read.csv('data/players/all_players.csv', stringsAsFactors = F)
 
 team_df$team_code[which(team_df$team_code=='OAK')] <- 'LV'
 team_df$posteam[which(team_df$posteam=='OAK')] <- 'LV'
@@ -84,11 +84,17 @@ pff_id$team.abbreviation[which(pff_id$team.abbreviation=='OAK')] <- 'LV'
 pff_id$team.city[which(pff_id$team.city=='Oakland')] <- 'Las Vegas'
 pff_id$team.slug[which(pff_id$team.slug=='okland-raiders')] <- 'las-vegas-raiders'
 
-yr_pbp <- lapply(yr, function(x) {
-  dbGetQuery(con, paste0("SELECT * FROM `football`.`pbp` WHERE `game_id` LIKE '%",x, "%'"), stringsAsFactors=F)
-})
-dbDisconnect(con)
-pbp_NFL <- yr_pbp[[1]]
+
+# pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'))
+# yr_pbp <- lapply(yr, function(x) {
+#   dbGetQuery(con, paste0("SELECT * FROM `football`.`pbp` WHERE `game_id` LIKE '%",x, "%'"), stringsAsFactors=F)
+# })
+# dbDisconnect(con)
+# pbp_NFL <- yr_pbp[[1]]
+
+
+pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'))
+pbp_NFL <- pbp_df
 # pbp_NFL <- do.call(rbind, yr_pbp)
 pbp_NFL$posteam[which(pbp_NFL$posteam=='SD')] <- 'LAC'
 pbp_NFL$posteam[which(pbp_NFL$posteam=='JAC')] <- 'JAX'
@@ -147,7 +153,7 @@ headshot_df$posteam <-
   factor(headshot_df$posteam, team_df$team_code[order(team_df$division)])
 
 unmatched <- adot_agg_df$receiver_player_id[is.na(match(adot_agg_df$receiver_player_id, pff_id$GSIS_ID))]
-# pbp_NFL$receiver_player_name[match(unmatched, pbp_NFL$receiver_player_id)]
+pbp_NFL$receiver_player_name[match(unmatched, pbp_NFL$receiver_player_id)]
 
 
 team_df$posteam <- factor(team_df$team_code, team_df$team_code[order(team_df$division)])

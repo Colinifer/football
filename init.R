@@ -60,10 +60,10 @@ source("../initR/init.R")
 fx.setdir(proj_name)
 
 # Create standard objects -------------------------------------------------
+
+# Connect to DB
 source("../initR/con.R")
 dbListTables(con)
 dbDisconnect(con)
 
-swid  <-  "{2BA315B4-5941-4B1C-A315-B459416B1CC1}"
-espn_s2 <- "AEBtGuDXUCKk6SpqlY71qdBDW%2BYc5KGa80m%2F0EVX9NCF%2FIFBM5b8ZMKgrMovpUeUqFTp4M%2BrPbM1I4rT1Ra2oXbM847nUp25DBY9Q%2FsAPChAykF5VNEZ05VjF6Vu3thAU0WkzQeBbjkdzNGqfbmPtMNzrBy8oV7fcAlwh4X89q4XlfPNED8ppKynNj5admyBk7WaqNzQtZJLlStpyOjz3F3d5BwUtQ8kh390OPB5HEEPfiH4%2FBftKqsLF%2BlyhTFaDiM%3D"
-leagueID <- "1034400"
+# source("fantasy_football/ff_init.R")
