@@ -29,7 +29,7 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 
 # Data --------------------------------------------------------------------
 
-pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2019.rds'))
+# pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2019.rds'))
 pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'))
 
 avg_exp_fp_df <- pbp_df %>% 
@@ -130,7 +130,7 @@ avg_exp_fp_df %>%
   tab_source_note(source_note = '') %>% 
   data_color(
     columns = vars(half_PPR_pts, exp_half_PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(100, 380)), # anyway to automate?
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$half_PPR_pts), min(avg_exp_fp_df$half_PPR_pts))), # anyway to automate?
     autocolor_text = FALSE
   ) %>%
   data_color(
@@ -213,7 +213,7 @@ avg_exp_fp_df %>%
   tab_source_note(source_note = '') %>% 
   data_color(
     columns = vars(PPR_pts, exp_PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(100, 380)), # need to adjust for full PPR point scale
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$PPR_pts), min(avg_exp_fp_df$PPR_pts))), # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(

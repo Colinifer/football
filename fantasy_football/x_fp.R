@@ -6,8 +6,8 @@ library(nflfastR)
 # Get data ----------------------------------------------------------------
 
 # Get PBP and Roster data
-pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2019.rds'))
-roster_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/roster-data/roster.rds')) %>% 
+pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'))
+roster_df <- readRDS(url('https://github.com/mrcaseb/nflfastR-roster/blob/master/data/nflfastR-roster.rds?raw=true')) %>% 
   left_join(readRDS("../GitHub/Cloned/ajrein-NFL/nflfastR ID mapping/gsis_map.rds"), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
   mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
 
