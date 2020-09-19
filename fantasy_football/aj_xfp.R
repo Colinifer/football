@@ -263,7 +263,10 @@ avg_exp_fp_df %>%
 cayoe <- pbp_df %>%
   filter(pass_attempt == 1 &
            season_type == 'REG' &
-           two_point_attempt == 0 & !is.na(receiver_id)) %>%
+           two_point_attempt == 0 & !is.na(receiver_id) &
+           wp > .2 &
+           wp < .8 &
+           air_yards > 0) %>%
   add_xyac_dist %>%
   select(
     season = season.x,
@@ -299,18 +302,19 @@ cayoe <- pbp_df %>%
                               complete_pass == 1, 1, 0),
     actual_PPR_points = ifelse(actual_outcome == 1, PPR_points, 0),
     actual_half_PPR_points = ifelse(actual_outcome == 1, half_PPR_points, 0),
-    target = 0,
+    completions = 0,
     game_played = 0,
-    cayoe = cpoe * air_yards
+    cayoe = cpoe * air_yards,
+    sum_cayoe = 0
   ) %>%
-  group_by(game_id, passer) %>%
+  group_by(game_id, passer_player_id) %>%
   mutate(game_played = ifelse(row_number() == 1, 1, 0)) %>%
   ungroup %>%
   group_by(game_id, play_id, passer) %>%
-  mutate(target = ifelse(row_number() == 1, 1, 0)) %>%
+  mutate(completions = ifelse(row_number() == 1, 1, 0)) %>%
   ungroup %>%
   group_by(posteam, passer) %>%
-  filter()
+  # filter()
   summarize(
     games = sum(game_played, na.rm = T),
     pass_attempts = sum(pass_attempt, na.rm = T),
@@ -319,7 +323,7 @@ cayoe <- pbp_df %>%
     td = sum(ifelse(gain == yardline_100, actual_outcome, 0), na.rm = T),
     PPR_pts = sum(actual_PPR_points, na.rm = T),
     half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
-    exp_catches = sum(ifelse(target == 1, cp, NA), na.rm = T),
+    exp_catches = sum(ifelse(completions == 1, cp, NA), na.rm = T),
     exp_yards = sum(exp_yards, na.rm = T),
     exp_td = sum(ifelse(gain == yardline_100, catch_run_prob, 0), na.rm = T),
     exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
