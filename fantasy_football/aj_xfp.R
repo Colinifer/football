@@ -6,25 +6,42 @@ library(tidyverse)
 
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
+source('fantasy_football/xyac/add_xyac_old.R')
 
 
 # YAC Distribution Function -----------------------------------------------
 
 # duplicate the add_xyac() function that we sourced above
 add_xyac_dist <- add_xyac
+# add_xyac_dist_old <- add_xyac_old
+# 
+# # separate each block of code in the add_xyac_dist() function into blocks
+# add_xyac_blocks_old <- body(add_xyac_dist_old) %>% as.list
+# 
+# # we want to remove lines 51 to 62 from the 5th item in the list
+# add_xyac_blocks_old[[5]] <- add_xyac_blocks_old[[5]] %>% 
+#   format %>% 
+#   .[-(51:62)] %>% 
+#   paste(collapse = '\n') %>% 
+#   str2lang
+# 
+# # replace the body of add_xyac_dist() with our new edited function
+# body(add_xyac_dist_old) <- add_xyac_blocks %>% as.call
+# 
+
 
 # separate each block of code in the add_xyac_dist() function into blocks
 add_xyac_blocks <- body(add_xyac_dist) %>% as.list
 
 # we want to remove lines 51 to 62 from the 5th item in the list
-add_xyac_blocks[[5]] <- add_xyac_blocks[[5]] %>% 
+add_xyac_blocks[[2]][[4]][[5]] <- add_xyac_blocks[[2]][[4]][[5]] %>% 
   format %>% 
   .[-(51:62)] %>% 
   paste(collapse = '\n') %>% 
   str2lang
 
 # replace the body of add_xyac_dist() with our new edited function
-body(add_xyac_dist) <- add_xyac_blocks %>% as.call
+body(add_xyac_dist_old) <- add_xyac_blocks %>% as.call
 
 
 # Data --------------------------------------------------------------------
@@ -38,7 +55,7 @@ pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/dat
 # Average Expected Fantasy Points - Receivers
 avg_exp_fp_df <- pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
-  add_xyac_dist %>% 
+  add_xyac_dist_old %>% 
   select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_player_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(
     gain = ifelse(yardline_100==air_yards, yardline_100, gain),
@@ -133,8 +150,13 @@ avg_exp_fp_df %>%
   tab_spanner(label = 'Expected', columns = vars(exp_catches, exp_yards, exp_td, exp_half_PPR_pts)) %>% 
   tab_source_note(source_note = '') %>% 
   data_color(
-    columns = vars(half_PPR_pts, exp_half_PPR_pts),
+    columns = vars(half_PPR_pts),
     colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$half_PPR_pts), min(avg_exp_fp_df$half_PPR_pts))), # anyway to automate?
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(exp_half_PPR_pts),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$exp_half_PPR_pts), min(avg_exp_fp_df$exp_half_PPR_pts))), # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
@@ -174,7 +196,7 @@ avg_exp_fp_df %>%
   select(
     games,
     receiver,
-    posteam,
+    posteam = posteam.x,
     targets,
     catches,
     yards,
@@ -216,8 +238,13 @@ avg_exp_fp_df %>%
   tab_spanner(label = 'Expected', columns = vars(exp_catches, exp_yards, exp_td, exp_PPR_pts)) %>% 
   tab_source_note(source_note = '') %>% 
   data_color(
-    columns = vars(PPR_pts, exp_PPR_pts),
+    columns = vars(PPR_pts),
     colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$PPR_pts), min(avg_exp_fp_df$PPR_pts))), # need to adjust for full PPR point scale
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(exp_PPR_pts),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$exp_PPR_pts), min(avg_exp_fp_df$exp_PPR_pts))), # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
@@ -260,14 +287,16 @@ avg_exp_fp_df %>%
 # Quarterbacks ------------------------------------------------------------
 
 # Completed Air Yards Over Expected
-cayoe <- pbp_df %>%
+cayoe_xyac <- pbp_df %>%
   filter(pass_attempt == 1 &
            season_type == 'REG' &
            two_point_attempt == 0 & !is.na(receiver_id) &
-           wp > .2 &
-           wp < .8 &
+           # wp > .2 &
+           # wp < .8 &
            air_yards > 0) %>%
-  add_xyac_dist %>%
+  add_xyac_dist_old 
+
+cayoe_xyac %>%
   select(
     season = season.x,
     game_id,
@@ -302,7 +331,8 @@ cayoe <- pbp_df %>%
                               complete_pass == 1, 1, 0),
     actual_PPR_points = ifelse(actual_outcome == 1, PPR_points, 0),
     actual_half_PPR_points = ifelse(actual_outcome == 1, half_PPR_points, 0),
-    completions = 0,
+    completion = 0,
+    attempts = 0,
     game_played = 0,
     cayoe = cpoe * air_yards,
     sum_cayoe = 0
@@ -311,19 +341,19 @@ cayoe <- pbp_df %>%
   mutate(game_played = ifelse(row_number() == 1, 1, 0)) %>%
   ungroup %>%
   group_by(game_id, play_id, passer) %>%
-  mutate(completions = ifelse(row_number() == 1, 1, 0)) %>%
+  mutate(completion = ifelse(row_number() == 1, 1, 0)) %>%
   ungroup %>%
   group_by(posteam, passer) %>%
   # filter()
   summarize(
     games = sum(game_played, na.rm = T),
     pass_attempts = sum(pass_attempt, na.rm = T),
-    completions = sum(complete_pass, na.rm = T),
+    completions = sum(completion, na.rm = T),
     yards = sum(ifelse(actual_outcome == 1, gain, 0), na.rm = T),
     td = sum(ifelse(gain == yardline_100, actual_outcome, 0), na.rm = T),
     PPR_pts = sum(actual_PPR_points, na.rm = T),
     half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
-    exp_catches = sum(ifelse(completions == 1, cp, NA), na.rm = T),
+    exp_completions = sum(ifelse(completion == 1, cp, NA), na.rm = T),
     exp_yards = sum(exp_yards, na.rm = T),
     exp_td = sum(ifelse(gain == yardline_100, catch_run_prob, 0), na.rm = T),
     exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
@@ -335,6 +365,52 @@ cayoe <- pbp_df %>%
     ppr_pts_diff = PPR_pts - exp_PPR_pts,
     cayoe_a = sum_cayoe / pass_attempts
   ) %>%
+  ungroup
+
+avg_exp_fp_df_week2 <- pbp_df %>% 
+  filter(week == 2 & pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+  add_xyac_dist_old %>% 
+  select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_player_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
+  mutate(
+    gain = ifelse(yardline_100==air_yards, yardline_100, gain),
+    yac_prob = ifelse(yardline_100==air_yards, 1, yac_prob),
+    PPR_points = 1 + gain/10 + ifelse(gain == yardline_100, 6, 0),
+    half_PPR_points = .5 + gain/10 + ifelse(gain == yardline_100, 6, 0),
+    catch_run_prob = cp * yac_prob,
+    exp_PPR_points = PPR_points * catch_run_prob,
+    exp_half_PPR_points = half_PPR_points * catch_run_prob,
+    exp_yards = gain * catch_run_prob,
+    actual_outcome = ifelse(actual_yards_gained==gain & complete_pass==1, 1, 0),
+    actual_PPR_points = ifelse(actual_outcome==1, PPR_points, 0),
+    actual_half_PPR_points = ifelse(actual_outcome==1, half_PPR_points, 0),
+    target = 0,
+    game_played = 0
+  )  %>% 
+  group_by(game_id, receiver) %>% 
+  mutate(game_played = ifelse(row_number()==1,1,0)) %>% 
+  ungroup %>% 
+  group_by(game_id, play_id, receiver) %>% 
+  mutate(target = ifelse(row_number()==1,1,0)) %>% 
+  ungroup %>% 
+  group_by(posteam, receiver) %>% 
+  summarize(
+    games = sum(game_played, na.rm = T),
+    targets = sum(target, na.rm = T),
+    catches = sum(actual_outcome, na.rm = T),
+    yards = sum(ifelse(actual_outcome==1, gain, 0), na.rm = T),
+    td = sum(ifelse(gain==yardline_100, actual_outcome, 0), na.rm = T),
+    PPR_pts = sum(actual_PPR_points, na.rm = T),
+    half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
+    exp_catches = sum(ifelse(target==1, cp, NA), na.rm = T),
+    exp_yards = sum(exp_yards, na.rm = T),
+    exp_td = sum(ifelse(gain==yardline_100, catch_run_prob, 0), na.rm = T),
+    exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
+    exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T)
+  ) %>% 
+  mutate(
+    half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
+    ppr_pts_diff = PPR_pts - exp_PPR_pts
+  ) %>% 
   ungroup
 
 
