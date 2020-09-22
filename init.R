@@ -25,6 +25,7 @@ pkgs <- c(
   "tictoc",
   "animation",
   "gt",
+  "reactable",
   "png",
   "DT",
   "ggthemes",

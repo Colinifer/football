@@ -41,7 +41,7 @@ add_xyac_blocks[[2]][[4]][[5]] <- add_xyac_blocks[[2]][[4]][[5]] %>%
   str2lang
 
 # replace the body of add_xyac_dist() with our new edited function
-body(add_xyac_dist_old) <- add_xyac_blocks %>% as.call
+body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 
 
 # Data --------------------------------------------------------------------
