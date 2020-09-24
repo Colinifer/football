@@ -13,21 +13,6 @@ source('fantasy_football/xyac/add_xyac_old.R')
 
 # duplicate the add_xyac() function that we sourced above
 add_xyac_dist <- add_xyac
-# add_xyac_dist_old <- add_xyac_old
-# 
-# # separate each block of code in the add_xyac_dist() function into blocks
-# add_xyac_blocks_old <- body(add_xyac_dist_old) %>% as.list
-# 
-# # we want to remove lines 51 to 62 from the 5th item in the list
-# add_xyac_blocks_old[[5]] <- add_xyac_blocks_old[[5]] %>% 
-#   format %>% 
-#   .[-(51:62)] %>% 
-#   paste(collapse = '\n') %>% 
-#   str2lang
-# 
-# # replace the body of add_xyac_dist() with our new edited function
-# body(add_xyac_dist_old) <- add_xyac_blocks %>% as.call
-# 
 
 
 # separate each block of code in the add_xyac_dist() function into blocks
