@@ -1,6 +1,5 @@
 # Packages & Init Setup ---------------------------------------------------
 
-# devtools::install_github("mrcaseb/nflfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
 proj_name <- "football"
 pkgs <- c(

@@ -46,27 +46,44 @@ x_fantasy_filter <-
   )
 
 # Scrape free agents from all leagues
-source("fantasy_football/fa_scrape.R")
+source('fantasy_football/fa_scrape.R')
+
+
+# PBP Data ----------------------------------------------------------------
+
+
+pbp_df <-
+  readRDS(
+    url(
+      'https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'
+    )
+  )
+pbp_df <- pbp_df %>%
+  clean_pbp()
+pbp_df %>% nflfastR::decode_player_ids() %>%
+  select(desc, name, id, receivers)
+
 
 # Roster data ----------------------------------------------------
 
 # nflfastR roster
-rosters <- readRDS(url("https://github.com/mrcaseb/nflfastR-roster/blob/master/data/nflfastR-roster.rds?raw=true"))
+rosters <- readRDS(url('https://github.com/mrcaseb/nflfastR-roster/blob/master/data/nflfastR-roster.rds?raw=true'))
 
 rosters %>% 
   filter(pbp_id > 0)
 
 # Sleeper API
-sleeper_api_players_url <- "https://api.sleeper.app/v1/players/nfl"
-sleeper_api_players <- jsonlite::fromJSON(url("https://api.sleeper.app/v1/players/nfl"))
+sleeper_api_players_url <- 'https://api.sleeper.app/v1/players/nfl'
+sleeper_api_players <- jsonlite::fromJSON(url('https://api.sleeper.app/v1/players/nfl'))
 sleeper_api_players_df <- data.frame()
 colnames(sleeper_api_players_df) %>% sleeper_api_players[[1]] %>% names()
 
 # Create dataframe matching ESPN team IDs
-team_abbr <- fantasy_roster$team.abbr %>% unique()
+team_abbr <- rosters$team.abbr %>% unique() %>% sort()
 team_id <-
   c(22, 1, 33, 2, 29, 3, 4, 5, 6, 7, 8, 9, 34, 11, 30, 12, 14, 24, 13, 15, 16, 17, 18, 19, 20, 21, 23, 26, 25, 27, 10, 28)
 espn_team_ids <- data.frame(team_abbr, team_id)
+# confirm team IDs are correct, automate this
 
 join_names <- avg_exp_fp_df %>%
   mutate(player_roster_join = paste0(receiver, "_", posteam)) %>%
