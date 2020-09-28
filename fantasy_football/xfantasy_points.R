@@ -448,15 +448,18 @@ cayoe %>%
 
 
 fant_pt_dist_df <- pbp_df %>% 
-  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & receiver == 'S.Watkins' & week <= 2) %>% 
+  # filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & receiver == 'S.Watkins' & week <= 2) %>% 
+  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & week <= 2) %>% 
   add_xyac_dist %>% 
-  select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
+  select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(
     gain = ifelse(yardline_100==air_yards, yardline_100, gain),
     yac_prob = ifelse(yardline_100==air_yards, 1, yac_prob),
     PPR_points = 1 + gain/10 + ifelse(gain == yardline_100, 6, 0),
+    half_PPR_points = .5 + gain/10 + ifelse(gain == yardline_100, 6, 0),
     catch_run_prob = cp * yac_prob,
     exp_PPR_points = PPR_points * catch_run_prob,
+    exp_half_PPR_points = half_PPR_points * catch_run_prob,
     actual_outcome = ifelse(actual_yards_gained==gain & complete_pass==1, 1, 0),
     actual_PPR_points = ifelse(actual_outcome==1, PPR_points, 0),
     target = 0,
@@ -469,10 +472,12 @@ incomplete_df <- fant_pt_dist_df %>%
     PPR_points = 0,
     yac_prob = 0,
     exp_PPR_points = 0,
+    exp_half_PPR_points = 0,
     complete_pass = 0,
     catch_run_prob = 1 - cp,
     actual_outcome = NA,
     actual_PPR_points = NA,
+    actual_half_PPR_points = NA,
     target = 1
   ) %>% 
   distinct %>% 
@@ -480,23 +485,43 @@ incomplete_df <- fant_pt_dist_df %>%
   mutate(game_played = ifelse(row_number()==1,1,0)) %>% 
   ungroup
 
-
+WR_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>% 
+  group_by(season, receiver_id) %>% 
+  summarize(
+    tot_PPR = sum(actual_PPR_points, na.rm = T),
+    tot_half_PPR = sum(actual_half_PPR_points, na.rm = T),
+    tot_targ = sum(target),
+    tot_gp = sum(game_played),
+    PPR_pg = tot_PPR / tot_gp,
+    half_PPR_pg = tot_half_PPR / tot_gp
+  ) %>% 
+  left_join(rosters, by = c('receiver_id' = 'pbp_id', 'season' = 'team.season')) %>% 
+  # filter(teamPlayers.position == 'WR' & tot_gp >= 8) %>% 
+  arrange(-PPR_pg) # arrange by PPR or 1/2 PPR
 
 # make a data frame to loop around
 sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>% 
-  select(season, game_id, play_id, posteam, receiver, catch_run_prob, PPR_points) %>% 
+  select(season, game_id, play_id, posteam, receiver, receiver_id, catch_run_prob, PPR_points, hal_PPR_points) %>%
   group_by(game_id, play_id)
 
 # do sim
-sim_df <- do.call(rbind, lapply(1:10000, function(x) {
+ptm <- proc.time()
+sim_df <- do.call(rbind, lapply(1:10, function(x) {
   sampling_df %>% 
+    filter(game_id != "2020_01_IND_JAX" & play_id != 2563) %>% 
+    filter(game_id != "2020_02_ATL_DAL" & play_id != 4126) %>% 
+    filter(game_id != "2020_02_JAX_TEN" & play_id != 2310) %>% 
+    filter(game_id != "2020_02_NYG_CHI" & play_id != 2076) %>% 
+    filter(game_id != "2020_02_WAS_ARI" & play_id != 703) %>% 
     mutate(sim_res = sample(PPR_points, 1, prob = catch_run_prob)) %>% 
-    select(season, game_id, play_id, posteam, receiver, sim_res) %>% 
+    select(season, game_id, play_id, posteam, receiver_id, sim_res) %>% 
     distinct %>% 
-    group_by(game_id, posteam, receiver) %>% 
+    group_by(game_id, posteam, receiver_id) %>% 
     summarize(sim_tot = sum(sim_res, na.rm = T), .groups = 'drop') %>% 
     return
 }))
+proc.time() - ptm
+rm(ptm)
 
 sim_df <- sim_df %>% mutate(sim = 1)
 
@@ -517,38 +542,81 @@ percentile_df <- rbind(sim_df, actual_df) %>%
 
 library(scales)
 
+# ggplot(data = sim_df, aes(x = sim_tot, group = game_id, color = game_id, fill = game_id)) +
+#   geom_density(alpha = 0.1, size = 1) +
+#   geom_spoke(data = percentile_df, aes(angle = pi/2, radius = 0.01, y = 0), size = 1, show.legend = F)  + 
+#   geom_label(data = percentile_df, aes(y = 0.01, label = paste0('Actual\n',game_id,'\n',number(round(perc*100,2),accuracy = 0.1), ' perc.')), size = 2, fill = 'grey98', show.legend = F)  + 
+#   scale_x_continuous(expand = expansion(mult = c(0.01, 0.01))) +
+#   scale_y_continuous(labels = percent_format(accuracy = 1), expand = expansion(mult = c(0, 0.05))) +
+#   scale_color_manual(values = c('#ff7f00','#9932cc')) +
+#   scale_fill_manual(values = c('#ff7f00','#9932cc')) +
+#   labs(title = 'Sammy Watkins Expected PPR Fantasy Point Distribution',
+#        subtitle = 'Based on 10,000 Simulations',
+#        y = 'Density',
+#        x = 'Expected PPR Fantasy Points',
+#        color = NULL,
+#        fill = NULL) +
+#   theme(
+#     line = element_line(lineend = 'round', color='darkblue'),
+#     text = element_text(color='darkblue'),
+#     plot.background = element_rect(fill = 'grey95', color = 'transparent'),
+#     panel.border = element_rect(color = 'darkblue', fill = NA),
+#     panel.background = element_rect(fill = 'white', color = 'transparent'),
+#     axis.ticks = element_line(color = 'darkblue', size = 0.5),
+#     axis.ticks.length = unit(2.75, 'pt'),
+#     axis.title = element_text(size = 8),
+#     axis.text = element_text(size = 7, color = 'darkblue'),
+#     plot.title = element_text(size = 14),
+#     plot.subtitle = element_text(size = 8),
+#     plot.caption = element_text(size = 5),
+#     legend.background = element_rect(fill = 'grey90', color = 'darkblue'),
+#     legend.key = element_blank(),
+#     panel.grid.minor = element_blank(),
+#     panel.grid.major = element_line(color='grey85', size = 0.3),
+#     axis.title.y = element_text(angle = 0, vjust = 0.5),
+#     legend.position = 'bottom'
+#   )
 
-ggplot(data = sim_df, aes(x = sim_tot, group = game_id, color = game_id, fill = game_id)) +
-  geom_density(alpha = 0.1, size = 1) +
-  geom_spoke(data = percentile_df, aes(angle = pi/2, radius = 0.01, y = 0), size = 1, show.legend = F)  + 
-  geom_label(data = percentile_df, aes(y = 0.01, label = paste0('Actual\n',game_id,'\n',number(round(perc*100,2),accuracy = 0.1), ' perc.')), size = 2, fill = 'grey98', show.legend = F)  + 
-  scale_x_continuous(expand = expansion(mult = c(0.01, 0.01))) +
-  scale_y_continuous(labels = percent_format(accuracy = 1), expand = expansion(mult = c(0, 0.05))) +
-  scale_color_manual(values = c('#ff7f00','#9932cc')) +
-  scale_fill_manual(values = c('#ff7f00','#9932cc')) +
-  labs(title = 'Sammy Watkins Expected PPR Fantasy Point Distribution',
+# source('https://github.com/ajreinhard/data-viz/raw/master/ggplot/plot_SB.R')
+
+sim_df %>% 
+  #slice(1:1000) %>% 
+  left_join(WR_rank_df) %>% 
+  left_join(percentile_df) %>% 
+  mutate(
+    receiver_id = factor(receiver_id, rev(use_WR)),
+    abbr.name = paste0(substr(teamPlayers.firstName, 1, 1), '.', teamPlayers.lastName),
+    pl_lab = paste0(abbr.name, '\n', number(perc * 100, accuracy = 0.1), ' perc.'),
+    sim_pg = sim_tot / tot_gp
+  ) %>% 
+  group_by(receiver_id) %>% 
+  mutate(label_quant = quantile(sim_pg, .05)) %>% 
+  ungroup %>% 
+  ggplot(aes(x = sim_pg, y = receiver_id)) +
+  stat_density_ridges(
+    aes(fill = factor(stat(quantile))),
+    geom = 'density_ridges_gradient',
+    quantiles = c(.1,.25,.75,.9),
+    rel_min_height = 0.001,
+    calc_ecdf = T,
+    scale = 1.3,
+    color = 'grey50',
+    size = 0.3,
+    show.legend = F
+  ) +
+  geom_shadowtext(aes(label = pl_lab, x = label_quant), color = 'darkblue', family = "Helvetica", nudge_y = 0.6, size = 1.7, hjust = 1, bg.color = 'white', bg.r = 0.2) +
+  geom_spoke(aes(x = PPR_pg, angle = pi/2, radius = 0.5), color = 'darkblue') +
+  geom_grob(data = WR_rank_df %>% slice(1:30), aes(x = PPR_pg, y = as.numeric(factor(receiver_id, rev(use_WR))) + 0.5, label = grob_img_adj(teamPlayers.headshot_url)), vp.height = 0.015) +
+  scale_fill_manual(values = c(alpha(color_SB[1], 0.4),alpha(color_SB[4], 0.4),alpha('grey60', 0.4),alpha(color_SB[4], 0.4),alpha(color_SB[1], 0.4))) +
+  scale_x_continuous(breaks = seq(0,32,4), minor_breaks = seq(0,32,2), expand = expansion(mult = c(0.03, 0.03))) +
+  scale_y_discrete(expand = expansion(mult = c(0.01, 0), add = c(0, 1.6))) +
+  labs(title = 'Distribution of Expected WR Fantasy Points, 2019',
        subtitle = 'Based on 10,000 Simulations',
-       y = 'Density',
-       x = 'Expected PPR Fantasy Points',
-       color = NULL,
-       fill = NULL) +
+       x = 'PPR Fantasy Points Per Game') +
   theme(
-    line = element_line(lineend = 'round', color='darkblue'),
-    text = element_text(color='darkblue'),
-    plot.background = element_rect(fill = 'grey95', color = 'transparent'),
-    panel.border = element_rect(color = 'darkblue', fill = NA),
-    panel.background = element_rect(fill = 'white', color = 'transparent'),
-    axis.ticks = element_line(color = 'darkblue', size = 0.5),
-    axis.ticks.length = unit(2.75, 'pt'),
-    axis.title = element_text(size = 8),
-    axis.text = element_text(size = 7, color = 'darkblue'),
-    plot.title = element_text(size = 14),
-    plot.subtitle = element_text(size = 8),
-    plot.caption = element_text(size = 5),
-    legend.background = element_rect(fill = 'grey90', color = 'darkblue'),
-    legend.key = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.grid.major = element_line(color='grey85', size = 0.3),
-    axis.title.y = element_text(angle = 0, vjust = 0.5),
-    legend.position = 'bottom'
+    axis.title.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_line('grey85', size = 0.3)
   )
