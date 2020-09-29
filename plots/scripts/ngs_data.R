@@ -1,7 +1,7 @@
 # https://github.com/asonty/ngs_highlights
 
 # * install packages ----
-install.packages("devtools", "patchwork", "tidyverse")
+# install.packages("devtools", "patchwork", "tidyverse", "deldir")
 devtools::install_github('thomasp85/ggforce')
 devtools::install_github('thomasp85/gganimate')
 
@@ -13,6 +13,7 @@ library(ggforce)
 library(ggplot2)
 library(readr)
 library(patchwork)
+library(deldir)
 
 
 
@@ -21,8 +22,8 @@ library(patchwork)
 source("~/Documents/dev/GitHub/asonty-ngs_highlights/utils/scripts/data_utils.R")
 source("~/Documents/dev/GitHub/asonty-ngs_highlights/utils/scripts/plot_utils.R")
 
-highlights <- fetch_highlights_list(team_ = "BAL", season_ = 2019)
-play_data <- fetch_play_data(playKey_ = 242)
+highlights <- fetch_highlights_list(team = "PHI", season_ = 2019)
+play_data <- fetch_play_data(playKey_ = 481)
 
 first_frame <- play_data %>%
   filter(event == "line_set") %>% 
@@ -197,3 +198,5 @@ play_anim <- animate(
   height = 500,
   end_pause = 10
 )
+
+play_anim

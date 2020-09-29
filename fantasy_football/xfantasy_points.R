@@ -513,7 +513,7 @@ sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
 
 # do sim
 ptm <- proc.time()
-sim_df <- do.call(rbind, lapply(1:10, function(x) {
+sim_df <- do.call(rbind, lapply(1:100, function(x) {
   sampling_df %>% 
     filter(game_id != "2020_01_IND_JAX" & play_id != 2563) %>% 
     filter(game_id != "2020_02_ATL_DAL" & play_id != 4126) %>% 
