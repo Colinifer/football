@@ -39,7 +39,7 @@ pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/dat
 # Average Expected Fantasy Points - Receivers
 avg_exp_fp_df <- pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
-  add_xyac_dist_old %>% 
+  add_xyac_dist %>% 
   select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_player_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(
     gain = ifelse(yardline_100==air_yards, yardline_100, gain),
@@ -278,7 +278,7 @@ cayoe_xyac <- pbp_df %>%
            # wp > .2 &
            # wp < .8 &
            air_yards > 0) %>%
-  add_xyac_dist_old
+  add_xyac_dist
 
 cayoe <- cayoe_xyac %>%
   select(
@@ -371,7 +371,9 @@ cayoe %>%
     exp_yards,
     exp_td,
     exp_PPR_pts,
-    ppr_pts_diff
+    ppr_pts_diff,
+    sum_cayoe,
+    cayoe_a
   ) %>%
   arrange(-exp_PPR_pts) %>% 
   dplyr::slice(1:50) %>% 
@@ -462,6 +464,7 @@ fant_pt_dist_df <- pbp_df %>%
     exp_half_PPR_points = half_PPR_points * catch_run_prob,
     actual_outcome = ifelse(actual_yards_gained==gain & complete_pass==1, 1, 0),
     actual_PPR_points = ifelse(actual_outcome==1, PPR_points, 0),
+    actual_half_PPR_points = ifelse(actual_outcome==.5, half_PPR_points, 0),
     target = 0,
     game_played = 0
   )
@@ -499,9 +502,13 @@ WR_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   # filter(teamPlayers.position == 'WR' & tot_gp >= 8) %>% 
   arrange(-PPR_pg) # arrange by PPR or 1/2 PPR
 
+use_WR <- WR_rank_df %>% 
+  slice(1:30) %>% 
+  pull(receiver_id)
+
 # make a data frame to loop around
 sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>% 
-  select(season, game_id, play_id, posteam, receiver, receiver_id, catch_run_prob, PPR_points, hal_PPR_points) %>%
+  select(season, game_id, play_id, posteam, receiver, receiver_id, catch_run_prob, PPR_points, half_PPR_points) %>%
   group_by(game_id, play_id)
 
 # do sim
@@ -527,13 +534,13 @@ sim_df <- sim_df %>% mutate(sim = 1)
 
 # calculate how many points were actually scored
 actual_df <- fant_pt_dist_df %>%
-  group_by(game_id, posteam, receiver) %>% 
+  group_by(game_id, posteam, receiver_id) %>% 
   summarize(sim_tot = sum(actual_PPR_points, na.rm = T), .groups = 'drop') %>% 
   mutate(sim = 0)
 
 # figure out what percentile the actual values fall in
 percentile_df <- rbind(sim_df, actual_df) %>% 
-  group_by(game_id, posteam, receiver) %>% 
+  group_by(game_id, posteam, receiver_id) %>% 
   mutate(perc = percent_rank(sim_tot)) %>% 
   filter(sim == 0)
 
@@ -579,7 +586,7 @@ library(scales)
 
 # source('https://github.com/ajreinhard/data-viz/raw/master/ggplot/plot_SB.R')
 
-sim_df %>% 
+p <- sim_df %>% 
   #slice(1:1000) %>% 
   left_join(WR_rank_df) %>% 
   left_join(percentile_df) %>% 
@@ -620,3 +627,5 @@ sim_df %>%
     panel.grid.major.y = element_blank(),
     panel.grid.minor.x = element_line('grey85', size = 0.3)
   )
+
+ggsave(plot =  p, filename = paste0("xFP_share_ppr_", pbp_df$season[1], "_distribution.png"), path = "fantasy_football/plots")
