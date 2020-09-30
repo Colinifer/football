@@ -3,18 +3,26 @@ library(nflfastR)
 
 # choose seasons for which the plot shall be generated
 # CPOE starts in 2006
-season <- 2019
+season <- 2020
 
 # load pbp for the choosen seasosn from nflfastR data repo
 # can be multiple seasons as well
 pbp <-
   purrr::map_df(season, function(x) {
-    readRDS(url(glue::glue("https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_{x}.rds")))
+    readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
   })
+
+pbp <- 
+  pbp %>% 
+  decode_player_ids
 
 # load roster data from nflfastR data repo
 roster <-
-  readRDS(url("https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/roster-data/roster_1999_to_2019.rds"))
+  readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true"))
+
+roster <- 
+  roster %>% 
+  decode_player_ids()
 
 # compute cpoe grouped by air_yards
 cpoe <-
@@ -124,4 +132,4 @@ plot <-
 # save the plot
 ggsave(glue::glue("plots/desktop/cpoe_vs_dot_{season}.png"), dpi = 600, width = 24, height = 21, units = "cm")
 
-season <- season + 1
+# season <- season + 1

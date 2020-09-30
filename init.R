@@ -1,11 +1,13 @@
 # Packages & Init Setup ---------------------------------------------------
 
 # devtools::install_github("dynastyprocess/ffscrapr")
+# devtools::install_github("jthomasmock/espnscrapeR")
 proj_name <- "football"
 pkgs <- c(
   "devtools",
   "tidyverse",
   "nflfastR",
+  "espnscrapeR",
   "DBI",
   "odbc",
   "RMariaDB",
