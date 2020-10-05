@@ -50,8 +50,6 @@ source('fantasy_football/fa_scrape.R')
 
 
 # PBP Data ----------------------------------------------------------------
-
-
 pbp_df <-
   readRDS(
     url(
@@ -75,8 +73,13 @@ rosters %>%
 # Sleeper API
 sleeper_api_players_url <- 'https://api.sleeper.app/v1/players/nfl'
 sleeper_api_players <- jsonlite::fromJSON(url('https://api.sleeper.app/v1/players/nfl'))
-sleeper_api_players_df <- data.frame()
+
+# Work-in-progress
+sleeper_api_players_df <- sleeper_api_players %>% hoist(sleeper_api_players, position = "position", college = "college")
+"https://github.com/milesmania/DraftR-Football/blob/d3bdf8a0fac2b06df8064975f7421ab8661073e6/Assets/FF-Functions.R"
+# ---
 colnames(sleeper_api_players_df) %>% sleeper_api_players[[1]] %>% names()
+
 
 # Create dataframe matching ESPN team IDs
 team_abbr <- rosters$team.abbr %>% unique() %>% sort()
