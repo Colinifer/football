@@ -1,9 +1,7 @@
 .RData.Tmp
 .DS_Store
-data/
 *.pper
 *.csv
-*.rds
 
 # History files
 .Rhistory
