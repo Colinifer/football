@@ -11,17 +11,17 @@ library(glue)
 # Create variables --------------------------------------------------------
 
 # ESPN Fantasy Football
-ff_fantasy_key <- "fantasy_football/data/fantasy_key.csv"
 swid  <-  "{2BA315B4-5941-4B1C-A315-B459416B1CC1}"
 espn_s2 <- "AEBtGuDXUCKk6SpqlY71qdBDW%2BYc5KGa80m%2F0EVX9NCF%2FIFBM5b8ZMKgrMovpUeUqFTp4M%2BrPbM1I4rT1Ra2oXbM847nUp25DBY9Q%2FsAPChAykF5VNEZ05VjF6Vu3thAU0WkzQeBbjkdzNGqfbmPtMNzrBy8oV7fcAlwh4X89q4XlfPNED8ppKynNj5admyBk7WaqNzQtZJLlStpyOjz3F3d5BwUtQ8kh390OPB5HEEPfiH4%2FBftKqsLF%2BlyhTFaDiM%3D"
 kona_v3_environment <- '{"leagueId":1034400,"seasonId":null}'
 kona_v3_teamcontrol <- '{"leagueId":1034400,"seasonId":2020,"teamId":8}'
+# ff_fantasy_key <- "fantasy_football/data/fantasy_key.rds"
 # league_id <- c("1034400", "62746259", "39973580")
 # team_id <- c("8", "9", "10")
 # league_name <- c("Colin's Minions", "Drinker's Slushy Beer", "Family League 3.0")
 # team_name <- c("Rhule Tide", "Golden Rhule", "Matt Rhules")
 # fantasy_key <- data.frame(league_id, league_name, team_id, team_name)
-# fantasy_key %>% write_csv(ff_fantasy_key)
+# fantasy_key %>% write_rds(ff_fantasy_key)
 cookies = c(`SWID` = swid,
             `espn_s2` = espn_s2)
             # 'kona_v3_environment_season_ffl' = kona_v3_environment,
@@ -49,36 +49,60 @@ x_fantasy_filter <-
 source('fantasy_football/fa_scrape.R')
 
 
-# PBP Data ----------------------------------------------------------------
-pbp_df <-
-  readRDS(
-    url(
-      'https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'
-    )
-  )
-pbp_df <- pbp_df %>%
-  clean_pbp()
-pbp_df %>% nflfastR::decode_player_ids() %>%
-  select(desc, name, id, receivers)
-
 
 # Roster data ----------------------------------------------------
 
 # nflfastR roster
-rosters <- readRDS(url('https://github.com/mrcaseb/nflfastR-roster/blob/master/data/nflfastR-roster.rds?raw=true'))
-
-rosters %>% 
+nflfastr.rosters <-
+  readRDS(
+    url(
+      'https://github.com/mrcaseb/nflfastR-roster/blob/master/data/nflfastR-roster.rds?raw=true'
+    )
+  )
+nflfastr.rosters %>%
   filter(pbp_id > 0)
 
 # Sleeper API
-sleeper_api_players_url <- 'https://api.sleeper.app/v1/players/nfl'
-sleeper_api_players <- jsonlite::fromJSON(url('https://api.sleeper.app/v1/players/nfl'))
+sleeper_api_players_url <-
+  'https://api.sleeper.app/v1/players/nfl'
+sleeper_api_players <-
+  jsonlite::fromJSON(url('https://api.sleeper.app/v1/players/nfl'), flatten = T)
+na_map <-
+  readRDS(
+    url(
+      "https://github.com/mrcaseb/nflfastR-roster/blob/master/R/na_map.rds?raw=true"
+    )
+  )
 
-# Work-in-progress
-sleeper_api_players_df <- sleeper_api_players %>% hoist(sleeper_api_players, position = "position", college = "college")
-"https://github.com/milesmania/DraftR-Football/blob/d3bdf8a0fac2b06df8064975f7421ab8661073e6/Assets/FF-Functions.R"
-# ---
-colnames(sleeper_api_players_df) %>% sleeper_api_players[[1]] %>% names()
+# source("https://github.com/mrcaseb/nflfastR-roster/blob/master/R/update_roster.R")
+sleep.players <-
+  purrr::map_dfr(sleeper_api_players, function(x)
+    purrr::map(x, function(y)
+      ifelse(is.null(y), NA, y))) %>%
+  dplyr::na_if("") %>%
+  dplyr::mutate_if(is.character, stringr::str_trim) %>%
+  dplyr::filter(
+    !(is.na(team) &
+        is.na(gsis_id)),
+    !player_id %in% nflfastR::teams_colors_logos$team_abbr,
+    first_name != "Duplicate"
+  ) %>%
+  dplyr::left_join(na_map, by = c("sportradar_id" = "id")) %>%
+  dplyr::mutate(
+    gsis_id = dplyr::if_else(is.na(gsis_id), gsis, gsis_id),
+    update_dt = lubridate::now("America/New_York"),
+    season = dplyr::if_else(
+      lubridate::month(update_dt) < 3,
+      lubridate::year(update_dt) - 1,
+      lubridate::year(update_dt)
+    ),
+    index = 1:dplyr::n(),
+    headshot_url = dplyr::if_else(is.na(espn_id), NA_character_, as.character(
+      glue::glue(
+        "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/{espn_id}.png"
+      )
+    ))
+  )
 
 
 # Create dataframe matching ESPN team IDs
