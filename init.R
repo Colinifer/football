@@ -68,4 +68,4 @@ source("../initR/con.R")
 dbListTables(con)
 dbDisconnect(con)
 
-# source("fantasy_football/ff_init.R")
+source("fantasy_football/ff_init.R")

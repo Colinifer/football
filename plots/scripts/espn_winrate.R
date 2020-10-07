@@ -1,6 +1,9 @@
 library(tidyverse)
 library(espnscrapeR)
+library(nflfastR)
+library(teamcolors)
 library(gt)
+library(webshot)
 
 all_win_rate <- scrape_espn_win_rate()
 
@@ -8,7 +11,7 @@ wide_win_rate <- all_win_rate %>%
   pivot_wider(names_from = stat,
               values_from = win_pct,
               id_col = team) %>%
-  set_names(nm = c("team", "prwr", "rswr", "pbwr", "rbwr")) %>%
+  purrr::set_names(nm = c("team", "prwr", "rswr", "pbwr", "rbwr")) %>%
   mutate(prwr_rk = min_rank(desc(prwr)), .before = prwr) %>%
   mutate(rswr_rk = min_rank(desc(rswr)), .before = rswr) %>%
   mutate(pbwr_rk = min_rank(desc(pbwr)), .before = pbwr) %>%
@@ -142,13 +145,16 @@ gt_tab <- wide_win_rate %>%
   ) %>% 
   opt_table_font(font = google_font(name = "Chivo"))
 
-gt_tab
+# gt_tab
 
-gtsave(gt_tab, path = "plots/desktop/", filename = "gt-espn-winrate.png")
+gt::gtsave(gt_tab, filename = "espn_winrate.png", path = "plots/desktop/")
 
-proj_df <- scrape_fpi(stat = "PROJ")
 
-fpi_df %>% 
-  left_join(proj_df) %>% 
-  ggplot(aes(x = off, y = playoff_pct, size = def)) +
-  geom_point()
+# Test --------------------------------------------------------------------
+
+# proj_df <- scrape_fpi(stat = "PROJ")
+# 
+# fpi_df %>% 
+#   left_join(proj_df) %>% 
+#   ggplot(aes(x = off, y = playoff_pct, size = def)) +
+#   geom_point()

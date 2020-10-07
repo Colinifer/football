@@ -62,1056 +62,161 @@ userDate <- Sys.Date()#
 today <- format(Sys.Date(), "%Y-%d-%m")#
 source("EH_scrape_functions.R")#
 u.scrape_interval <- 500
-proj_name <- "football"#
-print(proj_name)#
+setwd("~/Documents/dev/football/")
+library(tidyverse)#
+library(espnscrapeR)#
+library(nflfastR)#
+library(teamcolors)#
+library(gt)#
 #
-pkgs <- c(#
-  "devtools",#
-  "tidyverse",#
-  "DBI",#
-  "odbc",#
-  "RMariaDB",#
-  "readr",#
-  "pander",#
-  "furrr",#
-  "na.tools",#
-  "ggimage",#
-  "teamcolors",#
-  "glue",#
-  "dplyr",#
-  "jsonlite",#
-  "RJSONIO",#
-  "tictoc",#
-  "animation",#
-  "gt",#
-  "png",#
-  "DT",#
-  "ggthemes",#
-  "ggforce",#
-  "ggridges",#
-  "ggrepel",#
-  "ggbeeswarm",#
-  "cowplot",#
-  "gridExtra",#
-  "grid",#
-  "extrafont",#
-  "shadowtext",#
-  "tidytext",#
-  "RCurl"#
-)#
-installed_packages <- pkgs %in%#
-  rownames(installed.packages())#
-if (any(installed_packages == FALSE)) {#
-  install.packages(pkgs[!installed_packages])#
-}#
-lapply(pkgs, library, character.only = TRUE)#
-# library("nflscrapR") # doesn't work anymore#
-library("nflfastR")#
-# library("ffscrapr")#
+all_win_rate <- scrape_espn_win_rate()#
 #
-##reset#
-setwd("~/")#
-gid <- paste(getwd())#
-gid#
-device <- ""#
+wide_win_rate <- all_win_rate %>%#
+  pivot_wider(names_from = stat,#
+              values_from = win_pct,#
+              id_col = team) %>%#
+  purrr::set_names(nm = c("team", "prwr", "rswr", "pbwr", "rbwr")) %>%#
+  mutate(prwr_rk = min_rank(desc(prwr)), .before = prwr) %>%#
+  mutate(rswr_rk = min_rank(desc(rswr)), .before = rswr) %>%#
+  mutate(pbwr_rk = min_rank(desc(pbwr)), .before = pbwr) %>%#
+  mutate(rbwr_rk = min_rank(desc(rbwr)), .before = rbwr) %>%#
+  mutate(def_wr_comp_rk = (prwr_rk + rswr_rk) / 2) %>%#
+  mutate(off_wr_comp_rk = (rbwr_rk + pbwr_rk) / 2) %>%#
+  left_join(teams_colors_logos %>%#
+              select(team_abbr, team_name),#
+            by = c("team" = "team_name"))#
 #
-if (gid == "/Volumes/HDD/Users/colinwelsh") {#
-  ## Maverick - MBP#
-  setwd("~/Documents/dev/football")#
-  device <- "Maverick (MBP)"#
-} else if (gid == "/Users/ColinWelsh") {#
-  ## Goose - iMac#
-  setwd("~/Documents/dev/football")#
-  device <- "Goose (iMac)"#
-} else if (gid == "/home/rstudio-user") {#
-  ## RStudio Cloud#
-  setwd("/cloud/project")#
-  device <- "RStudio Cloud"#
-}#
-print(paste(device, "is ready for some football", sep = " "))#
-rm(gid)#
-# Create standard objects -------------------------------------------------#
-source("../initR/con.R") #
+wide_win_rate <- #
+  wide_win_rate %>% #
+  select(team_abbr, team, prwr_rk, prwr, rswr_rk, rswr, def_wr_comp_rk, pbwr_rk, pbwr, rbwr_rk, rbwr, off_wr_comp_rk)#
 #
-# Clean data --------------------------------------------------------------#
+wide_win_rate %>% #
+  summarize(across(!contains("rk"), mean)) %>% #
+  mutate(team = "NFL")#
 #
-tic()#
-yr <- 2018#
-team_df <- read.csv('plots/assets/nfl_logo.csv', stringsAsFactors = F)#
-pff_id <- read.csv('data/players/All_Player_Info.csv', stringsAsFactors = F)#
-#
-team_df$team_code[which(team_df$team_code=='OAK')] <- 'LV'#
-team_df$posteam[which(team_df$posteam=='OAK')] <- 'LV'#
-pff_id$team.abbreviation[which(pff_id$team.abbreviation=='OAK')] <- 'LV'#
-pff_id$team.city[which(pff_id$team.city=='Oakland')] <- 'Las Vegas'#
-pff_id$team.slug[which(pff_id$team.slug=='okland-raiders')] <- 'las-vegas-raiders'#
-#
-yr_pbp <- lapply(yr, function(x) {#
-  dbGetQuery(con, paste0("SELECT * FROM `football`.`pbp` WHERE `game_id` LIKE '%",x, "%'"), stringsAsFactors=F)#
-})#
-dbDisconnect(con)#
-pbp_NFL <- yr_pbp[[1]]#
-# pbp_NFL <- do.call(rbind, yr_pbp)#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='SD')] <- 'LAC'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='JAC')] <- 'JAX'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='STL')] <- 'LA'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='OAK')] <- 'LV'#
-#
-pbp_NFL$team_player <- paste0(pbp_NFL$receiver_player_id,'_',pbp_NFL$posteam)#
-#
-# need to map correct IDs#
-adot_agg_df <- aggregate(cbind(air_yards,pass_attempt) ~ receiver_player_id + posteam + team_player + receiver_player_name, data = pbp_NFL, FUN = sum)#
-#adot_agg_df <- adot_agg_df[which(adot_agg_df$pass_attempt>=40),]#
-adot_agg_df <- adot_agg_df[order(-adot_agg_df$pass_attempt),]#
-adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-adot_agg_df <- adot_agg_df[which(adot_agg_df$tm_targ_order <= 5),]#
-adot_agg_df$ADOT <- adot_agg_df$air_yards / adot_agg_df$pass_attempt#
-# Order by ADOT#
-adot_agg_df <- adot_agg_df[order(adot_agg_df$ADOT),]#
-adot_agg_df$tm_ADOT_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-# Order by Pass Attempt#
-adot_agg_df <- adot_agg_df[order(adot_agg_df$pass_attempt),]#
-adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-#
-freq_passers <- pbp_NFL[which(pbp_NFL$team_player %in% adot_agg_df$team_player),]#
-freq_passers$full_name <- pff_id$full_name[match(freq_passers$receiver_player_id, pff_id$nflfastR_id)]#
-freq_passers <- merge(freq_passers, adot_agg_df, by = 'team_player', suffixes = c('','_agg'))#
-freq_passers$tm_ADOT_order <- factor(freq_passers$tm_ADOT_order,1:5)#
-freq_passers$tm_targ_order <- factor(freq_passers$tm_targ_order,1:5)#
-freq_passers$posteam <- factor(freq_passers$posteam, team_df$team_code[order(team_df$division)])#
-#
-fill_col <- team_df$primary#
-outline_col <- team_df$secondary#
-names(fill_col) <- team_df$team_code#
-names(outline_col) <- team_df$team_code#
-#
-headshot_df <-#
-  data.frame(#
-    'full_name' = adot_agg_df$receiver_player_name,#
-    pff_url = paste0(#
-      'http://media.pff.com/player-photos/nfl/',#
-      pff_id$id[match(adot_agg_df$receiver_player_id, pff_id$nflfastR_id)],#
-      '.png'#
+gt_tab <- wide_win_rate %>% #
+  arrange(def_wr_comp_rk) %>% #
+  gt(rowname_col = "team") %>%#
+  grand_summary_rows(#
+    columns = c(4,6,9,11),#
+    fns = list(`NFL AVERAGE` = ~mean(.)),#
+    formatter = fmt_percent,#
+    decimals = 0#
+  ) %>% #
+  data_color(#
+    columns = contains("rk"),#
+    colors = scales::col_numeric(#
+      # palette = c("#7fbf7b", "#f7f7f7", "#af8dc3")#
+      palette = c("#ff7f00", "#f7f7f7"),#
+      domain = c(1, 32)#
+    )#
+  ) %>%#
+  text_transform(#
+    locations = cells_body(vars(team_abbr)),#
+    fn = function(x) web_image(url = paste0('https://a.espncdn.com/i/teamlogos/nfl/500/',x,'.png'))#
+  ) %>% #
+  cols_label(#
+    team_abbr = "",#
+    prwr_rk = "RK",#
+    prwr = "Pass Rush",#
+    pbwr_rk = "RK",#
+    pbwr = "Pass Block",#
+    rswr_rk = "RK",#
+    rswr = "Run Stop",#
+    rbwr_rk = "RK",#
+    rbwr = "Run Block",#
+    off_wr_comp_rk = "Off. Composite RK",#
+    def_wr_comp_rk = "Def. Composite RK"#
+  ) %>% #
+  opt_all_caps() %>% #
+  cols_width(#
+    vars(team) ~ px(225),#
+    columns = contains("r_rk") ~ px(50),#
+    columns = contains("comp") ~ px(130),#
+    everything() ~ px(100)#
+  ) %>% #
+  tab_style(#
+    style = cell_borders(#
+      sides = "left",#
+      color = "darkblue",#
+      weight = px(3)#
     ),#
-    'posteam' = adot_agg_df$posteam,#
-    'tm_targ_order' = factor(adot_agg_df$tm_targ_order, 1:5),#
-    'tm_ADOT_order' = factor(adot_agg_df$tm_ADOT_order, 1:5),#
-    stringsAsFactors = F#
-  )#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/25578.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916945.png&w=600&h=380'#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/48229.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3121422.png&w=600&h=380'#
-# headshot_df$pff_url[which(headshot_df$pff_url=='http://media.pff.com/player-photos/nfl/47931.png')] <- 'https://imagecomposer.nfl.com/?l=http://static.nfl.com/static/content/static/img/combine/2019/headshots/1400x1000/2562577.png&f=png&w=308&c=71'#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/47931.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/college-football/players/full/4036163.png&w=600&h=380'#
-headshot_df$posteam <-#
-  factor(headshot_df$posteam, team_df$team_code[order(team_df$division)])#
-#
-unmatched <- adot_agg_df$receiver_player_id[is.na(match(adot_agg_df$receiver_player_id, pff_id$GSIS_ID))]#
-# pbp_NFL$receiver_player_name[match(unmatched, pbp_NFL$receiver_player_id)]#
-team_df$posteam <- factor(team_df$team_code, team_df$team_code[order(team_df$division)])#
-#pff_id[which(pff_id$id==48229),]#
-toc()#
-img_size_adj <- 100/(8*4)#
-#
-tic()#
-p_new <- ggplot(freq_passers, aes(y = tm_targ_order, x = air_yards)) +#
-  # Team Logo#
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80) +#
-  # Team logo washed#
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80, color = 'white', alpha = 0.8) +#
-  # Player headshot#
-  geom_image(data = headshot_df, aes(image = pff_url, x = 38, y = tm_targ_order), size = 0.25, nudge_y = 0.5) +#
-  geom_density_ridges2(aes(y = tm_targ_order, fill = posteam, color = posteam), scale = 1.7, size = 0.2, na.rm = T, show.legend = F, bandwidth = 2, panel_scaling = F) +#
-  # ---------#
-  # geom_text(aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 0.8 * img_size_adj, color = 'darkblue') +#
-  # geom_text(data = team_df, aes(label = posteam, x = -1, y = 4.8), angle = 45, size = 1.5 * img_size_adj, color = 'darkblue') +#
-  # geom_text(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # ---------#
-  # Player full name#
-  geom_shadowtext(data = headshot_df, aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 1.1 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # Team name#
-  # geom_shadowtext(data = team_df, aes(label = posteam, x = -1, y = 5.7), angle = 45, size = 1.5 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.1, na.rm = TRUE) +#
-  # X Axis Labels#
-  geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # Y Axis Labels#
-  # geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 1 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  scale_color_manual(values = outline_col) + #
-  scale_fill_manual(values = fill_col)#
-toc()#
-#
-tic()#
-ggsave(#
-  paste0("plots/desktop/", yr, "_team_ridge_DOT_no_images.png"),#
-  plot = p_new +#
-    facet_wrap(~ posteam, ncol = 8, shrink = FALSE) +#
-    labs(#
-      title = 'Receiver Depth of Target Distribution',#
-      subtitle = paste0(yr, " NFL Regular Season"),#
-      x = 'Air Yards'#
-    ) +#
-    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +#
-    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +#
-    theme_bw() +#
-    theme(#
-      text = element_text(color = 'black'),#
-      plot.background = element_rect(fill = 'grey95', color = 'grey95'),#
-      panel.border = element_rect(color = 'black'),#
-      axis.ticks = element_blank(),#
-      axis.title = element_blank(),#
-      axis.text = element_blank(),#
-      panel.grid.minor = element_blank(),#
-      panel.grid.major.y = element_blank(),#
-      plot.title = element_text(size = 18),#
-      plot.subtitle = element_text(size = 12),#
-      plot.caption = element_text(size = 7),#
-      legend.background = element_rect(fill = 'grey90', color = 'black'),#
-      legend.key = element_blank(),#
-      strip.background = element_blank(),#
-      # strip.text.x = element_blank(),#
-      panel.spacing = unit(0.1, "lines")#
+    locations = list(#
+      cells_body(#
+        columns = c(3,5,7,8,9,11,12)#
+      ),#
+      cells_grand_summary(#
+        columns = 3#
+      )#
+    )#
+  ) %>% #
+  tab_style(#
+    style = cell_text(#
+      weight = "bold",#
+      color = "dimgray"#
     ),#
-  width = 25,#
-  height = 14,#
-  dpi = 100,#
-  limitsize = FALSE#
-)#
-toc()#
-#
-tic()#
-ggsave(#
-  paste0("plots/mobile/", yr, "_team_ridge_DOT_no_images.png"),#
-  plot = p_new +#
-    facet_wrap(~ posteam, ncol = 4, shrink = FALSE) +#
-    labs(#
-      title = 'Receiver Depth of Target Distribution',#
-      subtitle = paste0(yr, " NFL Regular Season"),#
-      x = 'Air Yards'#
-    ) +#
-    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +#
-    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +#
-    theme_bw() +#
-    theme(#
-      text = element_text(color = 'black'),#
-      plot.background = element_rect(fill = 'grey95', color = 'grey95'),#
-      panel.border = element_rect(color = 'black'),#
-      axis.ticks = element_blank(),#
-      axis.title = element_blank(),#
-      axis.text = element_blank(),#
-      panel.grid.minor = element_blank(),#
-      panel.grid.major.y = element_blank(),#
-      plot.title = element_text(size = 18),#
-      plot.subtitle = element_text(size = 12),#
-      plot.caption = element_text(size = 7),#
-      legend.background = element_rect(fill = 'grey90', color = 'black'),#
-      legend.key = element_blank(),#
-      strip.background = element_blank(),#
-      # strip.text.x = element_blank(),#
-      panel.spacing = unit(0.1, "lines")#
+    locations = cells_body(#
+      vars(team_abbr, team)#
+    )#
+  ) %>%#
+  tab_spanner(#
+    label = "DEFENSE",#
+    columns = 3:7#
+  ) %>% #
+  tab_spanner(#
+    label = "OFFENSE",#
+    columns = 8:12#
+  ) %>% #
+  tab_source_note(#
+    source_note = md("**Data:** ESPN")#
+  ) %>% #
+  fmt_percent(columns = c(4, 6, 9, 11), decimals = 0) %>% #
+  cols_align(align = "center", columns = 2:ncol(wide_win_rate)) %>% #
+  cols_align(align = "left", columns = c(1,2)) %>% #
+  tab_header(#
+    title = "2020 NFL pass-rushing, run-stopping, blocking leaderboard: Win rate rankings",#
+    subtitle = "Data through week 3"#
+  ) %>% #
+  tab_style(#
+    style = cell_borders(#
+      sides = "bottom", #
+      color = "darkblue", #
+      weight = px(3)#
     ),#
-  width = 14,#
-  height = 25,#
-  dpi = 100,#
-  limitsize = FALSE#
-)#
-toc()
-setwd("/Users/ColinWelsh/Documents/dev/football")
-proj_name <- "football"#
-print(proj_name)#
+    locations = list(#
+      cells_body(#
+        rows = nrow(.$`_data`)#
+      )#
+    )#
+  ) %>% #
+  tab_options(#
+    table.font.color = 'darkblue',#
+    heading.align = "left",#
+    table.border.bottom.color = "transparent",#
+    table.border.bottom.width = px(3),#
+    table.border.top.color = "transparent",#
+    table.border.top.width = px(3),#
+    column_labels.border.bottom.color = "darkblue",#
+    column_labels.border.bottom.width = px(3),#
+    heading.title.font.size = px(30),#
+    heading.title.font.weight = "bold",#
+    heading.subtitle.font.size = px(20),#
+    heading.border.bottom.color = "transparent",#
+    heading.border.bottom.width = px(3),#
+    table_body.hlines.color = "#ededed",#
+    grand_summary_row.border.color = "darkblue",#
+    grand_summary_row.border.width = px(3)#
+  ) %>% #
+  opt_table_font(font = google_font(name = "Chivo"))#
 #
-pkgs <- c(#
-  "devtools",#
-  "tidyverse",#
-  "DBI",#
-  "odbc",#
-  "RMariaDB",#
-  "readr",#
-  "pander",#
-  "furrr",#
-  "na.tools",#
-  "ggimage",#
-  "teamcolors",#
-  "glue",#
-  "dplyr",#
-  "jsonlite",#
-  "RJSONIO",#
-  "tictoc",#
-  "animation",#
-  "gt",#
-  "png",#
-  "DT",#
-  "ggthemes",#
-  "ggforce",#
-  "ggridges",#
-  "ggrepel",#
-  "ggbeeswarm",#
-  "cowplot",#
-  "gridExtra",#
-  "grid",#
-  "extrafont",#
-  "shadowtext",#
-  "tidytext",#
-  "RCurl"#
-)#
-installed_packages <- pkgs %in%#
-  rownames(installed.packages())#
-if (any(installed_packages == FALSE)) {#
-  install.packages(pkgs[!installed_packages])#
-}#
-lapply(pkgs, library, character.only = TRUE)#
-# library("nflscrapR") # doesn't work anymore#
-library("nflfastR")#
-# library("ffscrapr")#
+gt_tab#
 #
-##reset#
-setwd("~/")#
-gid <- paste(getwd())#
-gid#
-device <- ""#
+gt::gtsave(gt_tab, filename = "gt-espn-winrate.png", path = "plots/desktop/")#
+# Test --------------------------------------------------------------------#
 #
-if (gid == "/Volumes/HDD/Users/colinwelsh") {#
-  ## Maverick - MBP#
-  setwd("~/Documents/dev/football")#
-  device <- "Maverick (MBP)"#
-} else if (gid == "/Users/ColinWelsh") {#
-  ## Goose - iMac#
-  setwd("~/Documents/dev/football")#
-  device <- "Goose (iMac)"#
-} else if (gid == "/home/rstudio-user") {#
-  ## RStudio Cloud#
-  setwd("/cloud/project")#
-  device <- "RStudio Cloud"#
-}#
-print(paste(device, "is ready for some football", sep = " "))#
-rm(gid)#
-# Create standard objects -------------------------------------------------#
-source("../initR/con.R") #
-#
-# Clean data --------------------------------------------------------------#
-#
-tic()#
-yr <- 2018#
-team_df <- read.csv('plots/assets/nfl_logo.csv', stringsAsFactors = F)#
-pff_id <- read.csv('data/players/All_Player_Info.csv', stringsAsFactors = F)#
-#
-team_df$team_code[which(team_df$team_code=='OAK')] <- 'LV'#
-team_df$posteam[which(team_df$posteam=='OAK')] <- 'LV'#
-pff_id$team.abbreviation[which(pff_id$team.abbreviation=='OAK')] <- 'LV'#
-pff_id$team.city[which(pff_id$team.city=='Oakland')] <- 'Las Vegas'#
-pff_id$team.slug[which(pff_id$team.slug=='okland-raiders')] <- 'las-vegas-raiders'#
-#
-yr_pbp <- lapply(yr, function(x) {#
-  dbGetQuery(con, paste0("SELECT * FROM `football`.`pbp` WHERE `game_id` LIKE '%",x, "%'"), stringsAsFactors=F)#
-})#
-dbDisconnect(con)#
-pbp_NFL <- yr_pbp[[1]]#
-# pbp_NFL <- do.call(rbind, yr_pbp)#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='SD')] <- 'LAC'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='JAC')] <- 'JAX'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='STL')] <- 'LA'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='OAK')] <- 'LV'#
-#
-pbp_NFL$team_player <- paste0(pbp_NFL$receiver_player_id,'_',pbp_NFL$posteam)#
-#
-# need to map correct IDs#
-adot_agg_df <- aggregate(cbind(air_yards,pass_attempt) ~ receiver_player_id + posteam + team_player + receiver_player_name, data = pbp_NFL, FUN = sum)#
-#adot_agg_df <- adot_agg_df[which(adot_agg_df$pass_attempt>=40),]#
-adot_agg_df <- adot_agg_df[order(-adot_agg_df$pass_attempt),]#
-adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-adot_agg_df <- adot_agg_df[which(adot_agg_df$tm_targ_order <= 5),]#
-adot_agg_df$ADOT <- adot_agg_df$air_yards / adot_agg_df$pass_attempt#
-# Order by ADOT#
-adot_agg_df <- adot_agg_df[order(adot_agg_df$ADOT),]#
-adot_agg_df$tm_ADOT_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-# Order by Pass Attempt#
-adot_agg_df <- adot_agg_df[order(adot_agg_df$pass_attempt),]#
-adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-#
-freq_passers <- pbp_NFL[which(pbp_NFL$team_player %in% adot_agg_df$team_player),]#
-freq_passers$full_name <- pff_id$full_name[match(freq_passers$receiver_player_id, pff_id$nflfastR_id)]#
-freq_passers <- merge(freq_passers, adot_agg_df, by = 'team_player', suffixes = c('','_agg'))#
-freq_passers$tm_ADOT_order <- factor(freq_passers$tm_ADOT_order,1:5)#
-freq_passers$tm_targ_order <- factor(freq_passers$tm_targ_order,1:5)#
-freq_passers$posteam <- factor(freq_passers$posteam, team_df$team_code[order(team_df$division)])#
-#
-fill_col <- team_df$primary#
-outline_col <- team_df$secondary#
-names(fill_col) <- team_df$team_code#
-names(outline_col) <- team_df$team_code#
-#
-headshot_df <-#
-  data.frame(#
-    'full_name' = adot_agg_df$receiver_player_name,#
-    pff_url = paste0(#
-      'http://media.pff.com/player-photos/nfl/',#
-      pff_id$id[match(adot_agg_df$receiver_player_id, pff_id$nflfastR_id)],#
-      '.png'#
-    ),#
-    'posteam' = adot_agg_df$posteam,#
-    'tm_targ_order' = factor(adot_agg_df$tm_targ_order, 1:5),#
-    'tm_ADOT_order' = factor(adot_agg_df$tm_ADOT_order, 1:5),#
-    stringsAsFactors = F#
-  )#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/25578.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916945.png&w=600&h=380'#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/48229.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3121422.png&w=600&h=380'#
-# headshot_df$pff_url[which(headshot_df$pff_url=='http://media.pff.com/player-photos/nfl/47931.png')] <- 'https://imagecomposer.nfl.com/?l=http://static.nfl.com/static/content/static/img/combine/2019/headshots/1400x1000/2562577.png&f=png&w=308&c=71'#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/47931.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/college-football/players/full/4036163.png&w=600&h=380'#
-headshot_df$posteam <-#
-  factor(headshot_df$posteam, team_df$team_code[order(team_df$division)])#
-#
-unmatched <- adot_agg_df$receiver_player_id[is.na(match(adot_agg_df$receiver_player_id, pff_id$GSIS_ID))]#
-# pbp_NFL$receiver_player_name[match(unmatched, pbp_NFL$receiver_player_id)]#
-team_df$posteam <- factor(team_df$team_code, team_df$team_code[order(team_df$division)])#
-#pff_id[which(pff_id$id==48229),]#
-toc()#
-img_size_adj <- 100/(8*4)#
-#
-tic()#
-p_new <- ggplot(freq_passers, aes(y = tm_targ_order, x = air_yards)) +#
-  # Team Logo#
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80) +#
-  # Team logo washed#
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80, color = 'white', alpha = 0.8) +#
-  # Player headshot#
-  geom_image(data = headshot_df, aes(image = pff_url, x = 38, y = tm_targ_order), size = 0.25, nudge_y = 0.5) +#
-  geom_density_ridges2(aes(y = tm_targ_order, fill = posteam, color = posteam), scale = 1.7, size = 0.2, na.rm = T, show.legend = F, bandwidth = 2, panel_scaling = F) +#
-  # ---------#
-  # geom_text(aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 0.8 * img_size_adj, color = 'darkblue') +#
-  # geom_text(data = team_df, aes(label = posteam, x = -1, y = 4.8), angle = 45, size = 1.5 * img_size_adj, color = 'darkblue') +#
-  # geom_text(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # ---------#
-  # Player full name#
-  geom_shadowtext(data = headshot_df, aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 1.1 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # Team name#
-  # geom_shadowtext(data = team_df, aes(label = posteam, x = -1, y = 5.7), angle = 45, size = 1.5 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.1, na.rm = TRUE) +#
-  # X Axis Labels#
-  geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # Y Axis Labels#
-  # geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 1 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  scale_color_manual(values = outline_col) + #
-  scale_fill_manual(values = fill_col)#
-toc()#
-#
-tic()#
-ggsave(#
-  paste0("plots/desktop/", yr, "_team_ridge_DOT_no_images.png"),#
-  plot = p_new +#
-    facet_wrap(~ posteam, ncol = 8, shrink = FALSE) +#
-    labs(#
-      title = 'Receiver Depth of Target Distribution',#
-      subtitle = paste0(yr, " NFL Regular Season"),#
-      x = 'Air Yards'#
-    ) +#
-    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +#
-    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +#
-    theme_bw() +#
-    theme(#
-      text = element_text(color = 'black'),#
-      plot.background = element_rect(fill = 'grey95', color = 'grey95'),#
-      panel.border = element_rect(color = 'black'),#
-      axis.ticks = element_blank(),#
-      axis.title = element_blank(),#
-      axis.text = element_blank(),#
-      panel.grid.minor = element_blank(),#
-      panel.grid.major.y = element_blank(),#
-      plot.title = element_text(size = 18),#
-      plot.subtitle = element_text(size = 12),#
-      plot.caption = element_text(size = 7),#
-      legend.background = element_rect(fill = 'grey90', color = 'black'),#
-      legend.key = element_blank(),#
-      strip.background = element_blank(),#
-      # strip.text.x = element_blank(),#
-      panel.spacing = unit(0.1, "lines")#
-    ),#
-  width = 25,#
-  height = 14,#
-  dpi = 100,#
-  limitsize = FALSE#
-)#
-toc()#
-#
-tic()#
-ggsave(#
-  paste0("plots/mobile/", yr, "_team_ridge_DOT_no_images.png"),#
-  plot = p_new +#
-    facet_wrap(~ posteam, ncol = 4, shrink = FALSE) +#
-    labs(#
-      title = 'Receiver Depth of Target Distribution',#
-      subtitle = paste0(yr, " NFL Regular Season"),#
-      x = 'Air Yards'#
-    ) +#
-    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +#
-    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +#
-    theme_bw() +#
-    theme(#
-      text = element_text(color = 'black'),#
-      plot.background = element_rect(fill = 'grey95', color = 'grey95'),#
-      panel.border = element_rect(color = 'black'),#
-      axis.ticks = element_blank(),#
-      axis.title = element_blank(),#
-      axis.text = element_blank(),#
-      panel.grid.minor = element_blank(),#
-      panel.grid.major.y = element_blank(),#
-      plot.title = element_text(size = 18),#
-      plot.subtitle = element_text(size = 12),#
-      plot.caption = element_text(size = 7),#
-      legend.background = element_rect(fill = 'grey90', color = 'black'),#
-      legend.key = element_blank(),#
-      strip.background = element_blank(),#
-      # strip.text.x = element_blank(),#
-      panel.spacing = unit(0.1, "lines")#
-    ),#
-  width = 14,#
-  height = 25,#
-  dpi = 100,#
-  limitsize = FALSE#
-)#
-toc()
-proj_name <- "football"#
-print(proj_name)#
-#
-pkgs <- c(#
-  "devtools",#
-  "tidyverse",#
-  "DBI",#
-  "odbc",#
-  "RMariaDB",#
-  "readr",#
-  "pander",#
-  "furrr",#
-  "na.tools",#
-  "ggimage",#
-  "teamcolors",#
-  "glue",#
-  "dplyr",#
-  "jsonlite",#
-  "RJSONIO",#
-  "tictoc",#
-  "animation",#
-  "gt",#
-  "png",#
-  "DT",#
-  "ggthemes",#
-  "ggforce",#
-  "ggridges",#
-  "ggrepel",#
-  "ggbeeswarm",#
-  "cowplot",#
-  "gridExtra",#
-  "grid",#
-  "extrafont",#
-  "shadowtext",#
-  "tidytext",#
-  "RCurl"#
-)#
-installed_packages <- pkgs %in%#
-  rownames(installed.packages())#
-if (any(installed_packages == FALSE)) {#
-  install.packages(pkgs[!installed_packages])#
-}#
-lapply(pkgs, library, character.only = TRUE)#
-# library("nflscrapR") # doesn't work anymore#
-library("nflfastR")#
-# library("ffscrapr")#
-#
-##reset#
-setwd("~/")#
-gid <- paste(getwd())#
-gid#
-device <- ""#
-#
-if (gid == "/Volumes/HDD/Users/colinwelsh") {#
-  ## Maverick - MBP#
-  setwd("~/Documents/dev/football")#
-  device <- "Maverick (MBP)"#
-} else if (gid == "/Users/ColinWelsh") {#
-  ## Goose - iMac#
-  setwd("~/Documents/dev/football")#
-  device <- "Goose (iMac)"#
-} else if (gid == "/home/rstudio-user") {#
-  ## RStudio Cloud#
-  setwd("/cloud/project")#
-  device <- "RStudio Cloud"#
-}#
-print(paste(device, "is ready for some football", sep = " "))#
-rm(gid)#
-# Create standard objects -------------------------------------------------#
-source("../initR/con.R") #
-#
-# Clean data --------------------------------------------------------------#
-#
-tic()#
-yr <- 2018#
-team_df <- read.csv('plots/assets/nfl_logo.csv', stringsAsFactors = F)#
-pff_id <- read.csv('data/players/All_Player_Info.csv', stringsAsFactors = F)#
-#
-team_df$team_code[which(team_df$team_code=='OAK')] <- 'LV'#
-team_df$posteam[which(team_df$posteam=='OAK')] <- 'LV'#
-pff_id$team.abbreviation[which(pff_id$team.abbreviation=='OAK')] <- 'LV'#
-pff_id$team.city[which(pff_id$team.city=='Oakland')] <- 'Las Vegas'#
-pff_id$team.slug[which(pff_id$team.slug=='okland-raiders')] <- 'las-vegas-raiders'#
-#
-yr_pbp <- lapply(yr, function(x) {#
-  dbGetQuery(con, paste0("SELECT * FROM `football`.`pbp` WHERE `game_id` LIKE '%",x, "%'"), stringsAsFactors=F)#
-})#
-dbDisconnect(con)#
-pbp_NFL <- yr_pbp[[1]]#
-# pbp_NFL <- do.call(rbind, yr_pbp)#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='SD')] <- 'LAC'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='JAC')] <- 'JAX'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='STL')] <- 'LA'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='OAK')] <- 'LV'#
-#
-pbp_NFL$team_player <- paste0(pbp_NFL$receiver_player_id,'_',pbp_NFL$posteam)#
-#
-# need to map correct IDs#
-adot_agg_df <- aggregate(cbind(air_yards,pass_attempt) ~ receiver_player_id + posteam + team_player + receiver_player_name, data = pbp_NFL, FUN = sum)#
-#adot_agg_df <- adot_agg_df[which(adot_agg_df$pass_attempt>=40),]#
-adot_agg_df <- adot_agg_df[order(-adot_agg_df$pass_attempt),]#
-adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-adot_agg_df <- adot_agg_df[which(adot_agg_df$tm_targ_order <= 5),]#
-adot_agg_df$ADOT <- adot_agg_df$air_yards / adot_agg_df$pass_attempt#
-# Order by ADOT#
-adot_agg_df <- adot_agg_df[order(adot_agg_df$ADOT),]#
-adot_agg_df$tm_ADOT_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-# Order by Pass Attempt#
-adot_agg_df <- adot_agg_df[order(adot_agg_df$pass_attempt),]#
-adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-#
-freq_passers <- pbp_NFL[which(pbp_NFL$team_player %in% adot_agg_df$team_player),]#
-freq_passers$full_name <- pff_id$full_name[match(freq_passers$receiver_player_id, pff_id$nflfastR_id)]#
-freq_passers <- merge(freq_passers, adot_agg_df, by = 'team_player', suffixes = c('','_agg'))#
-freq_passers$tm_ADOT_order <- factor(freq_passers$tm_ADOT_order,1:5)#
-freq_passers$tm_targ_order <- factor(freq_passers$tm_targ_order,1:5)#
-freq_passers$posteam <- factor(freq_passers$posteam, team_df$team_code[order(team_df$division)])#
-#
-fill_col <- team_df$primary#
-outline_col <- team_df$secondary#
-names(fill_col) <- team_df$team_code#
-names(outline_col) <- team_df$team_code#
-#
-headshot_df <-#
-  data.frame(#
-    'full_name' = adot_agg_df$receiver_player_name,#
-    pff_url = paste0(#
-      'http://media.pff.com/player-photos/nfl/',#
-      pff_id$id[match(adot_agg_df$receiver_player_id, pff_id$nflfastR_id)],#
-      '.png'#
-    ),#
-    'posteam' = adot_agg_df$posteam,#
-    'tm_targ_order' = factor(adot_agg_df$tm_targ_order, 1:5),#
-    'tm_ADOT_order' = factor(adot_agg_df$tm_ADOT_order, 1:5),#
-    stringsAsFactors = F#
-  )#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/25578.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916945.png&w=600&h=380'#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/48229.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3121422.png&w=600&h=380'#
-# headshot_df$pff_url[which(headshot_df$pff_url=='http://media.pff.com/player-photos/nfl/47931.png')] <- 'https://imagecomposer.nfl.com/?l=http://static.nfl.com/static/content/static/img/combine/2019/headshots/1400x1000/2562577.png&f=png&w=308&c=71'#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/47931.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/college-football/players/full/4036163.png&w=600&h=380'#
-headshot_df$posteam <-#
-  factor(headshot_df$posteam, team_df$team_code[order(team_df$division)])#
-#
-unmatched <- adot_agg_df$receiver_player_id[is.na(match(adot_agg_df$receiver_player_id, pff_id$GSIS_ID))]#
-# pbp_NFL$receiver_player_name[match(unmatched, pbp_NFL$receiver_player_id)]#
-team_df$posteam <- factor(team_df$team_code, team_df$team_code[order(team_df$division)])#
-#pff_id[which(pff_id$id==48229),]#
-toc()#
-img_size_adj <- 100/(8*4)#
-#
-tic()#
-p_new <- ggplot(freq_passers, aes(y = tm_targ_order, x = air_yards)) +#
-  # Team Logo#
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80) +#
-  # Team logo washed#
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80, color = 'white', alpha = 0.8) +#
-  # Player headshot#
-  geom_image(data = headshot_df, aes(image = pff_url, x = 38, y = tm_targ_order), size = 0.25, nudge_y = 0.5) +#
-  geom_density_ridges2(aes(y = tm_targ_order, fill = posteam, color = posteam), scale = 1.7, size = 0.2, na.rm = T, show.legend = F, bandwidth = 2, panel_scaling = F) +#
-  # ---------#
-  # geom_text(aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 0.8 * img_size_adj, color = 'darkblue') +#
-  # geom_text(data = team_df, aes(label = posteam, x = -1, y = 4.8), angle = 45, size = 1.5 * img_size_adj, color = 'darkblue') +#
-  # geom_text(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # ---------#
-  # Player full name#
-  geom_shadowtext(data = headshot_df, aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 1.1 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # Team name#
-  # geom_shadowtext(data = team_df, aes(label = posteam, x = -1, y = 5.7), angle = 45, size = 1.5 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.1, na.rm = TRUE) +#
-  # X Axis Labels#
-  geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # Y Axis Labels#
-  # geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 1 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  scale_color_manual(values = outline_col) + #
-  scale_fill_manual(values = fill_col)#
-toc()#
-#
-tic()#
-ggsave(#
-  paste0("plots/desktop/", yr, "_team_ridge_DOT_no_images.png"),#
-  plot = p_new +#
-    facet_wrap(~ posteam, ncol = 8, shrink = FALSE) +#
-    labs(#
-      title = 'Receiver Depth of Target Distribution',#
-      subtitle = paste0(yr, " NFL Regular Season"),#
-      x = 'Air Yards'#
-    ) +#
-    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +#
-    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +#
-    theme_bw() +#
-    theme(#
-      text = element_text(color = 'black'),#
-      plot.background = element_rect(fill = 'grey95', color = 'grey95'),#
-      panel.border = element_rect(color = 'black'),#
-      axis.ticks = element_blank(),#
-      axis.title = element_blank(),#
-      axis.text = element_blank(),#
-      panel.grid.minor = element_blank(),#
-      panel.grid.major.y = element_blank(),#
-      plot.title = element_text(size = 18),#
-      plot.subtitle = element_text(size = 12),#
-      plot.caption = element_text(size = 7),#
-      legend.background = element_rect(fill = 'grey90', color = 'black'),#
-      legend.key = element_blank(),#
-      strip.background = element_blank(),#
-      # strip.text.x = element_blank(),#
-      panel.spacing = unit(0.1, "lines")#
-    ),#
-  width = 25,#
-  height = 14,#
-  dpi = 100,#
-  limitsize = FALSE#
-)#
-toc()#
-#
-tic()#
-ggsave(#
-  paste0("plots/mobile/", yr, "_team_ridge_DOT_no_images.png"),#
-  plot = p_new +#
-    facet_wrap(~ posteam, ncol = 4, shrink = FALSE) +#
-    labs(#
-      title = 'Receiver Depth of Target Distribution',#
-      subtitle = paste0(yr, " NFL Regular Season"),#
-      x = 'Air Yards'#
-    ) +#
-    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +#
-    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +#
-    theme_bw() +#
-    theme(#
-      text = element_text(color = 'black'),#
-      plot.background = element_rect(fill = 'grey95', color = 'grey95'),#
-      panel.border = element_rect(color = 'black'),#
-      axis.ticks = element_blank(),#
-      axis.title = element_blank(),#
-      axis.text = element_blank(),#
-      panel.grid.minor = element_blank(),#
-      panel.grid.major.y = element_blank(),#
-      plot.title = element_text(size = 18),#
-      plot.subtitle = element_text(size = 12),#
-      plot.caption = element_text(size = 7),#
-      legend.background = element_rect(fill = 'grey90', color = 'black'),#
-      legend.key = element_blank(),#
-      strip.background = element_blank(),#
-      # strip.text.x = element_blank(),#
-      panel.spacing = unit(0.1, "lines")#
-    ),#
-  width = 14,#
-  height = 25,#
-  dpi = 100,#
-  limitsize = FALSE#
-)#
-toc()
-proj_name <- "football"#
-print(proj_name)#
-#
-pkgs <- c(#
-  "devtools",#
-  "tidyverse",#
-  "DBI",#
-  "odbc",#
-  "RMariaDB",#
-  "readr",#
-  "pander",#
-  "furrr",#
-  "na.tools",#
-  "ggimage",#
-  "teamcolors",#
-  "glue",#
-  "dplyr",#
-  "jsonlite",#
-  "RJSONIO",#
-  "tictoc",#
-  "animation",#
-  "gt",#
-  "png",#
-  "DT",#
-  "ggthemes",#
-  "ggforce",#
-  "ggridges",#
-  "ggrepel",#
-  "ggbeeswarm",#
-  "cowplot",#
-  "gridExtra",#
-  "grid",#
-  "extrafont",#
-  "shadowtext",#
-  "tidytext",#
-  "RCurl"#
-)#
-installed_packages <- pkgs %in%#
-  rownames(installed.packages())#
-if (any(installed_packages == FALSE)) {#
-  install.packages(pkgs[!installed_packages])#
-}#
-lapply(pkgs, library, character.only = TRUE)#
-# library("nflscrapR") # doesn't work anymore#
-library("nflfastR")#
-# library("ffscrapr")#
-#
-##reset#
-setwd("~/")#
-gid <- paste(getwd())#
-gid#
-device <- ""#
-#
-if (gid == "/Volumes/HDD/Users/colinwelsh") {#
-  ## Maverick - MBP#
-  setwd("~/Documents/dev/football")#
-  device <- "Maverick (MBP)"#
-} else if (gid == "/Users/ColinWelsh") {#
-  ## Goose - iMac#
-  setwd("~/Documents/dev/football")#
-  device <- "Goose (iMac)"#
-} else if (gid == "/home/rstudio-user") {#
-  ## RStudio Cloud#
-  setwd("/cloud/project")#
-  device <- "RStudio Cloud"#
-}#
-print(paste(device, "is ready for some football", sep = " "))#
-rm(gid)#
-# Create standard objects -------------------------------------------------#
-source("../initR/con.R") #
-#
-# Clean data --------------------------------------------------------------#
-#
-tic()#
-yr <- 2019#
-team_df <- read.csv('plots/assets/nfl_logo.csv', stringsAsFactors = F)#
-pff_id <- read.csv('data/players/All_Player_Info.csv', stringsAsFactors = F)#
-#
-team_df$team_code[which(team_df$team_code=='OAK')] <- 'LV'#
-team_df$posteam[which(team_df$posteam=='OAK')] <- 'LV'#
-pff_id$team.abbreviation[which(pff_id$team.abbreviation=='OAK')] <- 'LV'#
-pff_id$team.city[which(pff_id$team.city=='Oakland')] <- 'Las Vegas'#
-pff_id$team.slug[which(pff_id$team.slug=='okland-raiders')] <- 'las-vegas-raiders'#
-#
-yr_pbp <- lapply(yr, function(x) {#
-  dbGetQuery(con, paste0("SELECT * FROM `football`.`pbp` WHERE `game_id` LIKE '%",x, "%'"), stringsAsFactors=F)#
-})#
-dbDisconnect(con)#
-pbp_NFL <- yr_pbp[[1]]#
-# pbp_NFL <- do.call(rbind, yr_pbp)#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='SD')] <- 'LAC'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='JAC')] <- 'JAX'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='STL')] <- 'LA'#
-pbp_NFL$posteam[which(pbp_NFL$posteam=='OAK')] <- 'LV'#
-#
-pbp_NFL$team_player <- paste0(pbp_NFL$receiver_player_id,'_',pbp_NFL$posteam)#
-#
-# need to map correct IDs#
-adot_agg_df <- aggregate(cbind(air_yards,pass_attempt) ~ receiver_player_id + posteam + team_player + receiver_player_name, data = pbp_NFL, FUN = sum)#
-#adot_agg_df <- adot_agg_df[which(adot_agg_df$pass_attempt>=40),]#
-adot_agg_df <- adot_agg_df[order(-adot_agg_df$pass_attempt),]#
-adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-adot_agg_df <- adot_agg_df[which(adot_agg_df$tm_targ_order <= 5),]#
-adot_agg_df$ADOT <- adot_agg_df$air_yards / adot_agg_df$pass_attempt#
-# Order by ADOT#
-adot_agg_df <- adot_agg_df[order(adot_agg_df$ADOT),]#
-adot_agg_df$tm_ADOT_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-# Order by Pass Attempt#
-adot_agg_df <- adot_agg_df[order(adot_agg_df$pass_attempt),]#
-adot_agg_df$tm_targ_order <- sapply(1:nrow(adot_agg_df), function(x) length(which(adot_agg_df$posteam[x]==adot_agg_df$posteam[1:x])))#
-#
-freq_passers <- pbp_NFL[which(pbp_NFL$team_player %in% adot_agg_df$team_player),]#
-freq_passers$full_name <- pff_id$full_name[match(freq_passers$receiver_player_id, pff_id$nflfastR_id)]#
-freq_passers <- merge(freq_passers, adot_agg_df, by = 'team_player', suffixes = c('','_agg'))#
-freq_passers$tm_ADOT_order <- factor(freq_passers$tm_ADOT_order,1:5)#
-freq_passers$tm_targ_order <- factor(freq_passers$tm_targ_order,1:5)#
-freq_passers$posteam <- factor(freq_passers$posteam, team_df$team_code[order(team_df$division)])#
-#
-fill_col <- team_df$primary#
-outline_col <- team_df$secondary#
-names(fill_col) <- team_df$team_code#
-names(outline_col) <- team_df$team_code#
-#
-headshot_df <-#
-  data.frame(#
-    'full_name' = adot_agg_df$receiver_player_name,#
-    pff_url = paste0(#
-      'http://media.pff.com/player-photos/nfl/',#
-      pff_id$id[match(adot_agg_df$receiver_player_id, pff_id$nflfastR_id)],#
-      '.png'#
-    ),#
-    'posteam' = adot_agg_df$posteam,#
-    'tm_targ_order' = factor(adot_agg_df$tm_targ_order, 1:5),#
-    'tm_ADOT_order' = factor(adot_agg_df$tm_ADOT_order, 1:5),#
-    stringsAsFactors = F#
-  )#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/25578.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3916945.png&w=600&h=380'#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/48229.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3121422.png&w=600&h=380'#
-# headshot_df$pff_url[which(headshot_df$pff_url=='http://media.pff.com/player-photos/nfl/47931.png')] <- 'https://imagecomposer.nfl.com/?l=http://static.nfl.com/static/content/static/img/combine/2019/headshots/1400x1000/2562577.png&f=png&w=308&c=71'#
-headshot_df$pff_url[which(headshot_df$pff_url == 'http://media.pff.com/player-photos/nfl/47931.png')] <-#
-  'https://a.espncdn.com/combiner/i?img=/i/headshots/college-football/players/full/4036163.png&w=600&h=380'#
-headshot_df$posteam <-#
-  factor(headshot_df$posteam, team_df$team_code[order(team_df$division)])#
-#
-unmatched <- adot_agg_df$receiver_player_id[is.na(match(adot_agg_df$receiver_player_id, pff_id$GSIS_ID))]#
-# pbp_NFL$receiver_player_name[match(unmatched, pbp_NFL$receiver_player_id)]#
-team_df$posteam <- factor(team_df$team_code, team_df$team_code[order(team_df$division)])#
-#pff_id[which(pff_id$id==48229),]#
-toc()#
-img_size_adj <- 100/(8*4)#
-#
-tic()#
-p_new <- ggplot(freq_passers, aes(y = tm_targ_order, x = air_yards)) +#
-  # Team Logo#
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80) +#
-  # Team logo washed#
-  geom_image(data = team_df, aes(image = logo, x = 17.5, y = 3.5), size = 0.80, color = 'white', alpha = 0.8) +#
-  # Player headshot#
-  geom_image(data = headshot_df, aes(image = pff_url, x = 38, y = tm_targ_order), size = 0.25, nudge_y = 0.5) +#
-  geom_density_ridges2(aes(y = tm_targ_order, fill = posteam, color = posteam), scale = 1.7, size = 0.2, na.rm = T, show.legend = F, bandwidth = 2, panel_scaling = F) +#
-  # ---------#
-  # geom_text(aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 0.8 * img_size_adj, color = 'darkblue') +#
-  # geom_text(data = team_df, aes(label = posteam, x = -1, y = 4.8), angle = 45, size = 1.5 * img_size_adj, color = 'darkblue') +#
-  # geom_text(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # geom_text(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70') +#
-  # ---------#
-  # Player full name#
-  geom_shadowtext(data = headshot_df, aes(label = full_name, x = 35), nudge_y = .75, hjust = 1, size = 1.1 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # Team name#
-  # geom_shadowtext(data = team_df, aes(label = posteam, x = -1, y = 5.7), angle = 45, size = 1.5 * img_size_adj, color = 'black', bg.color = 'white', bg.r = 0.1, na.rm = TRUE) +#
-  # X Axis Labels#
-  geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # Y Axis Labels#
-  # geom_shadowtext(aes(label = 0, x = 0, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 10, x = 10, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 20, x = 20, y = 1), nudge_y = -0.15, size = 0.7 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  # geom_shadowtext(aes(label = 30, x = 30, y = 1), nudge_y = -0.15, size = 1 * img_size_adj, color = 'grey70', bg.color = 'white', bg.r = 0.15, na.rm = TRUE) +#
-  scale_color_manual(values = outline_col) + #
-  scale_fill_manual(values = fill_col)#
-toc()#
-#
-tic()#
-ggsave(#
-  paste0("plots/desktop/", yr, "_team_ridge_DOT_no_images.png"),#
-  plot = p_new +#
-    facet_wrap(~ posteam, ncol = 8, shrink = FALSE) +#
-    labs(#
-      title = 'Receiver Depth of Target Distribution',#
-      subtitle = paste0(yr, " NFL Regular Season"),#
-      x = 'Air Yards'#
-    ) +#
-    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +#
-    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +#
-    theme_bw() +#
-    theme(#
-      text = element_text(color = 'black'),#
-      plot.background = element_rect(fill = 'grey95', color = 'grey95'),#
-      panel.border = element_rect(color = 'black'),#
-      axis.ticks = element_blank(),#
-      axis.title = element_blank(),#
-      axis.text = element_blank(),#
-      panel.grid.minor = element_blank(),#
-      panel.grid.major.y = element_blank(),#
-      plot.title = element_text(size = 18),#
-      plot.subtitle = element_text(size = 12),#
-      plot.caption = element_text(size = 7),#
-      legend.background = element_rect(fill = 'grey90', color = 'black'),#
-      legend.key = element_blank(),#
-      strip.background = element_blank(),#
-      # strip.text.x = element_blank(),#
-      panel.spacing = unit(0.1, "lines")#
-    ),#
-  width = 25,#
-  height = 14,#
-  dpi = 100,#
-  limitsize = FALSE#
-)#
-toc()#
-#
-tic()#
-ggsave(#
-  paste0("plots/mobile/", yr, "_team_ridge_DOT_no_images.png"),#
-  plot = p_new +#
-    facet_wrap(~ posteam, ncol = 4, shrink = FALSE) +#
-    labs(#
-      title = 'Receiver Depth of Target Distribution',#
-      subtitle = paste0(yr, " NFL Regular Season"),#
-      x = 'Air Yards'#
-    ) +#
-    scale_x_continuous(limits = c(-5, 40), expand = c(0, 0)) +#
-    scale_y_discrete(expand = expansion(add = c(0.3, 1))) +#
-    theme_bw() +#
-    theme(#
-      text = element_text(color = 'black'),#
-      plot.background = element_rect(fill = 'grey95', color = 'grey95'),#
-      panel.border = element_rect(color = 'black'),#
-      axis.ticks = element_blank(),#
-      axis.title = element_blank(),#
-      axis.text = element_blank(),#
-      panel.grid.minor = element_blank(),#
-      panel.grid.major.y = element_blank(),#
-      plot.title = element_text(size = 18),#
-      plot.subtitle = element_text(size = 12),#
-      plot.caption = element_text(size = 7),#
-      legend.background = element_rect(fill = 'grey90', color = 'black'),#
-      legend.key = element_blank(),#
-      strip.background = element_blank(),#
-      # strip.text.x = element_blank(),#
-      panel.spacing = unit(0.1, "lines")#
-    ),#
-  width = 14,#
-  height = 25,#
-  dpi = 100,#
-  limitsize = FALSE#
-)#
-toc()
+# proj_df <- scrape_fpi(stat = "PROJ")#
+# #
+# fpi_df %>% #
+#   left_join(proj_df) %>% #
+#   ggplot(aes(x = off, y = playoff_pct, size = def)) +#
+#   geom_point()
