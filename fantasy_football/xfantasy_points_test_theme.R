@@ -34,7 +34,7 @@ pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/
 
 # Plot --------------------------------------------------------------------
 
-source('plots/scripts/plot_theme.R')
+source('plots/assets/plot_theme.R')
 
 my_week <- 4
 
@@ -152,7 +152,7 @@ percentile_df <- rbind(sim_df, actual_df) %>%
 library(ggridges)
 
 
-source('plots/scripts/plot_theme.R')
+source('plots/assets/plot_theme.R')
 
 
 p <- sim_df %>% 
@@ -167,7 +167,7 @@ p <- sim_df %>%
   mutate(obs_num = row_number()) %>% 
   ggplot(aes(x = sim_pg, y = tm_rnk, group = receiver, label = pl_lab)) +
   facet_wrap(. ~ posteam, nrow = 4, scales = 'free') +
-  geom_point(aes(x = ifelse(obs_num==1, half_PPR_pg, NA), y = tm_rnk + 0.08), color = 'darkblue', fill = color_cw[1], shape = 24, size = 0.6, stroke = 0.2, na.rm = T) +
+  geom_point(aes(x = ifelse(obs_num==1, half_PPR_pg, NA), y = tm_rnk + 0.08), color = color_cw[2], fill = color_cw[8], shape = 24, size = 0.6, stroke = 0.2, na.rm = T) +
   stat_density_ridges(
     aes(fill = factor(stat(quantile))),
     geom = 'density_ridges_gradient',
@@ -176,15 +176,16 @@ p <- sim_df %>%
     bandwidth = 1,
     calc_ecdf = T,
     scale = 0.9,
-    color = 'grey50',
+    color = color_cw[6],
     size = 0.2,
     show.legend = F
   ) +
   #geom_boxplot(size = 0.4, color = 'darkblue', width = 0.6, outlier.alpha = 0, notchwidth = 1) +
-  geom_shadowtext(aes(x = ifelse(obs_num==1, 48, NA), y = tm_rnk - 0.5), hjust = 1, color = 'darkblue', bg.color = 'white', family = font_family, size = 1.2, na.rm = T, bg.r = 0.2) +
+  geom_shadowtext(aes(x = ifelse(obs_num==1, 48, NA), y = tm_rnk - 0.5), hjust = 1, color = color_cw[5], bg.color = color_cw[2], #[family = font_family,] 
+                  size = 1.2, na.rm = T, bg.r = 0.2) +
   scale_x_continuous(breaks = seq(0,80,10), expand = expansion(mult = 0), limits = c(0,50)) +
   scale_y_reverse(expand = expansion(mult = c(0, 0.04), add = c(0.2, 0)), limits = c(4.1,0)) +
-  scale_fill_manual(values = c(alpha(color_cw[1], 0.4),alpha(color_cw[4], 0.4),alpha('grey60', 0.4),alpha(color_cw[4], 0.4),alpha(color_cw[1], 0.4))) +
+  scale_fill_manual(values = c(alpha(color_cw[7], 0.5),alpha(color_cw[6], 0.5),alpha(color_cw[5], 0.5),alpha(color_cw[6], 0.5),alpha(color_cw[7], 0.5))) +
   labs(title = paste0('2020 Expected 1/2 PPR Fantasy Points per Game as of Week ', my_week),
        subtitle = 'Grey represents middle 50% of outcomes, Orange tails are each 10% of outcomes  |  Caret shows actual avg  |  Based on 10,000 Simulations',
        x = NULL) +
@@ -207,3 +208,4 @@ p <- sim_df %>%
 
 
 brand_plot(p, asp = 16/9, save_name = 'xfp_half_PPR_box_2020_test.png', data_home = 'Data: @nflfastR', tm_wordmarks = T)
+   

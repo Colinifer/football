@@ -31,8 +31,22 @@ lapply(pkgs, library, character.only = TRUE)
 # Import fonts from Google
 font_family <- font_add_google("Chivo", "chivo")
 
+# Create color palette
+color_cw <-
+  c(
+    "#1D2329",
+    "#2C343A",
+    "#38424B",
+    "#16191C",
+    "#e0e0e0",
+    "#1AB063",
+    "#0580DC",
+    "#D64964",
+    "#959595"
+  )
+
 # functions to retrieve images
-wordmark_url = function(x) ifelse(is.na(x),NA,paste0('https://raw.githubusercontent.com/ajreinhard/data-viz/master/wordmark/',x,'.png'))
+wordmark_path = function(x) ifelse(is.na(x),NA,paste0('plots/assets/wordmarks/',x,'.png'))
 helmet_url = function(x) ifelse(is.na(x),NA,paste0('https://raw.githubusercontent.com/ajreinhard/data-viz/master/helmet_left/',x,'.png'))
 ESPN_logo_url = function(x) ifelse(is.na(x),NA,ifelse(x=='KC',paste0('https://raw.githubusercontent.com/ajreinhard/data-viz/master/alt-logo/',x,'.png'),paste0('https://a.espncdn.com/i/teamlogos/nfl/500/',x,'.png')))
 
@@ -54,7 +68,7 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
     orig_plot_bld$layout$z[grob_strip_index] <- 0
     
     for (i in 1:length(facet_id)) {
-      team_wd <- rasterGrob(image = image_read(wordmark_url(facet_id[i])), vp = viewport(height = .8, width = .6))
+      team_wd <- rasterGrob(image = image_read(wordmark_path(facet_id[i])), vp = viewport(height = .8, width = .6))
       tot_tree <- grobTree(team_wd)
       
       orig_plot_bld$grobs[[grob_strip_index[i]]] <- tot_tree
@@ -62,7 +76,7 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
     orig_plot <- ggdraw(orig_plot_bld)
   }
 
-  logo_size <- 0.06
+  logo_size <- 0.05
   
   ## is image taller than wider? if so, make sure the width is at least the base_size
   if (asp < 1) {
@@ -75,13 +89,15 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
   }
   
   ## local logo to read in
-  logo_file <- readPNG(getURLContent('https://raw.githubusercontent.com/ajreinhard/data-viz/master/ggplot/statbutler.png'))
+  # logo_file <- readPNG(getURLContent('https://raw.githubusercontent.com/ajreinhard/data-viz/master/ggplot/statbutler.png'))
   
-  author_txt <- textGrob('By Anthony Reinhard', x=unit(0.08 * (base_size_rat_wid), 'npc'), gp=gpar(col='darkblue', fontfamily=font_family, fontsize=6), hjust=0)
-  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col='grey95', fontfamily=font_family, fontsize=6), hjust=1)
-  footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c('grey95', 'darkblue'), space = 'rgb')(1000)), draw = F)
+  author_txt <- textGrob('By Colin Welsh', x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=color_cw[5], fontfamily=font_family, fontsize=6), hjust=0)
+  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=color_cw[5], fontfamily=font_family, fontsize=6), hjust=1)
+  # footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c('grey95', 'darkblue'), space = 'rgb')(1000)), draw = F)
+  footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c(color_cw[1]), space = 'rgb')(1000)), draw = F)
   footer <- grobTree(footer_bg, author_txt, data_txt)
 
+  
   if (axis_rot) {axis_adj <- 90} else {axis_adj <- 0}
 
   if (fade_borders!='') {
@@ -122,35 +138,36 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
   }
   
   plt.final <- grid.arrange(orig_plot, footer, heights=unit(c(1, 12), c('null','pt')))
-  plt <- ggdraw(plt.final) + draw_image(logo_file, x = 0.002 * (base_size_rat_wid), y = 0, hjust = 0, vjust = 0, height = logo_size, width = 0.08 * (base_size_rat_wid))
+  # plt <- ggdraw(plt.final) + draw_image(logo_file, x = 0.002 * (base_size_rat_wid), y = 0, hjust = 0, vjust = 0, height = logo_size, width = 0.08 * (base_size_rat_wid))
+  plt <- ggdraw(plt.final)
   ggsave(save_name, plt, dpi = 700, height = base_size, width = base_size * (asp))
 }
 
-# main StatButler theme
+# main cw theme
 theme_cw <-  theme(
-  line = element_line(lineend = 'round', color='#e0e0e0'),
-  text = element_text(family = font_family, color='#e0e0e0'),
-  plot.background = element_rect(fill = '#38424B', color = 'transparent'),
-  panel.border = element_rect(color = '#e0e0e0', fill = NA),
-  panel.background = element_rect(fill = '#1D2329', color = 'transparent'),
-  axis.ticks = element_line(color = '#e0e0e0', size = 0.5),
+  line = element_line(lineend = 'round', color = color_cw[1]),
+  text = element_text(family = font_family, color = color_cw[5]),
+  plot.background = element_rect(fill = color_cw[1], color = 'transparent'),
+  panel.border = element_rect(color = color_cw[1], fill = NA),
+  panel.background = element_rect(fill = color_cw[2], color = 'transparent'),
+  axis.ticks = element_line(color = color_cw[5], size = 0.5),
   axis.ticks.length = unit(2.75, 'pt'),
   axis.title = element_text(size = 8),
-  axis.text = element_text(size = 7, color = '#e0e0e0'),
+  axis.text = element_text(size = 7, color = color_cw[5]),
   plot.title = element_text(size = 14),
   plot.subtitle = element_text(size = 8),
   plot.caption = element_text(size = 5),
-  legend.background = element_rect(fill = '#38424B', color = '#16191C'),
+  legend.background = element_rect(fill = color_cw[3], color = color_cw[5]),
   legend.key = element_blank(),
   panel.grid.minor = element_blank(),
-  panel.grid.major = element_line(color='#16191C', size = 0.3),
+  panel.grid.major = element_line(color=color_cw[4], size = 0.3),
   axis.title.y = element_text(angle = 0, vjust = 0.5),
-  strip.background = element_blank(),
-  strip.text = element_text(size = 6, color = '#e0e0e0', family = font_family),
+  strip.background = element_rect(fill = color_cw[5]),
+  strip.text = element_text(size = 6, color = color_cw[5], family = font_family),
   legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
   panel.spacing.x = unit(0.1, 'lines')
-) 
+)
 
 # StatButler theme for animations
 vid_theme_SB <-  theme(
@@ -228,7 +245,7 @@ properLimsRev <- function(vec) {
 } 
 
 # makes a gradient if I want to fade plot borders
-make_gradient <- function(deg, n = 500, col = 'grey95', corner = F) {
+make_gradient <- function(deg, n = 500, col = color_cw[1], corner = F) {
   rad <- deg / (180 / pi)
   mat <- matrix(
     data = rep(seq(0, 1, length.out = n) * cos(rad), n),
@@ -388,17 +405,6 @@ color_SB <-
     "#e1ed00",
     "#0b5209",
     "#636363"
-  )
-color_cw <-
-  c(
-    "#1D2329",
-    "#2C343A",
-    "#38424B",
-    "#16191C",
-    "#e0e0e0",
-    "#1AB063",
-    "#0580DC",
-    "#D64964"
   )
 
 NFL_pri <- c('ARI'='#97233f',
