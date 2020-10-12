@@ -68,7 +68,13 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
     orig_plot_bld$layout$z[grob_strip_index] <- 0
     
     for (i in 1:length(facet_id)) {
-      team_wd <- rasterGrob(image = image_read(wordmark_path(facet_id[i])), vp = viewport(height = .8, width = .6))
+      team_wd <-
+        rasterGrob(
+          image = image_read(wordmark_path(facet_id[i])) %>% 
+            image_background(color_cw[3]) %>% 
+            image_border(color_cw[3], "30x30"),
+          vp = viewport(height = .8, width = .6)
+        )
       tot_tree <- grobTree(team_wd)
       
       orig_plot_bld$grobs[[grob_strip_index[i]]] <- tot_tree
@@ -132,8 +138,8 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
         axis.line.y.left = element_line(color = ifelse(grepl('l',fade_borders), 'transparent', 'darkblue')),
         axis.line.y.right = element_line(color = ifelse(grepl('r',fade_borders), 'grey95', 'darkblue')),
         axis.line.x.top = element_line(color = ifelse(grepl('t',fade_borders), 'grey95', 'darkblue')),
-        axis.line.x.bottom = element_line(color = ifelse(grepl('b',fade_borders), 'transparent', 'darkblue')),
-	panel.border = element_rect(color = 'grey95', size = 0.1),
+        axis.line.x.bottom = element_line(color = ifelse(grepl('b',fade_borders), 'transparent', color_cw[5])),
+	panel.border = element_rect(color = color_cw[2], size = 0.1),
       )
   }
   
@@ -162,7 +168,7 @@ theme_cw <-  theme(
   panel.grid.minor = element_blank(),
   panel.grid.major = element_line(color=color_cw[4], size = 0.3),
   axis.title.y = element_text(angle = 0, vjust = 0.5),
-  strip.background = element_rect(fill = color_cw[5]),
+  strip.background = element_rect(fill = color_cw[3]),
   strip.text = element_text(size = 6, color = color_cw[5], family = font_family),
   legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
