@@ -1,14 +1,14 @@
 library(zoo)
 source('plots/assets/plot_theme.R')
-load(url('https://raw.githubusercontent.com/guga31bb/metrics/master/dakota_model.rda'))
+load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
 
 
-roster_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/roster-data/roster.rds')) %>% 
+roster_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')) %>% 
   left_join(readRDS(url('https://github.com/ajreinhard/NFL/blob/master/nflfastR%20ID%20mapping/gsis_map.rds?raw=true')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
   mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
 
 pbp_df <- do.call(rbind, lapply(2006:2020, function(yr) {
-  readRDS(url(paste0('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_',yr,'.rds')))
+  readRDS(url(paste0('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_',yr,'.rds?raw=true')))
 }))
 
 all_qb_id <- pbp_df %>% pull(passer_id) %>% table %>% .[which(. >= 50)] %>% names
@@ -53,11 +53,11 @@ p <- qb_top_bottom %>%
   geom_segment(aes(x = low_dakota), color = color_cw[5], size = 0.7) +
   geom_point(aes(x = car_dakota), color = color_cw[5], shape = 8) +
   geom_point(fill = color_cw[6], size = 3, color = color_cw[2], shape = 21, stroke = 0.7) +
-  geom_shadowtext(aes(x = low_dakota - 0.005, label = teamPlayers.displayName), hjust = 1, color = color_cw[6], bg.color = color_cw[2], size = 2.2, bg.r = 0.2) +
+  geom_shadowtext(aes(x = low_dakota - 0.005, label = teamPlayers.displayName), hjust = 1, color = color_cw[5], bg.color = color_cw[2], size = 2.2, bg.r = 0.2) +
   scale_y_reverse(expand = expansion(mult = c(0.02, 0.04))) +
   scale_x_continuous(limits = c(-0.15,0.4), expand = expansion(mult = 0)) +
   labs(title = 'Range of Best & Worst EPA+CPOE Composite Index' ,
-       subtitle = 'Rolling 200 play average  |  Star = Career Index, Orange Dot = Last 200 Plays  |  min. 800 QB plays',
+       subtitle = 'Rolling 200 play average  |  Star = Career Index, Green Dot = Last 200 Plays  |  min. 800 QB plays',
        x = 'EPA+CPOE Composite Index',
        y = NULL) +
   theme_cw +
@@ -66,6 +66,5 @@ p <- qb_top_bottom %>%
     axis.text.y = element_blank(),
     panel.grid.major.y = element_blank()
   )
-
 
 brand_plot(p, asp = 1, save_name = 'high low dakota.png', data_home = 'Data: @nflfastR', fade_borders = 'tlr')

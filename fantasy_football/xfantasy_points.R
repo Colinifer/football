@@ -9,6 +9,7 @@ source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
 source('fantasy_football/xyac/add_xyac_old.R')
 
+my_week <- 5
 
 # YAC Distribution Function -----------------------------------------------
 
@@ -33,7 +34,7 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 # Data --------------------------------------------------------------------
 
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
-pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
+pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'))
 
 # Receivers ---------------------------------------------------------------
 
@@ -334,6 +335,7 @@ cayoe <- cayoe_xyac %>%
   group_by(posteam, passer) %>%
   # filter()
   summarize(
+    season = unique(season),
     games = sum(game_played, na.rm = T),
     pass_attempts = sum(attempt, na.rm = T),
     completions = sum(actual_outcome, na.rm = T),
@@ -346,7 +348,7 @@ cayoe <- cayoe_xyac %>%
     exp_td = sum(ifelse(gain == yardline_100, catch_run_prob, 0), na.rm = T),
     exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
     exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
-    sum_cayoe = sum(cayoe, na.rm = T),
+    sum_cayoe = sum(yards-exp_yards, na.rm = T),
   ) %>%
   mutate(
     half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
@@ -354,7 +356,8 @@ cayoe <- cayoe_xyac %>%
     cayoe_a = sum_cayoe / pass_attempts
   ) %>%
   ungroup %>%
-  filter(pass_attempts > 5)
+  # filter(pass_attempts > mean(cayoe$pass_attempts)-(mean(cayoe$pass_attempts)*.6))
+  filter(pass_attempts > (quantile(pass_attempts)[3]))
 
 
 # xFP QB table
@@ -376,27 +379,31 @@ cayoe %>%
     sum_cayoe,
     cayoe_a
   ) %>%
-  arrange(-exp_PPR_pts) %>% 
+  arrange(-cayoe_a) %>% 
   dplyr::slice(1:50) %>% 
   mutate(Rank = paste0('#',row_number())) %>%
   gt() %>%
-  tab_header(title = 'Expected Receiving PPR Fantasy Points, 2019') %>% 
+  tab_header(title = paste('Expected Passing Yards,', cayoe$season[1]), 
+             subtitle = paste('Data through week', my_week, 'SNF', '|', 'Min.', quantile(cayoe$pass_attempts)[3],'pass attempts and > 0 air yards | CAYOE = Complete Air Yards over expected')) %>% 
   cols_move_to_start(columns = vars(Rank)) %>% 
   cols_label(
     games = 'GP',
     passer = '',
     posteam = '',
-    pass_attempts = 'PA',
-    completions = 'Comp',
+    pass_attempts = 'Pass Attempts',
+    completions = 'Comp.',
     yards = 'Yds',
     td = 'TD',
     PPR_pts = 'FP',
-    exp_completions = 'xComp',
+    exp_completions = 'xComp.',
     exp_yards = 'xYds',
     exp_td = 'xTD',
     exp_PPR_pts = 'xFP',
-    ppr_pts_diff = "Pts Diff."
+    ppr_pts_diff = "Pts Diff.",
+    sum_cayoe = "Total CAYOE",
+    cayoe_a = "Avg CAYOE"
   ) %>% 
+  fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) %>% 
   fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, ppr_pts_diff), decimals = 1) %>% 
   fmt_number(columns = vars(yards, exp_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
   tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
@@ -404,20 +411,30 @@ cayoe %>%
   tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(passer))) %>% 
   tab_spanner(label = 'Actual', columns = vars(completions, yards, td, PPR_pts)) %>% 
   tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_yards, exp_td, exp_PPR_pts)) %>% 
-  tab_source_note(source_note = '') %>% 
+  tab_source_note(source_note = 'Data: @nflfastR') %>% 
   data_color(
     columns = vars(PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(cayoe$PPR_pts), min(cayoe$PPR_pts))), # need to adjust for full PPR point scale
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$PPR_pts), min(cayoe$PPR_pts))), # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
     columns = vars(exp_PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(cayoe$exp_PPR_pts), min(cayoe$exp_PPR_pts))), # need to adjust for full PPR point scale
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$exp_PPR_pts), min(cayoe$exp_PPR_pts))), # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
     columns = vars(ppr_pts_diff),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(cayoe$ppr_pts_diff), min(cayoe$ppr_pts_diff))),
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$ppr_pts_diff), min(cayoe$ppr_pts_diff))),
+    autocolor_text = FALSE
+  ) %>% 
+  data_color(
+    columns = vars(sum_cayoe),
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$sum_cayoe), min(cayoe$sum_cayoe))),
+    autocolor_text = FALSE
+  ) %>% 
+  data_color(
+    columns = vars(cayoe_a),
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$cayoe_a), min(cayoe$cayoe_a))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -426,32 +443,30 @@ cayoe %>%
   ) %>% 
   cols_width(vars(posteam) ~ px(45)) %>% 
   tab_options(
-    table.font.color = 'darkblue',
+    table.font.color = color_cw[5],
     data_row.padding = '2px',
     row_group.padding = '3px',
-    column_labels.border.bottom.color = 'darkblue',
+    column_labels.border.bottom.color = color_cw[5],
     column_labels.border.bottom.width = 1.4,
-    table_body.border.top.color = 'darkblue',
+    table_body.border.top.color = color_cw[5],
     row_group.border.top.width = 1.5,
     row_group.border.top.color = '#999999',
     table_body.border.bottom.width = 0.7,
     table_body.border.bottom.color = '#999999',
     row_group.border.bottom.width = 1,
-    row_group.border.bottom.color = 'darkblue',
+    row_group.border.bottom.color = color_cw[5],
     table.border.top.color = 'transparent',
-    table.background.color = '#F2F2F2',
+    table.background.color = color_cw[1],
     table.border.bottom.color = 'transparent',
-    row.striping.background_color = '#FFFFFF',
+    row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 
-  gtsave(filename = paste0("xFP_QB_", pbp_df$season[1], ".png"), path = "fantasy_football/plots")
+  gtsave(filename = paste0("xFP_QB_", cayoe$season[1], ".png"), path = "fantasy_football/plots")
 
 
 # Distribution ------------------------------------------------------------
 
 source('https://github.com/ajreinhard/data-viz/raw/master/ggplot/plot_SB.R')
-
-my_week <- 4
 
 quick_rost <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-raw/master/roster/roster.rds')) 
 

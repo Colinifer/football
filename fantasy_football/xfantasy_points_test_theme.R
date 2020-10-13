@@ -1,7 +1,7 @@
 library(tidyverse)
 library(viridis)
 
-source('https://raw.githubusercontent.com/mrcaseb/nflfastR/master/R/utils.R')
+source('https://github.com/mrcaseb/nflfastR/blob/master/R/utils.R?raw=true')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
 source('fantasy_football/xyac/add_xyac_old.R')
@@ -30,7 +30,7 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 # Data --------------------------------------------------------------------
 
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
-pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
+pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'))
 
 
 # Plot --------------------------------------------------------------------
@@ -40,7 +40,7 @@ source('plots/assets/plot_theme.R')
 my_week <- 5
 
 
-quick_rost <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-raw/master/roster/roster.rds')) 
+quick_rost <- readRDS(url('https://github.com/guga31bb/nflfastR-raw/blob/master/roster/roster.rds?raw=true')) 
 
 
 fant_pt_dist_df <- pbp_df %>% 
@@ -172,7 +172,7 @@ sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   group_by(game_id, play_id)
 
 
-if (exists("fantasy_football/data/sample_sim_df.rds") == FALSE) {
+if (file.exists("fantasy_football/data/sample_sim_df.rds") == FALSE) {
   # do sim
   sim_df <- do.call(rbind, lapply(1:5000, function(x) {
     sampling_df %>% 
@@ -211,7 +211,7 @@ library(ggridges)
 source('plots/assets/plot_theme.R')
 
 
-p <- sim_df %>%
+plot_data <- sim_df %>%
   left_join(percentile_df) %>%
   left_join(WR_rank_df) %>%
   mutate(
@@ -223,7 +223,9 @@ p <- sim_df %>%
   mutate(
     obs_num = row_number(),
     status_color = if_else(status != "ONTEAM", color_cw[6], color_cw[5])
-  ) %>%
+  ) 
+
+p <- plot_data %>%
   ggplot(aes(
     x = sim_pg,
     y = tm_rnk,

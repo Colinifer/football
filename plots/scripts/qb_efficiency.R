@@ -14,7 +14,7 @@ tablepal <- function(x) rgb(colorRamp(c("#FFE4B5", "tomato3"))(x), maxColorValue
 
 #Tidy up and make the table  
 qbeff <- pbp_df %>% 
-  filter(play_type == "pass", down <=4, !is.na(cpoe), !is.na(xyac_mean_yardage)) %>% 
+  filter(season == 2020, play_type == "pass", down <=4, !is.na(cpoe), !is.na(xyac_mean_yardage)) %>% 
   group_by(passer, posteam, week) %>% 
   summarise(mean(cpoe), mean(epa), sum(epa), mean(air_yards), mean(xyac_mean_yardage)) %>%
   filter(passer != "R.Griffin III") %>% 

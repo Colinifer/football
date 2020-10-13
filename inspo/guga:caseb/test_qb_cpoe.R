@@ -44,7 +44,7 @@ summary <-
   arrange(desc(plays)) %>%
   head(30) %>%
   left_join(
-    roster %>% filter(team.season == season) %>% select(name = teamPlayers.displayName, teamPlayers.gsisId, team.abbr, teamPlayers.headshot_url),
+    roster %>% filter(season == season) %>% select(name = teamPlayers.displayName, teamPlayers.gsisId, team.abbr, teamPlayers.headshot_url),
     by = c("passer_player_id" = "teamPlayers.gsisId")
   ) %>%
   mutate(# some headshot urls are broken. They are checked here and set to a default 
@@ -72,7 +72,7 @@ colors_raw <-
   ) %>%
   arrange(name)
 
-# the below used smooth algorithm uses the paramter n as the number
+# the below used smooth algorithm uses the parameter n as the number
 # of points at which to evaluate the smoother. When using color as aesthetics
 # we need exactly the same number of colors (-> n times the same color per player)
 n_eval <- 80
@@ -96,10 +96,9 @@ plot <-
     color = "red", alpha = 0.7, se = FALSE, size = 0.5, linetype = "dashed"
   ) +
   geom_smooth(
-    se = FALSE, alpha = 0.7, aes(weight = count), size = 0.65,
-    color = colors$team_color, n = n_eval
+    se = FALSE, alpha = 0.7, aes(color = team_color, weight = count), size = 0.65, n = n_eval
   ) +
-  geom_point(color = summary$team_color, size = summary$count / 15, alpha = 0.4) +
+  geom_point(aes(color = team_color), size = summary$count / 15, alpha = 0.4) +
   ggimage::geom_image(aes(x = 27.5, y = -20, image = team_logo_espn),
     size = .15, by = "width", asp = asp
   ) +
