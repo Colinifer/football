@@ -290,6 +290,7 @@ p <- plot_data %>%
     title = paste0('2020 Expected 1/2 PPR Fantasy Points per Game as of Week ', my_week),
     subtitle = 'Grey represents middle 50% of outcomes, Orange tails are each 10% of outcomes  |  Caret shows actual avg  |  Based on 10,000 Simulations',
     x = NULL
+    
   ) +
   theme_cw +
   theme(
