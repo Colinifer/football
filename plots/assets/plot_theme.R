@@ -17,7 +17,8 @@ pkgs <- c(
   "tidyverse",
   "gganimate",
   "gt",
-  "showtext"
+  "showtext",
+  "viridis"
 )
 installed_packages <- pkgs %in%
   rownames(installed.packages())
@@ -30,6 +31,7 @@ lapply(pkgs, library, character.only = TRUE)
 
 # Import fonts from Google
 font_family <- font_add_google("Chivo", "chivo")
+showtext_auto()
 
 # Create color palette
 color_cw <-
@@ -97,8 +99,8 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
   ## local logo to read in
   # logo_file <- readPNG(getURLContent('https://raw.githubusercontent.com/ajreinhard/data-viz/master/ggplot/statbutler.png'))
   
-  author_txt <- textGrob('By Colin Welsh', x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=color_cw[5], fontfamily=font_family, fontsize=6), hjust=0)
-  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=color_cw[5], fontfamily=font_family, fontsize=6), hjust=1)
+  author_txt <- textGrob('By Colin Welsh', x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=color_cw[5], fontfamily="chivo", fontsize=6), hjust=0)
+  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=color_cw[5], fontfamily="chivo", fontsize=6), hjust=1)
   # footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c('grey95', 'darkblue'), space = 'rgb')(1000)), draw = F)
   footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c(color_cw[1]), space = 'rgb')(1000)), draw = F)
   footer <- grobTree(footer_bg, author_txt, data_txt)
@@ -135,9 +137,9 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
     ## add axis (or not) to unfaded
     orig_plot <- orig_plot +
       theme(
-        axis.line.y.left = element_line(color = ifelse(grepl('l',fade_borders), 'transparent', 'darkblue')),
-        axis.line.y.right = element_line(color = ifelse(grepl('r',fade_borders), 'grey95', 'darkblue')),
-        axis.line.x.top = element_line(color = ifelse(grepl('t',fade_borders), 'grey95', 'darkblue')),
+        axis.line.y.left = element_line(color = ifelse(grepl('l',fade_borders), 'transparent', color_cw[5])),
+        axis.line.y.right = element_line(color = ifelse(grepl('r',fade_borders), 'grey95', color_cw[3])),
+        axis.line.x.top = element_line(color = ifelse(grepl('t',fade_borders), 'grey95', color_cw[3])),
         axis.line.x.bottom = element_line(color = ifelse(grepl('b',fade_borders), 'transparent', color_cw[5])),
 	panel.border = element_rect(color = color_cw[2], size = 0.1),
       )
@@ -152,7 +154,7 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
 # main cw theme
 theme_cw <-  theme(
   line = element_line(lineend = 'round', color = color_cw[1]),
-  text = element_text(family = font_family, color = color_cw[5]),
+  text = element_text(family = "chivo", color = color_cw[5]),
   plot.background = element_rect(fill = color_cw[1], color = 'transparent'),
   panel.border = element_rect(color = color_cw[1], fill = NA),
   panel.background = element_rect(fill = color_cw[2], color = 'transparent'),
@@ -169,7 +171,7 @@ theme_cw <-  theme(
   panel.grid.major = element_line(color=color_cw[4], size = 0.3),
   axis.title.y = element_text(angle = 0, vjust = 0.5),
   strip.background = element_rect(fill = color_cw[3]),
-  strip.text = element_text(size = 6, color = color_cw[5], family = font_family),
+  strip.text = element_text(size = 6, color = color_cw[5], family = "chivo"),
   legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
   panel.spacing.x = unit(0.1, 'lines')
@@ -195,7 +197,7 @@ vid_theme_SB <-  theme(
   panel.grid.major = element_line(color='grey70', size = 0.9),
   axis.title.y = element_text(angle = 0, vjust = 0.5),
   strip.background = element_blank(),
-  strip.text = element_text(size = 18, color = 'darkblue', family = font_family)
+  strip.text = element_text(size = 18, color = 'darkblue', family = "chivo")
 )
 				     
 table_theme_SB <- function (data) {

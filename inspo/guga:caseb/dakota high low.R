@@ -1,4 +1,5 @@
 library(zoo)
+library(viridis)
 source('plots/assets/plot_theme.R')
 load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
 
@@ -7,12 +8,26 @@ roster_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/
   left_join(readRDS(url('https://github.com/ajreinhard/NFL/blob/master/nflfastR%20ID%20mapping/gsis_map.rds?raw=true')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
   mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
 
-pbp_df <- do.call(rbind, lapply(2006:2020, function(yr) {
-  readRDS(url(paste0('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_',yr,'.rds?raw=true')))
-}))
+roster_df <-
+  readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')
+  ) %>% 
+  decode_player_ids(fast = T)
 
-all_qb_id <- pbp_df %>% pull(passer_id) %>% table %>% .[which(. >= 50)] %>% names
-qb_2020_id <- pbp_df %>% filter(season==2020) %>%  pull(passer_id) %>% table %>% .[which(. >= 3)] %>% names
+pbp_df <- do.call(rbind, lapply(2006:2020, function(yr) {
+  readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
+})) %>% decode_player_ids(fast = T)
+
+all_qb_id <- pbp_df %>% 
+  pull(passer_id) %>% table %>% 
+  .[which(. >= 50)] %>% 
+  names
+
+qb_2020_id <- pbp_df %>% 
+  filter(season==2020) %>% 
+  pull(passer_id) %>% 
+  table %>% 
+  .[which(. >= 3)] %>%
+  names
 
 qb_top_bottom <- pbp_df %>% 
   mutate(qb_id = ifelse(is.na(passer_id), rusher_id, passer_id)) %>%
@@ -45,26 +60,31 @@ qb_top_bottom <- pbp_df %>%
 
 
 p <- qb_top_bottom %>% 
-  left_join(roster_df %>% filter(team.season==2019), by = c('qb_id' = 'ID')) %>% 
+  left_join(roster_df %>% filter(team.season==2019), by = c('qb_id' = 'teamPlayers.gsisId')) %>% 
   filter(!is.na(team.season) & car_plays>=200 & qb_id %in% qb_2020_id) %>% 
   arrange(-car_dakota) %>% 
   mutate(rank = row_number()) %>% 
   ggplot(aes(x = curr_dakota, xend = high_dakota, y = rank, yend = rank)) +
   geom_segment(aes(x = low_dakota), color = color_cw[5], size = 0.7) +
   geom_point(aes(x = car_dakota), color = color_cw[5], shape = 8) +
-  geom_point(fill = color_cw[6], size = 3, color = color_cw[2], shape = 21, stroke = 0.7) +
+  geom_point(aes(fill = curr_dakota), size = 3, color = color_cw[2], shape = 21, stroke = 0.7) +
   geom_shadowtext(aes(x = low_dakota - 0.005, label = teamPlayers.displayName), hjust = 1, color = color_cw[5], bg.color = color_cw[2], size = 2.2, bg.r = 0.2) +
   scale_y_reverse(expand = expansion(mult = c(0.02, 0.04))) +
   scale_x_continuous(limits = c(-0.15,0.4), expand = expansion(mult = 0)) +
+  scale_fill_viridis(option = "A") +
   labs(title = 'Range of Best & Worst EPA+CPOE Composite Index' ,
-       subtitle = 'Rolling 200 play average  |  Star = Career Index, Green Dot = Last 200 Plays  |  min. 800 QB plays',
+       subtitle = 'Rolling 200 play average | Star = Career Index, Dot = Last 200 Plays\nMin. 200 QB plays',
+       fill = "Index score",
        x = 'EPA+CPOE Composite Index',
        y = NULL) +
   theme_cw +
   theme(
     axis.ticks.y = element_blank(),
     axis.text.y = element_blank(),
-    panel.grid.major.y = element_blank()
+    panel.grid.major.y = element_blank(),
+    legend.position = c(.85, .22)
   )
 
-brand_plot(p, asp = 1, save_name = 'high low dakota.png', data_home = 'Data: @nflfastR', fade_borders = 'tlr')
+p
+
+brand_plot(p, asp = 1, save_name = 'high low dakota.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = 'tr')

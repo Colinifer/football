@@ -371,15 +371,16 @@ cayoe %>%
     yards,
     td,
     PPR_pts,
+    half_PPR_pts,
     exp_completions,
     exp_yards,
     exp_td,
     exp_PPR_pts,
+    exp_half_PPR_pts,
     ppr_pts_diff,
-    sum_cayoe,
-    cayoe_a
+    half_ppr_pts_diff
   ) %>%
-  arrange(-cayoe_a) %>% 
+  arrange(-exp_half_PPR_pts) %>% 
   dplyr::slice(1:50) %>% 
   mutate(Rank = paste0('#',row_number())) %>%
   gt() %>%
@@ -399,11 +400,8 @@ cayoe %>%
     exp_yards = 'xYds',
     exp_td = 'xTD',
     exp_PPR_pts = 'xFP',
-    ppr_pts_diff = "Pts Diff.",
-    sum_cayoe = "Total CAYOE",
-    cayoe_a = "Avg CAYOE"
+    ppr_pts_diff = "Pts Diff." 
   ) %>% 
-  fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) %>% 
   fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, ppr_pts_diff), decimals = 1) %>% 
   fmt_number(columns = vars(yards, exp_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
   tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
@@ -425,16 +423,6 @@ cayoe %>%
   data_color(
     columns = vars(ppr_pts_diff),
     colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$ppr_pts_diff), min(cayoe$ppr_pts_diff))),
-    autocolor_text = FALSE
-  ) %>% 
-  data_color(
-    columns = vars(sum_cayoe),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$sum_cayoe), min(cayoe$sum_cayoe))),
-    autocolor_text = FALSE
-  ) %>% 
-  data_color(
-    columns = vars(cayoe_a),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$cayoe_a), min(cayoe$cayoe_a))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -461,7 +449,7 @@ cayoe %>%
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 
-  gtsave(filename = paste0("xFP_QB_", cayoe$season[1], ".png"), path = "fantasy_football/plots")
+  gtsave(filename = paste0("xFP_QB_fp_", cayoe$season[1], ".png"), path = "fantasy_football/plots")
 
 
 # Distribution ------------------------------------------------------------
