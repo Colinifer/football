@@ -18,7 +18,7 @@ wide_win_rate <- all_win_rate %>%
   mutate(rbwr_rk = min_rank(desc(rbwr)), .before = rbwr) %>%
   mutate(def_wr_comp_rk = (prwr_rk + rswr_rk) / 2) %>%
   mutate(off_wr_comp_rk = (rbwr_rk + pbwr_rk) / 2) %>%
-  left_join(teams_colors_logos %>%
+  left_join(teams_colors_logos %>% filter(team_abbr != "LAR") %>%
               select(team_abbr, team_name),
             by = c("team" = "team_name"))
 
@@ -30,7 +30,7 @@ wide_win_rate %>%
   summarize(across(!contains("rk"), mean)) %>% 
   mutate(team = "NFL")
 
-gt_tab <- wide_win_rate %>% 
+ gt_tab <- wide_win_rate %>% 
   arrange(def_wr_comp_rk) %>% 
   gt(rowname_col = "team") %>%
   grand_summary_rows(
@@ -147,7 +147,7 @@ gt_tab <- wide_win_rate %>%
 
 # gt_tab
 
-gt::gtsave(gt_tab, filename = "espn_winrate.png", path = "plots/desktop/")
+gt::gtsave(gt_tab, filename = "espn_winrate.png", path = "plots/desktop/", zoom = 1)
 
 
 # Test --------------------------------------------------------------------

@@ -4,9 +4,9 @@ source('plots/assets/plot_theme.R')
 load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
 
 
-roster_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')) %>% 
-  left_join(readRDS(url('https://github.com/ajreinhard/NFL/blob/master/nflfastR%20ID%20mapping/gsis_map.rds?raw=true')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
-  mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
+# roster_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')) %>% 
+#   left_join(readRDS(url('https://github.com/ajreinhard/NFL/blob/master/nflfastR%20ID%20mapping/gsis_map.rds?raw=true')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
+#   mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
 
 roster_df <-
   readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')
@@ -60,7 +60,7 @@ qb_top_bottom <- pbp_df %>%
 
 
 p <- qb_top_bottom %>% 
-  left_join(roster_df %>% filter(team.season==2019), by = c('qb_id' = 'teamPlayers.gsisId')) %>% 
+  left_join(roster_df %>% filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) %>% 
   filter(!is.na(team.season) & car_plays>=200 & qb_id %in% qb_2020_id) %>% 
   arrange(-car_dakota) %>% 
   mutate(rank = row_number()) %>% 
@@ -87,4 +87,4 @@ p <- qb_top_bottom %>%
 
 p
 
-brand_plot(p, asp = 1, save_name = 'high low dakota.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = 'tr')
+brand_plot(p, asp = 1, save_name = 'plots/desktop/high low dakota.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = 'tr')
