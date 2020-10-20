@@ -43,7 +43,8 @@ pkgs <- c(
   "extrafont",
   "shadowtext",
   "tidytext",
-  "RCurl"
+  "RCurl",
+  "pracma"
 )
 installed_packages <- pkgs %in%
   rownames(installed.packages())
@@ -94,9 +95,12 @@ cookies = c(`SWID` = swid,
 # 'kona_v3_teamcontrol_ffl' = kona_v3_teamcontrol)
 cookie <- paste(names(cookies), cookies, sep = "=", collapse = ";")
 # fantasy_key <- ff_fantasy_key %>% read_csv()
-fantasy_key <- ff_fantasy_key %>% readRDS()
+fantasy_key <- ff_fantasy_key %>% 
+  readRDS()
 base = "https://fantasy.espn.com/apis/v3/games/ffl/seasons/"
-year = Sys.Date() %>% format(format = "%Y")
+year = Sys.Date() %>% 
+  format(format = "%Y") %>% 
+  as.integer()
 mid = "/segments/0/leagues/"
 leagueID <- fantasy_key$league_id[3]
 tail = "?view=mDraftDetail&view=mLiveScoring&view=mMatchupScore&view=mPendingTransactions&view=mPositionalRatings&view=mSettings&view=mTeam&view=modular&view=mNav&view=mMatchupScore"
@@ -111,3 +115,8 @@ pbp_df <- decode_player_ids(pbp_df, fast = T)
 source('plots/assets/plot_theme.R')
 # source("fantasy_football/ff_init.R")
 source('plots/scripts/team_tiers.R')
+source('plots/scripts/dakota_career.R')
+source('plots/scripts/qb_cayoe.R')
+source('fantasy_football/xfantasy_points.R')
+source('fantasy_football/xfantasy_points_test_theme.R')
+rm(list = ls())

@@ -1,4 +1,3 @@
-
 library(tidyverse)
 
 source('https://raw.githubusercontent.com/mrcaseb/nflfastR/master/R/utils.R')
@@ -33,7 +32,7 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
 
 if (exists("pbp_df") == F) {
-  pbp_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true'))
+  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
 }
 
 
@@ -126,7 +125,7 @@ cayoe <- cayoe_xyac %>%
 summary(cayoe$pass_attempts)
 
 cayoe_filtered <- cayoe %>% 
-  filter(pass_attempts > (summary(pass_attempts)[4]))
+  filter(pass_attempts >= ifelse(summary(pass_attempts)[4]>75, 75, summary(pass_attempts)[4]))
 
 # xFP QB table
 cayoe_filtered %>%
@@ -151,8 +150,8 @@ cayoe_filtered %>%
   dplyr::slice(1:50) %>% 
   mutate(Rank = paste0('#',row_number())) %>%
   gt() %>%
-  tab_header(title = paste('Completed Air Yards Over Expected (CAYOE),', cayoe$season[1]), 
-             subtitle = paste('Through week', my_week, 'MNF', '|', 'Min.', round(summary(cayoe$pass_attempts)[4]),'pass attempts and > 0 air yards')) %>% 
+  tab_header(title = paste('Completed Air Yards Over Expected (CAYOE),', cayoe_filtered$season[1]), 
+             subtitle = paste('Through week', my_week, 'MNF', '|', 'Min.', ifelse(round(summary(cayoe_filtered$pass_attempts)[4])>75,75,round(summary(cayoe_filtered$pass_attempts)[4])),'pass attempts > 0 air yards')) %>% 
   cols_move_to_start(columns = vars(Rank)) %>% 
   cols_label(
     games = 'GP',
@@ -200,12 +199,12 @@ cayoe_filtered %>%
   tab_source_note(source_note = 'Data: @nflfastR') %>% 
   data_color(
     columns = vars(sum_cayoe),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$sum_cayoe), min(cayoe$sum_cayoe))),
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$sum_cayoe), min(cayoe_filtered$sum_cayoe))),
     autocolor_text = FALSE
   ) %>% 
   data_color(
     columns = vars(cayoe_a),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$cayoe_a), min(cayoe$cayoe_a))),
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$cayoe_a), min(cayoe_filtered$cayoe_a))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -239,5 +238,5 @@ cayoe_filtered %>%
       default_fonts()
     )
   ) %>% 
-  gtsave(filename = paste0("xFP_QB_", cayoe$season[1], ".png"), path = "fantasy_football/plots")
+  gtsave(filename = paste0("xFP_QB_", cayoe_filtered$season[1], ".png"), path = "plots/desktop")
 

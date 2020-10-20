@@ -13,7 +13,8 @@ roster_df <-
   ) %>% 
   decode_player_ids(fast = T)
 
-pbp_df <- do.call(rbind, lapply(2006:2020, function(yr) {
+print("Scraping 2006:2020 PBP for career results")
+pbp_df <- do.call(rbind, lapply(2006:year, function(yr) {
   readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
 })) %>% decode_player_ids(fast = T)
 
@@ -87,4 +88,4 @@ p <- qb_top_bottom %>%
 
 p
 
-brand_plot(p, asp = 1, save_name = 'plots/desktop/high low dakota.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = 'tr')
+brand_plot(p, asp = 1, save_name = 'plots/desktop/dakota_career.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = 'tr')
