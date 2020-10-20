@@ -1,5 +1,5 @@
 .RData.Tmp
-.DS_Store
+*.DS_Store
 *.pper
 *.csv
 
@@ -8,7 +8,7 @@
 .Rapp.history
 
 # Session Data files
-.RData
+*.RData
 
 # User-specific files
 .Ruserdata
