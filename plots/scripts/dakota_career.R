@@ -59,22 +59,23 @@ qb_top_bottom <- pbp_df %>%
   ) %>% 
   mutate(car_dakota = mgcv::predict.gam(dakota_model, .))
 
+min_plays <- 200
 
 p <- qb_top_bottom %>% 
   left_join(roster_df %>% filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) %>% 
-  filter(!is.na(team.season) & car_plays>=200 & qb_id %in% qb_2020_id) %>% 
+  filter(!is.na(team.season) & car_plays>=min_plays & qb_id %in% qb_2020_id) %>% 
   arrange(-car_dakota) %>% 
   mutate(rank = row_number()) %>% 
   ggplot(aes(x = curr_dakota, xend = high_dakota, y = rank, yend = rank)) +
   geom_segment(aes(x = low_dakota), color = color_cw[5], size = 0.7) +
-  geom_point(aes(x = car_dakota), color = color_cw[5], shape = 8) +
+  geom_point(aes(x = car_dakota), color = color_cw[5], shape = 5) +
   geom_point(aes(fill = curr_dakota), size = 3, color = color_cw[2], shape = 21, stroke = 0.7) +
   geom_shadowtext(aes(x = low_dakota - 0.005, label = teamPlayers.displayName), hjust = 1, color = color_cw[5], bg.color = color_cw[2], size = 2.2, bg.r = 0.2) +
   scale_y_reverse(expand = expansion(mult = c(0.02, 0.04))) +
   scale_x_continuous(limits = c(-0.15,0.4), expand = expansion(mult = 0)) +
   scale_fill_viridis(option = "A") +
   labs(title = 'Range of Best & Worst EPA+CPOE Composite Index' ,
-       subtitle = 'Rolling 200 play average | Star = Career Index, Dot = Last 200 Plays\nMin. 200 QB plays',
+       subtitle = glue('Diamond = Career average, Dot = Last 200 Plays | Min. {min_plays} QB plays'),
        fill = "Index score",
        x = 'EPA+CPOE Composite Index',
        y = NULL) +

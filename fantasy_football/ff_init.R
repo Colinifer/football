@@ -107,3 +107,4 @@ sleep.players <-
       )
     ))
   )
+rm(sleeper_api_players)

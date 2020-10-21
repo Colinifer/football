@@ -67,9 +67,17 @@ fx.setdir(proj_name)
 # Create standard objects -------------------------------------------------
 
 # Connect to DB
-source("../initR/con.R")
-dbListTables(con)
-dbDisconnect(con)
+# Based on NAS sleep schedule
+if ((
+  Sys.Date() %>% lubridate::wday() > 1 & # If day is greater than Sunday
+  Sys.Date() %>% lubridate::wday() < 7 & # and day is less than Saturday
+  Sys.time() %>% format("%H") %>% as.integer() >= 17 & # and greater than 5PM
+  Sys.time() %>% format("%H") %>% as.integer() <= 23 # and less than 12AM
+) == TRUE) {
+  source("../initR/con.R")
+  dbListTables(con)
+  dbDisconnect(con)
+}
 
 
 # Fantasy variables -------------------------------------------------------
@@ -113,7 +121,7 @@ pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/maste
 pbp_df <- decode_player_ids(pbp_df, fast = T)
 
 source('plots/assets/plot_theme.R')
-# source("fantasy_football/ff_init.R")
+source("fantasy_football/ff_init.R")
 source('plots/scripts/team_tiers.R')
 source('plots/scripts/dakota_career.R')
 source('plots/scripts/qb_cayoe.R')

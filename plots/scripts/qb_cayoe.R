@@ -5,8 +5,6 @@ source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
 source('fantasy_football/xyac/add_xyac_old.R')
 
-my_week <- 5
-
 # YAC Distribution Function -----------------------------------------------
 
 # duplicate the add_xyac() function that we sourced above
@@ -34,6 +32,8 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 if (exists("pbp_df") == F) {
   pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
 }
+
+my_week <- pbp_df$week %>% max()
 
 
 # Completed Air Yards Over Expected
@@ -196,7 +196,7 @@ cayoe_filtered %>%
   ) %>% 
   tab_spanner(label = 'Actual', columns = vars(completions, yards, td)) %>% 
   tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_yards, exp_td)) %>% 
-  tab_source_note(source_note = 'Data: @nflfastR') %>% 
+  tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') %>% 
   data_color(
     columns = vars(sum_cayoe),
     colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$sum_cayoe), min(cayoe_filtered$sum_cayoe))),
@@ -238,5 +238,5 @@ cayoe_filtered %>%
       default_fonts()
     )
   ) %>% 
-  gtsave(filename = paste0("xFP_QB_", cayoe_filtered$season[1], ".png"), path = "plots/desktop")
+  gtsave(filename = paste0("qb_cayoe_", cayoe_filtered$season[1], ".png"), path = "plots/desktop")
 

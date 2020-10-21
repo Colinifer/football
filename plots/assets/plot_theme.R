@@ -27,10 +27,10 @@ if (any(installed_packages == FALSE)) {
 }
 lapply(pkgs, library, character.only = TRUE)
 
-
+# extrafont::font_import()
 
 # Import fonts from Google
-font_family <- font_add_google("Chivo", "chivo")
+font_add_google("Chivo", "chivo")
 showtext_auto()
 
 # Create color palette
@@ -59,6 +59,8 @@ ESPN_logo_url = function(x) ifelse(is.na(x),NA,ifelse(x=='KC',paste0('https://ra
 # main function to save my branded plots
 brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home = '', fade_borders = '', fade_prop = 0.5, axis_rot = F, tm_wordmarks = F) {
 	
+  showtext_auto()
+  
   ## start by adding team wordmarks
   if (tm_wordmarks) {
     orig_plot_bld <- ggplot_gtable(ggplot_build(orig_plot))
@@ -180,7 +182,7 @@ theme_cw <-  theme(
 # StatButler theme for animations
 vid_theme_SB <-  theme(
   line = element_line(lineend = 'round', color='darkblue'),
-  text = element_text(family = font_family, color='darkblue'),
+  text = element_text(family = "chivo", color='darkblue'),
   plot.background = element_rect(fill = 'grey95', color = 'transparent'),
   panel.border = element_rect(color = 'darkblue', fill = NA),
   panel.background = element_rect(fill = 'white', color = 'transparent'),

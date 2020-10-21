@@ -1,4 +1,14 @@
+
+# Notes -------------------------------------------------------------------
+
+# WOPR = 1.5 × Target Market Share + 0.7 × Air Yards Market Share
+# Need to calcualte team market shares
+
+
+# Start -------------------------------------------------------------------
+
 library(tidyverse)
+library(parallel)
 library(viridis)
 
 source('https://github.com/mrcaseb/nflfastR/blob/master/R/utils.R?raw=true')
@@ -173,9 +183,10 @@ sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   group_by(game_id, play_id)
 
 
+# Parallel sampling
 if (file.exists("fantasy_football/data/sample_sim_df.rds") == FALSE) {
   # do sim
-  sim_df <- do.call(rbind, lapply(1:5000, function(x) {
+  sample.fx <- function(x) {
     sampling_df %>% 
       mutate(sim_res = sample(half_PPR_points, 1, prob = catch_run_prob)) %>% 
       select(season, game_id, play_id, posteam, receiver, sim_res) %>% 
@@ -183,7 +194,14 @@ if (file.exists("fantasy_football/data/sample_sim_df.rds") == FALSE) {
       group_by(posteam, receiver) %>% 
       summarize(sim_tot = sum(sim_res, na.rm = T), .groups = 'drop') %>% 
       return
-  }))
+  }
+    no_cores <- detectCores() * .66
+  cl <- makeCluster(no_cores, type="FORK")
+  clusterEvalQ(cl, {
+    library(tidyverse)
+  })
+    sim_df <- do.call(rbind, parLapply(cl, 1:5000, sample.fx))
+  stopCluster(cl)
   saveRDS(sim_df, file = 'fantasy_football/data/sample_sim_df.rds')
 }
 sim_df <- readRDS('fantasy_football/data/sample_sim_df.rds')
@@ -256,11 +274,9 @@ p <- plot_data %>%
     show.legend = F
   ) +
   #geom_boxplot(size = 0.4, color = 'darkblue', width = 0.6, outlier.alpha = 0, notchwidth = 1) +
-  scale_color_manual(values = c(
-    color_cw[6],
-    color_cw[5],
-    color_cw[7]
-  )) +
+  scale_color_manual(
+    values = c(color_cw[5], color_cw[6], color_cw[7]),
+    name = "Status") +
   geom_shadowtext(
     aes(
       x = ifelse(obs_num == 1, 48, NA),
@@ -287,11 +303,11 @@ p <- plot_data %>%
     alpha(color_cw[6], 0.5),
     alpha(color_cw[7], 0.5)
   )) +
+  # scale_fill_viridis(option = "C", direction = -1, discrete = TRUE) +
   labs(
     title = paste0('2020 Expected 1/2 PPR Fantasy Points per Game as of Week ', my_week),
     subtitle = 'Grey represents middle 50% of outcomes, Orange tails are each 10% of outcomes  |  Caret shows actual avg  |  Based on 10,000 Simulations',
     x = NULL
-    
   ) +
   theme_cw +
   theme(
@@ -367,7 +383,7 @@ p <- pbp_df %>%
   geom_grob(data = grob_df, aes(x = air_yards, y = team_air_rank - 0.4, label = grob, vp.height = vp.height)) +
   geom_hline(data = grob_df, aes(yintercept = ifelse(is.na(full_name), NA, team_air_rank), color = posteam), size = 0.6, show.legend = F) +
   geom_density_ridges(aes(color = posteam, fill = posteam), scale = 1.2, bandwidth = 3, panel_scaling = F, show.legend = F, size = 0.4) +
-  geom_shadowtext(data = grob_df, aes(label = full_name, x = air_yards - 3, y = team_air_rank - 0.6), color = color_cw[5], bg.color = color_cw[2], family = "Helvetica", bg.r = 0.2, hjust = 1, size = 1.5) +
+  geom_shadowtext(data = grob_df, aes(label = full_name, x = air_yards - 3, y = team_air_rank - 0.6), color = color_cw[5], bg.color = color_cw[2], bg.r = 0.2, hjust = 1, size = 1.5) +
   scale_y_reverse(expand = expansion(add = c(0.2,0.2))) +
   scale_x_continuous(limits = c(-5,45), expand = expansion(mult = 0)) +
   scale_color_manual(values = NFL_sec) +
