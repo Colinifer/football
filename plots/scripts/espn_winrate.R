@@ -5,6 +5,11 @@ library(teamcolors)
 library(gt)
 library(webshot)
 
+
+pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true')))
+n_week <- pbp_df$week[nrow(pbp_df)]
+rm(pbp_df)
+
 all_win_rate <- scrape_espn_win_rate()
 
 wide_win_rate <- all_win_rate %>%
@@ -18,20 +23,22 @@ wide_win_rate <- all_win_rate %>%
   mutate(rbwr_rk = min_rank(desc(rbwr)), .before = rbwr) %>%
   mutate(def_wr_comp_rk = (prwr_rk + rswr_rk) / 2) %>%
   mutate(off_wr_comp_rk = (rbwr_rk + pbwr_rk) / 2) %>%
+  mutate(total_wr_comp_rk = (prwr_rk + rswr_rk + rbwr_rk + pbwr_rk) / 4) %>% 
   left_join(teams_colors_logos %>% filter(team_abbr != "LAR") %>%
               select(team_abbr, team_name),
             by = c("team" = "team_name"))
 
 wide_win_rate <- 
   wide_win_rate %>% 
-  select(team_abbr, team, prwr_rk, prwr, rswr_rk, rswr, def_wr_comp_rk, pbwr_rk, pbwr, rbwr_rk, rbwr, off_wr_comp_rk)
+  select(team, team_abbr, prwr_rk, prwr, rswr_rk, rswr, def_wr_comp_rk, pbwr_rk, pbwr, rbwr_rk, rbwr, off_wr_comp_rk, total_wr_comp_rk)
 
 wide_win_rate %>% 
+  select(!team_abbr) %>% 
   summarize(across(!contains("rk"), mean)) %>% 
   mutate(team = "NFL")
 
  gt_tab <- wide_win_rate %>% 
-  arrange(def_wr_comp_rk) %>% 
+  arrange(total_wr_comp_rk) %>% 
   gt(rowname_col = "team") %>%
   grand_summary_rows(
     columns = c(4,6,9,11),
@@ -62,14 +69,16 @@ wide_win_rate %>%
     rbwr_rk = "RK",
     rbwr = "Run Block",
     off_wr_comp_rk = "Off. Composite RK",
-    def_wr_comp_rk = "Def. Composite RK"
+    def_wr_comp_rk = "Def. Composite RK",
+    total_wr_comp_rk = "Total Composite RK"
   ) %>% 
   opt_all_caps() %>% 
   cols_width(
     vars(team) ~ px(225),
     columns = contains("r_rk") ~ px(50),
-    columns = contains("comp") ~ px(130),
-    everything() ~ px(100)
+    columns = contains("comp") ~ px(100),
+    vars(team_abbr) ~ px(50),
+    everything() ~ px(80)
   ) %>% 
   tab_style(
     style = cell_borders(
@@ -79,7 +88,7 @@ wide_win_rate %>%
     ),
     locations = list(
       cells_body(
-        columns = c(3,5,7,8,9,11,12)
+        columns = c(3,5,7,8,10,12,13)
       ),
       cells_grand_summary(
         columns = 3
@@ -111,7 +120,7 @@ wide_win_rate %>%
   cols_align(align = "left", columns = c(1,2)) %>% 
   tab_header(
     title = "2020 NFL pass-rushing, run-stopping, blocking leaderboard: Win rate rankings",
-    subtitle = "Data through week 3"
+    subtitle = glue("Data through week {n_week}")
   ) %>% 
   tab_style(
     style = cell_borders(
@@ -147,7 +156,7 @@ wide_win_rate %>%
 
 # gt_tab
 
-gt::gtsave(gt_tab, filename = "espn_winrate.png", path = "plots/desktop/", zoom = 1)
+gt::gtsave(gt_tab, filename = "espn_winrate.png", path = "plots/desktop/", zoom = 1, vwidth = 1500)
 
 
 # Test --------------------------------------------------------------------
