@@ -313,14 +313,14 @@ p <- plot_data %>%
     data = receiver_rank_df %>% filter(tm_rnk <= 4),
     aes(
       # x = ifelse(obs_num == 1, 28, NA),
-      x = 45,
+      x = 42,
       y = tm_rnk - 0.5,
       color = factor(status)
     ),
     family = "Montserrat",
     hjust = 1,
     #[family = font_family,]
-    size = 1.2,
+    size = 1.0,
     na.rm = T,
     show.legend = FALSE
   ) +
@@ -328,10 +328,10 @@ p <- plot_data %>%
     data = receiver_rank_df %>% filter(tm_rnk <= 4),
     aes(
       image = headshot_url, 
-      x = 48, 
-      y = pos_rnk - 0.5,
+      x = 47, 
+      y = tm_rnk - 0.5,
     ),
-    size = 0.8,
+    size = 0.3,
     na.rm = T
   ) +
   scale_x_continuous(

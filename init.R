@@ -116,6 +116,7 @@ player_tail = "?view=kona_player_info"
 wl_tail = "?view=proTeamSchedules_wl"
 user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:79.0) Gecko/20100101 Firefox/79.0"
 
+schedule_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/schedules/sched_{year}.rds?raw=true')))
 
 # pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
 # pbp_df <- decode_player_ids(pbp_df, fast = T)
