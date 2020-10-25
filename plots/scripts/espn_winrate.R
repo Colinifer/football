@@ -5,9 +5,11 @@ library(teamcolors)
 library(gt)
 library(webshot)
 
+source('init.R')
+
 
 pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true')))
-n_week <- pbp_df$week[nrow(pbp_df)]
+n_week <- pbp_df %>% select(week) %>% max()
 rm(pbp_df)
 
 all_win_rate <- scrape_espn_win_rate()

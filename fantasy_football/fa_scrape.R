@@ -2,6 +2,8 @@
 
 # Beep Boop ---------------------------------------------------------------
 
+source('init.R')
+
 leagueID <- fantasy_key$league_id[1]
 fantasy_key$league_name[1]
 

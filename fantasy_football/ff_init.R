@@ -7,6 +7,7 @@ detach(package:purrr)
 library(purrr)
 library(glue)
 
+source('init.R')
 
 # Create variables --------------------------------------------------------
 

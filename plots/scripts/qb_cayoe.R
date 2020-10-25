@@ -1,5 +1,7 @@
 library(tidyverse)
 
+source('init.R')
+
 source('https://raw.githubusercontent.com/mrcaseb/nflfastR/master/R/utils.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
@@ -151,7 +153,7 @@ cayoe_filtered %>%
   mutate(Rank = paste0('#',row_number())) %>%
   gt() %>%
   tab_header(title = paste('Completed Air Yards Over Expected (CAYOE),', cayoe_filtered$season[1]), 
-             subtitle = paste('Through week', my_week, 'MNF', '|', 'Min.', ifelse(round(summary(cayoe_filtered$pass_attempts)[4])>75,75,round(summary(cayoe_filtered$pass_attempts)[4])),'pass attempts > 0 air yards')) %>% 
+             subtitle = paste('Through week', my_week, 'TNF', '|', 'Min.', ifelse(round(summary(cayoe_filtered$pass_attempts)[4])>75,75,round(summary(cayoe_filtered$pass_attempts)[4])),'pass attempts > 0 air yards')) %>% 
   cols_move_to_start(columns = vars(Rank)) %>% 
   cols_label(
     games = 'GP',
@@ -240,3 +242,4 @@ cayoe_filtered %>%
   ) %>% 
   gtsave(filename = paste0("qb_cayoe_", cayoe_filtered$season[1], ".png"), path = "plots/desktop")
 
+rm(list = ls())

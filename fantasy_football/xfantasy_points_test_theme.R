@@ -11,6 +11,8 @@ library(tidyverse)
 library(parallel)
 library(viridis)
 
+source('init.R')
+
 source('https://github.com/mrcaseb/nflfastR/blob/master/R/utils.R?raw=true')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
@@ -44,18 +46,20 @@ if (exists("pbp_df") == FALSE) {
   pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
 }
 
-# Plot --------------------------------------------------------------------
+# Plot Data ---------------------------------------------------------------
 
 source('plots/assets/plot_theme.R')
 
 my_week <- pbp_df %>% select(week) %>% max()
 
 
-quick_rost <- readRDS(url('https://github.com/guga31bb/nflfastR-raw/blob/master/roster/roster.rds?raw=true')) 
+quick_rost <- readRDS(url('https://github.com/guga31bb/nflfastR-raw/blob/master/roster/roster.rds?raw=true')) %>% 
+  decode_player_ids(fast = TRUE)
 
 
 fant_pt_dist_df <- pbp_df %>% 
-  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & !is.na(cp) & ((receiver_jersey_number < 90 & receiver_jersey_number > 79) | (receiver_jersey_number < 20 & receiver_jersey_number > 9))) %>% 
+  # filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & !is.na(cp) & ((receiver_jersey_number < 90 & receiver_jersey_number > 79) | (receiver_jersey_number < 20 & receiver_jersey_number > 9))) %>% 
+  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & !is.na(cp)) %>% 
   add_xyac_dist %>% 
   select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(
@@ -138,6 +142,7 @@ if (exists("sleep.players") == FALSE) {
         )
       ))
     )
+  rm(sleeper_api_players)
 }
 if (exists("espn.players") == FALSE) {
   espn.league_id <- fantasy_key$league_id[1]
@@ -150,7 +155,7 @@ if (exists("espn.players") == FALSE) {
   ))
 }
 
-WR_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
+receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   group_by(posteam, receiver) %>%
   summarize(
     receiver_id = unique(receiver_id),
@@ -174,11 +179,17 @@ WR_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
             by = c("espn_id" = "id")) %>%
   # filter(status != "ONTEAM") %>% #Use to search through FA's
   mutate(tm_rnk = row_number()) %>%
-  filter(tm_rnk <= 4)
+  ungroup() %>% 
+  group_by(position) %>% 
+  mutate(pos_rnk = row_number()) %>% 
+  ungroup() %>% 
+  arrange(-tot_targ) %>% 
+  mutate(lg_rnk = row_number()) %>% 
+  filter(tm_rnk <= 5)
 
 # make a data frame to loop around
 sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>% 
-  right_join(WR_rank_df %>% select(posteam, receiver)) %>% 
+  right_join(receiver_rank_df %>% select(posteam, receiver)) %>% 
   select(season, game_id, play_id, posteam, receiver, catch_run_prob, half_PPR_points) %>% 
   group_by(game_id, play_id)
 
@@ -200,7 +211,7 @@ if (file.exists("fantasy_football/data/sample_sim_df.rds") == FALSE) {
   clusterEvalQ(cl, {
     library(tidyverse)
   })
-    sim_df <- do.call(rbind, parLapply(cl, 1:5000, sample.fx))
+    sim_df <- do.call(rbind, parLapply(cl, 1:10000, sample.fx))
   stopCluster(cl)
   saveRDS(sim_df, file = 'fantasy_football/data/sample_sim_df.rds')
 }
@@ -224,15 +235,13 @@ percentile_df <- rbind(sim_df, actual_df) %>%
   filter(sim == 0) %>% 
   mutate(sim_tot = NULL, sim = NULL)
 
-library(ggridges)
 
-
-source('plots/assets/plot_theme.R')
-
+cols <- c("ONTEAM" = color_cw[5], "FREEAGENT" = color_cw[6], "WAIVERS" = color_cw[7])
 
 plot_data <- sim_df %>%
+  # filter(tm_rnk <= 4) %>% 
   left_join(percentile_df) %>%
-  left_join(WR_rank_df) %>%
+  left_join(receiver_rank_df) %>%
   mutate(
     sim_pg = sim_tot / tot_gp,
     pl_lab = paste0(receiver, '\n', number(perc * 100, accuracy = 0.1), ' perc.'),
@@ -242,9 +251,18 @@ plot_data <- sim_df %>%
   mutate(
     obs_num = row_number(),
     status_color = if_else(status != "ONTEAM", color_cw[6], color_cw[5])
-  ) 
+  )
+
+receiver_rank_df <- receiver_rank_df %>% left_join(plot_data %>% select(receiver_id, pl_lab) %>% unique())
+
+
+# Plot --------------------------------------------------------------------
+
+# source('plots/assets/plot_theme.R')
 
 p <- plot_data %>%
+  select(!tm_rnk, !pos_rnk) %>% 
+  filter(tm_rnk <= 4) %>% 
   ggplot(aes(
     x = sim_pg,
     y = tm_rnk,
@@ -275,20 +293,46 @@ p <- plot_data %>%
   ) +
   #geom_boxplot(size = 0.4, color = 'darkblue', width = 0.6, outlier.alpha = 0, notchwidth = 1) +
   scale_color_manual(
-    values = c(color_cw[5], color_cw[6], color_cw[7]),
-    name = "Status") +
-  geom_shadowtext(
+    values = cols,
+    name = "Status"
+    ) +
+  # geom_shadowtext(
+  #   aes(
+  #     x = ifelse(obs_num == 1, 47, NA),
+  #     y = tm_rnk - 0.5,
+  #     color = factor(status)
+  #   ),
+  #   family = "Montserrat",
+  #   hjust = 1,
+  #   bg.color = color_cw[2],
+  #   size = 1.2,
+  #   na.rm = T,
+  #   bg.r = 0.2
+  # ) +
+  geom_text(
+    data = receiver_rank_df %>% filter(tm_rnk <= 4),
     aes(
-      x = ifelse(obs_num == 1, 48, NA),
+      # x = ifelse(obs_num == 1, 28, NA),
+      x = 45,
       y = tm_rnk - 0.5,
       color = factor(status)
     ),
+    family = "Montserrat",
     hjust = 1,
-    bg.color = color_cw[2],
     #[family = font_family,]
     size = 1.2,
     na.rm = T,
-    bg.r = 0.2
+    show.legend = FALSE
+  ) +
+  geom_image(
+    data = receiver_rank_df %>% filter(tm_rnk <= 4),
+    aes(
+      image = headshot_url, 
+      x = 48, 
+      y = pos_rnk - 0.5,
+    ),
+    size = 0.8,
+    na.rm = T
   ) +
   scale_x_continuous(
     breaks = seq(0, 80, 10),
@@ -311,6 +355,9 @@ p <- plot_data %>%
   ) +
   theme_cw +
   theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 8),
+    legend.key.height = unit(.6, 'pt'),
     axis.title.y = element_blank(),
     axis.text.y = element_blank(),
     axis.ticks.y = element_blank(),
@@ -343,6 +390,482 @@ p <- plot_data %>%
 brand_plot(p, asp = 16/9, save_name = 'xfp_half_PPR_box_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = T)
 
 
+
+# TE ----------------------------------------------------------------------
+
+# source('plots/assets/plot_theme.R')
+
+p_te <- plot_data %>% 
+  filter(position == "TE", pos_rnk <= 20) %>% 
+  select(-c("tm_rnk", "lg_rnk")) %>% 
+  arrange(pos_rnk) %>% 
+  # select_if(function(x) any(is.na(x))) %>% 
+  # summarize_each(funs(sum(is.na(.))))
+  ggplot(aes(
+    x = sim_pg,
+    y = pos_rnk,
+    group = receiver,
+    label = pl_lab,
+    fill = stat(x)
+  )) +
+  geom_point(
+    aes(x = ifelse(obs_num == 1, half_PPR_pg, NA), y = pos_rnk + 0.08),
+    color = color_cw[2],
+    fill = color_cw[8],
+    shape = 24,
+    size = 1,
+    stroke = 0.2,
+    na.rm = T
+  ) +
+  stat_density_ridges(
+    # aes(fill = factor(stat(quantile))),
+    geom = 'density_ridges_gradient',
+    quantiles = c(.1, .25, .75, .9),
+    rel_min_height = 0.001,
+    bandwidth = 1,
+    calc_ecdf = T,
+    scale = 1.2,
+    # color = color_cw[6],
+    size = 0.2,
+    show.legend = F,
+  ) +
+  # geom_density_ridges_gradient(
+  #   # aes(
+  #   #   fill = factor(sim_pg)
+  #   # ),
+  #   rel_min_height = 0.001,
+  #   bandwidth = 1,
+  #   calc_ecdf = T,
+  #   scale = 0.9,
+  #   # color = color_cw[6],
+  #   size = 0.2,
+  #   show.legend = F
+  # ) +
+  #geom_boxplot(size = 0.4, color = 'darkblue', width = 0.6, outlier.alpha = 0, notchwidth = 1) +
+  scale_color_manual(
+    values = cols,
+    name = "Status"
+  ) +
+  # geom_shadowtext(
+  #   aes(
+  #     x = ifelse(obs_num == 1, 38, NA),
+  #     y = pos_rnk - 0.5,
+  #     color = factor(status)
+  #   ),
+  #   family = "Montserrat",
+  #   hjust = 1,
+  #   bg.color = color_cw[2],
+  #   #[family = font_family,]
+  #   size = 4.2,
+  #   na.rm = T,
+  #   bg.r = 0.2
+  # ) +
+  geom_text(
+    data = receiver_rank_df %>% filter(position == "TE" & pos_rnk <= 20),
+    aes(
+      # x = ifelse(obs_num == 1, 28, NA),
+      x = 27,
+      y = pos_rnk - 0.5,
+      color = factor(status)
+    ),
+    family = "Montserrat",
+    hjust = 1,
+    #[family = font_family,]
+    size = 2.4,
+    na.rm = T,
+    show.legend = FALSE
+  ) +
+  geom_image(
+    data = receiver_rank_df %>% filter(position == "TE" & pos_rnk <= 20),
+    aes(
+      image = headshot_url, 
+      x = 28, 
+      y = pos_rnk - 0.5,
+    ),
+    size = 0.05,
+    na.rm = T
+  ) +
+  scale_x_continuous(
+    breaks = seq(0, 80, 10),
+    expand = expansion(mult = 0),
+    limits = c(0, 30)
+  ) +
+  # scale_y_reverse(expand = expansion(mult = c(0, 0.04), add = c(0.2, 0)), limits = c(4.1, 0)) +
+  scale_y_reverse(
+  ) +
+  # scale_fill_manual(values = c(
+  #   alpha(color_cw[7], 0.5),
+  #   alpha(color_cw[6], 0.5),
+  #   alpha(color_cw[5], 0.5),
+  #   alpha(color_cw[6], 0.5),
+  #   alpha(color_cw[7], 0.5)
+  # )) +
+  scale_fill_viridis(
+    name = "1/2 PPG", 
+    option = "A",
+    direction = -1
+  ) +
+  labs(
+    title = paste0('2020 TE Expected 1/2 PPR Fantasy Points per Game\nThrough Week ', my_week),
+    subtitle = 'Grey represents middle 50% of outcomes, Orange tails are each 10% of outcomes  |  Caret shows actual avg  |  Based on 10,000 Simulations',
+    x = "1/2 PPR Points/Game",
+    y = "Position Rank"
+  ) +
+  theme_cw +
+  theme(
+    plot.title = element_text(family = "Chivo", face = "bold", size = 12),
+    plot.subtitle = element_text(size = 6),
+    legend.key.height = unit(.6, 'pt'),
+    axis.title.y = element_text(angle = 90),
+    # axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid.major.y = element_blank(),
+    axis.text = element_text(size = 5),
+    axis.line = element_line(color = color_cw[5], size = 0.5),
+    panel.border = element_rect(color = color_cw[4], size = 0.1),
+    axis.ticks.length = unit(0.15, 'lines'),
+    axis.ticks = element_line(color = color_cw[5], size = 0.5),
+    panel.grid.minor.x = element_line(color_cw[4], size = 0.2),
+    panel.spacing.x = unit(0.5, 'lines')
+  ) +
+  annotation_custom(
+    make_gradient(deg = 270),
+    ymin = Inf,
+    ymax = -0.1,
+    xmin = -Inf,
+    xmax = Inf
+  ) +
+  annotation_custom(
+    make_gradient(deg = 0),
+    ymin = -Inf,
+    ymax = Inf,
+    xmin = 48,
+    xmax = Inf
+  )
+
+# p_te
+
+# ggplot_gtable(ggplot_build(p))
+
+brand_plot(p_te, asp = 6/9, save_name = 'xfp_half_PPR_box_TE_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
+
+# RB ----------------------------------------------------------------------
+
+
+# source('plots/assets/plot_theme.R')
+
+p_rb <- plot_data %>% 
+  filter(position == "RB", pos_rnk <= 20) %>% 
+  select(-c("tm_rnk", "lg_rnk")) %>% 
+  arrange(pos_rnk) %>% 
+  # select_if(function(x) any(is.na(x))) %>% 
+  # summarize_each(funs(sum(is.na(.))))
+  ggplot(aes(
+    x = sim_pg,
+    y = pos_rnk,
+    group = receiver,
+    label = pl_lab,
+    fill = stat(x)
+  )) +
+  geom_point(
+    aes(x = ifelse(obs_num == 1, half_PPR_pg, NA), y = pos_rnk + 0.08),
+    color = color_cw[2],
+    fill = color_cw[8],
+    shape = 24,
+    size = 1,
+    stroke = 0.2,
+    na.rm = T
+  ) +
+  stat_density_ridges(
+    # aes(fill = factor(stat(quantile))),
+    geom = 'density_ridges_gradient',
+    quantiles = c(.1, .25, .75, .9),
+    rel_min_height = 0.001,
+    bandwidth = 1,
+    calc_ecdf = T,
+    scale = 1.2,
+    # color = color_cw[6],
+    size = 0.2,
+    show.legend = F,
+  ) +
+  # geom_density_ridges_gradient(
+  #   # aes(
+  #   #   fill = factor(sim_pg)
+  #   # ),
+  #   rel_min_height = 0.001,
+  #   bandwidth = 1,
+  #   calc_ecdf = T,
+  #   scale = 0.9,
+  #   # color = color_cw[6],
+  #   size = 0.2,
+  #   show.legend = F
+  # ) +
+  #geom_boxplot(size = 0.4, color = 'darkblue', width = 0.6, outlier.alpha = 0, notchwidth = 1) +
+  scale_color_manual(
+    values = cols,
+    name = "Status"
+  ) +
+  # geom_shadowtext(
+  #   aes(
+  #     x = ifelse(obs_num == 1, 38, NA),
+  #     y = pos_rnk - 0.5,
+  #     color = factor(status)
+  #   ),
+  #   family = "Montserrat",
+  #   hjust = 1,
+  #   bg.color = color_cw[2],
+  #   #[family = font_family,]
+  #   size = 4.2,
+  #   na.rm = T,
+  #   bg.r = 0.2
+  # ) +
+  geom_text(
+    data = receiver_rank_df %>% filter(position == "RB" & pos_rnk <= 20),
+    aes(
+      # x = ifelse(obs_num == 1, 28, NA),
+      x = 27,
+      y = pos_rnk - 0.5,
+      color = factor(status)
+    ),
+    family = "Montserrat",
+    hjust = 1,
+    #[family = font_family,]
+    size = 2.4,
+    na.rm = T,
+    show.legend = FALSE
+  ) +
+  geom_image(
+    data = receiver_rank_df %>% filter(position == "RB" & pos_rnk <= 20),
+    aes(
+      image = headshot_url, 
+      x = 28, 
+      y = pos_rnk - 0.5,
+    ),
+    size = 0.05,
+    na.rm = T
+  ) +
+  scale_x_continuous(
+    breaks = seq(0, 80, 10),
+    expand = expansion(mult = 0),
+    limits = c(0, 30)
+  ) +
+  # scale_y_reverse(expand = expansion(mult = c(0, 0.04), add = c(0.2, 0)), limits = c(4.1, 0)) +
+  scale_y_reverse(
+  ) +
+  # scale_fill_manual(values = c(
+  #   alpha(color_cw[7], 0.5),
+  #   alpha(color_cw[6], 0.5),
+  #   alpha(color_cw[5], 0.5),
+  #   alpha(color_cw[6], 0.5),
+  #   alpha(color_cw[7], 0.5)
+  # )) +
+  scale_fill_viridis(
+    name = "1/2 PPG", 
+    option = "A",
+    direction = -1
+  ) +
+  labs(
+    title = paste0('2020 RB Expected 1/2 PPR Fantasy Points per Game\nThrough Week ', my_week),
+    subtitle = 'Grey represents middle 50% of outcomes, Orange tails are each 10% of outcomes  |  Caret shows actual avg  |  Based on 10,000 Simulations',
+    x = NULL,
+    y = "Position Rank"
+  ) +
+  theme_cw +
+  theme(
+    plot.title = element_text(family = "Chivo", face = "bold", size = 12),
+    plot.subtitle = element_text(size = 6),
+    legend.key.height = unit(.6, 'pt'),
+    axis.title.y = element_text(angle = 90),
+    # axis.title.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid.major.y = element_blank(),
+    axis.text = element_text(size = 5),
+    axis.line = element_line(color = color_cw[5], size = 0.5),
+    panel.border = element_rect(color = color_cw[4], size = 0.1),
+    axis.ticks.length = unit(0.15, 'lines'),
+    axis.ticks = element_line(color = color_cw[5], size = 0.5),
+    panel.grid.minor.x = element_line(color_cw[4], size = 0.2),
+    panel.spacing.x = unit(0.5, 'lines')
+  ) +
+  annotation_custom(
+    make_gradient(deg = 270),
+    ymin = Inf,
+    ymax = -0.1,
+    xmin = -Inf,
+    xmax = Inf
+  ) +
+  annotation_custom(
+    make_gradient(deg = 0),
+    ymin = -Inf,
+    ymax = Inf,
+    xmin = 48,
+    xmax = Inf
+  )
+
+# p_rb
+
+# ggplot_gtable(ggplot_build(p))
+
+brand_plot(p_rb, asp = 6/9, save_name = 'xfp_half_PPR_box_RB_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
+
+
+# WR ----------------------------------------------------------------------
+
+# source('plots/assets/plot_theme.R')
+
+p_wr <- plot_data %>% 
+  filter(position == "WR", pos_rnk <= 40) %>% 
+  select(-c("tm_rnk", "lg_rnk")) %>% 
+  arrange(pos_rnk) %>% 
+  # select_if(function(x) any(is.na(x))) %>% 
+  # summarize_each(funs(sum(is.na(.))))
+  ggplot(aes(
+    x = sim_pg,
+    y = pos_rnk,
+    group = receiver,
+    label = pl_lab,
+    fill = stat(x)
+  )) +
+  geom_point(
+    aes(x = ifelse(obs_num == 1, half_PPR_pg, NA), y = pos_rnk + 0.08),
+    color = color_cw[2],
+    fill = color_cw[8],
+    shape = 24,
+    size = 1,
+    stroke = 0.2,
+    na.rm = T
+  ) +
+  stat_density_ridges(
+    # aes(fill = factor(stat(quantile))),
+    geom = 'density_ridges_gradient',
+    quantiles = c(.1, .25, .75, .9),
+    rel_min_height = 0.001,
+    bandwidth = 1,
+    calc_ecdf = T,
+    scale = 1.2,
+    # color = color_cw[6],
+    size = 0.2,
+    show.legend = FALSE,
+  ) +
+  # geom_density_ridges_gradient(
+  #   # aes(
+  #   #   fill = factor(sim_pg)
+  #   # ),
+  #   rel_min_height = 0.001,
+  #   bandwidth = 1,
+  #   calc_ecdf = T,
+  #   scale = 0.9,
+  #   # color = color_cw[6],
+  #   size = 0.2,
+  #   show.legend = F
+  # ) +
+  #geom_boxplot(size = 0.4, color = 'darkblue', width = 0.6, outlier.alpha = 0, notchwidth = 1) +
+  scale_color_manual(
+    values = cols,
+    name = "Status"
+  ) +
+  # geom_shadowtext(
+  #   aes(
+  #     x = ifelse(obs_num == 1, 38, NA),
+  #     y = pos_rnk - 0.5,
+  #     color = factor(status)
+  #   ),
+  #   family = "Montserrat",
+  #   hjust = 1,
+  #   bg.color = color_cw[2],
+  #   #[family = font_family,]
+  #   size = 4.2,
+  #   na.rm = T,
+  #   bg.r = 0.2
+  # ) +
+  geom_text(
+    data = receiver_rank_df %>% filter(position == "WR" & pos_rnk <= 40),
+    aes(
+      # x = ifelse(obs_num == 1, 28, NA),
+      x = 27,
+      y = pos_rnk - 0.5,
+      color = factor(status)
+    ),
+    family = "Montserrat",
+    hjust = 1,
+    #[family = font_family,]
+    size = 1.3,
+    na.rm = T,
+    show.legend = F
+  ) +
+  geom_image(
+    data = receiver_rank_df %>% filter(position == "WR" & pos_rnk <= 40),
+    aes(
+      image = headshot_url, 
+      x = 28, 
+      y = pos_rnk - 0.5,
+    ),
+    size = 0.03,
+    na.rm = T
+  ) +
+  scale_x_continuous(
+    breaks = seq(0, 80, 10),
+    expand = expansion(mult = 0),
+    limits = c(0, 30)
+  ) +
+  # scale_y_reverse(expand = expansion(mult = c(0, 0.04), add = c(0.2, 0)), limits = c(4.1, 0)) +
+  scale_y_reverse(
+  ) +
+  # scale_fill_manual(values = c(
+  #   alpha(color_cw[7], 0.5),
+  #   alpha(color_cw[6], 0.5),
+  #   alpha(color_cw[5], 0.5),
+  #   alpha(color_cw[6], 0.5),
+  #   alpha(color_cw[7], 0.5)
+  # )) +
+  scale_fill_viridis(
+    name = "1/2 PPG", 
+    option = "A",
+    direction = -1
+  ) +
+  labs(
+    title = paste0('2020 WR Expected 1/2 PPR Fantasy Points per Game\nThrough Week ', my_week),
+    subtitle = 'Grey represents middle 50% of outcomes | Orange tails are each 10% of outcomes | Caret shows actual avg\nBased on 10,000 Simulations',
+    x = "1/2 PPR Points/Game",
+    y = "Position Rank"
+  ) +
+  theme_cw +
+  theme(
+    plot.title = element_text(family = "Chivo", face = "bold", size = 12),
+    plot.subtitle = element_text(size = 6),
+    legend.key.height = unit(.6, 'pt'),
+    axis.title.y = element_text(angle = 90),
+    # axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid.major.y = element_blank(),
+    axis.text = element_text(size = 5),
+    axis.line = element_line(color = color_cw[5], size = 0.5),
+    panel.border = element_rect(color = color_cw[4], size = 0.1),
+    axis.ticks.length = unit(0.15, 'lines'),
+    axis.ticks = element_line(color = color_cw[5], size = 0.5),
+    panel.grid.minor.x = element_line(color_cw[4], size = 0.2),
+    panel.spacing.x = unit(0.5, 'lines')
+  ) +
+  annotation_custom(
+    make_gradient(deg = 270),
+    ymin = Inf,
+    ymax = -0.1,
+    xmin = -Inf,
+    xmax = Inf
+  ) +
+  annotation_custom(
+    make_gradient(deg = 0),
+    ymin = -Inf,
+    ymax = Inf,
+    xmin = 48,
+    xmax = Inf
+  )
+
+# p_wr
+
+brand_plot(p_wr, asp = 6/9, save_name = 'xfp_half_PPR_box_WR_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
+
+
 # ADoT --------------------------------------------------------------------
 
 roster_df <- fast_scraper_roster(2020)
@@ -369,7 +892,7 @@ grob_df <- player_df %>%
 
 grob_df$grob <- sapply(1:nrow(grob_df), function(x) grob_img_adj(grob_df$headshot_url[x], alpha = grob_df$alpha[x]))
 
-my_week <- 6
+my_week <- pbp_df %>% select(week) %>% max()
 
 p <- pbp_df %>% 
   filter(!is.na(air_yards) & !is.na(receiver_id) & air_yards <= 70 & air_yards >= -15) %>% 
@@ -407,4 +930,6 @@ p <- pbp_df %>%
     axis.ticks = element_line(color = 'darkblue', size = 0.5)
   )
 
-brand_plot(p, asp = 16/9, save_name = 'adot_box_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = T)
+brand_plot(p, asp = 16/9, save_name = 'adot_box_2020_test_no_legend.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = T)
+
+rm(list = ls())
