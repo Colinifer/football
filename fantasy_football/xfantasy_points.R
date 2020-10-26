@@ -11,8 +11,6 @@ source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
 source('fantasy_football/xyac/add_xyac_old.R')
 
-my_week <- 5
-
 # YAC Distribution Function -----------------------------------------------
 
 # duplicate the add_xyac() function that we sourced above
@@ -39,6 +37,8 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 if (exists("pbp_df") == FALSE) {
   pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
 }
+
+my_week <- pbp_df %>% select(week) %>% max()
 
 # Receivers ---------------------------------------------------------------
 
@@ -453,5 +453,5 @@ cayoe %>%
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 
-  gtsave(filename = paste0("xFP_QB_fp_", cayoe$season[1], ".png"), path = "fantasy_football/plots")
+  gtsave(filename = paste0("xFP_QB_fp_", cayoe$season[1], ".png"), path = "fantasy_football/plots", vwidth = 1500)
 

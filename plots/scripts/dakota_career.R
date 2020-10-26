@@ -59,18 +59,24 @@ qb_top_bottom <- pbp_df %>%
   ) %>% 
   mutate(car_dakota = mgcv::predict.gam(dakota_model, .))
 
+qb_top_bottom <- qb_top_bottom %>% 
+  left_join(sleep.players %>% select(gsis_id, full_name, headshot_url),
+            by = c("qb_id" = "gsis_id"))
+
 min_plays <- 200
 
 p <- qb_top_bottom %>% 
-  left_join(roster_df %>% filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) %>% 
-  filter(!is.na(team.season) & car_plays>=min_plays & qb_id %in% qb_2020_id) %>% 
+  # left_join(roster_df %>% filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) %>%
+  # filter(!is.na(team.season) & car_plays>=min_plays & qb_id %in% qb_2020_id) %>% 
+  filter(car_plays>=min_plays & qb_id %in% qb_2020_id) %>% 
   arrange(-car_dakota) %>% 
   mutate(rank = row_number()) %>% 
   ggplot(aes(x = curr_dakota, xend = high_dakota, y = rank, yend = rank)) +
   geom_segment(aes(x = low_dakota), color = color_cw[5], size = 0.7) +
   geom_point(aes(x = car_dakota), color = color_cw[5], shape = 5) +
   geom_point(aes(fill = curr_dakota), size = 3, color = color_cw[2], shape = 21, stroke = 0.7) +
-  geom_shadowtext(aes(x = low_dakota - 0.005, label = teamPlayers.displayName), hjust = 1, color = color_cw[5], bg.color = color_cw[2], size = 2.2, bg.r = 0.2) +
+  geom_shadowtext(aes(x = low_dakota - 0.005, label = full_name, family = "Montserrat"), hjust = 1, color = color_cw[5], bg.color = color_cw[2], size = 2.2, bg.r = 0.2) +
+  # geom_image(aes(x = low_dakota - 0.005, image = headshot_url), size = .025, na.rm = T) +
   scale_y_reverse(expand = expansion(mult = c(0.02, 0.04))) +
   scale_x_continuous(limits = c(-0.15,0.4), expand = expansion(mult = 0)) +
   scale_fill_viridis(option = "A") +
@@ -81,12 +87,13 @@ p <- qb_top_bottom %>%
        y = NULL) +
   theme_cw +
   theme(
+    plot.title = element_text(size = 12),
     axis.ticks.y = element_blank(),
     axis.text.y = element_blank(),
     panel.grid.major.y = element_blank(),
     legend.position = c(.85, .22)
   )
 
-p
+# p
 
-brand_plot(p, asp = 1, save_name = 'plots/desktop/dakota_career.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = 'tr')
+brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = 'tr')

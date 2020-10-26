@@ -7,12 +7,20 @@ pbp_df <- purrr::map_df(2019:2020, function(x) {
 })
 print(year)
 
-time_series <- pbp_df %>%
+# If week < 10, us current weeks in season
+time_series <- dplyr::if_else(pbp_df %>%
   filter(season == Sys.Date() %>%
            format(format = "%Y") %>%
            as.integer()) %>%
   select(week) %>%
-  max() - 1
+  max() - 1 < 10,
+  pbp_df %>%
+    filter(season == Sys.Date() %>%
+             format(format = "%Y") %>%
+             as.integer()) %>%
+    select(week) %>%
+    max() - 1,
+  10)
 
 res <- 800 #size of exported plots
 slope = -1.5 #for the tiers stuff
@@ -22,7 +30,8 @@ qb_min <- 320 #min # of qb plays
 # https://www.opensourcefootball.com/posts/2020-08-20-adjusting-epa-for-strenght-of-opponent/
 
 epa_data <- pbp_df %>%
-  dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
+  # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
+  dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam)) %>%
   dplyr::group_by(game_id, season, week, posteam, home_team) %>%
   dplyr::summarise(
     off_epa = mean(epa),
@@ -203,3 +212,27 @@ p <- chart_all %>%
   )
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = 'tr')
+
+
+# Next week match-ups -----------------------------------------------------
+
+
+weekly_teams <- c(
+  schedule_df %>%
+    filter(week == (
+      my_week <- pbp_df %>%
+        select(week) %>%
+        max() + 1
+    )) %>%
+    pull(home_team),
+  schedule_df %>%
+    filter(week == (
+      my_week <- pbp_df %>%
+        select(week) %>%
+        max() + 1
+    )) %>%
+    pull(away_team)
+)
+
+weekly_epa_matchup <- schedule_df %>% 
+  mutate() # grab each team off and def epa
