@@ -1,6 +1,6 @@
 library(pracma)
 
-pbp_df <- purrr::map_df(2019:2020, function(x) {
+pbp_df <- purrr::map_df(2020, function(x) {
   readRDS(url(
     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
   ))
@@ -151,12 +151,6 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_adj_{year}
 
 # Tiers -------------------------------------------------------------------
 
-pbp_df <- purrr::map_df(2020:2020, function(x) {
-  readRDS(url(
-    glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
-  ))
-})
-
 defense <- pbp_df %>%
   filter(!is.na(epa) & !is.na(defteam)) %>% 
   group_by(defteam, season)%>%
@@ -212,7 +206,6 @@ p <- chart_all %>%
   )
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = 'tr')
-
 
 # Next week match-ups -----------------------------------------------------
 
