@@ -116,6 +116,69 @@ player_tail = "?view=kona_player_info"
 wl_tail = "?view=proTeamSchedules_wl"
 user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:79.0) Gecko/20100101 Firefox/79.0"
 
+
+# Player data
+fx.get_sleeper_api_players <- function() {
+  sleeper_api_players_url <-
+    'https://api.sleeper.app/v1/players/nfl'
+  sleeper_api_players <-
+    jsonlite::fromJSON(url('https://api.sleeper.app/v1/players/nfl'), flatten = T)
+  na_map <-
+    readRDS(
+      url(
+        "https://github.com/mrcaseb/nflfastR-roster/blob/master/R/na_map.rds?raw=true"
+      )
+    )
+  
+  # source("https://github.com/mrcaseb/nflfastR-roster/blob/master/R/update_roster.R")
+  sleep.players <-
+    purrr::map_dfr(sleeper_api_players, function(x)
+      purrr::map(x, function(y)
+        ifelse(is.null(y), NA, y))) %>%
+    dplyr::na_if("") %>%
+    dplyr::mutate_if(is.character, stringr::str_trim) %>%
+    dplyr::filter(
+      !(is.na(team) &
+          is.na(gsis_id)),
+      !player_id %in% nflfastR::teams_colors_logos$team_abbr,
+      first_name != "Duplicate"
+    ) %>%
+    dplyr::left_join(na_map, by = c("sportradar_id" = "id")) %>%
+    dplyr::mutate(
+      gsis_id = dplyr::if_else(is.na(gsis_id), gsis, gsis_id),
+      update_dt = lubridate::now("America/New_York"),
+      season = dplyr::if_else(
+        lubridate::month(update_dt) < 3,
+        lubridate::year(update_dt) - 1,
+        lubridate::year(update_dt)
+      ),
+      index = 1:dplyr::n(),
+      headshot_url = dplyr::if_else(is.na(espn_id), NA_character_, as.character(
+        glue::glue(
+          "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/{espn_id}.png"
+        )
+      ))
+    )
+  assign(x = 'sleeper_players_df', sleep.players, envir = globalenv())
+}
+fx.get_sleeper_api_players()
+
+fx.get_espn_players <- function(u.league_id = 1034400) {
+  # espn.league_id <- fantasy_key$league_id[u.league_id]
+  files_list <- list.files("fantasy_football/data/free_agents/", pattern = paste0(u.league_id, 'players.*\\', '.rds')) 
+  
+  espn.players <- readRDS(
+    paste0(
+      "fantasy_football/data/free_agents/",
+      list.files("fantasy_football/data/free_agents/", pattern = paste0(u.league_id, 'players.*\\', '.rds'))[list.files("fantasy_football/data/free_agents/", pattern = paste0(u.league_id, 'players.*\\', '.rds')) %>% length]
+      )
+    )
+  assign(x = 'espn_players_df', espn.players, envir = globalenv())
+}
+fx.get_espn_players()
+
+
+# nflfastR data
 schedule_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/schedules/sched_{year}.rds?raw=true')))
 
 pbp_df <-
@@ -124,7 +187,7 @@ pbp_df <-
       'https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'
     )
   )) %>%
-  decode_player_ids(pbp_df, fast = T)
+  decode_player_ids(fast = T)
 
 source('plots/assets/plot_theme.R')
 # source("fantasy_football/ff_init.R")

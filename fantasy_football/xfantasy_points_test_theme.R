@@ -101,59 +101,6 @@ incomplete_df <- fant_pt_dist_df %>%
   mutate(game_played = ifelse(row_number()==1,1,0)) %>% 
   ungroup
 
-if (exists("sleep.players") == FALSE) {
-  sleeper_api_players_url <-
-    'https://api.sleeper.app/v1/players/nfl'
-  sleeper_api_players <-
-    jsonlite::fromJSON(url('https://api.sleeper.app/v1/players/nfl'), flatten = T)
-  na_map <-
-    readRDS(
-      url(
-        "https://github.com/mrcaseb/nflfastR-roster/blob/master/R/na_map.rds?raw=true"
-      )
-    )
-  
-  # source("https://github.com/mrcaseb/nflfastR-roster/blob/master/R/update_roster.R")
-  sleep.players <-
-    purrr::map_dfr(sleeper_api_players, function(x)
-      purrr::map(x, function(y)
-        ifelse(is.null(y), NA, y))) %>%
-    dplyr::na_if("") %>%
-    dplyr::mutate_if(is.character, stringr::str_trim) %>%
-    dplyr::filter(
-      !(is.na(team) &
-          is.na(gsis_id)),
-      !player_id %in% nflfastR::teams_colors_logos$team_abbr,
-      first_name != "Duplicate"
-    ) %>%
-    dplyr::left_join(na_map, by = c("sportradar_id" = "id")) %>%
-    dplyr::mutate(
-      gsis_id = dplyr::if_else(is.na(gsis_id), gsis, gsis_id),
-      update_dt = lubridate::now("America/New_York"),
-      season = dplyr::if_else(
-        lubridate::month(update_dt) < 3,
-        lubridate::year(update_dt) - 1,
-        lubridate::year(update_dt)
-      ),
-      index = 1:dplyr::n(),
-      headshot_url = dplyr::if_else(is.na(espn_id), NA_character_, as.character(
-        glue::glue(
-          "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/{espn_id}.png"
-        )
-      ))
-    )
-  rm(sleeper_api_players)
-}
-if (exists("espn.players") == FALSE) {
-  espn.league_id <- fantasy_key$league_id[1]
-  files_list <- list.files("fantasy_football/data/free_agents/")
-  
-  espn.players <- readRDS(paste0(
-    "fantasy_football/data/free_agents/",
-    list.files("fantasy_football/data/free_agents/")[grepl(paste0(espn.league_id, "players_", Sys.Date(), ".rds"),
-                                                           files_list)]
-  ))
-}
 
 receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   group_by(posteam, receiver) %>%
@@ -170,11 +117,11 @@ receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   arrange(-tot_targ) %>%
   #slice(1:25)
   left_join(
-    sleep.players %>%
+    sleeper_players_df %>%
       select(position, sportradar_id, gsis_id, espn_id, headshot_url),
     by = c("receiver_id" = "gsis_id")
   ) %>%
-  left_join(espn.players %>%
+  left_join(espn_players_df %>%
               select(id, status, onTeamId),
             by = c("espn_id" = "id")) %>%
   # filter(status != "ONTEAM") %>% #Use to search through FA's
@@ -194,8 +141,10 @@ sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   group_by(game_id, play_id)
 
 
+# --- Simulation ---
+
 # Parallel sampling
-if (file.exists("fantasy_football/data/sample_sim_df.rds") == FALSE) {
+fx.sample_sim <- function(nsims = 10000, ncores = .66) {
   # do sim
   sample.fx <- function(x) {
     sampling_df %>% 
@@ -206,7 +155,7 @@ if (file.exists("fantasy_football/data/sample_sim_df.rds") == FALSE) {
       summarize(sim_tot = sum(sim_res, na.rm = T), .groups = 'drop') %>% 
       return
   }
-    no_cores <- detectCores() * .66
+    no_cores <- detectCores() * ncores
   cl <- makeCluster(no_cores, type="FORK")
   clusterEvalQ(cl, {
     library(tidyverse)
@@ -214,11 +163,14 @@ if (file.exists("fantasy_football/data/sample_sim_df.rds") == FALSE) {
     sim_df <- do.call(rbind, parLapply(cl, 1:10000, sample.fx))
   stopCluster(cl)
   saveRDS(sim_df, file = 'fantasy_football/data/sample_sim_df.rds')
+  assign("sim_df", sim_df, envir = globalenv())
 }
-sim_df <- readRDS('fantasy_football/data/sample_sim_df.rds')
 
+# Run simulation function
+fx.sample_sim(10000, .58)
 
 sim_df <- sim_df %>% mutate(sim = 1)
+
 
 
 # calculate how many points were actually scored
@@ -387,7 +339,7 @@ p <- plot_data %>%
 
 # ggplot_gtable(ggplot_build(p))
 
-brand_plot(p, asp = 16/9, save_name = 'xfp_half_PPR_box_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = T)
+brand_plot(p, asp = 16/9, save_name = 'fantasy_football/plots/xfp_half_PPR_box_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = T)
 
 
 
@@ -398,7 +350,7 @@ brand_plot(p, asp = 16/9, save_name = 'xfp_half_PPR_box_2020_test.png', fade_bor
 p_te <- plot_data %>% 
   filter(position == "TE", pos_rnk <= 20) %>% 
   select(-c("tm_rnk", "lg_rnk")) %>% 
-  arrange(pos_rnk) %>% 
+  arrange(-half_PPR_pg) %>% 
   # select_if(function(x) any(is.na(x))) %>% 
   # summarize_each(funs(sum(is.na(.))))
   ggplot(aes(
@@ -547,7 +499,7 @@ p_te <- plot_data %>%
 
 # ggplot_gtable(ggplot_build(p))
 
-brand_plot(p_te, asp = 6/9, save_name = 'xfp_half_PPR_box_TE_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
+brand_plot(p_te, asp = 6/9, save_name = 'fantasy_football/plots/xfp_half_PPR_box_TE_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
 
 # RB ----------------------------------------------------------------------
 
@@ -557,7 +509,7 @@ brand_plot(p_te, asp = 6/9, save_name = 'xfp_half_PPR_box_TE_2020_test.png', fad
 p_rb <- plot_data %>% 
   filter(position == "RB", pos_rnk <= 20) %>% 
   select(-c("tm_rnk", "lg_rnk")) %>% 
-  arrange(pos_rnk) %>% 
+  arrange(-half_PPR_pg) %>% 
   # select_if(function(x) any(is.na(x))) %>% 
   # summarize_each(funs(sum(is.na(.))))
   ggplot(aes(
@@ -706,7 +658,7 @@ p_rb <- plot_data %>%
 
 # ggplot_gtable(ggplot_build(p))
 
-brand_plot(p_rb, asp = 6/9, save_name = 'xfp_half_PPR_box_RB_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
+brand_plot(p_rb, asp = 6/9, save_name = 'fantasy_football/plots/xfp_half_PPR_box_RB_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
 
 
 # WR ----------------------------------------------------------------------
@@ -716,7 +668,7 @@ brand_plot(p_rb, asp = 6/9, save_name = 'xfp_half_PPR_box_RB_2020_test.png', fad
 p_wr <- plot_data %>% 
   filter(position == "WR", pos_rnk <= 40) %>% 
   select(-c("tm_rnk", "lg_rnk")) %>% 
-  arrange(pos_rnk) %>% 
+  arrange(-half_PPR_pg) %>% 
   # select_if(function(x) any(is.na(x))) %>% 
   # summarize_each(funs(sum(is.na(.))))
   ggplot(aes(
@@ -863,7 +815,7 @@ p_wr <- plot_data %>%
 
 # p_wr
 
-brand_plot(p_wr, asp = 6/9, save_name = 'xfp_half_PPR_box_WR_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
+brand_plot(p_wr, asp = 6/9, save_name = 'fantasy_football/plots/xfp_half_PPR_box_WR_2020_test.png', fade_borders = '', data_home = 'Data: @nflfastR', tm_wordmarks = F)
 
 
 # ADoT --------------------------------------------------------------------

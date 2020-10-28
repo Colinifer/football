@@ -70,25 +70,60 @@ avg_exp_fp_df <- pbp_df %>%
   ungroup %>% 
   group_by(posteam, receiver) %>% 
   summarize(
+    receiver_id = unique(receiver_id),
     games = sum(game_played, na.rm = T),
     targets = sum(target, na.rm = T),
+    targets_pg = targets / games,
     catches = sum(actual_outcome, na.rm = T),
+    catches_pg = catches / games,
     yards = sum(ifelse(actual_outcome==1, gain, 0), na.rm = T),
+    yards_pg = yards / games,
+    air_yards = sum(ifelse(actual_outcome==1, air_yards, 0), na.rm = T),
+    air_yards_pg = air_yards / games,
     td = sum(ifelse(gain==yardline_100, actual_outcome, 0), na.rm = T),
+    td_pg = td / games,
     PPR_pts = sum(actual_PPR_points, na.rm = T),
+    PPR_pts_pg = PPR_pts / games,
     half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
+    half_PPR_pts_pg = half_PPR_pts / games,
     exp_catches = sum(ifelse(target==1, cp, NA), na.rm = T),
+    exp_catches_pg = exp_catches / games,
     exp_yards = sum(exp_yards, na.rm = T),
+    exp_yards_pg = exp_yards / games,
     exp_td = sum(ifelse(gain==yardline_100, catch_run_prob, 0), na.rm = T),
+    exp_td_pg = exp_td / games,
+    exp_td_pg = exp_td / games,
     exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
-    exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T)
+    exp_PPR_pts_pg = exp_PPR_pts / games,
+    exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
+    exp_half_PPR_pts_pg = exp_half_PPR_pts / games,
   ) %>% 
   mutate(
     half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
     ppr_pts_diff = PPR_pts - exp_PPR_pts
   ) %>% 
-  ungroup
+  ungroup %>% 
+  left_join(
+    sleeper_players_df %>%
+      select(position, sportradar_id, gsis_id, espn_id, headshot_url),
+    by = c("receiver_id" = "gsis_id")
+  ) %>%
+  left_join(espn_players_df %>%
+              select(id, status, onTeamId),
+            by = c("espn_id" = "id"))
 
+avg_exp_fp_df %>% 
+  filter(status != "ONTEAM") %>% 
+  arrange(-air_yards)
+
+avg_exp_fp_df %>% 
+  filter(status != "ONTEAM",
+         games >= 3) %>%
+  arrange(-air_yards_pg)
+
+avg_exp_fp_df %>% 
+  filter(status != "ONTEAM") %>% 
+  arrange(-targets_pg)
 
 library(gt)
 # make the table

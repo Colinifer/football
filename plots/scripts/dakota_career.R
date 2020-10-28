@@ -3,6 +3,60 @@ library(viridis)
 source('plots/assets/plot_theme.R')
 load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
 
+if (exists("sleep.players") == FALSE) {
+  sleeper_api_players_url <-
+    'https://api.sleeper.app/v1/players/nfl'
+  sleeper_api_players <-
+    jsonlite::fromJSON(url('https://api.sleeper.app/v1/players/nfl'), flatten = T)
+  na_map <-
+    readRDS(
+      url(
+        "https://github.com/mrcaseb/nflfastR-roster/blob/master/R/na_map.rds?raw=true"
+      )
+    )
+  
+  # source("https://github.com/mrcaseb/nflfastR-roster/blob/master/R/update_roster.R")
+  sleep.players <-
+    purrr::map_dfr(sleeper_api_players, function(x)
+      purrr::map(x, function(y)
+        ifelse(is.null(y), NA, y))) %>%
+    dplyr::na_if("") %>%
+    dplyr::mutate_if(is.character, stringr::str_trim) %>%
+    dplyr::filter(
+      !(is.na(team) &
+          is.na(gsis_id)),
+      !player_id %in% nflfastR::teams_colors_logos$team_abbr,
+      first_name != "Duplicate"
+    ) %>%
+    dplyr::left_join(na_map, by = c("sportradar_id" = "id")) %>%
+    dplyr::mutate(
+      gsis_id = dplyr::if_else(is.na(gsis_id), gsis, gsis_id),
+      update_dt = lubridate::now("America/New_York"),
+      season = dplyr::if_else(
+        lubridate::month(update_dt) < 3,
+        lubridate::year(update_dt) - 1,
+        lubridate::year(update_dt)
+      ),
+      index = 1:dplyr::n(),
+      headshot_url = dplyr::if_else(is.na(espn_id), NA_character_, as.character(
+        glue::glue(
+          "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/{espn_id}.png"
+        )
+      ))
+    )
+  rm(sleeper_api_players)
+}
+if (exists("espn.players") == FALSE) {
+  espn.league_id <- fantasy_key$league_id[1]
+  files_list <- list.files("fantasy_football/data/free_agents/")
+  
+  espn.players <- readRDS(
+    paste0(
+    "fantasy_football/data/free_agents/",
+    list.files("fantasy_football/data/free_agents/")[list.files("fantasy_football/data/free_agents/") %>% length]
+  ))
+}
+
 
 # roster_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')) %>% 
 #   left_join(readRDS(url('https://github.com/ajreinhard/NFL/blob/master/nflfastR%20ID%20mapping/gsis_map.rds?raw=true')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
