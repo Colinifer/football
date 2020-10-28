@@ -5,7 +5,7 @@ library(teamcolors)
 library(gt)
 library(webshot)
 
-source('init.R')
+# source('init.R')
 
 
 pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true')))
@@ -38,6 +38,44 @@ wide_win_rate %>%
   select(!team_abbr) %>% 
   summarize(across(!contains("rk"), mean)) %>% 
   mutate(team = "NFL")
+
+
+matchup_df <- wide_win_rate %>% 
+  left_join(
+    schedule_df %>% 
+      filter(week == n_week + 1) %>% 
+      select(posteam, oppteam, weekday, gametime),
+    by = c('team_abbr' = 'posteam')
+    ) %>% 
+  left_join(
+    wide_win_rate %>%
+      select(
+        -team,
+        -prwr,
+        -rswr,
+        -pbwr,
+        -rbwr
+      ) %>% 
+      rename(
+        'opp_prwr_rk' = 'prwr_rk',
+        'opp_rswr_rk' = 'rswr_rk',
+        'opp_def_wr_comb_rk' = 'def_wr_comb_rk',
+        'opp_pbwr_rk' = 'pbwr_rk',
+        'opp_rbwr_rk' = 'rbwr_rk',
+        'opp_off_wr_comb_rk' = 'off_wr_comb_rk',
+        'opp_total_wr_comb_rk' = 'total_wr_comb_rk'
+      ),
+    by = c('oppteam' = 'team_abbr')
+  ) %>% 
+  mutate(
+    matchup_pr = prwr_rk - opp_pbwr_rk,
+    matchup_rs = rswr_rk - opp_rbwr_rk,
+    matchup_def = (matchup_pr + matchup_rs) / 2,
+    matchup_pb = pbwr_rk - opp_prwr_rk,
+    matchup_rb = rbwr_rk - opp_rswr_rk,
+    matchup_off = (matchup_pb + matchup_rb) / 2,
+  ) %>% 
+  view()
 
 
 # Total -------------------------------------------------------------------

@@ -240,6 +240,13 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_{year}.png
 
 # Next week match-ups -----------------------------------------------------
 
+chart_all %>%
+  left_join(
+    schedule_df %>% 
+      filter(week == n_week + 1) %>% 
+      select(posteam, oppteam, weekday, gametime),
+    by = c('team_abbr' = 'posteam')
+  )
 
 weekly_teams <- c(
   schedule_df %>%

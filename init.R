@@ -179,7 +179,60 @@ fx.get_espn_players()
 
 
 # nflfastR data
-schedule_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/schedules/sched_{year}.rds?raw=true')))
+schedule_df <-
+  readRDS(url(
+    glue(
+      'https://github.com/guga31bb/nflfastR-data/blob/master/schedules/sched_{year}.rds?raw=true'
+    )
+  )) %>%
+  mutate(posteam = home_team,
+         oppteam = away_team) %>%
+  select(
+    game_id,
+    season,
+    game_type,
+    week,
+    gameday,
+    weekday,
+    gametime,
+    posteam,
+    oppteam,
+    away_team,
+    home_team,
+    away_score,
+    home_score,
+    home_result,
+    stadium,
+    location,
+    roof,
+    surface,
+    old_game_id
+  ) %>% rbind(
+    schedule_df %>%
+      mutate(posteam = away_team,
+             oppteam = home_team) %>%
+      select(
+        game_id,
+        season,
+        game_type,
+        week,
+        gameday,
+        weekday,
+        gametime,
+        posteam,
+        oppteam,
+        away_team,
+        home_team,
+        away_score,
+        home_score,
+        home_result,
+        stadium,
+        location,
+        roof,
+        surface,
+        old_game_id
+      )
+  ) %>% arrange(old_game_id)
 
 pbp_df <-
   readRDS(url(
