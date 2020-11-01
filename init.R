@@ -179,12 +179,9 @@ fx.get_espn_players()
 
 
 # nflfastR data
-schedule_df <-
-  readRDS(url(
-    glue(
-      'https://github.com/guga31bb/nflfastR-data/blob/master/schedules/sched_{year}.rds?raw=true'
-    )
-  )) %>%
+schedule_df <- fast_scraper_schedules(seasons = year, pp = TRUE)
+  
+matchup_df <- schedule_df %>% 
   mutate(posteam = home_team,
          oppteam = away_team) %>%
   select(

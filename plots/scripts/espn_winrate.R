@@ -50,32 +50,71 @@ matchup_df <- wide_win_rate %>%
   left_join(
     wide_win_rate %>%
       select(
-        -team,
-        -prwr,
-        -rswr,
-        -pbwr,
-        -rbwr
+        -team
       ) %>% 
       rename(
         'opp_prwr_rk' = 'prwr_rk',
+        'opp_prwr' = 'prwr',
         'opp_rswr_rk' = 'rswr_rk',
+        'opp_rswr' = 'rswr',
         'opp_def_wr_comb_rk' = 'def_wr_comb_rk',
         'opp_pbwr_rk' = 'pbwr_rk',
+        'opp_pbwr' = 'pbwr',
         'opp_rbwr_rk' = 'rbwr_rk',
+        'opp_rbwr' = 'rbwr',
         'opp_off_wr_comb_rk' = 'off_wr_comb_rk',
         'opp_total_wr_comb_rk' = 'total_wr_comb_rk'
       ),
     by = c('oppteam' = 'team_abbr')
   ) %>% 
   mutate(
-    matchup_pr = prwr_rk - opp_pbwr_rk,
-    matchup_rs = rswr_rk - opp_rbwr_rk,
+    matchup_pr = prwr - opp_pbwr,
+    matchup_rs = rswr - opp_rbwr,
     matchup_def = (matchup_pr + matchup_rs) / 2,
-    matchup_pb = pbwr_rk - opp_prwr_rk,
-    matchup_rb = rbwr_rk - opp_rswr_rk,
+    matchup_pb = pbwr - opp_prwr,
+    matchup_rb = rbwr - opp_rswr,
     matchup_off = (matchup_pb + matchup_rb) / 2,
   ) %>% 
-  view()
+  arrange(-matchup_def) %>% 
+  filter(!is.na(oppteam))
+
+matchup_df_adv <- wide_win_rate %>% 
+  left_join(
+    schedule_df %>% 
+      filter(week == n_week + 2) %>% 
+      select(posteam, oppteam, weekday, gametime),
+    by = c('team_abbr' = 'posteam')
+  ) %>% 
+  left_join(
+    wide_win_rate %>%
+      select(
+        -team
+      ) %>% 
+      rename(
+        'opp_prwr_rk' = 'prwr_rk',
+        'opp_prwr' = 'prwr',
+        'opp_rswr_rk' = 'rswr_rk',
+        'opp_rswr' = 'rswr',
+        'opp_def_wr_comb_rk' = 'def_wr_comb_rk',
+        'opp_pbwr_rk' = 'pbwr_rk',
+        'opp_pbwr' = 'pbwr',
+        'opp_rbwr_rk' = 'rbwr_rk',
+        'opp_rbwr' = 'rbwr',
+        'opp_off_wr_comb_rk' = 'off_wr_comb_rk',
+        'opp_total_wr_comb_rk' = 'total_wr_comb_rk'
+      ),
+    by = c('oppteam' = 'team_abbr')
+  ) %>% 
+  mutate(
+    matchup_pr = prwr - opp_pbwr,
+    matchup_rs = rswr - opp_rbwr,
+    matchup_def = (matchup_pr + matchup_rs) / 2,
+    matchup_pb = pbwr - opp_prwr,
+    matchup_rb = rbwr - opp_rswr,
+    matchup_off = (matchup_pb + matchup_rb) / 2,
+  ) %>% 
+  arrange(-matchup_def) %>% 
+  filter(!is.na(oppteam))
 
 
 # Total -------------------------------------------------------------------
