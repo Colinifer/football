@@ -137,7 +137,7 @@ receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
 # make a data frame to loop around
 sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>% 
   right_join(receiver_rank_df %>% select(posteam, receiver)) %>% 
-  select(season, game_id, play_id, posteam, receiver, catch_run_prob, half_PPR_points) %>% 
+  select(season, game_id, play_id, posteam, receiver, air_yards, catch_run_prob, half_PPR_points) %>% 
   group_by(game_id, play_id)
 
 
@@ -149,7 +149,7 @@ fx.sample_sim <- function(nsims = 10000, ncores = .66) {
   sample.fx <- function(x) {
     sampling_df %>% 
       mutate(sim_res = sample(half_PPR_points, 1, prob = catch_run_prob)) %>% 
-      select(season, game_id, play_id, posteam, receiver, sim_res) %>% 
+      select(season, game_id, play_id, posteam, receiver, air_yards, sim_res) %>% 
       distinct %>% 
       group_by(posteam, receiver) %>% 
       summarize(sim_tot = sum(sim_res, na.rm = T), .groups = 'drop') %>% 
@@ -261,13 +261,14 @@ p <- plot_data %>%
   #   na.rm = T,
   #   bg.r = 0.2
   # ) +
-  geom_text(
+  geom_shadowtext(
     data = receiver_rank_df %>% filter(tm_rnk <= 4),
     aes(
       # x = ifelse(obs_num == 1, 28, NA),
-      x = 42,
+      x = 39.5,
       y = tm_rnk - 0.5,
-      color = factor(status)
+      color = factor(status),
+      bg.color = color_cw[2]
     ),
     family = "Montserrat",
     hjust = 1,
@@ -280,7 +281,7 @@ p <- plot_data %>%
     data = receiver_rank_df %>% filter(tm_rnk <= 4),
     aes(
       image = headshot_url, 
-      x = 47, 
+      x = 45, 
       y = tm_rnk - 0.5,
     ),
     size = 0.3,
@@ -822,7 +823,7 @@ brand_plot(p_wr, asp = 6/9, save_name = 'fantasy_football/plots/xfp_half_PPR_box
 
 roster_df <- fast_scraper_roster(2020)
 
-player_df <- pbp_df %>% 
+player_df <- plot_data %>% 
   filter(!is.na(air_yards) & !is.na(receiver_id) & air_yards <= 70 & air_yards >= -15) %>% 
   group_by(season, posteam, receiver_id) %>% 
   summarise(n = n(), mean_air_yards = mean(air_yards)) %>% 
@@ -846,7 +847,7 @@ grob_df$grob <- sapply(1:nrow(grob_df), function(x) grob_img_adj(grob_df$headsho
 
 my_week <- pbp_df %>% select(week) %>% max()
 
-p <- pbp_df %>% 
+p <- plot_data %>% 
   filter(!is.na(air_yards) & !is.na(receiver_id) & air_yards <= 70 & air_yards >= -15) %>% 
   right_join(player_df) %>%
   mutate(posteam = factor(posteam, .tm_div_order)) %>% 

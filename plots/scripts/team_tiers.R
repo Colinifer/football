@@ -123,8 +123,8 @@ chart_all <- epa_data %>%
 p <- chart_all %>% 
   ggplot(aes(x = adjusted_off_epa, y = adjusted_def_epa)) +
   geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(chart_all$adjusted_off_epa), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$adjusted_def_epa), color = "red", linetype = "dashed") +
+  geom_hline(yintercept = mean(chart_all$adjusted_def_epa), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(chart_all$adjusted_off_epa), color = "red", linetype = "dashed") +
   labs(x = "Adj. Offense EPA/play",
        y = "Adj. Defense EPA/play",
        # caption = "Data: @nflscrapR",
@@ -203,8 +203,8 @@ chart_all <- offense %>%
 p <- chart_all %>% 
   ggplot(aes(x = off_epa, y = def_epa)) +
   geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(chart_all$off_epa), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$def_epa), color = "red", linetype = "dashed") +
+  geom_hline(yintercept = mean(chart_all$def_epa), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(chart_all$off_epa), color = "red", linetype = "dashed") +
   labs(x = "Offense EPA/play",
        y = "Defense EPA/play",
        # caption = "Data: @nflscrapR",
@@ -260,6 +260,8 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_off_pass_and_rus
 
 # Next week match-ups -----------------------------------------------------
 
+n_week <- pbp_df %>% select(week) %>% max()
+
 matchup_chart_all <- chart_all %>%
   left_join(
     matchup_df %>% 
@@ -303,8 +305,8 @@ matchup_chart_all <- chart_all %>%
 p <- matchup_chart_all %>% 
   ggplot(aes(x = off_epa, y = opp_def_epa)) +
   geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(chart_all$off_epa), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$def_epa), color = "red", linetype = "dashed") +
+  geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(matchup_chart_all$off_epa), color = "red", linetype = "dashed") +
   labs(x = "Offense EPA/play",
        y = "Defense EPA/play",
        # caption = "Data: @nflscrapR",
@@ -332,8 +334,8 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_team_tiers_{y
 p <- matchup_chart_all %>% 
   ggplot(aes(x = epa_per_pass, y = opp_def_epa_per_pass)) +
   geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(chart_all$off_epa), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$def_epa), color = "red", linetype = "dashed") +
+  geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa_per_pass), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(matchup_chart_all$epa_per_pass), color = "red", linetype = "dashed") +
   labs(x = "Offense Pass EPA/play",
        y = "Opponent Defense Pass EPA/play",
        # caption = "Data: @nflscrapR",
@@ -361,8 +363,8 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_pass_team_tie
 p <- matchup_chart_all %>% 
   ggplot(aes(x = epa_per_rush, y = opp_def_epa_per_rush)) +
   geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(chart_all$off_epa), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$def_epa), color = "red", linetype = "dashed") +
+  geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa_per_rush), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(matchup_chart_all$epa_per_rush), color = "red", linetype = "dashed") +
   labs(x = "Offense Rush EPA/play",
        y = "Opponent Defense Rush EPA/play",
        # caption = "Data: @nflscrapR",
@@ -385,3 +387,4 @@ p <- matchup_chart_all %>%
   )
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_rush_team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = 'tr')
+

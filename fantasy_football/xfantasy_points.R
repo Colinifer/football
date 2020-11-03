@@ -176,17 +176,40 @@ avg_exp_fp_df %>%
   tab_source_note(source_note = '') %>% 
   data_color(
     columns = vars(half_PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$half_PPR_pts), min(avg_exp_fp_df$half_PPR_pts))), # anyway to automate?
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$half_PPR_pts %>% max(),
+        avg_exp_fp_df$half_PPR_pts %>% min()
+      ),
+      reverse = TRUE
+    ),
+    # anyway to automate?
     autocolor_text = FALSE
   ) %>%
   data_color(
     columns = vars(exp_half_PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$exp_half_PPR_pts), min(avg_exp_fp_df$exp_half_PPR_pts))), # need to adjust for full PPR point scale
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$exp_half_PPR_pts %>% max(),
+        avg_exp_fp_df$exp_half_PPR_pts %>% min()
+      ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
     columns = vars(half_PPR_pts_diff),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$half_PPR_pts_diff), min(avg_exp_fp_df$half_PPR_pts_diff))),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$half_PPR_pts_diff %>% max(),
+        avg_exp_fp_df$half_PPR_pts_diff %>% min()
+      ),
+      reverse = TRUE
+    ),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -195,22 +218,23 @@ avg_exp_fp_df %>%
   ) %>% 
   cols_width(vars(posteam) ~ px(45)) %>% 
   tab_options(
-    table.font.color = 'darkblue',
+    table.font.color = color_cw[5],
     data_row.padding = '2px',
     row_group.padding = '3px',
-    column_labels.border.bottom.color = 'darkblue',
+    column_labels.border.bottom.color = color_cw[5],
     column_labels.border.bottom.width = 1.4,
-    table_body.border.top.color = 'darkblue',
+    table_body.border.top.color = color_cw[5],
     row_group.border.top.width = 1.5,
-    row_group.border.top.color = '#999999',
+    row_group.border.top.color = 'transparent',
     table_body.border.bottom.width = 0.7,
-    table_body.border.bottom.color = '#999999',
+    table_body.border.bottom.color = 'transparent',
     row_group.border.bottom.width = 1,
-    row_group.border.bottom.color = 'darkblue',
+    row_group.border.bottom.color = color_cw[5],
     table.border.top.color = 'transparent',
-    table.background.color = '#F2F2F2',
+    table.background.color = color_cw[1],
+    table_body.hlines.color = color_cw[3],
     table.border.bottom.color = 'transparent',
-    row.striping.background_color = '#FFFFFF',
+    row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 
   gtsave(filename = paste0("xFP_share_half_ppr_", pbp_df$season[1], ".png"), path = "fantasy_football/plots")
@@ -264,17 +288,40 @@ avg_exp_fp_df %>%
   tab_source_note(source_note = '') %>% 
   data_color(
     columns = vars(PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$PPR_pts), min(avg_exp_fp_df$PPR_pts))), # need to adjust for full PPR point scale
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$PPR_pts %>% max(),
+        avg_exp_fp_df$PPR_pts %>% min()
+      ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
     columns = vars(exp_PPR_pts),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$exp_PPR_pts), min(avg_exp_fp_df$exp_PPR_pts))), # need to adjust for full PPR point scale
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$exp_PPR_pts %>% max(),
+        avg_exp_fp_df$exp_PPR_pts %>% min()
+      ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
     columns = vars(PPR_pts_diff),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$PPR_pts_diff), min(avg_exp_fp_df$PPR_pts_diff))),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$PPR_pts_diff %>% max(),
+        avg_exp_fp_df$PPR_pts_diff %>% min()
+      ),
+      reverse = TRUE
+    ),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -283,22 +330,22 @@ avg_exp_fp_df %>%
   ) %>% 
   cols_width(vars(posteam) ~ px(45)) %>% 
   tab_options(
-    table.font.color = 'darkblue',
+    table.font.color = color_cw[5],
     data_row.padding = '2px',
     row_group.padding = '3px',
-    column_labels.border.bottom.color = 'darkblue',
+    column_labels.border.bottom.color = color_cw[5],
     column_labels.border.bottom.width = 1.4,
-    table_body.border.top.color = 'darkblue',
+    table_body.border.top.color = color_cw[5],
     row_group.border.top.width = 1.5,
-    row_group.border.top.color = '#999999',
+    row_group.border.top.color = 'transparent',
     table_body.border.bottom.width = 0.7,
-    table_body.border.bottom.color = '#999999',
+    table_body.border.bottom.color = 'transparent',
     row_group.border.bottom.width = 1,
-    row_group.border.bottom.color = 'darkblue',
+    row_group.border.bottom.color = color_cw[5],
     table.border.top.color = 'transparent',
-    table.background.color = '#F2F2F2',
+    table.background.color = color_cw[1],
     table.border.bottom.color = 'transparent',
-    row.striping.background_color = '#FFFFFF',
+    row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 
   gtsave(filename = paste0("xFP_share_ppr_", pbp_df$season[1], ".png"), path = "fantasy_football/plots")
@@ -444,7 +491,8 @@ cayoe %>%
     exp_td = 'xTD',
     exp_PPR_pts = 'xFP',
     exp_half_PPR_pts = 'x1/2FP',
-    PPR_pts_diff = "Pts Diff." 
+    PPR_pts_diff = "Pts Diff.",
+    half_PPR_pts_diff = "1/2 Pts Diff."
   ) %>% 
   fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, PPR_pts_diff, exp_half_PPR_pts, half_PPR_pts, half_PPR_pts_diff), decimals = 1) %>% 
   fmt_number(columns = vars(yards, exp_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
@@ -456,19 +504,42 @@ cayoe %>%
   tab_source_note(source_note = 'Data: @nflfastR') %>% 
   data_color(
     columns = vars(PPR_pts),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$PPR_pts), min(cayoe$PPR_pts))), # need to adjust for full PPR point scale
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        cayoe$PPR_pts %>% max(), 
+        cayoe$PPR_pts %>% min()
+        ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
     columns = vars(exp_PPR_pts),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$exp_PPR_pts), min(cayoe$exp_PPR_pts))), # need to adjust for full PPR point scale
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        cayoe$exp_PPR_pts %>% max(), 
+        cayoe$exp_PPR_pts %>% min()
+        ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
     autocolor_text = FALSE
   ) %>%
   data_color(
     columns = vars(PPR_pts_diff),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$PPR_pts_diff), min(cayoe$PPR_pts_diff))),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        cayoe$PPR_pts_diff %>% max(), 
+        cayoe$PPR_pts_diff %>% min()
+        ),
+      reverse = TRUE
+    ),
     autocolor_text = FALSE
-  ) %>% 
+  ) %>%  
   text_transform(
     locations = cells_body(vars(posteam)),
     fn = function(x) web_image(url = paste0('https://a.espncdn.com/i/teamlogos/nfl/500/',x,'.png'))
