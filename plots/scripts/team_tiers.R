@@ -196,15 +196,6 @@ defense <- pbp_df %>%
     def_success=mean(success)
   )
 
-# Adjust EPA
-epa_data <- epa_data %>%
-  dplyr::mutate(
-    off_adjustment_factor = ifelse(!is.na(league_mean), league_mean - opp_def_epa, 0),
-    def_adjustment_factor = ifelse(!is.na(league_mean), league_mean - opp_off_epa, 0),
-    adjusted_off_epa = off_epa + off_adjustment_factor,
-    adjusted_def_epa = def_epa + def_adjustment_factor,
-  )
-
 chart_all <- offense %>% 
   inner_join(defense, by=c("season", "posteam" = "defteam")) %>%
   left_join(teams_colors_logos, by = c("posteam" = "team_abbr"))
@@ -237,6 +228,35 @@ p <- chart_all %>%
   )
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = 'tr')
+
+# Pass v Rush EPA
+p <- chart_all %>% 
+  ggplot(aes(x = epa_per_rush, y = epa_per_pass)) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  geom_hline(yintercept = mean(chart_all$epa_per_pass), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(chart_all$epa_per_rush), color = "red", linetype = "dashed") +
+  labs(x = "Rush EPA/play",
+       y = "Pass EPA/play",
+       # caption = "Data: @nflscrapR",
+       title = paste(year, "NFL passing and rushing team tiers through week", as.integer(time_series) + 1)) +
+  geom_abline(slope=slope, intercept=.4, alpha=.2) +
+  geom_abline(slope=slope, intercept=.3, alpha=.2) +
+  geom_abline(slope=slope, intercept=0, alpha=.2) +
+  geom_abline(slope=slope, intercept=.1, alpha=.2) +
+  geom_abline(slope=slope, intercept=.2, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  theme_cw +
+  theme(
+    axis.title.y = element_text(angle = 90),
+    legend.position = c(0.99, 0.99),
+    legend.justification = c(1, 1) ,
+    plot.title = element_text(size = 16, hjust = 0.5),
+    #panel.grid.minor = element_blank()
+  )
+
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_off_pass_and_rush_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = 'tr')
 
 # Next week match-ups -----------------------------------------------------
 

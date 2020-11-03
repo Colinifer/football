@@ -99,8 +99,8 @@ avg_exp_fp_df <- pbp_df %>%
     exp_half_PPR_pts_pg = exp_half_PPR_pts / games,
   ) %>% 
   mutate(
-    half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
-    ppr_pts_diff = PPR_pts - exp_PPR_pts
+    half_PPR_pts_diff = half_PPR_pts - exp_half_PPR_pts,
+    PPR_pts_diff = PPR_pts - exp_PPR_pts
   ) %>% 
   ungroup %>% 
   left_join(
@@ -143,7 +143,7 @@ avg_exp_fp_df %>%
     exp_yards,
     exp_td,
     exp_half_PPR_pts,
-    half_ppr_pts_diff
+    half_PPR_pts_diff
   ) %>%
   arrange(-exp_half_PPR_pts) %>% 
   dplyr::slice(1:50) %>% 
@@ -164,9 +164,9 @@ avg_exp_fp_df %>%
     exp_yards = 'Yds',
     exp_td = 'TD',
     exp_half_PPR_pts = 'FP',
-    half_ppr_pts_diff = "Pts Diff."
+    half_PPR_pts_diff = "Pts Diff."
   ) %>% 
-  fmt_number(columns = vars(exp_td, half_PPR_pts, exp_half_PPR_pts, half_ppr_pts_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(exp_td, half_PPR_pts, exp_half_PPR_pts, half_PPR_pts_diff), decimals = 1) %>% 
   fmt_number(columns = vars(yards, exp_yards, exp_catches), decimals = 0, sep_mark = ',') %>% 
   tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
   tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
@@ -185,8 +185,8 @@ avg_exp_fp_df %>%
     autocolor_text = FALSE
   ) %>%
   data_color(
-    columns = vars(half_ppr_pts_diff),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$half_ppr_pts_diff), min(avg_exp_fp_df$half_ppr_pts_diff))),
+    columns = vars(half_PPR_pts_diff),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$half_PPR_pts_diff), min(avg_exp_fp_df$half_PPR_pts_diff))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -231,7 +231,7 @@ avg_exp_fp_df %>%
     exp_yards,
     exp_td,
     exp_PPR_pts,
-    ppr_pts_diff
+    PPR_pts_diff
   ) %>%
   arrange(-exp_PPR_pts) %>% 
   dplyr::slice(1:50) %>% 
@@ -252,9 +252,9 @@ avg_exp_fp_df %>%
     exp_yards = 'Yds',
     exp_td = 'TD',
     exp_PPR_pts = 'FP',
-    ppr_pts_diff = "Pts Diff."
+    PPR_pts_diff = "Pts Diff."
   ) %>% 
-  fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, ppr_pts_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, PPR_pts_diff), decimals = 1) %>% 
   fmt_number(columns = vars(yards, exp_yards, exp_catches), decimals = 0, sep_mark = ',') %>% 
   tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
   tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
@@ -273,8 +273,8 @@ avg_exp_fp_df %>%
     autocolor_text = FALSE
   ) %>%
   data_color(
-    columns = vars(ppr_pts_diff),
-    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$ppr_pts_diff), min(avg_exp_fp_df$ppr_pts_diff))),
+    columns = vars(PPR_pts_diff),
+    colors = scales::col_numeric(palette = c('grey97', 'darkorange1'), domain = c(max(avg_exp_fp_df$PPR_pts_diff), min(avg_exp_fp_df$PPR_pts_diff))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -388,10 +388,14 @@ cayoe <- cayoe_xyac %>%
     exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
     exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
     sum_cayoe = sum(yards-exp_yards, na.rm = T),
+    exp_yards_pg = exp_yards / games,
+    exp_td_pg = exp_td / games,
+    exp_PPR_pts_pg = exp_PPR_pts / games,
+    exp_half_PPR_pts_pg = exp_half_PPR_pts / games
   ) %>%
   mutate(
-    half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
-    ppr_pts_diff = PPR_pts - exp_PPR_pts,
+    half_PPR_pts_diff = half_PPR_pts - exp_half_PPR_pts,
+    PPR_pts_diff = PPR_pts - exp_PPR_pts,
     cayoe_a = sum_cayoe / pass_attempts
   ) %>%
   ungroup %>%
@@ -416,8 +420,8 @@ cayoe %>%
     exp_td,
     exp_PPR_pts,
     exp_half_PPR_pts,
-    ppr_pts_diff,
-    half_ppr_pts_diff
+    PPR_pts_diff,
+    half_PPR_pts_diff
   ) %>%
   arrange(-exp_half_PPR_pts) %>% 
   dplyr::slice(1:50) %>% 
@@ -439,15 +443,16 @@ cayoe %>%
     exp_yards = 'xYds',
     exp_td = 'xTD',
     exp_PPR_pts = 'xFP',
-    ppr_pts_diff = "Pts Diff." 
+    exp_half_PPR_pts = 'x1/2FP',
+    PPR_pts_diff = "Pts Diff." 
   ) %>% 
-  fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, ppr_pts_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, PPR_pts_diff, exp_half_PPR_pts, half_PPR_pts, half_PPR_pts_diff), decimals = 1) %>% 
   fmt_number(columns = vars(yards, exp_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
   tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
   tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
   tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(passer))) %>% 
-  tab_spanner(label = 'Actual', columns = vars(completions, yards, td, PPR_pts)) %>% 
-  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_yards, exp_td, exp_PPR_pts)) %>% 
+  tab_spanner(label = 'Actual', columns = vars(completions, yards, td, PPR_pts, half_PPR_pts)) %>% 
+  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_yards, exp_td, exp_PPR_pts, exp_half_PPR_pts)) %>% 
   tab_source_note(source_note = 'Data: @nflfastR') %>% 
   data_color(
     columns = vars(PPR_pts),
@@ -460,8 +465,8 @@ cayoe %>%
     autocolor_text = FALSE
   ) %>%
   data_color(
-    columns = vars(ppr_pts_diff),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$ppr_pts_diff), min(cayoe$ppr_pts_diff))),
+    columns = vars(PPR_pts_diff),
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe$PPR_pts_diff), min(cayoe$PPR_pts_diff))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(

@@ -105,7 +105,7 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
   
   # showtext_auto()
   
-  author_txt <- textGrob('By Colin Welsh', x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=color_cw[5], fontfamily="Montserrat", fontsize=6), hjust=0)
+  author_txt <- textGrob('Chart: Colin Welsh', x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=color_cw[5], fontfamily="Montserrat", fontsize=6), hjust=0)
   data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=color_cw[5], fontfamily="Montserrat", fontsize=6), hjust=1)
   # footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c('grey95', 'darkblue'), space = 'rgb')(1000)), draw = F)
   footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c(color_cw[1]), space = 'rgb')(1000)), draw = F)
@@ -178,7 +178,7 @@ theme_cw <-  theme(
   panel.grid.major = element_line(color=color_cw[4], size = 0.3),
   axis.title.y = element_text(angle = 0, vjust = 0.5),
   strip.background = element_rect(fill = color_cw[3]),
-  strip.text = element_text(size = 6, color = color_cw[5], family = "Helvetica"),
+  strip.text = element_text(size = 6, color = color_cw[5], family = "Chivo"),
   legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
   panel.spacing.x = unit(0.1, 'lines')
