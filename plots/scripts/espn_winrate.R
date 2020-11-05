@@ -324,6 +324,111 @@ gt_tab
 gt::gtsave(gt_tab, filename = 'espn_winrate_df_matchup.png', path = 'plots/desktop/', zoom = 1, vwidth = 100000)
 
 
+# Win Rate Scatter Plot ---------------------------------------------------
+
+# Team info
+
+p <- matchup_df_adv %>% 
+  mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
+  ggplot(aes(x = prwr, y = rswr)) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 4/3) +
+  geom_hline(yintercept = mean(matchup_df_adv$rswr), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(matchup_df_adv$prwr), color = "red", linetype = "dashed") +
+  labs(x = "Pass Rush Win Rate %",
+       y = "Run Stop Win Rate %",
+       # caption = "Data: @nflscrapR",
+       title = glue("{year} NFL Defensive Line Win Rate"),
+       subtitle = glue("Through week {n_week}")) +
+  # geom_abline(slope= 1, intercept=0, alpha=.2) +
+  theme_cw +
+  theme(
+    axis.title.y = element_text(angle = 90),
+    legend.position = c(0.99, 0.99),
+    legend.justification = c(1, 1) ,
+    plot.title = element_text(size = 16),
+    #panel.grid.minor = element_blank()
+  )
+
+brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/defense_win_rate_{year}.png'), data_home = 'Data: ESPN', fade_borders = '')
+
+
+p <- matchup_df_adv %>% 
+  mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
+  ggplot(aes(x = pbwr, y = rbwr)) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 4/3) +
+  geom_hline(yintercept = mean(matchup_df_adv$rbwr), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(matchup_df_adv$pbwr), color = "red", linetype = "dashed") +
+  labs(x = "Pass Block Win Rate %",
+       y = "Run Block Win Rate %",
+       # caption = "Data: @nflscrapR",
+       title = glue("{year} NFL Offensive Line Win Rate"),
+       subtitle = glue("Through week {n_week}")) +
+  # geom_abline(slope= 1, intercept=0, alpha=.2) +
+  theme_cw +
+  theme(
+    axis.title.y = element_text(angle = 90),
+    legend.position = c(0.99, 0.99),
+    legend.justification = c(1, 1) ,
+    plot.title = element_text(size = 16),
+    #panel.grid.minor = element_blank()
+  )
+
+brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/offense_win_rate_{year}.png'), data_home = 'Data: ESPN', fade_borders = '')
+
+
+# Opponent/Matchup info
+
+# Pass Rush vs Pass Block (up adn right is good)
+p <- matchup_df_adv %>% 
+  mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
+  ggplot(aes(x = prwr, y = opp_pbwr)) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 4/3) +
+  geom_hline(yintercept = mean(matchup_df_adv$opp_pbwr), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(matchup_df_adv$prwr), color = "red", linetype = "dashed") +
+  scale_y_reverse() +
+  labs(x = "Pass Rush Win Rate %",
+       y = "Opp. Pass Block Win Rate %",
+       # caption = "Data: @nflscrapR",
+       title = glue("{year} Week {n_week} OL/DL Passing Matchups"),
+       subtitle = glue("Pass rush win rate vs. week {n_week} opponent pass block win rate")) +
+  # geom_abline(slope= 1, intercept=0, alpha=.2) +
+  theme_cw +
+  theme(
+    axis.title.y = element_text(angle = 90),
+    legend.position = c(0.99, 0.99),
+    legend.justification = c(1, 1) ,
+    plot.title = element_text(size = 16),
+    #panel.grid.minor = element_blank()
+  )
+
+brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/matchup_pass_rush_win_rate_{year}.png'), data_home = 'Data: ESPN', fade_borders = '')
+
+
+# Run Stop vs Run Block (up adn right is good)
+p <- matchup_df_adv %>% 
+  mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
+  ggplot(aes(x = rswr, y = opp_rbwr)) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 4/3) +
+  geom_hline(yintercept = mean(matchup_df_adv$opp_rbwr), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(matchup_df_adv$rswr), color = "red", linetype = "dashed") +
+  scale_y_reverse() +
+  labs(x = "Run Stop Win Rate %",
+       y = "Opp. Run Block Win Rate %",
+       # caption = "Data: @nflscrapR",
+       title = glue("{year} Week {n_week} OL/DL Rushing Matchups"),
+       subtitle = glue("Run stop win rate vs. week {n_week} opponent run block win rate")) +
+  # geom_abline(slope= 1, intercept=0, alpha=.2) +
+  theme_cw +
+  theme(
+    axis.title.y = element_text(angle = 90),
+    legend.position = c(0.99, 0.99),
+    legend.justification = c(1, 1) ,
+    plot.title = element_text(size = 16),
+    #panel.grid.minor = element_blank()
+  )
+
+brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/matchup_run_stop_win_rate_{year}.png'), data_home = 'Data: ESPN', fade_borders = '')
+
 # Test --------------------------------------------------------------------
 
 # proj_df <- scrape_fpi(stat = 'PROJ')
