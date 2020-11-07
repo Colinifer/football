@@ -156,7 +156,7 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_adj_{year}
 
 epa_data <- pbp_df %>%
   # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
-  dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam)) %>%
+  dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), !is.na(down)) %>%
   dplyr::group_by(game_id, season, week, posteam, home_team) %>%
   dplyr::summarise(
     off_epa = mean(epa),
@@ -172,7 +172,7 @@ epa_data <- pbp_df %>%
   dplyr::select(game_id, season, week, home_team, away_team, posteam, opponent, off_epa, def_epa)
 
 offense <- pbp_df %>%
-  filter(!is.na(epa) & !is.na(posteam)) %>% 
+  filter(!is.na(epa) & !is.na(posteam), !is.na(down)) %>% 
   group_by(posteam, season)%>%
   summarize(
     n_pass=sum(pass),
@@ -186,8 +186,8 @@ offense <- pbp_df %>%
   )
 
 defense <- pbp_df %>%
-  filter(!is.na(epa) & !is.na(defteam)) %>% 
-  group_by(defteam, season)%>%
+  filter(!is.na(epa) & !is.na(defteam), !is.na(down)) %>% 
+  group_by(defteam, season) %>%
   summarize(
     def_n_pass=sum(pass),
     def_n_rush=sum(rush),
