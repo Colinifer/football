@@ -150,4 +150,4 @@ p <- qb_top_bottom %>%
 
 # p
 
-brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = 'tr')
+brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = '')

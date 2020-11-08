@@ -4,6 +4,7 @@ pbp_df <- purrr::map_df(2020, function(x) {
   readRDS(url(
     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
   ))
+# }) %>% filter(week < 9)
 })
 print(year)
 
@@ -36,7 +37,7 @@ epa_data <- pbp_df %>%
   dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam)) %>%
   dplyr::group_by(game_id, season, week, posteam, home_team) %>%
   dplyr::summarise(
-    off_epa = mean(epa),
+    off_epa = mean(epa, na.rm = TRUE),
   ) %>%
   dplyr::left_join(pbp_df %>%
                      filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
@@ -130,7 +131,7 @@ p <- chart_all %>%
   labs(x = "Adj. Offense EPA/play",
        y = "Adj. Defense EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL adjusted team tiers"),
+       title = glue("{year} NFL Adjusted Team Tiers"),
        subtitle = glue("Offense and defense adjusted EPA per play through week {n_week}\nAdjusted for previous matchups")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -172,7 +173,7 @@ epa_data <- pbp_df %>%
   dplyr::select(game_id, season, week, home_team, away_team, posteam, opponent, off_epa, def_epa)
 
 offense <- pbp_df %>%
-  filter(!is.na(epa) & !is.na(posteam), !is.na(down)) %>% 
+  filter(!is.na(epa) & !is.na(posteam)) %>% 
   group_by(posteam, season)%>%
   summarize(
     n_pass=sum(pass),
@@ -186,7 +187,7 @@ offense <- pbp_df %>%
   )
 
 defense <- pbp_df %>%
-  filter(!is.na(epa) & !is.na(defteam), !is.na(down)) %>% 
+  filter(!is.na(epa) & !is.na(defteam)) %>% 
   group_by(defteam, season) %>%
   summarize(
     def_n_pass=sum(pass),
@@ -211,7 +212,7 @@ p <- chart_all %>%
   labs(x = "Offense EPA/play",
        y = "Defense EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL team tiers"),
+       title = glue("{year} NFL Team Tiers"),
        subtitle = glue("Offense and defense EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -242,7 +243,7 @@ p <- chart_all %>%
   labs(x = "Pass EPA/play",
        y = "Rush EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL offense team tiers"),
+       title = glue("{year} NFL Offense Team Tiers"),
        subtitle = glue("Offense passing and rushing EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -273,7 +274,7 @@ p <- chart_all %>%
   labs(x = "Defense Pass EPA/play",
        y = "Defense Rush EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL defense team tiers"),
+       title = glue("{year} NFL Defense Team Tiers"),
        subtitle = glue("Defense passing and rushing EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -346,7 +347,7 @@ p <- matchup_chart_all %>%
   labs(x = "Offense EPA/play",
        y = "Opponent Defense EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL team tiers matchups through week {n_week}"),
+       title = glue("{year} NFL Team Tiers Matchups through Week {n_week}"),
        subtitle = glue("Team offense and week {n_week} opponent defense EPA per play")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -376,7 +377,7 @@ p <- matchup_chart_all %>%
   labs(x = "Offense Pass EPA/play",
        y = "Opponent Defense Pass EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL team tiers passing matchups through week {n_week}"),
+       title = glue("{year} NFL Team Tiers Passing Matchups through Week {n_week}"),
        subtitle = glue("Team passing offense and week {n_week} opponent passing defense EPA per play")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -406,7 +407,7 @@ p <- matchup_chart_all %>%
   labs(x = "Offense Rush EPA/play",
        y = "Opponent Defense Rush EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL team tiers rushing matchups through week {n_week}"),
+       title = glue("{year} NFL Team Tiers Rushing Matchups through Week {n_week}"),
        subtitle = glue("Team rushing offense and week {n_week} opponent rushing defense EPA per play")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
