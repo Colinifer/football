@@ -15,13 +15,13 @@ defteam_rec <- pbp_df %>%
          cp,
          pass_touchdown) %>% 
   # filter(!is.na(receiver)) %>% 
-  filter(defteam == 'LV') %>%
+  # filter(defteam == 'LV') %>%
   group_by(receiver_player_id) %>% 
   mutate(
     target = 0,
     game_played = 0
   )  %>% 
-  group_by(game_id, receiver) %>% 
+  group_by(game_id, receiver, defteam) %>% 
   mutate(game_played = ifelse(row_number()==1,1,0)) %>% 
   ungroup %>% 
   group_by(game_id, play_id, receiver) %>% 
@@ -34,7 +34,7 @@ defteam_rec <- pbp_df %>%
          complete_right = ifelse(complete_pass == 1 & pass_location =='right',1,0)
            ) %>% 
   ungroup %>% 
-  group_by(posteam, receiver) %>% 
+  group_by(posteam, receiver, defteam) %>% 
   summarize(
     receiver_id = unique(receiver_id),
     games = sum(game_played, na.rm = T),
