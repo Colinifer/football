@@ -121,11 +121,15 @@ receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
       select(position, sportradar_id, gsis_id, espn_id, headshot_url),
     by = c("receiver_id" = "gsis_id")
   ) %>%
-  left_join(espn_players_df %>%
-              select(id, status, onTeamId),
-            by = c("espn_id" = "id")) %>%
+  # Add ESPN free agent info
+  # left_join(espn_players_df %>%
+  #             select(id, status, onTeamId),
+  #           by = c("espn_id" = "id")) %>%
   # filter(status != "ONTEAM") %>% #Use to search through FA's
-  mutate(tm_rnk = row_number()) %>%
+  mutate(
+    status = 'ONTEAM',
+    tm_rnk = row_number()
+    ) %>%
   ungroup() %>% 
   group_by(position) %>% 
   mutate(pos_rnk = row_number()) %>% 
@@ -202,6 +206,7 @@ plot_data <- sim_df %>%
   group_by(posteam, receiver) %>%
   mutate(
     obs_num = row_number(),
+    status = "ONTEAM",
     status_color = if_else(status != "ONTEAM", color_cw[6], color_cw[5])
   )
 
