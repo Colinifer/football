@@ -11,7 +11,7 @@ library(tidyverse)
 library(parallel)
 library(viridis)
 
-source('init.R')
+# source('init.R')
 
 source('https://github.com/mrcaseb/nflfastR/blob/master/R/utils.R?raw=true')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
@@ -141,7 +141,7 @@ receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
 # make a data frame to loop around
 sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>% 
   right_join(receiver_rank_df %>% select(posteam, receiver)) %>% 
-  select(season, game_id, play_id, posteam, receiver, air_yards, catch_run_prob, half_PPR_points) %>% 
+  select(season, game_id, play_id, posteam, receiver, air_yards, catch_run_prob, half_PPR_points, PPR_points) %>% 
   group_by(game_id, play_id)
 
 
@@ -151,12 +151,17 @@ sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
 fx.sample_sim <- function(nsims = 10000, ncores = .66) {
   # do sim
   sample.fx <- function(x) {
+    sim_number <- x
     sampling_df %>% 
-      mutate(sim_res = sample(half_PPR_points, 1, prob = catch_run_prob)) %>% 
-      select(season, game_id, play_id, posteam, receiver, air_yards, sim_res) %>% 
+      mutate(half_ppr_sim_res = sample(half_PPR_points, 1, prob = catch_run_prob),
+             ppr_sim_res = sample(PPR_points, 1, prob = catch_run_prob),
+             n_sim = sim_number) %>% 
+      select(season, game_id, play_id, posteam, receiver, air_yards, half_ppr_sim_res, ppr_sim_res, n_sim) %>% 
       distinct %>% 
       group_by(posteam, receiver) %>% 
-      summarize(sim_tot = sum(sim_res, na.rm = T), .groups = 'drop') %>% 
+      summarize(half_ppr_sim_tot = sum(half_ppr_sim_res, na.rm = T),
+                ppr_sim_tot = sum(ppr_sim_res, na.rm = T), .groups = 'drop',
+                n_sim = sim_number) %>% 
       return
   }
     no_cores <- detectCores() * ncores
@@ -164,17 +169,37 @@ fx.sample_sim <- function(nsims = 10000, ncores = .66) {
   clusterEvalQ(cl, {
     library(tidyverse)
   })
-    sim_df <- do.call(rbind, parLapply(cl, 1:10000, sample.fx))
+    sim_df <- do.call(rbind, parLapply(cl, 1:nsims, sample.fx))
   stopCluster(cl)
   saveRDS(sim_df, file = 'fantasy_football/data/sample_sim_df.rds')
   assign("sim_df", sim_df, envir = globalenv())
 }
 
 # Run simulation function
-fx.sample_sim(10000, .58)
+start_time <- Sys.time()
+fx.sample_sim(nsims = 5000, ncores = .58)
+end_time <- Sys.time()
+end_time - start_time
 
-sim_df <- sim_df %>% mutate(sim = 1)
 
+sim_df_rank <- sim_df %>% 
+  mutate(sim = 1) %>% 
+  arrange(-half_ppr_sim_tot) %>% 
+  group_by(n_sim) %>% 
+  mutate(half_ppr_sim_rank = row_number()) %>% 
+  arrange(-ppr_sim_tot) %>% 
+  mutate(ppr_sim_rank = row_number()) %>% 
+  ungroup() %>% 
+  group_by(receiver) %>% 
+  summarise(half_ppr_pct_first = sum(ifelse(half_ppr_sim_rank == 1,1,0)) / sim_df$n_sim %>% max(),
+            half_ppr_pct_top_20 = sum(ifelse(half_ppr_sim_rank <= 20,1,0)) / sim_df$n_sim %>% max(),
+            half_ppr_pct_top_30 = sum(ifelse(half_ppr_sim_rank <= 30,1,0)) / sim_df$n_sim %>% max(),
+            ppr_pct_first = sum(ifelse(ppr_sim_rank == 1,1,0)) / sim_df$n_sim %>% max(),
+            ppr_pct_top_20 = sum(ifelse(ppr_sim_rank <= 20,1,0)) / sim_df$n_sim %>% max(),
+            ppr_pct_top_30 = sum(ifelse(ppr_sim_rank <= 30,1,0)) / sim_df$n_sim %>% max()) %>% 
+  arrange(-ppr_pct_first) %>% 
+  ungroup()
+  slice(1:10)
 
 
 # calculate how many points were actually scored

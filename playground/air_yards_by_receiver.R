@@ -134,7 +134,7 @@ posteam_rec <- pbp_df %>%
          complete_right = ifelse(complete_pass == 1 & pass_location =='right',1,0)
   ) %>% 
   ungroup %>% 
-  group_by(game_id, posteam, receiver) %>% 
+  group_by(posteam, receiver) %>% 
   summarize(
     receiver_id = unique(receiver_id),
     games = sum(game_played, na.rm = T),
@@ -169,6 +169,25 @@ posteam_rec <- pbp_df %>%
   arrange(air_yards_pg %>% 
             desc()
   )
+
+posteam_rec %>% 
+  left_join(sleeper_players_df %>% select(gsis_id, position), 
+            by = c("receiver_id" = "gsis_id")) %>% 
+  filter((position == 'TE' & 
+           targets_pg >= quantile(posteam_rec$targets_pg)[4] & 
+           td_pg >= quantile(posteam_rec$td_pg)[3]) | (position == 'TE' & receiver == "J.Smith")) %>% 
+  arrange(-adot)
+
+
+posteam_rec %>% 
+  left_join(sleeper_players_df %>% select(gsis_id, position), 
+            by = c("receiver_id" = "gsis_id")) %>% 
+  filter(position == 'WR' & 
+           targets_pg >= quantile(posteam_rec$targets_pg)[4] & 
+           td_pg >= quantile(posteam_rec$td_pg)[4]) %>% 
+  arrange(-adot)
+
+
   slice(1:20) %>% 
   ggplot(
     aes(x = receiver, y = tot_air_yards)) +
