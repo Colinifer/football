@@ -334,12 +334,14 @@ team_passing <- pbp_df %>%
   )
 
 
+
+# QB Pass Yds vs Opp Def. Pass Yds ----------------------------------------
+
 source('https://raw.githubusercontent.com/mrcaseb/nflfastR/master/R/utils.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
 source('fantasy_football/xyac/add_xyac_old.R')
 
-# YAC Distribution Function -----------------------------------------------
 
 # duplicate the add_xyac() function that we sourced above
 add_xyac_dist <- add_xyac
@@ -451,16 +453,16 @@ qb_passing %>%
   ) %>% 
   left_join(
     matchup_df %>% 
-      filter(week == 9) %>% 
+      filter(week == pbp_df %>% select(week) %>% max() + 1) %>% 
       select(weekday, gametime, posteam, oppteam) %>% 
       left_join(
-        team_passing,
-        by = c('posteam' = 'posteam')
+        team_passing %>% setNames(paste0('opp_', names(.))),
+        by = c('oppteam' = 'opp_posteam')
         ),
     by = c('posteam' = 'posteam')
   ) %>% 
   mutate(
-    tot_py_pg = yards_pg + (def_tot_rec_yards / games)
+    tot_py_pg = yards_pg + (opp_def_tot_rec_yards / opp_games)
   ) %>% 
   select(
     passer,
