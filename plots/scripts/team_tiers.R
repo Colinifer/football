@@ -73,9 +73,9 @@ opponent_data <- epa_data %>%
   dplyr::group_by(posteam) %>%
   dplyr::arrange(season, week) %>%
   dplyr::mutate(
-    opp_def_epa = pracma::movavg(opp_def_epa, n = time_series, type = "s"),
+    opp_def_epa = pracma::movavg(opp_def_epa, n = time_series - 1, type = "s"),
     opp_def_epa = dplyr::lag(opp_def_epa),
-    opp_off_epa = pracma::movavg(opp_off_epa, n = time_series, type = "s"),
+    opp_off_epa = pracma::movavg(opp_off_epa, n = time_series - 1, type = "s"),
     opp_off_epa = dplyr::lag(opp_off_epa)
   )
 

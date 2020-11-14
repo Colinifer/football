@@ -4,7 +4,7 @@
 
 library(tidyverse)
 
-source('init.R')
+# source('init.R')
 
 source('https://raw.githubusercontent.com/mrcaseb/nflfastR/master/R/utils.R')
 source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')

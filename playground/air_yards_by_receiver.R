@@ -98,7 +98,9 @@ slice(1:20) %>%
   )
 
 
-posteam_rec <- pbp_df %>% 
+# posteam_rec <- 
+  
+pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
   select(season, 
          game_id, 
@@ -141,6 +143,7 @@ posteam_rec <- pbp_df %>%
     targets = sum(target, na.rm = T),
     targets_pg = targets / games,
     tot_rec_yards = sum(yards_gained, na.rm =TRUE),
+    rec_yards_pg = tot_rec_yards / games,
     tot_air_yards = sum(air_yards, ra.rm = TRUE),
     air_yards_pg = tot_air_yards / games,
     racr = tot_rec_yards / tot_air_yards,
@@ -162,13 +165,25 @@ posteam_rec <- pbp_df %>%
     rec_r_perct = rec_r / targets
   ) %>% 
   left_join(sleeper_players_df %>% 
-              select(gsis_id, height, headshot_url),
+              select(gsis_id, position, height, espn_id, headshot_url),
             by = c('receiver_id' = 'gsis_id')
   ) %>% 
+  # Add ESPN free agent info
+  left_join(espn_players_df %>%
+              select(id, 
+                     status, 
+                     onTeamId
+                     ),
+            by = c("espn_id" = "id")) %>%
+  # filter(status != "ONTEAM") %>%
   ungroup() %>% 
   arrange(air_yards_pg %>% 
             desc()
-  )
+  ) %>% filter(status != "ONTEAM",
+               games > 1,
+               position == "WR"
+               ) %>% 
+  arrange(-rec_yards_pg)
 
 posteam_rec %>% 
   left_join(sleeper_players_df %>% select(gsis_id, position), 
