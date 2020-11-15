@@ -36,13 +36,15 @@ cpoe <-
 # The correct name is being joined using the roster data
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
-summary <-
+summary_df <-
   pbp %>%
   filter(!is.na(cpoe)) %>%
   group_by(passer_player_id) %>%
-  summarise(plays = n()) %>%
-  arrange(desc(plays)) %>%
-  head(30) %>%
+  summarise(plays = n(),
+            total_cpoe = mean(cpoe)) %>%
+  arrange(plays %>% desc()) %>%
+  head(32) %>%
+  arrange(total_cpoe %>% desc()) %>% 
   left_join(
     sleeper_players_df %>% select(team, full_name, gsis, headshot_url),
     by = c("passer_player_id" = "gsis")
@@ -63,7 +65,7 @@ summary <-
 # create data frame used to add the logos
 # arranged by name because name is used for the facet
 colors_raw <-
-  summary %>%
+  summary_df %>%
   group_by(passer_player_id) %>%
   summarise(team = first(team), name = first(full_name)) %>%
   left_join(
@@ -82,57 +84,59 @@ colors <-
 
 # mean data frame for the smoothed line of the whole league
 mean <-
-  summary %>%
+  summary_df %>%
   group_by(air_yards) %>%
   summarise(league = mean(cpoe), league_count = n())
 
-summary_headshots
+summary_images_df <- 
+  summary_df %>% 
+  select(full_name, passer_player_id, headshot_url, team_logo_espn) %>% 
+  unique()
 
 # create the plot. Set asp to make sure the images appear in the correct aspect ratio
-asp <- 1.2
-plot <-
-  summary %>%
+p <-
+  summary_df %>%
   ggplot(aes(x = air_yards, y = cpoe)) +
   geom_smooth(
     data = mean, aes(x = air_yards, y = league, weight = league_count), n = n_eval,
     color = "red", alpha = 0.7, se = FALSE, size = 0.5, linetype = "dashed"
   ) +
   geom_smooth(
-    se = FALSE, alpha = 0.7, aes(color = team_color, weight = count), size = 0.65, n = n_eval
+    se = FALSE, alpha = 0.7, aes(color = team, weight = count), size = 0.65, n = n_eval
   ) +
-  geom_point(aes(color = team_color), size = summary$count / 15, alpha = 0.4) +
-  ggimage::geom_image(aes(x = 27.5, y = -20, image = team_logo_espn),
-    size = .15, by = "width", asp = asp
+  scale_color_manual(values =  NFL_pri,
+                     name = "Team") +
+  geom_point(aes(color = team), size = summary_df$count / 15, alpha = 0.3) +
+  scale_fill_manual(values =  NFL_pri,
+                    name = "Team") +
+  ggimage::geom_image(data = summary_images_df, aes(x = 27.5, y = -20, image = team_logo_espn),
+    size = .2, by = "width", asp = asp
   ) +
-  ggimage::geom_image(aes(data = summary_headshots, x = -2.5, y = -20, image = headshot_url),
-    size = .15, by = "width", asp = asp
+  ggimage::geom_image(data = summary_images_df, aes(x = -2.5, y = -20, image = headshot_url),
+    size = .2, by = "width", asp = asp
   ) +
   xlim(-10, 40) + # makes sure the smoothing algorithm is evaluated between -10 and 40
   coord_cartesian(xlim = c(-5, 30), ylim = c(-25, 25)) + # 'zoom in'
   labs(
     x = "Target Depth In Yards Thrown Beyond The Line Of Scrimmage (DOT)",
-    y = "Completion Percentage Over Expectation (CPOE in percentage points)",
-    caption = "Data: @nflfastR",
+    y = "Completion Percentage Over Expectation\n(CPOE in percentage points)",
     title = glue::glue("Passing Efficiency {season}"),
-    subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets. Smoothed for -10 ≤ DOT ≤ 40 Yards. Red Line = League Average."
+    subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets. Smoothed for -10 ≤ DOT ≤ 40 Yards.\nRed Line = League Average."
   ) +
+  facet_wrap(vars(full_name), ncol = 8, scales = "free") +
   theme_cw +
-  theme_bw() +
   theme(
-    axis.title = element_text(size = 10),
+    axis.title = element_text(size = 8),
     axis.text = element_text(size = 6),
-    plot.title = element_text(size = 12, hjust = 0.5, face = "bold"),
-    plot.subtitle = element_text(size = 10, hjust = 0.5),
-    plot.caption = element_text(size = 8),
+    axis.title.y = element_text(angle = 90),
+    plot.title = element_text(size = 12, face = "bold"),
+    plot.subtitle = element_text(size = 6),
+    # panel.margin.y = ,
     legend.position = "none",
     legend.title = element_blank(),
     legend.text = element_blank(),
-    strip.text = element_text(size = 6, hjust = 0.5, face = "bold"),
-    aspect.ratio = 1 / asp
-  ) +
-  facet_wrap(vars(full_name), ncol = 6, scales = "free")
+    strip.text = element_text(size = 4, hjust = 0.5, face = "bold")
+  )
 
 # save the plot
-ggsave(glue::glue("plots/desktop/cpoe_vs_dot_{season}.png"), dpi = 600, width = 24, height = 21, units = "cm")
-
-# season <- season + 1
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
