@@ -7,25 +7,30 @@ season <- 2020
 
 # load pbp for the choosen seasosn from nflfastR data repo
 # can be multiple seasons as well
-lapply(2009:2020, function(season){
-pbp_df <-
+pbp <-
   purrr::map_df(season, function(x) {
     readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
-  }) %>% decode_player_ids(fast = TRUE) %>% 
-  mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
-         posteam = ifelse(posteam == "LA", "LAR", posteam))
+  })
+
+pbp <- 
+  pbp %>% 
+  decode_player_ids
 
 # load roster data from nflfastR data repo
-roster_df <-
-  readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true")) %>% 
-  decode_player_ids(fast = TRUE)
+roster <-
+  readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true"))
+
+roster <- 
+  roster %>% 
+  decode_player_ids()
 
 # compute cpoe grouped by air_yards
-cpoe <-
-  pbp_df %>%
+matchup_cpoe <-
+  pbp %>%
   filter(!is.na(cpoe)) %>%
   group_by(passer_player_id, air_yards) %>%
-  summarise(count = n(), cpoe = mean(cpoe))
+  summarise(posteam = posteam, defteam = defteam, count = n(), cpoe = mean(cpoe)) %>% 
+  filter(posteam == "NE" | posteam == "BAL" | defteam == "NE" | defteam == "BAL")
 
 # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
 # Since we would filter those plays anyways we can use the id here)
@@ -33,51 +38,34 @@ cpoe <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp_df %>%
-  filter(!is.na(cpoe)
-         ) %>%
+  pbp %>%
+  filter(!is.na(cpoe)) %>%
   group_by(passer_player_id) %>%
+  filter(passer_player_id == "00-0034796" | passer_player_id == "00-0027939") %>% 
+  left_join(pbp %>%
+              filter(!is.na(cpoe)) %>%
+              group_by(defteam) %>%
+              filter(defteam == "NE" | defteam == "BAL"),
+            by = )
   summarise(plays = n(),
-            total_cpoe = mean(cpoe)
-            ) %>%
-  arrange(plays %>% desc()
-          ) %>%
-  left_join(pbp_df %>% 
-              filter(!is.na(passer_player_id)
-                     ) %>% 
-              select(passer_player_id, 
-                     team = posteam
-                     ) %>% 
-              unique(),
-            by = c('passer_player_id')
-            ) %>% 
-  head(32) %>%
-  arrange(total_cpoe %>% 
-            desc()
-          ) %>% 
-  inner_join(
-    as_tibble(roster_df) %>% 
-      select(team = team.abbr, 
-             first_name = teamPlayers.firstName, 
-             last_name = teamPlayers.lastName, 
-             gsis = teamPlayers.gsisId, 
-             headshot_url = teamPlayers.headshot_url
-             ) %>% 
-      mutate(full_name = glue('{first_name} {last_name}')) %>% 
-      select(-first_name, -last_name) %>% unique(),
-    by = c('passer_player_id' = 'gsis', 'team')
+            total_cpoe = mean(cpoe)) %>%
+  arrange(plays %>% desc()) %>%
+  arrange(total_cpoe %>% desc()) %>% 
+  left_join(
+    sleeper_players_df %>% select(team, full_name, gsis, headshot_url),
+    by = c("passer_player_id" = "gsis")
   ) %>%
   mutate(# some headshot urls are broken. They are checked here and set to a default 
     headshot_url = dplyr::if_else(
       RCurl::url.exists(as.character(headshot_url)),
       as.character(headshot_url),
-      'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png',
+      "TEAM",
     )
   ) %>%
-  left_join(cpoe, by = 'passer_player_id') %>%
+  left_join(cpoe, by = "passer_player_id") %>%
   left_join(
     teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
-    by = c('team' = 'team_abbr')
+    by = c("team" = "team_abbr")
   )
 
 # create data frame used to add the logos
@@ -159,5 +147,4 @@ p <-
   )
 
 # save the plot
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-})
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')

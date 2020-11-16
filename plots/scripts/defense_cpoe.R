@@ -7,24 +7,28 @@ season <- 2020
 
 # load pbp for the choosen seasosn from nflfastR data repo
 # can be multiple seasons as well
-lapply(2009:2020, function(season){
-pbp_df <-
+pbp <-
   purrr::map_df(season, function(x) {
     readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
-  }) %>% decode_player_ids(fast = TRUE) %>% 
-  mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
-         posteam = ifelse(posteam == "LA", "LAR", posteam))
+  }) %>% mutate(defteam = ifelse(defteam == "LA", "LAR", defteam))
+
+pbp <- 
+  pbp %>% 
+  decode_player_ids
 
 # load roster data from nflfastR data repo
-roster_df <-
-  readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true")) %>% 
-  decode_player_ids(fast = TRUE)
+roster <-
+  readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true"))
+
+roster <- 
+  roster %>% 
+  decode_player_ids()
 
 # compute cpoe grouped by air_yards
 cpoe <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(cpoe)) %>%
-  group_by(passer_player_id, air_yards) %>%
+  group_by(defteam, air_yards) %>%
   summarise(count = n(), cpoe = mean(cpoe))
 
 # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
@@ -33,64 +37,30 @@ cpoe <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp_df %>%
-  filter(!is.na(cpoe)
-         ) %>%
-  group_by(passer_player_id) %>%
+  pbp %>%
+  filter(!is.na(cpoe)) %>%
+  group_by(defteam) %>%
   summarise(plays = n(),
-            total_cpoe = mean(cpoe)
-            ) %>%
-  arrange(plays %>% desc()
-          ) %>%
-  left_join(pbp_df %>% 
-              filter(!is.na(passer_player_id)
-                     ) %>% 
-              select(passer_player_id, 
-                     team = posteam
-                     ) %>% 
-              unique(),
-            by = c('passer_player_id')
-            ) %>% 
-  head(32) %>%
-  arrange(total_cpoe %>% 
-            desc()
-          ) %>% 
-  inner_join(
-    as_tibble(roster_df) %>% 
-      select(team = team.abbr, 
-             first_name = teamPlayers.firstName, 
-             last_name = teamPlayers.lastName, 
-             gsis = teamPlayers.gsisId, 
-             headshot_url = teamPlayers.headshot_url
-             ) %>% 
-      mutate(full_name = glue('{first_name} {last_name}')) %>% 
-      select(-first_name, -last_name) %>% unique(),
-    by = c('passer_player_id' = 'gsis', 'team')
-  ) %>%
-  mutate(# some headshot urls are broken. They are checked here and set to a default 
-    headshot_url = dplyr::if_else(
-      RCurl::url.exists(as.character(headshot_url)),
-      as.character(headshot_url),
-      'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png',
-    )
-  ) %>%
-  left_join(cpoe, by = 'passer_player_id') %>%
+            total_cpoe = mean(cpoe)) %>%
+  arrange(plays %>% desc()) %>%
+  arrange(total_cpoe %>% desc()) %>% 
+  left_join(cpoe, by = "defteam") %>%
   left_join(
     teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
-    by = c('team' = 'team_abbr')
+    by = c("defteam" = "team_abbr")
   )
 
 # create data frame used to add the logos
 # arranged by name because name is used for the facet
 colors_raw <-
   summary_df %>%
-  group_by(passer_player_id) %>%
-  summarise(team = first(team), name = first(full_name)) %>%
+  group_by(defteam) %>%
+  summarise(defteam = first(defteam)) %>%
   left_join(
     teams_colors_logos %>% select(team_abbr, team_color),
-    by = c("team" = "team_abbr")
+    by = c("defteam" = "team_abbr")
   ) %>%
-  arrange(name)
+  arrange(defteam)
 
 # the below used smooth algorithm uses the parameter n as the number
 # of points at which to evaluate the smoother. When using color as aesthetics
@@ -98,7 +68,7 @@ colors_raw <-
 n_eval <- 80
 colors <-
   as.data.frame(lapply(colors_raw, rep, n_eval)) %>%
-  arrange(name)
+  arrange(defteam)
 
 # mean data frame for the smoothed line of the whole league
 mean <-
@@ -108,7 +78,7 @@ mean <-
 
 summary_images_df <- 
   summary_df %>% 
-  select(full_name, passer_player_id, headshot_url, team_logo_espn) %>% 
+  select(defteam, team_logo_espn) %>% 
   unique()
 
 # create the plot. Set asp to make sure the images appear in the correct aspect ratio
@@ -121,17 +91,14 @@ p <-
     color = "red", alpha = 0.7, se = FALSE, size = 0.5, linetype = "dashed"
   ) +
   geom_smooth(
-    se = FALSE, alpha = 0.9, aes(color = team, weight = count), size = 0.65, n = n_eval
+    se = FALSE, alpha = 0.9, aes(color = defteam, weight = count), size = 0.65, n = n_eval
   ) +
   scale_color_manual(values =  NFL_pri_dark,
                      name = "Team") +
-  geom_point(aes(color = team), size = summary_df$count / 15, alpha = 0.3) +
+  geom_point(aes(color = defteam), size = summary_df$count / 15, alpha = 0.3) +
   # scale_fill_manual(values =  NFL_pri,
   #                   name = "Team") +
   ggimage::geom_image(data = summary_images_df, aes(x = 27.5, y = -20, image = team_logo_espn),
-    size = .2, by = "width", asp = asp
-  ) +
-  ggimage::geom_image(data = summary_images_df, aes(x = -2.5, y = -20, image = headshot_url),
     size = .2, by = "width", asp = asp
   ) +
   xlim(-10, 40) + # makes sure the smoothing algorithm is evaluated between -10 and 40
@@ -142,7 +109,7 @@ p <-
     title = glue::glue("Passing Efficiency {season}"),
     subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets. Smoothed for -10 ≤ DOT ≤ 40 Yards.\nRed Line = League Average."
   ) +
-  facet_wrap(vars(full_name), ncol = 8, scales = "free") +
+  facet_wrap(vars(defteam), ncol = 8, scales = "free") +
   theme_cw +
   theme(
     axis.title = element_text(size = 8),
@@ -159,5 +126,4 @@ p <-
   )
 
 # save the plot
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-})
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/defense_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
