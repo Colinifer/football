@@ -43,6 +43,7 @@ pkgs <- c(
   "grid",
   "extrafont",
   "shadowtext",
+  "viridis",
   "tidytext",
   "RCurl",
   "pracma"

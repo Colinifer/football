@@ -199,22 +199,27 @@ sim_df_rank <- sim_df %>%
             ppr_pct_top_30 = sum(ifelse(ppr_sim_rank <= 30,1,0)) / sim_df$n_sim %>% max()) %>% 
   arrange(-ppr_pct_first) %>% 
   ungroup()
-  slice(1:10)
+  # slice(1:10)
 
 
 # calculate how many points were actually scored
 actual_df <- fant_pt_dist_df %>%
   group_by(posteam, receiver) %>% 
-  summarize(sim_tot = sum(actual_half_PPR_points, na.rm = T), .groups = 'drop') %>% 
-  mutate(sim = 0)
+  summarize(half_ppr_sim_tot = sum(actual_half_PPR_points, na.rm = T), 
+            ppr_sim_tot = sum(actual_PPR_points, na.rm = T),
+            .groups = 'drop') %>% 
+  mutate(n_sim = 0)
 
 
 # figure out what percentile the actual values fall in
 percentile_df <- rbind(sim_df, actual_df) %>% 
   group_by(posteam, receiver) %>% 
-  mutate(perc = percent_rank(sim_tot)) %>% 
-  filter(sim == 0) %>% 
-  mutate(sim_tot = NULL, sim = NULL)
+  mutate(half_ppr_perc = percent_rank(half_ppr_sim_tot),
+         ppr_perc = percent_rank(ppr_sim_tot)) %>% 
+  filter(n_sim == 0) %>% 
+  mutate(half_ppr_sim_tot = NULL, 
+         ppr_sim_tot = NULL, 
+         n_sim = NULL)
 
 
 cols <- c("ONTEAM" = color_cw[5], "FREEAGENT" = color_cw[6], "WAIVERS" = color_cw[7])
@@ -224,8 +229,8 @@ plot_data <- sim_df %>%
   left_join(percentile_df) %>%
   left_join(receiver_rank_df) %>%
   mutate(
-    sim_pg = sim_tot / tot_gp,
-    pl_lab = paste0(receiver, '\n', number(perc * 100, accuracy = 0.1), ' perc.'),
+    half_ppr_sim_pg = half_ppr_sim_tot / tot_gp,
+    pl_lab = paste0(receiver, '\n', number(half_ppr_perc * 100, accuracy = 0.1), ' perc.'),
     posteam = factor(posteam, .tm_div_order_alt)
   ) %>%
   group_by(posteam, receiver) %>%
@@ -246,7 +251,7 @@ p <- plot_data %>%
   select(!tm_rnk, !pos_rnk) %>% 
   filter(tm_rnk <= 4) %>% 
   ggplot(aes(
-    x = sim_pg,
+    x = half_ppr_sim_pg,
     y = tm_rnk,
     group = receiver,
     label = pl_lab

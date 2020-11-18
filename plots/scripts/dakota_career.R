@@ -60,7 +60,7 @@ qb_top_bottom <- pbp_df %>%
   mutate(car_dakota = mgcv::predict.gam(dakota_model, .))
 
 qb_top_bottom <- qb_top_bottom %>% 
-  left_join(sleep.players %>% select(gsis_id, full_name, headshot_url),
+  left_join(sleeper_players_df %>% select(gsis_id, full_name, headshot_url),
             by = c("qb_id" = "gsis_id"))
 
 min_plays <- 200
