@@ -42,7 +42,10 @@ my_week <- pbp_df$week %>% max()
 cayoe_xyac <- pbp_df %>%
   filter(pass_attempt == 1 &
            season_type == 'REG' &
-           two_point_attempt == 0 & !is.na(receiver_id) &
+           two_point_attempt == 0 & 
+           !is.na(receiver_id) &
+           !is.na(air_yards) &
+           !is.na(complete_pass) &
            # wp > .2 &
            # wp < .8 &
            air_yards > 0) %>%
@@ -56,10 +59,8 @@ cayoe <- cayoe_xyac %>%
     posteam = posteam.x,
     passer,
     passer_player_id,
-    passer_id,
     receiver,
     receiver_player_id,
-    receiver_id,
     yardline_100 = yardline_100.x,
     air_yards = air_yards.x,
     actual_yards_gained = yards_gained,
@@ -69,9 +70,10 @@ cayoe <- cayoe_xyac %>%
     yac_prob = prob,
     gain,
     pass_attempt
-  ) %>%
+  ) %>% 
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
+    comp_air_yards = ifelse(complete_pass == 1, air_yards, 0),
     yac_prob = ifelse(yardline_100 == air_yards, 1, yac_prob),
     # PPR_points = 1 + gain / 10 + ifelse(gain == yardline_100, 6, 0),
     # half_PPR_points = .5 + gain / 10 + ifelse(gain == yardline_100, 6, 0),
@@ -79,6 +81,7 @@ cayoe <- cayoe_xyac %>%
     # exp_PPR_points = PPR_points * catch_run_prob,
     # exp_half_PPR_points = half_PPR_points * catch_run_prob,
     exp_yards = gain * catch_run_prob,
+    exp_air_yards = cp * air_yards,
     actual_outcome = ifelse(actual_yards_gained == gain &
                               complete_pass == 1, 1, 0),
     # actual_PPR_points = ifelse(actual_outcome == 1, PPR_points, 0),
@@ -88,7 +91,7 @@ cayoe <- cayoe_xyac %>%
     game_played = 0,
     cayoe = cpoe * air_yards,
     sum_cayoe = 0
-  ) %>%
+  ) %>%  
   group_by(game_id, passer_player_id) %>%
   mutate(game_played = ifelse(row_number() == 1, 1, 0)) %>%
   ungroup %>%
@@ -105,16 +108,18 @@ cayoe <- cayoe_xyac %>%
     games = sum(game_played, na.rm = T),
     pass_attempts = sum(attempt, na.rm = T),
     completions = sum(actual_outcome, na.rm = T),
+    comp_air_yards = sum(ifelse(actual_outcome == 1, comp_air_yards, 0)),
     yards = sum(ifelse(actual_outcome == 1, gain, 0), na.rm = T),
     td = sum(ifelse(gain == yardline_100, actual_outcome, 0), na.rm = T),
     # PPR_pts = sum(actual_PPR_points, na.rm = T),
     # half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
     exp_completions = sum(ifelse(attempt == 1, cp, NA), na.rm = T),
+    exp_air_yards = sum(ifelse(attempt == 1, exp_air_yards, NA), na.rm = T),
     exp_yards = sum(exp_yards, na.rm = T),
     exp_td = sum(ifelse(gain == yardline_100, catch_run_prob, 0), na.rm = T),
     # exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
     # exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
-    sum_cayoe = sum(yards-exp_yards, na.rm = T),
+    sum_cayoe = sum(comp_air_yards-exp_air_yards, na.rm = T),
   ) %>%
   mutate(
     # half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
@@ -137,11 +142,11 @@ cayoe_filtered %>%
     posteam,
     pass_attempts,
     completions,
-    yards,
+    comp_air_yards,
     td,
     # PPR_pts,
     exp_completions,
-    exp_yards,
+    exp_air_yards,
     exp_td,
     # exp_PPR_pts,
     # ppr_pts_diff,
@@ -153,29 +158,29 @@ cayoe_filtered %>%
   mutate(Rank = paste0('#',row_number())) %>%
   gt() %>%
   tab_header(title = paste('Completed Air Yards Over Expected (CAYOE),', cayoe_filtered$season[1]), 
-             subtitle = paste('Through week', my_week, 'TNF', '|', 'Min.', ifelse(round(summary(cayoe_filtered$pass_attempts)[4])>75,75,round(summary(cayoe_filtered$pass_attempts)[4])),'pass attempts > 0 air yards')) %>% 
+             subtitle = paste('Through week', my_week, 'MNF', '|', 'Min.', ifelse(round(summary(cayoe_filtered$pass_attempts)[4])>75,75,round(summary(cayoe_filtered$pass_attempts)[4])),'pass attempts > 0 air yards')) %>% 
   cols_move_to_start(columns = vars(Rank)) %>% 
   cols_label(
     games = 'GP',
     passer = '',
     posteam = '',
-    pass_attempts = 'Pass Attempts',
+    pass_attempts = 'PA',
     completions = 'Comp.',
-    yards = 'Yds',
+    comp_air_yards = 'Air Yds',
     td = 'TD',
     # PPR_pts = 'FP',
     exp_completions = 'xComp.',
-    exp_yards = 'xYds',
+    exp_air_yards = 'xAir Yds',
     exp_td = 'xTD',
     # exp_PPR_pts = 'xFP',
     # ppr_pts_diff = "Pts Diff.",
     sum_cayoe = "Total CAYOE",
-    cayoe_a = "Avg CAYOE"
+    cayoe_a = "Avg. CAYOE"
   ) %>% 
   fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) %>% 
   fmt_number(columns = vars(exp_td), decimals = 1) %>% 
-  fmt_number(columns = vars(yards, exp_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
-  tab_style(style = cell_text(size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
+  fmt_number(columns = vars(comp_air_yards, exp_air_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
+  tab_style(style = cell_text(font = "Chivo", size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
   tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
   tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(passer))) %>% 
   tab_style(
@@ -191,13 +196,19 @@ cayoe_filtered %>%
     )
   ) %>% 
   tab_style(
-    style = cell_text(weight = "bold"),
+    style = cell_text(font = "Chivo", weight = "bold"),
     locations = cells_body(
       columns = vars(Rank, passer)
     )
   ) %>% 
-  tab_spanner(label = 'Actual', columns = vars(completions, yards, td)) %>% 
-  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_yards, exp_td)) %>% 
+  tab_style(
+    style = cell_text(font = "Montserrat"),
+    locations = cells_body(
+      columns = c(4:12)
+    )
+  )
+  tab_spanner(label = 'Actual', columns = vars(completions, comp_air_yards, td)) %>% 
+  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_air_yards, exp_td)) %>% 
   tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') %>% 
   data_color(
     columns = vars(sum_cayoe),

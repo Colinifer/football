@@ -167,9 +167,9 @@ theme_cw <-  theme(
   panel.background = element_rect(fill = color_cw[2], color = 'transparent'),
   axis.ticks = element_line(color = color_cw[5], size = 0.5),
   axis.ticks.length = unit(2.75, 'pt'),
-  axis.title = element_text(face = "bold", size = 8),
+  axis.title = element_text(family = "Chivo", face = "bold", size = 8),
   axis.text = element_text(size = 7, color = color_cw[5]),
-  plot.title = element_text(face = "bold", size = 14),
+  plot.title = element_text(family = "Chivo", face = "bold", size = 14),
   plot.subtitle = element_text(size = 8),
   plot.caption = element_text(family = "Montserrat", size = 5),
   legend.background = element_rect(fill = color_cw[2], color = color_cw[5]),
@@ -503,7 +503,7 @@ NFL_sec <- c(
 NFL_pri_dark <- c(
   'ARI' = '#97233f',
   'ATL' = '#a71930',
-  'BAL' = '#241773',
+  'BAL' = '#9e7c0c',
   'BUF' = '#c60c30',
   'CAR' = '#0085ca',
   'CHI' = '#c83803',
@@ -520,11 +520,11 @@ NFL_pri_dark <- c(
   'LAC' = '#0080c6',
   'LAR' = '#ffd100',
   'MIA' = '#008e97',
-  'MIN' = '#4f2683',
+  'MIN' = '#ffc62f',
   'NE' = '#c60c30',
   'NO' = '#9f8958',
   'NYG' = '#a71930',
-  'NYJ' = '#125740',
+  'NYJ' = '#000000',
   'OAK' = '#a5acaf',
   'LV' = '#a5acaf',
   'PHI' = '#a5acaf',
@@ -535,6 +535,6 @@ NFL_pri_dark <- c(
   'STL' = '#b3995d',
   'TB' = '#d50a0a',
   'TEN' = '#4b92db',
-  'WAS' = '#773141'
+  'WAS' = '#ffb612'
 )
 

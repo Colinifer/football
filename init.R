@@ -165,6 +165,8 @@ fx.get_sleeper_api_players <- function() {
 }
 fx.get_sleeper_api_players()
 
+
+# source("fantasy_football/ff_init.R")
 fx.get_espn_players <- function(u.league_id = 1034400) {
   # espn.league_id <- fantasy_key$league_id[u.league_id]
   files_list <- list.files("fantasy_football/data/free_agents/", pattern = paste0(u.league_id, 'players.*\\', '.rds')) 
@@ -234,15 +236,20 @@ matchup_df <- schedule_df %>%
   ) %>% arrange(old_game_id)
 
 pbp_df <-
-  readRDS(url(
-    glue(
-      'https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'
-    )
-  )) %>%
+  readRDS(glue('data/pbp/play_by_play_{year}.rds')) %>%
   decode_player_ids(fast = T)
+# pbp_df <-
+#   readRDS(url(
+#     glue(
+#       'https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'
+#     )
+#   )) %>%
+#   decode_player_ids(fast = T)
+
+# Participation dataframe
+sr_part_df <- readRDS(glue('data/part/Sportradar_Part_{year}.rds'))
 
 source('plots/assets/plot_theme.R')
-# source("fantasy_football/ff_init.R")
 # source('plots/scripts/team_tiers.R')
 # source('plots/scripts/dakota_career.R')
 # source('plots/scripts/qb_cayoe.R')

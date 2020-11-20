@@ -178,11 +178,13 @@ pbp_df %>%
   # filter(status != "ONTEAM") %>%
   ungroup() %>% 
   arrange(air_yards_pg %>% 
-            desc()
-  ) %>% filter(status != "ONTEAM",
+            desc() 
+  ) %>% filter(status != "ONTEAM" | onTeamId == 8, # Filter available players and compare to current team
                games > 1,
                position == "WR"
                ) %>% 
+  arrange(-targets_pg) %>% 
+  slice(1:20) %>%
   arrange(-rec_yards_pg)
 
 posteam_rec %>% 

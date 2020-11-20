@@ -25,6 +25,22 @@ season <- 2020
     group_by(game_id, passer_player_id) %>%
     summarise(cpoe = mean(cpoe), epa = mean(epa))
   
+  top_32 <- pbp_df %>%
+    filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
+    ) %>%
+    group_by(game_id, passer_player_id) %>%
+    summarise(pa = n(),
+              total_cpoe = mean(cpoe),
+              total_epa = mean(epa)
+    ) %>%
+    arrange(pa %>% desc()
+    ) %>% 
+    group_by(passer_player_id) %>% 
+    mutate(total_pa = sum(pa)) %>% 
+    arrange(total_pa %>% desc()) %>% 
+    select(total_pa) %>% unique() %>% 
+    head(32) %>% 
+    select(passer_player_id)
   # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
   # Since we would filter those plays anyways we can use the id here)
   # The correct name is being joined using the roster data
@@ -34,12 +50,12 @@ season <- 2020
     pbp_df %>%
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
     ) %>%
-    group_by(passer_player_id) %>%
-    summarise(plays = n(),
+    group_by(game_id, passer_player_id) %>%
+    summarise(pa = n(),
               total_cpoe = mean(cpoe),
               total_epa = mean(epa)
     ) %>%
-    arrange(plays %>% desc()
+    arrange(pa %>% desc()
     ) %>%
     left_join(pbp_df %>% 
                 filter(!is.na(passer_player_id)
@@ -50,10 +66,10 @@ season <- 2020
                 unique(),
               by = c('passer_player_id')
     ) %>% 
-    head(32) %>%
     arrange(total_cpoe %>% 
               desc()
-    ) %>% 
+    ) %>%
+    filter(passer_player_id %in% top_32$passer_player_id) %>% 
     inner_join(
       as_tibble(roster_df) %>% 
         select(team = team.abbr, 
@@ -77,7 +93,7 @@ season <- 2020
     left_join(
       teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
       by = c('team' = 'team_abbr')
-    )
+    ) %>% mutate(season = game_id.x %>% substr(1, 4))
   
   # create data frame used to add the logos
   # arranged by name because name is used for the facet
@@ -120,17 +136,17 @@ season <- 2020
     geom_hline(yintercept = mean$league_epa, color = "red", linetype = "dashed") +
     geom_vline(xintercept =  mean$league_cpoe, color = "red", linetype = "dashed") +
     geom_point(alpha = 0.6, aes(color = team), size = 2) +
-    scale_color_manual(values =  NFL_pri_dark,
-                       name = "Team") +
+    # scale_color_manual(values =  NFL_pri_dark,
+    #                    name = "Team") +
     # scale_fill_manual(values =  NFL_pri,
     #                   name = "Team") +
-    ggimage::geom_image(data = summary_images_df, aes(x = 48, y = -1, image = team_logo_espn),
-                        size = .2, by = "width", asp = asp
+    ggimage::geom_image(data = summary_images_df, aes(x = 34, y = -.8, image = team_logo_espn),
+                        size = .25, by = "width", asp = asp
     ) +
-    ggimage::geom_image(data = summary_images_df, aes(x = -48, y = -1, image = headshot_url),
-                        size = .2, by = "width", asp = asp
+    ggimage::geom_image(data = summary_images_df, aes(x = -34, y = -.75, image = headshot_url),
+                        size = .25, by = "width", asp = asp
     ) +
-    coord_cartesian(xlim = c(-50, 50), ylim = c(-1, 1)) + # 'zoom in'
+    coord_cartesian(xlim = c(-40, 40), ylim = c(-1, 1)) + # 'zoom in'
     labs(
       x = "Completion Percentage Over Expectation\n(CPOE in percentage points)",
       y = "EPA per Pass Attempt",
@@ -141,12 +157,16 @@ season <- 2020
     theme_cw +
     theme(
       axis.title = element_text(size = 8),
-      axis.text = element_text(size = 6),
+      axis.text = element_text(size = 5),
+      axis.ticks = element_line(color = color_cw[5], size = 0.3),
+      axis.ticks.length = unit(2, 'pt'),
       axis.title.y = element_text(angle = 90),
-      # panel.background = element_rect(fill = color_cw[3]),
       plot.title = element_text(size = 12, face = "bold"),
       plot.subtitle = element_text(size = 6),
-      # panel.margin.y = ,
+      # plot.margin = margin(1, 1, 1, 1, unit = "cm"),
+      panel.background = element_rect(fill = color_cw[3]),
+      panel.spacing.x = unit(1.25, "lines"),
+      panel.spacing.y = unit(1, "lines"),
       legend.position = "none",
       legend.title = element_blank(),
       legend.text = element_blank(),
@@ -154,5 +174,5 @@ season <- 2020
     )
   
   # save the plot
-  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 # })
