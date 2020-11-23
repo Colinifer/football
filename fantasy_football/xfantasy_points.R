@@ -43,9 +43,11 @@ my_week <- pbp_df %>% select(week) %>% max()
 # Receivers ---------------------------------------------------------------
 
 # Average Expected Fantasy Points - Receivers
-avg_exp_fp_df <- pbp_df %>% 
+pbp_xyac <- pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
-  add_xyac_dist %>% 
+  add_xyac_dist
+
+avg_exp_fp_df <- pbp_xyac %>% 
   select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_player_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(
     gain = ifelse(yardline_100==air_yards, yardline_100, gain),

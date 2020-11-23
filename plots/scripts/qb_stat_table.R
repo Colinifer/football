@@ -11,8 +11,6 @@ source('fantasy_football/xyac/add_xyac_old.R')
 
 # duplicate the add_xyac() function that we sourced above
 add_xyac_dist <- add_xyac
-
-
 # separate each block of code in the add_xyac_dist() function into blocks
 add_xyac_blocks <- body(add_xyac_dist) %>% as.list
 
@@ -26,32 +24,30 @@ add_xyac_blocks[[2]] <- add_xyac_blocks[[2]] %>%
 # replace the body of add_xyac_dist() with our new edited function
 body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 
-
 # Data --------------------------------------------------------------------
 
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
-
 if (exists("pbp_df") == F) {
-  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
+  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'))) %>% decode_player_ids()
 }
 
 my_week <- pbp_df$week %>% max()
 
 
 # Completed Air Yards Over Expected
-cayoe_xyac <- pbp_df %>%
+qb_xyac_beyond_los <- pbp_df %>%
   filter(pass_attempt == 1 &
            season_type == 'REG' &
-           two_point_attempt == 0 & 
+           two_point_attempt == 0 &  
            !is.na(receiver_id) &
            !is.na(air_yards) &
-           !is.na(complete_pass) &
+           !is.na(complete_pass)) %>% 
            # wp > .2 &
            # wp < .8 &
-           air_yards > 0) %>%
+           # air_yards > 0) %>%
   add_xyac_dist
 
-cayoe <- cayoe_xyac %>%
+qb_stat <- qb_xyac_beyond_los %>%
   select(
     season = season.x,
     game_id,
@@ -69,7 +65,10 @@ cayoe <- cayoe_xyac %>%
     cpoe,
     yac_prob = prob,
     gain,
-    pass_attempt
+    pass_attempt,
+    rush_attempt,
+    interception,
+    sack
   ) %>% 
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
@@ -89,8 +88,10 @@ cayoe <- cayoe_xyac %>%
     # completion = 0,
     attempt = 0,
     game_played = 0,
-    cayoe = cpoe * air_yards,
-    sum_cayoe = 0
+    cayoe = ifelse(air_yards > 0, cpoe * air_yards, 0),
+    sum_cayoe = 0,
+    sack_yards = ifelse(sack == 1, actual_yards_gained, 0),
+    rushing_yards = ifelse(rush_attempt == 1, gain, 0)
   ) %>%  
   group_by(game_id, passer_player_id) %>%
   mutate(game_played = ifelse(row_number() == 1, 1, 0)) %>%
@@ -98,7 +99,7 @@ cayoe <- cayoe_xyac %>%
   # group_by(game_id, play_id, passer) %>%
   # mutate(completion = ifelse(row_number() == 1, 1, 0)) %>%
   # ungroup %>%
-  group_by(game_id, play_id, receiver) %>% 
+  group_by(game_id, play_id) %>% 
   mutate(attempt = ifelse(row_number()==1,1,0)) %>% 
   ungroup %>% 
   group_by(posteam, passer) %>%
@@ -108,9 +109,12 @@ cayoe <- cayoe_xyac %>%
     games = sum(game_played, na.rm = T),
     pass_attempts = sum(attempt, na.rm = T),
     completions = sum(actual_outcome, na.rm = T),
+    interceptions = sum(ifelse(attempt == 1, interception, 0), na.rm = T),
+    sacks = sum(ifelse(attempt == 1, sack, 0), na.rm = T),
+    sack_yards = sum(sack_yards, na.rm = T),
     comp_air_yards = sum(ifelse(actual_outcome == 1, comp_air_yards, 0), na.rm = T),
-    yards = sum(ifelse(actual_outcome == 1, gain, 0), na.rm = T),
-    td = sum(ifelse(gain == yardline_100, actual_outcome, 0), na.rm = T),
+    passing_yards = sum(ifelse(actual_outcome == 1, gain, 0), na.rm = T),
+    passing_td = sum(ifelse(gain == yardline_100, actual_outcome, 0), na.rm = T),
     # PPR_pts = sum(actual_PPR_points, na.rm = T),
     # half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
     exp_completions = sum(ifelse(attempt == 1, cp, NA), na.rm = T),
@@ -120,22 +124,28 @@ cayoe <- cayoe_xyac %>%
     # exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
     # exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
     sum_cayoe = sum(comp_air_yards-exp_air_yards, na.rm = T),
-  ) %>%
+    rushing_yards = sum(rushing_yards)
+  ) %>% 
   mutate(
     # half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
     # ppr_pts_diff = PPR_pts - exp_PPR_pts,
-    cayoe_a = sum_cayoe / pass_attempts
+    cayoe_a = sum_cayoe / pass_attempts,
+    exp_air_yards_per_attempt = exp_air_yards / pass_attempts,
+    air_yards_per_attempt = comp_air_yards / pass_attempts,
+    anya = (passing_yards + 20*(passing_td) - 45*(interceptions) - sack_yards)/(pass_attempts + sacks)
   ) %>%
   ungroup
   # filter(pass_attempts > mean(cayoe$pass_attempts)-(mean(cayoe$pass_attempts)*.6))
 
-summary(cayoe$pass_attempts)
+summary(qb_stat$pass_attempts)
 
-cayoe_filtered <- cayoe %>% 
+qb_filtered <- qb_stat %>% 
   filter(pass_attempts >= ifelse(summary(pass_attempts)[4]>75, 75, summary(pass_attempts)[4]))
 
+
+
 # xFP QB table
-cayoe_filtered %>%
+qb_filtered %>%
   select(
     games,
     passer,
@@ -157,8 +167,8 @@ cayoe_filtered %>%
   dplyr::slice(1:50) %>% 
   mutate(Rank = paste0('#',row_number())) %>%
   gt() %>%
-  tab_header(title = paste('Completed Air Yards Over Expected (CAYOE),', cayoe_filtered$season[1]), 
-             subtitle = paste('Through week', my_week, 'MNF', '|', 'Min.', ifelse(round(summary(cayoe_filtered$pass_attempts)[4])>75,75,round(summary(cayoe_filtered$pass_attempts)[4])),'pass attempts > 0 air yards')) %>% 
+  tab_header(title = paste('Completed Air Yards Over Expected (CAYOE),', qb_filtered$season[1]), 
+             subtitle = paste('Through week', my_week, 'MNF', '|', 'Min.', ifelse(round(summary(qb_filtered$pass_attempts)[4])>75,75,round(summary(qb_filtered$pass_attempts)[4])),'pass attempts > 0 air yards')) %>% 
   cols_move_to_start(columns = vars(Rank)) %>% 
   cols_label(
     games = 'GP',
@@ -212,12 +222,12 @@ cayoe_filtered %>%
   tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') %>% 
   data_color(
     columns = vars(sum_cayoe),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$sum_cayoe), min(cayoe_filtered$sum_cayoe))),
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(qb_filtered$sum_cayoe), min(qb_filtered$sum_cayoe))),
     autocolor_text = FALSE
   ) %>% 
   data_color(
     columns = vars(cayoe_a),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$cayoe_a), min(cayoe_filtered$cayoe_a))),
+    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(qb_filtered$cayoe_a), min(qb_filtered$cayoe_a))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
@@ -251,6 +261,6 @@ cayoe_filtered %>%
       default_fonts()
     )
   ) %>% 
-  gtsave(filename = paste0("qb_cayoe_", cayoe_filtered$season[1], ".png"), path = "plots/desktop")
+  gtsave(filename = paste0("qb_cayoe_", qb_filtered$season[1], ".png"), path = "plots/desktop")
 
 # rm(list = ls())

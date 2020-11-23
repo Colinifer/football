@@ -46,7 +46,8 @@ pkgs <- c(
   "viridis",
   "tidytext",
   "RCurl",
-  "pracma"
+  "pracma",
+  'initR'
 )
 installed_packages <- pkgs %in%
   rownames(installed.packages())
@@ -63,7 +64,7 @@ library("nflfastR")
 
 rm(pkgs, installed_packages)
 
-source("../initR/init.R")
+# source("../initR/init.R")
 fx.setdir(proj_name)
 
 # Create standard objects -------------------------------------------------
@@ -72,7 +73,7 @@ fx.setdir(proj_name)
 # Based on NAS sleep schedule
 if ((
   Sys.Date() %>% lubridate::wday() > 1 & # If day is greater than Sunday
-  Sys.Date() %>% lubridate::wday() < 7 & # and day is less than Saturday
+  Sys.Date() %>% lubridate::wday() < 6 & # and day is less than Saturday
   Sys.time() %>% format("%H") %>% as.integer() >= 17 & # and greater than 5PM
   Sys.time() %>% format("%H") %>% as.integer() <= 23 # and less than 12AM
 ) == TRUE) {
