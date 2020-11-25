@@ -1,16 +1,17 @@
 
-
 year
 
-my_key <- sportradar_con %>% 
+sr_key <- sportradar_con %>% 
   filter(sportradar_sports == "NFL Official") %>% 
   select(sportradar_keys) %>% 
   as.character()
 
-szn_json <- RJSONIO::fromJSON(glue('http://api.sportradar.us/nfl/official/trial/v6/en/games/{year}/REG/schedule.json?api_key={my_key}'))
-write(RJSONIO::toJSON(szn_json), glue('data/schedules/{year}.json'))
+# Automate to make calls only on Tuesdays
+season_json <- jsonlite::fromJSON(url(glue('http://api.sportradar.us/nfl/official/trial/v6/en/games/{year}/REG/schedule.json?api_key={sr_key}')))
+jsonlite::write_json(season_json, glue('data/schedules/{year}.json'))
+season_json <- read_json(glue('data/schedules/{year}.json'))
 
-yr_sched <- RJSONIO::fromJSON(glue('data/schedules/{year}.json'))
+yr_sched <- read_json(glue('data/schedules/{year}.json'))
 
 all_id <- unlist(sapply(yr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
@@ -26,27 +27,35 @@ gm_status <- unlist(sapply(yr_sched$weeks, function(wk) {
 
 gm_df <- data.frame(all_id, gm_status, stringsAsFactors = F)
 
-# play by play
-gm_done <- gsub('.json','',dir(glue('/data/schedules/{year}')))
+# Check missing play by play files
+gm_done <- gsub('.json','',dir(glue('data/{year}')))
 loop_id <- gm_df %>% 
   filter(gm_status=='closed' & !(all_id %in% gm_done)) %>% 
   pull(all_id)
 
-for (j in loop_id) {
-  gm_json <- RJSONIO::fromJSON(glue('http://api.sportradar.us/nfl/official/trial/v5/en/games/{j}/pbp.json?api_key={my_key}'))
-  write(RJSONIO::toJSON(gm_json), glue('/data/schedules/{year}/{j}.json'))
-}
+loop_id
+# Download missing play by play files
+lapply(loop_id, function(x){
+  m_json <- jsonlite::fromJSON(url(glue('https://api.sportradar.us/nfl/official/trial/v5/en/games/{x}/pbp.json?api_key={sr_key}')))
+  jsonlite::write_json(gm_json, glue('data/{year}/{x}.json'))
+  Sys.sleep(3)
+  })
 
-# participation
-gm_done <- gsub('.json','',dir(paste0(paste0('data/part/',year))))
+# Check missing participation files
+# Participation is updated weekly on Fridays
+gm_done <- gsub('.json','',dir(glue('data/part/{year}')))
 loop_id <- gm_df %>% 
   filter(gm_status=='closed' & !(all_id %in% gm_done)) %>% 
   pull(all_id)
 
-for (j in loop_id) {
-  gm_json <- fromJSON(paste0('http://api.sportradar.us/nfl/official/trial/v5/en/plays/',j,'/participation.json?api_key=',my_key))
-  write(toJSON(gm_json), paste0('data/part/',year,'/',j,'.json'))
-}
+loop_id
+# Download missing participation files
+lapply(loop_id, function(x){
+  gm_json <- jsonlite::fromJSON(url(glue('https://api.sportradar.us/nfl/official/trial/v6/en/plays/{x}/participation.json?api_key={sr_key}')))
+  jsonlite::write_json(gm_json, glue('data/part/{year}/{x}.json'))
+  Sys.sleep(3)
+  # on.exit(close(gm_json))
+  })
 
 
 # # generate sched
