@@ -1,10 +1,10 @@
 library(RJSONIO)
-library(tidyverse)
+library(tidyvere)
 
 sr_games_df <- readRDS(glue('data/games_{year}.rds')) %>% 
   select(game_id, game_id_SR)
 
-year <- 2020
+# year <- 2020
 
 ### I store all my json files in the folder structure below. I save every file name to this vector and iterate through them
 all_json <- c(dir(glue('data/{year}'), full=T),dir(glue('data/post/{year}'), full=T)) %>% .[which(grepl('.json',.))] 
@@ -65,7 +65,7 @@ SR_stats <- data.frame(do.call(rbind, unlist(unlist(unlist(
   })
 , recursive = F), recursive = F), recursive = F)), stringsAsFactors = F)
 
-### df with all the player-level stats that I want
+# df with all the player-level stats that I want
 single_stat_df <- SR_stats %>% 
   pivot_longer(-c(play_id_SR, player.reference, stat_type, category), names_to = 'stat_name', values_to = 'stat_value') %>% 
   mutate(full_stat_name = paste0(stat_type,'.',stat_name)) %>% 
@@ -119,7 +119,7 @@ play_info_df <- play_info_df %>% select(order(names(.)))
 #  view
 
 pbp_df <-
-  purrr::map_df(season, function(x) {
+  purrr::map_df(year, function(x) {
     readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
   }) %>% decode_player_ids(fast = TRUE)
 
