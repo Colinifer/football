@@ -2,19 +2,23 @@
 
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
 if (exists("pbp_df") == FALSE) {
-  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
+  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'))) %>% decode_player_ids(fast = TRUE)
 }
 
 my_week <- pbp_df %>% select(week) %>% max()
 
-sr_part_df <- sr_part_df %>% 
-  left_join(sr_games_df)
-
-pbp_df %>% 
-  filter(pass_attempt == 1) %>% 
-  left_join(
-    sr_part_df,
-    by = 'game_id', 'play_id')
+yprr <- pbp_df %>% 
+  select(-game_id_SR) %>% 
+  left_join(sr_part_df %>% 
+              left_join(sr_games_df) %>% 
+              mutate(play_id = as.integer(play_id)), 
+            by = c('game_id' = 'game_id', 'play_id' = 'play_id', 'play_id_SR' = 'play_id_SR'), suffix = c('_fastR', '_SR')) %>% 
+  mutate(route_run = ifelse(pass_attempt == 1 & posteam == team & (position == "TE" | position == "WR"), 1, 0)) %>% 
+  filter(position == "WR" | position == "TE") %>% 
+  group_by(name_SR, reference) %>% 
+  summarize(routes_run = sum(route_run, na.rm = T)) %>% 
+  filter(routes_run > 0) %>% 
+  arrange(-routes_run)
 
 # Receivers ---------------------------------------------------------------
 

@@ -8,9 +8,11 @@ library(webshot)
 # source('init.R')
 
 
-pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true')))
-n_week <- pbp_df %>% select(week) %>% max()
-rm(pbp_df)
+# pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true')))
+# n_week <- pbp_df %>% select(week) %>% max()
+# rm(pbp_df)
+
+n_week <- full_pbp_df %>% select(week) %>% max()
 
 all_win_rate <- scrape_espn_win_rate()
 
@@ -319,7 +321,7 @@ gt_tab <- gtdf %>%
   ) %>% 
   opt_table_font(font = google_font(name = 'Chivo'))
 
-gt_tab
+# gt_tab
 
 gt::gtsave(gt_tab, filename = 'espn_winrate_df_matchup.png', path = 'plots/desktop/', zoom = 1, vwidth = 100000)
 
@@ -389,7 +391,7 @@ p <- matchup_df_adv %>%
   labs(x = "Pass Rush Win Rate %",
        y = "Opp. Pass Block Win Rate %",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} Week {n_week} OL/DL Passing Matchups"),
+       title = glue("{year} Week {n_week + 1} OL/DL Passing Matchups"),
        subtitle = glue("Pass rush win rate vs. week {n_week} opponent pass block win rate")) +
   # geom_abline(slope= 1, intercept=0, alpha=.2) +
   theme_cw +
@@ -415,7 +417,7 @@ p <- matchup_df_adv %>%
   labs(x = "Run Stop Win Rate %",
        y = "Opp. Run Block Win Rate %",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} Week {n_week} OL/DL Rushing Matchups"),
+       title = glue("{year} Week {n_week + 1} OL/DL Rushing Matchups"),
        subtitle = glue("Run stop win rate vs. week {n_week} opponent run block win rate")) +
   # geom_abline(slope= 1, intercept=0, alpha=.2) +
   theme_cw +

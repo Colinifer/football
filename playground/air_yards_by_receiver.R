@@ -99,6 +99,69 @@ slice(1:20) %>%
 
 
 # posteam_rec <- 
+team_pass_totals <- pbp_df %>% 
+  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+  select(season, 
+         game_id, 
+         play_id, 
+         posteam,
+         defteam,
+         receiver, 
+         receiver_player_id, 
+         receiver_id, 
+         air_yards, 
+         yards_gained, 
+         complete_pass,
+         pass_location,
+         cp,
+         pass_touchdown) %>% 
+  # filter(!is.na(receiver)) %>% 
+  # filter(posteam == 'LAC') %>%
+  group_by(posteam) %>% 
+  mutate(
+    target = 0,
+    game_played = 0
+  )  %>% 
+  group_by(game_id, posteam) %>% 
+  mutate(game_played = ifelse(row_number()==1,1,0)) %>% 
+  ungroup %>% 
+  group_by(game_id, play_id, receiver) %>% 
+  mutate(target = ifelse(row_number()==1,1,0),
+         pass_left = ifelse(pass_location=='left',1,0),
+         pass_middle = ifelse(pass_location =='middle',1,0),
+         pass_right = ifelse(pass_location =='right',1,0),
+         complete_left = ifelse(complete_pass == 1 & pass_location=='left',1,0),
+         complete_middle = ifelse(complete_pass == 1 & pass_location =='middle',1,0),
+         complete_right = ifelse(complete_pass == 1 & pass_location =='right',1,0)
+  ) %>% 
+  group_by(posteam) %>% 
+  summarize(
+    games = sum(game_played, na.rm = T),
+    targets = sum(target, na.rm = T),
+    targets_pg = targets / games,
+    tot_rec_yards = sum(yards_gained, na.rm =TRUE),
+    rec_yards_pg = tot_rec_yards / games,
+    tot_air_yards = sum(air_yards, na.rm = TRUE),
+    air_yards_pg = tot_air_yards / games,
+    racr = tot_rec_yards / tot_air_yards,
+    receptions = sum(complete_pass),
+    adot = tot_air_yards / targets,
+    td = sum(pass_touchdown, ra.rm = TRUE),
+    td_pg = td / games,
+    target_l = sum(pass_left),
+    target_m = sum(pass_middle),
+    target_r = sum(pass_right),
+    target_l_perct = target_l / targets,
+    target_m_perct = target_m / targets,
+    target_r_perct = target_r / targets,
+    rec_l = sum(complete_left),
+    rec_m = sum(complete_middle),
+    rec_r = sum(complete_right),
+    rec_l_perct = rec_l / targets,
+    rec_m_perct = rec_m / targets,
+    rec_r_perct = rec_r / targets
+  ) %>% rename(team = posteam)
+  
   
 pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
@@ -140,30 +203,64 @@ pbp_df %>%
   summarize(
     receiver_id = unique(receiver_id),
     games = sum(game_played, na.rm = T),
-    targets = sum(target, na.rm = T),
-    targets_pg = targets / games,
-    tot_rec_yards = sum(yards_gained, na.rm =TRUE),
+    tot_targets = sum(target, na.rm = T),
+    targets_pg = tot_targets / games,
+    tot_rec_yards = sum(yards_gained, na.rm =T),
     rec_yards_pg = tot_rec_yards / games,
-    tot_air_yards = sum(air_yards, ra.rm = TRUE),
+    tot_air_yards = sum(air_yards, na.rm = T),
     air_yards_pg = tot_air_yards / games,
     racr = tot_rec_yards / tot_air_yards,
-    receptions = sum(complete_pass),
-    adot = tot_air_yards / targets,
-    td = sum(pass_touchdown, ra.rm = TRUE),
+    receptions = sum(complete_pass, na.rm = T),
+    adot = tot_air_yards / tot_targets,
+    td = sum(pass_touchdown, na.rm = T),
     td_pg = td / games,
-    target_l = sum(pass_left),
-    target_m = sum(pass_middle),
-    target_r = sum(pass_right),
-    target_l_perct = target_l / targets,
-    target_m_perct = target_m / targets,
-    target_r_perct = target_r / targets,
-    rec_l = sum(complete_left),
-    rec_m = sum(complete_middle),
-    rec_r = sum(complete_right),
-    rec_l_perct = rec_l / targets,
-    rec_m_perct = rec_m / targets,
-    rec_r_perct = rec_r / targets
+    target_l = sum(pass_left, na.rm = T),
+    target_m = sum(pass_middle, na.rm = T),
+    target_r = sum(pass_right, na.rm = T),
+    target_l_perct = target_l / tot_targets,
+    target_m_perct = target_m / tot_targets,
+    target_r_perct = target_r / tot_targets,
+    rec_l = sum(complete_left, na.rm = T),
+    rec_m = sum(complete_middle, na.rm = T),
+    rec_r = sum(complete_right, na.rm = T),
+    rec_l_perct = rec_l / tot_targets,
+    rec_m_perct = rec_m / tot_targets,
+    rec_r_perct = rec_r / tot_targets
   ) %>% 
+  mutate(
+    targets_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(targets),
+    targets_market_share = tot_targets / targets_market_cap,
+    targets_pg_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(targets_pg),
+    targets_pg_market_share = targets_pg / targets_pg_market_cap,
+    air_yards_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(tot_air_yards),
+    air_yards_market_share = tot_air_yards / air_yards_market_cap,
+    air_yards_pg_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(air_yards_pg),
+    air_yards_pg_market_share = air_yards_pg / air_yards_pg_market_cap,
+    wopr = (1.5 * targets_market_share) + (0.7 * air_yards_market_share)
+  ) %>% 
+  select(
+    -targets_market_cap,
+    -targets_pg_market_cap,
+    -air_yards_market_cap,
+    -air_yards_pg_market_cap
+  ) %>% 
+  left_join(pbp_df %>% 
+              select(-game_id_SR) %>% 
+              left_join(sr_part_df %>% 
+                          left_join(sr_games_df) %>% 
+                          mutate(play_id = as.integer(play_id)), 
+                        by = c('game_id' = 'game_id', 'play_id' = 'play_id', 'play_id_SR' = 'play_id_SR'), suffix = c('_fastR', '_SR')) %>% 
+              mutate(route_run = ifelse(pass_attempt == 1 & posteam == team & (position == "TE" | position == "WR"), 1, 0)) %>% 
+              filter(position == "WR" | position == "TE") %>% 
+              group_by(name_SR, reference) %>% 
+              summarize(routes_run = sum(route_run, na.rm = T)),
+            by = c('receiver_id' = 'reference')
+            ) %>% 
+  mutate(yprr = tot_rec_yards / routes_run) %>% 
+  select(-name_SR) %>% 
+  # filter(routes_run > 50) %>% 
+  # arrange(-yprr) %>% 
+  # view()
   left_join(sleeper_players_df %>% 
               select(gsis_id, position, height, espn_id, headshot_url),
             by = c('receiver_id' = 'gsis_id')
@@ -183,6 +280,11 @@ pbp_df %>%
                games > 1,
                position == "WR"
                ) %>% 
+  filter(tot_targets > 20 |
+           routes_run > 20) %>% 
+  arrange(-yprr) %>% 
+  view()
+  
   arrange(-targets_pg) %>% 
   slice(1:20) %>%
   arrange(-rec_yards_pg)

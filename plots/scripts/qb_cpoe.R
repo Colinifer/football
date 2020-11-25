@@ -88,7 +88,7 @@ summary_df <-
     by = c('team' = 'team_abbr')
   ) %>% 
   mutate(facet_label_wrap = glue('{full_name}: {total_cpoe}'),
-         total_cpoe = total_cpoe %>% round(2)) %>% 
+         total_cpoe = total_cpoe %>% round(3)) %>% 
   mutate_at(vars(total_cpoe), funs(factor(., levels=unique(.))))
 
 # create data frame used to add the logos
