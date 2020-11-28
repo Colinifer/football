@@ -139,6 +139,8 @@ matchup_df <- schedule_df %>%
       )
   ) %>% arrange(old_game_id)
 
+sr_games_df <- readRDS('data/games_2020.rds')
+
 # source('data/master_sr_pbp.R')
 full_pbp_df <- readRDS('data/pbp/play_by_play_2020.rds')
 full_pbp_df %>% head

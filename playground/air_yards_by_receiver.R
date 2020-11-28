@@ -163,7 +163,7 @@ team_pass_totals <- pbp_df %>%
   ) %>% rename(team = posteam)
   
   
-pbp_df %>% 
+rec_totals <- pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
   select(season, 
          game_id, 
@@ -186,10 +186,10 @@ pbp_df %>%
     target = 0,
     game_played = 0
   )  %>% 
-  group_by(game_id, receiver) %>% 
+  group_by(game_id, receiver_id) %>% 
   mutate(game_played = ifelse(row_number()==1,1,0)) %>% 
   ungroup %>% 
-  group_by(game_id, play_id, receiver) %>% 
+  group_by(game_id, play_id, receiver_id) %>% 
   mutate(target = ifelse(row_number()==1,1,0),
          pass_left = ifelse(pass_location=='left',1,0),
          pass_middle = ifelse(pass_location =='middle',1,0),
@@ -199,9 +199,9 @@ pbp_df %>%
          complete_right = ifelse(complete_pass == 1 & pass_location =='right',1,0)
   ) %>% 
   ungroup %>% 
-  group_by(posteam, receiver) %>% 
+  group_by(posteam, receiver_id) %>% 
   summarize(
-    receiver_id = unique(receiver_id),
+    receiver = unique(receiver),
     games = sum(game_played, na.rm = T),
     tot_targets = sum(target, na.rm = T),
     targets_pg = tot_targets / games,
@@ -228,30 +228,25 @@ pbp_df %>%
     rec_r_perct = rec_r / tot_targets
   ) %>% 
   mutate(
-    targets_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(targets),
-    targets_market_share = tot_targets / targets_market_cap,
-    targets_pg_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(targets_pg),
-    targets_pg_market_share = targets_pg / targets_pg_market_cap,
-    air_yards_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(tot_air_yards),
-    air_yards_market_share = tot_air_yards / air_yards_market_cap,
-    air_yards_pg_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(air_yards_pg),
-    air_yards_pg_market_share = air_yards_pg / air_yards_pg_market_cap,
-    wopr = (1.5 * targets_market_share) + (0.7 * air_yards_market_share)
+    targets_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(targets) %>% as.integer(),
+    targets_market_share = tot_targets / targets_market_cap %>% as.integer(),
+    targets_pg_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(targets_pg) %>% as.integer(),
+    targets_pg_market_share = targets_pg / targets_pg_market_cap %>% as.integer(),
+    air_yards_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(tot_air_yards) %>% as.integer(),
+    air_yards_market_share = tot_air_yards / air_yards_market_cap %>% as.integer(),
+    air_yards_pg_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(air_yards_pg) %>% as.integer(),
+    air_yards_pg_market_share = air_yards_pg / air_yards_pg_market_cap %>% as.integer(),
+    wopr = (1.5 * targets_market_share) + (0.7 * air_yards_market_share) %>% as.integer()
   ) %>% 
-  select(
-    -targets_market_cap,
-    -targets_pg_market_cap,
-    -air_yards_market_cap,
-    -air_yards_pg_market_cap
-  ) %>% 
-  left_join(pbp_df %>% 
+  left_join(full_pbp_df %>% 
               select(-game_id_SR) %>% 
               left_join(sr_part_df %>% 
                           left_join(sr_games_df) %>% 
-                          mutate(play_id = as.integer(play_id)), 
+                          mutate(play_id = as.integer(play_id),
+                                 team = ifelse(team == 'JAC', 'JAX', team)), 
                         by = c('game_id' = 'game_id', 'play_id' = 'play_id', 'play_id_SR' = 'play_id_SR'), suffix = c('_fastR', '_SR')) %>% 
               mutate(route_run = ifelse(pass_attempt == 1 & posteam == team & (position == "TE" | position == "WR"), 1, 0)) %>% 
-              filter(position == "WR" | position == "TE") %>% 
+              filter(position == c('WR', 'TE', 'RB')) %>% 
               group_by(name_SR, reference) %>% 
               summarize(routes_run = sum(route_run, na.rm = T)),
             by = c('receiver_id' = 'reference')
@@ -267,24 +262,46 @@ pbp_df %>%
   ) %>% 
   # Add ESPN free agent info
   left_join(espn_players_df %>%
-              select(id, 
-                     status, 
-                     onTeamId
+              select(id,
+                     status,
+                     team_id = onTeamId,
+                     tot_fpoints = totalRating
                      ),
-            by = c("espn_id" = "id")) %>%
+            by = c('espn_id' = 'id')) %>%
   # filter(status != "ONTEAM") %>%
   ungroup() %>% 
   arrange(air_yards_pg %>% 
             desc() 
-  ) %>% filter(status != "ONTEAM" | onTeamId == 8, # Filter available players and compare to current team
+  ) %>% filter(status != 'ONTEAM' | team_id == 8, # Filter available players and compare to current team
                games > 1,
-               position == "WR"
+               position == c('WR', 'TE', 'RB')
                ) %>% 
-  filter(tot_targets > 20 |
-           routes_run > 20) %>% 
-  arrange(-yprr) %>% 
-  view()
-  
+  # filter(routes_run > 20) %>% 
+  arrange(-wopr) %>% 
+  as_tibble()
+
+rec_totals %>% saveRDS(file = glue('data/{year}/receiver_totals.rds'))
+
+rec_totals %>% as_tibble() %>% 
+  # select(receiver, tot_fpoints, wopr) %>% 
+  ggplot(aes(x = tot_fpoints, y = wopr)) + 
+  geom_text_repel(aes(label = ifelse(wopr > .2 & tot_fpoints > 50 & team_id != 8 & status != 'ONTEAM', receiver, ''), color = position), show.legend = FALSE) +
+  geom_point(aes(color = position)) + 
+  labs(
+    x = 'Total Fantasy Points',
+    y = 'WOPR'
+  )
+
+rec_totals %>% as_tibble() %>% 
+  # select(receiver, tot_fpoints, air_yards_pg) %>% 
+  ggplot(aes(x = tot_fpoints, y = tot_air_yards)) + 
+  geom_text_repel(aes(label = ifelse(tot_air_yards > 400 & tot_fpoints > 50 & team_id != 8 & status != 'ONTEAM', receiver, ''), color = position), show.legend = FALSE) +
+  geom_point(aes(color = position)) + 
+  labs(
+    x = 'Total Fantasy Points',
+    y = 'Total Air Yards'
+  )
+
   arrange(-targets_pg) %>% 
   slice(1:20) %>%
   arrange(-rec_yards_pg)

@@ -102,16 +102,18 @@ avg_exp_fp_df <- pbp_xyac %>%
   ) %>% 
   mutate(
     half_PPR_pts_diff = half_PPR_pts - exp_half_PPR_pts,
-    PPR_pts_diff = PPR_pts - exp_PPR_pts
+    half_PPR_pts_pg_diff = half_PPR_pts_pg - exp_half_PPR_pts_pg,
+    PPR_pts_diff = PPR_pts - exp_PPR_pts,
+    PPR_pts_pg_diff = PPR_pts_pg - exp_PPR_pts_pg
   ) %>% 
   ungroup %>% 
   left_join(
     sleeper_players_df %>%
-      select(position, sportradar_id, gsis_id, espn_id, headshot_url),
+      select(position, sportradar_id, gsis_id, espn_id, headshot_url, injury_status),
     by = c("receiver_id" = "gsis_id")
   ) %>%
   left_join(espn_players_df %>%
-              select(id, status, onTeamId),
+              select(id, status, team_id = onTeamId, injured),
             by = c("espn_id" = "id"))
 
 avg_exp_fp_df %>% 
@@ -132,6 +134,8 @@ library(gt)
 
 # 1/2 PPR xFP table
 avg_exp_fp_df %>%
+  # filter(injured != TRUE & (status != 'ONTEAM' | team_id == 8)) %>% 
+  filter(injured != TRUE) %>% 
   select(
     games,
     receiver,
@@ -140,16 +144,20 @@ avg_exp_fp_df %>%
     catches,
     yards,
     td,
-    half_PPR_pts,
+    half_PPR_pts_pg,
     exp_catches,
     exp_yards,
     exp_td,
-    exp_half_PPR_pts,
-    half_PPR_pts_diff
+    exp_half_PPR_pts_pg,
+    half_PPR_pts_pg_diff,
+    status,
+    team_id
   ) %>%
-  arrange(-exp_half_PPR_pts) %>% 
+  arrange(-half_PPR_pts_pg) %>% 
   dplyr::slice(1:50) %>% 
   mutate(Rank = paste0('#',row_number())) %>%
+  # filter(status != 'ONTEAM' | team_id == 8) %>% 
+  # select(-status, team_id) %>% 
   gt() %>%
   tab_header(title = 'Expected Receiving 1/2 PPR Fantasy Points, 2019') %>% 
   cols_move_to_start(columns = vars(Rank)) %>% 
@@ -161,28 +169,28 @@ avg_exp_fp_df %>%
     catches = 'Rec',
     yards = 'Yds',
     td = 'TD',
-    half_PPR_pts = 'FP',
+    half_PPR_pts_pg = 'FP',
     exp_catches = 'Rec',
     exp_yards = 'Yds',
     exp_td = 'TD',
-    exp_half_PPR_pts = 'FP',
-    half_PPR_pts_diff = "Pts Diff."
+    exp_half_PPR_pts_pg = 'FP',
+    half_PPR_pts_pg_diff = "Pts Diff."
   ) %>% 
-  fmt_number(columns = vars(exp_td, half_PPR_pts, exp_half_PPR_pts, half_PPR_pts_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(exp_td, half_PPR_pts_pg, exp_half_PPR_pts_pg, half_PPR_pts_pg_diff), decimals = 1) %>% 
   fmt_number(columns = vars(yards, exp_yards, exp_catches), decimals = 0, sep_mark = ',') %>% 
   tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
   tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
   tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(receiver))) %>% 
-  tab_spanner(label = 'Actual', columns = vars(catches, yards, td, half_PPR_pts)) %>% 
-  tab_spanner(label = 'Expected', columns = vars(exp_catches, exp_yards, exp_td, exp_half_PPR_pts)) %>% 
+  tab_spanner(label = 'Actual', columns = vars(catches, yards, td, half_PPR_pts_pg)) %>% 
+  tab_spanner(label = 'Expected', columns = vars(exp_catches, exp_yards, exp_td, exp_half_PPR_pts_pg)) %>% 
   tab_source_note(source_note = '') %>% 
   data_color(
-    columns = vars(half_PPR_pts),
+    columns = vars(half_PPR_pts_pg),
     colors = scales::col_numeric(
       palette = c(color_cw[6], color_cw[2]),
       domain = c(
-        avg_exp_fp_df$half_PPR_pts %>% max(),
-        avg_exp_fp_df$half_PPR_pts %>% min()
+        avg_exp_fp_df$half_PPR_pts_pg %>% max(),
+        avg_exp_fp_df$half_PPR_pts_pg %>% min()
       ),
       reverse = TRUE
     ),
@@ -190,12 +198,12 @@ avg_exp_fp_df %>%
     autocolor_text = FALSE
   ) %>%
   data_color(
-    columns = vars(exp_half_PPR_pts),
+    columns = vars(exp_half_PPR_pts_pg),
     colors = scales::col_numeric(
       palette = c(color_cw[6], color_cw[2]),
       domain = c(
-        avg_exp_fp_df$exp_half_PPR_pts %>% max(),
-        avg_exp_fp_df$exp_half_PPR_pts %>% min()
+        avg_exp_fp_df$exp_half_PPR_pts_pg %>% max(),
+        avg_exp_fp_df$exp_half_PPR_pts_pg %>% min()
       ),
       reverse = TRUE
     ),
@@ -203,12 +211,12 @@ avg_exp_fp_df %>%
     autocolor_text = FALSE
   ) %>%
   data_color(
-    columns = vars(half_PPR_pts_diff),
+    columns = vars(half_PPR_pts_pg_diff),
     colors = scales::col_numeric(
       palette = c(color_cw[6], color_cw[2]),
       domain = c(
-        avg_exp_fp_df$half_PPR_pts_diff %>% max(),
-        avg_exp_fp_df$half_PPR_pts_diff %>% min()
+        avg_exp_fp_df$half_PPR_pts_pg_diff %>% max(),
+        avg_exp_fp_df$half_PPR_pts_pg_diff %>% min()
       ),
       reverse = TRUE
     ),
@@ -238,8 +246,9 @@ avg_exp_fp_df %>%
     table.border.bottom.color = 'transparent',
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
-  ) %>% 
+  ) %>%
   gtsave(filename = paste0("xFP_share_half_ppr_", pbp_df$season[1], ".png"), path = "fantasy_football/plots")
+  # )
 
 
 # Full PPR xFP table
