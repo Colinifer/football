@@ -41,7 +41,7 @@ if (exists("pbp_df") == FALSE) {
 my_week <- pbp_df %>% select(week) %>% max()
 
 pbp_df %>% 
-  filter(week >= my_week - 4 & posteam == 'BUF' & pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+  filter(week >= my_week-5 & posteam=='TEN' & pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
   add_xyac_dist %>% 
   select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_player_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(
@@ -129,7 +129,7 @@ pbp_df %>%
     status,
     team_id
   ) %>%
-  arrange(-half_PPR_pts_pg) %>% 
+  arrange(-exp_half_PPR_pts_pg) %>% 
   dplyr::slice(1:50) %>% 
   mutate(Rank = paste0('#',row_number())) %>%
   select(-status, team_id) %>%
