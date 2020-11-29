@@ -35,13 +35,16 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
 if (exists("pbp_df") == FALSE) {
-  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
+  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'))) %>% 
+    decode_player_ids(fast = T)
 }
 
 my_week <- pbp_df %>% select(week) %>% max()
 
-pbp_df %>% 
-  filter(week >= my_week-5 & posteam=='TEN' & pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+xfp <- nflfastR::fast_scraper(game_ids = '2020_12_LV_ATL') %>% 
+  nflfastR::clean_pbp() %>% 
+  decode_player_ids(fast = TRUE) %>% 
+  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
   add_xyac_dist %>% 
   select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_player_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(
@@ -105,13 +108,15 @@ pbp_df %>%
   left_join(
     sleeper_players_df %>%
       select(position, sportradar_id, gsis_id, espn_id, headshot_url, injury_status),
-    by = c("receiver_id" = "gsis_id")
+    by = c('receiver_id' = 'gsis_id')
   ) %>%
   left_join(espn_players_df %>%
               select(id, status, team_id = onTeamId, injured),
-            by = c("espn_id" = "id")) %>% 
+            by = c('espn_id' = 'id')) %>% 
   # filter(injured != TRUE & (status != 'ONTEAM' | team_id == 8)) %>%
-  filter(injured != TRUE) %>%
+  filter(injured != TRUE)
+
+xfp %>% 
   select(
     games,
     receiver,
@@ -164,8 +169,8 @@ pbp_df %>%
     colors = scales::col_numeric(
       palette = c(color_cw[6], color_cw[2]),
       domain = c(
-        avg_exp_fp_df$half_PPR_pts_pg %>% max(),
-        avg_exp_fp_df$half_PPR_pts_pg %>% min()
+        xfp$half_PPR_pts_pg %>% max(),
+        xfp$half_PPR_pts_pg %>% min()
       ),
       reverse = TRUE
     ),
@@ -177,8 +182,8 @@ pbp_df %>%
     colors = scales::col_numeric(
       palette = c(color_cw[6], color_cw[2]),
       domain = c(
-        avg_exp_fp_df$exp_half_PPR_pts_pg %>% max(),
-        avg_exp_fp_df$exp_half_PPR_pts_pg %>% min()
+        xfp$exp_half_PPR_pts_pg %>% max(),
+        xfp$exp_half_PPR_pts_pg %>% min()
       ),
       reverse = TRUE
     ),
@@ -190,8 +195,8 @@ pbp_df %>%
     colors = scales::col_numeric(
       palette = c(color_cw[6], color_cw[2]),
       domain = c(
-        avg_exp_fp_df$half_PPR_pts_pg_diff %>% max(),
-        avg_exp_fp_df$half_PPR_pts_pg_diff %>% min()
+        xfp$half_PPR_pts_pg_diff %>% max(),
+        xfp$half_PPR_pts_pg_diff %>% min()
       ),
       reverse = TRUE
     ),
