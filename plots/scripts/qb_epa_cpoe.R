@@ -1,5 +1,6 @@
 library(tidyverse)
 library(nflfastR)
+load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
 
 # choose seasons for which the plot shall be generated
 # CPOE starts in 2006
@@ -7,7 +8,7 @@ season <- 2020
 
 # load pbp for the choosen seasosn from nflfastR data repo
 # can be multiple seasons as well
-# lapply(2009:2020, function(season){
+lapply(2009:2019, function(season){
   pbp_df <-
     purrr::map_df(season, function(x) {
       readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
@@ -23,24 +24,33 @@ season <- 2020
     pbp_df %>%
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)) %>%
     group_by(game_id, passer_player_id) %>%
-    summarise(cpoe = mean(cpoe), epa = mean(epa))
+    summarise(cpoe = mean(cpoe), epa = mean(epa)) %>% 
+    left_join(pbp_df %>%
+                filter(!is.na(cpoe) &
+                         !is.na(epa) & !is.na(passer_player_id)) %>%
+                group_by(passer_player_id) %>%
+                summarise(cpoe = mean(cpoe), epa_per_play = mean(epa)) %>%
+                mutate(season_dakota = mgcv::predict.gam(dakota_model, .)) %>%
+                select(-cpoe, -epa_per_play),
+              by = c('passer_player_id')
+    )
   
-  top_32 <- pbp_df %>%
+  top_32 <- 
+    pbp_df %>%
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
     ) %>%
-    group_by(game_id, passer_player_id) %>%
-    summarise(pa = n(),
+    group_by(passer_player_id) %>%
+    summarise(posteam = posteam %>% unique(),
+              pa = n(),
               total_cpoe = mean(cpoe),
               total_epa = mean(epa)
     ) %>%
     arrange(pa %>% desc()
     ) %>% 
-    group_by(passer_player_id) %>% 
-    mutate(total_pa = sum(pa)) %>% 
-    arrange(total_pa %>% desc()) %>% 
-    select(total_pa) %>% unique() %>% 
+    unique() %>% 
     head(32) %>% 
-    select(passer_player_id)
+    pull(passer_player_id)
+  
   # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
   # Since we would filter those plays anyways we can use the id here)
   # The correct name is being joined using the roster data
@@ -49,13 +59,11 @@ season <- 2020
   summary_df <-
     pbp_df %>%
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
-    ) %>%
-    group_by(game_id, passer_player_id) %>%
+    ) %>% 
+    group_by(game_id, week, passer_player_id) %>%
     summarise(pa = n(),
               total_cpoe = mean(cpoe),
               total_epa = mean(epa)
-    ) %>%
-    arrange(pa %>% desc()
     ) %>%
     left_join(pbp_df %>% 
                 filter(!is.na(passer_player_id)
@@ -66,19 +74,27 @@ season <- 2020
                 unique(),
               by = c('passer_player_id')
     ) %>% 
-    arrange(total_cpoe %>% 
+    group_by(passer_player_id) %>% 
+    mutate(season_pa = sum(pa, na.rm = T)) %>% 
+    ungroup %>% 
+    arrange(season_pa %>% 
               desc()
-    ) %>%
-    filter(passer_player_id %in% top_32$passer_player_id) %>% 
-    inner_join(
-      as_tibble(roster_df) %>% 
-        select(team = team.abbr, 
-               first_name = teamPlayers.firstName, 
-               last_name = teamPlayers.lastName, 
-               gsis = teamPlayers.gsisId, 
+    ) %>% 
+    filter(passer_player_id %in% top_32) %>%
+    # left_join(
+    #   sleeper_players_df %>%
+    #     select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
+    #   by = c('passer_player_id' = 'gsis_id')
+    # ) %>%
+    left_join(
+      as_tibble(roster_df) %>%
+        select(team = team.abbr,
+               first_name = teamPlayers.firstName,
+               last_name = teamPlayers.lastName,
+               gsis = teamPlayers.gsisId,
                headshot_url = teamPlayers.headshot_url
-        ) %>% 
-        mutate(full_name = glue('{first_name} {last_name}')) %>% 
+        ) %>%
+        mutate(full_name = glue('{first_name} {last_name}')) %>%
         select(-first_name, -last_name) %>% unique(),
       by = c('passer_player_id' = 'gsis', 'team')
     ) %>%
@@ -89,11 +105,13 @@ season <- 2020
         'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png',
       )
     ) %>%
-    left_join(epa_cpoe, by = 'passer_player_id') %>%
+    left_join(epa_cpoe, by = c('passer_player_id', 'game_id')) %>% 
+    arrange(season_dakota %>% desc()) %>% 
     left_join(
       teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
       by = c('team' = 'team_abbr')
-    ) %>% mutate(season = game_id.x %>% substr(1, 4))
+    ) %>% mutate(season = game_id %>% substr(1, 4)) %>% 
+    mutate_at(vars(season_dakota), funs(factor(., levels=unique(.))))
   
   # create data frame used to add the logos
   # arranged by name because name is used for the facet
@@ -124,36 +142,58 @@ season <- 2020
   
   summary_images_df <- 
     summary_df %>% 
-    select(full_name, passer_player_id, headshot_url, team_logo_espn) %>% 
-    unique()
+    select(full_name, passer_player_id, season_dakota, headshot_url, team_logo_espn, season_pa) %>% 
+    unique() %>% 
+    arrange(season_dakota %>% desc()) %>% 
+    head(32)
+  
+  panel_label <- summary_images_df$full_name
+  names(panel_label) <- summary_images_df$season_dakota
   
   # create the plot. Set asp to make sure the images appear in the correct aspect ratio
   asp <- 16/16
   p <-
     summary_df %>%
     ggplot(aes(x = cpoe, y = epa)) +
-    geom_point(aes(color = full_name), size = .2, alpha = 0.3) +
-    geom_hline(yintercept = mean$league_epa, color = "red", linetype = "dashed") +
-    geom_vline(xintercept =  mean$league_cpoe, color = "red", linetype = "dashed") +
-    geom_point(alpha = 0.6, aes(color = team), size = 2) +
+    geom_hline(yintercept = mean$league_epa, 
+               color = "red", 
+               linetype = "dashed") +
+    geom_vline(xintercept =  mean$league_cpoe, 
+               color = "red", 
+               linetype = "dashed") +
+    geom_point(aes(color = team), 
+               size = 1.2, 
+               shape = 16,
+               alpha = 0.75 ) +
+    scale_color_manual(values =  NFL_pri_dark,
+                       name = "Team") +
+    # geom_point(aes(fill = team), shape = 21, size = 1 , alpha = 0.1) +
+    # geom_point(alpha = 0.2, aes(color = team), size = .5) +
     # scale_color_manual(values =  NFL_pri_dark,
     #                    name = "Team") +
-    # scale_fill_manual(values =  NFL_pri,
-    #                   name = "Team") +
-    ggimage::geom_image(data = summary_images_df, aes(x = 34, y = -.8, image = team_logo_espn),
+    geom_point(data = summary_df %>% 
+                 group_by(passer_player_id) %>% 
+                 filter(row_number()==n()), 
+               aes(fill = team),
+               color = color_cw[5],
+               shape = 21, 
+               size = 1.2) +
+    scale_fill_manual(values =  NFL_pri_dark,
+                       name = "Team") +
+    ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.55, image = team_logo_espn),
                         size = .25, by = "width", asp = asp
     ) +
-    ggimage::geom_image(data = summary_images_df, aes(x = -34, y = -.75, image = headshot_url),
-                        size = .25, by = "width", asp = asp
+    ggimage::geom_image(data = summary_images_df, aes(x = -26.5, y = -.55, image = headshot_url),
+                        size = .4, by = "width", asp = asp
     ) +
-    coord_cartesian(xlim = c(-40, 40), ylim = c(-1, 1)) + # 'zoom in'
+    coord_cartesian(xlim = c(-35, 35), ylim = c(-.75, 1.25)) + # 'zoom in'
     labs(
       x = "Completion Percentage Over Expectation\n(CPOE in percentage points)",
       y = "EPA per Pass Attempt",
       title = glue::glue("Passing Efficiency by Game {season}"),
       subtitle = ""
     ) +
-    facet_wrap(vars(full_name), ncol = 8, scales = "fixed") +
+    facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 8) +
     theme_cw +
     theme(
       axis.title = element_text(size = 8),
@@ -164,7 +204,7 @@ season <- 2020
       plot.title = element_text(size = 12, face = "bold"),
       plot.subtitle = element_text(size = 6),
       # plot.margin = margin(1, 1, 1, 1, unit = "cm"),
-      panel.background = element_rect(fill = color_cw[3]),
+      panel.background = element_rect(fill = color_cw[2]),
       panel.spacing.x = unit(1.25, "lines"),
       panel.spacing.y = unit(1, "lines"),
       legend.position = "none",
@@ -175,4 +215,70 @@ season <- 2020
   
   # save the plot
   brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-# })
+  
+  
+  # Mobile
+  p <-
+    summary_df %>%
+    ggplot(aes(x = cpoe, y = epa)) +
+    geom_hline(yintercept = mean$league_epa, 
+               color = "red", 
+               linetype = "dashed") +
+    geom_vline(xintercept =  mean$league_cpoe, 
+               color = "red", 
+               linetype = "dashed") +
+    geom_point(aes(color = team), 
+               size = 1.2,
+               shape = 16,
+               alpha = 0.75) +
+    scale_color_manual(values =  NFL_pri_dark,
+                       name = "Team") +
+    # geom_point(aes(fill = team), shape = 21, size = 1 , alpha = 0.1) +
+    # geom_point(alpha = 0.2, aes(color = team), size = .5) +
+    # scale_color_manual(values =  NFL_pri_dark,
+    #                    name = "Team") +
+    geom_point(data = summary_df %>% 
+                 group_by(passer_player_id) %>% 
+                 filter(row_number()==n()), 
+               aes(fill = team),
+               color = color_cw[5],
+               shape = 21, 
+               size = 1.2) +
+    scale_fill_manual(values =  NFL_pri_dark,
+                      name = "Team") +
+    ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.55, image = team_logo_espn),
+                        size = .25, by = "width", asp = asp
+    ) +
+    ggimage::geom_image(data = summary_images_df, aes(x = -26.5, y = -.55, image = headshot_url),
+                        size = .4, by = "width", asp = asp
+    ) +
+    coord_cartesian(xlim = c(-35, 35), ylim = c(-.75, 1.25)) + # 'zoom in'
+    labs(
+      x = "Completion Percentage Over Expectation (CPOE in percentage points)",
+      y = "EPA per Pass Attempt",
+      title = glue::glue("Passing Efficiency by Game {season}"),
+      subtitle = ""
+    ) +
+    facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 4) +
+    theme_cw +
+    theme(
+      axis.title = element_text(size = 8),
+      axis.text = element_text(size = 5),
+      axis.ticks = element_line(color = color_cw[5], size = 0.3),
+      axis.ticks.length = unit(2, 'pt'),
+      axis.title.y = element_text(angle = 90),
+      plot.title = element_text(size = 12, face = "bold"),
+      plot.subtitle = element_text(size = 6),
+      plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
+      panel.background = element_rect(fill = color_cw[2]),
+      panel.spacing.x = unit(1.25, "lines"),
+      panel.spacing.y = unit(.75, "lines"),
+      legend.position = "none",
+      legend.title = element_blank(),
+      legend.text = element_blank(),
+      strip.text = element_text(size = 4, hjust = 0.5, face = "bold")
+    )
+  
+  # save the plot
+  brand_plot(p, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+})

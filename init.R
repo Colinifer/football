@@ -143,7 +143,7 @@ sr_games_df <- readRDS('data/games_2020.rds')
 
 # source('data/master_sr_pbp.R')
 full_pbp_df <- readRDS('data/pbp/play_by_play_2020.rds')
-full_pbp_df %>% head
+full_pbp_df %>% tail
 # pbp_df <-
 #   readRDS(glue('data/pbp/play_by_play_{year}.rds')) %>%
 #   decode_player_ids(fast = T)

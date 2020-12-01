@@ -87,8 +87,8 @@ summary_df <-
     teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
     by = c('team' = 'team_abbr')
   ) %>% 
-  mutate(facet_label_wrap = glue('{full_name}: {total_cpoe}'),
-         total_cpoe = total_cpoe %>% round(3)) %>% 
+  mutate(facet_label_wrap = glue('{full_name}: {total_cpoe %>% round(2)}'),
+         rounded_cpoe = total_cpoe %>% round(2)) %>% 
   mutate_at(vars(total_cpoe), funs(factor(., levels=unique(.))))
 
 # create data frame used to add the logos
@@ -119,9 +119,9 @@ mean <-
 
 summary_images_df <- 
   summary_df %>% 
-  select(full_name, passer_player_id, total_cpoe, headshot_url, team_logo_espn) %>% 
+  select(full_name, passer_player_id, total_cpoe, rounded_cpoe, headshot_url, team_logo_espn) %>% 
   mutate(status = color_cw[5],
-         lab_cpoe = glue('Total CPOE: {total_cpoe}')) %>% 
+         lab_cpoe = glue('Total CPOE: {rounded_cpoe}')) %>% 
   unique()
 
 # Create a named character vector to replace value with name in the facet titles

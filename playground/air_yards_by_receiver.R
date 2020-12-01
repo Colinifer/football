@@ -1,4 +1,4 @@
-defteam_rec <- pbp_df %>% 
+defteam_rec <- full_pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
   select(season, 
          game_id, 
@@ -80,26 +80,26 @@ defteam_rec %>%
     height = mean(height)
   )
 
-slice(1:20) %>% 
-  ggplot(
-    aes(x = receiver, y = tot_air_yards)) +
-  geom_bar(
-    aes(x = reorder(receiver, -tot_air_yards), 
-        y = tot_air_yards), 
-    stat='identity') +
-  geom_image(
-    aes(image = headshot_url), 
-    asp = 16/9,
-    nudge_y = 1
-  ) +
-  theme_cw +
-  theme(
-    axis.text.x = element_text(angle = 45)
-  )
+# slice(1:20) %>% 
+#   ggplot(
+#     aes(x = receiver, y = tot_air_yards)) +
+#   geom_bar(
+#     aes(x = reorder(receiver, -tot_air_yards), 
+#         y = tot_air_yards), 
+#     stat='identity') +
+#   geom_image(
+#     aes(image = headshot_url), 
+#     asp = 16/9,
+#     nudge_y = 1
+#   ) +
+#   theme_cw +
+#   theme(
+#     axis.text.x = element_text(angle = 45)
+#   )
 
 
 # posteam_rec <- 
-team_pass_totals <- pbp_df %>% 
+team_pass_totals <- full_pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
   select(season, 
          game_id, 
@@ -163,7 +163,7 @@ team_pass_totals <- pbp_df %>%
   ) %>% rename(team = posteam)
   
   
-rec_totals <- pbp_df %>% 
+rec_totals <- full_pbp_df %>% 
   filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
   select(season, 
          game_id, 

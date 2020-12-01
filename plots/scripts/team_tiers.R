@@ -348,7 +348,7 @@ p <- matchup_chart_all %>%
        y = "Opponent Defense EPA/play",
        # caption = "Data: @nflscrapR",
        title = glue("{year} NFL Team Tiers Matchups through Week {n_week}"),
-       subtitle = glue("Team offense and week {n_week} opponent defense EPA per play")) +
+       subtitle = glue("Team offense and week {n_week + 1} opponent defense EPA per play")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
   geom_abline(slope=slope, intercept=0, alpha=.2) +
@@ -378,7 +378,7 @@ p <- matchup_chart_all %>%
        y = "Opponent Defense Pass EPA/play",
        # caption = "Data: @nflscrapR",
        title = glue("{year} NFL Team Tiers Passing Matchups through Week {n_week}"),
-       subtitle = glue("Team passing offense and week {n_week} opponent passing defense EPA per play")) +
+       subtitle = glue("Team passing offense and week {n_week + 1} opponent passing defense EPA per play")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
   geom_abline(slope=slope, intercept=0, alpha=.2) +
@@ -408,7 +408,7 @@ p <- matchup_chart_all %>%
        y = "Opponent Defense Rush EPA/play",
        # caption = "Data: @nflscrapR",
        title = glue("{year} NFL Team Tiers Rushing Matchups through Week {n_week}"),
-       subtitle = glue("Team rushing offense and week {n_week} opponent rushing defense EPA per play")) +
+       subtitle = glue("Team rushing offense and week {n_week + 1} opponent rushing defense EPA per play")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
   geom_abline(slope=slope, intercept=0, alpha=.2) +
@@ -428,3 +428,5 @@ p <- matchup_chart_all %>%
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_rush_team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
+
+rm(time_series, res, slope, qb_min, epa_data, offense, opponent_data, chart_all, matchup_chart_all, p)

@@ -41,10 +41,8 @@ if (exists("pbp_df") == FALSE) {
 
 my_week <- pbp_df %>% select(week) %>% max()
 
-xfp <- nflfastR::fast_scraper(game_ids = '2020_12_LV_ATL') %>% 
-  nflfastR::clean_pbp() %>% 
-  decode_player_ids(fast = TRUE) %>% 
-  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+xfp <- full_pbp_df %>% 
+  filter(week >= my_week-5 & pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
   add_xyac_dist %>% 
   select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_player_id, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(

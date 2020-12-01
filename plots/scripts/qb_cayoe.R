@@ -40,7 +40,8 @@ my_week <- pbp_df$week %>% max()
 
 # Completed Air Yards Over Expected
 cayoe_xyac <- pbp_df %>%
-  filter(pass_attempt == 1 &
+  filter(season == year & 
+           pass_attempt == 1 &
            season_type == 'REG' &
            two_point_attempt == 0 & 
            !is.na(receiver_id) &

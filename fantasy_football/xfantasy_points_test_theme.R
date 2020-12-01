@@ -59,7 +59,7 @@ quick_rost <- readRDS(url('https://github.com/guga31bb/nflfastR-raw/blob/master/
 
 fant_pt_dist_df <- pbp_df %>% 
   # filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & !is.na(cp) & ((receiver_jersey_number < 90 & receiver_jersey_number > 79) | (receiver_jersey_number < 20 & receiver_jersey_number > 9))) %>% 
-  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & !is.na(cp)) %>% 
+  filter(season==year & pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & !is.na(cp)) %>% 
   add_xyac_dist %>% 
   select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
   mutate(

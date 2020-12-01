@@ -36,7 +36,7 @@ loop_id <- gm_df %>%
 loop_id
 # Download missing play by play files
 lapply(loop_id, function(x){
-  m_json <- jsonlite::fromJSON(url(glue('https://api.sportradar.us/nfl/official/trial/v5/en/games/{x}/pbp.json?api_key={sr_key}')))
+  gm_json <- jsonlite::fromJSON(url(glue('https://api.sportradar.us/nfl/official/trial/v5/en/games/{x}/pbp.json?api_key={sr_key}')))
   jsonlite::write_json(gm_json, glue('data/{year}/{x}.json'))
   Sys.sleep(3)
   })
