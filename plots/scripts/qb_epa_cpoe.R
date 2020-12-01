@@ -6,13 +6,21 @@ load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=t
 # CPOE starts in 2006
 season <- 2020
 
-# load pbp for the choosen seasosn from nflfastR data repo
-# can be multiple seasons as well
-lapply(2009:2019, function(season){
+# Load pbp for the chosen season from nflfastR data repo
+# can be multiple seasons
+# lapply(2009:2019, function(season){
   pbp_df <-
     purrr::map_df(season, function(x) {
       readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
-    }) %>% decode_player_ids(fast = TRUE)
+    }) %>% decode_player_ids(fast = TRUE) %>% 
+    mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
+           posteam = ifelse(posteam == "LA", "LAR", posteam),
+           posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),
+           defteam = ifelse(season < 2016 & defteam == 'LAR', 'STL', defteam),
+           posteam = ifelse(season < 2017 & posteam == 'LAC', 'SD', posteam),
+           defteam = ifelse(season < 2017 & defteam == 'LAC', 'SD', defteam),
+           posteam = ifelse(season < 2020 & posteam == 'LV', 'OAK', posteam),
+           defteam = ifelse(season < 2020 & defteam == 'LV', 'OAK', defteam))
   
   # load roster data from nflfastR data repo
   roster_df <-
@@ -40,7 +48,7 @@ lapply(2009:2019, function(season){
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
     ) %>%
     group_by(passer_player_id) %>%
-    summarise(posteam = posteam %>% unique(),
+    summarise(posteam = posteam %>% first(),
               pa = n(),
               total_cpoe = mean(cpoe),
               total_epa = mean(epa)
@@ -81,28 +89,33 @@ lapply(2009:2019, function(season){
               desc()
     ) %>% 
     filter(passer_player_id %in% top_32) %>%
-    # left_join(
-    #   sleeper_players_df %>%
-    #     select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
-    #   by = c('passer_player_id' = 'gsis_id')
-    # ) %>%
     left_join(
-      as_tibble(roster_df) %>%
-        select(team = team.abbr,
-               first_name = teamPlayers.firstName,
-               last_name = teamPlayers.lastName,
-               gsis = teamPlayers.gsisId,
-               headshot_url = teamPlayers.headshot_url
-        ) %>%
-        mutate(full_name = glue('{first_name} {last_name}')) %>%
-        select(-first_name, -last_name) %>% unique(),
-      by = c('passer_player_id' = 'gsis', 'team')
+      sleeper_players_df %>%
+        select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
+      by = c('passer_player_id' = 'gsis_id')
     ) %>%
+    # left_join(
+    #   as_tibble(roster_df) %>%
+    #     select(team = team.abbr,
+    #            first_name = teamPlayers.firstName,
+    #            last_name = teamPlayers.lastName,
+    #            gsis = teamPlayers.gsisId,
+    #            headshot_url = teamPlayers.headshot_url
+    #     ) %>%
+    #     mutate(full_name = glue('{first_name} {last_name}')) %>%
+    #     select(-first_name, -last_name) %>% unique(),
+    #   by = c('passer_player_id' = 'gsis' , 'team')
+    # ) %>%
     mutate(# some headshot urls are broken. They are checked here and set to a default 
       headshot_url = dplyr::if_else(
         RCurl::url.exists(as.character(headshot_url)),
         as.character(headshot_url),
         'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png',
+      ),
+      headshot_url = dplyr::if_else(
+        headshot_url == 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/RUS539462.png',
+        'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png',
+        headshot_url
       )
     ) %>%
     left_join(epa_cpoe, by = c('passer_player_id', 'game_id')) %>% 
@@ -188,10 +201,10 @@ lapply(2009:2019, function(season){
     ) +
     coord_cartesian(xlim = c(-35, 35), ylim = c(-.75, 1.25)) + # 'zoom in'
     labs(
-      x = "Completion Percentage Over Expectation\n(CPOE in percentage points)",
+      x = "Completion Percentage Over Expectation (CPOE in percentage points)",
       y = "EPA per Pass Attempt",
       title = glue::glue("Passing Efficiency by Game {season}"),
-      subtitle = ""
+      subtitle = "QBs with the most pass attempts on each team\nCPOE and EPA per Pass Attempt. White Dot = Most Recent Game"
     ) +
     facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 8) +
     theme_cw +
@@ -257,7 +270,7 @@ lapply(2009:2019, function(season){
       x = "Completion Percentage Over Expectation (CPOE in percentage points)",
       y = "EPA per Pass Attempt",
       title = glue::glue("Passing Efficiency by Game {season}"),
-      subtitle = ""
+      subtitle = "QBs with the most pass attempts on each team\nCPOE and EPA per Pass Attempt. White Dot = Most Recent Game"
     ) +
     facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 4) +
     theme_cw +
@@ -281,4 +294,4 @@ lapply(2009:2019, function(season){
   
   # save the plot
   brand_plot(p, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-})
+# })
