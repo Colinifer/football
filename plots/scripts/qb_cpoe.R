@@ -7,7 +7,7 @@ season <- 2020
 
 # load pbp for the choosen seasosn from nflfastR data repo
 # can be multiple seasons as well
-lapply(2009:2019, function(season){
+# lapply(2009:2019, function(season){
 
 # Download play-by-play data, decode player IDs, and 
 pbp_df <-
@@ -157,7 +157,7 @@ p <-
              alpha = 0.4) + 
   # scale_fill_manual(values =  NFL_pri,
   #                   name = "Team") +
-  ggimage::geom_image(data = summary_images_df, aes(x = 27.5, y = -16.5, image = team_logo_espn),
+  ggimage::geom_image(data = summary_images_df, aes(x = 27.7, y = -16.5, image = team_logo_espn),
     size = .2, by = "width", asp = asp
   ) +
   ggimage::geom_image(data = summary_images_df, aes(x = 0, y = -19, image = headshot_url),
@@ -171,15 +171,17 @@ p <-
                   bg.color = color_cw[3],
                   hjust = 1,
                   family = "Montserrat",
-                  size = 1.3) +
+                  size = 1.4) +
   xlim(-10, 40) + # makes sure the smoothing algorithm is evaluated between -10 and 40
   coord_cartesian(xlim = c(-5, 30), ylim = c(-25, 25)) + # 'zoom in'
   labs(
-    x = "Target Depth In Yards Thrown Beyond The Line Of Scrimmage (DOT)",
+    x = "Target Depth in Yards Thrown Beyond the Line of Scrimmage (DOT)",
     y = "Completion Percentage Over Expectation (CPOE)",
     title = glue::glue("Passing Efficiency {season}"),
-    subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets. Smoothed for -10 ≤ DOT ≤ 30 Yards.\nRed Line = League Average."
-  ) +
+    subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets.\nSmoothed for -10 ≤ DOT ≤ 30 Yards. Red Line = League Average."
+  )
+
+p_desktop <- p +
   # Use the named character vector to replace CPOE rank with Player name
   facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 8) +
   theme_cw +
@@ -201,60 +203,8 @@ p <-
     strip.text = element_text(size = 4, hjust = 0.5, face = "bold")
   )
 
-# p
-
-# save the plot
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-
 # Mobile
-p <-
-  summary_df %>% 
-  # arrange(total_cpoe %>% desc()) %>% 
-  ggplot(aes(x = air_yards, y = cpoe)) +
-  geom_smooth(data = mean, aes(x = air_yards, 
-                               y = league, 
-                               weight = league_count), 
-              n = n_eval, 
-              color = "red", 
-              alpha = 0.7, 
-              se = FALSE, 
-              size = 0.5, 
-              linetype = "dashed"
-  ) +
-  geom_smooth(se = FALSE, alpha = 0.9, 
-              aes(color = team, weight = count), 
-              size = 0.65, n = n_eval
-  ) +
-  scale_color_manual(values =  NFL_pri_dark,
-                     name = "Team") +
-  geom_point(aes(color = team), 
-             size = summary_df$count / 15, 
-             alpha = 0.4) + 
-  # scale_fill_manual(values =  NFL_pri,
-  #                   name = "Team") +
-  ggimage::geom_image(data = summary_images_df, aes(x = 27.5, y = -16.5, image = team_logo_espn),
-                      size = .2, by = "width", asp = asp
-  ) +
-  ggimage::geom_image(data = summary_images_df, aes(x = 0, y = -19, image = headshot_url),
-                      size = .4, by = "width", asp = asp
-  ) +
-  geom_shadowtext(data = summary_images_df,
-                  aes(label = lab_cpoe, 
-                      x = 31, 
-                      y = -24.5),
-                  color = color_cw[5],
-                  bg.color = color_cw[3],
-                  hjust = 1,
-                  family = "Montserrat",
-                  size = 1.3) +
-  xlim(-10, 40) + # makes sure the smoothing algorithm is evaluated between -10 and 40
-  coord_cartesian(xlim = c(-5, 30), ylim = c(-25, 25)) + # 'zoom in'
-  labs(
-    x = "Target Depth In Yards Thrown Beyond The Line Of Scrimmage (DOT)",
-    y = "Completion Percentage Over Expectation (CPOE)",
-    title = glue::glue("Passing Efficiency {season}"),
-    subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets.\nSmoothed for -10 ≤ DOT ≤ 30 Yards.\nRed Line = League Average."
-  ) +
+p_mobile <- p +
   # Use the named character vector to replace CPOE rank with Player name
   facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 4) +
   theme_cw +
@@ -269,15 +219,16 @@ p <-
     plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
     panel.background = element_rect(fill = color_cw[2]),
     panel.spacing.x = unit(1.25, "lines"),
-    panel.spacing.y = unit(.75, "lines"),
+    panel.spacing.y = unit(.7, "lines"),
     legend.position = "none",
     legend.title = element_blank(),
     legend.text = element_blank(),
     strip.text = element_text(size = 4, hjust = 0.5, face = "bold")
   )
 
-# p
+# save the plot
+brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # save the plot
-brand_plot(p, asp = 9/16, save_name = glue('plots/mobile/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-})
+brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+# })

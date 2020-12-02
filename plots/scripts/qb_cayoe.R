@@ -176,7 +176,7 @@ cayoe_filtered %>%
     # exp_PPR_pts = 'xFP',
     # ppr_pts_diff = "Pts Diff.",
     sum_cayoe = "Total CAYOE",
-    cayoe_a = "Avg. CAYOE"
+    cayoe_a = html("CAYOE<br>(per Pass Attempt)")
   ) %>% 
   fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) %>% 
   fmt_number(columns = vars(exp_td), decimals = 1) %>% 
@@ -213,12 +213,12 @@ cayoe_filtered %>%
   tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') %>% 
   data_color(
     columns = vars(sum_cayoe),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$sum_cayoe), min(cayoe_filtered$sum_cayoe))),
+    colors = scales::col_quantile(palette = c(color_cw[8], color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$sum_cayoe), 0, min(cayoe_filtered$sum_cayoe))),
     autocolor_text = FALSE
   ) %>% 
   data_color(
     columns = vars(cayoe_a),
-    colors = scales::col_numeric(palette = c(color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$cayoe_a), min(cayoe_filtered$cayoe_a))),
+    colors = scales::col_quantile(palette = c(color_cw[8], color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$cayoe_a), 0, min(cayoe_filtered$cayoe_a))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(

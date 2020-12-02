@@ -201,11 +201,13 @@ season <- 2020
     ) +
     coord_cartesian(xlim = c(-35, 35), ylim = c(-.75, 1.25)) + # 'zoom in'
     labs(
-      x = "Completion Percentage Over Expectation (CPOE in percentage points)",
-      y = "EPA per Pass Attempt",
-      title = glue::glue("Passing Efficiency by Game {season}"),
-      subtitle = "QBs with the most pass attempts on each team\nCPOE and EPA per Pass Attempt. White Dot = Most Recent Game"
-    ) +
+      x = 'Completion Percentage Over Expectation (CPOE in percentage points)',
+      y = 'EPA per Pass Attempt',
+      title = glue::glue('Passing Efficiency by Game {season}'),
+      subtitle = "QB's with the most pass attempts on each team, ordered by @benbbaldwin's DAKOTA rating\nWhite Dot = Most Recent Game. Red Line = League Average."
+    )
+  
+  p_desktop <- p +
     facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 8) +
     theme_cw +
     theme(
@@ -226,52 +228,7 @@ season <- 2020
       strip.text = element_text(size = 4, hjust = 0.5, face = "bold")
     )
   
-  # save the plot
-  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-  
-  
-  # Mobile
-  p <-
-    summary_df %>%
-    ggplot(aes(x = cpoe, y = epa)) +
-    geom_hline(yintercept = mean$league_epa, 
-               color = "red", 
-               linetype = "dashed") +
-    geom_vline(xintercept =  mean$league_cpoe, 
-               color = "red", 
-               linetype = "dashed") +
-    geom_point(aes(color = team), 
-               size = 1.2,
-               shape = 16,
-               alpha = 0.75) +
-    scale_color_manual(values =  NFL_pri_dark,
-                       name = "Team") +
-    # geom_point(aes(fill = team), shape = 21, size = 1 , alpha = 0.1) +
-    # geom_point(alpha = 0.2, aes(color = team), size = .5) +
-    # scale_color_manual(values =  NFL_pri_dark,
-    #                    name = "Team") +
-    geom_point(data = summary_df %>% 
-                 group_by(passer_player_id) %>% 
-                 filter(row_number()==n()), 
-               aes(fill = team),
-               color = color_cw[5],
-               shape = 21, 
-               size = 1.2) +
-    scale_fill_manual(values =  NFL_pri_dark,
-                      name = "Team") +
-    ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.55, image = team_logo_espn),
-                        size = .25, by = "width", asp = asp
-    ) +
-    ggimage::geom_image(data = summary_images_df, aes(x = -26.5, y = -.55, image = headshot_url),
-                        size = .4, by = "width", asp = asp
-    ) +
-    coord_cartesian(xlim = c(-35, 35), ylim = c(-.75, 1.25)) + # 'zoom in'
-    labs(
-      x = "Completion Percentage Over Expectation (CPOE in percentage points)",
-      y = "EPA per Pass Attempt",
-      title = glue::glue("Passing Efficiency by Game {season}"),
-      subtitle = "QBs with the most pass attempts on each team\nCPOE and EPA per Pass Attempt. White Dot = Most Recent Game"
-    ) +
+  p_mobile <- p +
     facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 4) +
     theme_cw +
     theme(
@@ -285,13 +242,18 @@ season <- 2020
       plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
       panel.background = element_rect(fill = color_cw[2]),
       panel.spacing.x = unit(1.25, "lines"),
-      panel.spacing.y = unit(.75, "lines"),
+      panel.spacing.y = unit(.7, "lines"),
       legend.position = "none",
       legend.title = element_blank(),
       legend.text = element_blank(),
       strip.text = element_text(size = 4, hjust = 0.5, face = "bold")
     )
   
+  # Desktop
   # save the plot
-  brand_plot(p, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  
+  # Mobile
+  # save the plot
+  brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 # })

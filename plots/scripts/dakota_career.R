@@ -63,7 +63,7 @@ qb_top_bottom <- qb_top_bottom %>%
   left_join(sleeper_players_df %>% select(gsis_id, full_name, headshot_url),
             by = c("qb_id" = "gsis_id"))
 
-min_plays <- 200
+min_plays <- 450
 
 p <- qb_top_bottom %>% 
   # left_join(roster_df %>% filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) %>%
@@ -80,22 +80,26 @@ p <- qb_top_bottom %>%
   scale_y_reverse(expand = expansion(mult = c(0.02, 0.04))) +
   scale_x_continuous(limits = c(-0.15,0.4), expand = expansion(mult = 0)) +
   scale_fill_viridis(option = "A") +
-  labs(title = 'Range of Best & Worst EPA+CPOE Composite Index' ,
-       subtitle = glue('Diamond = Career average, Dot = Last 200 Plays | Min. {min_plays} QB plays'),
+  labs(title = 'Range of Career DAKOTA Rating' ,
+       subtitle = glue('Diamond = Career average, Dot = Last 200 Plays\nMin. {min_plays} QB plays'),
        fill = "Index score",
-       x = 'EPA+CPOE Composite Index',
+       x = 'EPA+CPOE Composite Index (DAKOTA)',
        y = NULL) +
   theme_cw +
   theme(
     plot.title = element_text(size = 12),
+    plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
     axis.ticks.y = element_blank(),
     axis.text.y = element_blank(),
     panel.grid.major.y = element_blank(),
-    legend.position = c(.85, .22)
+    legend.title = element_text(family = "Chivo",
+                                size = 10),
+    legend.text = element_text(size = 8),
+    legend.position = c(.88, .1725)
   )
 
 # p
 
-brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_home = 'EPA+CPOE courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_home = 'DAKOTA courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = '')
 
-rm(all_qb_id, qb_2020_id, qb_top_bottom, min_plays)
+rm(pbp_df, all_qb_id, qb_2020_id, qb_top_bottom, min_plays)

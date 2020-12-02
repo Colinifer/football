@@ -42,9 +42,9 @@ wide_win_rate %>%
   mutate(team = 'NFL')
 
 
-matchup_df <- wide_win_rate %>% 
+matchup_winrate_df <- wide_win_rate %>% 
   left_join(
-    schedule_df %>% 
+    matchup_df %>% 
       filter(week == n_week + 1) %>% 
       select(posteam, oppteam, weekday, gametime),
     by = c('team_abbr' = 'posteam')
@@ -330,6 +330,7 @@ gt::gtsave(gt_tab, filename = 'espn_winrate_df_matchup.png', path = 'plots/deskt
 
 # Team info
 
+# Defense Pass Rush / Run Stop (up and right is good)
 p <- matchup_df_adv %>% 
   mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
   ggplot(aes(x = prwr, y = rswr)) +
@@ -353,7 +354,7 @@ p <- matchup_df_adv %>%
 
 brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/defense_win_rate_{year}.png'), data_home = 'Data: ESPN', fade_borders = '')
 
-
+# Offense Pass Block / Run Block (up and right is good)
 p <- matchup_df_adv %>% 
   mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
   ggplot(aes(x = pbwr, y = rbwr)) +
@@ -380,7 +381,7 @@ brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/offense_win_rate_{yea
 
 # Opponent/Matchup info
 
-# Pass Rush vs Pass Block (up adn right is good)
+# Pass Rush vs Opp. Pass Block (up and right is good)
 p <- matchup_df_adv %>% 
   mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
   ggplot(aes(x = prwr, y = opp_pbwr)) +
@@ -392,7 +393,7 @@ p <- matchup_df_adv %>%
        y = "Opp. Pass Block Win Rate %",
        # caption = "Data: @nflscrapR",
        title = glue("{year} Week {n_week + 1} OL/DL Passing Matchups"),
-       subtitle = glue("Pass rush win rate vs. week {n_week} opponent pass block win rate")) +
+       subtitle = glue("Pass rush win rate vs. week {n_week + 1} opponent pass block win rate")) +
   # geom_abline(slope= 1, intercept=0, alpha=.2) +
   theme_cw +
   theme(
@@ -406,7 +407,7 @@ p <- matchup_df_adv %>%
 brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/matchup_pass_rush_win_rate_{year}.png'), data_home = 'Data: ESPN', fade_borders = '')
 
 
-# Run Stop vs Run Block (up adn right is good)
+# Run Stop vs Opp. Run Block (up and right is good)
 p <- matchup_df_adv %>% 
   mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
   ggplot(aes(x = rswr, y = opp_rbwr)) +
@@ -418,7 +419,7 @@ p <- matchup_df_adv %>%
        y = "Opp. Run Block Win Rate %",
        # caption = "Data: @nflscrapR",
        title = glue("{year} Week {n_week + 1} OL/DL Rushing Matchups"),
-       subtitle = glue("Run stop win rate vs. week {n_week} opponent run block win rate")) +
+       subtitle = glue("Run stop win rate vs. week {n_week + 1} opponent run block win rate")) +
   # geom_abline(slope= 1, intercept=0, alpha=.2) +
   theme_cw +
   theme(

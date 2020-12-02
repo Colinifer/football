@@ -5,7 +5,7 @@ pbp_df <- purrr::map_df(2020, function(x) {
     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
   ))
 # }) %>% filter(week < 9)
-})
+}) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
 print(year)
 
 n_week <- pbp_df %>% select(week) %>% max()
@@ -34,17 +34,17 @@ qb_min <- 320 #min # of qb plays
 
 epa_data <- pbp_df %>%
   # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
-  dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam)) %>%
+  dplyr::filter(!is.na(posteam)) %>%
   dplyr::group_by(game_id, season, week, posteam, home_team) %>%
   dplyr::summarise(
-    off_epa = mean(epa, na.rm = TRUE),
+    off_epa = mean(epa, na.rm = T),
   ) %>%
   dplyr::left_join(pbp_df %>%
-                     filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
+                     filter(play_type == "pass" | play_type == "run") %>%
                      dplyr::group_by(game_id, season, week, defteam, away_team) %>%
-                     dplyr::summarise(def_epa = mean(epa)),
+                     dplyr::summarise(def_epa = mean(epa, na.rm = T)),
                    by = c("game_id", "posteam" = "defteam", "season", "week"),
-                   all.x = TRUE
+                   all.x = T
   ) %>%
   dplyr::mutate(opponent = ifelse(posteam == home_team, away_team, home_team)) %>%
   dplyr::select(game_id, season, week, home_team, away_team, posteam, opponent, off_epa, def_epa)
@@ -53,14 +53,14 @@ offense <- pbp_df %>%
   filter(!is.na(epa) & !is.na(posteam)) %>% 
   group_by(posteam, season)%>%
   summarize(
-    n_pass=sum(pass),
-    n_rush=sum(rush),
-    epa_per_pass=sum(epa*pass)/n_pass,
-    epa_per_rush=sum(epa*rush)/n_rush,
-    success_per_pass=sum(pass*epa>0)/n_pass,
-    success_per_rush=sum(rush*epa>0)/n_rush,
-    off_epa=mean(epa),
-    off_success=mean(success)
+    n_pass=sum(pass, na.rm = T),
+    n_rush=sum(rush, na.rm = T),
+    epa_per_pass=sum(epa*pass, na.rm = T)/n_pass,
+    epa_per_rush=sum(epa*rush, na.rm = T)/n_rush,
+    success_per_pass=sum(pass*epa>0, na.rm = T)/n_pass,
+    success_per_rush=sum(rush*epa>0, na.rm = T)/n_rush,
+    off_epa=mean(epa, na.rm = T),
+    off_success=mean(success, na.rm = T)
   )
 
 # Construct opponent dataset and lag the moving average of their last ten games.
@@ -117,8 +117,8 @@ chart_all <- epa_data %>%
   arrange(posteam) %>% 
   group_by(posteam) %>% 
   summarize(
-    adjusted_off_epa = mean(adjusted_off_epa),
-    adjusted_def_epa = mean(adjusted_def_epa)
+    adjusted_off_epa = mean(adjusted_off_epa, na.rm = T),
+    adjusted_def_epa = mean(adjusted_def_epa, na.rm = T)
   ) %>% 
   # filter(row_number() == n()) %>% 
   left_join(teams_colors_logos, by = c("posteam" = "team_abbr"))
@@ -126,8 +126,8 @@ chart_all <- epa_data %>%
 p <- chart_all %>% 
   ggplot(aes(x = adjusted_off_epa, y = adjusted_def_epa)) +
   geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(chart_all$adjusted_def_epa), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$adjusted_off_epa), color = "red", linetype = "dashed") +
+  geom_hline(yintercept = mean(chart_all$adjusted_def_epa, na.rm = T), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(chart_all$adjusted_off_epa, na.rm = T), color = "red", linetype = "dashed") +
   labs(x = "Adj. Offense EPA/play",
        y = "Adj. Defense EPA/play",
        # caption = "Data: @nflscrapR",
@@ -155,49 +155,32 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_adj_{year}
 
 # Tiers -------------------------------------------------------------------
 
-epa_data <- pbp_df %>%
-  # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
-  dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), !is.na(down)) %>%
-  dplyr::group_by(game_id, season, week, posteam, home_team) %>%
-  dplyr::summarise(
-    off_epa = mean(epa),
-  ) %>%
-  dplyr::left_join(pbp_df %>%
-                     filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
-                     dplyr::group_by(game_id, season, week, defteam, away_team) %>%
-                     dplyr::summarise(def_epa = mean(epa)),
-                   by = c("game_id", "posteam" = "defteam", "season", "week"),
-                   all.x = TRUE
-  ) %>%
-  dplyr::mutate(opponent = ifelse(posteam == home_team, away_team, home_team)) %>%
-  dplyr::select(game_id, season, week, home_team, away_team, posteam, opponent, off_epa, def_epa)
-
 offense <- pbp_df %>%
-  filter(!is.na(epa) & !is.na(posteam)) %>% 
+  filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
   group_by(posteam, season)%>%
   summarize(
-    n_pass=sum(pass),
-    n_rush=sum(rush),
-    epa_per_pass=sum(epa*pass)/n_pass,
-    epa_per_rush=sum(epa*rush)/n_rush,
-    success_per_pass=sum(pass*epa>0)/n_pass,
-    success_per_rush=sum(rush*epa>0)/n_rush,
-    off_epa=mean(epa),
-    off_success=mean(success)
+    n_pass=sum(pass, na.rm = T),
+    n_rush=sum(rush, na.rm = T),
+    epa_per_pass=sum(epa*pass, na.rm = T)/n_pass,
+    epa_per_rush=sum(epa*rush, na.rm = T)/n_rush,
+    success_per_pass=sum(pass*epa>0, na.rm = T)/n_pass,
+    success_per_rush=sum(rush*epa>0, na.rm = T)/n_rush,
+    off_epa=mean(epa, na.rm = T),
+    off_success=mean(success, na.rm = T)
   )
 
 defense <- pbp_df %>%
-  filter(!is.na(epa) & !is.na(defteam)) %>% 
+  filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
   group_by(defteam, season) %>%
   summarize(
-    def_n_pass=sum(pass),
-    def_n_rush=sum(rush),
-    def_epa_per_pass=sum(epa*pass)/def_n_pass,
-    def_epa_per_rush=sum(epa*rush)/def_n_rush,
-    def_success_per_pass=sum(pass*epa>0)/def_n_pass,
-    def_success_per_rush=sum(rush*epa>0)/def_n_rush,
-    def_epa=mean(epa),
-    def_success=mean(success)
+    def_n_pass=sum(pass, na.rm = T),
+    def_n_rush=sum(rush, na.rm = T),
+    def_epa_per_pass=sum(epa*pass, na.rm = T)/def_n_pass,
+    def_epa_per_rush=sum(epa*rush, na.rm = T)/def_n_rush,
+    def_success_per_pass=sum(pass*epa>0, na.rm = T)/def_n_pass,
+    def_success_per_rush=sum(rush*epa>0, na.rm = T)/def_n_rush,
+    def_epa=mean(epa, na.rm = T),
+    def_success=mean(success, na.rm = T)
   )
 
 chart_all <- offense %>% 
@@ -207,8 +190,8 @@ chart_all <- offense %>%
 p <- chart_all %>% 
   ggplot(aes(x = off_epa, y = def_epa)) +
   geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(chart_all$def_epa), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$off_epa), color = "red", linetype = "dashed") +
+  geom_hline(yintercept = mean(chart_all$def_epa, na.rm = T), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(chart_all$off_epa, na.rm = T), color = "red", linetype = "dashed") +
   labs(x = "Offense EPA/play",
        y = "Defense EPA/play",
        # caption = "Data: @nflscrapR",
