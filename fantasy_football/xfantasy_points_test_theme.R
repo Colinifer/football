@@ -43,7 +43,8 @@ body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
 if (exists("pbp_df") == FALSE) {
-  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
+  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'))) %>% 
+    decode_player_ids(fast = TRUE)
 }
 
 # Plot Data ---------------------------------------------------------------
@@ -105,7 +106,7 @@ incomplete_df <- fant_pt_dist_df %>%
 receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   group_by(posteam, receiver) %>%
   summarize(
-    receiver_id = unique(receiver_id),
+    receiver_id = receiver_id %>% first(),
     tot_PPR = sum(actual_PPR_points, na.rm = T),
     tot_half_PPR = sum(actual_half_PPR_points, na.rm = T),
     tot_targ = sum(target),
@@ -141,7 +142,7 @@ receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
 # make a data frame to loop around
 sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>% 
   right_join(receiver_rank_df %>% select(posteam, receiver)) %>% 
-  select(season, game_id, play_id, posteam, receiver, air_yards, catch_run_prob, half_PPR_points, PPR_points) %>% 
+  select(season, game_id, play_id, posteam, receiver_id, receiver, air_yards, catch_run_prob, half_PPR_points, PPR_points) %>% 
   group_by(game_id, play_id)
 
 
@@ -156,10 +157,11 @@ fx.sample_sim <- function(nsims = 10000, ncores = .66) {
       mutate(half_ppr_sim_res = sample(half_PPR_points, 1, prob = catch_run_prob),
              ppr_sim_res = sample(PPR_points, 1, prob = catch_run_prob),
              n_sim = sim_number) %>% 
-      select(season, game_id, play_id, posteam, receiver, air_yards, half_ppr_sim_res, ppr_sim_res, n_sim) %>% 
+      select(season, game_id, play_id, posteam, receiver_id, receiver, air_yards, half_ppr_sim_res, ppr_sim_res, n_sim) %>% 
       distinct %>% 
       group_by(posteam, receiver) %>% 
-      summarize(half_ppr_sim_tot = sum(half_ppr_sim_res, na.rm = T),
+      summarize(receiver_id = receiver_id %>% first(),
+                half_ppr_sim_tot = sum(half_ppr_sim_res, na.rm = T),
                 ppr_sim_tot = sum(ppr_sim_res, na.rm = T), .groups = 'drop',
                 n_sim = sim_number) %>% 
       return
@@ -177,7 +179,7 @@ fx.sample_sim <- function(nsims = 10000, ncores = .66) {
 
 # Run simulation function
 start_time <- Sys.time()
-fx.sample_sim(nsims = 5000, ncores = .58)
+fx.sample_sim(nsims = 5000, ncores = .8)
 end_time <- Sys.time()
 end_time - start_time
 
@@ -191,13 +193,13 @@ sim_df_rank <- sim_df %>%
   mutate(ppr_sim_rank = row_number()) %>% 
   ungroup() %>% 
   group_by(receiver) %>% 
-  summarise(half_ppr_pct_first = sum(ifelse(half_ppr_sim_rank == 1,1,0)) / sim_df$n_sim %>% max(),
-            half_ppr_pct_top_20 = sum(ifelse(half_ppr_sim_rank <= 20,1,0)) / sim_df$n_sim %>% max(),
-            half_ppr_pct_top_30 = sum(ifelse(half_ppr_sim_rank <= 30,1,0)) / sim_df$n_sim %>% max(),
-            ppr_pct_first = sum(ifelse(ppr_sim_rank == 1,1,0)) / sim_df$n_sim %>% max(),
-            ppr_pct_top_20 = sum(ifelse(ppr_sim_rank <= 20,1,0)) / sim_df$n_sim %>% max(),
-            ppr_pct_top_30 = sum(ifelse(ppr_sim_rank <= 30,1,0)) / sim_df$n_sim %>% max()) %>% 
-  arrange(-ppr_pct_first) %>% 
+  summarise(half_ppr_pct_first = sum(if_else(half_ppr_sim_rank == 1,1,0)) / (sim_df$n_sim %>% max()),
+            half_ppr_pct_top_20 = sum(if_else(half_ppr_sim_rank <= 20,1,0)) / (sim_df$n_sim %>% max()),
+            half_ppr_pct_top_30 = sum(if_else(half_ppr_sim_rank <= 30,1,0)) / (sim_df$n_sim %>% max()),
+            ppr_pct_first = sum(if_else(ppr_sim_rank == 1,1,0)) / (sim_df$n_sim %>% max()),
+            ppr_pct_top_20 = sum(if_else(ppr_sim_rank <= 20,1,0)) / (sim_df$n_sim %>% max()),
+            ppr_pct_top_30 = sum(if_else(ppr_sim_rank <= 30,1,0)) / (sim_df$n_sim %>% max())) %>% 
+  arrange(-half_ppr_pct_first) %>% 
   ungroup()
   # slice(1:10)
 
@@ -208,7 +210,8 @@ actual_df <- fant_pt_dist_df %>%
   summarize(half_ppr_sim_tot = sum(actual_half_PPR_points, na.rm = T), 
             ppr_sim_tot = sum(actual_PPR_points, na.rm = T),
             .groups = 'drop') %>% 
-  mutate(n_sim = 0)
+  mutate(n_sim = 0) %>% 
+  arrange(-half_ppr_sim_tot)
 
 
 # figure out what percentile the actual values fall in
