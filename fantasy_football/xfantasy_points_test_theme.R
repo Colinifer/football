@@ -1,9 +1,8 @@
 
 # Notes -------------------------------------------------------------------
 
-# WOPR = 1.5 × Target Market Share + 0.7 × Air Yards Market Share
-# Need to calcualte team market shares
-
+# fant_pt_dist_df <- readRDS('fantasy_football/data/fant_pt_dist.rds')
+# sim_df <- readRDS('fantasy_football/data/sample_sim_df.rds')
 
 # Start -------------------------------------------------------------------
 
@@ -38,6 +37,7 @@ add_xyac_blocks[[2]] <- add_xyac_blocks[[2]] %>%
 # replace the body of add_xyac_dist() with our new edited function
 body(add_xyac_dist) <- add_xyac_blocks %>% as.call
 
+plan(multisession, workers = 4)
 
 # Data --------------------------------------------------------------------
 
@@ -81,6 +81,8 @@ fant_pt_dist_df <- pbp_df %>%
 
 fant_pt_dist_df <- decode_player_ids(fant_pt_dist_df, fast = TRUE)
 
+# saveRDS(fant_pt_dist_df, file = 'fantasy_football/data/fant_pt_dist.rds')
+# fant_pt_dist_df <- readRDS('fantasy_football/data/fant_pt_dist.rds')
 
 incomplete_df <- fant_pt_dist_df %>% 
   mutate(
@@ -123,12 +125,12 @@ receiver_rank_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
     by = c("receiver_id" = "gsis_id")
   ) %>%
   # Add ESPN free agent info
-  # left_join(espn_players_df %>%
-  #             select(id, status, onTeamId),
-  #           by = c("espn_id" = "id")) %>%
+  left_join(espn_players_df %>%
+              select(id, status, team_id = onTeamId),
+            by = c("espn_id" = "id")) %>%
   # filter(status != "ONTEAM") %>% #Use to search through FA's
   mutate(
-    status = 'ONTEAM',
+    # status = 'ONTEAM',
     tm_rnk = row_number()
     ) %>%
   ungroup() %>% 
@@ -182,7 +184,7 @@ start_time <- Sys.time()
 fx.sample_sim(nsims = 5000, ncores = .8)
 end_time <- Sys.time()
 end_time - start_time
-
+# sim_df <- readRDS('fantasy_football/data/sample_sim_df.rds')
 
 sim_df_rank <- sim_df %>% 
   mutate(sim = 1) %>% 
@@ -206,7 +208,7 @@ sim_df_rank <- sim_df %>%
 
 # calculate how many points were actually scored
 actual_df <- fant_pt_dist_df %>%
-  group_by(posteam, receiver) %>% 
+  group_by(posteam, receiver, receiver_id) %>% 
   summarize(half_ppr_sim_tot = sum(actual_half_PPR_points, na.rm = T), 
             ppr_sim_tot = sum(actual_PPR_points, na.rm = T),
             .groups = 'drop') %>% 
@@ -227,21 +229,23 @@ percentile_df <- rbind(sim_df, actual_df) %>%
 
 cols <- c("ONTEAM" = color_cw[5], "FREEAGENT" = color_cw[6], "WAIVERS" = color_cw[7])
 
-plot_data <- sim_df %>%
+plot_data <- sim_df_rank %>%
   # filter(tm_rnk <= 4) %>% 
+  # left_join(sim_df_rank) %>%
   left_join(percentile_df) %>%
   left_join(receiver_rank_df) %>%
-  mutate(
-    half_ppr_sim_pg = half_ppr_sim_tot / tot_gp,
-    pl_lab = paste0(receiver, '\n', number(half_ppr_perc * 100, accuracy = 0.1), ' perc.'),
-    posteam = factor(posteam, .tm_div_order_alt)
-  ) %>%
+  # mutate(
+  #   half_ppr_sim_pg = half_ppr_sim_tot / tot_gp,
+  #   pl_lab = paste0(receiver, '\n', number(half_ppr_perc * 100, accuracy = 0.1), ' perc.'),
+  #   posteam = factor(posteam, .tm_div_order_alt)
+  # ) %>%
   group_by(posteam, receiver) %>%
-  mutate(
-    obs_num = row_number(),
-    status = "ONTEAM",
-    status_color = if_else(status != "ONTEAM", color_cw[6], color_cw[5])
-  )
+  # mutate(
+  #   obs_num = row_number(),
+  #   status = "ONTEAM",
+  #   status_color = if_else(status != "ONTEAM", color_cw[6], color_cw[5])
+  # )
+  filter(status != 'ONTEAM' | team_id == 8)
 
 receiver_rank_df <- receiver_rank_df %>% left_join(plot_data %>% select(receiver_id, pl_lab) %>% unique())
 
