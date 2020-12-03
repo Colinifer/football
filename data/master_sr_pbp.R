@@ -1,5 +1,5 @@
 library(RJSONIO)
-library(tidyvere)
+library(tidyverse)
 
 sr_games_df <- readRDS(glue('data/games_{year}.rds')) %>% 
   select(game_id, game_id_SR)

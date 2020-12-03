@@ -3,6 +3,7 @@ library(viridis)
 source('plots/assets/plot_theme.R')
 load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
 
+start_time <- Sys.time()
 
 # roster_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')) %>% 
 #   left_join(readRDS(url('https://github.com/ajreinhard/NFL/blob/master/nflfastR%20ID%20mapping/gsis_map.rds?raw=true')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
@@ -102,4 +103,7 @@ p <- qb_top_bottom %>%
 
 brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_home = 'DAKOTA courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = '')
 
-rm(pbp_df, all_qb_id, qb_2020_id, qb_top_bottom, min_plays)
+end_time <- Sys.time()
+end_time - start_time
+
+rm(pbp_df, all_qb_id, qb_2020_id, qb_top_bottom, min_plays, start_time, end_time)

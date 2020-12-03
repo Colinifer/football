@@ -25,6 +25,12 @@ gm_status <- unlist(sapply(yr_sched$weeks, function(wk) {
   })
 }))
 
+gm_scheduled <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    gm$status
+  })
+}))
+
 gm_df <- data.frame(all_id, gm_status, stringsAsFactors = F)
 
 # Check missing play by play files
@@ -45,7 +51,7 @@ lapply(loop_id, function(x){
 # Participation is updated weekly on Fridays
 gm_done <- gsub('.json','',dir(glue('data/part/{year}')))
 loop_id <- gm_df %>% 
-  filter(gm_status=='closed' & !(all_id %in% gm_done)) %>% 
+  filter(gm_status=='closed' & !(all_id %in% gm_done) & ) %>% 
   pull(all_id)
 
 loop_id

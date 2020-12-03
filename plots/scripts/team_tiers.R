@@ -1,5 +1,7 @@
 library(pracma)
 
+start_time <- Sys.time()
+
 pbp_df <- purrr::map_df(2020, function(x) {
   readRDS(url(
     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
@@ -411,5 +413,7 @@ p <- matchup_chart_all %>%
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_rush_team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
+end_time <- Sys.time()
+end_time - start_time
 
-rm(time_series, res, slope, qb_min, epa_data, offense, opponent_data, chart_all, matchup_chart_all, p)
+rm(time_series, res, slope, qb_min, epa_data, offense, opponent_data, chart_all, matchup_chart_all, p, start_time, end_time)
