@@ -273,8 +273,7 @@ rec_totals <- full_pbp_df %>%
   arrange(air_yards_pg %>% 
             desc() 
   ) %>% filter(status != 'ONTEAM' | team_id == 8, # Filter available players and compare to current team
-               games > 1,
-               position == c('WR', 'TE', 'RB')
+               games > 1
                ) %>% 
   # filter(routes_run > 20) %>% 
   arrange(-wopr) %>% 
@@ -290,7 +289,8 @@ rec_totals %>% as_tibble() %>%
   labs(
     x = 'Total Fantasy Points',
     y = 'WOPR'
-  )
+  ) + 
+  theme_cw
 
 rec_totals %>% as_tibble() %>% 
   # select(receiver, tot_fpoints, air_yards_pg) %>% 
@@ -300,7 +300,21 @@ rec_totals %>% as_tibble() %>%
   labs(
     x = 'Total Fantasy Points',
     y = 'Total Air Yards'
-  )
+  ) +
+  theme_cw
+
+rec_totals %>% 
+  as_tibble() %>% 
+  mutate(fpoints_pg = tot_fpoints / games) %>% 
+  # select(receiver, tot_fpoints, air_yards_pg) %>% 
+  ggplot(aes(x = fpoints_pg, y = air_yards_pg)) + 
+  geom_text_repel(aes(label = ifelse(air_yards_pg > 40 & fpoints_pg > 8, receiver, ''), color = position), show.legend = FALSE) +
+  geom_point(aes(color = position)) + 
+  labs(
+    x = 'Fantasy Points per Game',
+    y = 'Air Yards per Game'
+  ) +
+  theme_cw
 
   arrange(-targets_pg) %>% 
   slice(1:20) %>%
