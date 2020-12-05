@@ -168,7 +168,8 @@ p <-
                       x = 31, 
                       y = -24.5),
                   color = color_cw[5],
-                  bg.color = color_cw[3],
+                  bg.color = color_cw[2],
+                  bg.r = .4,
                   hjust = 1,
                   family = "Montserrat",
                   size = 1.4) +

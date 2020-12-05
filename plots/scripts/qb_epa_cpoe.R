@@ -120,6 +120,7 @@ season <- 2020
     ) %>%
     left_join(epa_cpoe, by = c('passer_player_id', 'game_id')) %>% 
     arrange(season_dakota %>% desc()) %>% 
+    mutate(lab_dakota = glue('DAKOTA: {season_dakota %>% round(3)}')) %>% 
     left_join(
       teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
       by = c('team' = 'team_abbr')
@@ -155,7 +156,7 @@ season <- 2020
   
   summary_images_df <- 
     summary_df %>% 
-    select(full_name, passer_player_id, season_dakota, headshot_url, team_logo_espn, season_pa) %>% 
+    select(full_name, passer_player_id, season_dakota, lab_dakota, headshot_url, team_logo_espn, season_pa) %>% 
     unique() %>% 
     arrange(season_dakota %>% desc()) %>% 
     head(32)
@@ -193,7 +194,17 @@ season <- 2020
                size = 1.2) +
     scale_fill_manual(values =  NFL_pri_dark,
                        name = "Team") +
-    ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.55, image = team_logo_espn),
+    geom_shadowtext(data = summary_images_df,
+                    aes(label = lab_dakota, 
+                        x = 37.5, 
+                        y = -.72),
+                    color = color_cw[5],
+                    bg.color = color_cw[2],
+                    bg.r = .3,
+                    hjust = 1,
+                    family = "Montserrat",
+                    size = 1.4) +
+    ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.35, image = team_logo_espn),
                         size = .25, by = "width", asp = asp
     ) +
     ggimage::geom_image(data = summary_images_df, aes(x = -26.5, y = -.55, image = headshot_url),
