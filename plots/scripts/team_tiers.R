@@ -1,28 +1,25 @@
 library(pracma)
 
-start_time <- Sys.time()
+lapply(1999:2019, function(x){
 
-pbp_df <- purrr::map_df(2020, function(x) {
+start_time <- Sys.time()
+season <- x
+  
+pbp_df <- purrr::map_df(season, function(x) {
   readRDS(url(
     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
   ))
 # }) %>% filter(week < 9)
 }) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
-print(year)
+print(season)
 
 n_week <- pbp_df %>% select(week) %>% max()
 
 # If week < 10, us current weeks in season
 time_series <- dplyr::if_else(pbp_df %>%
-  filter(season == Sys.Date() %>%
-           format(format = "%Y") %>%
-           as.integer()) %>%
   select(week) %>%
   max() - 1 < 10,
   pbp_df %>%
-    filter(season == Sys.Date() %>%
-             format(format = "%Y") %>%
-             as.integer()) %>%
     select(week) %>%
     max() - 2,
   10)
@@ -33,8 +30,8 @@ qb_min <- 320 #min # of qb plays
 
 # Adjust EPA --------------------------------------------------------------
 # https://www.opensourcefootball.com/posts/2020-08-20-adjusting-epa-for-strenght-of-opponent/
-
 epa_data <- pbp_df %>%
+  filter(posteam != '') %>% 
   # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
   dplyr::filter(!is.na(posteam)) %>%
   dplyr::group_by(game_id, season, week, posteam, home_team) %>%
@@ -115,7 +112,7 @@ epa_data <- epa_data %>%
   )
 
 chart_all <- epa_data %>% 
-  filter(season == 2020) %>% 
+  filter(season == season) %>% 
   arrange(posteam) %>% 
   group_by(posteam) %>% 
   summarize(
@@ -133,7 +130,7 @@ p <- chart_all %>%
   labs(x = "Adj. Offense EPA/play",
        y = "Adj. Defense EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL Adjusted Team Tiers"),
+       title = glue("{season} NFL Adjusted Team Tiers"),
        subtitle = glue("Offense and defense adjusted EPA per play through week {n_week}\nAdjusted for previous matchups")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -153,7 +150,7 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_adj_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_adj_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Tiers -------------------------------------------------------------------
 
@@ -197,7 +194,7 @@ p <- chart_all %>%
   labs(x = "Offense EPA/play",
        y = "Defense EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL Team Tiers"),
+       title = glue("{season} NFL Team Tiers"),
        subtitle = glue("Offense and defense EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -217,7 +214,7 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Pass v Rush EPA
 p <- chart_all %>% 
@@ -228,7 +225,7 @@ p <- chart_all %>%
   labs(x = "Pass EPA/play",
        y = "Rush EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL Offense Team Tiers"),
+       title = glue("{season} NFL Offense Team Tiers"),
        subtitle = glue("Offense passing and rushing EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -247,7 +244,7 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_off_pass_and_rush_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_off_pass_and_rush_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Need to add Defense pass and rush epa/play
 
@@ -259,7 +256,7 @@ p <- chart_all %>%
   labs(x = "Defense Pass EPA/play",
        y = "Defense Rush EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL Defense Team Tiers"),
+       title = glue("{season} NFL Defense Team Tiers"),
        subtitle = glue("Defense passing and rushing EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -280,140 +277,141 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_def_pass_and_rush_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_def_pass_and_rush_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Next week match-ups -----------------------------------------------------
-
-matchup_chart_all <- chart_all %>%
-  left_join(
-    matchup_df %>% 
-      filter(week == n_week + 1) %>% 
-      select(posteam, oppteam, weekday, gametime),
-    by = c('posteam')
-  ) %>% left_join(chart_all %>% 
-                    select(
-                      -season,
-                    ) %>% 
-                    rename(
-                      opp_n_pass = n_pass,
-                      opp_n_rush = n_rush,
-                      opp_epa_per_pass = epa_per_pass,
-                      opp_epa_per_rush = epa_per_rush,
-                      opp_success_per_pass = success_per_pass,
-                      opp_success_per_rush = success_per_rush,
-                      opp_off_epa = off_epa,
-                      opp_def_n_pass = def_n_pass,
-                      opp_def_n_rush = def_n_rush,
-                      opp_def_epa_per_pass = def_epa_per_pass,
-                      opp_def_epa_per_rush = def_epa_per_rush,
-                      opp_def_success_per_pass = def_success_per_pass,
-                      opp_def_success_per_rush = def_success_per_rush,
-                      opp_def_epa = def_epa,
-                      opp_def_success = def_success,
-                      opp_team_name = team_name,
-                      opp_team_id = team_id,
-                      opp_team_nick = team_nick,
-                      opp_team_color = team_color,
-                      opp_team_color2 = team_color2,
-                      opp_team_color3 = team_color3,
-                      opp_team_color4 = team_color4,
-                      opp_team_logo_wikipedia = team_logo_wikipedia,
-                      opp_team_logo_espn = team_logo_espn
-                    ),
-                  by = c('oppteam' = 'posteam')
-                  ) %>%
-  filter(!is.na(oppteam ))
-
-p <- matchup_chart_all %>% 
-  ggplot(aes(x = off_epa, y = opp_def_epa)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(matchup_chart_all$off_epa), color = "red", linetype = "dashed") +
-  labs(x = "Offense EPA/play",
-       y = "Opponent Defense EPA/play",
-       # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL Team Tiers Matchups through Week {n_week}"),
-       subtitle = glue("Team offense and week {n_week + 1} opponent defense EPA per play")) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-  theme_cw +
-  theme(
-    axis.title.y = element_text(angle = 90),
-    legend.position = c(0.99, 0.99),
-    legend.justification = c(1, 1) ,
-    plot.title = element_text(size = 16),
-    #panel.grid.minor = element_blank()
-  )
-
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-
-# Passing matchup
-p <- matchup_chart_all %>% 
-  ggplot(aes(x = epa_per_pass, y = opp_def_epa_per_pass)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa_per_pass), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(matchup_chart_all$epa_per_pass), color = "red", linetype = "dashed") +
-  labs(x = "Offense Pass EPA/play",
-       y = "Opponent Defense Pass EPA/play",
-       # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL Team Tiers Passing Matchups through Week {n_week}"),
-       subtitle = glue("Team passing offense and week {n_week + 1} opponent passing defense EPA per play")) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-  theme_cw +
-  theme(
-    axis.title.y = element_text(angle = 90),
-    legend.position = c(0.99, 0.99),
-    legend.justification = c(1, 1) ,
-    plot.title = element_text(size = 16),
-    #panel.grid.minor = element_blank()
-  )
-
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_pass_team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-
-# Rushing matchup
-p <- matchup_chart_all %>% 
-  ggplot(aes(x = epa_per_rush, y = opp_def_epa_per_rush)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa_per_rush), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(matchup_chart_all$epa_per_rush), color = "red", linetype = "dashed") +
-  labs(x = "Offense Rush EPA/play",
-       y = "Opponent Defense Rush EPA/play",
-       # caption = "Data: @nflscrapR",
-       title = glue("{year} NFL Team Tiers Rushing Matchups through Week {n_week}"),
-       subtitle = glue("Team rushing offense and week {n_week + 1} opponent rushing defense EPA per play")) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-  theme_cw +
-  theme(
-    axis.title.y = element_text(angle = 90),
-    legend.position = c(0.99, 0.99),
-    legend.justification = c(1, 1) ,
-    plot.title = element_text(size = 16),
-    #panel.grid.minor = element_blank()
-  )
-
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/matchup_rush_team_tiers_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-
+if (n_week < 17) {
+  matchup_chart_all <- chart_all %>%
+    left_join(
+      matchup_df %>% 
+        filter(week == n_week + 1) %>% 
+        select(posteam, oppteam, weekday, gametime),
+      by = c('posteam')
+    ) %>% left_join(chart_all %>% 
+                      select(
+                        -season,
+                      ) %>% 
+                      rename(
+                        opp_n_pass = n_pass,
+                        opp_n_rush = n_rush,
+                        opp_epa_per_pass = epa_per_pass,
+                        opp_epa_per_rush = epa_per_rush,
+                        opp_success_per_pass = success_per_pass,
+                        opp_success_per_rush = success_per_rush,
+                        opp_off_epa = off_epa,
+                        opp_def_n_pass = def_n_pass,
+                        opp_def_n_rush = def_n_rush,
+                        opp_def_epa_per_pass = def_epa_per_pass,
+                        opp_def_epa_per_rush = def_epa_per_rush,
+                        opp_def_success_per_pass = def_success_per_pass,
+                        opp_def_success_per_rush = def_success_per_rush,
+                        opp_def_epa = def_epa,
+                        opp_def_success = def_success,
+                        opp_team_name = team_name,
+                        opp_team_id = team_id,
+                        opp_team_nick = team_nick,
+                        opp_team_color = team_color,
+                        opp_team_color2 = team_color2,
+                        opp_team_color3 = team_color3,
+                        opp_team_color4 = team_color4,
+                        opp_team_logo_wikipedia = team_logo_wikipedia,
+                        opp_team_logo_espn = team_logo_espn
+                      ),
+                    by = c('oppteam' = 'posteam')
+                    ) %>%
+    filter(!is.na(oppteam ))
+  
+  p <- matchup_chart_all %>% 
+    ggplot(aes(x = off_epa, y = opp_def_epa)) +
+    geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa), color = "red", linetype = "dashed") +
+    geom_vline(xintercept =  mean(matchup_chart_all$off_epa), color = "red", linetype = "dashed") +
+    labs(x = "Offense EPA/play",
+         y = "Opponent Defense EPA/play",
+         # caption = "Data: @nflscrapR",
+         title = glue("{season} NFL Team Tiers Matchups through Week {n_week}"),
+         subtitle = glue("Team offense and week {n_week + 1} opponent defense EPA per play")) +
+    geom_abline(slope=slope, intercept=.4, alpha=.2) +
+    geom_abline(slope=slope, intercept=.3, alpha=.2) +
+    geom_abline(slope=slope, intercept=0, alpha=.2) +
+    geom_abline(slope=slope, intercept=.1, alpha=.2) +
+    geom_abline(slope=slope, intercept=.2, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.1, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.2, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+    theme_cw +
+    theme(
+      axis.title.y = element_text(angle = 90),
+      legend.position = c(0.99, 0.99),
+      legend.justification = c(1, 1) ,
+      plot.title = element_text(size = 16),
+      #panel.grid.minor = element_blank()
+    )
+  
+  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_team_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  
+  # Passing matchup
+  p <- matchup_chart_all %>% 
+    ggplot(aes(x = epa_per_pass, y = opp_def_epa_per_pass)) +
+    geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa_per_pass), color = "red", linetype = "dashed") +
+    geom_vline(xintercept =  mean(matchup_chart_all$epa_per_pass), color = "red", linetype = "dashed") +
+    labs(x = "Offense Pass EPA/play",
+         y = "Opponent Defense Pass EPA/play",
+         # caption = "Data: @nflscrapR",
+         title = glue("{season} NFL Team Tiers Passing Matchups through Week {n_week}"),
+         subtitle = glue("Team passing offense and week {n_week + 1} opponent passing defense EPA per play")) +
+    geom_abline(slope=slope, intercept=.4, alpha=.2) +
+    geom_abline(slope=slope, intercept=.3, alpha=.2) +
+    geom_abline(slope=slope, intercept=0, alpha=.2) +
+    geom_abline(slope=slope, intercept=.1, alpha=.2) +
+    geom_abline(slope=slope, intercept=.2, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.1, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.2, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+    theme_cw +
+    theme(
+      axis.title.y = element_text(angle = 90),
+      legend.position = c(0.99, 0.99),
+      legend.justification = c(1, 1) ,
+      plot.title = element_text(size = 16),
+      #panel.grid.minor = element_blank()
+    )
+  
+  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_pass_team_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  
+  # Rushing matchup
+  p <- matchup_chart_all %>% 
+    ggplot(aes(x = epa_per_rush, y = opp_def_epa_per_rush)) +
+    geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa_per_rush), color = "red", linetype = "dashed") +
+    geom_vline(xintercept =  mean(matchup_chart_all$epa_per_rush), color = "red", linetype = "dashed") +
+    labs(x = "Offense Rush EPA/play",
+         y = "Opponent Defense Rush EPA/play",
+         # caption = "Data: @nflscrapR",
+         title = glue("{season} NFL Team Tiers Rushing Matchups through Week {n_week}"),
+         subtitle = glue("Team rushing offense and week {n_week + 1} opponent rushing defense EPA per play")) +
+    geom_abline(slope=slope, intercept=.4, alpha=.2) +
+    geom_abline(slope=slope, intercept=.3, alpha=.2) +
+    geom_abline(slope=slope, intercept=0, alpha=.2) +
+    geom_abline(slope=slope, intercept=.1, alpha=.2) +
+    geom_abline(slope=slope, intercept=.2, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.1, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.2, alpha=.2) +
+    geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+    theme_cw +
+    theme(
+      axis.title.y = element_text(angle = 90),
+      legend.position = c(0.99, 0.99),
+      legend.justification = c(1, 1) ,
+      plot.title = element_text(size = 16),
+      #panel.grid.minor = element_blank()
+    )
+  
+  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_rush_team_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+}
 end_time <- Sys.time()
 end_time - start_time
 
 rm(time_series, res, slope, qb_min, epa_data, offense, opponent_data, chart_all, matchup_chart_all, p, start_time, end_time)
+})
