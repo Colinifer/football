@@ -29,7 +29,7 @@ gm_scheduled <- unlist(sapply(yr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$scheduled
   })
-})) %>% mutate()
+}))
 
 gm_df <- data.frame(all_id, gm_status, gm_scheduled, stringsAsFactors = F) %>% 
   mutate(gm_scheduled = gm_scheduled %>% as.Date())

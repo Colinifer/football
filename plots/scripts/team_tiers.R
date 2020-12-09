@@ -1,9 +1,9 @@
 library(pracma)
 
-lapply(1999:2019, function(x){
+# lapply(1999:2019, function(x){
 
 start_time <- Sys.time()
-season <- x
+season <- year
   
 pbp_df <- purrr::map_df(season, function(x) {
   readRDS(url(
@@ -13,7 +13,7 @@ pbp_df <- purrr::map_df(season, function(x) {
 }) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
 print(season)
 
-n_week <- pbp_df %>% select(week) %>% max()
+n_week <- fx.n_week(pbp_df)
 
 # If week < 10, us current weeks in season
 time_series <- dplyr::if_else(pbp_df %>%
@@ -50,7 +50,7 @@ epa_data <- pbp_df %>%
 
 offense <- pbp_df %>%
   filter(!is.na(epa) & !is.na(posteam)) %>% 
-  group_by(posteam, season)%>%
+  group_by(posteam, season) %>%
   summarize(
     n_pass=sum(pass, na.rm = T),
     n_rush=sum(rush, na.rm = T),
@@ -414,4 +414,4 @@ end_time <- Sys.time()
 end_time - start_time
 
 rm(time_series, res, slope, qb_min, epa_data, offense, opponent_data, chart_all, matchup_chart_all, p, start_time, end_time)
-})
+# })

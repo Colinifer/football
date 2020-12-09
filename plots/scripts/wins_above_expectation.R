@@ -1,0 +1,218 @@
+# NOTES:
+
+# Get avg drive length offense and defense, and success rate OR TD rate
+
+library(tidyverse)
+
+# lapply(1999:2019, function(x) {
+
+# Parameter --------------------------------------------------------------------
+
+season <- year
+wp_limit <- 0.5
+
+# Load the data ----------------------------------------------------------------
+
+pbp_df <- purrr::map_df(season, function(x) {
+  readRDS(url(
+    glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
+  ))
+  # }) %>% filter(week < 9)
+}) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
+
+n_week <- fx.n_week(pbp_df)
+
+# Compute outcomes and win percentage ------------------------------------------
+
+outcomes <- pbp_df %>%
+  group_by(season, game_id, home_team) %>%
+  filter(row_number()==n()) %>% 
+  summarise(
+    home_win = if_else(result > 0, 1, 0),
+    home_tie = if_else(result == 0, 1, 0),
+    home_score = first(home_score),
+    home_result = first(result)
+  ) %>%
+  group_by(season, home_team) %>%
+  summarise(
+    home_games = n(),
+    home_wins = sum(home_win),
+    home_ties = sum(home_tie),
+    home_points = sum(home_score),
+    home_result = sum(home_result)
+  ) %>%
+  ungroup() %>%
+  left_join(
+    # away games
+    pbp_df %>%
+      group_by(season, game_id, away_team) %>%
+      filter(row_number()==n()) %>% 
+      summarise(
+        away_win = if_else(result < 0, 1, 0),
+        away_tie = if_else(result == 0, 1, 0),
+        away_score = first(away_score),
+        away_result = first(result)
+      ) %>%
+      group_by(season, away_team) %>%
+      summarise(
+        away_games = n(),
+        away_wins = sum(away_win),
+        away_ties = sum(away_tie),
+        away_points = sum(away_score),
+        away_result = first(away_result)
+      ) %>%
+      ungroup(),
+    by = c("season", "home_team" = "away_team")
+  ) %>%
+  rename(team = "home_team") %>%
+  mutate(
+    games = home_games + away_games,
+    wins = home_wins + away_wins,
+    losses = games - wins,
+    ties = home_ties + away_ties,
+    win_percentage = (wins + 0.5 * ties) / games,
+    points_diff = home_result + away_result,
+    points_for = home_points + away_points,
+    points_against = points_for - points_diff,
+    pyth_xwins = (points_diff /(games * 2.0625)) + 8,
+    pyth_xlosses = 16 - pyth_xwins,
+    pyth_xwin_percentage = pyth_xwins / 16 #total games at end of season
+  ) %>%
+  select(
+    season, team, games, wins, losses, ties, win_percentage, points_diff, points_for, points_against, pyth_xwins, pyth_xlosses, pyth_xwin_percentage
+  )
+
+# Compute percentage of plays with wp > wp_lim ---------------------------------
+
+wp_combined <- pbp_df %>%
+  filter(!is.na(vegas_wp) & !is.na(posteam)) %>%
+  group_by(season, posteam) %>%
+  summarise(
+    pos_plays = n(),
+    pos_wp_lim_plays = sum(vegas_wp > wp_limit)
+  ) %>%
+  ungroup() %>%
+  left_join(
+    pbp_df %>%
+      filter(!is.na(vegas_wp) & !is.na(posteam)) %>%
+      group_by(season, defteam) %>%
+      summarise(
+        def_plays = n(),
+        def_wp_lim_plays = sum(vegas_wp < wp_limit)
+      ) %>%
+      ungroup(),
+    by = c("season", "posteam" = "defteam")
+  ) %>%
+  rename(team = "posteam") %>%
+  mutate(
+    wp_lim_percentage = as.numeric(pos_wp_lim_plays + def_wp_lim_plays) / as.numeric(pos_plays + def_plays)
+  ) %>%
+  select(season, team, wp_lim_percentage)
+
+# Combine data and add colors and logos ----------------------------------------
+
+chart <- outcomes %>%
+  left_join(wp_combined, by = c("season", "team")) %>%
+  filter(!is.na(wp_lim_percentage)) %>%
+  mutate(diff = 100 * (win_percentage - wp_lim_percentage)) %>%
+  group_by(team) %>%
+  # summarise_all(mean) %>%
+  ungroup() %>%
+  inner_join(
+    nflfastR::teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn, team_logo_wikipedia),
+    by = c("team" = "team_abbr")
+  ) %>%
+  mutate(
+    grob = map(seq_along(team_logo_espn), function(x) {
+      grid::rasterGrob(magick::image_read(team_logo_espn[[x]]))
+    })
+  ) %>%
+  select(team, win_percentage, pyth_xwin_percentage, wp_lim_percentage, diff, team_color, grob) %>%
+  arrange(desc(diff))
+
+
+# Create scatterplot -----------------------------------------------------------
+wins_above_expected_scatter <- chart %>%
+  ggplot(aes(x = wp_lim_percentage, y = win_percentage)) +
+  geom_abline(intercept = 0, slope = 1) +
+  geom_hline(aes(yintercept = mean(win_percentage)), color = "red", linetype = "dashed") +
+  geom_vline(aes(xintercept = mean(wp_lim_percentage)), color = "red", linetype = "dashed") +
+  ggpmisc::geom_grob(aes(x = wp_lim_percentage, y = win_percentage, label = grob), vp.width = 0.05) +
+  coord_cartesian(xlim = c(0, 1), ylim = c(0, 1)) +
+  labs(
+    x = glue::glue("Percentage of snaps with win probability (vegas_wp) over {100 * wp_limit}%"),
+    y = "True win percentage (including ties as half a win)",
+    title = "NFL Team Efficiency",
+    subtitle = glue("Through week {n_week}")
+  ) +
+  # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
+  theme_cw +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 1),
+    axis.text.y = element_text(angle = 0, vjust = 0.5),
+    axis.title.y = element_text(angle = 90),
+    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = "bold"),
+    legend.position = "top"
+  ) + NULL
+
+brand_plot(wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_scatter_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+# Create bar plot  -------------------------------------------------------------
+wins_above_expected_bar <- chart %>%
+  ggplot(aes(x = seq_along(diff), y = diff)) +
+  geom_hline(aes(yintercept = mean(diff)), color = "red", linetype = "dashed") +
+  geom_col(width = 0.5, colour = chart$team_color, fill = chart$team_color, alpha = 0.5) +
+  ggpmisc::geom_grob(aes(x = seq_along(diff), y = diff, label = grob), vp.width = 0.035) +
+  # scale_x_continuous(expand = c(0,0)) +
+  labs(
+    x = "Rank",
+    y = "Win Percentage Over Expectation",
+    title = "NFL Team Efficiency",
+    subtitle = glue("How Lucky are the Teams? Through week {n_week}")
+  ) +
+  # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
+  theme_cw +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 1),
+    axis.title.y = element_text(angle = 90),
+    axis.text.y = element_text(angle = 0, vjust = 0.5),
+    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = "bold"),
+    legend.position = "top"
+  ) +
+  NULL
+
+brand_plot(wins_above_expected_bar, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_bar_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+
+# Pythagorean Wins
+pythagorean_wins_above_expected_scatter <- chart %>%
+  ggplot(aes(x = pyth_xwin_percentage, y = win_percentage)) +
+  geom_abline(intercept = 0, slope = 1) +
+  geom_hline(aes(yintercept = mean(win_percentage)), color = "red", linetype = "dashed") +
+  geom_vline(aes(xintercept = mean(pyth_xwin_percentage)), color = "red", linetype = "dashed") +
+  ggpmisc::geom_grob(aes(x = pyth_xwin_percentage, y = win_percentage, label = grob), vp.width = 0.05) +
+  coord_cartesian(xlim = c(0, 1), ylim = c(0, 1)) +
+  labs(
+    x = glue::glue("Pythagorean expected win probability"),
+    y = "True win percentage (including ties as half a win)",
+    title = "NFL Team Pythagorean Expectation",
+    subtitle = glue("Pythagorean expected wins through week {n_week}")
+  ) +
+  # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
+  theme_cw +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 1),
+    axis.text.y = element_text(angle = 0, vjust = 0.5),
+    axis.title.y = element_text(angle = 90),
+    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = "bold"),
+    legend.position = "top"
+  ) + NULL
+
+brand_plot(pythagorean_wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/pythag_wins_above_expected_scatter_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+rm(season, wp_limit, outcomes, wp_combined, chart, wins_above_expected_scatter, wins_above_expected_bar, pythagorean_wins_above_expected_scatter)
+
+# })

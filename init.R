@@ -3,6 +3,7 @@
 # devtools::install_github("mrcaseb/nflfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
 # devtools::install_github("jthomasmock/espnscrapeR")
+# devtools::install_github("colinifer/initR", auth_token = '16c30189517d3ef251cd896248856f37f652e7fd')
 proj_name <- "football"
 pkgs <- c(
   "devtools",
@@ -62,6 +63,8 @@ library("nflfastR")
 # lapply(paste0('package:', names(sessionInfo()$otherPkgs)), detach, character.only=TRUE, unload=TRUE)
 
 rm(pkgs, installed_packages)
+
+`%notin%` <- Negate(`%in%`)
 
 # source("../initR/init.R")
 fx.setdir(proj_name)

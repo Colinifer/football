@@ -4,11 +4,11 @@ load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=t
 
 # choose seasons for which the plot shall be generated
 # CPOE starts in 2006
-season <- 2020
+season <- year
 
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
-# lapply(2009:2019, function(season){
+# lapply(2007:2019, function(season){
   pbp_df <-
     purrr::map_df(season, function(x) {
       readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
@@ -25,7 +25,27 @@ season <- 2020
   # load roster data from nflfastR data repo
   roster_df <-
     readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true")) %>% 
-    decode_player_ids(fast = TRUE)
+    decode_player_ids(fast = TRUE) %>% 
+    select(team = team.abbr,
+           first_name = teamPlayers.firstName,
+           last_name = teamPlayers.lastName,
+           gsis = teamPlayers.gsisId,
+           headshot_url = teamPlayers.headshot_url
+    ) %>%
+    mutate(full_name = glue('{first_name} {last_name}')) %>%
+    select(-first_name, -last_name) %>% unique() %>% 
+    mutate(# some headshot urls are broken. They are checked here and set to a default 
+      headshot_url = dplyr::if_else(condition = full_name %in% c('Brett Basanez', 
+                                                                 'JaMarcus Russell', 
+                                                                 'J.P. Losman',
+                                                                 'Marc Bulger',
+                                                                 'Donovan McNabb',
+                                                                 'Steve McNair',
+                                                                 'Brad Johnson',
+                                                                 'Andrew Walter',
+                                                                 'Lem Burnham',
+                                                                 'Cleo Lemon'), true = 'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png', false = as.character(headshot_url))
+    )
   
   # compute cpoe grouped by air_yards
   epa_cpoe <-
@@ -95,29 +115,12 @@ season <- 2020
       by = c('passer_player_id' = 'gsis_id')
     ) %>%
     # left_join(
-    #   as_tibble(roster_df) %>%
-    #     select(team = team.abbr,
-    #            first_name = teamPlayers.firstName,
-    #            last_name = teamPlayers.lastName,
-    #            gsis = teamPlayers.gsisId,
-    #            headshot_url = teamPlayers.headshot_url
-    #     ) %>%
-    #     mutate(full_name = glue('{first_name} {last_name}')) %>%
-    #     select(-first_name, -last_name) %>% unique(),
+    #   as_tibble(roster_df),
     #   by = c('passer_player_id' = 'gsis' , 'team')
     # ) %>%
     mutate(# some headshot urls are broken. They are checked here and set to a default 
-      headshot_url = dplyr::if_else(
-        RCurl::url.exists(as.character(headshot_url)),
-        as.character(headshot_url),
-        'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png',
-      ),
-      headshot_url = dplyr::if_else(
-        headshot_url == 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/RUS539462.png',
-        'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png',
-        headshot_url
-      )
-    ) %>%
+      headshot_url = dplyr::if_else(RCurl::url.exists(as.character(headshot_url)), as.character(headshot_url), 'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png')
+    ) %>% 
     left_join(epa_cpoe, by = c('passer_player_id', 'game_id')) %>% 
     arrange(season_dakota %>% desc()) %>% 
     mutate(lab_dakota = glue('DAKOTA: {season_dakota %>% round(3)}')) %>% 
@@ -262,9 +265,11 @@ season <- 2020
   
   # Desktop
   # save the plot
-  brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_epa_vs_cpoe/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
   
   # Mobile
   # save the plot
-  brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  
+  rm(season, epa_cpoe, top_32, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
 # })

@@ -3,7 +3,7 @@ library(nflfastR)
 
 # choose seasons for which the plot shall be generated
 # CPOE starts in 2006
-season <- 2020
+season <- year
 
 # load pbp for the choosen seasosn from nflfastR data repo
 # can be multiple seasons as well
@@ -39,12 +39,14 @@ summary_df <-
   pbp_df %>%
   filter(!is.na(cpoe)
          ) %>%
-  group_by(passer_player_id) %>%
+  group_by(posteam, passer_player_id) %>%
   summarise(plays = n(),
             total_cpoe = mean(cpoe)
             ) %>%
-  arrange(plays %>% desc()
-          ) %>%
+  arrange(plays %>% desc()) %>% 
+  group_by(posteam) %>% 
+  filter(row_number() == 1) %>% 
+  ungroup() %>% 
   left_join(pbp_df %>% 
               filter(!is.na(passer_player_id)
                      ) %>% 
@@ -53,8 +55,7 @@ summary_df <-
                      ) %>% 
               unique(),
             by = c('passer_player_id')
-            ) %>% 
-  head(32) %>%
+            ) %>%
   arrange(total_cpoe %>% 
             desc()
           ) %>%
@@ -228,8 +229,10 @@ p_mobile <- p +
   )
 
 # save the plot
-brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # save the plot
-brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_cpoe_vs_dot/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+rm(season, roster_df, cpoe, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
 # })
