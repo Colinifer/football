@@ -5,6 +5,9 @@ library(teamcolors)
 library(gt)
 library(webshot)
 
+
+# Data --------------------------------------------------------------------
+
 pbp_df <- purrr::map_df(season, function(x) {
   readRDS(url(
     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
@@ -69,7 +72,9 @@ wide_win_rate <- all_win_rate %>%
             by = c('team' = 'team_name')) %>% 
   select(team, team_abbr, prwr_rk, prwr, rswr_rk, rswr, def_wr_comb_rk, pbwr_rk, pbwr, rbwr_rk, rbwr, off_wr_comb_rk, total_wr_comb_rk)
 
-# Rush EPA compare to Run Block Win Rate
+
+# Team Rush EPA compared to Run Block Win Rate ----------------------------
+
 wide_win_rate %>% 
   select(team_abbr, rbwr) %>% 
   left_join(offense %>% 
@@ -97,7 +102,175 @@ wide_win_rate %>%
   )
 
 
-# Pass EPA compare to Pass Block Win Rate
+# RB EPA to RBWR ----------------------------------------------------------
+
+# compute cpoe grouped by air_yards
+rb_epa <-
+  pbp_df %>%
+  filter(!is.na(epa) & !is.na(rusher_player_id)) %>%
+  group_by(rusher_player_id) %>%
+  summarise(total_yards = sum(yards_gained), epa = mean(epa))
+
+top_32 <- 
+  pbp_df %>%
+  filter(!is.na(epa) & !is.na(rusher_player_id)
+  ) %>%
+  group_by(rusher_player_id) %>%
+  summarise(posteam = posteam %>% first(),
+            rush_attempts = n(),
+            total_epa = mean(epa)
+  ) %>%
+  arrange(rush_attempts %>% desc()
+  ) %>% 
+  group_by(posteam) %>% 
+  filter(row_number() == 1) %>% 
+  head(32) %>% 
+  pull(rusher_player_id)
+
+# summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
+# Since we would filter those plays anyways we can use the id here)
+# The correct name is being joined using the roster data
+# first arranged by number of plays to filter the 30 QBs with most pass attempts
+# The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
+summary_df <-
+  pbp_df %>%
+  filter(!is.na(epa) & !is.na(rusher_player_id)
+  ) %>% 
+  group_by(rusher_player_id) %>%
+  summarise(rush_attempts = n(),
+            total_epa = mean(epa)
+  ) %>%
+  left_join(pbp_df %>% 
+              filter(!is.na(rusher_player_id)
+              ) %>% 
+              select(rusher_player_id, 
+                     team = posteam
+              ) %>% 
+              unique(),
+            by = c('rusher_player_id')
+  ) %>% 
+  group_by(rusher_player_id) %>% 
+  mutate(season_rush_attempts = sum(rush_attempts, na.rm = T)) %>% 
+  ungroup %>% 
+  arrange(season_rush_attempts %>% 
+            desc()
+  ) %>% 
+  filter(rusher_player_id %in% top_32) %>%
+  left_join(
+    sleeper_players_df %>%
+      select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
+    by = c('rusher_player_id' = 'gsis_id')
+  ) %>%
+  # left_join(
+  #   as_tibble(roster_df),
+  #   by = c('passer_player_id' = 'gsis' , 'team')
+  # ) %>%
+  mutate(# some headshot urls are broken. They are checked here and set to a default 
+    headshot_url = dplyr::if_else(RCurl::url.exists(as.character(headshot_url)), as.character(headshot_url), 'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png')
+  ) %>% 
+  left_join(rb_epa, by = c('rusher_player_id')) %>% 
+  arrange(total_epa %>% desc()) %>% 
+  left_join(
+    teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
+    by = c('team' = 'team_abbr')
+  )
+
+# create data frame used to add the logos
+# arranged by name because name is used for the facet
+colors_raw <-
+  summary_df %>%
+  group_by(rusher_player_id) %>%
+  summarise(team = first(team), name = first(full_name)) %>%
+  left_join(
+    teams_colors_logos %>% select(team_abbr, team_color),
+    by = c("team" = "team_abbr")
+  ) %>%
+  arrange(name)
+
+# the below used smooth algorithm uses the parameter n as the number
+# of points at which to evaluate the smoother. When using color as aesthetics
+# we need exactly the same number of colors (-> n times the same color per player)
+
+# mean data frame for the smoothed line of the whole league
+mean <-
+  summary_df %>%
+  summarise(league_epa = mean(total_epa)
+  )
+
+summary_images_df <- 
+  summary_df %>% 
+  select(full_name, rusher_player_id, total_epa, season_rush_attempts, headshot_url, team_logo_espn) %>% 
+  unique() %>% 
+  arrange(total_epa %>% desc()) %>% 
+  head(32)
+
+# RB rushing + RBWR
+wide_win_rate %>% 
+  select(team_abbr, rbwr) %>% 
+  left_join(summary_df %>% 
+              select(full_name, team, total_epa) %>% unique(), 
+            by = c('team_abbr' = 'team')) %>% 
+  left_join(colors_raw %>% select(team, team_color),
+            by = c('team_abbr' = 'team')) %>% 
+  mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
+  arrange(-rbwr) %>% 
+  ggplot(aes(x = rbwr, y = total_epa)) +
+  # geom_hline(yintercept = mean(summary_df$season_dakota), color = "red", linetype = "dashed") +
+  # geom_vline(xintercept =  mean(wide_win_rate$pbwr), color = "red", linetype = "dashed") +
+  geom_smooth(method='lm', se = FALSE) + 
+  geom_point(color = summary_df$team_color,
+             shape = 21, 
+             size = 3) +
+  geom_text_repel(aes(label = full_name),
+                  color = color_cw[5],
+                  family = 'Montserrat') +
+  labs(x = "Run Block Win Rate %",
+       y = "Total EPA",
+       # caption = "Data: @nflscrapR",
+       title = glue("{year} NFL Team Rushing Efficiency"),
+       subtitle = glue("How successful are RBs at rushing as compared to their O-Line's success")) +
+  theme_cw + 
+  theme(
+    axis.title.y = element_text(angle = 90),
+    plot.title = element_text(size = 16)
+    #panel.grid.minor = element_blank()
+  )
+
+# RB rush attempts + Total EPA
+wide_win_rate %>% 
+  select(team_abbr, rbwr) %>% 
+  left_join(summary_df %>% 
+              select(full_name, team, total_epa, season_rush_attempts), 
+            by = c('team_abbr' = 'team')) %>% 
+  left_join(colors_raw %>% select(team, team_color),
+            by = c('team_abbr' = 'team')) %>% 
+  mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
+  arrange(-rbwr) %>% 
+  ggplot(aes(x = season_rush_attempts, y = total_epa)) +
+  # geom_hline(yintercept = mean(summary_df$season_dakota), color = "red", linetype = "dashed") +
+  # geom_vline(xintercept =  mean(wide_win_rate$pbwr), color = "red", linetype = "dashed") +
+  geom_smooth(method='lm', se = FALSE) + 
+  geom_point(color = summary_df$team_color,
+             shape = 21, 
+             size = 3) +
+  geom_text_repel(aes(label = full_name),
+                  color = color_cw[5],
+                  family = 'Montserrat') +
+  labs(x = "Total Rush Attempts",
+       y = "Total EPA",
+       # caption = "Data: @nflscrapR",
+       title = glue("{year} NFL Team Rushing Efficiency"),
+       subtitle = glue("How successful are RBs at rushing as compared to their O-Line's success")) +
+  theme_cw + 
+  theme(
+    axis.title.y = element_text(angle = 90),
+    plot.title = element_text(size = 16)
+    #panel.grid.minor = element_blank()
+  )
+
+
+# Team Pass EPA to Pass Block Win Rate ------------------------------------
+
 wide_win_rate %>% 
   select(team_abbr, pbwr) %>% 
   left_join(offense %>% 
@@ -125,7 +298,9 @@ wide_win_rate %>%
   )
 
 
-# Passer compared to Pass Block Win Rate
+
+# Passer to Pass Block Win Rate -------------------------------------------
+
 load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
 
 # compute cpoe grouped by air_yards
@@ -244,7 +419,7 @@ summary_images_df <-
   arrange(season_dakota %>% desc()) %>% 
   head(32)
 
-
+# DAKOTA + PBWR
 wide_win_rate %>% 
   select(team_abbr, pbwr) %>% 
   left_join(summary_df %>% 
@@ -258,15 +433,78 @@ wide_win_rate %>%
   # geom_hline(yintercept = mean(summary_df$season_dakota), color = "red", linetype = "dashed") +
   # geom_vline(xintercept =  mean(wide_win_rate$pbwr), color = "red", linetype = "dashed") +
   geom_smooth(method='lm', se = FALSE) + 
-  geom_point(aes(fill = team_color, color = team_color),
+  geom_point(color = summary_df$team_color,
              shape = 21, 
-             size = 1.2) +
-  # geom_text_repel() + 
+             size = 3) +
+  geom_text_repel(aes(label = full_name),
+                  color = color_cw[5]) +
   labs(x = "Pass Block Win Rate %",
        y = "DAKOTA",
        # caption = "Data: @nflscrapR",
        title = glue("{year} NFL Team Passing Efficiency"),
-       subtitle = glue("How successful are teams at passing as compared to their O-Line's success")) +
+       subtitle = glue("How successful are QBs at passing as compared to their O-Line's success")) +
+  theme_cw + 
+  theme(
+    axis.title.y = element_text(angle = 90),
+    plot.title = element_text(size = 16)
+    #panel.grid.minor = element_blank()
+  )
+
+# CPOE + PBWR
+wide_win_rate %>% 
+  select(team_abbr, pbwr) %>% 
+  left_join(summary_df %>% 
+              select(full_name, team, total_cpoe) %>% unique(), 
+            by = c('team_abbr' = 'team')) %>% 
+  left_join(colors_raw %>% select(team, team_color),
+            by = c('team_abbr' = 'team')) %>% 
+  mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
+  arrange(-pbwr) %>% 
+  ggplot(aes(x = pbwr, y = total_cpoe)) +
+  # geom_hline(yintercept = mean(summary_df$season_dakota), color = "red", linetype = "dashed") +
+  # geom_vline(xintercept =  mean(wide_win_rate$pbwr), color = "red", linetype = "dashed") +
+  geom_smooth(method='lm', se = FALSE) + 
+  geom_point(color = summary_df$team_color,
+             shape = 21, 
+             size = 3) +
+  geom_text_repel(aes(label = full_name),
+                  color = color_cw[5]) +
+  labs(x = "Pass Block Win Rate %",
+       y = "Total CPOE",
+       # caption = "Data: @nflscrapR",
+       title = glue("{year} NFL Team Passing Efficiency"),
+       subtitle = glue("How successful are QBs at passing as compared to their O-Line's success")) +
+  theme_cw + 
+  theme(
+    axis.title.y = element_text(angle = 90),
+    plot.title = element_text(size = 16)
+    #panel.grid.minor = element_blank()
+  )
+
+# CPOE + PBWR
+wide_win_rate %>% 
+  select(team_abbr, pbwr) %>% 
+  left_join(summary_df %>% 
+              select(full_name, team, total_epa) %>% unique(), 
+            by = c('team_abbr' = 'team')) %>% 
+  left_join(colors_raw %>% select(team, team_color),
+            by = c('team_abbr' = 'team')) %>% 
+  mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
+  arrange(-pbwr) %>% 
+  ggplot(aes(x = pbwr, y = total_epa)) +
+  # geom_hline(yintercept = mean(summary_df$season_dakota), color = "red", linetype = "dashed") +
+  # geom_vline(xintercept =  mean(wide_win_rate$pbwr), color = "red", linetype = "dashed") +
+  geom_smooth(method='lm', se = FALSE) + 
+  geom_point(color = summary_df$team_color,
+             shape = 21, 
+             size = 3) +
+  geom_text_repel(aes(label = full_name),
+                  color = color_cw[5]) +
+  labs(x = "Pass Block Win Rate %",
+       y = "Total EPA",
+       # caption = "Data: @nflscrapR",
+       title = glue("{year} NFL Team Passing Efficiency"),
+       subtitle = glue("How successful are QBs at passing as compared to their O-Line's success")) +
   theme_cw + 
   theme(
     axis.title.y = element_text(angle = 90),

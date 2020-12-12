@@ -21,6 +21,11 @@ wide_win_rate <- all_win_rate %>%
               values_from = win_pct,
               id_col = team) %>%
   purrr::set_names(nm = c('team', 'prwr', 'rswr', 'pbwr', 'rbwr')) %>%
+  mutate(prwr = glue('.{prwr}') %>% as.double(),
+         rswr = glue('.{rswr}') %>% as.double(),
+         pbwr = glue('.{pbwr}') %>% as.double(),
+         rbwr = glue('.{rbwr}') %>% as.double(),
+         ) %>% 
   mutate(prwr_rk = min_rank(desc(prwr)), .before = prwr) %>%
   mutate(rswr_rk = min_rank(desc(rswr)), .before = rswr) %>%
   mutate(pbwr_rk = min_rank(desc(pbwr)), .before = pbwr) %>%
@@ -255,6 +260,10 @@ gt_def_tab <- gtdf %>%
       #   columns = 3
       )
     )
+  ) %>%
+  fmt_percent(
+    columns = c(4, 6, 9, 11), 
+    decimals = 0
   ) %>% 
   # tab_style(
   #   style = cell_text(
@@ -280,7 +289,6 @@ gt_def_tab <- gtdf %>%
   tab_source_note(
     source_note = md('**Chart:** Colin Welsh | **Data:** ESPN')
   ) %>% 
-  fmt_percent(columns = c(4, 6, 9, 11), decimals = 0) %>% 
   cols_align(align = 'center', columns = 2:16) %>% 
   cols_align(align = 'left', columns = c(1,2)) %>% 
   tab_header(
@@ -444,6 +452,10 @@ gt_off_tab <- gtdf %>%
       )
     )
   ) %>% 
+  fmt_percent(
+    columns = c(4, 6, 9, 11), 
+    decimals = 0
+  ) %>% 
   # tab_style(
   #   style = cell_text(
   #     weight = 'bold',
@@ -468,7 +480,6 @@ gt_off_tab <- gtdf %>%
   tab_source_note(
     source_note = md('**Chart:** Colin Welsh | **Data:** ESPN')
   ) %>% 
-  fmt_percent(columns = c(4, 6, 9, 11), decimals = 0) %>% 
   cols_align(align = 'center', columns = 2:16) %>% 
   cols_align(align = 'left', columns = c(1,2)) %>% 
   tab_header(

@@ -200,20 +200,20 @@ season <- year
     geom_shadowtext(data = summary_images_df,
                     aes(label = lab_dakota, 
                         x = 37.5, 
-                        y = -.72),
+                        y = -1.23),
                     color = color_cw[5],
                     bg.color = color_cw[2],
                     bg.r = .3,
                     hjust = 1,
                     family = "Montserrat",
                     size = 1.4) +
-    ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.35, image = team_logo_espn),
+    ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.8, image = team_logo_espn),
                         size = .25, by = "width", asp = asp
     ) +
-    ggimage::geom_image(data = summary_images_df, aes(x = -26.5, y = -.55, image = headshot_url),
-                        size = .4, by = "width", asp = asp
+    ggimage::geom_image(data = summary_images_df, aes(x = -26, y = -.9, image = headshot_url),
+                        size = .45, by = "width", asp = asp
     ) +
-    coord_cartesian(xlim = c(-35, 35), ylim = c(-.75, 1.25)) + # 'zoom in'
+    coord_cartesian(xlim = c(-35, 35), ylim = c(-1.25, 1.25)) + # 'zoom in'
     labs(
       x = 'Completion Percentage Over Expectation (CPOE in percentage points)',
       y = 'EPA per Pass Attempt',

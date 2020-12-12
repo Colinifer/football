@@ -146,7 +146,7 @@ sr_games_df <- readRDS('data/games_2020.rds')
 
 # source('data/master_sr_pbp.R')
 full_pbp_df <- readRDS('data/pbp/play_by_play_2020.rds')
-full_pbp_df %>% tail
+full_pbp_df %>% select(game_date) %>% arrange(game_date) %>%  unique() %>%  tail()
 # pbp_df <-
 #   readRDS(glue('data/pbp/play_by_play_{year}.rds')) %>%
 #   decode_player_ids(fast = T)
@@ -168,5 +168,7 @@ source('plots/assets/plot_theme.R')
 # source('fantasy_football/xfantasy_points.R')
 # source('fantasy_football/xfantasy_points_test_theme.R')
 # source('plots/scripts/espn_winrate.R')
+# source('plots/scripts/defense_cpoe_adot.R')
+# source('plots/scripts/defense_epa_cpoe.R')
 # rm(list = ls())
 

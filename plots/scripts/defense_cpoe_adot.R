@@ -7,7 +7,7 @@ season <- year
 
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
-lapply(2006:2019, function(season){
+# lapply(2006:2020, function(season){
 pbp_df <-
   purrr::map_df(season, function(x) {
     readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
@@ -133,7 +133,7 @@ p <-
   labs(
     x = "Target Depth in Yards Thrown Beyond the Line of Scrimmage (DOT)",
     y = "Completion Percentage Over Expectation (CPOE)",
-    title = glue::glue("Passing Efficiency {season}"),
+    title = glue::glue("Defensive Passing Efficiency {season}"),
     subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets.\nSmoothed for -10 ≤ DOT ≤ 30 Yards. Red Line = League Average."
   )
 
@@ -184,4 +184,4 @@ brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/defense/defen
 
 brand_plot( p_mobile, asp = 10/16, save_name = glue('plots/mobile/defense/defense_cpoe_vs_dot/defense_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-})
+# })
