@@ -18,20 +18,59 @@ all_id <- unlist(sapply(yr_sched$weeks, function(wk) {
     gm$id
   })
 }))
-
 gm_status <- unlist(sapply(yr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$status
   })
 }))
-
 gm_scheduled <- unlist(sapply(yr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$scheduled
   })
 }))
+gm_home <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    gm$home$alias
+  })
+}))
+gm_away <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    gm$away$alias
+  })
+}))
+gm_venue <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    gm$venue$name
+  })
+}))
+gm_venue_roof <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    gm$venue$roof_type
+  })
+}))
+gm_venue_surface <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    gm$venue$surface
+  })
+}))
+gm_venue_long <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    gm$venue$location$lng
+  })
+}))
+gm_venue_lat <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    gm$venue$location$lat
+  })
+}))
+# Need to conditionally add weather based on roof type == outdoor
+gm_weather <- unlist(sapply(yr_sched$weeks, function(wk) {
+  sapply(wk$games, function(gm) {
+    if_else(gm$weather %>% is.null() == TRUE,'None',gm$weather)
+  })
+}))
 
-gm_df <- data.frame(all_id, gm_status, gm_scheduled, stringsAsFactors = F) %>% 
+gm_df <- tibble(all_id, gm_status, gm_scheduled, gm_home, gm_away, gm_venue, gm_venue_roof, gm_venue_surface, gm_venue_long, gm_venue_lat, gm_weather) %>% 
   mutate(gm_scheduled = gm_scheduled %>% as.Date())
 
 # Check missing play by play files
@@ -52,12 +91,12 @@ lapply(loop_id, function(x){
 # Participation is updated weekly on Fridays
 gm_done <- gsub('.json','',dir(glue('data/part/{year}')))
 loop_id <- gm_df %>% 
-  filter(gm_status=='closed' & !(all_id %in% gm_done) & (Sys.Date() - gm_scheduled >= 6)) %>% 
+  filter(gm_status=='closed' & !(all_id %in% gm_done) & (Sys.Date() - gm_scheduled >= 5)) %>% 
   pull(all_id)
 
 loop_id
 # Download missing participation files
-lapply(loop_id, function(x){
+lapply(loop_id[1], function(x){
   gm_json <- jsonlite::fromJSON(url(glue('https://api.sportradar.us/nfl/official/trial/v6/en/plays/{x}/participation.json?api_key={sr_key}')))
   jsonlite::write_json(gm_json, glue('data/part/{year}/{x}.json'))
   Sys.sleep(3)
