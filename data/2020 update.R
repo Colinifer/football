@@ -96,7 +96,7 @@ loop_id <- gm_df %>%
 
 loop_id
 # Download missing participation files
-lapply(loop_id[1], function(x){
+lapply(loop_id, function(x){
   gm_json <- jsonlite::fromJSON(url(glue('https://api.sportradar.us/nfl/official/trial/v6/en/plays/{x}/participation.json?api_key={sr_key}')))
   jsonlite::write_json(gm_json, glue('data/part/{year}/{x}.json'))
   Sys.sleep(3)
