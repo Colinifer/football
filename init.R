@@ -145,8 +145,8 @@ matchup_df <- schedule_df %>%
 sr_games_df <- readRDS('data/games_2020.rds')
 
 # source('data/master_sr_pbp.R')
-full_pbp_df <- readRDS('data/pbp/play_by_play_2020.rds')
-full_pbp_df %>% select(game_date) %>% arrange(game_date) %>%  unique() %>%  tail()
+pbp_df <- readRDS(glue('data/pbp/play_by_play_{year}.rds'))
+pbp_df %>% select(game_date) %>% arrange(game_date) %>%  unique() %>%  tail()
 # pbp_df <-
 #   readRDS(glue('data/pbp/play_by_play_{year}.rds')) %>%
 #   decode_player_ids(fast = T)

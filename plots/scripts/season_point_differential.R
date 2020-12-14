@@ -54,7 +54,7 @@ all_point_diff <- clean_all_pbp_df %>%
 all_point_diff$nfl_pri_dark <- NFL_pri_dark[match(all_point_diff$team, names(NFL_pri_dark))]
 
 # Loop through recent seasons
-lapply(1999:2020, function(year){
+# lapply(1999:2020, function(year){
 
 # Get best/worst teams in current and all seasons
 best_worst_teams <- c(
@@ -164,4 +164,5 @@ p
 
 brand_plot(p,  asp = 16/10, save_name = glue('plots/desktop/team_tiers/season_point_diff_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-})
+# rm(all_pbp_df, clean_all_pbp_df, all_point_diff, best_worst_teams, p)
+# })
