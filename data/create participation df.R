@@ -28,7 +28,10 @@ part_szn_df <- data.frame(do.call(rbind, unlist(lapply(part_json_file_names, fun
 
 saveRDS(part_szn_df, glue('data/part/sportradar_part_{year}.rds'))
 
-
+rm(
+  part_json_file_names,
+  part_szn_df
+)
 
 
 # 

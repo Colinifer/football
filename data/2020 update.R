@@ -74,7 +74,7 @@ gm_df <- tibble(all_id, gm_status, gm_scheduled, gm_home, gm_away, gm_venue, gm_
   mutate(gm_scheduled = gm_scheduled %>% as.Date())
 
 # Check missing play by play files
-gm_done <- gsub('.json','',dir(glue('data/{year}')))
+gm_done <- gsub('.json','',dir(glue('data/pbp/sportradar/{year}')))
 loop_id <- gm_df %>% 
   filter(gm_status=='closed' & !(all_id %in% gm_done)) %>% 
   pull(all_id)
@@ -83,7 +83,7 @@ loop_id
 # Download missing play by play files
 lapply(loop_id, function(x){
   gm_json <- jsonlite::fromJSON(url(glue('https://api.sportradar.us/nfl/official/trial/v5/en/games/{x}/pbp.json?api_key={sr_key}')))
-  jsonlite::write_json(gm_json, glue('data/{year}/{x}.json'))
+  jsonlite::write_json(gm_json, glue('data/pbp/sportradar/{year}/{x}.json'))
   Sys.sleep(3)
   })
 

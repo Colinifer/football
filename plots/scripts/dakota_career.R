@@ -15,9 +15,14 @@ roster_df <-
   decode_player_ids(fast = T)
 
 print("Scraping 2006:2020 PBP for career results")
-pbp_df <- do.call(rbind, lapply(2006:year, function(yr) {
-  readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
-})) %>% decode_player_ids(fast = T)
+# pbp_df <- do.call(rbind, lapply(2006:year, function(yr) {
+#   readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
+# })) %>% decode_player_ids(fast = T)
+pbp_df <- open_dataset('data/pbp/fastr', partitioning = 'year') %>% 
+  filter(season >= 2006) %>% 
+  select(-xyac_median_yardage) %>% 
+  collect() %>% 
+  decode_player_ids(fast = T)
 
 all_qb_id <- pbp_df %>% 
   pull(passer_id) %>% table %>% 

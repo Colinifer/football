@@ -4,15 +4,17 @@ load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=t
 
 # choose seasons for which the plot shall be generated
 # CPOE starts in 2006
-season <- year
+current_season <- year
 
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
 # lapply(2006:2020, function(season){
 pbp_df <-
-  purrr::map_df(season, function(x) {
-    readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
-  }) %>% decode_player_ids(fast = TRUE) %>% 
+  pbp_ds %>% 
+  filter(season == current_season) %>% 
+  select(-xyac_median_yardage) %>% 
+  collect() %>% 
+  decode_player_ids(fast = TRUE) %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam),
          posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),
@@ -159,7 +161,7 @@ p_desktop <- p +
   labs(
     x = 'Completion Percentage Over Expectation (CPOE in percentage points)',
     y = 'EPA per Pass Attempt',
-    title = glue::glue('Defensive Passing Efficiency Allowed by Game {season}'),
+    title = glue::glue('Defensive Passing Efficiency Allowed by Game {current_season}'),
     subtitle = "Defenses allowing the lowest QB DAKOTA to opposing teams, ordered by @benbbaldwin's DAKOTA rating\nWhite Dot = Most Recent Game. Red Line = League Average."
   ) +
   facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 8) +
@@ -186,7 +188,7 @@ p_mobile <- p +
   labs(
     x = 'Completion Percentage Over Expectation (CPOE in percentage points)',
     y = 'EPA per Pass Attempt',
-    title = glue::glue('Defensive Passing Efficiency by Game {season}'),
+    title = glue::glue('Defensive Passing Efficiency by Game {current_season}'),
     subtitle = "Defenses allowing the lowest QB DAKOTA to opposing teams,\nordered by @benbbaldwin's DAKOTA rating\nWhite Dot = Most Recent Game. Red Line = League Average."
   ) +
   facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 4) +
@@ -211,11 +213,25 @@ p_mobile <- p +
 
 # Desktop
 # save the plot
-brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/defense/defense_epa_vs_cpoe/defense_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/defense/defense_epa_vs_cpoe/defense_epa_vs_cpoe_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Mobile
 # save the plot
-brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/defense/defense_epa_vs_cpoe/defense_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/defense/defense_epa_vs_cpoe/defense_epa_vs_cpoe_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-rm(season, epa_cpoe, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
+rm(
+  current_season,
+  epa_cpoe,
+  summary_df,
+  colors_raw,
+  n_eval,
+  colors,
+  mean,
+  summary_images_df,
+  panel_label,
+  asp,
+  p,
+  p_desktop,
+  p_mobile
+)
 # })

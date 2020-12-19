@@ -1,69 +1,56 @@
-library(tidyverse)
-
-# source('init.R')
-
-source('https://raw.githubusercontent.com/mrcaseb/nflfastR/master/R/utils.R')
-source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
-source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
-source('fantasy_football/xyac/add_xyac_old.R')
-
-# YAC Distribution Function -----------------------------------------------
-
-# duplicate the add_xyac() function that we sourced above
-add_xyac_dist <- add_xyac
-
-
-# separate each block of code in the add_xyac_dist() function into blocks
-add_xyac_blocks <- body(add_xyac_dist) %>% as.list
-
-# we want to remove lines 51 to 62 from the 5th item in the list
-add_xyac_blocks[[2]] <- add_xyac_blocks[[2]] %>% 
-  format %>% 
-  .[-(61:72)] %>% 
-  paste(collapse = '\n') %>% 
-  str2lang
-
-# replace the body of add_xyac_dist() with our new edited function
-body(add_xyac_dist) <- add_xyac_blocks %>% as.call
-
-
 # Data --------------------------------------------------------------------
 
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
+year
 
-if (exists("pbp_df") == F) {
-  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
-}
+pbp_df <- 
+  # readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
+  xyac_ds %>% 
+  filter(season.x == year) %>% 
+  collect() %>% 
+  rename_at(.vars = vars(ends_with('.x')),
+            .funs = funs(sub('[.]x$', '', .)))
 
-my_week <- pbp_df$week %>% max()
-
+my_week <- fx.n_week(pbp_df)
 
 # Completed Air Yards Over Expected
-cayoe_xyac <- pbp_df %>%
-  filter(season == year & 
-           pass_attempt == 1 &
-           season_type == 'REG' &
-           two_point_attempt == 0 & 
-           !is.na(receiver_id) &
-           !is.na(air_yards) &
-           !is.na(complete_pass) &
-           # wp > .2 &
-           # wp < .8 &
-           air_yards > 0) %>%
-  add_xyac_dist
+# cayoe_xyac <- pbp_df %>%
+#   filter(season == year & 
+#            pass_attempt == 1 &
+#            season_type == 'REG' &
+#            two_point_attempt == 0 & 
+#            !is.na(receiver_id) &
+#            !is.na(air_yards) &
+#            !is.na(complete_pass) &
+#            # wp > .2 &
+#            # wp < .8 &
+#            air_yards > 0) %>% 
+#   add_xyac_dist()
 
-cayoe <- cayoe_xyac %>%
+cayoe <- pbp_df %>%
+  filter(
+    season == year &
+      pass_attempt == 1 &
+      season_type == 'REG' &
+      two_point_attempt == 0 &
+      !is.na(receiver_id) &
+      !is.na(air_yards) &
+      !is.na(complete_pass) &
+      # wp > .2 &
+      # wp < .8 &
+      air_yards > 0
+  ) %>% 
   select(
-    season = season.x,
+    season,
     game_id,
     play_id,
-    posteam = posteam.x,
+    posteam,
     passer,
     passer_player_id,
     receiver,
     receiver_player_id,
-    yardline_100 = yardline_100.x,
-    air_yards = air_yards.x,
+    yardline_100,
+    air_yards,
     actual_yards_gained = yards_gained,
     complete_pass,
     cp,
@@ -252,6 +239,6 @@ cayoe_filtered %>%
       default_fonts()
     )
   ) %>% 
-  gtsave(filename = paste0("qb_cayoe_", cayoe_filtered$season[1], ".png"), path = "plots/desktop")
+  gtsave(filename = glue("qb_cayoe_{cayoe_filtered$season[1]}.png"), path = "plots/desktop")
 
 # rm(list = ls())

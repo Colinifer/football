@@ -9,10 +9,9 @@ season <- year
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
 # lapply(2007:2019, function(season){
-  pbp_df <-
-    purrr::map_df(season, function(x) {
-      readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
-    }) %>% decode_player_ids(fast = TRUE) %>% 
+  pbp_df <- pbp_ds %>% 
+    filter(season >= season) %>% 
+    decode_player_ids(fast = TRUE) %>% 
     mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
            posteam = ifelse(posteam == "LA", "LAR", posteam),
            posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),

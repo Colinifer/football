@@ -1,3 +1,4 @@
+library(parallel)
 
 # Notes -------------------------------------------------------------------
 
@@ -5,47 +6,20 @@
 # sim_df <- readRDS('fantasy_football/data/sample_sim_df.rds')
 
 # Start -------------------------------------------------------------------
-
-library(tidyverse)
-library(parallel)
-library(viridis)
-
-# source('init.R')
-
-source('https://github.com/mrcaseb/nflfastR/blob/master/R/utils.R?raw=true')
-source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_xyac.R')
-source('https://github.com/mrcaseb/nflfastR/raw/master/R/helper_add_nflscrapr_mutations.R')
-source('fantasy_football/xyac/add_xyac_old.R')
-
-
-# YAC Distribution Function -----------------------------------------------
-
-# duplicate the add_xyac() function that we sourced above
-add_xyac_dist <- add_xyac
-
-
-# separate each block of code in the add_xyac_dist() function into blocks
-add_xyac_blocks <- body(add_xyac_dist) %>% as.list
-
-# we want to remove lines 51 to 62 from the 5th item in the list
-add_xyac_blocks[[2]] <- add_xyac_blocks[[2]] %>% 
-  format %>% 
-  .[-(61:72)] %>% 
-  paste(collapse = '\n') %>% 
-  str2lang
-
-# replace the body of add_xyac_dist() with our new edited function
-body(add_xyac_dist) <- add_xyac_blocks %>% as.call
-
 plan(multisession, workers = 4)
 
 # Data --------------------------------------------------------------------
 
-# pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
-if (exists("pbp_df") == FALSE) {
-  pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'))) %>% 
-    decode_player_ids(fast = TRUE)
-}
+year
+
+pbp_df <- 
+  # readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
+  readRDS(glue('data/pbp/xyac_play_by_play_{year}.rds')) %>% 
+  decode_player_ids(fast = TRUE) %>% 
+  rename_at(.vars = vars(ends_with('.x')),
+            .funs = funs(sub('[.]x$', '', .)))
+
+my_week <- fx.n_week(pbp_df)
 
 # Plot Data ---------------------------------------------------------------
 
@@ -61,8 +35,21 @@ quick_rost <- readRDS(url('https://github.com/guga31bb/nflfastR-raw/blob/master/
 fant_pt_dist_df <- pbp_df %>% 
   # filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & !is.na(cp) & ((receiver_jersey_number < 90 & receiver_jersey_number > 79) | (receiver_jersey_number < 20 & receiver_jersey_number > 9))) %>% 
   filter(season==year & pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id) & !is.na(cp)) %>% 
-  add_xyac_dist %>% 
-  select(season = season.x, game_id, play_id, posteam = posteam.x, receiver, receiver_id, yardline_100 = yardline_100.x, air_yards = air_yards.x, actual_yards_gained = yards_gained, complete_pass, cp, yac_prob = prob, gain) %>% 
+  select(
+    season,
+    game_id,
+    play_id,
+    posteam,
+    receiver,
+    receiver_id,
+    yardline_100,
+    air_yards,
+    actual_yards_gained = yards_gained,
+    complete_pass,
+    cp,
+    yac_prob = prob,
+    gain
+  ) %>% 
   mutate(
     gain = ifelse(yardline_100==air_yards, yardline_100, gain),
     yac_prob = ifelse(yardline_100==air_yards, 1, yac_prob),
@@ -175,7 +162,7 @@ fx.sample_sim <- function(nsims = 10000, ncores = .66) {
   })
     sim_df <- do.call(rbind, parLapply(cl, 1:nsims, sample.fx))
   stopCluster(cl)
-  saveRDS(sim_df, file = 'fantasy_football/data/sample_sim_df.rds')
+  saveRDS(sim_df, file = glue('data/{year}_sample_sim_df.rds'))
   assign("sim_df", sim_df, envir = globalenv())
 }
 
@@ -184,7 +171,7 @@ start_time <- Sys.time()
 fx.sample_sim(nsims = 5000, ncores = .8)
 end_time <- Sys.time()
 end_time - start_time
-# sim_df <- readRDS('fantasy_football/data/sample_sim_df.rds')
+# sim_df <- readRDS('data/sample_sim_df.rds')
 
 sim_df_rank <- sim_df %>% 
   mutate(sim = 1) %>% 
@@ -195,12 +182,14 @@ sim_df_rank <- sim_df %>%
   mutate(ppr_sim_rank = row_number()) %>% 
   ungroup() %>% 
   group_by(receiver) %>% 
-  summarise(half_ppr_pct_first = sum(if_else(half_ppr_sim_rank == 1,1,0)) / (sim_df$n_sim %>% max()),
-            half_ppr_pct_top_20 = sum(if_else(half_ppr_sim_rank <= 20,1,0)) / (sim_df$n_sim %>% max()),
-            half_ppr_pct_top_30 = sum(if_else(half_ppr_sim_rank <= 30,1,0)) / (sim_df$n_sim %>% max()),
-            ppr_pct_first = sum(if_else(ppr_sim_rank == 1,1,0)) / (sim_df$n_sim %>% max()),
-            ppr_pct_top_20 = sum(if_else(ppr_sim_rank <= 20,1,0)) / (sim_df$n_sim %>% max()),
-            ppr_pct_top_30 = sum(if_else(ppr_sim_rank <= 30,1,0)) / (sim_df$n_sim %>% max())) %>% 
+  summarise(
+    half_ppr_pct_first = sum(if_else(half_ppr_sim_rank == 1, 1, 0)) / (sim_df$n_sim %>% max()),
+    half_ppr_pct_top_20 = sum(if_else(half_ppr_sim_rank <= 20, 1, 0)) / (sim_df$n_sim %>% max()),
+    half_ppr_pct_top_30 = sum(if_else(half_ppr_sim_rank <= 30, 1, 0)) / (sim_df$n_sim %>% max()),
+    ppr_pct_first = sum(if_else(ppr_sim_rank == 1, 1, 0)) / (sim_df$n_sim %>% max()),
+    ppr_pct_top_20 = sum(if_else(ppr_sim_rank <= 20, 1, 0)) / (sim_df$n_sim %>% max()),
+    ppr_pct_top_30 = sum(if_else(ppr_sim_rank <= 30, 1, 0)) / (sim_df$n_sim %>% max())
+  ) %>% 
   arrange(-half_ppr_pct_first) %>% 
   ungroup()
   # slice(1:10)
@@ -234,17 +223,17 @@ plot_data <- sim_df_rank %>%
   # left_join(sim_df_rank) %>%
   left_join(percentile_df) %>%
   left_join(receiver_rank_df) %>%
-  # mutate(
-  #   half_ppr_sim_pg = half_ppr_sim_tot / tot_gp,
-  #   pl_lab = paste0(receiver, '\n', number(half_ppr_perc * 100, accuracy = 0.1), ' perc.'),
-  #   posteam = factor(posteam, .tm_div_order_alt)
-  # ) %>%
+  mutate(
+    half_ppr_sim_pg = half_ppr_sim_tot / tot_gp,
+    pl_lab = paste0(receiver, '\n', number(half_ppr_perc * 100, accuracy = 0.1), ' perc.'),
+    posteam = factor(posteam, .tm_div_order_alt)
+  ) %>%
   group_by(posteam, receiver) %>%
-  # mutate(
-  #   obs_num = row_number(),
+  mutate(
+    obs_num = row_number()
   #   status = "ONTEAM",
   #   status_color = if_else(status != "ONTEAM", color_cw[6], color_cw[5])
-  # )
+  )
   filter(status != 'ONTEAM' | team_id == 8)
 
 receiver_rank_df <- receiver_rank_df %>% left_join(plot_data %>% select(receiver_id, pl_lab) %>% unique())

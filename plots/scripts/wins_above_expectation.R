@@ -14,9 +14,10 @@ wp_limit <- 0.5
 # Load the data ----------------------------------------------------------------
 
 pbp_df <- purrr::map_df(season, function(x) {
-  readRDS(url(
-    glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
-  ))
+  readRDS(
+    # url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true"))
+    glue::glue('data/pbp/play_by_play_{x}.rds')
+    )
   # }) %>% filter(week < 9)
 }) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
 

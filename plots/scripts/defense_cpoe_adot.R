@@ -3,15 +3,17 @@ library(nflfastR)
 
 # choose seasons for which the plot shall be generated
 # CPOE starts in 2006
-season <- year
+current_season <- year
 
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
 # lapply(2006:2020, function(season){
 pbp_df <-
-  purrr::map_df(season, function(x) {
-    readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
-  }) %>% decode_player_ids(fast = TRUE) %>% 
+  pbp_ds %>% 
+  filter(season == current_season) %>% 
+  select(-xyac_median_yardage) %>% 
+  collect() %>% 
+  decode_player_ids(fast = TRUE) %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam),
          posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),
@@ -133,7 +135,7 @@ p <-
   labs(
     x = "Target Depth in Yards Thrown Beyond the Line of Scrimmage (DOT)",
     y = "Completion Percentage Over Expectation (CPOE)",
-    title = glue::glue("Defensive Passing Efficiency {season}"),
+    title = glue::glue("Defensive Passing Efficiency {current_season}"),
     subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets.\nSmoothed for -10 ≤ DOT ≤ 30 Yards. Red Line = League Average."
   )
 
@@ -180,8 +182,24 @@ p_mobile <- p +
   )
 
 # save the plot
-brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/defense/defense_cpoe_vs_dot/defense_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/defense/defense_cpoe_vs_dot/defense_cpoe_vs_dot_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-brand_plot( p_mobile, asp = 10/16, save_name = glue('plots/mobile/defense/defense_cpoe_vs_dot/defense_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot( p_mobile, asp = 10/16, save_name = glue('plots/mobile/defense/defense_cpoe_vs_dot/defense_cpoe_vs_dot_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+rm(
+  current_season,
+  cpoe,
+  summary_df,
+  colors_raw,
+  summary_images_df,
+  n_eval,
+  colors,
+  mean,
+  panel_label,
+  asp,
+  p,
+  p_desktop,
+  p_mobile
+)
 
 # })

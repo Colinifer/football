@@ -1,16 +1,19 @@
 year
 
-all_pbp_df <-
-  do.call(rbind, lapply(dir(glue('data/pbp'), 
-                     full = T) %>% 
-                       .[which(grepl('.rds', .) &
-                                 !grepl('xyac', .))], 
-                     function(x){
-                       print(x)
-                       readRDS(x)})
-          )
+# all_pbp_df <-
+#   do.call(rbind, lapply(dir(glue('data/pbp'), 
+#                      full = T) %>% 
+#                        .[which(grepl('.rds', .) &
+#                                  !grepl('xyac', .))], 
+#                      function(x){
+#                        print(x)
+#                        readRDS(x)})
+#           )
 
-clean_all_pbp_df <- all_pbp_df %>% 
+clean_all_pbp_df <- pbp_ds %>% 
+  filter(season_type == 'REG') %>% 
+  select(-xyac_median_yardage) %>% 
+  collect() %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam),
          posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),
@@ -27,7 +30,6 @@ clean_all_pbp_df <- all_pbp_df %>%
          away_team = ifelse(season < 2017 & away_team == 'LAC', 'SD', away_team),
          home_team = ifelse(season < 2020 & home_team == 'LV', 'OAK', home_team),
          away_team = ifelse(season < 2020 & away_team == 'LV', 'OAK', away_team)) %>% 
-  filter(season_type == 'REG') %>% 
   mutate(home_result = home_score - away_score,
          away_result = away_score - home_score)
 
@@ -56,6 +58,8 @@ all_point_diff$nfl_pri_dark <- NFL_pri_dark[match(all_point_diff$team, names(NFL
 # Loop through recent seasons
 # lapply(1999:2020, function(year){
 
+n_week <- fx.n_week(pbp_df %>% filter(season == year))
+
 # Get best/worst teams in current and all seasons
 best_worst_teams <- c(
   # Get best team since 1999
@@ -70,7 +74,8 @@ best_worst_teams <- c(
     pull(season_team),
   # Get best team from current season
   all_point_diff %>% 
-    filter(season == year) %>% 
+    filter(season == year &
+             week == n_week) %>% 
     arrange(season_point_diff %>% 
               desc()
             ) %>% 
@@ -78,7 +83,8 @@ best_worst_teams <- c(
     pull(season_team),
   # Get worst team from current season
   all_point_diff %>% 
-    filter(season == year) %>% 
+    filter(season == year &
+             week == n_week) %>% 
     arrange(season_point_diff) %>% 
     head(1) %>% 
     pull(season_team)
@@ -164,5 +170,5 @@ p
 
 brand_plot(p,  asp = 16/10, save_name = glue('plots/desktop/team_tiers/season_point_diff_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-# rm(all_pbp_df, clean_all_pbp_df, all_point_diff, best_worst_teams, p)
+# rm(clean_all_pbp_df, all_point_diff, best_worst_teams, p)
 # })

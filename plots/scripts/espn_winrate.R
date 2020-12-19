@@ -12,7 +12,7 @@ library(webshot)
 # n_week <- pbp_df %>% select(week) %>% max()
 # rm(pbp_df)
 
-n_week <- fx.n_week(full_pbp_df)
+n_week <- fx.n_week(pbp_df)
 
 all_win_rate <- scrape_espn_win_rate()
 
@@ -21,11 +21,11 @@ wide_win_rate <- all_win_rate %>%
               values_from = win_pct,
               id_col = team) %>%
   purrr::set_names(nm = c('team', 'prwr', 'rswr', 'pbwr', 'rbwr')) %>%
-  mutate(prwr = glue('.{prwr}') %>% as.double(),
-         rswr = glue('.{rswr}') %>% as.double(),
-         pbwr = glue('.{pbwr}') %>% as.double(),
-         rbwr = glue('.{rbwr}') %>% as.double(),
-         ) %>% 
+  # mutate(prwr = glue('.{prwr}'),
+  #        rswr = glue('.{rswr}'),
+  #        pbwr = glue('.{pbwr}'),
+  #        rbwr = glue('.{rbwr}'),
+  #        ) %>% 
   mutate(prwr_rk = min_rank(desc(prwr)), .before = prwr) %>%
   mutate(rswr_rk = min_rank(desc(rswr)), .before = rswr) %>%
   mutate(pbwr_rk = min_rank(desc(pbwr)), .before = pbwr) %>%

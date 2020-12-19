@@ -3,7 +3,7 @@
 # devtools::install_github("mrcaseb/nflfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
 # devtools::install_github("jthomasmock/espnscrapeR")
-# devtools::install_github("colinifer/initR", auth_token = '16c30189517d3ef251cd896248856f37f652e7fd')
+# devtools::install_github("colinifer/initR", auth_token = authtoken)
 proj_name <- "football"
 pkgs <- c(
   "devtools",
@@ -14,6 +14,7 @@ pkgs <- c(
   "DBI",
   "odbc",
   "RMariaDB",
+  "arrow",
   "shiny",
   "distill",
   "httr",
@@ -147,6 +148,7 @@ sr_games_df <- readRDS('data/games_2020.rds')
 # source('data/master_sr_pbp.R')
 pbp_df <- readRDS(glue('data/pbp/play_by_play_{year}.rds'))
 pbp_df %>% select(game_date) %>% arrange(game_date) %>%  unique() %>%  tail()
+pbp_df %>% select(game_id) %>% unique() %>% tail()
 # pbp_df <-
 #   readRDS(glue('data/pbp/play_by_play_{year}.rds')) %>%
 #   decode_player_ids(fast = T)
@@ -160,6 +162,9 @@ pbp_df %>% select(game_date) %>% arrange(game_date) %>%  unique() %>%  tail()
 
 # Participation dataframe
 sr_part_df <- readRDS(glue('data/part/Sportradar_Part_{year}.rds'))
+
+pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
+xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
 
 source('plots/assets/plot_theme.R')
 # source('plots/scripts/team_tiers.R')

@@ -3,17 +3,25 @@ library(pracma)
 # lapply(1999:2019, function(x){
 
 start_time <- Sys.time()
-season <- year
-  
-pbp_df <- purrr::map_df(season, function(x) {
-  readRDS(url(
-    glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
-  ))
-# }) %>% filter(week < 9)
-}) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
-print(season)
+current_season <- year
 
-n_week <- fx.n_week(pbp_df)
+# pbp_df <- purrr::map_df(current_season, function(x) {
+#   readRDS(url(
+#     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
+#   ))
+# # }) %>% filter(week < 9)
+# }) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
+# print(current_season)
+
+pbp_df <- pbp_ds %>% 
+  filter(season == current_season & 
+           season_type == 'REG' &
+           !is.na(posteam) & 
+           (rush == 1 | pass == 1)) %>% 
+  collect()
+print(current_season)
+
+n_week <- fx.n_week(pbp_df)-1
 
 # If week < 10, us current weeks in season
 time_series <- dplyr::if_else(pbp_df %>%
@@ -112,7 +120,7 @@ epa_data <- epa_data %>%
   )
 
 chart_all <- epa_data %>% 
-  filter(season == season) %>% 
+  filter(season == current_season) %>% 
   arrange(posteam) %>% 
   group_by(posteam) %>% 
   summarize(
@@ -130,7 +138,7 @@ p <- chart_all %>%
   labs(x = "Adj. Offense EPA/play",
        y = "Adj. Defense EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{season} NFL Adjusted Team Tiers"),
+       title = glue("{current_season} NFL Adjusted Team Tiers"),
        subtitle = glue("Offense and defense adjusted EPA per play through week {n_week}\nAdjusted for previous matchups")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -150,7 +158,7 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_adj_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_adj_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Tiers -------------------------------------------------------------------
 
@@ -194,7 +202,7 @@ p <- chart_all %>%
   labs(x = "Offense EPA/play",
        y = "Defense EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{season} NFL Team Tiers"),
+       title = glue("{current_season} NFL Team Tiers"),
        subtitle = glue("Offense and defense EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -214,7 +222,7 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Pass v Rush EPA
 p <- chart_all %>% 
@@ -225,7 +233,7 @@ p <- chart_all %>%
   labs(x = "Pass EPA/play",
        y = "Rush EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{season} NFL Offense Team Tiers"),
+       title = glue("{current_season} NFL Offense Team Tiers"),
        subtitle = glue("Offense passing and rushing EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -244,7 +252,7 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_off_pass_and_rush_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_off_pass_and_rush_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Need to add Defense pass and rush epa/play
 
@@ -256,7 +264,7 @@ p <- chart_all %>%
   labs(x = "Defense Pass EPA/play",
        y = "Defense Rush EPA/play",
        # caption = "Data: @nflscrapR",
-       title = glue("{season} NFL Defense Team Tiers"),
+       title = glue("{current_season} NFL Defense Team Tiers"),
        subtitle = glue("Defense passing and rushing EPA per play through week {n_week}")) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -277,7 +285,7 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_def_pass_and_rush_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_def_pass_and_rush_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Next week match-ups -----------------------------------------------------
 if (n_week < 17) {
@@ -329,7 +337,7 @@ if (n_week < 17) {
     labs(x = "Offense EPA/play",
          y = "Opponent Defense EPA/play",
          # caption = "Data: @nflscrapR",
-         title = glue("{season} NFL Team Tiers Matchups through Week {n_week}"),
+         title = glue("{current_season} NFL Team Tiers Matchups through Week {n_week}"),
          subtitle = glue("Team offense and week {n_week + 1} opponent defense EPA per play")) +
     geom_abline(slope=slope, intercept=.4, alpha=.2) +
     geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -348,7 +356,7 @@ if (n_week < 17) {
       #panel.grid.minor = element_blank()
     )
   
-  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_team_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_team_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
   
   # Passing matchup
   p <- matchup_chart_all %>% 

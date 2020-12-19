@@ -4,7 +4,10 @@ season <- year
 
 pbp_df <-
   purrr::map_df(season, function(x) {
-    readRDS(url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")))
+    readRDS(
+      # url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true"))
+      glue::glue('data/pbp/play_by_play_{x}.rds')
+      )
   }) %>% decode_player_ids(fast = TRUE) 
 
 prem_epa_df <- pbp_df %>%
@@ -65,12 +68,45 @@ grob_img_adj <- function(img_url, alpha = 1, whitewash = 0) {
 }
 
 p <- ggplot(data = prem_epa_df, aes(x = pass_epa_prem, y = pass_freq)) +
-  geom_hline(yintercept = 0.525, color = "red", linetype = "52", size = 0.2) +
-  geom_vline(xintercept = 0.198, color = "red", linetype = "52", size = 0.2) +
-  geom_shadowtext(data = label_df, aes(label = label), color = color_cw[5], size = 1.5, bg.color = color_cw[2], bg.r = 0.2) +
-  geom_grob(aes(x = pass_epa_prem, y = pass_freq, label = grob_img_adj(team_logo_espn, alpha = 0.7), vp.height = 0.06)) +
-  scale_x_continuous(labels = plus_lab_format(accuracy = .01), breaks = seq(-1, 1, .1), limits = c(-0.1, 0.5), expand = expansion(mult = c(0.02, 0.02))) +
-  scale_y_continuous(labels = percent_format(accuracy = 1), breaks = seq(0, 1, .05), limits = c(.4, .7), expand = expansion(mult = c(0.03, 0.03))) +
+  geom_hline(
+    yintercept = 0.525,
+    color = "red",
+    linetype = "52",
+    size = 0.2
+  ) +
+  geom_vline(
+    xintercept = 0.198,
+    color = "red",
+    linetype = "52",
+    size = 0.2
+  ) +
+  geom_shadowtext(
+    data = label_df,
+    aes(label = label),
+    family = 'Montserrat',
+    color = color_cw[5],
+    size = 1.5,
+    bg.color = color_cw[2],
+    bg.r = 0.2
+  ) +
+  geom_grob(aes(
+    x = pass_epa_prem,
+    y = pass_freq,
+    label = grob_img_adj(team_logo_espn, alpha = 0.7),
+    vp.height = 0.06
+  )) +
+  scale_x_continuous(
+    labels = plus_lab_format(accuracy = .01),
+    breaks = seq(-1, 1, .1),
+    limits = c(-0.1, 0.5),
+    expand = expansion(mult = c(0.02, 0.02))
+  ) +
+  scale_y_continuous(
+    labels = percent_format(accuracy = 1),
+    breaks = seq(0, 1, .05),
+    limits = c(.4, .7),
+    expand = expansion(mult = c(0.03, 0.03))
+  ) +
   labs(
     title = "Dropback Premium vs Dropback Frequency",
     subtitle = "Early Downs with Win Probability Between 20% and 80% Outside of Last Two\nMinutes of The Half",
