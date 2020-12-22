@@ -4,13 +4,15 @@ load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=t
 
 # choose seasons for which the plot shall be generated
 # CPOE starts in 2006
-season <- year
+current_season <- year
 
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
 # lapply(2007:2019, function(season){
   pbp_df <- pbp_ds %>% 
-    filter(season >= season) %>% 
+    filter(season >= current_season) %>% 
+    select(-xyac_median_yardage) %>% 
+    collect() %>% 
     decode_player_ids(fast = TRUE) %>% 
     mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
            posteam = ifelse(posteam == "LA", "LAR", posteam),
@@ -216,7 +218,7 @@ season <- year
     labs(
       x = 'Completion Percentage Over Expectation (CPOE in percentage points)',
       y = 'EPA per Pass Attempt',
-      title = glue::glue('Passing Efficiency by Game {season}'),
+      title = glue::glue('Passing Efficiency by Game {current_season}'),
       subtitle = "QB's with the most pass attempts on each team, ordered by @benbbaldwin's DAKOTA rating\nWhite Dot = Most Recent Game. Red Line = League Average."
     )
   
@@ -264,11 +266,11 @@ season <- year
   
   # Desktop
   # save the plot
-  brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_epa_vs_cpoe/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_epa_vs_cpoe/qb_epa_vs_cpoe_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
   
   # Mobile
   # save the plot
-  brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe/qb_epa_vs_cpoe_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe/qb_epa_vs_cpoe_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
   
-  rm(season, epa_cpoe, top_32, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
+  rm(current_season, epa_cpoe, top_32, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
 # })

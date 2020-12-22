@@ -2,9 +2,24 @@ library(tidyverse)
 library(parallel)
 library(viridis)
 
+current_season <- year
+
+existing_game_ids <- pbp_ds %>% 
+  filter(season == current_season) %>% 
+  select(game_id) %>% 
+  collect() %>% 
+  unique() %>% 
+  pull(game_id)
+
 # Scrape new games
 new_scrape_df <- schedule_df %>% 
-  filter(gameday >= Sys.Date() - 4 & gameday <= Sys.Date()) %>% 
+  filter(!(game_id %in% (pbp_ds %>% 
+             filter(season == current_season) %>% 
+             select(game_id) %>% 
+             collect() %>% 
+             unique() %>% 
+             pull(game_id))) &
+           gameday <= Sys.Date()) %>% 
   pull(game_id) %>% 
   fast_scraper(pp = TRUE) %>% 
   clean_pbp() %>% 

@@ -1,56 +1,35 @@
 # Data --------------------------------------------------------------------
 
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
-year
+current_season <- year
 
 pbp_df <- 
   # readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
   xyac_ds %>% 
-  filter(season.x == year) %>% 
-  collect() %>% 
-  rename_at(.vars = vars(ends_with('.x')),
-            .funs = funs(sub('[.]x$', '', .)))
-
-my_week <- fx.n_week(pbp_df)
-
-# Completed Air Yards Over Expected
-# cayoe_xyac <- pbp_df %>%
-#   filter(season == year & 
-#            pass_attempt == 1 &
-#            season_type == 'REG' &
-#            two_point_attempt == 0 & 
-#            !is.na(receiver_id) &
-#            !is.na(air_yards) &
-#            !is.na(complete_pass) &
-#            # wp > .2 &
-#            # wp < .8 &
-#            air_yards > 0) %>% 
-#   add_xyac_dist()
-
-cayoe <- pbp_df %>%
   filter(
-    season == year &
+    season.x == current_season &
       pass_attempt == 1 &
       season_type == 'REG' &
       two_point_attempt == 0 &
       !is.na(receiver_id) &
-      !is.na(air_yards) &
+      !is.na(air_yards.x) &
       !is.na(complete_pass) &
       # wp > .2 &
       # wp < .8 &
-      air_yards > 0
+      air_yards.x > 0
   ) %>% 
   select(
-    season,
+    season = season.x,
+    week = week.x,
     game_id,
     play_id,
-    posteam,
+    posteam = posteam.x,
     passer,
     passer_player_id,
     receiver,
     receiver_player_id,
-    yardline_100,
-    air_yards,
+    yardline_100 = yardline_100.x,
+    air_yards = air_yards.x,
     actual_yards_gained = yards_gained,
     complete_pass,
     cp,
@@ -59,6 +38,11 @@ cayoe <- pbp_df %>%
     gain,
     pass_attempt
   ) %>% 
+  collect() %>% 
+  rename_at(.vars = vars(ends_with('.x')),
+            .funs = funs(sub('[.]x$', '', .)))
+
+cayoe <- pbp_df %>% 
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
     comp_air_yards = ifelse(complete_pass == 1, air_yards, 0),
@@ -115,7 +99,10 @@ cayoe <- pbp_df %>%
     cayoe_a = sum_cayoe / pass_attempts
   ) %>%
   ungroup
-  # filter(pass_attempts > mean(cayoe$pass_attempts)-(mean(cayoe$pass_attempts)*.6))
+# filter(pass_attempts > mean(cayoe$pass_attempts)-(mean(cayoe$pass_attempts)*.6))
+
+my_week <- fx.n_week(pbp_df)
+
 
 summary(cayoe$pass_attempts)
 

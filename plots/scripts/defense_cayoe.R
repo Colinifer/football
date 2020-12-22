@@ -4,35 +4,26 @@ current_season <- year
 
 # lapply(2017:2019, function(season){
 pbp_df <- xyac_ds %>% 
-  filter(season.x == current_season) %>% 
-  collect() %>% 
-  rename_at(.vars = vars(ends_with('.x')),
-            .funs = funs(sub('[.]x$', '', .)))
-
-my_week <- pbp_df$week %>% max()
-
-
-# Completed Air Yards Over Expected
-cayoe <- pbp_df %>%
-  filter(pass_attempt == 1 &
+  filter(season.x == current_season &
+           pass_attempt == 1 &
            season_type == 'REG' &
            two_point_attempt == 0 & 
            !is.na(receiver_id) &
-           !is.na(air_yards) &
+           !is.na(air_yards.x) &
            !is.na(complete_pass) &
            # wp > .2 &
            # wp < .8 &
-           air_yards > 0) %>%
+           air_yards.x > 0) %>%
   select(
-    season,
+    season = season.x,
+    week = week.x,
     game_id,
     play_id,
-    posteam,
     defteam,
     receiver,
     receiver_player_id,
-    yardline_100,
-    air_yards,
+    yardline_100 = yardline_100.x,
+    air_yards = air_yards.x,
     actual_yards_gained = yards_gained,
     complete_pass,
     cp,
@@ -41,6 +32,15 @@ cayoe <- pbp_df %>%
     gain,
     pass_attempt
   ) %>% 
+  collect() %>% 
+  rename_at(.vars = vars(ends_with('.x')),
+            .funs = funs(sub('[.]x$', '', .)))
+
+my_week <- fx.n_week(pbp_df)
+
+
+# Completed Air Yards Over Expected
+cayoe <- pbp_df %>% 
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
     comp_air_yards = ifelse(complete_pass == 1, air_yards, 0),
@@ -228,7 +228,7 @@ cayoe_filtered %>%
       default_fonts()
     )
   ) %>% 
-  gtsave(filename = glue("defense_cayoe_{season}.png"), path = "plots/desktop/defense/")
+  gtsave(filename = glue("defense_cayoe_{current_season}.png"), path = "plots/desktop/defense/")
 
 # rm(list = ls())
 # })

@@ -9,75 +9,121 @@ sr_key <- sportradar_con %>%
 # Automate to make calls only on Tuesdays
 season_json <- jsonlite::fromJSON(url(glue('http://api.sportradar.us/nfl/official/trial/v6/en/games/{year}/REG/schedule.json?api_key={sr_key}')))
 jsonlite::write_json(season_json, glue('data/schedules/{year}.json'))
-season_json <- read_json(glue('data/schedules/{year}.json'))
+sr_sched <- read_json(glue('data/schedules/{year}.json'))
 
-yr_sched <- read_json(glue('data/schedules/{year}.json'))
-
-all_id <- unlist(sapply(yr_sched$weeks, function(wk) {
+all_id <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$id
   })
 }))
-gm_status <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_status <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$status
   })
 }))
-gm_scheduled <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_scheduled <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$scheduled
   })
 }))
-gm_home <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_home <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$home$alias
   })
 }))
-gm_away <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_away <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$away$alias
   })
 }))
-gm_venue <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_venue <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$venue$name
   })
 }))
-gm_venue_roof <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_venue_roof <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$venue$roof_type
   })
 }))
-gm_venue_surface <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_venue_surface <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$venue$surface
   })
 }))
-gm_venue_long <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_venue_long <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$venue$location$lng
   })
 }))
-gm_venue_lat <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_venue_lat <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     gm$venue$location$lat
   })
 }))
 # Need to conditionally add weather based on roof type == outdoor
-gm_weather <- unlist(sapply(yr_sched$weeks, function(wk) {
+gm_weather <- unlist(sapply(sr_sched$weeks, function(wk) {
   sapply(wk$games, function(gm) {
     if_else(gm$weather %>% is.null() == TRUE,'None',gm$weather)
   })
 }))
 
-gm_df <- tibble(all_id, gm_status, gm_scheduled, gm_home, gm_away, gm_venue, gm_venue_roof, gm_venue_surface, gm_venue_long, gm_venue_lat, gm_weather) %>% 
-  mutate(gm_scheduled = gm_scheduled %>% as.Date())
+sr_sched_df <- tibble(
+  all_id,
+  gm_status,
+  gm_scheduled,
+  gm_home,
+  gm_away,
+  gm_venue,
+  gm_venue_roof,
+  gm_venue_surface,
+  gm_venue_long,
+  gm_venue_lat,
+  gm_weather
+) %>% 
+  mutate(
+    gm_home = ifelse(gm_home == 'JAC', 'JAX', gm_home),
+    gm_away = ifelse(gm_away  == 'JAC', 'JAX', gm_away),
+    gm_scheduled = gsub('T', ' ', substr(gm_scheduled, 1, 19)) %>%
+      lubridate::ymd_hms(tz = 'GMT') %>%
+      lubridate::with_tz(tzone = 'America/New_York'),
+    gm_date = gm_scheduled %>%
+      as.character() %>%
+      substr(1, 10) %>%
+      as.Date()
+  ) %>% 
+  # Join nflfastR game_id
+  left_join(
+    schedule_df %>%
+      select(game_id, gameday, home_team) %>%
+      mutate(gameday = gameday %>% as.Date()),
+    by = c('gm_date' = 'gameday', 'gm_home' = 'home_team')
+  ) %>% 
+  relocate(game_id) %>% 
+  select(
+    game_id,
+    sr_game_id = all_id,
+    gm_status,
+    gm_scheduled,
+    gm_date,
+    gm_home,
+    gm_away,
+    gm_venue,
+    gm_venue_roof,
+    gm_venue_surface,
+    gm_venue_long,
+    gm_venue_lat,
+    gm_weather
+    )
+
+sr_sched_df %>% 
+  saveRDS('data/schedules/sportradar/sched_{year}.rds')
 
 # Check missing play by play files
 gm_done <- gsub('.json','',dir(glue('data/pbp/sportradar/{year}')))
-loop_id <- gm_df %>% 
-  filter(gm_status=='closed' & !(all_id %in% gm_done)) %>% 
-  pull(all_id)
+loop_id <- sr_sched_df %>% 
+  filter(gm_status=='closed' & !(sr_game_id %in% gm_done)) %>% 
+  pull(sr_game_id)
 
 loop_id
 # Download missing play by play files
@@ -90,7 +136,7 @@ lapply(loop_id, function(x){
 # Check missing participation files
 # Participation is updated weekly on Fridays
 gm_done <- gsub('.json','',dir(glue('data/part/{year}')))
-loop_id <- gm_df %>% 
+loop_id <- sr_sched_df %>% 
   filter(gm_status=='closed' & !(all_id %in% gm_done) & (Sys.Date() - gm_scheduled >= 5)) %>% 
   pull(all_id)
 

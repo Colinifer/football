@@ -1,11 +1,12 @@
 library(RJSONIO)
 
-yr <- 2020
+year
+
 part_json_file_names <- dir(glue('data/part/{year}'), full.names = T)
 
 player_infos <- c('id','name','jersey','reference','position','sr_id')
 
-part_szn_df <- data.frame(do.call(rbind, unlist(lapply(part_json_file_names, function(file_name) {
+part_df <- data.frame(do.call(rbind, unlist(lapply(part_json_file_names, function(file_name) {
   part_json <- RJSONIO::fromJSON(file_name)
   #part_json <- RJSONIO::fromJSON(part_json_file_names[67])
   #each_play <-
@@ -26,7 +27,10 @@ part_szn_df <- data.frame(do.call(rbind, unlist(lapply(part_json_file_names, fun
   })
 }), recursive = F)), stringsAsFactors = F)
 
-saveRDS(part_szn_df, glue('data/part/sportradar_part_{year}.rds'))
+part_df %>% 
+  saveRDS(glue('data/part/sportradar_part_{year}.rds'))
+part_df %>% 
+  write_parquet(glue('data/part/sportradar_part_{year}.parquet'))
 
 rm(
   part_json_file_names,

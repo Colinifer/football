@@ -7,7 +7,7 @@ sr_games_df <- readRDS(glue('data/games_{year}.rds')) %>%
 # year <- 2020
 
 ### I store all my json files in the folder structure below. I save every file name to this vector and iterate through them
-all_json <- c(dir(glue('data/{year}'), full=T),dir(glue('data/post/{year}'), full=T)) %>% .[which(grepl('.json',.))] 
+all_json <- c(dir(glue('data/pbp/sportradar/{year}'), full=T),dir(glue('data/pbp/sportradar/post/{year}'), full=T)) %>% .[which(grepl('.json',.))] 
 
 ### find every single "statistic" that is referenced in the SR pbp data
 ### this is just for reference
@@ -138,7 +138,7 @@ to_numeric_cols <- c(to_logical_cols, 'left_tightends','right_tightends','runnin
                      'receive.broken_tackles','receive.catchable','receive.yards_after_contact','punt.hang_time')
 for (i in to_numeric_cols) full_pbp_df[,paste0(i)] <- as.numeric(unlist(full_pbp_df[,paste0(i)]))
 
-saveRDS(full_pbp_df, glue('data/pbp/play_by_play_{year}.rds'))
+saveRDS(full_pbp_df, glue('data/pbp/sportradar/sr_pbp_{year}.rds'))
 
 
 # 

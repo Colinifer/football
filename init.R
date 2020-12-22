@@ -92,6 +92,9 @@ fx.get_espn_players()
 
 # nflfastR data
 schedule_df <- fast_scraper_schedules(seasons = year, pp = TRUE)
+
+schedule_df %>% 
+  saveRDS(glue('data/schedules/sched_{year}.rds'))
   
 matchup_df <- schedule_df %>% 
   mutate(posteam = home_team,
@@ -143,7 +146,7 @@ matchup_df <- schedule_df %>%
       )
   ) %>% arrange(old_game_id)
 
-sr_games_df <- readRDS('data/games_2020.rds')
+sr_games_df <- readRDS('data/schedules/sportradar/games_2020.rds')
 
 # source('data/master_sr_pbp.R')
 pbp_df <- readRDS(glue('data/pbp/play_by_play_{year}.rds'))

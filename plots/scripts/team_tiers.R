@@ -18,10 +18,11 @@ pbp_df <- pbp_ds %>%
            season_type == 'REG' &
            !is.na(posteam) & 
            (rush == 1 | pass == 1)) %>% 
+  select(-xyac_median_yardage) %>% 
   collect()
 print(current_season)
 
-n_week <- fx.n_week(pbp_df)-1
+n_week <- fx.n_week(pbp_df)
 
 # If week < 10, us current weeks in season
 time_series <- dplyr::if_else(pbp_df %>%

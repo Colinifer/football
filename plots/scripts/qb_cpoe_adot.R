@@ -3,7 +3,7 @@ library(nflfastR)
 
 # choose seasons for which the plot shall be generated
 # CPOE starts in 2006
-season <- year
+current_season <- year
 
 # load pbp for the choosen seasosn from nflfastR data repo
 # can be multiple seasons as well
@@ -11,7 +11,9 @@ season <- year
 
 # Download play-by-play data, decode player IDs, and 
 pbp_df <- pbp_ds %>% 
-  filter(season == season) %>% 
+  filter(season == current_season) %>% 
+  select(-xyac_median_yardage) %>% 
+  collect() %>% 
   decode_player_ids(fast = TRUE) %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam))
@@ -178,7 +180,7 @@ p <-
   labs(
     x = "Target Depth in Yards Thrown Beyond the Line of Scrimmage (DOT)",
     y = "Completion Percentage Over Expectation (CPOE)",
-    title = glue::glue("Passing Efficiency {season}"),
+    title = glue::glue("Passing Efficiency {current_season}"),
     subtitle = "CPOE as a function of target depth. Dotsize equivalent to number of targets.\nSmoothed for -10 ≤ DOT ≤ 30 Yards. Red Line = League Average."
   )
 
@@ -228,10 +230,10 @@ p_mobile <- p +
   )
 
 # save the plot
-brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_dot/qb_cpoe_vs_dot_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # save the plot
-brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_cpoe_vs_dot/qb_cpoe_vs_dot_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_cpoe_vs_dot/qb_cpoe_vs_dot_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-rm(season, roster_df, cpoe, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
+rm(current_season, roster_df, cpoe, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
 # })
