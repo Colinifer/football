@@ -137,8 +137,8 @@ lapply(loop_id, function(x){
 # Participation is updated weekly on Fridays
 gm_done <- gsub('.json','',dir(glue('data/part/{year}')))
 loop_id <- sr_sched_df %>% 
-  filter(gm_status=='closed' & !(all_id %in% gm_done) & (Sys.Date() - gm_scheduled >= 5)) %>% 
-  pull(all_id)
+  filter(gm_status=='closed' & !(sr_game_id %in% gm_done) & (Sys.Date() - gm_date >= 5)) %>% 
+  pull(sr_game_id)
 
 loop_id
 # Download missing participation files

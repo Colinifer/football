@@ -15,14 +15,17 @@ pbp_df <- pbp_ds %>%
 
 my_week <- fx.n_week(pbp_df)
 
+sr_part_df_clean <- sr_part_df %>%
+  left_join(sr_games_df %>%
+              select(game_id,
+                     game_id_SR)) %>%
+  mutate(play_id = as.integer(play_id)) %>% 
+  relocate(game_id)
+
 yprr <- pbp_df %>%
   # select(game_id_SR) %>%
   left_join(
-    sr_part_df %>%
-      left_join(sr_games_df %>%
-                  select(game_id,
-                         game_id_SR)) %>%
-      mutate(play_id = as.integer(play_id)),
+    sr_part_df_clean,
     by = c(
       'game_id' = 'game_id',
       'play_id' = 'play_id'
@@ -31,7 +34,8 @@ yprr <- pbp_df %>%
   ) %>%
   filter(position %in% c('TE', 'WR')) %>% 
   mutate(route_run = ifelse(
-    pass_attempt == 1 &
+    !is.na(down) & 
+      qb_dropback == 1 & 
       (position == 'TE' | position == 'WR'),
     1,
     0
@@ -40,6 +44,7 @@ yprr <- pbp_df %>%
   group_by(reference) %>%
   summarize(
     receiver = first(name_SR),
+    snaps = n(),
     routes_run = sum(route_run, na.rm = T)
     ) %>%
   # filter(routes_run > 0) %>%

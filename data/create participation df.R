@@ -6,7 +6,7 @@ part_json_file_names <- dir(glue('data/part/{year}'), full.names = T)
 
 player_infos <- c('id','name','jersey','reference','position','sr_id')
 
-part_df <- data.frame(do.call(rbind, unlist(lapply(part_json_file_names, function(file_name) {
+part_df <- as_tibble(do.call(rbind, unlist(lapply(part_json_file_names, function(file_name) {
   part_json <- RJSONIO::fromJSON(file_name)
   #part_json <- RJSONIO::fromJSON(part_json_file_names[67])
   #each_play <-
@@ -18,6 +18,7 @@ part_df <- data.frame(do.call(rbind, unlist(lapply(part_json_file_names, functio
         'game_id_SR' = part_json$id,
         'play_id' = ply$reference,
         'play_id_SR' = ply$id,
+        'play_type_SR'= ply$type,
         rbind(
             cbind('team' = ply$away$alias, t(sapply(ply$away$players, function(x) unlist(x)[player_infos]))),
             cbind('team' = ply$home$alias, t(sapply(ply$home$players, function(x) unlist(x)[player_infos])))
@@ -25,7 +26,7 @@ part_df <- data.frame(do.call(rbind, unlist(lapply(part_json_file_names, functio
       )
     }
   })
-}), recursive = F)), stringsAsFactors = F)
+}), recursive = F)))
 
 part_df %>% 
   saveRDS(glue('data/part/sportradar_part_{year}.rds'))

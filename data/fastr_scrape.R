@@ -30,13 +30,18 @@ new_scrape_ids <- new_scrape_df %>%
   pull(game_id) %>% 
   unique()
 
+new_scrape_ids
+
 # Make sure the existing pbp dataframe doesn't have Sportradar columns
 pbp_df %>% 
   select_if(!names(.) %in% names(new_scrape_df)) %>% 
   names()
 
 # Bind the new PBP scrape
-pbp_df <- rbind(pbp_df %>% filter(!(game_id %in% new_scrape_ids)), new_scrape_df)
+pbp_df <- rbind(pbp_df %>% 
+                  filter(!(game_id %in% new_scrape_ids)), 
+                new_scrape_df
+                )
 
 pbp_df %>% 
   saveRDS(glue('data/pbp/play_by_play_{year}.rds'))

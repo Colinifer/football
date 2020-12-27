@@ -368,7 +368,7 @@ if (n_week < 17) {
     labs(x = "Offense Pass EPA/play",
          y = "Opponent Defense Pass EPA/play",
          # caption = "Data: @nflscrapR",
-         title = glue("{season} NFL Team Tiers Passing Matchups through Week {n_week}"),
+         title = glue("{current_season} NFL Team Tiers Passing Matchups through Week {n_week}"),
          subtitle = glue("Team passing offense and week {n_week + 1} opponent passing defense EPA per play")) +
     geom_abline(slope=slope, intercept=.4, alpha=.2) +
     geom_abline(slope=slope, intercept=.3, alpha=.2) +
@@ -387,7 +387,7 @@ if (n_week < 17) {
       #panel.grid.minor = element_blank()
     )
   
-  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_pass_team_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_pass_team_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
   
   # Rushing matchup
   p <- matchup_chart_all %>% 
@@ -417,7 +417,7 @@ if (n_week < 17) {
       #panel.grid.minor = element_blank()
     )
   
-  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_rush_team_tiers_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+  brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/matchup_rush_team_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 }
 end_time <- Sys.time()
 end_time - start_time

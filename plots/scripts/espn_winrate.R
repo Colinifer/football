@@ -12,7 +12,7 @@ library(webshot)
 # n_week <- pbp_df %>% select(week) %>% max()
 # rm(pbp_df)
 
-n_week <- fx.n_week(pbp_df)
+n_week <- fx.n_week(pbp_df)-1
 
 all_win_rate <- scrape_espn_win_rate()
 
@@ -263,7 +263,8 @@ gt_def_tab <- gtdf %>%
   ) %>%
   fmt_percent(
     columns = c(4, 6, 9, 11), 
-    decimals = 0
+    decimals = 0,
+    scale_values = F
   ) %>% 
   # tab_style(
   #   style = cell_text(
@@ -454,7 +455,8 @@ gt_off_tab <- gtdf %>%
   ) %>% 
   fmt_percent(
     columns = c(4, 6, 9, 11), 
-    decimals = 0
+    decimals = 0,
+    scale_values = F
   ) %>% 
   # tab_style(
   #   style = cell_text(
