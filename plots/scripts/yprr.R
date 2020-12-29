@@ -8,62 +8,34 @@ current_season <- year
 # }
 
 pbp_df <- pbp_ds %>% 
-  filter(season >= current_season-1) %>% 
+  filter(season == current_season) %>% 
   select(-xyac_median_yardage) %>% 
   collect() %>% 
   decode_player_ids(fast = TRUE)
 
 my_week <- fx.n_week(pbp_df)
 
-sr_part_df <- do.call(rbind, lapply(2019:current_season, function(x) {
-  readRDS(glue('data/part/sportradar_part_{x}.rds')) %>% 
-    select()
-}))
-
 sr_part_df_clean <- sr_part_df %>%
   left_join(sr_games_df %>%
               select(game_id,
-                     game_id_SR,
-                     gameday)) %>%
+                     game_id_SR)) %>%
   mutate(play_id = as.integer(play_id)) %>% 
   relocate(game_id)
-
-sr_part_games <- sr_part_df_clean %>% 
-  pull(game_id_SR) %>% 
-  unique()
-
-sr_part_games_fastr <- sr_part_df_clean %>% 
-  pull(game_id) %>% 
-  unique()
 
 yprr <- pbp_df %>%
   # select(game_id_SR) %>%
   left_join(
-    sr_part_df_clean %>% 
-      select(-position),
+    sr_part_df_clean,
     by = c(
       'game_id' = 'game_id',
       'play_id' = 'play_id'
     ),
     suffix = c('_fastR', '_SR')
   ) %>%
-  left_join( # Join sleeper DF for headshot URLs and correct positions
-    sleeper_players_df %>% 
-      select(full_name,
-             gsis_id,
-             position,
-             headshot_url),
-    by = c('reference' = 'gsis_id')
-  ) %>% 
-  filter(game_id %in% sr_part_games_fastr & 
-           position %in% c('TE', 'WR')) %>% 
+  filter(position %in% c('TE', 'WR')) %>% 
   mutate(route_run = ifelse(
     !is.na(down) & 
-      (qb_dropback == 1 |
-         complete_pass == 1 |
-         incomplete_pass == 1 |
-         interception == 1 |
-         qb_spike == 1) & 
+      qb_dropback == 1 & 
       (position == 'TE' | position == 'WR'),
     1,
     0
@@ -72,7 +44,6 @@ yprr <- pbp_df %>%
   group_by(reference) %>%
   summarize(
     receiver = first(name_SR),
-    team = first(team),
     snaps = n(),
     routes_run = sum(route_run, na.rm = T)
     ) %>%
@@ -86,7 +57,7 @@ yprr
 # Average Expected Fantasy Points - Receivers
 pbp_xyac <- xyac_ds %>% 
   filter(
-    season.x >= current_season - 1 & 
+    season.x == current_season & 
     pass_attempt==1 & 
       season_type=='REG' & 
       two_point_attempt==0 & 
@@ -102,7 +73,6 @@ pbp_xyac <- xyac_ds %>%
     receiver,
     receiver_id,
     receiver_id,
-    epa,
     yardline_100 = yardline_100.x,
     air_yards = air_yards.x,
     actual_yards_gained = yards_gained,
@@ -111,6 +81,10 @@ pbp_xyac <- xyac_ds %>%
     yac_prob = prob,
     gain
   )
+
+sr_part_games <- sr_part_df %>% 
+  pull(game_id_SR) %>% 
+  unique()
 
 avg_exp_fp_df <- pbp_xyac %>%
   left_join(sr_games_df %>%
@@ -130,11 +104,9 @@ avg_exp_fp_df <- pbp_xyac %>%
     actual_outcome = ifelse(actual_yards_gained == gain &
                               complete_pass == 1, 1, 0),
     actual_PPR_points = ifelse(actual_outcome == 1, PPR_points, 0),
-    actual_half_PPR_points = ifelse(actual_outcome == 1, half_PPR_points, 0),
-    actual_epa = ifelse(actual_outcome == 1, epa, 0),
-    exp_epa = epa * catch_run_prob
+    actual_half_PPR_points = ifelse(actual_outcome == 1, half_PPR_points, 0)
   ) %>% 
-  group_by(season, receiver_id) %>% 
+  group_by(receiver_id) %>% 
   mutate(
     target = 0,
     game_played = 0
@@ -164,7 +136,6 @@ avg_exp_fp_df <- pbp_xyac %>%
     PPR_pts_pg = PPR_pts / games,
     half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
     half_PPR_pts_pg = half_PPR_pts / games,
-    cum_epa = sum(actual_epa, na.rm = T),
     exp_catches = sum(ifelse(target == 1, cp, NA), na.rm = T),
     exp_catches_pg = exp_catches / games,
     exp_yards = sum(exp_yards, na.rm = T),
@@ -175,8 +146,7 @@ avg_exp_fp_df <- pbp_xyac %>%
     exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
     exp_PPR_pts_pg = exp_PPR_pts / games,
     exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
-    exp_half_PPR_pts_pg = exp_half_PPR_pts / games,
-    exp_cum_epa = sum(exp_epa, na.rm = T),
+    exp_half_PPR_pts_pg = exp_half_PPR_pts / games
   ) %>% 
   mutate(
     half_PPR_pts_diff = half_PPR_pts - exp_half_PPR_pts,
@@ -200,48 +170,4 @@ avg_exp_fp_df <- pbp_xyac %>%
   mutate(
     yds_per_route_run = yards / routes_run
   )
-
-avg_exp_fp_df %>% 
-  filter(targets >= summary(avg_exp_fp_df$targets)[5]) %>% 
-  arrange(-exp_cum_epa) %>% 
-  view()
-
-avg_exp_fp_df %>% 
-  filter(targets >= summary(avg_exp_fp_df$targets)[2]) %>% 
-  ggplot(aes(x = half_PPR_pts, y = cum_epa)) + 
-  geom_point(
-    aes(
-      alpha = .1
-    )
-  ) + 
-  geom_smooth(method = 'lm', se = FALSE) + 
-  theme_cw
-
-avg_exp_fp_df %>% 
-  filter(targets >= summary(avg_exp_fp_df$targets)[2]) %>% 
-  ggplot(aes(x = half_PPR_pts, y = exp_cum_epa)) + 
-  geom_point(
-    aes(
-      alpha = .1
-    )
-  ) + 
-  geom_smooth(method = 'lm', se = FALSE) + 
-  theme_cw
-
-avg_exp_fp_df %>% 
-  filter(targets >= summary(avg_exp_fp_df$targets)[2]) %>% 
-  ggplot(aes(x = cum_epa, y = exp_cum_epa)) + 
-  geom_point(
-    aes(
-      alpha = .1
-      )
-    ) + 
-  geom_smooth(method = 'lm', se = FALSE) + 
-  theme_cw
-
-summary(
-  lm(
-    half_PPR_pts ~ air_yards, 
-    avg_exp_fp_df
-    )
-  )$r.squared
+    

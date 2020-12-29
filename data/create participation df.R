@@ -1,17 +1,12 @@
 library(RJSONIO)
 
-current_season <- year
+year
 
-# lapply(2017:2020, function(current_season){
-part_json_file_names <- dir(glue('data/part/{current_season}'), full.names = T)
-# part_json_file_names <- "data/part/2017/46b96b1c-1df5-4c18-8999-36b6d39be24f.json"
+part_json_file_names <- dir(glue('data/part/{year}'), full.names = T)
 
 player_infos <- c('id','name','jersey','reference','position','sr_id')
 
 part_df <- as_tibble(do.call(rbind, unlist(lapply(part_json_file_names, function(file_name) {
-  # "data/part/2017/470ae953-4a2e-4814-8a18-1b50f9236a26.json" broken
-  print(file_name)
-  # print(file_name)
   part_json <- RJSONIO::fromJSON(file_name)
   #part_json <- RJSONIO::fromJSON(part_json_file_names[67])
   #each_play <-
@@ -25,8 +20,8 @@ part_df <- as_tibble(do.call(rbind, unlist(lapply(part_json_file_names, function
         'play_id_SR' = ply$id,
         'play_type_SR'= ply$type,
         rbind(
-          cbind('team' = ply$away$alias, t(sapply(ply$away$players, function(x) unlist(x)[player_infos]))),
-          cbind('team' = ply$home$alias, t(sapply(ply$home$players, function(x) unlist(x)[player_infos])))
+            cbind('team' = ply$away$alias, t(sapply(ply$away$players, function(x) unlist(x)[player_infos]))),
+            cbind('team' = ply$home$alias, t(sapply(ply$home$players, function(x) unlist(x)[player_infos])))
         )
       )
     }
@@ -34,10 +29,9 @@ part_df <- as_tibble(do.call(rbind, unlist(lapply(part_json_file_names, function
 }), recursive = F)))
 
 part_df %>% 
-  saveRDS(glue('data/part/sportradar_part_{current_season}.rds'))
+  saveRDS(glue('data/part/sportradar_part_{year}.rds'))
 part_df %>% 
-  write_parquet(glue('data/part/sportradar/{current_season}/sportradar_part_{current_season}.parquet'))
-# })
+  write_parquet(glue('data/part/sportradar_part_{year}.parquet'))
 
 rm(
   part_json_file_names,

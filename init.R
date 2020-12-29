@@ -4,50 +4,50 @@
 # devtools::install_github("dynastyprocess/ffscrapr")
 # devtools::install_github("jthomasmock/espnscrapeR")
 # devtools::install_github("colinifer/initR", auth_token = authtoken)
-proj_name <- 'football'
+proj_name <- "football"
 pkgs <- c(
-  'devtools',
-  'tidyverse',
-  'nflfastR',
-  'gsisdecoder',
-  'espnscrapeR',
-  'DBI',
-  'odbc',
-  'RMariaDB',
-  'arrow',
-  'shiny',
-  'distill',
-  'httr',
-  'readr',
-  'pander',
-  'furrr',
-  'na.tools',
-  'ggimage',
-  'teamcolors',
-  'glue',
-  'dplyr',
-  'jsonlite',
-  'tictoc',
-  'animation',
-  'gt',
-  'reactable',
-  'png',
-  'DT',
-  'ggthemes',
-  'ggforce',
-  'ggridges',
-  'ggrepel',
-  'ggpmisc',
-  'ggbeeswarm',
-  'cowplot',
-  'gridExtra',
-  'grid',
-  'extrafont',
-  'shadowtext',
-  'viridis',
-  'tidytext',
-  'RCurl',
-  'pracma',
+  "devtools",
+  "tidyverse",
+  "nflfastR",
+  "gsisdecoder",
+  "espnscrapeR",
+  "DBI",
+  "odbc",
+  "RMariaDB",
+  "arrow",
+  "shiny",
+  "distill",
+  "httr",
+  "readr",
+  "pander",
+  "furrr",
+  "na.tools",
+  "ggimage",
+  "teamcolors",
+  "glue",
+  "dplyr",
+  "jsonlite",
+  "tictoc",
+  "animation",
+  "gt",
+  "reactable",
+  "png",
+  "DT",
+  "ggthemes",
+  "ggforce",
+  "ggridges",
+  "ggrepel",
+  "ggpmisc",
+  "ggbeeswarm",
+  "cowplot",
+  "gridExtra",
+  "grid",
+  "extrafont",
+  "shadowtext",
+  "viridis",
+  "tidytext",
+  "RCurl",
+  "pracma",
   'initR'
 )
 installed_packages <- pkgs %in%
@@ -164,17 +164,8 @@ pbp_df %>% select(game_id) %>% unique() %>% tail()
 #   decode_player_ids(fast = T)
 
 # Participation dataframe
-# sr_part_df <- do.call(
-#   rbind, 
-#   lapply(
-#     dir(
-#       glue('data/part/'), 
-#       pattern = glue('{year}.rds'), 
-#       full.names = T), 
-#     readRDS)
-#   )
+sr_part_df <- readRDS(glue('data/part/Sportradar_Part_{year}.rds'))
 
-part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
 pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
 xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
 

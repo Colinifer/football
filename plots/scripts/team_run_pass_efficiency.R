@@ -85,7 +85,7 @@ p <- ggplot(data = prem_epa_df, aes(x = pass_epa_prem, y = pass_freq)) +
     aes(label = label),
     family = 'Montserrat',
     color = color_cw[5],
-    size = 1.75,
+    size = 1.5,
     bg.color = color_cw[2],
     bg.r = 0.2
   ) +
@@ -93,7 +93,7 @@ p <- ggplot(data = prem_epa_df, aes(x = pass_epa_prem, y = pass_freq)) +
     x = pass_epa_prem,
     y = pass_freq,
     label = grob_img_adj(team_logo_espn, alpha = 0.7),
-    vp.height = 0.1
+    vp.height = 0.06
   )) +
   scale_x_continuous(
     labels = plus_lab_format(accuracy = .01),

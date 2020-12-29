@@ -29,7 +29,7 @@ cpoe <-
   pbp_df %>%
   filter(!is.na(cpoe)) %>%
   group_by(passer_player_id, air_yards) %>%
-  summarise(count = n(), cpoe = mean(cpoe, na.rm = T))
+  summarise(count = n(), cpoe = mean(cpoe))
 
 # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
 # Since we would filter those plays anyways we can use the id here)
@@ -42,7 +42,7 @@ summary_df <-
          ) %>%
   group_by(posteam, passer_player_id) %>%
   summarise(plays = n(),
-            total_cpoe = mean(cpoe, na.rm = T)
+            total_cpoe = mean(cpoe)
             ) %>%
   arrange(plays %>% desc()) %>% 
   group_by(posteam) %>% 
@@ -117,7 +117,7 @@ colors <-
 mean <-
   summary_df %>%
   group_by(air_yards) %>%
-  summarise(league = mean(cpoe, na.rm = T), league_count = n())
+  summarise(league = mean(cpoe), league_count = n())
 
 summary_images_df <- 
   summary_df %>% 
