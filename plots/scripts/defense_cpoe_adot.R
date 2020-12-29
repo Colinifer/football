@@ -28,7 +28,7 @@ cpoe <-
   pbp_df %>%
   filter(!is.na(cpoe)) %>%
   group_by(defteam, air_yards) %>%
-  summarise(count = n(), cpoe = mean(cpoe))
+  summarise(count = n(), cpoe = mean(cpoe, na.rm = T))
 
 # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
 # Since we would filter those plays anyways we can use the id here)
@@ -40,7 +40,7 @@ summary_df <-
   filter(!is.na(cpoe)) %>%
   group_by(defteam) %>%
   summarise(plays = n(),
-            total_cpoe = mean(cpoe)) %>%
+            total_cpoe = mean(cpoe, na.rm = T)) %>%
   arrange(plays %>% desc()) %>%
   arrange(total_cpoe) %>% 
   left_join(cpoe, by = "defteam") %>%
@@ -83,7 +83,7 @@ colors <-
 mean <-
   summary_df %>%
   group_by(air_yards) %>%
-  summarise(league = mean(cpoe), league_count = n())
+  summarise(league = mean(cpoe, na.rm = T), league_count = n())
 
 panel_label <- summary_df$defteam
 names(panel_label) <- summary_df$total_cpoe

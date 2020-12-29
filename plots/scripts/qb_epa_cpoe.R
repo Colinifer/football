@@ -10,7 +10,8 @@ current_season <- year
 # can be multiple seasons
 # lapply(2007:2019, function(season){
   pbp_df <- pbp_ds %>% 
-    filter(season >= current_season) %>% 
+    filter(season >= current_season & 
+             game_id != '2020_12_NO_DEN') %>% # THis game is pointless
     select(-xyac_median_yardage) %>% 
     collect() %>% 
     decode_player_ids(fast = TRUE) %>% 
@@ -69,7 +70,8 @@ current_season <- year
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
     ) %>%
     group_by(passer_player_id) %>%
-    summarise(posteam = posteam %>% first(),
+    summarise(passer = first(passer),
+              posteam = posteam %>% first(),
               pa = n(),
               total_cpoe = mean(cpoe),
               total_epa = mean(epa)
@@ -77,7 +79,9 @@ current_season <- year
     arrange(pa %>% desc()
     ) %>% 
     unique() %>% 
-    head(32) %>% 
+    group_by(posteam) %>% 
+    slice(1) %>% 
+    # head(32) %>% 
     pull(passer_player_id)
   
   # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
@@ -106,9 +110,8 @@ current_season <- year
     group_by(passer_player_id) %>% 
     mutate(season_pa = sum(pa, na.rm = T)) %>% 
     ungroup %>% 
-    arrange(season_pa %>% 
-              desc()
-    ) %>% 
+    arrange(-season_pa) %>% 
+    filter(!is.na(team)) %>% 
     filter(passer_player_id %in% top_32) %>%
     left_join(
       sleeper_players_df %>%
@@ -168,51 +171,86 @@ current_season <- year
   panel_label <- summary_images_df$full_name
   names(panel_label) <- summary_images_df$season_dakota
   
+  grob_img_adj <- function(img_url, alpha = 1, whitewash = 0) {
+    return(lapply(img_url, function(x) {
+      if (is.na(x)) {
+        return(NULL)
+      } else {
+        img <- magick::image_read(x)[[1]]
+        img[1, , ] <- as.raw(255 - (255 - as.integer(img[1, , ])) * (1 - whitewash))
+        img[2, , ] <- as.raw(255 - (255 - as.integer(img[2, , ])) * (1 - whitewash))
+        img[3, , ] <- as.raw(255 - (255 - as.integer(img[3, , ])) * (1 - whitewash))
+        img[4, , ] <- as.raw(as.integer(img[4, , ]) * alpha)
+        return(grid::rasterGrob(image = magick::image_read(img)))
+      }
+    }))
+  }
+  
   # create the plot. Set asp to make sure the images appear in the correct aspect ratio
-  asp <- 16/16
+  asp <- 16/9.886
   p <-
     summary_df %>%
-    ggplot(aes(x = cpoe, y = epa)) +
-    geom_hline(yintercept = mean$league_epa, 
-               color = "red", 
-               linetype = "dashed") +
-    geom_vline(xintercept =  mean$league_cpoe, 
-               color = "red", 
-               linetype = "dashed") +
-    geom_point(aes(color = team), 
-               size = 1.2, 
+    ggplot(aes(x = cpoe,
+               y = epa)) +
+    geom_hline(
+      yintercept = mean$league_epa,
+      color = "red",
+      linetype = "dashed"
+    ) +
+    geom_vline(
+      xintercept =  mean$league_cpoe,
+      color = "red",
+      linetype = "dashed"
+    ) +
+    geom_point(aes(color = team),
+               size = 1.2,
                shape = 16,
-               alpha = 0.75 ) +
+               alpha = 0.75) +
     scale_color_manual(values =  NFL_pri_dark,
                        name = "Team") +
     # geom_point(aes(fill = team), shape = 21, size = 1 , alpha = 0.1) +
     # geom_point(alpha = 0.2, aes(color = team), size = .5) +
     # scale_color_manual(values =  NFL_pri_dark,
     #                    name = "Team") +
-    geom_point(data = summary_df %>% 
-                 group_by(passer_player_id) %>% 
-                 filter(row_number()==n()), 
-               aes(fill = team),
-               color = color_cw[5],
-               shape = 21, 
-               size = 1.2) +
-    scale_fill_manual(values =  NFL_pri_dark,
-                       name = "Team") +
-    geom_shadowtext(data = summary_images_df,
-                    aes(label = lab_dakota, 
-                        x = 37.5, 
-                        y = -1.23),
-                    color = color_cw[5],
-                    bg.color = color_cw[2],
-                    bg.r = .3,
-                    hjust = 1,
-                    family = "Montserrat",
-                    size = 1.4) +
-    ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.8, image = team_logo_espn),
-                        size = .25, by = "width", asp = asp
+    geom_point(
+      data = summary_df %>%
+        group_by(passer_player_id) %>%
+        filter(row_number() == n()),
+      aes(fill = team),
+      color = color_cw[5],
+      shape = 21,
+      size = 1.2
     ) +
-    ggimage::geom_image(data = summary_images_df, aes(x = -26, y = -.9, image = headshot_url),
-                        size = .45, by = "width", asp = asp
+    scale_fill_manual(values =  NFL_pri_dark,
+                      name = "Team") +
+    geom_shadowtext(
+      data = summary_images_df,
+      aes(label = lab_dakota,
+          x = 37.5,
+          y = -1.23),
+      color = color_cw[5],
+      bg.color = color_cw[2],
+      bg.r = .3,
+      hjust = 1,
+      family = "Montserrat",
+      size = 1.4
+    ) +
+    geom_grob(data = summary_images_df,
+              aes(
+                x = 27,
+                y = -.8,
+                label = grob_img_adj(team_logo_espn, alpha = 1),
+                vp.height = 0.25
+              )) +
+    # ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.8, image = team_logo_espn),
+    #                     size = .25, by = "width", asp = asp
+    # ) +
+    ggimage::geom_image(
+      data = summary_images_df,
+      aes(x = -26, y = -.9, image = headshot_url),
+      size = .45,
+      by = "width",
+      asp = 1/1
     ) +
     coord_cartesian(xlim = c(-35, 35), ylim = c(-1.25, 1.25)) + # 'zoom in'
     labs(
@@ -272,5 +310,5 @@ current_season <- year
   # save the plot
   brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe/qb_epa_vs_cpoe_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
   
-  rm(current_season, epa_cpoe, top_32, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
+  rm(current_season, epa_cpoe, top_32, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, grob_img_adj, asp, p, p_desktop, p_mobile)
 # })

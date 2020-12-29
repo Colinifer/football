@@ -398,7 +398,7 @@ if (n_week < 17) {
     labs(x = "Offense Rush EPA/play",
          y = "Opponent Defense Rush EPA/play",
          # caption = "Data: @nflscrapR",
-         title = glue("{season} NFL Team Tiers Rushing Matchups through Week {n_week}"),
+         title = glue("{current_season} NFL Team Tiers Rushing Matchups through Week {n_week}"),
          subtitle = glue("Team rushing offense and week {n_week + 1} opponent rushing defense EPA per play")) +
     geom_abline(slope=slope, intercept=.4, alpha=.2) +
     geom_abline(slope=slope, intercept=.3, alpha=.2) +

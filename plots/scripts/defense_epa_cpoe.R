@@ -29,12 +29,12 @@ epa_cpoe <-
   pbp_df %>%
   filter(!is.na(cpoe) & !is.na(epa)) %>%
   group_by(game_id, defteam) %>%
-  summarise(cpoe = mean(cpoe), epa = mean(epa)) %>% 
+  summarise(cpoe = mean(cpoe, na.rm = T), epa = mean(epa, na.rm = T)) %>% 
   left_join(pbp_df %>%
               filter(!is.na(cpoe) &
                        !is.na(epa)) %>%
               group_by(defteam) %>%
-              summarise(cpoe = mean(cpoe), epa_per_play = mean(epa)) %>%
+              summarise(cpoe = mean(cpoe, na.rm = T), epa_per_play = mean(epa, na.rm = T)) %>%
               mutate(season_dakota = mgcv::predict.gam(dakota_model, .)) %>%
               select(-cpoe, -epa_per_play),
             by = c('defteam')
@@ -51,8 +51,8 @@ summary_df <-
   ) %>% 
   group_by(game_id, week, defteam) %>%
   summarise(pa = n(),
-            total_cpoe = mean(cpoe),
-            total_epa = mean(epa)
+            total_cpoe = mean(cpoe, na.rm = T),
+            total_epa = mean(epa, na.rm = T)
   ) %>%
   left_join(pbp_df %>% 
               select(defteam, 
@@ -99,8 +99,8 @@ colors <-
 # mean data frame for the smoothed line of the whole league
 mean <-
   summary_df %>%
-  summarise(league_cpoe = mean(total_cpoe), 
-            league_epa = mean(total_epa)
+  summarise(league_cpoe = mean(total_cpoe, na.rm = T), 
+            league_epa = mean(total_epa, na.rm = T)
             )
 
 summary_images_df <- 
@@ -111,6 +111,21 @@ summary_images_df <-
 
 panel_label <- summary_images_df$defteam
 names(panel_label) <- summary_images_df$season_dakota
+
+grob_img_adj <- function(img_url, alpha = 1, whitewash = 0) {
+  return(lapply(img_url, function(x) {
+    if (is.na(x)) {
+      return(NULL)
+    } else {
+      img <- magick::image_read(x)[[1]]
+      img[1, , ] <- as.raw(255 - (255 - as.integer(img[1, , ])) * (1 - whitewash))
+      img[2, , ] <- as.raw(255 - (255 - as.integer(img[2, , ])) * (1 - whitewash))
+      img[3, , ] <- as.raw(255 - (255 - as.integer(img[3, , ])) * (1 - whitewash))
+      img[4, , ] <- as.raw(as.integer(img[4, , ]) * alpha)
+      return(grid::rasterGrob(image = magick::image_read(img)))
+    }
+  }))
+}
 
 # create the plot. Set asp to make sure the images appear in the correct aspect ratio
 asp <- 16/16
@@ -144,18 +159,29 @@ p <-
                      name = "Team") +
   geom_shadowtext(data = summary_images_df,
                   aes(label = lab_dakota, 
-                      x = 37.5, 
-                      y = -1.23),
+                      x = -37.5, 
+                      y = 1.23),
                   color = color_cw[5],
                   bg.color = color_cw[2],
                   bg.r = .3,
                   hjust = 1,
                   family = "Montserrat",
                   size = 1.4) +
-  ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.8, image = team_logo_espn),
-                      size = .25, by = "width", asp = asp
+  geom_grob(
+    data = summary_images_df,
+    aes(
+      x = -26.5,
+      y = .8,
+      label = grob_img_adj(team_logo_espn, alpha = 1),
+      vp.height = 0.25
+      )
   ) +
-  coord_cartesian(xlim = c(-35, 35), ylim = c(-1.25, 1.25))# 'zoom in'
+  # ggimage::geom_image(data = summary_images_df, aes(x = -26.5, y = .8, image = team_logo_espn),
+  #                     size = .25, by = "width", asp = asp
+  # ) +
+  coord_cartesian(xlim = c(35, -35), ylim = c(1.25, -1.25)) + # 'zoom in'
+  scale_x_reverse() + 
+  scale_y_reverse()
 
 p_desktop <- p +
   labs(
