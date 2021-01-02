@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "McNeese State Cowboys",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-05-11",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Malcolm",
+"height":      511,
+"id":     8266,
+"jersey_number": "44",
+"last_name": "Bronson",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      192 
+} 
+] 
+}

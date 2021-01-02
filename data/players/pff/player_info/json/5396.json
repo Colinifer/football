@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Delaware Fightin Blue Hens",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-02-21",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Ronald",
+"height":      603,
+"id":     5396,
+"jersey_number": "95",
+"last_name": "Talley",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      282 
+} 
+] 
+}

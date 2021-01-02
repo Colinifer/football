@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "St. Paul's",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-01-02",
+"draft": {
+ "round":        4,
+"season":     2009,
+"selection":      131,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Greg",
+"height":      511,
+"id":     5055,
+"jersey_number": "20",
+"last_name": "Toler",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      191 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Samford Bulldogs",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-02-02",
+"draft": {
+ "round":        7,
+"season":     2006,
+"selection":      215,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Cortland",
+"height":      510,
+"id":     3160,
+"jersey_number": "21",
+"last_name": "Finnegan",
+"position": "CB",
+"speed":     4.47,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      188 
+} 
+] 
+}

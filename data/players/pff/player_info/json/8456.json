@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas State Bobcats",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-09-04",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Darryl",
+"height":      510,
+"id":     8456,
+"jersey_number": "0",
+"last_name": "Morris",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      185 
+} 
+] 
+}

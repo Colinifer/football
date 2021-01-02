@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Army Black Knights",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1988-04-10",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      600,
+"id":     8073,
+"jersey_number": "45",
+"last_name": "McNary",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      251 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cal State - Fullerton",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1987-03-18",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Andre",
+"height":      606,
+"id":     9402,
+"jersey_number": "80",
+"last_name": "Hardy",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      245 
+} 
+] 
+}

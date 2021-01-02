@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Colorado Bears",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-08-22",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Jace",
+"height":      601,
+"id":     9089,
+"jersey_number": "2",
+"last_name": "Davis",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      206 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grand Valley State",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-07-21",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Tim",
+"height":      603,
+"id":     8189,
+"jersey_number": "63",
+"last_name": "Lelito",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      335 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California (Pa.)",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-02-02",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "James",
+"height":      601,
+"id":     7494,
+"jersey_number": "25",
+"last_name": "Nixon",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      190 
+} 
+] 
+}

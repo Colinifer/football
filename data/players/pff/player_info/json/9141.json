@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Illinois Salukis",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-02-26",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Ray",
+"height":      510,
+"id":     9141,
+"jersey_number": "48",
+"last_name": "Agnew",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      247 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1992-06-06",
+"draft": {
+ "round":        1,
+"season":     2013,
+"selection":       27,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "DeAndre",
+"height":      601,
+"id":     7808,
+"jersey_number": "10",
+"last_name": "Hopkins",
+"position": "WR",
+"speed":     4.57,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      212 
+} 
+] 
+}

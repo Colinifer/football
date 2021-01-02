@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hofstra",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-03-28",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Stephen",
+"height":      605,
+"id":     3242,
+"jersey_number": "72",
+"last_name": "Bowen",
+"position": "DI",
+"speed":     4.86,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      271 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska - Kearney",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-09-25",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Cole",
+"height":      606,
+"id":     9781,
+"jersey_number": "O64",
+"last_name": "Manhart",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      310 
+} 
+] 
+}

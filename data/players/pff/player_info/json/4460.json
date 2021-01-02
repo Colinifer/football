@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Furman Paladins",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1986-07-03",
+"draft": {
+ "round":        5,
+"season":     2008,
+"selection":      146,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Jerome",
+"height":      600,
+"id":     4460,
+"jersey_number": "42",
+"last_name": "Felton",
+"position": "FB",
+"speed":     4.68,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      246 
+} 
+] 
+}

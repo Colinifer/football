@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Dayton Flyers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-06-27",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Kyle",
+"height":      511,
+"id":     9166,
+"jersey_number": "41",
+"last_name": "Sebetic",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      194 
+} 
+] 
+}

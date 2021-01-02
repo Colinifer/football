@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UC Davis Aggies",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-10-27",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Colton",
+"height":      511,
+"id":     8104,
+"jersey_number": "6",
+"last_name": "Schmidt",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      224 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bethune-Cookman Wildcats",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-08-27",
+"draft": {
+ "round":        2,
+"season":     2003,
+"selection":       39,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Rashean",
+"height":      601,
+"id":     1355,
+"jersey_number": "31",
+"last_name": "Mathis",
+"position": "CB",
+"speed":     4.45,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      195 
+} 
+] 
+}

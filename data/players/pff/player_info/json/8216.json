@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jackson State Tigers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-07-01",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Rico",
+"height":      601,
+"id":     8216,
+"jersey_number": "3",
+"last_name": "Richardson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      185 
+} 
+] 
+}

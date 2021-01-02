@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Manitoba (Canada)",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-11-17",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Israel",
+"height":      605,
+"id":     1632,
+"jersey_number": "72",
+"last_name": "Idonije",
+"position": "ED",
+"speed":      4.9,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      275 
+} 
+] 
+}

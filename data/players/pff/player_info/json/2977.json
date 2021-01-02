@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boston College Eagles",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-03-08",
+"draft": {
+ "round":        1,
+"season":     2006,
+"selection":       32,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Mathias",
+"height":      606,
+"id":     2977,
+"jersey_number": "97",
+"last_name": "Kiwanuka",
+"position": "ED",
+"speed":      4.7,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      265 
+} 
+] 
+}

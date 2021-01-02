@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Minnesota State",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-08-22",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Adam",
+"height":      602,
+"id":     8288,
+"jersey_number": "19",
+"last_name": "Thielen",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      200 
+} 
+] 
+}

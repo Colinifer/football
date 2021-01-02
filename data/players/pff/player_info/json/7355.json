@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "William Penn",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-11-29",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Damon",
+"height":      603,
+"id":     7355,
+"jersey_number": "59",
+"last_name": "Harrison Sr.",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      353 
+} 
+] 
+}

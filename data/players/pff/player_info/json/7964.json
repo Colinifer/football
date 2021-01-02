@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tarleton State Texans",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-08-28",
+"draft": {
+ "round":        6,
+"season":     2013,
+"selection":      183,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Rufus",
+"height":      605,
+"id":     7964,
+"jersey_number": "62",
+"last_name": "Johnson",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      272 
+} 
+] 
+}

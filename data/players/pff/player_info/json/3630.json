@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh Panthers",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-07-14",
+"draft": {
+ "round":        1,
+"season":     2007,
+"selection":       14,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Darrelle",
+"height":      511,
+"id":     3630,
+"jersey_number": "0",
+"last_name": "Revis",
+"position": "CB",
+"speed":     4.45,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      204 
+} 
+] 
+}

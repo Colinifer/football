@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee State Tigers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-06-22",
+"draft": {
+ "round":        7,
+"season":     2014,
+"selection":      250,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Demetrius",
+"height":      602,
+"id":     8884,
+"jersey_number": "59",
+"last_name": "Rhaney",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      305 
+} 
+] 
+}

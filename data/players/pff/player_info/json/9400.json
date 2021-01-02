@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Connecticut State",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-01-01",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Jerome",
+"height":      603,
+"id":     9400,
+"jersey_number": "83",
+"last_name": "Cunningham",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      250 
+} 
+] 
+}

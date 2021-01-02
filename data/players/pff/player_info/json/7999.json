@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "East Central (Ok.)",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-05-20",
+"draft": {
+ "round":        7,
+"season":     2013,
+"selection":      217,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Armonty",
+"height":      604,
+"id":     7999,
+"jersey_number": "98",
+"last_name": "Bryant",
+"position": "ED",
+"speed":     4.86,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      265 
+} 
+] 
+}

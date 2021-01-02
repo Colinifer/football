@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Citadel Bulldogs",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-01-09",
+"draft": {
+ "round":        3,
+"season":     2010,
+"selection":       88,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Andre",
+"height":      511,
+"id":     5612,
+"jersey_number": "18",
+"last_name": "Roberts",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      195 
+} 
+] 
+}

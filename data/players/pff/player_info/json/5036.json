@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Ontario",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-04-18",
+"draft": {
+ "round":        4,
+"season":     2009,
+"selection":      113,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Vaughn",
+"height":      604,
+"id":     5036,
+"jersey_number": "94",
+"last_name": "Martin",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      327 
+} 
+] 
+}

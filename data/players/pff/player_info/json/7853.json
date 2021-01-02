@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kent State Golden Flashes",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-07-10",
+"draft": {
+ "round":        3,
+"season":     2013,
+"selection":       72,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Brian",
+"height":      604,
+"id":     7853,
+"jersey_number": "66",
+"last_name": "Winters",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      320 
+} 
+] 
+}

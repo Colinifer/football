@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1994-06-20",
+"draft": {
+ "round":        1,
+"season":     2015,
+"selection":        6,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Leonard",
+"height":      605,
+"id":     9439,
+"jersey_number": "99",
+"last_name": "Williams",
+"position": "DI",
+"speed":     4.97,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      302 
+} 
+] 
+}

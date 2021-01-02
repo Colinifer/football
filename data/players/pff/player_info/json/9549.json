@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Delaware State Hornets",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-01-19",
+"draft": {
+ "round":        4,
+"season":     2015,
+"selection":      116,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Rodney",
+"height":      605,
+"id":     9549,
+"jersey_number": "99",
+"last_name": "Gunter",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      305 
+} 
+] 
+}

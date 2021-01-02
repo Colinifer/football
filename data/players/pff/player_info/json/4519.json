@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mount Union",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1986-08-08",
+"draft": {
+ "round":        6,
+"season":     2008,
+"selection":      205,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Pierre",
+"height":      600,
+"id":     4519,
+"jersey_number": "0",
+"last_name": "Garcon",
+"position": "WR",
+"speed":     4.42,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      211 
+} 
+] 
+}

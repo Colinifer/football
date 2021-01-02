@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-02-01",
+"draft": {
+ "round":        3,
+"season":     2013,
+"selection":       90,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Kayvon",
+"height":      511,
+"id":     7871,
+"jersey_number": "38",
+"last_name": "Webster",
+"position": "CB",
+"speed":     4.41,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      193 
+} 
+] 
+}

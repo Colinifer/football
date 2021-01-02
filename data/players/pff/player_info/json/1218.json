@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Southern Eagles",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1978-01-29",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Rob",
+"height":      600,
+"id":     1218,
+"jersey_number": "02",
+"last_name": "Bironas",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      205 
+} 
+] 
+}

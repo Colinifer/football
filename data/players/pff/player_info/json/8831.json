@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Murray State Racers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-11-23",
+"draft": {
+ "round":        6,
+"season":     2014,
+"selection":      196,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Walter",
+"height":      600,
+"id":     8831,
+"jersey_number": "0",
+"last_name": "Powell",
+"position": "WR",
+"speed":     4.63,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      187 
+} 
+] 
+}

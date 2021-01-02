@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Illinois Panthers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-03-14",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Erik",
+"height":      510,
+"id":     8969,
+"jersey_number": "1",
+"last_name": "Lora",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      202 
+} 
+] 
+}

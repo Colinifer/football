@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee-Martin Skyhawks",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-04-22",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Jeremy",
+"height":      602,
+"id":     9080,
+"jersey_number": "17",
+"last_name": "Butler",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      218 
+} 
+] 
+}

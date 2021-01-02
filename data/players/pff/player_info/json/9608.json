@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan State Spartans",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-06-05",
+"draft": {
+ "round":        5,
+"season":     2015,
+"selection":      175,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Keith",
+"height":      600,
+"id":     9608,
+"jersey_number": "12",
+"last_name": "Mumphery",
+"position": "WR",
+"speed":     4.54,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      210 
+} 
+] 
+}

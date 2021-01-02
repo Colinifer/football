@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Montana Grizzlies",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-05-22",
+"draft": {
+ "round":        6,
+"season":     2010,
+"selection":      171,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Shann",
+"height":      600,
+"id":     5694,
+"jersey_number": "35",
+"last_name": "Schillinger",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      198 
+} 
+] 
+}

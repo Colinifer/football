@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Monmouth Hawks",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-01-14",
+"draft": {
+ "round":        7,
+"season":     2015,
+"selection":      220,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Neal",
+"height":      604,
+"id":     9653,
+"jersey_number": "00",
+"last_name": "Sterling",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      257 
+} 
+] 
+}

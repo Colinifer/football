@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa Hawkeyes",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-10-22",
+"draft": {
+ "round":        3,
+"season":     2014,
+"selection":       65,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "C.J.",
+"height":      605,
+"id":     8700,
+"jersey_number": "0",
+"last_name": "Fiedorowicz",
+"position": "TE",
+"speed":     4.76,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      265 
+} 
+] 
+}

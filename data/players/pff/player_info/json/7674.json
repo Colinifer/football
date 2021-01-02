@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Connecticut State",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-09-10",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Ikponmwosa",
+"height":      604,
+"id":     7674,
+"jersey_number": "79D",
+"last_name": "Igbinosun",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      288 
+} 
+] 
+}

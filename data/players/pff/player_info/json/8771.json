@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bloomsburg",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-02-14",
+"draft": {
+ "round":        4,
+"season":     2014,
+"selection":      136,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Larry",
+"height":      607,
+"id":     8771,
+"jersey_number": "78",
+"last_name": "Webster",
+"position": "ED",
+"speed":     4.58,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      262 
+} 
+] 
+}

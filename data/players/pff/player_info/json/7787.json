@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-10-04",
+"draft": {
+ "round":        1,
+"season":     2013,
+"selection":        6,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Barkevious",
+"height":      605,
+"id":     7787,
+"jersey_number": "50",
+"last_name": "Mingo",
+"position": "ED",
+"speed":     4.58,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      235 
+} 
+] 
+}

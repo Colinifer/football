@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pennsylvania Quakers",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-02-26",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Greg",
+"height":      603,
+"id":     7746,
+"jersey_number": "62",
+"last_name": "Van Roten",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      305 
+} 
+] 
+}

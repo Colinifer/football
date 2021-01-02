@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Army Black Knights",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1988-09-22",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Alejandro",
+"height":      609,
+"id":     9091,
+"jersey_number": "78",
+"last_name": "Villanueva",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      320 
+} 
+] 
+}

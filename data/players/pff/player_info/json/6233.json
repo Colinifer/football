@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-01-17",
+"draft": {
+ "round":        3,
+"season":     2011,
+"selection":       81,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "DeMarcus",
+"height":      601,
+"id":     6233,
+"jersey_number": "43",
+"last_name": "Van Dyke",
+"position": "CB",
+"speed":     4.25,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      176 
+} 
+] 
+}

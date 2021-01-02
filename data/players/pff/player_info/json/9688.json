@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mars Hill Lions",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-03-08",
+"draft": {
+ "round":        7,
+"season":     2015,
+"selection":      255,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Denzelle",
+"height":      605,
+"id":     9688,
+"jersey_number": "71",
+"last_name": "Good",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      345 
+} 
+] 
+}

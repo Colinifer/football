@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Newberry",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-02-23",
+"draft": {
+ "round":        7,
+"season":     2015,
+"selection":      232,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Edmond",
+"height":      604,
+"id":     9665,
+"jersey_number": "46",
+"last_name": "Robinson",
+"position": "LB",
+"speed":     4.61,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      245 
+} 
+] 
+}

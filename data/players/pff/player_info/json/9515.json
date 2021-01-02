@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisville Cardinals",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-10-07",
+"draft": {
+ "round":        3,
+"season":     2015,
+"selection":       82,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Lorenzo",
+"height":      604,
+"id":     9515,
+"jersey_number": "55",
+"last_name": "Mauldin",
+"position": "ED",
+"speed":     4.85,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      259 
+} 
+] 
+}

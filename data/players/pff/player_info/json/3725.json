@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-05-01",
+"draft": {
+ "round":        4,
+"season":     2007,
+"selection":      109,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Stephen",
+"height":      601,
+"id":     3725,
+"jersey_number": "54",
+"last_name": "Nicholas",
+"position": "LB",
+"speed":     4.81,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      225 
+} 
+] 
+}

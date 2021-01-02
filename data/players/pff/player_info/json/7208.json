@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-09-09",
+"draft": {
+ "round":        7,
+"season":     2012,
+"selection":      224,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Alfonzo",
+"height":      510,
+"id":     7208,
+"jersey_number": "37",
+"last_name": "Dennard",
+"position": "CB",
+"speed":     4.55,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      205 
+} 
+] 
+}

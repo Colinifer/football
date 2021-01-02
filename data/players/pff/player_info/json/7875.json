@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Southern State",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-02-21",
+"draft": {
+ "round":        3,
+"season":     2013,
+"selection":       94,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Brandon",
+"height":      601,
+"id":     7875,
+"jersey_number": "98",
+"last_name": "Williams",
+"position": "DI",
+"speed":     5.37,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      336 
+} 
+] 
+}

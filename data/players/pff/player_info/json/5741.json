@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Texas A & M",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-08-08",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      218,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "J'Marcus",
+"height":      607,
+"id":     5741,
+"jersey_number": "73",
+"last_name": "Webb",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      331 
+} 
+] 
+}

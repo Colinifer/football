@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lehigh Mountain Hawks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-02-15",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Ryan",
+"height":      603,
+"id":     8236,
+"jersey_number": "18",
+"last_name": "Spadola",
+"position": "WR",
+"speed":     4.48,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      200 
+} 
+] 
+}

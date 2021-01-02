@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-05-04",
+"draft": {
+ "round":        6,
+"season":     2015,
+"selection":      181,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Kyshoen",
+"height":      510,
+"id":     9614,
+"jersey_number": "30D",
+"last_name": "Jarrett",
+"position": "S",
+"speed":     4.57,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      188 
+} 
+] 
+}

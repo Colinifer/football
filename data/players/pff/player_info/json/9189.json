@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Newberry",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-12-29",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Corey",
+"height":      604,
+"id":     9189,
+"jersey_number": "13",
+"last_name": "Washington",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      214 
+} 
+] 
+}

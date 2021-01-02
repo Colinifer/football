@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-01-26",
+"draft": {
+ "round":        3,
+"season":     2013,
+"selection":       71,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "T.J.",
+"height":      602,
+"id":     7852,
+"jersey_number": "22",
+"last_name": "McDonald",
+"position": "LB",
+"speed":     4.59,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      223 
+} 
+] 
+}

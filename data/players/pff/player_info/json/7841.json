@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeastern Louisiana Lions",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1988-11-01",
+"draft": {
+ "round":        2,
+"season":     2013,
+"selection":       60,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Robert",
+"height":      510,
+"id":     7841,
+"jersey_number": "23",
+"last_name": "Alford",
+"position": "CB",
+"speed":     4.39,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      186 
+} 
+] 
+}

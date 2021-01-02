@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UC Davis Aggies",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-09-23",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Daniel",
+"height":      603,
+"id":     3309,
+"jersey_number": "85",
+"last_name": "Fells",
+"position": "TE",
+"speed":     4.95,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      252 
+} 
+] 
+}

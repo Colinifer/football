@@ -39,12 +39,12 @@ espn.players <- data.frame(
   onTeamId = numeric(0)
 )
 # Get all players
-url = paste0(base, year, mid, leagueID, player_tail)
+url = paste0(initR::base, year, initR::mid, initR::leagueID, initR::player_tail)
 
 # 1
 Playersget = GET (
   url,
-  config = httr::config(cookie = cookie),
+  config = httr::config(cookie = initR::cookie),
   content_type_json(),
   user_agent(user_agent),
   httr::add_headers(

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ashland",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1983-11-07",
+"draft": {
+ "round":        7,
+"season":     2012,
+"selection":      228,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Jeris",
+"height":      603,
+"id":     7212,
+"jersey_number": "61",
+"last_name": "Pendleton",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      322 
+} 
+] 
+}

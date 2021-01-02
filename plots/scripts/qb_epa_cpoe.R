@@ -245,6 +245,13 @@ current_season <- year
     # ggimage::geom_image(data = summary_images_df, aes(x = 26.5, y = -.8, image = team_logo_espn),
     #                     size = .25, by = "width", asp = asp
     # ) +
+    # geom_grob(data = summary_images_df,
+    #           aes(
+    #             x = -26,
+    #             y = -.9,
+    #             label = grob_img_adj(headshot_url),
+    #             vp.height = 0.45
+    #           )) +
     ggimage::geom_image(
       data = summary_images_df,
       aes(x = -26, y = -.9, image = headshot_url),

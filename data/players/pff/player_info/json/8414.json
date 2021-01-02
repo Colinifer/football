@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Illinois Salukis",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-09-22",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Jayson",
+"height":      601,
+"id":     8414,
+"jersey_number": "0",
+"last_name": "DiManche",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      240 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-10-23",
+"draft": {
+ "round":        4,
+"season":     2013,
+"selection":      125,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Johnathan",
+"height":      510,
+"id":     7907,
+"jersey_number": "23",
+"last_name": "Franklin",
+"position": "HB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      205 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maryland Terrapins",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-05-07",
+"draft": {
+ "round":        7,
+"season":     2011,
+"selection":      221,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Da'Rel",
+"height":      511,
+"id":     6373,
+"jersey_number": "33",
+"last_name": "Scott",
+"position": "HB",
+"speed":      4.4,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      205 
+} 
+] 
+}

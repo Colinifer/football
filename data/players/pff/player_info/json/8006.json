@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Samford Bulldogs",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-02-21",
+"draft": {
+ "round":        7,
+"season":     2013,
+"selection":      223,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Nick",
+"height":      604,
+"id":     8006,
+"jersey_number": "97",
+"last_name": "Williams",
+"position": "DI",
+"speed":     4.94,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      297 
+} 
+] 
+}

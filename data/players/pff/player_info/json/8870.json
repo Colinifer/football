@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Saginaw Valley State",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-06-09",
+"draft": {
+ "round":        7,
+"season":     2014,
+"selection":      236,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Jeff",
+"height":      603,
+"id":     8870,
+"jersey_number": "13",
+"last_name": "Janis",
+"position": "WR",
+"speed":     4.42,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      219 
+} 
+] 
+}

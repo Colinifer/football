@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan State Spartans",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-03-15",
+"draft": {
+ "round":        4,
+"season":     2012,
+"selection":      121,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Keshawn",
+"height":      511,
+"id":     7121,
+"jersey_number": "17",
+"last_name": "Martin",
+"position": "WR",
+"speed":     4.45,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      189 
+} 
+] 
+}

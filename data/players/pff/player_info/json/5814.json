@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Oklahoma",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-09-28",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Jermelle",
+"height":      602,
+"id":     5814,
+"jersey_number": "76",
+"last_name": "Cudjo",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      293 
+} 
+] 
+}

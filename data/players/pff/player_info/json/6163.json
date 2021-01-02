@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-02-01",
+"draft": {
+ "round":        1,
+"season":     2011,
+"selection":       11,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "J.J.",
+"height":      605,
+"id":     6163,
+"jersey_number": "99",
+"last_name": "Watt",
+"position": "ED",
+"speed":     4.81,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      288 
+} 
+] 
+}

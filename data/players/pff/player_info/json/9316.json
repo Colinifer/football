@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado State - Pueblo",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-05-09",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      604,
+"id":     9316,
+"jersey_number": "64",
+"last_name": "Pennel",
+"position": "DI",
+"speed":     5.23,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      332 
+} 
+] 
+}

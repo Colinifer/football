@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska - Kearney",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-08-25",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Stephen",
+"height":      606,
+"id":     7723,
+"jersey_number": "78O",
+"last_name": "Goodin",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      310 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho State Bengals",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-07-19",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Evan",
+"height":      602,
+"id":     5390,
+"jersey_number": "62",
+"last_name": "Smith",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      308 
+} 
+] 
+}

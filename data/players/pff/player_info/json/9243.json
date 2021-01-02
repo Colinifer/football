@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California (Pa.)",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-02-04",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "C.J.",
+"height":      603,
+"id":     9243,
+"jersey_number": "29",
+"last_name": "Goodwin",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      190 
+} 
+] 
+}

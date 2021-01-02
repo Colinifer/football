@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hillsdale",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-06-14",
+"draft": {
+ "round":        3,
+"season":     2010,
+"selection":       69,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Jared",
+"height":      608,
+"id":     5594,
+"jersey_number": "68",
+"last_name": "Veldheer",
+"position": "T",
+"speed":     5.06,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      321 
+} 
+] 
+}

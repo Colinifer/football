@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jacksonville State Gamecocks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-11-05",
+"draft": {
+ "round":        6,
+"season":     2013,
+"selection":      195,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Alan",
+"height":      510,
+"id":     7976,
+"jersey_number": "16",
+"last_name": "Bonner",
+"position": "WR",
+"speed":     4.59,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      190 
+} 
+] 
+}

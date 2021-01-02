@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwest Missouri State",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-04-26",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Brian",
+"height":      600,
+"id":     9146,
+"jersey_number": "D41",
+"last_name": "Dixon",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      195 
+} 
+] 
+}

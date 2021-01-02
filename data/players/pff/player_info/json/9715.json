@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego Toreros",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-05-06",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Reggie",
+"height":      600,
+"id":     9715,
+"jersey_number": "11",
+"last_name": "Bell",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      200 
+} 
+] 
+}

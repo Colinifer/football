@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida International Golden Panthers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-07-29",
+"draft": {
+ "round":        2,
+"season":     2013,
+"selection":       33,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Johnathan",
+"height":      600,
+"id":     7814,
+"jersey_number": "32",
+"last_name": "Cyprien",
+"position": "S",
+"speed":      4.5,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      223 
+} 
+] 
+}

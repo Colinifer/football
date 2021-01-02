@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Slippery Rock",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-11-17",
+"draft": {
+ "round":        6,
+"season":     2011,
+"selection":      172,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Brandon",
+"height":      604,
+"id":     6324,
+"jersey_number": "65",
+"last_name": "Fusco",
+"position": "G",
+"speed":     5.18,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      306 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-05-31",
+"draft": {
+ "round":        6,
+"season":     2014,
+"selection":      209,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Quincy",
+"height":      602,
+"id":     8843,
+"jersey_number": "81",
+"last_name": "Enunwa",
+"position": "WR",
+"speed":     4.45,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      225 
+} 
+] 
+}

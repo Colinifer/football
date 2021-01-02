@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-05-11",
+"draft": {
+ "round":        4,
+"season":     2009,
+"selection":      124,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Louis",
+"height":      603,
+"id":     5048,
+"jersey_number": "0",
+"last_name": "Murphy Jr.",
+"position": "WR",
+"speed":     4.32,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      201 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Abilene Christian Wildcats",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-04-12",
+"draft": {
+ "round":        7,
+"season":     2012,
+"selection":      252,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Daryl",
+"height":      510,
+"id":     7233,
+"jersey_number": "43",
+"last_name": "Richardson",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      200 
+} 
+] 
+}

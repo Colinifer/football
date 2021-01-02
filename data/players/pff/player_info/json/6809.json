@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Queens (Canada)",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-03-26",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      609,
+"id":     6809,
+"jersey_number": "79",
+"last_name": "O'Donnell",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      340 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas State Bobcats",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-06-11",
+"draft": {
+ "round":        3,
+"season":     2015,
+"selection":       83,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Craig",
+"height":      511,
+"id":     9516,
+"jersey_number": "49",
+"last_name": "Mager",
+"position": "CB",
+"speed":     4.44,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      200 
+} 
+] 
+}

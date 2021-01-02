@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "John Carroll",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-05-19",
+"draft": {
+ "round": null,
+"season":     1998,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "London",
+"height":      509,
+"id":      424,
+"jersey_number": "59",
+"last_name": "Fletcher",
+"position": "LB",
+"speed":     4.55,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      245 
+} 
+] 
+}

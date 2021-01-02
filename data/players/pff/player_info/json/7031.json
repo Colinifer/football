@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois Fighting Illini",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-07-21",
+"draft": {
+ "round":        1,
+"season":     2012,
+"selection":       26,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Whitney",
+"height":      604,
+"id":     7031,
+"jersey_number": "59",
+"last_name": "Mercilus",
+"position": "ED",
+"speed":     4.68,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      258 
+} 
+] 
+}

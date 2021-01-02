@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Furman Paladins",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-04-30",
+"draft": {
+ "round":        4,
+"season":     2014,
+"selection":      137,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Dakota",
+"height":      604,
+"id":     8772,
+"jersey_number": "78",
+"last_name": "Dozier",
+"position": "G",
+"speed":     5.42,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      312 
+} 
+] 
+}

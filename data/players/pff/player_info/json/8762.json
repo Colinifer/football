@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lindenwood",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-09-08",
+"draft": {
+ "round":        4,
+"season":     2014,
+"selection":      127,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Pierre",
+"height":      601,
+"id":     8762,
+"jersey_number": "47",
+"last_name": "Desir",
+"position": "CB",
+"speed":     4.52,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      198 
+} 
+] 
+}

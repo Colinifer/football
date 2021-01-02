@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Tigers",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-12-29",
+"draft": {
+ "round":        1,
+"season":     2010,
+"selection":       19,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Sean",
+"height":      602,
+"id":     5544,
+"jersey_number": "0",
+"last_name": "Weatherspoon",
+"position": "LB",
+"speed":     4.62,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      244 
+} 
+] 
+}

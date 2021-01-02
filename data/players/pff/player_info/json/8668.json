@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-01-01",
+"draft": {
+ "round":        2,
+"season":     2014,
+"selection":       33,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Xavier",
+"height":      604,
+"id":     8668,
+"jersey_number": "72",
+"last_name": "Su'a-Filo",
+"position": "G",
+"speed":     5.04,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      310 
+} 
+] 
+}

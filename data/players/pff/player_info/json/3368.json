@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Coe",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1981-02-20",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Fred",
+"height":      601,
+"id":     3368,
+"jersey_number": "22",
+"last_name": "Jackson",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      210 
+} 
+] 
+}

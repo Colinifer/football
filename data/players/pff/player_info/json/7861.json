@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Southern Eagles",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-02-14",
+"draft": {
+ "round":        3,
+"season":     2013,
+"selection":       80,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "J.J.",
+"height":      600,
+"id":     7861,
+"jersey_number": "00",
+"last_name": "Wilcox",
+"position": "S",
+"speed":     4.57,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      212 
+} 
+] 
+}

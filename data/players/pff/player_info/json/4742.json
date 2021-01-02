@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hofstra",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1986-08-12",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Kyle",
+"height":      510,
+"id":     4742,
+"jersey_number": "24",
+"last_name": "Arrington",
+"position": "CB",
+"speed":     4.43,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      196 
+} 
+] 
+}

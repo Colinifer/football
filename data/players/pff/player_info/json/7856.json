@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas-Pine Bluff Golden Lions",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-07-23",
+"draft": {
+ "round":        3,
+"season":     2013,
+"selection":       75,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Terron",
+"height":      605,
+"id":     7856,
+"jersey_number": "72",
+"last_name": "Armstead",
+"position": "T",
+"speed":     4.71,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      304 
+} 
+] 
+}

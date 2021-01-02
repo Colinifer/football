@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Midwestern State",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-09-16",
+"draft": {
+ "round":        2,
+"season":     2012,
+"selection":       40,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Amini",
+"height":      604,
+"id":     7044,
+"jersey_number": "0",
+"last_name": "Silatolu",
+"position": "T",
+"speed":     5.43,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      305 
+} 
+] 
+}

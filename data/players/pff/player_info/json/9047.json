@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Abilene Christian Wildcats",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-06-02",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Charcandrick",
+"height":      510,
+"id":     9047,
+"jersey_number": "O36",
+"last_name": "West",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      205 
+} 
+] 
+}

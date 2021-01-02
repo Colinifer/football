@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri State Bears",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-07-02",
+"draft": {
+ "round":        4,
+"season":     2010,
+"selection":      125,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Clay",
+"height":      603,
+"id":     5648,
+"jersey_number": "80",
+"last_name": "Harbor",
+"position": "TE",
+"speed":     4.62,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      240 
+} 
+] 
+}

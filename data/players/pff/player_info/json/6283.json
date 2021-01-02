@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico State Aggies",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-07-10",
+"draft": {
+ "round":        4,
+"season":     2011,
+"selection":      131,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Davon",
+"height":      600,
+"id":     6283,
+"jersey_number": "0",
+"last_name": "House",
+"position": "CB",
+"speed":     4.44,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      195 
+} 
+] 
+}

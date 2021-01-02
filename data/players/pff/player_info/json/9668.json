@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-10-03",
+"draft": {
+ "round":        7,
+"season":     2015,
+"selection":      235,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Kenny",
+"height":      601,
+"id":     9668,
+"jersey_number": "30",
+"last_name": "Hilliard",
+"position": "HB",
+"speed":     4.83,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      231 
+} 
+] 
+}

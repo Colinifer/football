@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Delaware Fightin Blue Hens",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-11-05",
+"draft": {
+ "round":        4,
+"season":     2012,
+"selection":       98,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Gino",
+"height":      603,
+"id":     7098,
+"jersey_number": "0",
+"last_name": "Gradkowski",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      300 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charleston Southern Buccaneers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-05-14",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Charles",
+"height":      509,
+"id":     8120,
+"jersey_number": "D34",
+"last_name": "James II",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      185 
+} 
+] 
+}

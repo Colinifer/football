@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fort Valley State",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1986-05-21",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Ricardo",
+"height":      602,
+"id":     6622,
+"jersey_number": "83",
+"last_name": "Lockette",
+"position": "WR",
+"speed":     4.34,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      211 
+} 
+] 
+}

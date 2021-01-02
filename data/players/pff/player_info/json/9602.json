@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas State Bobcats",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-08-18",
+"draft": {
+ "round":        5,
+"season":     2015,
+"selection":      169,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      602,
+"id":     9602,
+"jersey_number": "55",
+"last_name": "Mayo",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      245 
+} 
+] 
+}

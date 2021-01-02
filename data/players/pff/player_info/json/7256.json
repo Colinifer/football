@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Army Black Knights",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1986-04-03",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Collin",
+"height":      510,
+"id":     7256,
+"jersey_number": "39",
+"last_name": "Mooney",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      247 
+} 
+] 
+}

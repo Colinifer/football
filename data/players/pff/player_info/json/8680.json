@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado Buffaloes",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-04-13",
+"draft": {
+ "round":        2,
+"season":     2014,
+"selection":       45,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Paul",
+"height":      600,
+"id":     8680,
+"jersey_number": "00",
+"last_name": "Richardson Jr.",
+"position": "WR",
+"speed":      4.4,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      170 
+} 
+] 
+}

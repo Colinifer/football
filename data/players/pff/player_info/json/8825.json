@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Coastal Carolina Chanticleers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-01-23",
+"draft": {
+ "round":        6,
+"season":     2014,
+"selection":      190,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Matt",
+"height":      601,
+"id":     8825,
+"jersey_number": "83",
+"last_name": "Hazel",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      195 
+} 
+] 
+}

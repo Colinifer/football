@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Monmouth Hawks",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-06-30",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Miles",
+"height":      602,
+"id":     3211,
+"jersey_number": "19",
+"last_name": "Austin",
+"position": "WR",
+"speed":     4.47,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      219 
+} 
+] 
+}

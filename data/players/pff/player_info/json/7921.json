@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee-Martin Skyhawks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-08-25",
+"draft": {
+ "round":        5,
+"season":     2013,
+"selection":      139,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Montori",
+"height":      604,
+"id":     7921,
+"jersey_number": "0",
+"last_name": "Hughes",
+"position": "DI",
+"speed":     5.23,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      350 
+} 
+] 
+}

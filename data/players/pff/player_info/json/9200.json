@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Winston - Salem State",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-10-03",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Carlos",
+"height":      601,
+"id":     9200,
+"jersey_number": "0",
+"last_name": "Fields",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      238 
+} 
+] 
+}

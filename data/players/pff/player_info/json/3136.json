@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-12-14",
+"draft": {
+ "round":        6,
+"season":     2006,
+"selection":      191,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Jeremy",
+"height":      603,
+"id":     3136,
+"jersey_number": "92",
+"last_name": "Mincey",
+"position": "ED",
+"speed":     4.76,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      263 
+} 
+] 
+}

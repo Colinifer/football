@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hobart",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-04-17",
+"draft": {
+ "round":        2,
+"season":     2015,
+"selection":       61,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Ali",
+"height":      604,
+"id":     9494,
+"jersey_number": "74",
+"last_name": "Marpet",
+"position": "G",
+"speed":     4.98,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      307 
+} 
+] 
+}

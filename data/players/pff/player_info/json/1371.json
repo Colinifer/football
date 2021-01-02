@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Troy Trojans",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-11-16",
+"draft": {
+ "round":        2,
+"season":     2003,
+"selection":       56,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Osi",
+"height":      603,
+"id":     1371,
+"jersey_number": "50",
+"last_name": "Umenyiora",
+"position": "ED",
+"speed":     4.72,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      280 
+} 
+] 
+}

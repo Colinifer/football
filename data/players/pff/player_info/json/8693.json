@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-04-12",
+"draft": {
+ "round":        2,
+"season":     2014,
+"selection":       58,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Stanley",
+"height":      603,
+"id":     8693,
+"jersey_number": "38",
+"last_name": "Jean-Baptiste",
+"position": "CB",
+"speed":     4.61,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      216 
+} 
+] 
+}

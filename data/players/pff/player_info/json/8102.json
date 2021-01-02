@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California (Pa.)",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1988-11-25",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Rontez",
+"height":      600,
+"id":     8102,
+"jersey_number": "45",
+"last_name": "Miles",
+"position": "S",
+"speed":     4.62,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      203 
+} 
+] 
+}

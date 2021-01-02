@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas Razorbacks",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-08-17",
+"draft": {
+ "round":        5,
+"season":     2011,
+"selection":      141,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "D.J.",
+"height":      602,
+"id":     6293,
+"jersey_number": "48",
+"last_name": "Williams Jr.",
+"position": "TE",
+"speed":     4.59,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      245 
+} 
+] 
+}

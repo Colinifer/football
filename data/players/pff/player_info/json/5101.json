@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Norfolk State Spartans",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-02-14",
+"draft": {
+ "round":        6,
+"season":     2009,
+"selection":      177,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Don",
+"height":      511,
+"id":     5101,
+"jersey_number": "21",
+"last_name": "Carey",
+"position": "S",
+"speed":     4.49,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      202 
+} 
+] 
+}

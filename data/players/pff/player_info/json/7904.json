@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cornell Big Red",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-02-12",
+"draft": {
+ "round":        4,
+"season":     2013,
+"selection":      122,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "J.C.",
+"height":      604,
+"id":     7904,
+"jersey_number": "64",
+"last_name": "Tretter",
+"position": "C",
+"speed":     5.09,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      307 
+} 
+] 
+}

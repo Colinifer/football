@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bowie State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1984-11-10",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Isaac",
+"height":      600,
+"id":     5233,
+"jersey_number": "33",
+"last_name": "Redman",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      230 
+} 
+] 
+}

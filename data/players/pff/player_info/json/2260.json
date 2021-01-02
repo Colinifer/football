@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-03-02",
+"draft": {
+ "round":        2,
+"season":     2005,
+"selection":       43,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Corey",
+"height":      601,
+"id":     2260,
+"jersey_number": "23",
+"last_name": "Webster",
+"position": "CB",
+"speed":     4.59,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      204 
+} 
+] 
+}

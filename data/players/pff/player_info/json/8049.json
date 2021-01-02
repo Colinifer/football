@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama State Hornets",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-08-23",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Greg",
+"height":      601,
+"id":     8049,
+"jersey_number": "18",
+"last_name": "Jenkins",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      208 
+} 
+] 
+}

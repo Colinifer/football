@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida A&M Rattlers",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-02-21",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Brian",
+"height":      603,
+"id":     7321,
+"jersey_number": "81",
+"last_name": "Tyms",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      207 
+} 
+] 
+}

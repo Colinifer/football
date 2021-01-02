@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Alabama Lions",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-10-29",
+"draft": {
+ "round":        2,
+"season":     2012,
+"selection":       39,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Janoris",
+"height":      510,
+"id":     7043,
+"jersey_number": "20",
+"last_name": "Jenkins",
+"position": "CB",
+"speed":     4.46,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      190 
+} 
+] 
+}

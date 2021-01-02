@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bloomsburg",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-07-07",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      606,
+"id":     9289,
+"jersey_number": "71",
+"last_name": "Feiler",
+"position": "G",
+"speed":     5.37,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      330 
+} 
+] 
+}

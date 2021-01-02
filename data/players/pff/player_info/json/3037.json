@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grambling State Tigers",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-07-13",
+"draft": {
+ "round":        3,
+"season":     2006,
+"selection":       92,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Jason",
+"height":      606,
+"id":     3037,
+"jersey_number": "97",
+"last_name": "Hatcher",
+"position": "DI",
+"speed":     4.82,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      285 
+} 
+] 
+}

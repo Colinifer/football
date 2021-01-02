@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ball State Cardinals",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-10-17",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Willie",
+"height":      511,
+"id":     8999,
+"jersey_number": "83",
+"last_name": "Snead IV",
+"position": "WR",
+"speed":     4.62,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      205 
+} 
+] 
+}

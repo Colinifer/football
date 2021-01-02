@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado State - Pueblo",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-05-27",
+"draft": {
+ "round":        6,
+"season":     2013,
+"selection":      203,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Ryan",
+"height":      604,
+"id":     7985,
+"jersey_number": "66",
+"last_name": "Jensen",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      319 
+} 
+] 
+}

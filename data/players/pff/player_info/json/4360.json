@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Coastal Carolina Chanticleers",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1986-02-04",
+"draft": {
+ "round":        2,
+"season":     2008,
+"selection":       46,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Jerome",
+"height":      602,
+"id":     4360,
+"jersey_number": "14",
+"last_name": "Simpson",
+"position": "WR",
+"speed":     4.42,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      190 
+} 
+] 
+}

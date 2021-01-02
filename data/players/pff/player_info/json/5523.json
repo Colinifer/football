@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Air Force Falcons",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-05-23",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Chad",
+"height":      508,
+"id":     5523,
+"jersey_number": "1",
+"last_name": "Hall",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      180 
+} 
+] 
+}

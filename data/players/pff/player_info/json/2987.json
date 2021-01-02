@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Abilene Christian Wildcats",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-08-09",
+"draft": {
+ "round":        2,
+"season":     2006,
+"selection":       42,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Danieal",
+"height":      511,
+"id":     2987,
+"jersey_number": "38",
+"last_name": "Manning",
+"position": "S",
+"speed":     4.48,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      196 
+} 
+] 
+}

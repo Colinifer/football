@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Saginaw Valley State",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-10-13",
+"draft": {
+ "round":        4,
+"season":     2005,
+"selection":      126,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Todd",
+"height":      606,
+"id":     2343,
+"jersey_number": "79",
+"last_name": "Herremans",
+"position": "G",
+"speed":     5.22,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      321 
+} 
+] 
+}

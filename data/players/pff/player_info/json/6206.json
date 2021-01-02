@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Temple Owls",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-08-09",
+"draft": {
+ "round":        2,
+"season":     2011,
+"selection":       54,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Jaiquawn",
+"height":      600,
+"id":     6206,
+"jersey_number": "37",
+"last_name": "Jarrett",
+"position": "S",
+"speed":     4.62,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      198 
+} 
+] 
+}

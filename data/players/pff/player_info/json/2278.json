@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Colorado Bears",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1983-01-14",
+"draft": {
+ "round":        2,
+"season":     2005,
+"selection":       61,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Vincent",
+"height":      605,
+"id":     2278,
+"jersey_number": "83",
+"last_name": "Jackson",
+"position": "WR",
+"speed":     4.46,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      241 
+} 
+] 
+}

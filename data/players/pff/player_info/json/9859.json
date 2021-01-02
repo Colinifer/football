@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sacramento State Hornets",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-04-10",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "DeAndre",
+"height":      508,
+"id":     9859,
+"jersey_number": "19",
+"last_name": "Carter",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      190 
+} 
+] 
+}

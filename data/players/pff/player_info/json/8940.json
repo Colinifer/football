@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ashland",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-04-12",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Jamie",
+"height":      602,
+"id":     8940,
+"jersey_number": "61",
+"last_name": "Meder",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      308 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Towson Tigers",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-05-03",
+"draft": {
+ "round":        5,
+"season":     2015,
+"selection":      170,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Tye",
+"height":      600,
+"id":     9603,
+"jersey_number": "23",
+"last_name": "Smith",
+"position": "CB",
+"speed":      4.6,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      195 
+} 
+] 
+}

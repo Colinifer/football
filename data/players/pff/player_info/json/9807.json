@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri State Bears",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-02-05",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Gannon",
+"height":      607,
+"id":     9807,
+"jersey_number": "0",
+"last_name": "Sinclair",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      258 
+} 
+] 
+}

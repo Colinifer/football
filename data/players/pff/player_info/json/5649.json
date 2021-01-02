@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Indiana (Pa.)",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-04-10",
+"draft": {
+ "round":        4,
+"season":     2010,
+"selection":      126,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Akwasi",
+"height":      600,
+"id":     5649,
+"jersey_number": "47",
+"last_name": "Owusu-Ansah",
+"position": "S",
+"speed":     4.32,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      207 
+} 
+] 
+}

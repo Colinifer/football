@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bethune-Cookman Wildcats",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-07-04",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Eric",
+"height":      509,
+"id":     4097,
+"jersey_number": "0",
+"last_name": "Weems",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      195 
+} 
+] 
+}

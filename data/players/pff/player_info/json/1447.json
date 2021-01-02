@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama A&M Bulldogs",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-02-26",
+"draft": {
+ "round":        5,
+"season":     2003,
+"selection":      138,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Robert",
+"height":      602,
+"id":     1447,
+"jersey_number": "98",
+"last_name": "Mathis",
+"position": "ED",
+"speed":     4.53,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      235 
+} 
+] 
+}

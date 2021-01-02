@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cornell Big Red",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-11-04",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Bryan",
+"height":      600,
+"id":     6139,
+"jersey_number": "81",
+"last_name": "Walters",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      190 
+} 
+] 
+}

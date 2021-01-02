@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa Hawkeyes",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-06-25",
+"draft": {
+ "round":        3,
+"season":     2009,
+"selection":       66,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Bradley",
+"height":      600,
+"id":     4989,
+"jersey_number": "24",
+"last_name": "Fletcher",
+"position": "CB",
+"speed":     4.47,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      196 
+} 
+] 
+}

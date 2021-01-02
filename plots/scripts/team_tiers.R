@@ -133,9 +133,15 @@ chart_all <- epa_data %>%
 
 p <- chart_all %>% 
   ggplot(aes(x = adjusted_off_epa, y = adjusted_def_epa)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/10) +
   geom_hline(yintercept = mean(chart_all$adjusted_def_epa, na.rm = T), color = "red", linetype = "dashed") +
   geom_vline(xintercept =  mean(chart_all$adjusted_off_epa, na.rm = T), color = "red", linetype = "dashed") +
+  geom_grob(aes(
+    x = adjusted_off_epa,
+    y = adjusted_def_epa,
+    label = grob_img_adj(team_logo_espn),
+    vp.height = 0.08
+  )) +
   labs(x = "Adj. Offense EPA/play",
        y = "Adj. Defense EPA/play",
        # caption = "Data: @nflscrapR",
@@ -197,7 +203,14 @@ chart_all <- offense %>%
 
 p <- chart_all %>% 
   ggplot(aes(x = off_epa, y = def_epa)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  geom_grob(data = chart_all,
+            aes(
+              x = off_epa,
+              y = def_epa,
+              label = grob_img_adj(team_logo_espn),
+              vp.height = 0.08
+            )) +
   geom_hline(yintercept = mean(chart_all$def_epa, na.rm = T), color = "red", linetype = "dashed") +
   geom_vline(xintercept =  mean(chart_all$off_epa, na.rm = T), color = "red", linetype = "dashed") +
   labs(x = "Offense EPA/play",
@@ -228,7 +241,14 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers
 # Pass v Rush EPA
 p <- chart_all %>% 
   ggplot(aes(x = epa_per_pass, y = epa_per_rush)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  geom_grob(data = chart_all,
+            aes(
+              x = epa_per_pass,
+              y = epa_per_rush,
+              label = grob_img_adj(team_logo_espn),
+              vp.height = 0.08
+            )) +
   geom_hline(yintercept = mean(chart_all$epa_per_rush), color = "red", linetype = "dashed") +
   geom_vline(xintercept =  mean(chart_all$epa_per_pass), color = "red", linetype = "dashed") +
   labs(x = "Pass EPA/play",
@@ -259,7 +279,14 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_off_p
 
 p <- chart_all %>% 
   ggplot(aes(x = def_epa_per_pass, y = def_epa_per_rush)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  geom_grob(data = chart_all,
+            aes(
+              x = def_epa_per_pass,
+              y = def_epa_per_rush,
+              label = grob_img_adj(team_logo_espn),
+              vp.height = 0.08
+            )) +
   geom_hline(yintercept = mean(chart_all$def_epa_per_rush), color = "red", linetype = "dashed") +
   geom_vline(xintercept =  mean(chart_all$def_epa_per_pass), color = "red", linetype = "dashed") +
   labs(x = "Defense Pass EPA/play",
@@ -332,7 +359,13 @@ if (n_week < 17) {
   
   p <- matchup_chart_all %>% 
     ggplot(aes(x = off_epa, y = opp_def_epa)) +
-    geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    geom_grob(aes(
+                x = off_epa,
+                y = opp_def_epa,
+                label = grob_img_adj(team_logo_espn),
+                vp.height = 0.08
+              )) +
     geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa), color = "red", linetype = "dashed") +
     geom_vline(xintercept =  mean(matchup_chart_all$off_epa), color = "red", linetype = "dashed") +
     labs(x = "Offense EPA/play",
@@ -362,7 +395,13 @@ if (n_week < 17) {
   # Passing matchup
   p <- matchup_chart_all %>% 
     ggplot(aes(x = epa_per_pass, y = opp_def_epa_per_pass)) +
-    geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    geom_grob(aes(
+                x = epa_per_pass,
+                y = opp_def_epa_per_pass,
+                label = grob_img_adj(team_logo_espn),
+                vp.height = 0.08
+              )) +
     geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa_per_pass), color = "red", linetype = "dashed") +
     geom_vline(xintercept =  mean(matchup_chart_all$epa_per_pass), color = "red", linetype = "dashed") +
     labs(x = "Offense Pass EPA/play",
@@ -392,7 +431,13 @@ if (n_week < 17) {
   # Rushing matchup
   p <- matchup_chart_all %>% 
     ggplot(aes(x = epa_per_rush, y = opp_def_epa_per_rush)) +
-    geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+    geom_grob(aes(
+                x = epa_per_rush,
+                y = opp_def_epa_per_rush,
+                label = grob_img_adj(team_logo_espn),
+                vp.height = 0.08
+              )) +
     geom_hline(yintercept = mean(matchup_chart_all$opp_def_epa_per_rush), color = "red", linetype = "dashed") +
     geom_vline(xintercept =  mean(matchup_chart_all$epa_per_rush), color = "red", linetype = "dashed") +
     labs(x = "Offense Rush EPA/play",

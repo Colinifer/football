@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina Gamecocks",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1993-02-14",
+"draft": {
+ "round":        1,
+"season":     2014,
+"selection":        1,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Jadeveon",
+"height":      605,
+"id":     8636,
+"jersey_number": "99",
+"last_name": "Clowney",
+"position": "ED",
+"speed":     4.53,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      255 
+} 
+] 
+}

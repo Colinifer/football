@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Colorado Bears",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-11-04",
+"draft": {
+ "round":        6,
+"season":     2006,
+"selection":      173,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Reed",
+"height":      600,
+"id":     3118,
+"jersey_number": "23",
+"last_name": "Doughty",
+"position": "S",
+"speed":     4.65,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      210 
+} 
+] 
+}

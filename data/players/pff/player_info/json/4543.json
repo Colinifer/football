@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washburn",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1984-12-23",
+"draft": {
+ "round":        7,
+"season":     2008,
+"selection":      229,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Cary",
+"height":      601,
+"id":     4543,
+"jersey_number": "40",
+"last_name": "Williams",
+"position": "CB",
+"speed":     4.43,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      185 
+} 
+] 
+}

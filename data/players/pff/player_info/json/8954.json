@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Assumption",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-04-13",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Scott",
+"height":      605,
+"id":     8954,
+"jersey_number": "83",
+"last_name": "Simonson",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      255 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Duke Blue Devils",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-06-17",
+"draft": {
+ "round":        4,
+"season":     2015,
+"selection":      105,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Jamison",
+"height":      509,
+"id":     9538,
+"jersey_number": "82",
+"last_name": "Crowder",
+"position": "WR",
+"speed":     4.56,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      177 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lane",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-07-11",
+"draft": {
+ "round":        3,
+"season":     2007,
+"selection":       73,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Jacoby",
+"height":      602,
+"id":     3689,
+"jersey_number": "13",
+"last_name": "Jones",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      210 
+} 
+] 
+}

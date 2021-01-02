@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Citadel Bulldogs",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-10-06",
+"draft": {
+ "round":        4,
+"season":     2011,
+"selection":      128,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Cortez",
+"height":      601,
+"id":     6280,
+"jersey_number": "28",
+"last_name": "Allen",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      197 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Chester",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-08-02",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Al-Hajj",
+"height":      602,
+"id":     9707,
+"jersey_number": "49",
+"last_name": "Shabazz",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      200 
+} 
+] 
+}

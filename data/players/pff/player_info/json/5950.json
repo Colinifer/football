@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Alabama Lions",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-02-13",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Preston",
+"height":      511,
+"id":     5950,
+"jersey_number": "83",
+"last_name": "Parker",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      195 
+} 
+] 
+}

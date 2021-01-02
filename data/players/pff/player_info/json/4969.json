@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cincinnati Bearcats",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-10-15",
+"draft": {
+ "round":        2,
+"season":     2009,
+"selection":       46,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Connor",
+"height":      604,
+"id":     4969,
+"jersey_number": "53",
+"last_name": "Barwin",
+"position": "ED",
+"speed":     4.59,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      255 
+} 
+] 
+}

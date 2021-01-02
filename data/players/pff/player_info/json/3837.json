@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Rebels",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-09-24",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      221,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Trumaine",
+"height":      509,
+"id":     3837,
+"jersey_number": "38",
+"last_name": "McBride",
+"position": "CB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      185 
+} 
+] 
+}

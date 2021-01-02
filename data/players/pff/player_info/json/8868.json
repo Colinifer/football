@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marist Red Foxes",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-11-19",
+"draft": {
+ "round":        7,
+"season":     2014,
+"selection":      234,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Terrence",
+"height":      604,
+"id":     8868,
+"jersey_number": "69",
+"last_name": "Fede",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      267 
+} 
+] 
+}

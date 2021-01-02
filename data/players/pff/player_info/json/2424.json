@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Tech.",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-05-25",
+"draft": {
+ "round":        6,
+"season":     2005,
+"selection":      207,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Joe",
+"height":      605,
+"id":     2424,
+"jersey_number": "0",
+"last_name": "Berger",
+"position": "G",
+"speed":     5.18,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      305 
+} 
+] 
+}

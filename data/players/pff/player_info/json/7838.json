@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina Gamecocks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-09-01",
+"draft": {
+ "round":        2,
+"season":     2013,
+"selection":       57,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "D.J.",
+"height":      510,
+"id":     7838,
+"jersey_number": "36",
+"last_name": "Swearinger Sr.",
+"position": "S",
+"speed":     4.67,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      205 
+} 
+] 
+}

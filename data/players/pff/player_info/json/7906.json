@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Connecticut Huskies",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-12-31",
+"draft": {
+ "round":        4,
+"season":     2013,
+"selection":      124,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Trevardo",
+"height":      601,
+"id":     7906,
+"jersey_number": "54",
+"last_name": "Williams",
+"position": "LB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      237 
+} 
+] 
+}

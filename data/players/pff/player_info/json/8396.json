@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Saginaw Valley State",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-05-14",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Jeff",
+"height":      601,
+"id":     8396,
+"jersey_number": "38",
+"last_name": "Heath",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      212 
+} 
+] 
+}

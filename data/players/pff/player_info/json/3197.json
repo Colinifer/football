@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hofstra",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-06-05",
+"draft": {
+ "round":        7,
+"season":     2006,
+"selection":      252,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Marques",
+"height":      605,
+"id":     3197,
+"jersey_number": "12",
+"last_name": "Colston",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      231 
+} 
+] 
+}

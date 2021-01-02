@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stony Brook Seawolves",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-10-09",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      608,
+"id":     8430,
+"jersey_number": "64",
+"last_name": "Bamiro",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      335 
+} 
+] 
+}

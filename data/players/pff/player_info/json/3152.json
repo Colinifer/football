@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Howard Bison",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-07-27",
+"draft": {
+ "round":        6,
+"season":     2006,
+"selection":      207,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Antoine",
+"height":      511,
+"id":     3152,
+"jersey_number": "41",
+"last_name": "Bethea",
+"position": "S",
+"speed":     4.39,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      206 
+} 
+] 
+}

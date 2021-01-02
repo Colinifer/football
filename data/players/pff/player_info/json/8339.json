@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Michigan",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-03-06",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Jace",
+"height":      604,
+"id":     8339,
+"jersey_number": "73",
+"last_name": "Daniels",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      300 
+} 
+] 
+}

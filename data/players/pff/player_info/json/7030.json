@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-03-12",
+"draft": {
+ "round":        1,
+"season":     2012,
+"selection":       25,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Dont'a",
+"height":      603,
+"id":     7030,
+"jersey_number": "54",
+"last_name": "Hightower",
+"position": "LB",
+"speed":     4.68,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      260 
+} 
+] 
+}

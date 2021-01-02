@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sacramento State Hornets",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-05-17",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Todd",
+"height":      601,
+"id":     9007,
+"jersey_number": "40",
+"last_name": "Davis",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      230 
+} 
+] 
+}

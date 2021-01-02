@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-04-01",
+"draft": {
+ "round":        3,
+"season":     2015,
+"selection":       74,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Owa",
+"height":      604,
+"id":     9507,
+"jersey_number": "59",
+"last_name": "Odighizuwa",
+"position": "ED",
+"speed":     4.62,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      264 
+} 
+] 
+}

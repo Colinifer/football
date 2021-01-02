@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "BYU Cougars",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1984-06-16",
+"draft": {
+ "round":        4,
+"season":     2008,
+"selection":      123,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Bryan",
+"height":      602,
+"id":     4437,
+"jersey_number": "53",
+"last_name": "Kehl",
+"position": "LB",
+"speed":     4.67,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      242 
+} 
+] 
+}

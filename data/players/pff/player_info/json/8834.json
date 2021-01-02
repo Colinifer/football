@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "McGill (Canada)",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-02-11",
+"draft": {
+ "round":        6,
+"season":     2014,
+"selection":      200,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Laurent",
+"height":      605,
+"id":     8834,
+"jersey_number": "76",
+"last_name": "Duvernay-Tardif",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      321 
+} 
+] 
+}

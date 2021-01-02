@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwood (MI)",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1989-04-29",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Glenn",
+"height":      601,
+"id":     9375,
+"jersey_number": "28",
+"last_name": "Winston",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      220 
+} 
+] 
+}

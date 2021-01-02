@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Dakota Fighting Hawks",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-12-19",
+"draft": {
+ "round":        5,
+"season":     2006,
+"selection":      161,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      604,
+"id":     3106,
+"jersey_number": "73",
+"last_name": "Kuper",
+"position": "G",
+"speed":      5.1,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      302 
+} 
+] 
+}

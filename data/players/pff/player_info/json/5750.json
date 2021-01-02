@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh Panthers",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-03-31",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      227,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Dorin",
+"height":      601,
+"id":     5750,
+"jersey_number": "82",
+"last_name": "Dickerson",
+"position": "TE",
+"speed":      4.4,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      222 
+} 
+] 
+}

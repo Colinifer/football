@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "McNeese State Cowboys",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-10-13",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Nic",
+"height":      605,
+"id":     8946,
+"jersey_number": "85",
+"last_name": "Jacobs",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      269 
+} 
+] 
+}

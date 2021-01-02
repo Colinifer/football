@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Villanova Wildcats",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-04-08",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Darrel",
+"height":      511,
+"id":     5438,
+"jersey_number": "36",
+"last_name": "Young",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      248 
+} 
+] 
+}

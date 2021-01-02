@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Missouri State",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-08-12",
+"draft": {
+ "round":        6,
+"season":     2006,
+"selection":      175,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Delanie",
+"height":      602,
+"id":     3120,
+"jersey_number": "82",
+"last_name": "Walker",
+"position": "TE",
+"speed":     4.49,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      248 
+} 
+] 
+}

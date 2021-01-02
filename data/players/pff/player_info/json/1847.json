@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho State Bengals",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-04-03",
+"draft": {
+ "round":        4,
+"season":     2004,
+"selection":      126,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Jared",
+"height":      606,
+"id":     1847,
+"jersey_number": "69",
+"last_name": "Allen",
+"position": "ED",
+"speed":     4.72,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      265 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee State Tigers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-01-24",
+"draft": {
+ "round":        5,
+"season":     2014,
+"selection":      143,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Kadeem",
+"height":      604,
+"id":     8778,
+"jersey_number": "78",
+"last_name": "Edwards",
+"position": "G",
+"speed":     5.25,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      315 
+} 
+] 
+}

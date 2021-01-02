@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-01-24",
+"draft": {
+ "round":        1,
+"season":     2009,
+"selection":       15,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Brian",
+"height":      603,
+"id":     4938,
+"jersey_number": "56",
+"last_name": "Cushing",
+"position": "LB",
+"speed":     4.64,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      243 
+} 
+] 
+}

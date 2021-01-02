@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Southern State",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-06-22",
+"draft": {
+ "round":        4,
+"season":     2007,
+"selection":      119,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Allen",
+"height":      604,
+"id":     3735,
+"jersey_number": "0",
+"last_name": "Barbre",
+"position": "G",
+"speed":     4.84,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      310 
+} 
+] 
+}

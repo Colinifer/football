@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tarleton State Texans",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-01-03",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Dashaun",
+"height":      511,
+"id":     9198,
+"jersey_number": "35",
+"last_name": "Phillips",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      191 
+} 
+] 
+}

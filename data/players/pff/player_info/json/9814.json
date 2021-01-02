@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rensselaer Polytech",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-11",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Andrew",
+"height":      601,
+"id":     9814,
+"jersey_number": "3",
+"last_name": "Franks",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      205 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Washington",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-07-13",
+"draft": {
+ "round": null,
+"season":     2005,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      511,
+"id":     2682,
+"jersey_number": "9",
+"last_name": "Koenen",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      195 
+} 
+] 
+}

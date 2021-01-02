@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Columbia Lions",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-09-06",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Jeff",
+"height":      605,
+"id":     7680,
+"jersey_number": "63",
+"last_name": "Adams",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      305 
+} 
+] 
+}

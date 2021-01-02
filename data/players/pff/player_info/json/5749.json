@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-03-06",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      226,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "George",
+"height":      604,
+"id":     5749,
+"jersey_number": "93",
+"last_name": "Selvie",
+"position": "ED",
+"speed":     4.93,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      250 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida International Golden Panthers",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-11-14",
+"draft": {
+ "round":        3,
+"season":     2012,
+"selection":       92,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "T.Y.",
+"height":      510,
+"id":     7092,
+"jersey_number": "13",
+"last_name": "Hilton",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      183 
+} 
+] 
+}

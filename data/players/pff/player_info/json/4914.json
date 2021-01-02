@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chadron State",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-01-25",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Danny",
+"height":      507,
+"id":     4914,
+"jersey_number": "0",
+"last_name": "Woodhead",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      195 
+} 
+] 
+}

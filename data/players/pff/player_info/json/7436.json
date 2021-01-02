@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Monmouth Hawks",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-04-20",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Jose",
+"height":      510,
+"id":     7436,
+"jersey_number": "48",
+"last_name": "Gumbs",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      210 
+} 
+] 
+}

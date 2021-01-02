@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chadron State",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-07-07",
+"draft": {
+ "round":        7,
+"season":     2013,
+"selection":      227,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Garrett",
+"height":      606,
+"id":     8010,
+"jersey_number": "72",
+"last_name": "Gilkey",
+"position": "G",
+"speed":     5.33,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      320 
+} 
+] 
+}

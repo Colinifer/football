@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio Northern",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-06-06",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Jason",
+"height":      603,
+"id":     4083,
+"jersey_number": "57",
+"last_name": "Trusnik",
+"position": "ST",
+"speed":     4.91,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      250 
+} 
+] 
+}

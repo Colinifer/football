@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia-Lynchburg Dragons",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1989-03-28",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Keith",
+"height":      601,
+"id":     9175,
+"jersey_number": "D42",
+"last_name": "Lewis",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      190 
+} 
+] 
+}

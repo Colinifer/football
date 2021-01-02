@@ -12,7 +12,7 @@ library(webshot)
 # n_week <- pbp_df %>% select(week) %>% max()
 # rm(pbp_df)
 
-n_week <- fx.n_week(pbp_df)-1
+n_week <- fx.n_week(pbp_df)
 
 all_win_rate <- scrape_espn_win_rate()
 

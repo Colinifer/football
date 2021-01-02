@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Shippensburg",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-07-19",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Brent",
+"height":      510,
+"id":     3589,
+"jersey_number": "0",
+"last_name": "Grimes",
+"position": "CB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      185 
+} 
+] 
+}
