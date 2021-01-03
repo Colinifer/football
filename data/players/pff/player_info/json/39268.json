@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois Fighting Illini",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-04-21",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      216,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Nick",
+"height":      604,
+"id":    39268,
+"jersey_number": "73",
+"last_name": "Allegretti",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      310 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Robert Morris Colonials",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-09-21",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Hank",
+"height":      602,
+"id":      725,
+"jersey_number": "65",
+"last_name": "Fraley",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      300 
+} 
+] 
+}

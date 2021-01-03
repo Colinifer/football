@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-08-16",
+"draft": {
+ "round":        2,
+"season":     2017,
+"selection":       46,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Quincy",
+"height":      602,
+"id":    11801,
+"jersey_number": "28",
+"last_name": "Wilson",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      210 
+} 
+] 
+}

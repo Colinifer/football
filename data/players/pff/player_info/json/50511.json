@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulane Green Wave",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-11",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      179,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Parry",
+"height":      510,
+"id":    50511,
+"jersey_number": "35",
+"last_name": "Nickerson",
+"position": "CB",
+"speed":     4.32,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      182 
+} 
+] 
+}

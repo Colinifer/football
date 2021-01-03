@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan State Spartans",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1974-01-17",
+"draft": {
+ "round":        4,
+"season":     1997,
+"selection":       98,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Oilers",
+"primary_color": "#c8032b",
+"secondary_color": "#4790de",
+"slug": "tennessee-oilers" 
+},
+"type": "AD" 
+},
+"first_name": "Derrick",
+"height":      511,
+"id":      271,
+"jersey_number": "82",
+"last_name": "Mason",
+"position": "WR",
+"speed":     4.51,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      192 
+} 
+] 
+}

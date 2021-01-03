@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota Coyotes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-12-20",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Tyson",
+"height":      602,
+"id":    12331,
+"jersey_number": "32",
+"last_name": "Graham Jr.",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      208 
+} 
+] 
+}

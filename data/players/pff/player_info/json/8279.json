@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan State Spartans",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-08-02",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "FA" 
+},
+"first_name": "Rashad",
+"height":      602,
+"id":     8279,
+"jersey_number": "69D",
+"last_name": "White",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      320 
+} 
+] 
+}

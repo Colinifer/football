@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1979-10-10",
+"draft": {
+ "round":        2,
+"season":     2003,
+"selection":       47,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Kawika",
+"height":      601,
+"id":     1363,
+"jersey_number": "94",
+"last_name": "Mitchell",
+"position": "LB",
+"speed":     4.69,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      253 
+} 
+] 
+}

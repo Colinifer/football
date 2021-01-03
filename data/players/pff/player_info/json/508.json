@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona Wildcats",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1974-09-01",
+"draft": {
+ "round":        4,
+"season":     1999,
+"selection":      129,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Edwin",
+"height":      603,
+"id":      508,
+"jersey_number": "64",
+"last_name": "Mulitalo",
+"position": "G",
+"speed":     5.47,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      345 
+} 
+] 
+}

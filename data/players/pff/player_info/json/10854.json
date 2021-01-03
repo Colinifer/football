@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington Huskies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-18",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      220,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Travis",
+"height":      604,
+"id":    10854,
+"jersey_number": "0",
+"last_name": "Feeney",
+"position": "ED",
+"speed":      4.5,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      244 
+} 
+] 
+}

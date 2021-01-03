@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee Volunteers",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-05-31",
+"draft": {
+ "round":        5,
+"season":     2002,
+"selection":      159,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Andre",
+"height":      510,
+"id":     2910,
+"jersey_number": "41",
+"last_name": "Lott",
+"position": "S",
+"speed":     4.49,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      197 
+} 
+] 
+}

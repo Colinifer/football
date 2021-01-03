@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1995-07-07",
+"draft": {
+ "round":        2,
+"season":     2016,
+"selection":       53,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Su'a",
+"height":      601,
+"id":    10687,
+"jersey_number": "21",
+"last_name": "Cravens",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      224 
+} 
+] 
+}

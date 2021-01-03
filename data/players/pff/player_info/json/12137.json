@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hawaii Warriors",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-08-14",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Marcus",
+"height":      604,
+"id":    12137,
+"jersey_number": "00",
+"last_name": "Kemp",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      210 
+} 
+] 
+}

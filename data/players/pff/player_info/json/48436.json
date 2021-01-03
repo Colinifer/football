@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Tech Yellow Jackets",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-02-10",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Antonio",
+"height":      602,
+"id":    48436,
+"jersey_number": "69",
+"last_name": "Simmons",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      252 
+} 
+] 
+}

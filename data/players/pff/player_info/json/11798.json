@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington Huskies",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1996-05-23",
+"draft": {
+ "round":        2,
+"season":     2017,
+"selection":       43,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Sidney",
+"height":      600,
+"id":    11798,
+"jersey_number": "35",
+"last_name": "Jones",
+"position": "CB",
+"speed":     4.47,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      181 
+} 
+] 
+}

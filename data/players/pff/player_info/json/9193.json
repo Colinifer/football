@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego State Aztecs",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-07-29",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Chad",
+"height":      510,
+"id":     9193,
+"jersey_number": "47W",
+"last_name": "Young",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      240 
+} 
+] 
+}

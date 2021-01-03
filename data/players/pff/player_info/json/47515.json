@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-06-23",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Jordan",
+"height":      600,
+"id":    47515,
+"jersey_number": "1",
+"last_name": "Westerkamp",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      195 
+} 
+] 
+}

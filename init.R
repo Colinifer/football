@@ -3,7 +3,7 @@
 # devtools::install_github("mrcaseb/nflfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
 # devtools::install_github("jthomasmock/espnscrapeR")
-# devtools::install_github("colinifer/initR", auth_token = authtoken)
+# devtools::install_github("colinifer/initR", auth_token = Sys.getenv('authtoken'))
 proj_name <- 'football'
 pkgs <- c(
   'devtools',
@@ -70,6 +70,9 @@ rm(pkgs, installed_packages)
 # source("../initR/init.R")
 fx.setdir(proj_name)
 
+current_season <- fx.get_year()
+year <- fx.get_year()
+
 # Create standard objects -------------------------------------------------
 
 # Connect to DB
@@ -91,6 +94,14 @@ fx.get_sleeper_api_players()
 fx.get_espn_players()
 
 # nflfastR data
+roster_df <-
+  readRDS(
+    url(
+      'https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true'
+    )
+  ) %>%
+  as_tibble()
+
 schedule_df <- fast_scraper_schedules(seasons = year, pp = TRUE)
 
 schedule_df %>% 
@@ -177,6 +188,7 @@ pbp_df %>% select(game_id) %>% unique() %>% tail()
 part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
 pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
 xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
+sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
 
 source('plots/assets/plot_theme.R')
 # source('plots/scripts/team_tiers.R')

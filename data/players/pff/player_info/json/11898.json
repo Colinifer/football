@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1996-03-07",
+"draft": {
+ "round":        4,
+"season":     2017,
+"selection":      143,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Marlon",
+"height":      600,
+"id":    11898,
+"jersey_number": "25",
+"last_name": "Mack",
+"position": "HB",
+"speed":      4.5,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      210 
+} 
+] 
+}

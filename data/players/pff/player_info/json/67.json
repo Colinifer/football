@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington State Cougars",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1970-03-06",
+"draft": {
+ "round": null,
+"season":     1993,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Robbie",
+"height":      604,
+"id":       67,
+"jersey_number": "61",
+"last_name": "Tobeck",
+"position": "C",
+"speed":     5.13,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      297 
+} 
+] 
+}

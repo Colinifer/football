@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona State Sun Devils",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-04-15",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Rudy",
+"height":      602,
+"id":     5383,
+"jersey_number": "12",
+"last_name": "Carpenter",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      217 
+} 
+] 
+}

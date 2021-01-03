@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cincinnati Bearcats",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-05-17",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      254,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Korey",
+"height":      606,
+"id":    38555,
+"jersey_number": "74",
+"last_name": "Cunningham",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      305 
+} 
+] 
+}

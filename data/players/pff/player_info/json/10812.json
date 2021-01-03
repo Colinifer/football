@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Tech Yellow Jackets",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-09-09",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      178,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "D.J.",
+"height":      511,
+"id":    10812,
+"jersey_number": "00",
+"last_name": "White",
+"position": "CB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      193 
+} 
+] 
+}

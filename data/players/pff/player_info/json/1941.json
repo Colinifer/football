@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-03-26",
+"draft": {
+ "round":        7,
+"season":     2004,
+"selection":      227,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Adrien",
+"height":      605,
+"id":     1941,
+"jersey_number": "61",
+"last_name": "Clarke",
+"position": "G",
+"speed":     5.52,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      330 
+} 
+] 
+}

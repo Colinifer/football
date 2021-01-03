@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-01-28",
+"draft": {
+ "round":        6,
+"season":     2004,
+"selection":      174,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Rex",
+"height":      602,
+"id":     1892,
+"jersey_number": "67",
+"last_name": "Hadnot",
+"position": "G",
+"speed":      5.5,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      325 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Robert Morris Colonials",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-01-19",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Marcelis",
+"height":      511,
+"id":    51588,
+"jersey_number": "D39",
+"last_name": "Branch",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      190 
+} 
+] 
+}

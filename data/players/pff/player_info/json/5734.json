@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-05-18",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      211,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Marquis",
+"height":      510,
+"id":     5734,
+"jersey_number": "25",
+"last_name": "Johnson",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      192 
+} 
+] 
+}

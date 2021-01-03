@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Tigers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-12-22",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Damarea",
+"height":      511,
+"id":    27436,
+"jersey_number": "00",
+"last_name": "Crockett",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      225 
+} 
+] 
+}

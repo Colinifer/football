@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1975-08-15",
+"draft": {
+ "round":        3,
+"season":     1997,
+"selection":       86,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Bertrand",
+"height":      603,
+"id":      267,
+"jersey_number": "92",
+"last_name": "Berry",
+"position": "ED",
+"speed":     4.65,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      277 
+} 
+] 
+}

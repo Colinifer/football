@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Midwestern State",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1978-07-21",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Bryan",
+"height":      600,
+"id":      727,
+"jersey_number": "84",
+"last_name": "Gilmore",
+"position": "WR",
+"speed":      4.6,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      193 
+} 
+] 
+}

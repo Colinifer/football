@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-02-16",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Billy",
+"height":      510,
+"id":     3991,
+"jersey_number": "34",
+"last_name": "Latsko",
+"position": "FB",
+"speed":     4.71,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      230 
+} 
+] 
+}

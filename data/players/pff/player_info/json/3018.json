@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma Sooners",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1981-03-03",
+"draft": {
+ "round":        3,
+"season":     2006,
+"selection":       73,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Dusty",
+"height":      603,
+"id":     3018,
+"jersey_number": "98",
+"last_name": "Dvoracek",
+"position": "DI",
+"speed":     5.01,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      303 
+} 
+] 
+}

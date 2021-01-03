@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisville Cardinals",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-03-17",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Keith",
+"height":      600,
+"id":    12060,
+"jersey_number": "0",
+"last_name": "Kelsey",
+"position": "LB",
+"speed":     4.92,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      233 
+} 
+] 
+}

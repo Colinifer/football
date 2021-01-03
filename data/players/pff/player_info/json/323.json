@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Southern State",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1975-04-28",
+"draft": {
+ "round": null,
+"season":     1997,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "James",
+"height":      600,
+"id":      323,
+"jersey_number": "83",
+"last_name": "Thrash",
+"position": "WR",
+"speed":     4.62,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      200 
+} 
+] 
+}

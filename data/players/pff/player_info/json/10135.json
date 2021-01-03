@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Albany Great Danes",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-05-30",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Brian",
+"height":      604,
+"id":    10135,
+"jersey_number": "82",
+"last_name": "Parker",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      265 
+} 
+] 
+}

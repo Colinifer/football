@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Michigan Broncos",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-02-03",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Asantay",
+"height":      600,
+"id":    49729,
+"jersey_number": "50",
+"last_name": "Brown",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      229 
+} 
+] 
+}

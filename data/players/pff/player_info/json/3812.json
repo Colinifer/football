@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "TCU Horned Frogs",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-09-22",
+"draft": {
+ "round":        6,
+"season":     2007,
+"selection":      196,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Herbert",
+"height":      603,
+"id":     3812,
+"jersey_number": "72",
+"last_name": "Taylor",
+"position": "G",
+"speed":     5.23,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      295 
+} 
+] 
+}

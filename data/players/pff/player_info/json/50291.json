@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTSA Roadrunners",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-09-04",
+"draft": {
+ "round":        1,
+"season":     2018,
+"selection":       14,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Marcus",
+"height":      606,
+"id":    50291,
+"jersey_number": "92",
+"last_name": "Davenport",
+"position": "ED",
+"speed":     4.58,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      265 
+} 
+] 
+}

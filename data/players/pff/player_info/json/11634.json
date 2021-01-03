@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado Buffaloes",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1970-10-01",
+"draft": {
+ "round":        4,
+"season":     1993,
+"selection":      105,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Ronnie",
+"height":      510,
+"id":    11634,
+"jersey_number": "23",
+"last_name": "Bradford",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      195 
+} 
+] 
+}

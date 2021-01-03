@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington Huskies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-10-23",
+"draft": {
+ "round":        2,
+"season":     2018,
+"selection":       44,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Dante",
+"height":      601,
+"id":    48113,
+"jersey_number": "13",
+"last_name": "Pettis",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      195 
+} 
+] 
+}

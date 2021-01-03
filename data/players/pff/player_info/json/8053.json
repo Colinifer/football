@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Albany Great Danes",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-12-22",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Jon",
+"height":      601,
+"id":     8053,
+"jersey_number": "49",
+"last_name": "Morgan",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      233 
+} 
+] 
+}

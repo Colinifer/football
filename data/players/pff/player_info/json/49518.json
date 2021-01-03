@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fresno State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-06-23",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Tyquwan",
+"height":      511,
+"id":    49518,
+"jersey_number": "9",
+"last_name": "Glass",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      185 
+} 
+] 
+}

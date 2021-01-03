@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Delaware Fightin Blue Hens",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-05-03",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Charles",
+"height":      606,
+"id":    26892,
+"jersey_number": "85",
+"last_name": "Scarff",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      270 
+} 
+] 
+}

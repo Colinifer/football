@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-02-13",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Nate",
+"height":      511,
+"id":    50353,
+"jersey_number": "32",
+"last_name": "Meadors",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      196 
+} 
+] 
+}

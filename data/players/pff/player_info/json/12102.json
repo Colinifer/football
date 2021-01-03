@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "BYU Cougars",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-03-03",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Kai",
+"height":      600,
+"id":    12102,
+"jersey_number": "43",
+"last_name": "Nacua",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      205 
+} 
+] 
+}

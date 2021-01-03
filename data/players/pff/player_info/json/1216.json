@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hampton Pirates",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1980-02-29",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Darian",
+"height":      602,
+"id":     1216,
+"jersey_number": "36",
+"last_name": "Barnes",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      245 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Troy Trojans",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-02-12",
+"draft": {
+ "round":        5,
+"season":     2010,
+"selection":      142,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Cameron",
+"height":      602,
+"id":     5665,
+"jersey_number": "53",
+"last_name": "Sheffield",
+"position": "ST",
+"speed":     4.92,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      257 
+} 
+] 
+}

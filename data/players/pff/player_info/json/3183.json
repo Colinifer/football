@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-06-08",
+"draft": {
+ "round":        7,
+"season":     2006,
+"selection":      238,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "T.J.",
+"height":      510,
+"id":     3183,
+"jersey_number": "34",
+"last_name": "Rushing",
+"position": "CB",
+"speed":     4.42,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      180 
+} 
+] 
+}

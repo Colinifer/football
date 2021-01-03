@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A&M Aggies",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-07-12",
+"draft": {
+ "round":        3,
+"season":     2001,
+"selection":       76,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Ron",
+"height":      603,
+"id":      838,
+"jersey_number": "96",
+"last_name": "Edwards",
+"position": "DI",
+"speed":     4.86,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      320 
+} 
+] 
+}

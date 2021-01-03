@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas State Red Wolves",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-11-02",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Kyle",
+"height":      600,
+"id":    50923,
+"jersey_number": "56",
+"last_name": "Wilson",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      231 
+} 
+] 
+}

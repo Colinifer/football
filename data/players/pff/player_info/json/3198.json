@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwest Missouri State",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1981-05-19",
+"draft": {
+ "round":        7,
+"season":     2006,
+"selection":      253,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Dave",
+"height":      604,
+"id":     3198,
+"jersey_number": "58",
+"last_name": "Tollefson",
+"position": "ED",
+"speed":     4.74,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      255 
+} 
+] 
+}

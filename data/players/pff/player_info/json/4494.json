@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nicholls State Colonels",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1984-08-13",
+"draft": {
+ "round":        6,
+"season":     2008,
+"selection":      180,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Kareem",
+"height":      511,
+"id":     4494,
+"jersey_number": "41",
+"last_name": "Moore",
+"position": "S",
+"speed":     4.69,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      213 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1980-07-17",
+"draft": {
+ "round":        1,
+"season":     2002,
+"selection":       31,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Robert",
+"height":      600,
+"id":     1038,
+"jersey_number": "55",
+"last_name": "Thomas",
+"position": "LB",
+"speed":     4.51,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      237 
+} 
+] 
+}

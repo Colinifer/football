@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Auburn Tigers",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1982-10-09",
+"draft": {
+ "round":        6,
+"season":     2007,
+"selection":      194,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      510,
+"id":     3810,
+"jersey_number": "30",
+"last_name": "Irons",
+"position": "CB",
+"speed":     4.44,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      188 
+} 
+] 
+}

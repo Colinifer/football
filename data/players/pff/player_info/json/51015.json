@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida International Golden Panthers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-09-14",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      600,
+"id":    51015,
+"jersey_number": "52",
+"last_name": "Wint",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      224 
+} 
+] 
+}

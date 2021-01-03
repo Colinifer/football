@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-03-11",
+"draft": {
+ "round":        1,
+"season":     2004,
+"selection":       13,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Lee",
+"height":      511,
+"id":     1734,
+"jersey_number": "83",
+"last_name": "Evans",
+"position": "WR",
+"speed":     4.39,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      197 
+} 
+] 
+}

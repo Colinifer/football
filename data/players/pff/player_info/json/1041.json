@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1980-01-10",
+"draft": {
+ "round":        2,
+"season":     2002,
+"selection":       34,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "DeShaun",
+"height":      601,
+"id":     1041,
+"jersey_number": "29",
+"last_name": "Foster",
+"position": "HB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      222 
+} 
+] 
+}

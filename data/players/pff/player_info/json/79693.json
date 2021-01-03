@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Humboldt State",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": null,
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Ja'Quan",
+"height":      505,
+"id":    79693,
+"jersey_number": "38",
+"last_name": "Gardner",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      201 
+} 
+] 
+}

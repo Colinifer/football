@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Iowa Panthers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1984-05-31",
+"draft": {
+ "round":        4,
+"season":     2016,
+"selection":      127,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Deiondre'",
+"height":      602,
+"id":    10761,
+"jersey_number": "32",
+"last_name": "Hall",
+"position": "S",
+"speed":     4.68,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      206 
+} 
+] 
+}

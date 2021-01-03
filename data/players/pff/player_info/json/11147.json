@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona Wildcats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-04-01",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Reggie",
+"height":      603,
+"id":    11147,
+"jersey_number": "93",
+"last_name": "Gilbert",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      261 
+} 
+] 
+}

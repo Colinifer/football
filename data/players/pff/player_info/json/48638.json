@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Auburn Tigers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-09-18",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      235,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Dontavius",
+"height":      603,
+"id":    48638,
+"jersey_number": "98",
+"last_name": "Russell",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      320 
+} 
+] 
+}

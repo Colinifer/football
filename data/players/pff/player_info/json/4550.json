@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Buffalo Bulls",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1984-10-09",
+"draft": {
+ "round":        7,
+"season":     2008,
+"selection":      236,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Jamey",
+"height":      605,
+"id":     4550,
+"jersey_number": "61",
+"last_name": "Richard",
+"position": "G",
+"speed":     5.22,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      295 
+} 
+] 
+}

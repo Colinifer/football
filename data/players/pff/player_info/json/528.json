@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin - Stevens Point",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1976-03-16",
+"draft": {
+ "round":        6,
+"season":     1999,
+"selection":      177,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Clint",
+"height":      601,
+"id":      528,
+"jersey_number": "57",
+"last_name": "Kriewaldt",
+"position": "LB",
+"speed":     4.65,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      248 
+} 
+] 
+}

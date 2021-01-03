@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeastern",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-09-05",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Mark",
+"height":      510,
+"id":    66956,
+"jersey_number": "00",
+"last_name": "Myers Jr.",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      185 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego State Aztecs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-08-19",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Kameron",
+"height":      602,
+"id":    35978,
+"jersey_number": "29",
+"last_name": "Kelly",
+"position": "S",
+"speed":     4.66,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      205 
+} 
+] 
+}

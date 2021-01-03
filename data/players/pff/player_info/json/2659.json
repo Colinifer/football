@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Middle Tennessee Blue Raiders",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1981-06-24",
+"draft": {
+ "round": null,
+"season":     2005,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Thomas",
+"height":      602,
+"id":     2659,
+"jersey_number": "93",
+"last_name": "Johnson",
+"position": "DI",
+"speed":     5.07,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      300 
+} 
+] 
+}

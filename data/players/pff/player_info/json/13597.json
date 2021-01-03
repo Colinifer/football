@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-08-09",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      185,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "NFL" 
+},
+"first_name": "Deon",
+"height":      602,
+"id":    13597,
+"jersey_number": "17",
+"last_name": "Cain",
+"position": "WR",
+"speed":     4.43,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      202 
+} 
+] 
+}

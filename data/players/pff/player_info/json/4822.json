@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma State Cowboys",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-02-15",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Dantrell",
+"height":      508,
+"id":     4822,
+"jersey_number": "29",
+"last_name": "Savage",
+"position": "HB",
+"speed":     4.53,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      182 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-07-02",
+"draft": {
+ "round":        2,
+"season":     2008,
+"selection":       57,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Chad",
+"height":      603,
+"id":     4371,
+"jersey_number": "4",
+"last_name": "Henne",
+"position": "QB",
+"speed":     4.92,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      222 
+} 
+] 
+}

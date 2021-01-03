@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Purdue Boilermakers",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1976-03-27",
+"draft": {
+ "round":        3,
+"season":     1999,
+"selection":       89,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Chike",
+"height":      605,
+"id":      493,
+"jersey_number": "56",
+"last_name": "Okeafor",
+"position": "ED",
+"speed":     4.74,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      265 
+} 
+] 
+}

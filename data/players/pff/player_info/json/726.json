@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Iowa Panthers",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-05-12",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      600,
+"id":      726,
+"jersey_number": "87",
+"last_name": "Furrey",
+"position": "WR",
+"speed":      4.6,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      185 
+} 
+] 
+}

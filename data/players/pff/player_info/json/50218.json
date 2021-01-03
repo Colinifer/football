@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boise State Broncos",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1994-11-20",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Durrant",
+"height":      604,
+"id":    50218,
+"jersey_number": "48",
+"last_name": "Miles",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      263 
+} 
+] 
+}

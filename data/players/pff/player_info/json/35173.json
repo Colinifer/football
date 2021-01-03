@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Appalachian State Mountaineers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-08-19",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Tae",
+"height":      509,
+"id":    35173,
+"jersey_number": "00",
+"last_name": "Hayes",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      188 
+} 
+] 
+}

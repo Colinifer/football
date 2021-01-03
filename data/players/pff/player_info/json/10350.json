@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho Vandals",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1991-03-01",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Aaron",
+"height":      511,
+"id":    10350,
+"jersey_number": "38",
+"last_name": "Grymes",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      183 
+} 
+] 
+}

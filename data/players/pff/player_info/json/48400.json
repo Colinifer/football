@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-01-25",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      102,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "NFL" 
+},
+"first_name": "Jalyn",
+"height":      605,
+"id":    48400,
+"jersey_number": "90",
+"last_name": "Holmes",
+"position": "ED",
+"speed":     4.82,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      283 
+} 
+] 
+}

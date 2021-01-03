@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Connecticut Huskies",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1992-09-12",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Richard",
+"height":      606,
+"id":    12279,
+"jersey_number": "65",
+"last_name": "Levy",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      305 
+} 
+] 
+}

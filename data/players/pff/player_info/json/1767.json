@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-11-11",
+"draft": {
+ "round":        2,
+"season":     2004,
+"selection":       46,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Justin",
+"height":      603,
+"id":     1767,
+"jersey_number": "66",
+"last_name": "Smiley",
+"position": "G",
+"speed":     5.07,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      301 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Virginia Mountaineers",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1970-11-06",
+"draft": {
+ "round":        3,
+"season":     1994,
+"selection":       76,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Rich",
+"height":      604,
+"id":       86,
+"jersey_number": "74",
+"last_name": "Braham",
+"position": "C",
+"speed":     5.26,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      305 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Akron Zips",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-11-20",
+"draft": {
+ "round":        3,
+"season":     2007,
+"selection":       88,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Andy",
+"height":      604,
+"id":     3704,
+"jersey_number": "62",
+"last_name": "Alleman",
+"position": "G",
+"speed":     5.07,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      302 
+} 
+] 
+}

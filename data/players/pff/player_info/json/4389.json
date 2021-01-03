@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma Sooners",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1986-10-15",
+"draft": {
+ "round":        3,
+"season":     2008,
+"selection":       75,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Reggie",
+"height":      601,
+"id":     4389,
+"jersey_number": "36",
+"last_name": "Smith",
+"position": "S",
+"speed":      4.5,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      199 
+} 
+] 
+}

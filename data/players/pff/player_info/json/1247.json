@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida A&M Rattlers",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-05-21",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Quinn",
+"height":      603,
+"id":     1247,
+"jersey_number": "8",
+"last_name": "Gray",
+"position": "QB",
+"speed":     4.77,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      240 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Syracuse Orange",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1983-09-30",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Taj",
+"height":      600,
+"id":     4715,
+"jersey_number": "10",
+"last_name": "Smith",
+"position": "WR",
+"speed":     4.59,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      198 
+} 
+] 
+}

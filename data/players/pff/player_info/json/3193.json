@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California Golden Bears",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-08-27",
+"draft": {
+ "round":        7,
+"season":     2006,
+"selection":      248,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Aaron",
+"height":      604,
+"id":     3193,
+"jersey_number": "62",
+"last_name": "Merz",
+"position": "G",
+"speed":     5.51,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      340 
+} 
+] 
+}

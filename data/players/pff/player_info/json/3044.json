@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-11-19",
+"draft": {
+ "round":        4,
+"season":     2006,
+"selection":       99,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Max",
+"height":      604,
+"id":     3044,
+"jersey_number": "62",
+"last_name": "Jean-Gilles",
+"position": "G",
+"speed":     5.48,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      355 
+} 
+] 
+}

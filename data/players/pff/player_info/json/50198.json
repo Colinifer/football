@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeast Missouri State Redhawks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-04-22",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      248,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "NFL" 
+},
+"first_name": "Kendall",
+"height":      603,
+"id":    50198,
+"jersey_number": "00",
+"last_name": "Donnerson",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      249 
+} 
+] 
+}

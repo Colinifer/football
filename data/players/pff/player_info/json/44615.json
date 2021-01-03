@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-12-20",
+"draft": {
+ "round":        5,
+"season":     2019,
+"selection":      165,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Joe",
+"height":      604,
+"id":    44615,
+"jersey_number": "91",
+"last_name": "Jackson",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      275 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego State Aztecs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-02-02",
+"draft": {
+ "round":        1,
+"season":     2018,
+"selection":       27,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Rashaad",
+"height":      511,
+"id":    27414,
+"jersey_number": "20",
+"last_name": "Penny",
+"position": "HB",
+"speed":     4.46,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      220 
+} 
+] 
+}

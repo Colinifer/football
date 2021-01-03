@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Malone",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-05-15",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Ashton",
+"height":      601,
+"id":    91479,
+"jersey_number": "16",
+"last_name": "Dulin",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      215 
+} 
+] 
+}

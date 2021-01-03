@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Toledo Rockets",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-04-23",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Greg",
+"height":      604,
+"id":    10019,
+"jersey_number": "65",
+"last_name": "Mancz",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      302 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona Wildcats",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-06-09",
+"draft": {
+ "round":        3,
+"season":     1996,
+"selection":       86,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Tedy",
+"height":      601,
+"id":      187,
+"jersey_number": "54",
+"last_name": "Bruschi",
+"position": "LB",
+"speed":      4.9,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      247 
+} 
+] 
+}

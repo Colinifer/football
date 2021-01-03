@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan State Spartans",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1998-01-12",
+"draft": {
+ "round":        3,
+"season":     2019,
+"selection":       83,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Justin",
+"height":      602,
+"id":    40160,
+"jersey_number": "31",
+"last_name": "Layne",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      192 
+} 
+] 
+}

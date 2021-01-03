@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Rebels",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-03-09",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      509,
+"id":    10898,
+"jersey_number": "28",
+"last_name": "Hilton",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      184 
+} 
+] 
+}

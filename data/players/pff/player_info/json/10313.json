@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chapman",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-01",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      604,
+"id":    10313,
+"jersey_number": "89",
+"last_name": "Ezeakunne",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      230 
+} 
+] 
+}

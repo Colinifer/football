@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Minnesota Golden Gophers",
+"current_class": null,
+"current_eligible_year":     1995,
+"dob": "1972-12-13",
+"draft": {
+ "round":        6,
+"season":     1995,
+"selection":      188,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Craig",
+"height":      601,
+"id":    11691,
+"jersey_number": "52",
+"last_name": "Sauer",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      235 
+} 
+] 
+}

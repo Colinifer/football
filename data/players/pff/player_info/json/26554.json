@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "TCU Horned Frogs",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-01-01",
+"draft": {
+ "round":        2,
+"season":     2019,
+"selection":       49,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Ben",
+"height":      603,
+"id":    26554,
+"jersey_number": "52",
+"last_name": "Banogu",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      250 
+} 
+] 
+}

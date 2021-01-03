@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma State Cowboys",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-06-02",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      146,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "NFL" 
+},
+"first_name": "Tre",
+"height":      603,
+"id":    49059,
+"jersey_number": "21",
+"last_name": "Flowers",
+"position": "CB",
+"speed":     4.45,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      203 
+} 
+] 
+}

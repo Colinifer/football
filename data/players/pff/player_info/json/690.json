@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Miss Golden Eagles",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-08-17",
+"draft": {
+ "round":        6,
+"season":     2000,
+"selection":      186,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Adalius",
+"height":      602,
+"id":      690,
+"jersey_number": "96",
+"last_name": "Thomas",
+"position": "ED",
+"speed":     4.56,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      270 
+} 
+] 
+}

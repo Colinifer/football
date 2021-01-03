@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-03-12",
+"draft": {
+ "round":        5,
+"season":     2006,
+"selection":      149,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Greg",
+"height":      602,
+"id":     3094,
+"jersey_number": "24",
+"last_name": "Blue",
+"position": "S",
+"speed":     4.57,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      216 
+} 
+] 
+}

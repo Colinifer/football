@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Tech Red Raiders",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-17",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Derrick",
+"height":      604,
+"id":    48345,
+"jersey_number": "16",
+"last_name": "Willies",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      207 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Baylor Bears",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-01-10",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Orion",
+"height":      601,
+"id":    12181,
+"jersey_number": "00",
+"last_name": "Stewart",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      205 
+} 
+] 
+}

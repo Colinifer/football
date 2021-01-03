@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina Gamecocks",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-09-19",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Connor",
+"height":      601,
+"id":     9036,
+"jersey_number": "9",
+"last_name": "Shaw",
+"position": "QB",
+"speed":     4.66,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      210 
+} 
+] 
+}

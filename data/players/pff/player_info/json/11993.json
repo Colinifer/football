@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1996-01-06",
+"draft": {
+ "round":        7,
+"season":     2017,
+"selection":      239,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Noah",
+"height":      602,
+"id":    11993,
+"jersey_number": "85",
+"last_name": "Brown",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      225 
+} 
+] 
+}

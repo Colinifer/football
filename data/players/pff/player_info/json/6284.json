@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hawaii Warriors",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-02-10",
+"draft": {
+ "round":        5,
+"season":     2011,
+"selection":      132,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Kealoha",
+"height":      510,
+"id":     6284,
+"jersey_number": "81",
+"last_name": "Pilares",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      201 
+} 
+] 
+}

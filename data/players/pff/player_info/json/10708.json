@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-10-19",
+"draft": {
+ "round":        3,
+"season":     2016,
+"selection":       74,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "KeiVarae",
+"height":      511,
+"id":    10708,
+"jersey_number": "34",
+"last_name": "Russell",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      196 
+} 
+] 
+}

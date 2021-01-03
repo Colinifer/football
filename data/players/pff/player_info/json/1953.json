@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeast Missouri State Redhawks",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-08-01",
+"draft": {
+ "round":        7,
+"season":     2004,
+"selection":      239,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Eugene",
+"height":      603,
+"id":     1953,
+"jersey_number": "54",
+"last_name": "Amano",
+"position": "C",
+"speed":     5.15,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      310 
+} 
+] 
+}

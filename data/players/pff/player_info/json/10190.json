@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "East Carolina Pirates",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-03-13",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Chrishon",
+"height":      604,
+"id":    10190,
+"jersey_number": "64",
+"last_name": "Rose",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      303 
+} 
+] 
+}

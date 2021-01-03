@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Illinois Leathernecks",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1977-07-03",
+"draft": {
+ "round":        5,
+"season":     1999,
+"selection":      158,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      602,
+"id":      523,
+"jersey_number": "96",
+"last_name": "Bowens",
+"position": "ED",
+"speed":     4.85,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      265 
+} 
+] 
+}

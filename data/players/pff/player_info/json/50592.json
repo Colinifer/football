@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "SMU Mustangs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-12-23",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      244,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "NFL" 
+},
+"first_name": "Justin",
+"height":      604,
+"id":    50592,
+"jersey_number": "00",
+"last_name": "Lawler",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      265 
+} 
+] 
+}

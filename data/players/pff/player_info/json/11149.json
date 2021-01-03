@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "East Carolina Pirates",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-01-23",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      510,
+"id":    11149,
+"jersey_number": "00",
+"last_name": "Hawkins",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      190 
+} 
+] 
+}

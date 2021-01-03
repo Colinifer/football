@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "TCU Horned Frogs",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-08-03",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      602,
+"id":     9941,
+"jersey_number": "36",
+"last_name": "Hackett",
+"position": "S",
+"speed":     4.81,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      190 
+} 
+] 
+}

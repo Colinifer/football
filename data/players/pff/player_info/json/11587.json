@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     1990,
+"dob": "1968-07-19",
+"draft": {
+ "round":        2,
+"season":     1990,
+"selection":       48,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "LeRoy",
+"height":      600,
+"id":    11587,
+"jersey_number": "36",
+"last_name": "Butler",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      204 
+} 
+] 
+}

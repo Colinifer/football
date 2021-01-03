@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Army Black Knights",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-09-01",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Brett",
+"height":      606,
+"id":    46848,
+"jersey_number": "64",
+"last_name": "Toth",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      291 
+} 
+] 
+}

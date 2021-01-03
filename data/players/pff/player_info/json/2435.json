@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-08-28",
+"draft": {
+ "round":        7,
+"season":     2005,
+"selection":      218,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Reynaldo",
+"height":      511,
+"id":     2435,
+"jersey_number": "21",
+"last_name": "Hill",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      185 
+} 
+] 
+}

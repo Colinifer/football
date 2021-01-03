@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego Toreros",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1984-12-02",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Eric",
+"height":      603,
+"id":     4731,
+"jersey_number": "96",
+"last_name": "Bakhtiari",
+"position": "ED",
+"speed":     4.78,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      258 
+} 
+] 
+}

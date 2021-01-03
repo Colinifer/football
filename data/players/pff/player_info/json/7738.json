@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-08-25",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Dominique",
+"height":      511,
+"id":     7738,
+"jersey_number": "47",
+"last_name": "Ellis",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      195 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Atlantic Owls",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-10-28",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Damian",
+"height":      602,
+"id":     9774,
+"jersey_number": "00",
+"last_name": "Parms",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      210 
+} 
+] 
+}

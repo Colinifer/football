@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Temple Owls",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1993-12-26",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Keith",
+"height":      603,
+"id":    48017,
+"jersey_number": "18",
+"last_name": "Kirkwood",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      210 
+} 
+] 
+}

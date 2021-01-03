@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan State Spartans",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-12-04",
+"draft": {
+ "round":        4,
+"season":     2017,
+"selection":      123,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Montae",
+"height":      602,
+"id":    11878,
+"jersey_number": "35",
+"last_name": "Nicholson",
+"position": "S",
+"speed":     4.42,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      215 
+} 
+] 
+}

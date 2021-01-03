@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10075,
+"roster": "offense",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2020,
+"season_id":     2020,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18547,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       31,
+"position": "SLWR",
+"status": "P",
+"week":        1 
+},
+"game_id":    18547,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "10",
+"player_franchise_id":       31,
+"player_id":    10075,
+"position": "SLWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":    18558,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "SLWR",
+"status": "P",
+"week":        2 
+},
+"game_id":    18558,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "10",
+"player_franchise_id":       31,
+"player_id":    10075,
+"position": "SLWR",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18568,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       31,
+"position": "SLWR",
+"status": "S",
+"week":        3 
+},
+"game_id":    18568,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "10",
+"player_franchise_id":       31,
+"player_id":    10075,
+"position": "SLWR",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":    18589,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "SLWR",
+"status": "P",
+"week":        7 
+},
+"game_id":    18589,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "10",
+"player_franchise_id":       31,
+"player_id":    10075,
+"position": "SLWR",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":    18618,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "SRWR",
+"status": "P",
+"week":        6 
+},
+"game_id":    18618,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "10",
+"player_franchise_id":       31,
+"player_id":    10075,
+"position": "SRWR",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18641,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       31,
+"position": "SRWR",
+"status": "P",
+"week":        8 
+},
+"game_id":    18641,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "10",
+"player_franchise_id":       31,
+"player_id":    10075,
+"position": "SRWR",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":    18717,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "SLWR",
+"status": "P",
+"week":       13 
+},
+"game_id":    18717,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "10",
+"player_franchise_id":       31,
+"player_id":    10075,
+"position": "SLWR",
+"status": "P",
+"week":       13 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

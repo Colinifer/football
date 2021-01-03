@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fresno State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-07-16",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Louis",
+"height":      603,
+"id":     3995,
+"jersey_number": "94",
+"last_name": "Leonard",
+"position": "DI",
+"speed":     5.26,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      330 
+} 
+] 
+}

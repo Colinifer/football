@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan State Spartans",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-02-02",
+"draft": {
+ "round":        5,
+"season":     2009,
+"selection":      173,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Javon",
+"height":      509,
+"id":     5097,
+"jersey_number": "21",
+"last_name": "Ringer",
+"position": "HB",
+"speed":     4.55,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      205 
+} 
+] 
+}

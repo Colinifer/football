@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina Tar Heels",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-09-03",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      179,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "T.J.",
+"height":      511,
+"id":    11935,
+"jersey_number": "22",
+"last_name": "Logan",
+"position": "HB",
+"speed":     4.37,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      195 
+} 
+] 
+}

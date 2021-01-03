@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kentucky Wildcats",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-07-08",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Kayaune",
+"height":      606,
+"id":    47804,
+"jersey_number": "11",
+"last_name": "Ross",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      224 
+} 
+] 
+}

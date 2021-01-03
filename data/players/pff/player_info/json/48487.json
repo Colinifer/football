@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Michigan Chippewas",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-07-12",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Joe",
+"height":      603,
+"id":    48487,
+"jersey_number": "95",
+"last_name": "Ostman",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      255 
+} 
+] 
+}

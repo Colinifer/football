@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Cavaliers",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-02-21",
+"draft": {
+ "round":        2,
+"season":     2009,
+"selection":       45,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Clint",
+"height":      603,
+"id":     4968,
+"jersey_number": "97",
+"last_name": "Sintim",
+"position": "LB",
+"speed":     4.75,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      256 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-09-16",
+"draft": {
+ "round":        3,
+"season":     2006,
+"selection":       68,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Claude",
+"height":      602,
+"id":     3013,
+"jersey_number": "99",
+"last_name": "Wroten",
+"position": "DI",
+"speed":      5.1,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      292 
+} 
+] 
+}

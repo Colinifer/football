@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma State Cowboys",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-07-16",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Blake",
+"height":      605,
+"id":    12320,
+"jersey_number": "89",
+"last_name": "Jarwin",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      260 
+} 
+] 
+}

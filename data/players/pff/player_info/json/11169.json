@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-31",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Brennan",
+"height":      604,
+"id":    11169,
+"jersey_number": "57",
+"last_name": "Scarlett",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      263 
+} 
+] 
+}

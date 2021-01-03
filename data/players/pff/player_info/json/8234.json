@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lane",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-01-31",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Vernon",
+"height":      602,
+"id":     8234,
+"jersey_number": "30D",
+"last_name": "Kearney",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      185 
+} 
+] 
+}

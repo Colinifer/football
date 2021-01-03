@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma State Cowboys",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-11-29",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Ramon",
+"height":      511,
+"id":    49474,
+"jersey_number": "47",
+"last_name": "Richards",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      188 
+} 
+] 
+}

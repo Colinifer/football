@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Richmond Spiders",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-08-08",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Stacy",
+"height":      602,
+"id":     3538,
+"jersey_number": "45",
+"last_name": "Tutt",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      235 
+} 
+] 
+}

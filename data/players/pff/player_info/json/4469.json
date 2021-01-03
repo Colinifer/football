@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-12-25",
+"draft": {
+ "round":        5,
+"season":     2008,
+"selection":      155,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Thomas",
+"height":      601,
+"id":     4469,
+"jersey_number": "94",
+"last_name": "Williams",
+"position": "LB",
+"speed":     4.86,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      238 
+} 
+] 
+}

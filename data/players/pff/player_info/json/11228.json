@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boise State Broncos",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-02-11",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Marcus",
+"height":      602,
+"id":    11228,
+"jersey_number": "62",
+"last_name": "Henry",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      303 
+} 
+] 
+}

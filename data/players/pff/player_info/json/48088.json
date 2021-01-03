@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Penn State Nittany Lions",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-03-17",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Saeed",
+"height":      602,
+"id":    48088,
+"jersey_number": "00",
+"last_name": "Blacknall",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      209 
+} 
+] 
+}

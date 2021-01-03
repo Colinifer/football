@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-12-04",
+"draft": {
+ "round":        5,
+"season":     2012,
+"selection":      144,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Zebrie",
+"height":      606,
+"id":     7139,
+"jersey_number": "72",
+"last_name": "Sanders",
+"position": "T",
+"speed":     5.41,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      318 
+} 
+] 
+}

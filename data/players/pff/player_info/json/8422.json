@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Utah Thunderbirds",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1987-12-31",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Cody",
+"height":      604,
+"id":     8422,
+"jersey_number": "60",
+"last_name": "Larsen",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      300 
+} 
+] 
+}

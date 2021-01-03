@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Miss Golden Eagles",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-03-05",
+"draft": {
+ "round": null,
+"season":     2001,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "DeQuincy",
+"height":      601,
+"id":      985,
+"jersey_number": "78",
+"last_name": "Scott",
+"position": "DI",
+"speed":     4.95,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      260 
+} 
+] 
+}

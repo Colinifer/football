@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clarion",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-09-11",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Julian",
+"height":      603,
+"id":     9957,
+"jersey_number": "43",
+"last_name": "Howsare",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      255 
+} 
+] 
+}

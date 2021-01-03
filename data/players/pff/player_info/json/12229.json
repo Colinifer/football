@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "James Madison Dukes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-05-14",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Khalid",
+"height":      509,
+"id":    12229,
+"jersey_number": "O31",
+"last_name": "Abdullah",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      226 
+} 
+] 
+}

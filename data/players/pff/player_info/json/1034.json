@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-11-08",
+"draft": {
+ "round":        1,
+"season":     2002,
+"selection":       27,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Mike",
+"height":      602,
+"id":     1034,
+"jersey_number": "29",
+"last_name": "Rumph",
+"position": "CB",
+"speed":     4.47,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      206 
+} 
+] 
+}

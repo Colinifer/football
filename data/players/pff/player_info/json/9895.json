@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Cavaliers",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-10-09",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      601,
+"id":     9895,
+"jersey_number": "41",
+"last_name": "Harris",
+"position": "S",
+"speed":     4.56,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      202 
+} 
+] 
+}

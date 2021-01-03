@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma State Cowboys",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-11-04",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Victor",
+"height":      605,
+"id":    46319,
+"jersey_number": "00",
+"last_name": "Salako",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      316 
+} 
+] 
+}

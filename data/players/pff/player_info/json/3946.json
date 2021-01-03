@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Washington Eagles",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-05-20",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Keith",
+"height":      604,
+"id":     3946,
+"jersey_number": "96",
+"last_name": "Grennan",
+"position": "DI",
+"speed":        5,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      298 
+} 
+] 
+}

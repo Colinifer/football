@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah State Aggies",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-11-20",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      604,
+"id":     3270,
+"jersey_number": "97",
+"last_name": "Chick",
+"position": "ED",
+"speed":     4.77,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      257 
+} 
+] 
+}

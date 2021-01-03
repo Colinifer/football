@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Michigan Chippewas",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-08-11",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      212,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Kavon",
+"height":      600,
+"id":    10846,
+"jersey_number": "35",
+"last_name": "Frazier",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      220 
+} 
+] 
+}

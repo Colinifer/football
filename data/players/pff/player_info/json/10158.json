@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A & M - Commerce",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-01-04",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Charles",
+"height":      605,
+"id":    10158,
+"jersey_number": "65D",
+"last_name": "Tuaau",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      310 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Georgia",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1992-12-06",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "J.J.",
+"height":      510,
+"id":    66921,
+"jersey_number": "84",
+"last_name": "Jones",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      174 
+} 
+] 
+}

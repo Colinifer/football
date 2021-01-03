@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-03-18",
+"draft": {
+ "round":        3,
+"season":     1998,
+"selection":       91,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Brian",
+"height":      603,
+"id":      379,
+"jersey_number": "8",
+"last_name": "Griese",
+"position": "QB",
+"speed":      5.1,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      214 
+} 
+] 
+}

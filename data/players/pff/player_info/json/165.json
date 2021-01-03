@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi State Bulldogs",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-07-17",
+"draft": {
+ "round":        1,
+"season":     1996,
+"selection":       24,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Eric",
+"height":      601,
+"id":      165,
+"jersey_number": "83",
+"last_name": "Moulds",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      210 
+} 
+] 
+}

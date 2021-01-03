@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Michigan Broncos",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-06-26",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      170,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "NFL" 
+},
+"first_name": "Darius",
+"height":      510,
+"id":    49507,
+"jersey_number": "23",
+"last_name": "Phillips",
+"position": "CB",
+"speed":     4.54,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      190 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin - Whitewater",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-05-16",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Nathan",
+"height":      604,
+"id":    91475,
+"jersey_number": "60",
+"last_name": "Trewyn",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      315 
+} 
+] 
+}

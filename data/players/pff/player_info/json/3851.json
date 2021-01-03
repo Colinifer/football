@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-10-04",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      235,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Chansi",
+"height":      510,
+"id":     3851,
+"jersey_number": "17",
+"last_name": "Stuckey",
+"position": "WR",
+"speed":     4.56,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      185 
+} 
+] 
+}

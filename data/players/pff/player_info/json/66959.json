@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ferris State",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-06-22",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      605,
+"id":    66959,
+"jersey_number": "67",
+"last_name": "Okoye",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      320 
+} 
+] 
+}

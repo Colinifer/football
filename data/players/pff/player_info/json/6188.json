@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nevada Wolf Pack",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1987-10-22",
+"draft": {
+ "round":        2,
+"season":     2011,
+"selection":       36,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Colin",
+"height":      605,
+"id":     6188,
+"jersey_number": "7",
+"last_name": "Kaepernick",
+"position": "QB",
+"speed":     4.53,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      233 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Dickinson State",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-04-26",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Jamalcolm",
+"height":      602,
+"id":    94373,
+"jersey_number": "46",
+"last_name": "Liggins",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      205 
+} 
+] 
+}

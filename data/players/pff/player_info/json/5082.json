@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-10-06",
+"draft": {
+ "round":        5,
+"season":     2009,
+"selection":      158,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Cody",
+"height":      600,
+"id":     5082,
+"jersey_number": "52",
+"last_name": "Glenn",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      244 
+} 
+] 
+}

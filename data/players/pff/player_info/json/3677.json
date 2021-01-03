@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boise State Broncos",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-06-28",
+"draft": {
+ "round":        2,
+"season":     2007,
+"selection":       61,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Gerald",
+"height":      600,
+"id":     3677,
+"jersey_number": "42",
+"last_name": "Alexander",
+"position": "S",
+"speed":     4.51,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      204 
+} 
+] 
+}

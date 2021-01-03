@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Arkansas Bears",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-04-26",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Dominique",
+"height":      602,
+"id":     8106,
+"jersey_number": "89",
+"last_name": "Croom",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      190 
+} 
+] 
+}

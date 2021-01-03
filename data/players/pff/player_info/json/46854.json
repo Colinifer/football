@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh Panthers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-09-15",
+"draft": {
+ "round":        2,
+"season":     2018,
+"selection":       62,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Brian",
+"height":      607,
+"id":    46854,
+"jersey_number": "75",
+"last_name": "O'Neill",
+"position": "T",
+"speed":     4.82,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      297 
+} 
+] 
+}

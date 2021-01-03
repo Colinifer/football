@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-01-12",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      510,
+"id":     2123,
+"jersey_number": "10",
+"last_name": "Middleton",
+"position": "WR",
+"speed":     4.68,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      190 
+} 
+] 
+}

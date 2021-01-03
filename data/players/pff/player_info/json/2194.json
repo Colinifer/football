@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Syracuse Orange",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-06-26",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      606,
+"id":     2194,
+"jersey_number": "91",
+"last_name": "Thomas",
+"position": "ED",
+"speed":     4.85,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      271 
+} 
+] 
+}

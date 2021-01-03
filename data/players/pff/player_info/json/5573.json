@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-09-21",
+"draft": {
+ "round":        2,
+"season":     2010,
+"selection":       48,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Jimmy",
+"height":      603,
+"id":     5573,
+"jersey_number": "2",
+"last_name": "Clausen",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      222 
+} 
+] 
+}

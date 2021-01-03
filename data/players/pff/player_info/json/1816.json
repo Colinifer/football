@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-05-21",
+"draft": {
+ "round":        3,
+"season":     2004,
+"selection":       95,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Guss",
+"height":      510,
+"id":     1816,
+"jersey_number": "29",
+"last_name": "Scott",
+"position": "S",
+"speed":     4.46,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      205 
+} 
+] 
+}

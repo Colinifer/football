@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1983-03-11",
+"draft": {
+ "round":        1,
+"season":     2004,
+"selection":       28,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      601,
+"id":     1749,
+"jersey_number": "20",
+"last_name": "Gamble",
+"position": "CB",
+"speed":      4.5,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      181 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana-Monroe Warhawks",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-12-05",
+"draft": {
+ "round":        5,
+"season":     2007,
+"selection":      167,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Kevin",
+"height":      600,
+"id":     3783,
+"jersey_number": "44",
+"last_name": "Payne",
+"position": "S",
+"speed":      4.6,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      220 
+} 
+] 
+}

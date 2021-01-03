@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Indiana Hoosiers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-06-06",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      101,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "NFL" 
+},
+"first_name": "Ian",
+"height":      603,
+"id":    42130,
+"jersey_number": "80",
+"last_name": "Thomas",
+"position": "TE",
+"speed":     4.74,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      260 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCF Knights",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-03-22",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Matthew",
+"height":      600,
+"id":    39675,
+"jersey_number": "16",
+"last_name": "Wright",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      179 
+} 
+] 
+}

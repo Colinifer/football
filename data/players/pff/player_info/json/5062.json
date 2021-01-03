@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Furman Paladins",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-07-28",
+"draft": {
+ "round":        5,
+"season":     2009,
+"selection":      138,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "William",
+"height":      510,
+"id":     5062,
+"jersey_number": "42",
+"last_name": "Middleton",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      186 
+} 
+] 
+}

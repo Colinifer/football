@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-06-18",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Juwann",
+"height":      605,
+"id":    46217,
+"jersey_number": "00",
+"last_name": "Bushell-Beatty",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      333 
+} 
+] 
+}

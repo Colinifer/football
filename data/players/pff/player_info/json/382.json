@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fresno State Bulldogs",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-08-14",
+"draft": {
+ "round":        4,
+"season":     1998,
+"selection":       95,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Michael",
+"height":      600,
+"id":      382,
+"jersey_number": "28",
+"last_name": "Pittman",
+"position": "HB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      228 
+} 
+] 
+}

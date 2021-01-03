@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-11-21",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      218,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Leon",
+"height":      601,
+"id":    11973,
+"jersey_number": "34",
+"last_name": "McQuay",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      195 
+} 
+] 
+}

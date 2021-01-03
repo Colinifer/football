@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado Buffaloes",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-04-22",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Ray",
+"height":      601,
+"id":     8134,
+"jersey_number": "33",
+"last_name": "Polk",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      205 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida A&M Rattlers",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1971-02-21",
+"draft": {
+ "round":        5,
+"season":     1994,
+"selection":      146,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Terry",
+"height":      601,
+"id":    11606,
+"jersey_number": "85",
+"last_name": "Mickens",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      200 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego State Aztecs",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-04-09",
+"draft": {
+ "round":        7,
+"season":     2012,
+"selection":      218,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Jerome",
+"height":      605,
+"id":     7659,
+"jersey_number": "99",
+"last_name": "Long",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      285 
+} 
+] 
+}

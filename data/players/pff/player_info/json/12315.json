@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kent State Golden Flashes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-04-21",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Najee",
+"height":      509,
+"id":    12315,
+"jersey_number": "33",
+"last_name": "Murray",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      180 
+} 
+] 
+}

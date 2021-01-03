@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-09-24",
+"draft": {
+ "round":        4,
+"season":     2006,
+"selection":      107,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Gabe",
+"height":      603,
+"id":     3052,
+"jersey_number": "98",
+"last_name": "Watson",
+"position": "DI",
+"speed":     5.27,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      340 
+} 
+] 
+}

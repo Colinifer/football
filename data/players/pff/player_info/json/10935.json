@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina Gamecocks",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-14",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Isaiah",
+"height":      600,
+"id":    10935,
+"jersey_number": "39",
+"last_name": "Johnson",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      209 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa Hawkeyes",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-07-26",
+"draft": {
+ "round":        1,
+"season":     2004,
+"selection":        2,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Robert",
+"height":      607,
+"id":     1723,
+"jersey_number": "72",
+"last_name": "Gallery",
+"position": "G",
+"speed":     4.98,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      325 
+} 
+] 
+}

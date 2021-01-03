@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marshall Thundering Herd",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1991-10-12",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Corey",
+"height":      509,
+"id":    11296,
+"jersey_number": "35",
+"last_name": "Tindal",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      173 
+} 
+] 
+}

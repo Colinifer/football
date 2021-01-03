@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-23",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "J.T.",
+"height":      602,
+"id":    46387,
+"jersey_number": "16",
+"last_name": "Barrett IV",
+"position": "QB",
+"speed":      4.7,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      220 
+} 
+] 
+}

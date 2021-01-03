@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chattanooga Mocs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-02-27",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Jacob",
+"height":      601,
+"id":    11514,
+"jersey_number": "O48",
+"last_name": "Huesman",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      216 
+} 
+] 
+}

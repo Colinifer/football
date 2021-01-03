@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah Utes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-25",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Salesi",
+"height":      604,
+"id":    38924,
+"jersey_number": "67",
+"last_name": "Uhatafe",
+"position": "G",
+"speed":      5.4,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      332 
+} 
+] 
+}

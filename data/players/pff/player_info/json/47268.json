@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern Wildcats",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-30",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Garrett",
+"height":      603,
+"id":    47268,
+"jersey_number": "89",
+"last_name": "Dickerson",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      248 
+} 
+] 
+}

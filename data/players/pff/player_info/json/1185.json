@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Auburn Tigers",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-07-14",
+"draft": {
+ "round":        7,
+"season":     2002,
+"selection":      215,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Mike",
+"height":      604,
+"id":     1185,
+"jersey_number": "62",
+"last_name": "Pucillo",
+"position": "G",
+"speed":     5.35,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      316 
+} 
+] 
+}

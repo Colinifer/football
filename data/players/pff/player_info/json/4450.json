@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wake Forest Demon Deacons",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-02-19",
+"draft": {
+ "round":        5,
+"season":     2008,
+"selection":      136,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Kenneth",
+"height":      511,
+"id":     4450,
+"jersey_number": "80",
+"last_name": "Moore",
+"position": "ST",
+"speed":     4.47,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      195 
+} 
+] 
+}

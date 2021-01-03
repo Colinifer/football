@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fort Lewis",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-02-06",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Tim",
+"height":      601,
+"id":     8167,
+"jersey_number": "3",
+"last_name": "Jenkins",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      200 
+} 
+] 
+}

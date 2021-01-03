@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern State Demons",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-02-01",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "De'Mard",
+"height":      510,
+"id":    12339,
+"jersey_number": "O37",
+"last_name": "Llorens",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      212 
+} 
+] 
+}

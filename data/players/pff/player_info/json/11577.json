@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Tech Yellow Jackets",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1970-05-21",
+"draft": {
+ "round":        5,
+"season":     1994,
+"selection":      149,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Dorsey",
+"height":      601,
+"id":    11577,
+"jersey_number": "25",
+"last_name": "Levens",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      230 
+} 
+] 
+}

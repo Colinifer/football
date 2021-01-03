@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulsa Golden Hurricane",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-10-20",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Sam",
+"height":      603,
+"id":     1685,
+"jersey_number": "97",
+"last_name": "Rayburn",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      303 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTEP Miners",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-12-02",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      182,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Aaron",
+"height":      509,
+"id":    11937,
+"jersey_number": "33",
+"last_name": "Jones",
+"position": "HB",
+"speed":     4.56,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      208 
+} 
+] 
+}

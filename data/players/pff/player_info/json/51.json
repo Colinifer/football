@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington Huskies",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1970-09-17",
+"draft": {
+ "round":        5,
+"season":     1993,
+"selection":      118,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Mark",
+"height":      601,
+"id":       51,
+"jersey_number": "8",
+"last_name": "Brunell",
+"position": "QB",
+"speed":     4.68,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      217 
+} 
+] 
+}

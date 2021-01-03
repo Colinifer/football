@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Miss Golden Eagles",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-09-11",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      126,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "NFL" 
+},
+"first_name": "Ito",
+"height":      509,
+"id":    45932,
+"jersey_number": "25",
+"last_name": "Smith",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      195 
+} 
+] 
+}

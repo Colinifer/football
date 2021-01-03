@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Kentucky Hilltoppers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-01-07",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Tyler",
+"height":      602,
+"id":    12290,
+"jersey_number": "5",
+"last_name": "Ferguson",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      224 
+} 
+] 
+}

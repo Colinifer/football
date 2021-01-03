@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Tech Yellow Jackets",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-12-03",
+"draft": {
+ "round":        4,
+"season":     2015,
+"selection":      132,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "DeAndre",
+"height":      602,
+"id":     9565,
+"jersey_number": "15",
+"last_name": "Smelter",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      227 
+} 
+] 
+}

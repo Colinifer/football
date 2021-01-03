@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-06-07",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      242,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "NFL" 
+},
+"first_name": "Kendrick",
+"height":      603,
+"id":    49940,
+"jersey_number": "75",
+"last_name": "Norton",
+"position": "DI",
+"speed":     5.25,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      318 
+} 
+] 
+}

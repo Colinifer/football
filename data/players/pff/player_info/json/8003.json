@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Utah Thunderbirds",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1988-03-13",
+"draft": {
+ "round":        7,
+"season":     2013,
+"selection":      221,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Brad",
+"height":      605,
+"id":     8003,
+"jersey_number": "4",
+"last_name": "Sorensen",
+"position": "QB",
+"speed":     4.97,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      230 
+} 
+] 
+}

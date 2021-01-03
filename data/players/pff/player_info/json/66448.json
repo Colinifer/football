@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wesley",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-05-10",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      604,
+"id":    66448,
+"jersey_number": "73",
+"last_name": "Gono",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      305 
+} 
+] 
+}

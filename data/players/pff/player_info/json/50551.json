@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-07-24",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Conor",
+"height":      604,
+"id":    50551,
+"jersey_number": "61",
+"last_name": "Sheehy",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      295 
+} 
+] 
+}

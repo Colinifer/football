@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cincinnati Bearcats",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-09-02",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      242,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Cortez",
+"height":      602,
+"id":    38524,
+"jersey_number": "91",
+"last_name": "Broughton",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      293 
+} 
+] 
+}

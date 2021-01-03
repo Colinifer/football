@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Illinois Huskies",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-09-18",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Tim",
+"height":      608,
+"id":    10072,
+"jersey_number": "0",
+"last_name": "Semisch",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      275 
+} 
+] 
+}

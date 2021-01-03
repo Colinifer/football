@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia-Lynchburg Dragons",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1993-05-01",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "LaKendrick",
+"height":      604,
+"id":     8904,
+"jersey_number": "73D",
+"last_name": "Ross",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      350 
+} 
+] 
+}

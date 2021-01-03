@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wesley",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-06-04",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Joe",
+"height":      601,
+"id":    11144,
+"jersey_number": "2",
+"last_name": "Callahan",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      216 
+} 
+] 
+}

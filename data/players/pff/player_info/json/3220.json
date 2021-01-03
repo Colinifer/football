@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico Lobos",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-09-04",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Hank",
+"height":      603,
+"id":     3220,
+"jersey_number": "19",
+"last_name": "Baskett",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      224 
+} 
+] 
+}

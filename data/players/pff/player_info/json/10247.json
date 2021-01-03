@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Regina (Canada)",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1992-01-01",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Brett",
+"height":      602,
+"id":    10247,
+"jersey_number": "61",
+"last_name": "Jones",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      315 
+} 
+] 
+}

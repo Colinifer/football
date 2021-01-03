@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-10-18",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Deke",
+"height":      603,
+"id":      721,
+"jersey_number": "35",
+"last_name": "Cooper",
+"position": "S",
+"speed":     4.65,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      210 
+} 
+] 
+}

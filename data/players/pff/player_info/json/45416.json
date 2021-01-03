@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Penn State Nittany Lions",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-03-10",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      113,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "DaeSean",
+"height":      601,
+"id":    45416,
+"jersey_number": "17",
+"last_name": "Hamilton",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      203 
+} 
+] 
+}

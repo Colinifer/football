@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama State Hornets",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-04-19",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Earl",
+"height":      605,
+"id":     1588,
+"jersey_number": "60",
+"last_name": "Cochran",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      270 
+} 
+] 
+}

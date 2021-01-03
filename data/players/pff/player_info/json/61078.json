@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Kentucky Hilltoppers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": null,
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Mik'Quan",
+"height":      603,
+"id":    61078,
+"jersey_number": "48",
+"last_name": "Deane",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      237 
+} 
+] 
+}

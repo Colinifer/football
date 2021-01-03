@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-08-30",
+"draft": {
+ "round":        1,
+"season":     2000,
+"selection":       19,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Shaun",
+"height":      600,
+"id":      597,
+"jersey_number": "37",
+"last_name": "Alexander",
+"position": "HB",
+"speed":     4.55,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      225 
+} 
+] 
+}

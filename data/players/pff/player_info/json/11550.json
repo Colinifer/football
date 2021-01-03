@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Baylor Bears",
+"current_class": null,
+"current_eligible_year":     1992,
+"dob": "1969-12-19",
+"draft": {
+ "round":        5,
+"season":     1992,
+"selection":      132,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Santana",
+"height":      605,
+"id":    11550,
+"jersey_number": "71",
+"last_name": "Dotson",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      287 
+} 
+] 
+}

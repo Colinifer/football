@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi College",
+"current_class": null,
+"current_eligible_year":     1991,
+"dob": "1968-06-20",
+"draft": {
+ "round":        6,
+"season":     1991,
+"selection":      154,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Fred",
+"height":      510,
+"id":       18,
+"jersey_number": "25",
+"last_name": "McAfee",
+"position": "HB",
+"speed":     4.59,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      197 
+} 
+] 
+}

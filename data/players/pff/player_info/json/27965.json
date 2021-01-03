@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Appalachian State Mountaineers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-05-16",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Austin",
+"height":      600,
+"id":    27965,
+"jersey_number": "47",
+"last_name": "Exford",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      200 
+} 
+] 
+}

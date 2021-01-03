@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-10-24",
+"draft": {
+ "round":        1,
+"season":     2016,
+"selection":        5,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Jalen",
+"height":      601,
+"id":    10639,
+"jersey_number": "20",
+"last_name": "Ramsey",
+"position": "CB",
+"speed":     4.41,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      208 
+} 
+] 
+}

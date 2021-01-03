@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Memphis Tigers",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1972-11-10",
+"draft": {
+ "round":        2,
+"season":     1994,
+"selection":       33,
+"team": {
+ "abbreviation": "LAR",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Isaac",
+"height":      600,
+"id":       80,
+"jersey_number": "88",
+"last_name": "Bruce",
+"position": "WR",
+"speed":     4.54,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      188 
+} 
+] 
+}

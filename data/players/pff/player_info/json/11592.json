@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Tennessee Volunteers",
+"current_class": null,
+"current_eligible_year":     1987,
+"dob": "1964-07-28",
+"draft": {
+ "round":        2,
+"season":     1987,
+"selection":       52,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Bruce",
+"height":      605,
+"id":    11592,
+"jersey_number": "64",
+"last_name": "Wilkerson",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      310 
+} 
+] 
+}

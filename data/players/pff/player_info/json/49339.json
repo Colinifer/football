@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-08-13",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      600,
+"id":    49339,
+"jersey_number": "26",
+"last_name": "Jones",
+"position": "CB",
+"speed":     4.72,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      200 
+} 
+] 
+}

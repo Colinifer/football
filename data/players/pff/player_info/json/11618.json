@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina Tar Heels",
+"current_class": null,
+"current_eligible_year":     1991,
+"dob": "1968-06-10",
+"draft": {
+ "round":        3,
+"season":     1991,
+"selection":       79,
+"team": {
+ "abbreviation": "HOU",
+"city": "Houston",
+"id":       31,
+"nickname": "Oilers",
+"primary_color": "#c8032b",
+"secondary_color": "#4790de",
+"slug": "houston-oilers" 
+},
+"type": "AD" 
+},
+"first_name": "Kevin",
+"height":      605,
+"id":    11618,
+"jersey_number": "65",
+"last_name": "Donnalley",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      310 
+} 
+] 
+}

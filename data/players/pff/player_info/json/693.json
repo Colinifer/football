@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah Utes",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1973-09-21",
+"draft": {
+ "round":        6,
+"season":     2000,
+"selection":      189,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Mike",
+"height":      600,
+"id":      693,
+"jersey_number": "38",
+"last_name": "Anderson",
+"position": "HB",
+"speed":     4.65,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      230 
+} 
+] 
+}

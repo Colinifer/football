@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-05-09",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection":       75,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Derrick",
+"height":      601,
+"id":    49970,
+"jersey_number": "91",
+"last_name": "Nnadi",
+"position": "DI",
+"speed":     5.38,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      317 
+} 
+] 
+}

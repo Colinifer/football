@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1981-03-01",
+"draft": {
+ "round":        3,
+"season":     2006,
+"selection":       76,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Anthony",
+"height":      600,
+"id":     3021,
+"jersey_number": "56",
+"last_name": "Schlegel",
+"position": "LB",
+"speed":     4.88,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      250 
+} 
+] 
+}

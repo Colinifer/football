@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marian University",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-04-30",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      605,
+"id":    91468,
+"jersey_number": "86",
+"last_name": "Dillon",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      250 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1981-04-08",
+"draft": {
+ "round":        1,
+"season":     2002,
+"selection":       26,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Lito",
+"height":      510,
+"id":     1033,
+"jersey_number": "21",
+"last_name": "Sheppard",
+"position": "CB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      194 
+} 
+] 
+}

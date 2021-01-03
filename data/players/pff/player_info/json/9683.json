@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern Wildcats",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-12-26",
+"draft": {
+ "round":        7,
+"season":     2015,
+"selection":      250,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Trevor",
+"height":      603,
+"id":     9683,
+"jersey_number": "00",
+"last_name": "Siemian",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      220 
+} 
+] 
+}

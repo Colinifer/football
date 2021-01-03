@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-11-10",
+"draft": {
+ "round":        3,
+"season":     1996,
+"selection":       90,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Mike",
+"height":      605,
+"id":      189,
+"jersey_number": "58",
+"last_name": "Flanagan",
+"position": "C",
+"speed":      5.2,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      301 
+} 
+] 
+}

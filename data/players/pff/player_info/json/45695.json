@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Carolina Catamounts",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-03-06",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Detrez",
+"height":      510,
+"id":    45695,
+"jersey_number": "38",
+"last_name": "Newsome",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      210 
+} 
+] 
+}

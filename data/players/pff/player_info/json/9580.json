@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-06-15",
+"draft": {
+ "round":        5,
+"season":     2015,
+"selection":      147,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Brett",
+"height":      603,
+"id":     9580,
+"jersey_number": "7",
+"last_name": "Hundley",
+"position": "QB",
+"speed":     4.63,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      226 
+} 
+] 
+}

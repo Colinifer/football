@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Middle Tennessee Blue Raiders",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-10-12",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Reshard",
+"height":      510,
+"id":     1647,
+"jersey_number": "42",
+"last_name": "Lee",
+"position": "FB",
+"speed":     4.47,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      220 
+} 
+] 
+}

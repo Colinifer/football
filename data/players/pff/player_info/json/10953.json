@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-07-15",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Matthias",
+"height":      511,
+"id":    10953,
+"jersey_number": "41",
+"last_name": "Farley",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      209 
+} 
+] 
+}

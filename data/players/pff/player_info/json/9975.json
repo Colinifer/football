@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-12-04",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Quinterrius",
+"height":      606,
+"id":     9975,
+"jersey_number": "79",
+"last_name": "Eatmon",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      313 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Virginia Mountaineers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-11-21",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Elijah",
+"height":      600,
+"id":    43029,
+"jersey_number": "7",
+"last_name": "Battle",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      193 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-09-25",
+"draft": {
+ "round":        6,
+"season":     2014,
+"selection":      213,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Tajh",
+"height":      600,
+"id":     8847,
+"jersey_number": "2",
+"last_name": "Boyd",
+"position": "QB",
+"speed":     4.84,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      222 
+} 
+] 
+}

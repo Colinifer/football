@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Iowa Panthers",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1974-09-29",
+"draft": {
+ "round":        3,
+"season":     1997,
+"selection":       88,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Dedric",
+"height":      509,
+"id":    11730,
+"jersey_number": "17",
+"last_name": "Ward",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      185 
+} 
+] 
+}

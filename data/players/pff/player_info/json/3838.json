@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boise State Broncos",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-01-01",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      222,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Derek",
+"height":      602,
+"id":     3838,
+"jersey_number": "88",
+"last_name": "Schouman",
+"position": "TE",
+"speed":     4.74,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      233 
+} 
+] 
+}

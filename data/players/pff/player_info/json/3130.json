@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fresno State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-07-06",
+"draft": {
+ "round":        6,
+"season":     2006,
+"selection":      185,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Tyrone",
+"height":      601,
+"id":     3130,
+"jersey_number": "29",
+"last_name": "Culver",
+"position": "S",
+"speed":     4.56,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      200 
+} 
+] 
+}

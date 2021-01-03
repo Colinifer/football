@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kentucky Wildcats",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-09-30",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Stanley",
+"height":      509,
+"id":    45964,
+"jersey_number": "30",
+"last_name": "Williams",
+"position": "HB",
+"speed":     4.51,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      200 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Massachusetts Minutemen",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-05-05",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      601,
+"id":     4887,
+"jersey_number": "32",
+"last_name": "Lawrence",
+"position": "HB",
+"speed":     4.51,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      204 
+} 
+] 
+}

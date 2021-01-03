@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boston College Eagles",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-07-01",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      228,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Tommy",
+"height":      604,
+"id":    47216,
+"jersey_number": "89",
+"last_name": "Sweeney",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      251 
+} 
+] 
+}

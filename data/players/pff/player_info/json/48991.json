@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California Golden Bears",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-05-15",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      232,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "James",
+"height":      603,
+"id":    48991,
+"jersey_number": "49",
+"last_name": "Looney",
+"position": "DI",
+"speed":     4.89,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      287 
+} 
+] 
+}

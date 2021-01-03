@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rutgers Scarlet Knights",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-03-06",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Sam",
+"height":      600,
+"id":    11384,
+"jersey_number": "40",
+"last_name": "Bergen",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      235 
+} 
+] 
+}

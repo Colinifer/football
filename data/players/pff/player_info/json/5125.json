@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Purdue Boilermakers",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-06-24",
+"draft": {
+ "round":        6,
+"season":     2009,
+"selection":      201,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Curtis",
+"height":      604,
+"id":     5125,
+"jersey_number": "17",
+"last_name": "Painter",
+"position": "QB",
+"speed":     4.87,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      230 
+} 
+] 
+}

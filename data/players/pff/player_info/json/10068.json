@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Temple Owls",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-30",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Kenneth",
+"height":      600,
+"id":    10068,
+"jersey_number": "33",
+"last_name": "Harper",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      225 
+} 
+] 
+}

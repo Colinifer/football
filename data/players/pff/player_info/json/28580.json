@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Indiana Hoosiers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-08-25",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Simmie",
+"height":      603,
+"id":    28580,
+"jersey_number": "15",
+"last_name": "Cobbs",
+"position": "WR",
+"speed":     4.64,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      220 
+} 
+] 
+}

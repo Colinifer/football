@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-01-21",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      191,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Jake",
+"height":      603,
+"id":    10825,
+"jersey_number": "00",
+"last_name": "Rudock",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      212 
+} 
+] 
+}

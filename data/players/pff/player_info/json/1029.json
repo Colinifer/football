@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UAB Blazers",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-06-07",
+"draft": {
+ "round":        1,
+"season":     2002,
+"selection":       22,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Bryan",
+"height":      604,
+"id":     1029,
+"jersey_number": "99",
+"last_name": "Thomas",
+"position": "ED",
+"speed":     4.47,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      266 
+} 
+] 
+}

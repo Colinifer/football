@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-02-09",
+"draft": {
+ "round":        5,
+"season":     2019,
+"selection":      154,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Jordan",
+"height":      511,
+"id":    39258,
+"jersey_number": "00",
+"last_name": "Scarlett",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      210 
+} 
+] 
+}

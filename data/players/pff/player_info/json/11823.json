@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois Fighting Illini",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-03-02",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       68,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Dawuane",
+"height":      603,
+"id":    11823,
+"jersey_number": "94",
+"last_name": "Smoot",
+"position": "ED",
+"speed":     4.77,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      264 
+} 
+] 
+}

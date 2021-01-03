@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1978-09-14",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Kenderick",
+"height":      606,
+"id":     1555,
+"jersey_number": "97",
+"last_name": "Allen",
+"position": "DI",
+"speed":     5.21,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      315 
+} 
+] 
+}

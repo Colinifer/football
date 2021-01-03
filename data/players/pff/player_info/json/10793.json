@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Virginia Mountaineers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-05-11",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      159,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "K.J.",
+"height":      601,
+"id":    10793,
+"jersey_number": "47",
+"last_name": "Dillon",
+"position": "S",
+"speed":     4.53,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      210 
+} 
+] 
+}

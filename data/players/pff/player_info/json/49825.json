@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Indiana Hoosiers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-01-03",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      193,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      602,
+"id":    49825,
+"jersey_number": "00",
+"last_name": "Covington",
+"position": "S",
+"speed":     4.78,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      245 
+} 
+] 
+}

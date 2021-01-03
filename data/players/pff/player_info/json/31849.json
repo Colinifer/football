@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Yale Bulldogs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-10-10",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Jaeden",
+"height":      604,
+"id":    31849,
+"jersey_number": "87",
+"last_name": "Graham",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      250 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "SMU Mustangs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-09-28",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Horace",
+"height":      511,
+"id":    49554,
+"jersey_number": "00",
+"last_name": "Richardson",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      199 
+} 
+] 
+}

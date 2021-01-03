@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-01-15",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Kenny",
+"height":      511,
+"id":     9330,
+"jersey_number": "4",
+"last_name": "Shaw",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      180 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Portland State Vikings",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-09-27",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "D.J.",
+"height":      510,
+"id":     9406,
+"jersey_number": "35",
+"last_name": "Adams",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      210 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho State Bengals",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-01-10",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Pago",
+"height":      510,
+"id":     4193,
+"jersey_number": "51",
+"last_name": "Togafau",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      250 
+} 
+] 
+}

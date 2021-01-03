@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-10-02",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Shaud",
+"height":      507,
+"id":     2207,
+"jersey_number": "20",
+"last_name": "Williams",
+"position": "HB",
+"speed":     4.73,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      193 
+} 
+] 
+}

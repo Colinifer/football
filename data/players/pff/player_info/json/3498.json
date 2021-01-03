@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota Coyotes",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-05-18",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "A.J.",
+"height":      604,
+"id":     3498,
+"jersey_number": "96",
+"last_name": "Schable",
+"position": "FB",
+"speed":     4.81,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      281 
+} 
+] 
+}

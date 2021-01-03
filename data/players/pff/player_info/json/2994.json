@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon Ducks",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-06-06",
+"draft": {
+ "round":        2,
+"season":     2006,
+"selection":       49,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Kellen",
+"height":      602,
+"id":     2994,
+"jersey_number": "0",
+"last_name": "Clemens",
+"position": "QB",
+"speed":     4.96,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      220 
+} 
+] 
+}

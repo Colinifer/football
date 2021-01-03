@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-05-31",
+"draft": {
+ "round":        3,
+"season":     1996,
+"selection":       93,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Tyrone",
+"height":      511,
+"id":    11537,
+"jersey_number": "37",
+"last_name": "Williams",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      193 
+} 
+] 
+}

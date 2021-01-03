@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-11-06",
+"draft": {
+ "round":        4,
+"season":     2019,
+"selection":      119,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Sheldrick",
+"height":      600,
+"id":    50458,
+"jersey_number": "29",
+"last_name": "Redwine",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      196 
+} 
+] 
+}

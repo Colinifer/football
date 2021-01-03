@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina Tar Heels",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-05-28",
+"draft": {
+ "round":        7,
+"season":     2002,
+"selection":      235,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Ronald",
+"height":      602,
+"id":     1199,
+"jersey_number": "89",
+"last_name": "Curry",
+"position": "WR",
+"speed":     4.59,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      210 
+} 
+] 
+}

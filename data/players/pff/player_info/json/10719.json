@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-30",
+"draft": {
+ "round":        3,
+"season":     2016,
+"selection":       85,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Braxton",
+"height":      601,
+"id":    10719,
+"jersey_number": "12",
+"last_name": "Miller",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      205 
+} 
+] 
+}

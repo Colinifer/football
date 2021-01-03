@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maine Black Bears",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-08-28",
+"draft": {
+ "round":        7,
+"season":     2016,
+"selection":      239,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Trevor",
+"height":      602,
+"id":    10873,
+"jersey_number": "53",
+"last_name": "Bates",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      247 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1985-03-23",
+"draft": {
+ "round":        2,
+"season":     2006,
+"selection":       60,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Maurice",
+"height":      507,
+"id":     3005,
+"jersey_number": "21",
+"last_name": "Jones-Drew",
+"position": "HB",
+"speed":     4.39,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      207 
+} 
+] 
+}

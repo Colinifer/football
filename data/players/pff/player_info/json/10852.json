@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-11-30",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      218,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Kevon",
+"height":      600,
+"id":    10852,
+"jersey_number": "41",
+"last_name": "Seymour",
+"position": "CB",
+"speed":     4.39,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      185 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-06-10",
+"draft": {
+ "round":        4,
+"season":     2004,
+"selection":      122,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Glenn",
+"height":      601,
+"id":     1843,
+"jersey_number": "26",
+"last_name": "Earl",
+"position": "S",
+"speed":      4.6,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      215 
+} 
+] 
+}

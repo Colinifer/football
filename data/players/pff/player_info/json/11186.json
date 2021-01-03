@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "TCU Horned Frogs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-15",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Aaron",
+"height":      510,
+"id":    11186,
+"jersey_number": "36",
+"last_name": "Green",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      202 
+} 
+] 
+}

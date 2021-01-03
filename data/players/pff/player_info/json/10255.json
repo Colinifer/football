@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "No College",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1988-02-15",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Jarryd",
+"height":      602,
+"id":    10255,
+"jersey_number": "38",
+"last_name": "Hayne",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      220 
+} 
+] 
+}

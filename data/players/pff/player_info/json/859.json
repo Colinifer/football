@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fresno State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-08-14",
+"draft": {
+ "round":        4,
+"season":     2001,
+"selection":      104,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Orlando",
+"height":      602,
+"id":      859,
+"jersey_number": "57",
+"last_name": "Huff",
+"position": "LB",
+"speed":     4.72,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      250 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Arizona Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-08-27",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Emmanuel",
+"height":      604,
+"id":    48115,
+"jersey_number": "18",
+"last_name": "Butler",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      220 
+} 
+] 
+}

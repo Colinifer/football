@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh State",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-04-03",
+"draft": {
+ "round":        3,
+"season":     2014,
+"selection":       91,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "John",
+"height":      511,
+"id":     8726,
+"jersey_number": "15",
+"last_name": "Brown",
+"position": "WR",
+"speed":     4.34,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      178 
+} 
+] 
+}

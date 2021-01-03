@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-10-13",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      200,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Emeke",
+"height":      602,
+"id":    45378,
+"jersey_number": "51",
+"last_name": "Egbule",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      245 
+} 
+] 
+}

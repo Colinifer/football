@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Baylor Bears",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-02-06",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Ira",
+"height":      603,
+"id":    49951,
+"jersey_number": "00",
+"last_name": "Lewis",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      290 
+} 
+] 
+}

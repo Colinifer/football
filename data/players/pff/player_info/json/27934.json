@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-11-24",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      215,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Bradley",
+"height":      605,
+"id":    27934,
+"jersey_number": "77",
+"last_name": "Bozeman",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      317 
+} 
+] 
+}

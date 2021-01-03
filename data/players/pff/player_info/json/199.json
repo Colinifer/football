@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Itawamda CC (Ms.)",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1972-01-16",
+"draft": {
+ "round":        5,
+"season":     1996,
+"selection":      135,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Joe",
+"height":      601,
+"id":      199,
+"jersey_number": "87",
+"last_name": "Horn",
+"position": "WR",
+"speed":     4.61,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      213 
+} 
+] 
+}

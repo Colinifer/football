@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego State Aztecs",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1977-06-03",
+"draft": {
+ "round":        4,
+"season":     1998,
+"selection":       96,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Az-Zahir",
+"height":      509,
+"id":      383,
+"jersey_number": "11",
+"last_name": "Hakim",
+"position": "WR",
+"speed":     4.45,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      185 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grambling State Tigers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1991-10-25",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      604,
+"id":    19754,
+"jersey_number": "81",
+"last_name": "Bazile",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      250 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Kentucky Colonels",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-01-23",
+"draft": {
+ "round":        3,
+"season":     2008,
+"selection":       79,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Antwaun",
+"height":      601,
+"id":     4393,
+"jersey_number": "36",
+"last_name": "Molden",
+"position": "CB",
+"speed":     4.39,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      198 
+} 
+] 
+}

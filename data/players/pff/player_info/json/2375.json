@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Montana Grizzlies",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-04-30",
+"draft": {
+ "round":        5,
+"season":     2005,
+"selection":      158,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Justin",
+"height":      511,
+"id":     2375,
+"jersey_number": "33",
+"last_name": "Green",
+"position": "FB",
+"speed":     4.84,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      251 
+} 
+] 
+}

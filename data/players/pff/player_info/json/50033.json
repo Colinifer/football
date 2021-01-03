@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Appalachian State Mountaineers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-02-22",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Myquon",
+"height":      601,
+"id":    50033,
+"jersey_number": "62",
+"last_name": "Stout",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      275 
+} 
+] 
+}

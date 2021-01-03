@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "St. Cloud State",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-25",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Jordan",
+"height":      600,
+"id":    11056,
+"jersey_number": "D39",
+"last_name": "Sefon",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      198 
+} 
+] 
+}

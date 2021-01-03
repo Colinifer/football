@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Longhorns",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-11-11",
+"draft": {
+ "round":        2,
+"season":     2006,
+"selection":       48,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Cedric",
+"height":      600,
+"id":     2993,
+"jersey_number": "20",
+"last_name": "Griffin",
+"position": "CB",
+"speed":     4.51,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      199 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina Gamecocks",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-12-26",
+"draft": {
+ "round":        2,
+"season":     2002,
+"selection":       35,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Kalimba",
+"height":      605,
+"id":     1042,
+"jersey_number": "58",
+"last_name": "Edwards",
+"position": "ED",
+"speed":     4.67,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      265 
+} 
+] 
+}

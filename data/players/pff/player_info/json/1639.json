@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah State Aggies",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-04-18",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Ade",
+"height":      600,
+"id":     1639,
+"jersey_number": "35",
+"last_name": "Jimoh",
+"position": "CB",
+"speed":     4.47,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      190 
+} 
+] 
+}

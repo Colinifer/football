@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Navy Midshipmen",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-17",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      601,
+"id":    11002,
+"jersey_number": "30",
+"last_name": "Swain",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      245 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wake Forest Demon Deacons",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1984-05-26",
+"draft": {
+ "round":        6,
+"season":     2008,
+"selection":      201,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Steve",
+"height":      604,
+"id":     4515,
+"jersey_number": "53",
+"last_name": "Justice",
+"position": "C",
+"speed":     5.24,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      285 
+} 
+] 
+}

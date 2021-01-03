@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Tech Bulldogs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-07",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Vontarrius",
+"height":      604,
+"id":    11014,
+"jersey_number": "54",
+"last_name": "Dora",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      256 
+} 
+] 
+}

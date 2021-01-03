@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-05-26",
+"draft": {
+ "round":        5,
+"season":     2006,
+"selection":      159,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Mark",
+"height":      604,
+"id":     3104,
+"jersey_number": "93",
+"last_name": "Anderson",
+"position": "ED",
+"speed":     4.62,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      255 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Memphis Tigers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-08-19",
+"draft": {
+ "round":        3,
+"season":     2019,
+"selection":       70,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Darrell",
+"height":      508,
+"id":    41193,
+"jersey_number": "27",
+"last_name": "Henderson",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      208 
+} 
+] 
+}

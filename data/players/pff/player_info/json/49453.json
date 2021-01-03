@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCF Knights",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-08-09",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "FA" 
+},
+"first_name": "D.J.",
+"height":      600,
+"id":    49453,
+"jersey_number": "34",
+"last_name": "Killings",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      185 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "East Carolina Pirates",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-01-21",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Damane",
+"height":      606,
+"id":     2037,
+"jersey_number": "95",
+"last_name": "Duckett",
+"position": "T",
+"speed":      5.1,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      300 
+} 
+] 
+}

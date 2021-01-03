@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Longhorns",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-01-10",
+"draft": {
+ "round":        5,
+"season":     2006,
+"selection":      141,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Jonathan",
+"height":      606,
+"id":     3086,
+"jersey_number": "64",
+"last_name": "Scott",
+"position": "T",
+"speed":     5.32,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      315 
+} 
+] 
+}

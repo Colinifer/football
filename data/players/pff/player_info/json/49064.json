@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern Wildcats",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-12-18",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Kyle",
+"height":      602,
+"id":    49064,
+"jersey_number": "41",
+"last_name": "Queiro",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      215 
+} 
+] 
+}

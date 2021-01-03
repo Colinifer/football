@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado State Rams",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-03-04",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection":       81,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Michael",
+"height":      601,
+"id":    26075,
+"jersey_number": "13",
+"last_name": "Gallup",
+"position": "WR",
+"speed":     4.51,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      198 
+} 
+] 
+}

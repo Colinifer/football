@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Penn State Nittany Lions",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-03-17",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Jason",
+"height":      601,
+"id":    50714,
+"jersey_number": "45",
+"last_name": "Cabinda",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      243 
+} 
+] 
+}

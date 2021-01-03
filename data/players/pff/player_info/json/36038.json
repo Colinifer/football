@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina State Wolfpack",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-11-27",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "A.J.",
+"height":      604,
+"id":    36038,
+"jersey_number": "6",
+"last_name": "Cole III",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      218 
+} 
+] 
+}

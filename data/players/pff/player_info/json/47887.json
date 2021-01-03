@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-12-04",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Robert",
+"height":      602,
+"id":    47887,
+"jersey_number": "82",
+"last_name": "Wheelwright",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      201 
+} 
+] 
+}

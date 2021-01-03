@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "TCU Horned Frogs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-12-16",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      206,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "NFL" 
+},
+"first_name": "Matt",
+"height":      607,
+"id":    46647,
+"jersey_number": "69",
+"last_name": "Pryor",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      338 
+} 
+] 
+}

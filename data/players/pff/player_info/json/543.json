@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grambling State Tigers",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1977-09-21",
+"draft": {
+ "round": null,
+"season":     1999,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Fakhir",
+"height":      511,
+"id":      543,
+"jersey_number": "34",
+"last_name": "Brown",
+"position": "CB",
+"speed":     4.65,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      192 
+} 
+] 
+}

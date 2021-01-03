@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Purdue Boilermakers",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1977-09-05",
+"draft": {
+ "round":        4,
+"season":     1999,
+"selection":      111,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Rosevelt",
+"height":      602,
+"id":      502,
+"jersey_number": "59",
+"last_name": "Colvin",
+"position": "ED",
+"speed":     4.92,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      250 
+} 
+] 
+}

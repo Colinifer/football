@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Toledo Rockets",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-05-16",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Storm",
+"height":      608,
+"id":    12188,
+"jersey_number": "74",
+"last_name": "Norton",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      308 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rutgers Scarlet Knights",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-11-01",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Isaiah",
+"height":      601,
+"id":    49422,
+"jersey_number": "00",
+"last_name": "Wharton",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      203 
+} 
+] 
+}

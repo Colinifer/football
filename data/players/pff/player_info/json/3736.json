@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-09-28",
+"draft": {
+ "round":        4,
+"season":     2007,
+"selection":      120,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Baraka",
+"height":      604,
+"id":     3736,
+"jersey_number": "98",
+"last_name": "Atkins",
+"position": "ED",
+"speed":     4.69,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      268 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Arkansas Bears",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-07-20",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      196,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Tremon",
+"height":      600,
+"id":    28196,
+"jersey_number": "35",
+"last_name": "Smith",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      190 
+} 
+] 
+}

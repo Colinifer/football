@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ferris State",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-12-21",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Malik",
+"height":      603,
+"id":    94375,
+"jersey_number": "86",
+"last_name": "Taylor",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      220 
+} 
+] 
+}

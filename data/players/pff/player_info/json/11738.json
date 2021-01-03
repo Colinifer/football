@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-07-17",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Quayvon",
+"height":      601,
+"id":    11738,
+"jersey_number": "O36",
+"last_name": "Hicks",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      256 
+} 
+] 
+}

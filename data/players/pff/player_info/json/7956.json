@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-12-22",
+"draft": {
+ "round":        6,
+"season":     2013,
+"selection":      175,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Jamoris",
+"height":      600,
+"id":     7956,
+"jersey_number": "30",
+"last_name": "Slaughter",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      195 
+} 
+] 
+}

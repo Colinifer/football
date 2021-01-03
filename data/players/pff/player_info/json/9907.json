@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Liberty Flames",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-03-16",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Jacob",
+"height":      603,
+"id":     9907,
+"jersey_number": "42",
+"last_name": "Hagen",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      204 
+} 
+] 
+}

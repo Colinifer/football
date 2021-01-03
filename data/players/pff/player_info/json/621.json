@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Rebels",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1976-10-30",
+"draft": {
+ "round":        2,
+"season":     2000,
+"selection":       53,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Todd",
+"height":      608,
+"id":      621,
+"jersey_number": "70",
+"last_name": "Wade",
+"position": "G",
+"speed":     5.22,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      315 
+} 
+] 
+}

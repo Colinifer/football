@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona State Sun Devils",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-22",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      131,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Kalen",
+"height":      602,
+"id":    45741,
+"jersey_number": "31",
+"last_name": "Ballage",
+"position": "HB",
+"speed":     4.46,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      237 
+} 
+] 
+}

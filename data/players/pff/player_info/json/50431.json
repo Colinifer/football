@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah State Aggies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-02-02",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Jalen",
+"height":      510,
+"id":    50431,
+"jersey_number": "37",
+"last_name": "Davis",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      185 
+} 
+] 
+}

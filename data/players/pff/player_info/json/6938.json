@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina Tar Heels",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1990-07-09",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      607,
+"id":     6938,
+"jersey_number": "66",
+"last_name": "McAdoo",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      245 
+} 
+] 
+}

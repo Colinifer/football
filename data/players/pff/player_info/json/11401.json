@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hawaii Warriors",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-01",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Max",
+"height":      604,
+"id":    11401,
+"jersey_number": "6",
+"last_name": "Wittek",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      240 
+} 
+] 
+}

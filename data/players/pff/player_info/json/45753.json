@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon State Beavers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-27",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Ryan",
+"height":      602,
+"id":    45753,
+"jersey_number": "35",
+"last_name": "Nall",
+"position": "HB",
+"speed":     4.58,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      232 
+} 
+] 
+}

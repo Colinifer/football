@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas Razorbacks",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-07-22",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      190,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Armon",
+"height":      605,
+"id":    27844,
+"jersey_number": "96",
+"last_name": "Watts",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      300 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-03-31",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Loyce",
+"height":      511,
+"id":     6678,
+"jersey_number": "35",
+"last_name": "Means",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      179 
+} 
+] 
+}

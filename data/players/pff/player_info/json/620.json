@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee Volunteers",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1978-10-27",
+"draft": {
+ "round":        2,
+"season":     2000,
+"selection":       51,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Cosey",
+"height":      604,
+"id":      620,
+"jersey_number": "60",
+"last_name": "Coleman",
+"position": "G",
+"speed":      5.4,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      322 
+} 
+] 
+}

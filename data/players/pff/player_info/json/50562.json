@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas State Red Wolves",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-07-31",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      511,
+"id":    50562,
+"jersey_number": "36",
+"last_name": "Humes",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      207 
+} 
+] 
+}

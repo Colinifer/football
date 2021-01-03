@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-04-24",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      176,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Kaden",
+"height":      605,
+"id":    40973,
+"jersey_number": "82",
+"last_name": "Smith",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      252 
+} 
+] 
+}

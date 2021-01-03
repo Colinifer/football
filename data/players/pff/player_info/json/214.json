@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Yale Bulldogs",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1972-11-27",
+"draft": {
+ "round": null,
+"season":     1996,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      602,
+"id":      214,
+"jersey_number": "41",
+"last_name": "Hetherington",
+"position": "FB",
+"speed":     4.89,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      250 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Youngstown State Penguins",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-06-23",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "FA" 
+},
+"first_name": "Marcus",
+"height":      509,
+"id":     4256,
+"jersey_number": "24",
+"last_name": "Mason",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      215 
+} 
+] 
+}

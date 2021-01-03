@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-07-07",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Grant",
+"height":      606,
+"id":     1258,
+"jersey_number": "96",
+"last_name": "Irons",
+"position": "LB",
+"speed":     4.96,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      285 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Assumption",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1991-01-30",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Zach",
+"height":      602,
+"id":    11518,
+"jersey_number": "97",
+"last_name": "Triner",
+"position": "LS",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      247 
+} 
+] 
+}

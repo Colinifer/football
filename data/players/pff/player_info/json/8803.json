@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Syracuse Orange",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-05-14",
+"draft": {
+ "round":        5,
+"season":     2014,
+"selection":      168,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Marquis",
+"height":      600,
+"id":     8803,
+"jersey_number": "51",
+"last_name": "Spruill",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      224 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Minnesota Golden Gophers",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-07-25",
+"draft": {
+ "round":        7,
+"season":     2002,
+"selection":      229,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Stylez",
+"height":      603,
+"id":     1196,
+"jersey_number": "91",
+"last_name": "White",
+"position": "ED",
+"speed":     4.83,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      268 
+} 
+] 
+}

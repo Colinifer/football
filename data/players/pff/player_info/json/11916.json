@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern Wildcats",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-08-08",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      161,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Anthony",
+"height":      601,
+"id":    11916,
+"jersey_number": "54",
+"last_name": "Walker",
+"position": "LB",
+"speed":     4.65,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      242 
+} 
+] 
+}

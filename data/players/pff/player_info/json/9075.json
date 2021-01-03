@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina Tar Heels",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-01-22",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Bryn",
+"height":      603,
+"id":     9075,
+"jersey_number": "8",
+"last_name": "Renner",
+"position": "QB",
+"speed":     4.87,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      228 
+} 
+] 
+}

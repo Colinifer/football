@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio Bobcats",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-12-23",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Rudy",
+"height":      604,
+"id":     4074,
+"jersey_number": "46",
+"last_name": "Sylvan",
+"position": "TE",
+"speed":     4.96,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      272 
+} 
+] 
+}

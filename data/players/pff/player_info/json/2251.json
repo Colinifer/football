@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma Sooners",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1984-05-24",
+"draft": {
+ "round":        2,
+"season":     2005,
+"selection":       34,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Brodney",
+"height":      601,
+"id":     2251,
+"jersey_number": "22",
+"last_name": "Pool",
+"position": "S",
+"speed":     4.54,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      208 
+} 
+] 
+}

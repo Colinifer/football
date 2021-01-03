@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alcorn State Braves",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-08-23",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "De'Lance",
+"height":      511,
+"id":    25681,
+"jersey_number": "34",
+"last_name": "Turner",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      214 
+} 
+] 
+}

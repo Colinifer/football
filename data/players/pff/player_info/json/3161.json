@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico Lobos",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-09-25",
+"draft": {
+ "round":        7,
+"season":     2006,
+"selection":      216,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Terrance",
+"height":      607,
+"id":     3161,
+"jersey_number": "66",
+"last_name": "Pennington",
+"position": "T",
+"speed":     5.39,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      319 
+} 
+] 
+}

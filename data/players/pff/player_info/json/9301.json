@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bryant University Bulldogs",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-12-08",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Jordan",
+"height":      602,
+"id":     9301,
+"jersey_number": "10",
+"last_name": "Harris",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      215 
+} 
+] 
+}

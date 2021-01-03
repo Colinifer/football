@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cincinnati Bearcats",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-08-19",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Deyshawn",
+"height":      601,
+"id":    12120,
+"jersey_number": "69",
+"last_name": "Bond",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      299 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa Hawkeyes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-09-13",
+"draft": {
+ "round":        2,
+"season":     2018,
+"selection":       39,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "James",
+"height":      604,
+"id":    45576,
+"jersey_number": "68",
+"last_name": "Daniels",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      295 
+} 
+] 
+}

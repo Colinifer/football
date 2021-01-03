@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah Utes",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-09-28",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      604,
+"id":     2171,
+"jersey_number": "93",
+"last_name": "Savage",
+"position": "ED",
+"speed":     5.05,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      276 
+} 
+] 
+}

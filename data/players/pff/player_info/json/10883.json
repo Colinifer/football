@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Kentucky Hilltoppers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-03-11",
+"draft": {
+ "round":        7,
+"season":     2016,
+"selection":      249,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Prince Charles",
+"height":      511,
+"id":    10883,
+"jersey_number": "39",
+"last_name": "Iworah",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      193 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Illinois Huskies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-24",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Tommylee",
+"height":      507,
+"id":    11231,
+"jersey_number": "00",
+"last_name": "Lewis",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      168 
+} 
+] 
+}

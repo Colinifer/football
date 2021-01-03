@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Northeastern",
+"current_class": null,
+"current_eligible_year":     1984,
+"dob": "1962-12-19",
+"draft": {
+ "round":        2,
+"season":     1984,
+"selection":       51,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Sean",
+"height":      607,
+"id":    11613,
+"jersey_number": "96",
+"last_name": "Jones",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      283 
+} 
+] 
+}

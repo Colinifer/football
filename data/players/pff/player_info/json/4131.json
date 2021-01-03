@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico State Aggies",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-07-14",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Kenton",
+"height":      511,
+"id":     4131,
+"jersey_number": "36",
+"last_name": "Keith",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      210 
+} 
+] 
+}

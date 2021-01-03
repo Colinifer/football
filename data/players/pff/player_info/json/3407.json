@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1981-10-08",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      509,
+"id":     3407,
+"jersey_number": "37",
+"last_name": "Madison",
+"position": "ST",
+"speed":     4.52,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      175 
+} 
+] 
+}

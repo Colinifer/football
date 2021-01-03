@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Purdue Boilermakers",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-07-04",
+"draft": {
+ "round":        4,
+"season":     2008,
+"selection":      134,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Stanford",
+"height":      602,
+"id":     4448,
+"jersey_number": "47",
+"last_name": "Keglar",
+"position": "LB",
+"speed":     4.58,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      239 
+} 
+] 
+}

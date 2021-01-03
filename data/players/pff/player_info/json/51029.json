@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-11-15",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      122,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "NFL" 
+},
+"first_name": "Kenny",
+"height":      601,
+"id":    51029,
+"jersey_number": "41",
+"last_name": "Young",
+"position": "LB",
+"speed":      4.6,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      234 
+} 
+] 
+}

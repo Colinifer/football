@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah Utes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-11-15",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      190,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Sam",
+"height":      605,
+"id":    11945,
+"jersey_number": "69",
+"last_name": "Tevi",
+"position": "T",
+"speed":     5.27,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      315 
+} 
+] 
+}

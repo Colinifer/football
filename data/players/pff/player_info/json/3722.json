@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Syracuse Orange",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-07-21",
+"draft": {
+ "round":        4,
+"season":     2007,
+"selection":      106,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Tanard",
+"height":      600,
+"id":     3722,
+"jersey_number": "28",
+"last_name": "Jackson",
+"position": "S",
+"speed":     4.52,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      200 
+} 
+] 
+}

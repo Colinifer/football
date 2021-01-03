@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona Wildcats",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-10-26",
+"draft": {
+ "round": null,
+"season":     2001,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Antonio",
+"height":      601,
+"id":      975,
+"jersey_number": "58",
+"last_name": "Pierce",
+"position": "LB",
+"speed":     4.56,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      240 
+} 
+] 
+}

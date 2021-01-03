@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "BYU Cougars",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1984-02-28",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Manase",
+"height":      511,
+"id":     5922,
+"jersey_number": "41",
+"last_name": "Tonga",
+"position": "FB",
+"speed":     4.84,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      245 
+} 
+] 
+}

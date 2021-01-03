@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Minnesota Golden Gophers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-08-30",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Nate",
+"height":      610,
+"id":    44891,
+"jersey_number": "68",
+"last_name": "Wozniak",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      280 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-16",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Cam",
+"height":      600,
+"id":    47593,
+"jersey_number": "00",
+"last_name": "Phillips",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      201 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina State Wolfpack",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1994-12-26",
+"draft": {
+ "round":        4,
+"season":     2019,
+"selection":      104,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Ryan",
+"height":      604,
+"id":    46426,
+"jersey_number": "5",
+"last_name": "Finley",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      213 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas State Wildcats",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-06-10",
+"draft": {
+ "round": null,
+"season":     1998,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Kendyl",
+"height":      602,
+"id":      427,
+"jersey_number": "64",
+"last_name": "Jacox",
+"position": "G",
+"speed":      5.3,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      325 
+} 
+] 
+}

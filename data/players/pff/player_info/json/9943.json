@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boston College Eagles",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-23",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      602,
+"id":     9943,
+"jersey_number": "0",
+"last_name": "Keyes",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      225 
+} 
+] 
+}

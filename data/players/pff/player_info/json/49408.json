@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A&M Aggies",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-02-21",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      213,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Donovan",
+"height":      601,
+"id":    49408,
+"jersey_number": "37",
+"last_name": "Wilson",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      207 
+} 
+] 
+}

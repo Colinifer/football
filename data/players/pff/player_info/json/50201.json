@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-05-03",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection":       87,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Arden",
+"height":      605,
+"id":    50201,
+"jersey_number": "99",
+"last_name": "Key",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      238 
+} 
+] 
+}

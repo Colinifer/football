@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1971-09-30",
+"draft": {
+ "round":        2,
+"season":     1994,
+"selection":       50,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Brentson",
+"height":      602,
+"id":       85,
+"jersey_number": "99",
+"last_name": "Buckner",
+"position": "DI",
+"speed":     5.11,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      310 
+} 
+] 
+}

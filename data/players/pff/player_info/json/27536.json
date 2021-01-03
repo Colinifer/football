@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-10-07",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Daniel",
+"height":      602,
+"id":    27536,
+"jersey_number": "44",
+"last_name": "Marx",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      255 
+} 
+] 
+}

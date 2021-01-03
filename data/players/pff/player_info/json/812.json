@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-01-18",
+"draft": {
+ "round":        2,
+"season":     2001,
+"selection":       42,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Tommy",
+"height":      604,
+"id":      812,
+"jersey_number": "50",
+"last_name": "Polley",
+"position": "LB",
+"speed":     4.52,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      230 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Concordia Cobbers",
+"current_class": null,
+"current_eligible_year": null,
+"dob": "1994-01-01",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      602,
+"id":    66438,
+"jersey_number": "16",
+"last_name": "Zylstra",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      215 
+} 
+] 
+}

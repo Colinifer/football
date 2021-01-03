@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Minnesota Golden Gophers",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-01-21",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Logan",
+"height":      601,
+"id":     4037,
+"jersey_number": "18",
+"last_name": "Payne",
+"position": "WR",
+"speed":     4.65,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      205 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Ragin' Cajuns",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1976-04-10",
+"draft": {
+ "round":        2,
+"season":     1998,
+"selection":       36,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Anthony",
+"height":      607,
+"id":      352,
+"jersey_number": "68",
+"last_name": "Clement",
+"position": "T",
+"speed":     5.63,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      320 
+} 
+] 
+}

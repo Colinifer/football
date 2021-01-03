@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Auburn Tigers",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-09-21",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Darvin",
+"height":      602,
+"id":     6856,
+"jersey_number": "86",
+"last_name": "Adams",
+"position": "WR",
+"speed":     4.56,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      194 
+} 
+] 
+}

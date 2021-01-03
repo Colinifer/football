@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-12-03",
+"draft": {
+ "round":        6,
+"season":     2004,
+"selection":      193,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Jim",
+"height":      603,
+"id":     1910,
+"jersey_number": "12",
+"last_name": "Sorgi",
+"position": "QB",
+"speed":        5,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      196 
+} 
+] 
+}

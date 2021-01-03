@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulane Green Wave",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-02-26",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Dontrell",
+"height":      511,
+"id":    45691,
+"jersey_number": "22",
+"last_name": "Hilliard",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      202 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Indiana Hoosiers",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-02-11",
+"draft": {
+ "round":        4,
+"season":     2006,
+"selection":      113,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Victor",
+"height":      604,
+"id":     3058,
+"jersey_number": "95",
+"last_name": "Adeyanju",
+"position": "ED",
+"speed":     4.86,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      268 
+} 
+] 
+}

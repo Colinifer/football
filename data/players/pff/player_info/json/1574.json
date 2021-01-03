@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Memphis Tigers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-09-29",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Tony",
+"height":      602,
+"id":     1574,
+"jersey_number": "97",
+"last_name": "Brown",
+"position": "DI",
+"speed":     4.88,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      285 
+} 
+] 
+}

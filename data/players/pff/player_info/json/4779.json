@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1986-01-17",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Maurice",
+"height":      603,
+"id":     4779,
+"jersey_number": "14",
+"last_name": "Purify",
+"position": "WR",
+"speed":     4.55,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      224 
+} 
+] 
+}

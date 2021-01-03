@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-12-20",
+"draft": {
+ "round":        4,
+"season":     2019,
+"selection":      129,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Isaiah",
+"height":      602,
+"id":    48233,
+"jersey_number": "31",
+"last_name": "Johnson",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      208 
+} 
+] 
+}

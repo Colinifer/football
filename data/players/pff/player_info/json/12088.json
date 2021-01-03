@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chattanooga Mocs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-12-12",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "C.J.",
+"height":      601,
+"id":    12088,
+"jersey_number": "18",
+"last_name": "Board",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      181 
+} 
+] 
+}

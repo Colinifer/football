@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas-Pine Bluff Golden Lions",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1978-03-19",
+"draft": {
+ "round":        3,
+"season":     2000,
+"selection":       85,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Greg",
+"height":      602,
+"id":      643,
+"jersey_number": "25",
+"last_name": "Wesley",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      206 
+} 
+] 
+}

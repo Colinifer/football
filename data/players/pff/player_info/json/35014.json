@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-12-31",
+"draft": {
+ "round":        2,
+"season":     2019,
+"selection":       57,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "J.J.",
+"height":      603,
+"id":    35014,
+"jersey_number": "19",
+"last_name": "Arcega-Whiteside",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      225 
+} 
+] 
+}

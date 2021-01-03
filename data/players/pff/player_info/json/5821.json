@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma State Cowboys",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-05-06",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Keith",
+"height":      600,
+"id":     5821,
+"jersey_number": "43",
+"last_name": "Toston",
+"position": "HB",
+"speed":     4.66,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      214 
+} 
+] 
+}

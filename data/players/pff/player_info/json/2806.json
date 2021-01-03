@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1981-07-02",
+"draft": {
+ "round": null,
+"season":     2005,
+"selection": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "FA" 
+},
+"first_name": "Santonio",
+"height":      604,
+"id":     2806,
+"jersey_number": "97",
+"last_name": "Thomas",
+"position": "DI",
+"speed":      5.2,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      308 
+} 
+] 
+}

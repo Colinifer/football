@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UAB Blazers",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-05-18",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Swayze",
+"height":      600,
+"id":     5481,
+"jersey_number": "6",
+"last_name": "Waters",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      180 
+} 
+] 
+}

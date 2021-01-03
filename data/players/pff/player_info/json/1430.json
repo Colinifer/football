@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Kentucky Hilltoppers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-09-04",
+"draft": {
+ "round":        4,
+"season":     2003,
+"selection":      118,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Jeremi",
+"height":      511,
+"id":     1430,
+"jersey_number": "31",
+"last_name": "Johnson",
+"position": "FB",
+"speed":     4.73,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      265 
+} 
+] 
+}

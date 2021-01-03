@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma State Cowboys",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1976-04-28",
+"draft": {
+ "round":        2,
+"season":     1998,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "SD" 
+},
+"first_name": "Jamal",
+"height":      602,
+"id":      328,
+"jersey_number": "76",
+"last_name": "Williams",
+"position": "DI",
+"speed":     4.85,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      348 
+} 
+] 
+}

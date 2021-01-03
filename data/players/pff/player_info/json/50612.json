@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Longhorns",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-08-20",
+"draft": {
+ "round":        5,
+"season":     2019,
+"selection":      161,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Charles",
+"height":      605,
+"id":    50612,
+"jersey_number": "94",
+"last_name": "Omenihu",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      280 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh Panthers",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-05-21",
+"draft": {
+ "round":        6,
+"season":     2005,
+"selection":      209,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Rob",
+"height":      606,
+"id":     2426,
+"jersey_number": "64",
+"last_name": "Petitti",
+"position": "T",
+"speed":     5.25,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      325 
+} 
+] 
+}

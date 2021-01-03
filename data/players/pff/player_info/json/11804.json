@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-08-12",
+"draft": {
+ "round":        2,
+"season":     2017,
+"selection":       49,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Ryan",
+"height":      602,
+"id":    11804,
+"jersey_number": "52",
+"last_name": "Anderson",
+"position": "ED",
+"speed":     4.78,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      253 
+} 
+] 
+}

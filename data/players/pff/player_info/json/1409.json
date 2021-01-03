@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Cavaliers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-03-08",
+"draft": {
+ "round":        3,
+"season":     2003,
+"selection":       95,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Billy",
+"height":      604,
+"id":     1409,
+"jersey_number": "17",
+"last_name": "McMullen",
+"position": "WR",
+"speed":     4.49,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      215 
+} 
+] 
+}

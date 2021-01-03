@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Troy Trojans",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-12-10",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       85,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Antonio",
+"height":      607,
+"id":    11840,
+"jersey_number": "79",
+"last_name": "Garcia",
+"position": "T",
+"speed":     5.15,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      302 
+} 
+] 
+}

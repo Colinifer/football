@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois Fighting Illini",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1974-02-24",
+"draft": {
+ "round":        1,
+"season":     1996,
+"selection":        3,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Simeon",
+"height":      605,
+"id":      154,
+"jersey_number": "78",
+"last_name": "Rice",
+"position": "ED",
+"speed":      4.6,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      268 
+} 
+] 
+}

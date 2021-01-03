@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-03-19",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Kyle",
+"height":      606,
+"id":     4266,
+"jersey_number": "78",
+"last_name": "Williams",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      302 
+} 
+] 
+}

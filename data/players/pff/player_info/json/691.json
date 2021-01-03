@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Cavaliers",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-05-29",
+"draft": {
+ "round":        6,
+"season":     2000,
+"selection":      187,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Antwan",
+"height":      509,
+"id":      691,
+"jersey_number": "23",
+"last_name": "Harris",
+"position": "ST",
+"speed":     4.34,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      194 
+} 
+] 
+}

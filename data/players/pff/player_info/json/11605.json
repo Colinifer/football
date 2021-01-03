@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     1995,
+"dob": "1972-05-27",
+"draft": {
+ "round":        3,
+"season":     1995,
+"selection":       90,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Antonio",
+"height":      601,
+"id":    11605,
+"jersey_number": "86",
+"last_name": "Freeman",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      198 
+} 
+] 
+}

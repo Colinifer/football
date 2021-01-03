@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tarleton State Texans",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-02-03",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Richard",
+"height":      604,
+"id":     3884,
+"jersey_number": "2",
+"last_name": "Bartel",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      230 
+} 
+] 
+}

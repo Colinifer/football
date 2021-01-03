@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charleston Southern Buccaneers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-09-13",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Erik",
+"height":      603,
+"id":    12178,
+"jersey_number": "78",
+"last_name": "Austell",
+"position": "G",
+"speed":     5.23,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      260 
+} 
+] 
+}

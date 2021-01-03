@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri State Bears",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-05-19",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Dylan",
+"height":      600,
+"id":    24304,
+"jersey_number": "51",
+"last_name": "Cole",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      237 
+} 
+] 
+}

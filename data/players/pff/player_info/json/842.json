@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1977-09-08",
+"draft": {
+ "round":        3,
+"season":     2001,
+"selection":       81,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Kenny",
+"height":      603,
+"id":      842,
+"jersey_number": "90",
+"last_name": "Smith",
+"position": "DI",
+"speed":     5.24,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      300 
+} 
+] 
+}

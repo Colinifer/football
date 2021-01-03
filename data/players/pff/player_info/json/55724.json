@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UAB Blazers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1993-03-15",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Darious",
+"height":      509,
+"id":    55724,
+"jersey_number": "31",
+"last_name": "Williams",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      187 
+} 
+] 
+}

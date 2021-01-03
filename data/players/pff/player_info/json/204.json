@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego State Aztecs",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1974-07-04",
+"draft": {
+ "round":        5,
+"season":     1996,
+"selection":      166,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "La'Roi",
+"height":      601,
+"id":      204,
+"jersey_number": "97",
+"last_name": "Glover",
+"position": "DI",
+"speed":      5.1,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      290 
+} 
+] 
+}

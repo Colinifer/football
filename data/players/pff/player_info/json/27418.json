@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Syracuse Orange",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-11-01",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Jamal",
+"height":      605,
+"id":    27418,
+"jersey_number": "00",
+"last_name": "Custis",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      213 
+} 
+] 
+}

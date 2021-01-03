@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Cavaliers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-03-22",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Jordan",
+"height":      510,
+"id":    30806,
+"jersey_number": "31",
+"last_name": "Ellis",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      225 
+} 
+] 
+}

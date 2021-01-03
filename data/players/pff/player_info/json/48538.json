@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Old Dominion Monarchs",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-12-07",
+"draft": {
+ "round":        3,
+"season":     2019,
+"selection":       95,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Oshane",
+"height":      604,
+"id":    48538,
+"jersey_number": "53",
+"last_name": "Ximines",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      252 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-02-24",
+"draft": {
+ "round":        5,
+"season":     2006,
+"selection":      158,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Charlie",
+"height":      511,
+"id":     3103,
+"jersey_number": "26",
+"last_name": "Peprah",
+"position": "S",
+"speed":     4.66,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      202 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Miss Golden Eagles",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-06-23",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Kevis",
+"height":      601,
+"id":     4311,
+"jersey_number": "53",
+"last_name": "Coley",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      231 
+} 
+] 
+}

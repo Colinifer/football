@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-10-14",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      243,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Jeff",
+"height":      601,
+"id":     5766,
+"jersey_number": "64",
+"last_name": "Owens",
+"position": "DI",
+"speed":     4.97,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      304 
+} 
+] 
+}

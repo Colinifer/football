@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa Hawkeyes",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1981-10-28",
+"draft": {
+ "round":        4,
+"season":     2005,
+"selection":      102,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Sean",
+"height":      600,
+"id":     2319,
+"jersey_number": "37",
+"last_name": "Considine",
+"position": "S",
+"speed":      4.5,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      212 
+} 
+] 
+}

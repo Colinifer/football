@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California Golden Bears",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-11",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Maurice",
+"height":      603,
+"id":    11035,
+"jersey_number": "16",
+"last_name": "Harris",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      200 
+} 
+] 
+}

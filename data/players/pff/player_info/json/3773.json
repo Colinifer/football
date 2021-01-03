@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-07-07",
+"draft": {
+ "round":        5,
+"season":     2007,
+"selection":      157,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      600,
+"id":     3773,
+"jersey_number": "87",
+"last_name": "Clowney",
+"position": "WR",
+"speed":     4.36,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      188 
+} 
+] 
+}

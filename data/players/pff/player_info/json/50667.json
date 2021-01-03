@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Minnesota Golden Gophers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-11-21",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Jonathan",
+"height":      600,
+"id":    50667,
+"jersey_number": "48",
+"last_name": "Celestin",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      227 
+} 
+] 
+}

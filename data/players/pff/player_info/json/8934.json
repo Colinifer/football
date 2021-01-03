@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma Sooners",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-12-12",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Brennan",
+"height":      511,
+"id":     8934,
+"jersey_number": "34",
+"last_name": "Clay",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      202 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jacksonville State Gamecocks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-08-04",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      154,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Siran",
+"height":      600,
+"id":    27130,
+"jersey_number": "33",
+"last_name": "Neal",
+"position": "CB",
+"speed":     4.56,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      206 
+} 
+] 
+}

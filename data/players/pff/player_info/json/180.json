@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington Huskies",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1972-08-17",
+"draft": {
+ "round":        2,
+"season":     1996,
+"selection":       59,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Ernie",
+"height":      602,
+"id":      180,
+"jersey_number": "85",
+"last_name": "Conwell",
+"position": "TE",
+"speed":     4.62,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      255 
+} 
+] 
+}

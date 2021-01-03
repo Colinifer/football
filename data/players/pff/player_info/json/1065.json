@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado Buffaloes",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1980-04-29",
+"draft": {
+ "round":        2,
+"season":     2002,
+"selection":       58,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Michael",
+"height":      601,
+"id":     1065,
+"jersey_number": "22",
+"last_name": "Lewis",
+"position": "S",
+"speed":      4.6,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      222 
+} 
+] 
+}

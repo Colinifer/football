@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Syracuse Orange",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-01-03",
+"draft": {
+ "round":        6,
+"season":     2003,
+"selection":      211,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      600,
+"id":     1511,
+"jersey_number": "17",
+"last_name": "Tyree",
+"position": "WR",
+"speed":     4.53,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      205 
+} 
+] 
+}

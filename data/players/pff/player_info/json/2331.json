@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hampton Pirates",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1983-06-26",
+"draft": {
+ "round":        4,
+"season":     2005,
+"selection":      114,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Jerome",
+"height":      511,
+"id":     2331,
+"jersey_number": "13",
+"last_name": "Mathis",
+"position": "WR",
+"speed":     4.26,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      191 
+} 
+] 
+}

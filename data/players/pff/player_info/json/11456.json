@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Calgary (Canada)",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1995-05-31",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Rashaun",
+"height":      605,
+"id":    11456,
+"jersey_number": "13",
+"last_name": "Simonise",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      200 
+} 
+] 
+}

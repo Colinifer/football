@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-08-10",
+"draft": {
+ "round":        2,
+"season":     2017,
+"selection":       41,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Dalvin",
+"height":      510,
+"id":    11796,
+"jersey_number": "33",
+"last_name": "Cook",
+"position": "HB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      210 
+} 
+] 
+}

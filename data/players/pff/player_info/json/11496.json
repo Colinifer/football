@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Shippensburg",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1991-03-16",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Jake",
+"height":      606,
+"id":    11496,
+"jersey_number": "0",
+"last_name": "Metz",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      265 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan State Spartans",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-12",
+"draft": {
+ "round":        7,
+"season":     2016,
+"selection":      224,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Donavon",
+"height":      604,
+"id":    10858,
+"jersey_number": "63",
+"last_name": "Clark",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      315 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Temple Owls",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-11-06",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Jahad",
+"height":      510,
+"id":    12326,
+"jersey_number": "39",
+"last_name": "Thomas",
+"position": "HB",
+"speed":     4.62,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      189 
+} 
+] 
+}

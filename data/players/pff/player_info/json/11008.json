@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulsa Golden Hurricane",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-26",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Keyarris",
+"height":      604,
+"id":    11008,
+"jersey_number": "15",
+"last_name": "Garrett",
+"position": "WR",
+"speed":     4.53,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      221 
+} 
+] 
+}

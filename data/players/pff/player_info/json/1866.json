@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina Tar Heels",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-04-10",
+"draft": {
+ "round":        5,
+"season":     2004,
+"selection":      146,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Jeb",
+"height":      605,
+"id":     1866,
+"jersey_number": "77",
+"last_name": "Terry",
+"position": "G",
+"speed":      5.2,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      311 
+} 
+] 
+}

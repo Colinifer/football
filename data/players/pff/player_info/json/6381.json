@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma Sooners",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-05-06",
+"draft": {
+ "round":        7,
+"season":     2011,
+"selection":      229,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Jonathan",
+"height":      510,
+"id":     6381,
+"jersey_number": "37",
+"last_name": "Nelson",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      197 
+} 
+] 
+}

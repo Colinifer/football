@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Appalachian State Mountaineers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-23",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "A.J.",
+"height":      511,
+"id":    49046,
+"jersey_number": "00",
+"last_name": "Howard",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      185 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh Panthers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1991-07-18",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Khaynin",
+"height":      600,
+"id":    11488,
+"jersey_number": "D69",
+"last_name": "Mosley-Smith",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      305 
+} 
+] 
+}

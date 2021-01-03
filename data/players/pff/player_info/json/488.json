@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A&M Aggies",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1976-04-13",
+"draft": {
+ "round":        3,
+"season":     1999,
+"selection":       79,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Dan",
+"height":      605,
+"id":      488,
+"jersey_number": "89",
+"last_name": "Campbell",
+"position": "TE",
+"speed":     4.85,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      265 
+} 
+] 
+}

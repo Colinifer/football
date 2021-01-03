@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh Panthers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-10-10",
+"draft": {
+ "round":        3,
+"season":     2003,
+"selection":       70,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Gerald",
+"height":      601,
+"id":     1385,
+"jersey_number": "96",
+"last_name": "Hayes",
+"position": "LB",
+"speed":     4.67,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      241 
+} 
+] 
+}

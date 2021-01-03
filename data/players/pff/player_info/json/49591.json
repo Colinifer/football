@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boise State Broncos",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-03-18",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Sam",
+"height":      603,
+"id":    49591,
+"jersey_number": "D66",
+"last_name": "McCaskill",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      250 
+} 
+] 
+}

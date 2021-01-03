@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia State Panthers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-07-05",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Penny",
+"height":      508,
+"id":    13534,
+"jersey_number": "19",
+"last_name": "Hart",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      180 
+} 
+] 
+}

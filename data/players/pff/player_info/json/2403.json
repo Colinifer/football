@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1981-02-28",
+"draft": {
+ "round":        6,
+"season":     2005,
+"selection":      186,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Eric",
+"height":      604,
+"id":     2403,
+"jersey_number": "98",
+"last_name": "Moore",
+"position": "ED",
+"speed":     4.84,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      268 
+} 
+] 
+}

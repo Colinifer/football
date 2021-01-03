@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Weber State Wildcats",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-04-30",
+"draft": {
+ "round":        7,
+"season":     2006,
+"selection":      211,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Pat",
+"height":      606,
+"id":     3156,
+"jersey_number": "64O",
+"last_name": "McQuistan",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      315 
+} 
+] 
+}

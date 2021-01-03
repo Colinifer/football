@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Towson Tigers",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-01-17",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Ryan",
+"height":      604,
+"id":     9939,
+"jersey_number": "92",
+"last_name": "Delaire",
+"position": "ED",
+"speed":     4.97,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      260 
+} 
+] 
+}

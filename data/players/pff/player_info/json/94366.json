@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Tech Panthers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-08-14",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "J.T.",
+"height":      511,
+"id":    94366,
+"jersey_number": "49",
+"last_name": "Hassell",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      200 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon Ducks",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-07-21",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Wade",
+"height":      602,
+"id":     9071,
+"jersey_number": "74",
+"last_name": "Keliikipi",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      303 
+} 
+] 
+}

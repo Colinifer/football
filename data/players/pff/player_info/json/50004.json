@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Longhorns",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-12-16",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Paul",
+"height":      601,
+"id":    50004,
+"jersey_number": "91",
+"last_name": "Boyette Jr.",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      310 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Texas Mean Green",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-06-01",
+"draft": {
+ "round":        6,
+"season":     2004,
+"selection":      182,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Cody",
+"height":      602,
+"id":     1900,
+"jersey_number": "53",
+"last_name": "Spencer",
+"position": "LB",
+"speed":     4.65,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      245 
+} 
+] 
+}

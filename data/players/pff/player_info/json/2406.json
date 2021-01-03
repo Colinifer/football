@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Vanderbilt Commodores",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-06-21",
+"draft": {
+ "round":        6,
+"season":     2005,
+"selection":      189,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Jovan",
+"height":      602,
+"id":     2406,
+"jersey_number": "72",
+"last_name": "Haye",
+"position": "DI",
+"speed":     4.74,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      284 
+} 
+] 
+}

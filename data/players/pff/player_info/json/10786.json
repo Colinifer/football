@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Temple Owls",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-01-11",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      152,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Matt",
+"height":      603,
+"id":    10786,
+"jersey_number": "98",
+"last_name": "Ioannidis",
+"position": "DI",
+"speed":     5.03,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      305 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota State Jackrabbits",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-03-16",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Winston",
+"height":      510,
+"id":     8991,
+"jersey_number": "40",
+"last_name": "Wright",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      190 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cincinnati Bearcats",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1974-08-25",
+"draft": {
+ "round":        4,
+"season":     1998,
+"selection":      111,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Jason",
+"height":      606,
+"id":      388,
+"jersey_number": "69",
+"last_name": "Fabini",
+"position": "G",
+"speed":     5.63,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      304 
+} 
+] 
+}

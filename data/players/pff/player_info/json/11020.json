@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa Hawkeyes",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-06-12",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Henry",
+"height":      604,
+"id":    11020,
+"jersey_number": "87",
+"last_name": "Krieger-Coble",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      246 
+} 
+] 
+}

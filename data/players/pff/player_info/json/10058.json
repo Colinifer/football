@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Gardner-Webb Runnin' Bulldogs",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-05-20",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Kenny",
+"height":      604,
+"id":    10058,
+"jersey_number": "6",
+"last_name": "Cook",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      218 
+} 
+] 
+}

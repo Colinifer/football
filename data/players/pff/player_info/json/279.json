@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rice Owls",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1975-08-03",
+"draft": {
+ "round":        5,
+"season":     1997,
+"selection":      152,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "N.D.",
+"height":      604,
+"id":      279,
+"jersey_number": "94",
+"last_name": "Kalu",
+"position": "ED",
+"speed":     4.84,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      265 
+} 
+] 
+}

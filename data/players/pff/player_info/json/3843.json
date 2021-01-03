@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1982-11-10",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      227,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Dallas",
+"height":      603,
+"id":     3843,
+"jersey_number": "81",
+"last_name": "Baker",
+"position": "WR",
+"speed":     4.53,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      206 
+} 
+] 
+}

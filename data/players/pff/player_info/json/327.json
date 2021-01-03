@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee Volunteers",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1976-03-24",
+"draft": {
+ "round":        1,
+"season":     1998,
+"selection":        1,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Peyton",
+"height":      605,
+"id":      327,
+"jersey_number": "18",
+"last_name": "Manning",
+"position": "QB",
+"speed":     4.95,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      230 
+} 
+] 
+}

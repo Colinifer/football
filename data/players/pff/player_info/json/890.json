@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1977-10-07",
+"draft": {
+ "round":        5,
+"season":     2001,
+"selection":      151,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Russ",
+"height":      603,
+"id":      890,
+"jersey_number": "66",
+"last_name": "Hochstein",
+"position": "G",
+"speed":      5.4,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      305 
+} 
+] 
+}

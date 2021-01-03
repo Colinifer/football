@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-12-20",
+"draft": {
+ "round":        2,
+"season":     2006,
+"selection":       45,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "LenDale",
+"height":      600,
+"id":     2990,
+"jersey_number": "25",
+"last_name": "White",
+"position": "HB",
+"speed":     4.55,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      235 
+} 
+] 
+}

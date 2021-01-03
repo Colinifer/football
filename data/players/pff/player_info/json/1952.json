@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Kentucky Colonels",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-03-08",
+"draft": {
+ "round":        7,
+"season":     2004,
+"selection":      238,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Larry",
+"height":      601,
+"id":     1952,
+"jersey_number": "63",
+"last_name": "Turner",
+"position": "G",
+"speed":     5.23,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      290 
+} 
+] 
+}

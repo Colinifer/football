@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UNLV Rebels",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-05",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Devonte",
+"height":      602,
+"id":    47983,
+"jersey_number": "8",
+"last_name": "Boyd",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      193 
+} 
+] 
+}

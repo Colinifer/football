@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Michigan Chippewas",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-07-30",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "J.P.",
+"height":      604,
+"id":    26384,
+"jersey_number": "59",
+"last_name": "Quinn",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      302 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Vanderbilt Commodores",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-03-19",
+"draft": {
+ "round":        7,
+"season":     2016,
+"selection":      227,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Stephen",
+"height":      605,
+"id":    10861,
+"jersey_number": "91",
+"last_name": "Weatherly",
+"position": "ED",
+"speed":     4.61,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      265 
+} 
+] 
+}

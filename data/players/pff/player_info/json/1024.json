@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1980-09-19",
+"draft": {
+ "round":        1,
+"season":     2002,
+"selection":       17,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Phillip",
+"height":      510,
+"id":     1024,
+"jersey_number": "31",
+"last_name": "Buchanon",
+"position": "CB",
+"speed":     4.38,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      185 
+} 
+] 
+}

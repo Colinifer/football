@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh Panthers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-03-26",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      606,
+"id":    47298,
+"jersey_number": "00",
+"last_name": "Flanagan",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      260 
+} 
+] 
+}

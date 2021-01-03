@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas Razorbacks",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-12-22",
+"draft": {
+ "round":        4,
+"season":     2000,
+"selection":      102,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      510,
+"id":      653,
+"jersey_number": "36",
+"last_name": "Barrett",
+"position": "CB",
+"speed":     4.44,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      195 
+} 
+] 
+}

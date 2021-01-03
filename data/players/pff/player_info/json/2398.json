@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana-Monroe Warhawks",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-08-06",
+"draft": {
+ "round":        6,
+"season":     2005,
+"selection":      181,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      600,
+"id":     2398,
+"jersey_number": "43",
+"last_name": "Harris",
+"position": "S",
+"speed":     4.55,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      205 
+} 
+] 
+}

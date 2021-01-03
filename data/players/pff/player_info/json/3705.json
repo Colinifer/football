@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-01-08",
+"draft": {
+ "round":        3,
+"season":     2007,
+"selection":       89,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Aaron",
+"height":      604,
+"id":     3705,
+"jersey_number": "26",
+"last_name": "Rouse",
+"position": "S",
+"speed":     4.58,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      223 
+} 
+] 
+}

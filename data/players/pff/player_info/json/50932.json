@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Auburn Tigers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-12-31",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      210,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Deshaun",
+"height":      511,
+"id":    50932,
+"jersey_number": "48",
+"last_name": "Davis",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      234 
+} 
+] 
+}

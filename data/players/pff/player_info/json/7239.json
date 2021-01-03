@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lamar Cardinals",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-05-20",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Marcus",
+"height":      601,
+"id":     7239,
+"jersey_number": "16",
+"last_name": "Jackson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      195 
+} 
+] 
+}

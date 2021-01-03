@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Illinois Huskies",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-02-06",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Jason",
+"height":      602,
+"id":     8336,
+"jersey_number": "89",
+"last_name": "Schepler",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      274 
+} 
+] 
+}

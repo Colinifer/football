@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Villanova Wildcats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-09-27",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Don",
+"height":      601,
+"id":    11338,
+"jersey_number": "48",
+"last_name": "Cherry",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      221 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas Jayhawks",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-03-29",
+"draft": {
+ "round":        6,
+"season":     2015,
+"selection":      191,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "JaCorey",
+"height":      511,
+"id":     9624,
+"jersey_number": "D33",
+"last_name": "Shepherd",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      194 
+} 
+] 
+}

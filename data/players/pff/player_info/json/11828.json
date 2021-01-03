@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas State Wildcats",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-05-02",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       73,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Jordan",
+"height":      604,
+"id":    11828,
+"jersey_number": "78",
+"last_name": "Willis",
+"position": "ED",
+"speed":     4.53,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      275 
+} 
+] 
+}

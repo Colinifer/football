@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Illinois Huskies",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1974-01-10",
+"draft": {
+ "round": null,
+"season":     1996,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Hollis",
+"height":      600,
+"id":      225,
+"jersey_number": "75",
+"last_name": "Thomas",
+"position": "DI",
+"speed":      5.4,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      306 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wake Forest Demon Deacons",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-09-18",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Jyles",
+"height":      603,
+"id":     4259,
+"jersey_number": "94",
+"last_name": "Tucker",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      258 
+} 
+] 
+}

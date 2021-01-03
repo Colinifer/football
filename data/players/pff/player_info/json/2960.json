@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-06-03",
+"draft": {
+ "round":        1,
+"season":     2006,
+"selection":       15,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Tye",
+"height":      510,
+"id":     2960,
+"jersey_number": "24",
+"last_name": "Hill",
+"position": "CB",
+"speed":     4.34,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      185 
+} 
+] 
+}

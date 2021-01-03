@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Texas Mean Green",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-06-07",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Jalen",
+"height":      601,
+"id":    34164,
+"jersey_number": "15",
+"last_name": "Guyton",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      202 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rutgers Scarlet Knights",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-09-21",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Darnell",
+"height":      603,
+"id":     4073,
+"jersey_number": "72",
+"last_name": "Stapleton",
+"position": "G",
+"speed":        5,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      285 
+} 
+] 
+}

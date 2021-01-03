@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee Volunteers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-02-10",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Micah",
+"height":      600,
+"id":    51344,
+"jersey_number": "D36",
+"last_name": "Abernathy",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      198 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Longhorns",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1980-01-02",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Marcus",
+"height":      602,
+"id":     1314,
+"jersey_number": "50",
+"last_name": "Wilkins",
+"position": "LB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      231 
+} 
+] 
+}

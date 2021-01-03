@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lehigh Mountain Hawks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-08-03",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Billy",
+"height":      602,
+"id":     8235,
+"jersey_number": "54",
+"last_name": "Boyko",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      240 
+} 
+] 
+}

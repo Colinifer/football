@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cincinnati Bearcats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-06",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Alex",
+"height":      603,
+"id":    11478,
+"jersey_number": "3",
+"last_name": "Chisum",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      200 
+} 
+] 
+}

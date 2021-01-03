@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-06-11",
+"draft": {
+ "round":        5,
+"season":     2004,
+"selection":      140,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Alex",
+"height":      600,
+"id":     1861,
+"jersey_number": "59",
+"last_name": "Lewis",
+"position": "LB",
+"speed":     4.78,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      227 
+} 
+] 
+}

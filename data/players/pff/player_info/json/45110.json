@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Weber State Wildcats",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-08-15",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Iosua",
+"height":      604,
+"id":    45110,
+"jersey_number": "78",
+"last_name": "Opeta",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      305 
+} 
+] 
+}

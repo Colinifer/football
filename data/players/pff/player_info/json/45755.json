@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern University Jaguars",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-12-19",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Lenard",
+"height":      509,
+"id":    45755,
+"jersey_number": "35",
+"last_name": "Tillery",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      201 
+} 
+] 
+}

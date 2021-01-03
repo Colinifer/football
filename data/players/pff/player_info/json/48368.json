@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Tech Bulldogs",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-12-16",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Immanuel",
+"height":      603,
+"id":    48368,
+"jersey_number": "92",
+"last_name": "Turner",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      287 
+} 
+] 
+}

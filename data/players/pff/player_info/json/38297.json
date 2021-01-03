@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Akron Zips",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-07-09",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Jamal",
+"height":      604,
+"id":    38297,
+"jersey_number": "00",
+"last_name": "Davis II",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      240 
+} 
+] 
+}

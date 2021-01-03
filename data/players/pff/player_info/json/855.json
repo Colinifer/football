@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1976-11-03",
+"draft": {
+ "round":        4,
+"season":     2001,
+"selection":       97,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Anthony",
+"height":      601,
+"id":      855,
+"jersey_number": "32",
+"last_name": "Henry",
+"position": "CB",
+"speed":      4.6,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      207 
+} 
+] 
+}

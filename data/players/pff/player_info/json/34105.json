@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-05-30",
+"draft": {
+ "round":        4,
+"season":     2019,
+"selection":      111,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Kendall",
+"height":      600,
+"id":    34105,
+"jersey_number": "20",
+"last_name": "Sheffield",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      193 
+} 
+] 
+}

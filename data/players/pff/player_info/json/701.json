@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Tech Bulldogs",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-03-15",
+"draft": {
+ "round":        7,
+"season":     2000,
+"selection":      212,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Tim",
+"height":      600,
+"id":      701,
+"jersey_number": "12",
+"last_name": "Rattay",
+"position": "QB",
+"speed":     4.91,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      215 
+} 
+] 
+}

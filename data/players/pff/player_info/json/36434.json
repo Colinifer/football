@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charleston Southern Buccaneers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-10-24",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Johnny",
+"height":      600,
+"id":    36434,
+"jersey_number": "68",
+"last_name": "Robinson",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      292 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington Huskies",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1976-05-05",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Dane",
+"height":      511,
+"id":      755,
+"jersey_number": "89",
+"last_name": "Looker",
+"position": "WR",
+"speed":     4.65,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      194 
+} 
+] 
+}

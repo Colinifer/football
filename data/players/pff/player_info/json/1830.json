@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon State Beavers",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-10-02",
+"draft": {
+ "round":        4,
+"season":     2004,
+"selection":      109,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Tim",
+"height":      605,
+"id":     1830,
+"jersey_number": "84",
+"last_name": "Euhus",
+"position": "TE",
+"speed":     4.93,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      249 
+} 
+] 
+}

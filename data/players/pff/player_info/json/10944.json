@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Western State",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-01-03",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Leonard",
+"height":      606,
+"id":    10944,
+"jersey_number": "61",
+"last_name": "Wester",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      305 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boise State Broncos",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-10-30",
+"draft": {
+ "round":        7,
+"season":     2011,
+"selection":      213,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Brandyn",
+"height":      509,
+"id":     6365,
+"jersey_number": "32",
+"last_name": "Thompson",
+"position": "CB",
+"speed":      4.5,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      188 
+} 
+] 
+}

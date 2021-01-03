@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1979-03-19",
+"draft": {
+ "round":        6,
+"season":     2004,
+"selection":      176,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Kirk",
+"height":      607,
+"id":     1894,
+"jersey_number": "73",
+"last_name": "Chambers",
+"position": "G",
+"speed":     5.44,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      313 
+} 
+] 
+}

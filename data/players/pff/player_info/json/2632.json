@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-09-20",
+"draft": {
+ "round": null,
+"season":     2005,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Arnold",
+"height":      603,
+"id":     2632,
+"jersey_number": "94",
+"last_name": "Harrison",
+"position": "LB",
+"speed":     4.67,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      236 
+} 
+] 
+}

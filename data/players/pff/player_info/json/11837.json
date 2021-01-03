@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Tech Bulldogs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-12-19",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       82,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Carlos",
+"height":      511,
+"id":    11837,
+"jersey_number": "0",
+"last_name": "Henderson",
+"position": "WR",
+"speed":     4.46,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      191 
+} 
+] 
+}

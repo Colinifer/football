@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Liberty Flames",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-09-01",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "FA" 
+},
+"first_name": "Vince",
+"height":      606,
+"id":     4600,
+"jersey_number": "49",
+"last_name": "Redd",
+"position": "ED",
+"speed":     4.82,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      260 
+} 
+] 
+}

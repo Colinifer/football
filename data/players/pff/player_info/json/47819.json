@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah State Aggies",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-06-13",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Jalen",
+"height":      601,
+"id":    47819,
+"jersey_number": "3",
+"last_name": "Greene",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      205 
+} 
+] 
+}

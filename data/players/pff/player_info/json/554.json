@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Jose State Spartans",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1977-04-30",
+"draft": {
+ "round": null,
+"season":     1999,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "James",
+"height":      601,
+"id":      554,
+"jersey_number": "44",
+"last_name": "Hodgins",
+"position": "FB",
+"speed":     4.82,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      264 
+} 
+] 
+}

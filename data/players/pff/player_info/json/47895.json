@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-10-15",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      187,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "NFL" 
+},
+"first_name": "Ray-Ray",
+"height":      509,
+"id":    47895,
+"jersey_number": "14",
+"last_name": "McCloud III",
+"position": "WR",
+"speed":     4.53,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      190 
+} 
+] 
+}

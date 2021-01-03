@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho State Bengals",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-06-03",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Tyler",
+"height":      603,
+"id":    11153,
+"jersey_number": "90",
+"last_name": "Kuder",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      305 
+} 
+] 
+}

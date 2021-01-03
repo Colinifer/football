@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bacone College Warriors",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-12-20",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Deantre",
+"height":      604,
+"id":     9054,
+"jersey_number": "68",
+"last_name": "Harlan",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      281 
+} 
+] 
+}

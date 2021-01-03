@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee-Martin Skyhawks",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-02-24",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Abou",
+"height":      602,
+"id":    10031,
+"jersey_number": "39O",
+"last_name": "Toure",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      230 
+} 
+] 
+}

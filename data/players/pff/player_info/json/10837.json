@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-29",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      203,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Dadi",
+"height":      603,
+"id":    10837,
+"jersey_number": "00",
+"last_name": "Nicolas",
+"position": "ED",
+"speed":     4.74,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      235 
+} 
+] 
+}

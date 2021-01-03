@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon State Beavers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-08-01",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      169,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Treston",
+"height":      602,
+"id":    11924,
+"jersey_number": "34",
+"last_name": "Decoud",
+"position": "CB",
+"speed":     4.62,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      208 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Baylor Bears",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-15",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      168,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Spencer",
+"height":      606,
+"id":    10802,
+"jersey_number": "74",
+"last_name": "Drango",
+"position": "T",
+"speed":     5.27,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      315 
+} 
+] 
+}

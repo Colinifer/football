@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Illinois Huskies",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-12-11",
+"draft": {
+ "round":        4,
+"season":     2001,
+"selection":      124,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Justin",
+"height":      602,
+"id":      872,
+"jersey_number": "19",
+"last_name": "McCareins",
+"position": "WR",
+"speed":     4.51,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      215 
+} 
+] 
+}

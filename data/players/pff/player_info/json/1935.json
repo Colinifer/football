@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Virginia Mountaineers",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-04-26",
+"draft": {
+ "round":        7,
+"season":     2004,
+"selection":      219,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Quincy",
+"height":      509,
+"id":     1935,
+"jersey_number": "35",
+"last_name": "Wilson",
+"position": "ST",
+"speed":     4.65,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      225 
+} 
+] 
+}

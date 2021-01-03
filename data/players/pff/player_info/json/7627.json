@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwest Missouri State",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-08-08",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Chad",
+"height":      601,
+"id":     7627,
+"jersey_number": "47D",
+"last_name": "Kilgore",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      230 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Penn State Nittany Lions",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-05-24",
+"draft": {
+ "round":        3,
+"season":     2001,
+"selection":       79,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Kareem",
+"height":      606,
+"id":      840,
+"jersey_number": "67",
+"last_name": "McKenzie",
+"position": "T",
+"speed":     5.33,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      327 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sam Houston State Bearkats",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-10-23",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Davion",
+"height":      511,
+"id":    33158,
+"jersey_number": "16",
+"last_name": "Davis",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      180 
+} 
+] 
+}

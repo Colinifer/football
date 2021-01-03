@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Tech Bulldogs",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1970-05-13",
+"draft": {
+ "round":        6,
+"season":     1993,
+"selection":      141,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Doug",
+"height":      601,
+"id":    11535,
+"jersey_number": "33",
+"last_name": "Evans",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      190 
+} 
+] 
+}

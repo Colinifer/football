@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Citadel Bulldogs",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-04-27",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Kevin",
+"height":      600,
+"id":     7437,
+"jersey_number": "15",
+"last_name": "Hardy",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      186 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-11-21",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Jay",
+"height":      511,
+"id":     9908,
+"jersey_number": "35",
+"last_name": "Hughes",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      195 
+} 
+] 
+}

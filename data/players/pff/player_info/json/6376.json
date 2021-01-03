@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1987-11-25",
+"draft": {
+ "round":        7,
+"season":     2011,
+"selection":      224,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Markus",
+"height":      603,
+"id":     6376,
+"jersey_number": "92",
+"last_name": "White",
+"position": "ED",
+"speed":     4.86,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      266 
+} 
+] 
+}

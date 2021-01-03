@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois Fighting Illini",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-11-02",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Jason",
+"height":      510,
+"id":     3285,
+"jersey_number": "43",
+"last_name": "Davis",
+"position": "FB",
+"speed":     4.66,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      240 
+} 
+] 
+}

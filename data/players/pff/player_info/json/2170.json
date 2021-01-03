@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Iowa Panthers",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-01-20",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Benny",
+"height":      510,
+"id":     2170,
+"jersey_number": "22",
+"last_name": "Sapp",
+"position": "CB",
+"speed":      4.6,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      190 
+} 
+] 
+}

@@ -1,0 +1,36 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     1983,
+"dob": "1960-06-28",
+"draft": {
+ "round":        1,
+"season":     1983,
+"selection":        1,
+"team": {
+    "abbreviation": "DEN"
+},
+"type": "AD" 
+},
+"first_name": "John",
+"height":      603,
+"id":    11701,
+"jersey_number": "7",
+"last_name": "Elway",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      215 
+} 
+] 
+}

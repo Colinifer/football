@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-03-30",
+"draft": {
+ "round":        4,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "SD" 
+},
+"first_name": "Paul",
+"height":      600,
+"id":     4262,
+"jersey_number": "25",
+"last_name": "Oliver",
+"position": "S",
+"speed":     4.55,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      208 
+} 
+] 
+}

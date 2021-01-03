@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas State Wildcats",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-12-11",
+"draft": {
+ "round":        6,
+"season":     2002,
+"selection":      185,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Josh",
+"height":      511,
+"id":     1168,
+"jersey_number": "33",
+"last_name": "Scobey",
+"position": "ST",
+"speed":     4.42,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      220 
+} 
+] 
+}

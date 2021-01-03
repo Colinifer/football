@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-01-22",
+"draft": {
+ "round":        2,
+"season":     2004,
+"selection":       45,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Jake",
+"height":      603,
+"id":     1766,
+"jersey_number": "64",
+"last_name": "Grove",
+"position": "C",
+"speed":     5.16,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      300 
+} 
+] 
+}

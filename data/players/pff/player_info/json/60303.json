@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rutgers Scarlet Knights",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-05-02",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Ryan",
+"height":      601,
+"id":    60303,
+"jersey_number": "S17",
+"last_name": "Anderson",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      202 
+} 
+] 
+}

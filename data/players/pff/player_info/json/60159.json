@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UAB Blazers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-06-25",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Rishard",
+"height":      603,
+"id":    60159,
+"jersey_number": "68",
+"last_name": "Cook",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      364 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Temple Owls",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-12-22",
+"draft": {
+ "round":        7,
+"season":     2016,
+"selection":      246,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Tyler",
+"height":      601,
+"id":    10880,
+"jersey_number": "44",
+"last_name": "Matakevich",
+"position": "LB",
+"speed":     4.81,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      235 
+} 
+] 
+}

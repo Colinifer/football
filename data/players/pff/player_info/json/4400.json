@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-05-22",
+"draft": {
+ "round":        3,
+"season":     2008,
+"selection":       86,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Tom",
+"height":      511,
+"id":     4400,
+"jersey_number": "36",
+"last_name": "Zbikowski",
+"position": "S",
+"speed":     4.44,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      210 
+} 
+] 
+}

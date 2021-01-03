@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisville Cardinals",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-05-21",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Keith",
+"height":      605,
+"id":    12154,
+"jersey_number": "43",
+"last_name": "Towbridge",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      262 
+} 
+] 
+}

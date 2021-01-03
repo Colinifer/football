@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern Wildcats",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-04-22",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      251,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Justin",
+"height":      600,
+"id":    29539,
+"jersey_number": "22",
+"last_name": "Jackson",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      199 
+} 
+] 
+}

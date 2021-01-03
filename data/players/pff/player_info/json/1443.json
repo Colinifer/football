@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-09-24",
+"draft": {
+ "round":        4,
+"season":     2003,
+"selection":      132,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "LaBrandon",
+"height":      511,
+"id":     1443,
+"jersey_number": "22",
+"last_name": "Toefield",
+"position": "HB",
+"speed":     4.53,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      232 
+} 
+] 
+}

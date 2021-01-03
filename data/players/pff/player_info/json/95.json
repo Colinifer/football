@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boston College Eagles",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1971-05-13",
+"draft": {
+ "round":        7,
+"season":     1994,
+"selection":      218,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Tom",
+"height":      602,
+"id":       95,
+"jersey_number": "66",
+"last_name": "Nalen",
+"position": "C",
+"speed":     5.08,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      286 
+} 
+] 
+}

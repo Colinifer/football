@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Illinois Leathernecks",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-05-27",
+"draft": {
+ "round":        4,
+"season":     2001,
+"selection":      126,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Ed",
+"height":      601,
+"id":      874,
+"jersey_number": "50",
+"last_name": "Hartwell",
+"position": "LB",
+"speed":     4.65,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      250 
+} 
+] 
+}

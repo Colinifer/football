@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Army Black Knights",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-01",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Trent",
+"height":      511,
+"id":    10280,
+"jersey_number": "6",
+"last_name": "Steelman",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      208 
+} 
+] 
+}

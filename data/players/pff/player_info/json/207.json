@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Penn State Nittany Lions",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1972-04-26",
+"draft": {
+ "round":        6,
+"season":     1996,
+"selection":      208,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Marco",
+"height":      604,
+"id":      207,
+"jersey_number": "62",
+"last_name": "Rivera",
+"position": "G",
+"speed":      5.3,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      307 
+} 
+] 
+}

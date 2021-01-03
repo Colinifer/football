@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-27",
+"draft": {
+ "round":        1,
+"season":     2016,
+"selection":       24,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "William",
+"height":      600,
+"id":    10658,
+"jersey_number": "22",
+"last_name": "Jackson III",
+"position": "CB",
+"speed":     4.37,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      196 
+} 
+] 
+}

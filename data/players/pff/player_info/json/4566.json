@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho Vandals",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1986-04-08",
+"draft": {
+ "round":        7,
+"season":     2008,
+"selection":      252,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      601,
+"id":     4566,
+"jersey_number": "54",
+"last_name": "Vobora",
+"position": "LB",
+"speed":     4.65,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      236 
+} 
+] 
+}

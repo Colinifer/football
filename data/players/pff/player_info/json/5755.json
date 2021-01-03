@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Indiana Hoosiers",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-05-12",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      232,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Jammie",
+"height":      601,
+"id":     5755,
+"jersey_number": "59",
+"last_name": "Kirlew",
+"position": "LB",
+"speed":     5.05,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      264 
+} 
+] 
+}

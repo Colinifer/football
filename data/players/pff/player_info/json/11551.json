@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas Jayhawks",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1971-02-22",
+"draft": {
+ "round":        3,
+"season":     1993,
+"selection":       79,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Gilbert",
+"height":      602,
+"id":    11551,
+"jersey_number": "93",
+"last_name": "Brown",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      339 
+} 
+] 
+}

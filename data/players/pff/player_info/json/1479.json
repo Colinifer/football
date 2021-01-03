@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina Gamecocks",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-07-17",
+"draft": {
+ "round":        6,
+"season":     2003,
+"selection":      174,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Langston",
+"height":      601,
+"id":     1479,
+"jersey_number": "79",
+"last_name": "Moore",
+"position": "DI",
+"speed":     5.04,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      303 
+} 
+] 
+}

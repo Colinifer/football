@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Arizona Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-11-24",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Trey",
+"height":      607,
+"id":     8333,
+"jersey_number": "69",
+"last_name": "Gilleo",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      309 
+} 
+] 
+}

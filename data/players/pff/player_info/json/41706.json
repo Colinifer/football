@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Buffalo Bulls",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-01-29",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      602,
+"id":    41706,
+"jersey_number": "00",
+"last_name": "Johnson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      210 
+} 
+] 
+}

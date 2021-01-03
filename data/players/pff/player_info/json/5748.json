@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California Golden Bears",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-02-07",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      225,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Syd'Quan",
+"height":      509,
+"id":     5748,
+"jersey_number": "22",
+"last_name": "Thompson",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      187 
+} 
+] 
+}

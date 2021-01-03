@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "North Carolina State Wolfpack",
+"current_class": null,
+"current_eligible_year":     1991,
+"dob": "1969-08-25",
+"draft": {
+ "round":        2,
+"season":     1991,
+"selection":       32,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Mike",
+"height":      604,
+"id":    11538,
+"jersey_number": "96",
+"last_name": "Jones",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      280 
+} 
+] 
+}

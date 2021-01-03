@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern State Demons",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-10-14",
+"draft": {
+ "round":        3,
+"season":     2006,
+"selection":       87,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      511,
+"id":     3032,
+"jersey_number": "42",
+"last_name": "Pittman",
+"position": "CB",
+"speed":     4.44,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      182 
+} 
+] 
+}

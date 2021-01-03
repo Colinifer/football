@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wake Forest Demon Deacons",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-09-09",
+"draft": {
+ "round":        4,
+"season":     2009,
+"selection":      118,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Stanley",
+"height":      600,
+"id":     5041,
+"jersey_number": "53",
+"last_name": "Arnoux",
+"position": "LB",
+"speed":     4.56,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      232 
+} 
+] 
+}

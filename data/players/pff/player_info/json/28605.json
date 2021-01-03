@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-08-30",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Alex",
+"height":      511,
+"id":    28605,
+"jersey_number": "30",
+"last_name": "Brown",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      170 
+} 
+] 
+}

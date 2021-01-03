@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeastern Oklahoma State",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-28",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Franky",
+"height":      603,
+"id":    11461,
+"jersey_number": "17",
+"last_name": "Okafor",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      190 
+} 
+] 
+}

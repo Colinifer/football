@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cal Poly Mustangs",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-01-01",
+"draft": {
+ "round":        3,
+"season":     2009,
+"selection":       85,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Ramses",
+"height":      606,
+"id":     5008,
+"jersey_number": "9",
+"last_name": "Barden",
+"position": "WR",
+"speed":     4.55,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      229 
+} 
+] 
+}

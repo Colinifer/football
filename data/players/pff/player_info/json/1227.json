@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bowling Green Falcons",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-04-04",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Khary",
+"height":      601,
+"id":     1227,
+"jersey_number": "53",
+"last_name": "Campbell",
+"position": "ST",
+"speed":     4.75,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      250 
+} 
+] 
+}

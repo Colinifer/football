@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee Volunteers",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1979-03-14",
+"draft": {
+ "round":        2,
+"season":     2000,
+"selection":       57,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Deon",
+"height":      602,
+"id":      624,
+"jersey_number": "34",
+"last_name": "Grant",
+"position": "S",
+"speed":      4.5,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      210 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-09-30",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      207,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "NFL" 
+},
+"first_name": "Equanimeous",
+"height":      605,
+"id":    47967,
+"jersey_number": "19",
+"last_name": "St. Brown",
+"position": "WR",
+"speed":     4.48,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      214 
+} 
+] 
+}

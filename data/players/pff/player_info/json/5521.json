@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nevada Wolf Pack",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-05-01",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Paul",
+"height":      510,
+"id":     5521,
+"jersey_number": "36",
+"last_name": "Pratt",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      185 
+} 
+] 
+}

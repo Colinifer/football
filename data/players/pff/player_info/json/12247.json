@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon Ducks",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-05-04",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Pharaoh",
+"height":      606,
+"id":    12247,
+"jersey_number": "85",
+"last_name": "Brown",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      258 
+} 
+] 
+}

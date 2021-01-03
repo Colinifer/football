@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charlotte 49ers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-07-13",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      603,
+"id":    12299,
+"jersey_number": "54",
+"last_name": "Banks",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      267 
+} 
+] 
+}

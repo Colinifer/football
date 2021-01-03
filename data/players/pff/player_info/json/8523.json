@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Michigan Broncos",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1988-02-22",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Dallas",
+"height":      606,
+"id":     8523,
+"jersey_number": "86",
+"last_name": "Walker",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      235 
+} 
+] 
+}

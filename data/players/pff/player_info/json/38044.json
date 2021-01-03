@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "James Madison Dukes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-09-14",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Rashard",
+"height":      509,
+"id":    38044,
+"jersey_number": "00",
+"last_name": "Davis",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      175 
+} 
+] 
+}

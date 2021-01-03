@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho Vandals",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-12-23",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      511,
+"id":    11392,
+"jersey_number": "00",
+"last_name": "Edwards",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      180 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Baylor Bears",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-07-29",
+"draft": {
+ "round":        6,
+"season":     2014,
+"selection":      186,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Lache",
+"height":      509,
+"id":     8821,
+"jersey_number": "36",
+"last_name": "Seastrunk",
+"position": "HB",
+"speed":     4.51,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      200 
+} 
+] 
+}

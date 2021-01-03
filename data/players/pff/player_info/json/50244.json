@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Rebels",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1993-12-16",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      136,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Marquis",
+"height":      602,
+"id":    50244,
+"jersey_number": "98",
+"last_name": "Haynes",
+"position": "ED",
+"speed":     4.67,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      235 
+} 
+] 
+}

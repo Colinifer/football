@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Auburn Tigers",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-01-21",
+"draft": {
+ "round":        5,
+"season":     2010,
+"selection":      138,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Walter",
+"height":      510,
+"id":     5661,
+"jersey_number": "22",
+"last_name": "McFadden",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      180 
+} 
+] 
+}

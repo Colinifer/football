@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTSA Roadrunners",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-05-19",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      188,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      604,
+"id":    10822,
+"jersey_number": "89",
+"last_name": "Morgan",
+"position": "TE",
+"speed":     5.02,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      265 
+} 
+] 
+}

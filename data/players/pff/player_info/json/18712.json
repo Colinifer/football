@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Montana Grizzlies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-02-04",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Caleb",
+"height":      605,
+"id":    18712,
+"jersey_number": "64",
+"last_name": "Kidder",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      275 
+} 
+] 
+}

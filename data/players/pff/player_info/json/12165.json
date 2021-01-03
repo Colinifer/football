@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Shepherd",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-11-01",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Tre",
+"height":      600,
+"id":    12165,
+"jersey_number": "37",
+"last_name": "Sullivan",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      200 
+} 
+] 
+}

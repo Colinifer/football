@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa State Cyclones",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-07",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Marchie",
+"height":      600,
+"id":    47847,
+"jersey_number": "0",
+"last_name": "Murdock",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      201 
+} 
+] 
+}

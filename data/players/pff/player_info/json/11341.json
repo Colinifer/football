@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTEP Miners",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-23",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Roy",
+"height":      607,
+"id":    11341,
+"jersey_number": "95",
+"last_name": "Robertson-Harris",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      294 
+} 
+] 
+}

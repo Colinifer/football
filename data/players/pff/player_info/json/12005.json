@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Michigan Eagles",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-11-01",
+"draft": {
+ "round":        7,
+"season":     2017,
+"selection":      250,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Patrick",
+"height":      604,
+"id":    12005,
+"jersey_number": "79",
+"last_name": "O'Connor",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      270 
+} 
+] 
+}

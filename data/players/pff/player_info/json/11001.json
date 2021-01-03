@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon State Beavers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-03-05",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Larry",
+"height":      511,
+"id":    11001,
+"jersey_number": "D40",
+"last_name": "Scott",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      192 
+} 
+] 
+}

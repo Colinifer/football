@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Arizona Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-09-24",
+"draft": {
+ "round":        6,
+"season":     2004,
+"selection":      199,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Clarence",
+"height":      606,
+"id":     1915,
+"jersey_number": "84",
+"last_name": "Moore",
+"position": "WR",
+"speed":     4.55,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      211 
+} 
+] 
+}

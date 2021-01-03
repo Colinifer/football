@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Rebels",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1986-11-15",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Gilbert",
+"height":      602,
+"id":     8289,
+"jersey_number": "68",
+"last_name": "Pena",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      330 
+} 
+] 
+}

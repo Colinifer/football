@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado Mesa",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-06-01",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Austin",
+"height":      607,
+"id":    66954,
+"jersey_number": "63",
+"last_name": "Fleer",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      306 
+} 
+] 
+}

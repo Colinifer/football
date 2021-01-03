@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Washington Eagles",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-05-13",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Clay",
+"height":      606,
+"id":    10952,
+"jersey_number": "67",
+"last_name": "DeBord",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      305 
+} 
+] 
+}

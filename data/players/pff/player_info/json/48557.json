@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas Jayhawks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-06-10",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      116,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Dorance",
+"height":      604,
+"id":    48557,
+"jersey_number": "92",
+"last_name": "Armstrong",
+"position": "ED",
+"speed":     4.87,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      255 
+} 
+] 
+}

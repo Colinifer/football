@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Jose State Spartans",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-02-10",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Andre",
+"height":      600,
+"id":    51194,
+"jersey_number": "00",
+"last_name": "Chachere",
+"position": "CB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      200 
+} 
+] 
+}

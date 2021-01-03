@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Michigan Chippewas",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-11-21",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Cooper",
+"height":      603,
+"id":    12324,
+"jersey_number": "10",
+"last_name": "Rush",
+"position": "QB",
+"speed":     4.93,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      225 
+} 
+] 
+}

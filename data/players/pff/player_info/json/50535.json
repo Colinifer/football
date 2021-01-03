@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeast Missouri State Redhawks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-08-04",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      600,
+"id":    50535,
+"jersey_number": "38",
+"last_name": "Ford",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      194 
+} 
+] 
+}

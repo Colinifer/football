@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCF Knights",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-23",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Jamiyus",
+"height":      602,
+"id":    50036,
+"jersey_number": "65",
+"last_name": "Pittman",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      319 
+} 
+] 
+}

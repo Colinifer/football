@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A&M Aggies",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-11-13",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Melvin",
+"height":      600,
+"id":     3901,
+"jersey_number": "33",
+"last_name": "Bullitt",
+"position": "S",
+"speed":     4.52,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      201 
+} 
+] 
+}

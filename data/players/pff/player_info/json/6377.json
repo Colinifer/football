@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Tech Yellow Jackets",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-08-06",
+"draft": {
+ "round":        7,
+"season":     2011,
+"selection":      225,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Anthony",
+"height":      601,
+"id":     6377,
+"jersey_number": "35",
+"last_name": "Allen",
+"position": "HB",
+"speed":     4.56,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      228 
+} 
+] 
+}

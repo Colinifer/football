@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota State Jackrabbits",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-12-08",
+"draft": {
+ "round":        6,
+"season":     2010,
+"selection":      192,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Danny",
+"height":      603,
+"id":     5715,
+"jersey_number": "57",
+"last_name": "Batten",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      254 
+} 
+] 
+}

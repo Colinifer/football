@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cincinnati Bearcats",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-12-02",
+"draft": {
+ "round":        4,
+"season":     2010,
+"selection":       99,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Mardy",
+"height":      600,
+"id":     5623,
+"jersey_number": "16",
+"last_name": "Gilyard",
+"position": "WR",
+"speed":     4.61,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      187 
+} 
+] 
+}

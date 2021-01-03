@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-05-10",
+"draft": {
+ "round":        7,
+"season":     2003,
+"selection":      244,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Norman",
+"height":      600,
+"id":     1538,
+"jersey_number": "42",
+"last_name": "LeJeune",
+"position": "S",
+"speed":     4.65,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      207 
+} 
+] 
+}

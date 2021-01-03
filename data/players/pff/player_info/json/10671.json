@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-07-03",
+"draft": {
+ "round":        2,
+"season":     2016,
+"selection":       37,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      606,
+"id":    10671,
+"jersey_number": "95",
+"last_name": "Jones",
+"position": "DI",
+"speed":     5.03,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      310 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeast Missouri State Redhawks",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-01-18",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      189,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Drew",
+"height":      605,
+"id":    28671,
+"jersey_number": "79",
+"last_name": "Forbes",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      305 
+} 
+] 
+}

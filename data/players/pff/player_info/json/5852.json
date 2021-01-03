@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Massachusetts Minutemen",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-10-25",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Jeremy",
+"height":      602,
+"id":     5852,
+"jersey_number": "11",
+"last_name": "Horne",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      193 
+} 
+] 
+}

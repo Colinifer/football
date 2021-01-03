@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTEP Miners",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-05-06",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Darrin",
+"height":      601,
+"id":    47296,
+"jersey_number": "44",
+"last_name": "Laufasa",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      235 
+} 
+] 
+}

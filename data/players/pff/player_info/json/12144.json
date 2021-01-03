@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona State Sun Devils",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-07-15",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Tim",
+"height":      510,
+"id":    12144,
+"jersey_number": "14",
+"last_name": "White",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      185 
+} 
+] 
+}

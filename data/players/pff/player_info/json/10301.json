@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Winston - Salem State",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-01",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Alfy",
+"height":      605,
+"id":    10301,
+"jersey_number": "77",
+"last_name": "Hill",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      275 
+} 
+] 
+}

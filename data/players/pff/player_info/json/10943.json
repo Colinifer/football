@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Rebels",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-17",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Channing",
+"height":      604,
+"id":    10943,
+"jersey_number": "0",
+"last_name": "Ward",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      260 
+} 
+] 
+}

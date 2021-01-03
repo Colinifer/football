@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Troy Trojans",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-04-25",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Trevon",
+"height":      602,
+"id":    37329,
+"jersey_number": "D64",
+"last_name": "Sanders",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      327 
+} 
+] 
+}

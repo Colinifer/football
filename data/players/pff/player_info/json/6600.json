@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Connecticut Huskies",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-04-23",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Scott",
+"height":      602,
+"id":     6600,
+"jersey_number": "56",
+"last_name": "Lutrus",
+"position": "LB",
+"speed":     4.68,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      241 
+} 
+] 
+}

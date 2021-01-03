@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "BYU Cougars",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1988-05-25",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Romney",
+"height":      602,
+"id":     8093,
+"jersey_number": "76",
+"last_name": "Fuga",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      318 
+} 
+] 
+}

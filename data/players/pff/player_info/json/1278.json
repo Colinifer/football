@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Virginia Mountaineers",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-01-25",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Corey",
+"height":      600,
+"id":     1278,
+"jersey_number": "38",
+"last_name": "McIntyre",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      245 
+} 
+] 
+}

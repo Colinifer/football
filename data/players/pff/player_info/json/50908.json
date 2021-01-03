@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-04-15",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Richie",
+"height":      601,
+"id":    50908,
+"jersey_number": "00",
+"last_name": "Brown",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      235 
+} 
+] 
+}

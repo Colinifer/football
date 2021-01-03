@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico State Aggies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-11-29",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Winston",
+"height":      600,
+"id":    11197,
+"jersey_number": "39",
+"last_name": "Rose",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      174 
+} 
+] 
+}

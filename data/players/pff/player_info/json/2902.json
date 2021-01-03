@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Miss Golden Eagles",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-04-23",
+"draft": {
+ "round":        2,
+"season":     2000,
+"selection":       36,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Todd",
+"height":      602,
+"id":     2902,
+"jersey_number": "87",
+"last_name": "Pinkston",
+"position": "WR",
+"speed":     4.42,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      180 
+} 
+] 
+}

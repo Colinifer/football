@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Massachusetts Minutemen",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-06-08",
+"draft": {
+ "round":        7,
+"season":     2014,
+"selection":      230,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Rob",
+"height":      604,
+"id":     8864,
+"jersey_number": "87",
+"last_name": "Blanchflower",
+"position": "ST",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      256 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulane Green Wave",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-12-30",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Xavier",
+"height":      603,
+"id":    10353,
+"jersey_number": "17",
+"last_name": "Rush",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      202 
+} 
+] 
+}

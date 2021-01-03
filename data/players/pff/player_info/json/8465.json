@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Toledo Rockets",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-02-12",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Dan",
+"height":      600,
+"id":     8465,
+"jersey_number": "45D",
+"last_name": "Molls",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      238 
+} 
+] 
+}

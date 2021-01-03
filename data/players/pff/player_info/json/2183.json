@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Purdue Boilermakers",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-04-15",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      603,
+"id":     2183,
+"jersey_number": "16",
+"last_name": "Standeford",
+"position": "WR",
+"speed":      4.6,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      206 
+} 
+] 
+}

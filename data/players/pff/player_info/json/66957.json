@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Limestone",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-06-09",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Vyncint",
+"height":      603,
+"id":    66957,
+"jersey_number": "17",
+"last_name": "Smith",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      202 
+} 
+] 
+}

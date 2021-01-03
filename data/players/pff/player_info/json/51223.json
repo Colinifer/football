@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "East Carolina Pirates",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-09-20",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "DaShaun",
+"height":      601,
+"id":    51223,
+"jersey_number": "41",
+"last_name": "Amos",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      182 
+} 
+] 
+}

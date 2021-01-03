@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kentucky Wildcats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-02-24",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      190,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Josh",
+"height":      603,
+"id":    10824,
+"jersey_number": "47",
+"last_name": "Forrest",
+"position": "ED",
+"speed":     4.91,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      249 
+} 
+] 
+}

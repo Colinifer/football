@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas Razorbacks",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-07-26",
+"draft": {
+ "round":        4,
+"season":     2017,
+"selection":      131,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Deatrich",
+"height":      605,
+"id":    11886,
+"jersey_number": "91",
+"last_name": "Wise Jr.",
+"position": "DI",
+"speed":     4.92,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      275 
+} 
+] 
+}

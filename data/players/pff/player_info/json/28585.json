@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kentucky Wildcats",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-06-01",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Dorian",
+"height":      603,
+"id":    28585,
+"jersey_number": "19",
+"last_name": "Baker",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      213 
+} 
+] 
+}

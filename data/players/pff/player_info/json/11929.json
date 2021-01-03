@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Drake Bulldogs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-05-09",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      174,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Eric",
+"height":      605,
+"id":    11929,
+"jersey_number": "85",
+"last_name": "Saubert",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      253 
+} 
+] 
+}

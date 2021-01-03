@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tuskegee Golden Tigers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-08-06",
+"draft": {
+ "round":        6,
+"season":     2003,
+"selection":      207,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Frank",
+"height":      511,
+"id":     1507,
+"jersey_number": "25",
+"last_name": "Walker",
+"position": "CB",
+"speed":     4.58,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      193 
+} 
+] 
+}

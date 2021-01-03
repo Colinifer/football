@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "East Carolina Pirates",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-07-17",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Dominique",
+"height":      603,
+"id":     7666,
+"jersey_number": "5",
+"last_name": "Davis",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      210 
+} 
+] 
+}

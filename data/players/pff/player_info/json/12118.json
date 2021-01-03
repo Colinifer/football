@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Youngstown State Penguins",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-07-23",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "David",
+"height":      600,
+"id":    12118,
+"jersey_number": "46",
+"last_name": "Rivers",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      185 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Alabama Tigers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-06-09",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Abraham",
+"height":      600,
+"id":    13581,
+"jersey_number": "35",
+"last_name": "Wallace",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      190 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Incarnate Word Cardinals",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-01-15",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Alex",
+"height":      606,
+"id":    25967,
+"jersey_number": "98",
+"last_name": "Jenkins",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      270 
+} 
+] 
+}

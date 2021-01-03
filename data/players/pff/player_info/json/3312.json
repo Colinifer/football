@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah Utes",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-05-16",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Steve",
+"height":      600,
+"id":     3312,
+"jersey_number": "60",
+"last_name": "Fifita",
+"position": "DI",
+"speed":     5.17,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      327 
+} 
+] 
+}

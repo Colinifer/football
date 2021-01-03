@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Atlantic Owls",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-02-25",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "David",
+"height":      602,
+"id":     8161,
+"jersey_number": "47",
+"last_name": "Hinds",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      234 
+} 
+] 
+}

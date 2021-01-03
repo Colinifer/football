@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado State Rams",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-03-12",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Joe",
+"height":      606,
+"id":     8136,
+"jersey_number": "60O",
+"last_name": "Caprioglio",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      315 
+} 
+] 
+}

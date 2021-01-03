@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Weber State Wildcats",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1970-02-08",
+"draft": {
+ "round": null,
+"season":     1993,
+"selection": null,
+"team": {
+ "abbreviation": "LAR",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Jamie",
+"height":      602,
+"id":       63,
+"jersey_number": "10",
+"last_name": "Martin",
+"position": "QB",
+"speed":     4.81,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      205 
+} 
+] 
+}

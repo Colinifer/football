@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas State Wildcats",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1976-11-19",
+"draft": {
+ "round":        2,
+"season":     2000,
+"selection":       33,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Darren",
+"height":      604,
+"id":      606,
+"jersey_number": "90",
+"last_name": "Howard",
+"position": "ED",
+"speed":     5.09,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      275 
+} 
+] 
+}

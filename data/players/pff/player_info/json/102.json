@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Liberty Flames",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1972-01-18",
+"draft": {
+ "round": null,
+"season":     1994,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Dwayne",
+"height":      603,
+"id":      102,
+"jersey_number": "89",
+"last_name": "Carswell",
+"position": "G",
+"speed":     5.11,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      290 
+} 
+] 
+}

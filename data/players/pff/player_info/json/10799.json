@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Alabama Tigers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-03-01",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      165,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Tyreek",
+"height":      510,
+"id":    10799,
+"jersey_number": "10",
+"last_name": "Hill",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      185 
+} 
+] 
+}

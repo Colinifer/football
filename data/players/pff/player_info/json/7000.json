@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "St. Augustine's Falcons",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-01-06",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Justin",
+"height":      604,
+"id":     7000,
+"jersey_number": "79",
+"last_name": "Wells",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      316 
+} 
+] 
+}

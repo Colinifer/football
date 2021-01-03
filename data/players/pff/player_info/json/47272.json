@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota State Jackrabbits",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-03",
+"draft": {
+ "round":        2,
+"season":     2018,
+"selection":       49,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Dallas",
+"height":      604,
+"id":    47272,
+"jersey_number": "88",
+"last_name": "Goedert",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      260 
+} 
+] 
+}

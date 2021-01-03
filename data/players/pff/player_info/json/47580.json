@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas State Bobcats",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-12-22",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Keenen",
+"height":      602,
+"id":    47580,
+"jersey_number": "O48",
+"last_name": "Brown",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      256 
+} 
+] 
+}

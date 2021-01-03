@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-01-27",
+"draft": {
+ "round":        3,
+"season":     2016,
+"selection":       66,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Max",
+"height":      606,
+"id":    10700,
+"jersey_number": "0",
+"last_name": "Tuerk",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      285 
+} 
+] 
+}

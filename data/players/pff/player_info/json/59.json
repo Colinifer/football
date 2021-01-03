@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marshall Thundering Herd",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1970-06-23",
+"draft": {
+ "round": null,
+"season":     1993,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      604,
+"id":       59,
+"jersey_number": "88",
+"last_name": "Bartrum",
+"position": "TE",
+"speed":        5,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      245 
+} 
+] 
+}

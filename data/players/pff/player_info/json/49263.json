@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Penn State Nittany Lions",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-08-08",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      148,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "NFL" 
+},
+"first_name": "Marcus",
+"height":      602,
+"id":    49263,
+"jersey_number": "27",
+"last_name": "Allen",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      215 
+} 
+] 
+}

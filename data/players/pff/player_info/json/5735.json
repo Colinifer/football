@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Middle Tennessee Blue Raiders",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-11-25",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      212,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      602,
+"id":     5735,
+"jersey_number": "95",
+"last_name": "McCoy",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      245 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A&M Aggies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-03-19",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      124,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "NFL" 
+},
+"first_name": "Armani",
+"height":      511,
+"id":    51264,
+"jersey_number": "23",
+"last_name": "Watts",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      205 
+} 
+] 
+}

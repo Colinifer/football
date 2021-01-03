@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alcorn State Braves",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-11-02",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "FA" 
+},
+"first_name": "Jarvis",
+"height":      601,
+"id":    11453,
+"jersey_number": "15",
+"last_name": "Turner",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      194 
+} 
+] 
+}

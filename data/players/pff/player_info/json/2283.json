@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1981-06-23",
+"draft": {
+ "round":        3,
+"season":     2005,
+"selection":       66,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "O.J.",
+"height":      511,
+"id":     2283,
+"jersey_number": "20",
+"last_name": "Atogwe",
+"position": "S",
+"speed":     4.52,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      203 
+} 
+] 
+}

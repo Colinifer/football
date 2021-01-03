@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colgate Raiders",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-06-15",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Nate",
+"height":      510,
+"id":     7722,
+"jersey_number": "45",
+"last_name": "Eachus",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      212 
+} 
+] 
+}

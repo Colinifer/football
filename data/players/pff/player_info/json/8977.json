@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maryland Terrapins",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-12-15",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Marcus",
+"height":      603,
+"id":     8977,
+"jersey_number": "48",
+"last_name": "Whitfield",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      250 
+} 
+] 
+}

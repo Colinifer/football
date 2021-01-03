@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-08-13",
+"draft": {
+ "round":        4,
+"season":     2005,
+"selection":      105,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Ray",
+"height":      606,
+"id":     2322,
+"jersey_number": "67",
+"last_name": "Willis",
+"position": "T",
+"speed":     5.15,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      327 
+} 
+] 
+}

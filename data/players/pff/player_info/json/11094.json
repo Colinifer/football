@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Harvard Crimson",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-13",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      604,
+"id":    11094,
+"jersey_number": "00",
+"last_name": "Fabiano",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      303 
+} 
+] 
+}

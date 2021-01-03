@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Tech Red Raiders",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-07-06",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Justin",
+"height":      509,
+"id":    45705,
+"jersey_number": "25",
+"last_name": "Stockton",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      197 
+} 
+] 
+}

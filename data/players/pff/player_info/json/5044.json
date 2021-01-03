@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Tech Red Raiders",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1988-06-21",
+"draft": {
+ "round":        4,
+"season":     2009,
+"selection":      120,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Brandon",
+"height":      602,
+"id":     5044,
+"jersey_number": "59",
+"last_name": "Williams",
+"position": "LB",
+"speed":     4.96,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      254 
+} 
+] 
+}

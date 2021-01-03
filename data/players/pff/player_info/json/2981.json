@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1985-03-06",
+"draft": {
+ "round":        2,
+"season":     2006,
+"selection":       36,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Chad",
+"height":      601,
+"id":     2981,
+"jersey_number": "16",
+"last_name": "Jackson",
+"position": "WR",
+"speed":     4.32,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      202 
+} 
+] 
+}

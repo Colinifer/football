@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jacksonville State Gamecocks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-02-27",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "James",
+"height":      511,
+"id":     8219,
+"jersey_number": "88",
+"last_name": "Shaw",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      185 
+} 
+] 
+}

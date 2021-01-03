@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisville Cardinals",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-11-04",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Richard",
+"height":      604,
+"id":     2141,
+"jersey_number": "49",
+"last_name": "Owens",
+"position": "FB",
+"speed":        5,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      273 
+} 
+] 
+}

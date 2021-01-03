@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona Wildcats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-05-04",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "David",
+"height":      604,
+"id":    11055,
+"jersey_number": "12",
+"last_name": "Richards",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      213 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee State Tigers",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-02-17",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Bennie",
+"height":      605,
+"id":      717,
+"jersey_number": "63",
+"last_name": "Anderson",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      345 
+} 
+] 
+}

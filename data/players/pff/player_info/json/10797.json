@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California Golden Bears",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-04",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      163,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Trevor",
+"height":      601,
+"id":    10797,
+"jersey_number": "00",
+"last_name": "Davis",
+"position": "WR",
+"speed":     4.42,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      188 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charleston (WV)",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-11-22",
+"draft": {
+ "round":        4,
+"season":     2019,
+"selection":      135,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "John",
+"height":      605,
+"id":    88313,
+"jersey_number": "50",
+"last_name": "Cominsky",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      275 
+} 
+] 
+}

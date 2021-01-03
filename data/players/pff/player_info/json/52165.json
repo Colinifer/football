@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Portland State Vikings",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-09-26",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Donovan",
+"height":      602,
+"id":    52165,
+"jersey_number": "33",
+"last_name": "Olumba",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      205 
+} 
+] 
+}

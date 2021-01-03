@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charlotte 49ers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-08-03",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Austin",
+"height":      509,
+"id":    47632,
+"jersey_number": "8",
+"last_name": "Duke",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      170 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisville Cardinals",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-02-09",
+"draft": {
+ "round":        1,
+"season":     2018,
+"selection":       18,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Jaire",
+"height":      510,
+"id":    49350,
+"jersey_number": "23",
+"last_name": "Alexander",
+"position": "CB",
+"speed":     4.38,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      196 
+} 
+] 
+}

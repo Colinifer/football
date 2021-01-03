@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Toledo Rockets",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-06-29",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Stephen",
+"height":      604,
+"id":     5880,
+"jersey_number": "83",
+"last_name": "Williams",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      208 
+} 
+] 
+}

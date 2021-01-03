@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa State Cyclones",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-08-28",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "E.J.",
+"height":      604,
+"id":    10034,
+"jersey_number": "O45",
+"last_name": "Bibbs",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      260 
+} 
+] 
+}

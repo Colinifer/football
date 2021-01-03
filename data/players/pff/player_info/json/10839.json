@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeastern Louisiana Lions",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-06-20",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      205,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Harlan",
+"height":      511,
+"id":    10839,
+"jersey_number": "48",
+"last_name": "Miller",
+"position": "S",
+"speed":     4.65,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      182 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina State Wolfpack",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-05-21",
+"draft": {
+ "round":        3,
+"season":     2019,
+"selection":       72,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Germaine",
+"height":      602,
+"id":    29407,
+"jersey_number": "57",
+"last_name": "Pratt",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      240 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh State",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-05-03",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Deron",
+"height":      601,
+"id":    12082,
+"jersey_number": "49",
+"last_name": "Washington",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      215 
+} 
+] 
+}

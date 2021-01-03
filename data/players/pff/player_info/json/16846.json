@@ -1,0 +1,28 @@
+{
+ "players": [
+ {
+ "college": "Rutgers Scarlet Knights",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-05-03",
+"draft": null,
+"first_name": "Derrick",
+"height":      603,
+"id":    16846,
+"jersey_number": "62",
+"last_name": "Nelson",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      295 
+} 
+] 
+}

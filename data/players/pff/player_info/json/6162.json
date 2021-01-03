@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Tigers",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1989-10-15",
+"draft": {
+ "round":        1,
+"season":     2011,
+"selection":       10,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Blaine",
+"height":      604,
+"id":     6162,
+"jersey_number": "11",
+"last_name": "Gabbert",
+"position": "QB",
+"speed":     4.61,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      235 
+} 
+] 
+}

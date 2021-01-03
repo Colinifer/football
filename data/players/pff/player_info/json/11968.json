@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisville Cardinals",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-07-18",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      213,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Colin",
+"height":      604,
+"id":    11968,
+"jersey_number": "00",
+"last_name": "Holba",
+"position": "LS",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      248 
+} 
+] 
+}

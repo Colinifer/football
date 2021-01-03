@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington State Cougars",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-11-29",
+"draft": {
+ "round":        3,
+"season":     2005,
+"selection":       76,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Karl",
+"height":      600,
+"id":     2293,
+"jersey_number": "24",
+"last_name": "Paymah",
+"position": "CB",
+"speed":     4.35,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      204 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington State Cougars",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-04-16",
+"draft": {
+ "round":        3,
+"season":     2004,
+"selection":       82,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Devard",
+"height":      601,
+"id":     1803,
+"jersey_number": "81",
+"last_name": "Darling",
+"position": "WR",
+"speed":     4.52,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      215 
+} 
+] 
+}

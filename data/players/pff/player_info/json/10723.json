@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-02-07",
+"draft": {
+ "round":        3,
+"season":     2016,
+"selection":       89,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Javon",
+"height":      602,
+"id":    10723,
+"jersey_number": "93",
+"last_name": "Hargrave",
+"position": "DI",
+"speed":     4.93,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      305 
+} 
+] 
+}

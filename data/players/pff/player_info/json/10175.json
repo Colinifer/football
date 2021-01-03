@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "McNeese State Cowboys",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-11-16",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Antoine",
+"height":      603,
+"id":    10175,
+"jersey_number": "61",
+"last_name": "Everett",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      325 
+} 
+] 
+}

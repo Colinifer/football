@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona State Sun Devils",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-12-24",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Kevin",
+"height":      602,
+"id":     9111,
+"jersey_number": "16",
+"last_name": "Ozier",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      200 
+} 
+] 
+}

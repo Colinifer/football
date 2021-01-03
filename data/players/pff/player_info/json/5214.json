@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Tigers",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-10-07",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Chase",
+"height":      600,
+"id":     5214,
+"jersey_number": "4",
+"last_name": "Daniel",
+"position": "QB",
+"speed":     4.79,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      225 
+} 
+] 
+}

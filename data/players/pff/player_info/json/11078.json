@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah State Aggies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-04-25",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Hunter",
+"height":      600,
+"id":    11078,
+"jersey_number": "15",
+"last_name": "Sharp",
+"position": "WR",
+"speed":     4.58,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      199 
+} 
+] 
+}

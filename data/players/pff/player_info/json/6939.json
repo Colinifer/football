@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas State Wildcats",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-03-09",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "William",
+"height":      509,
+"id":     6939,
+"jersey_number": "33",
+"last_name": "Powell",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      207 
+} 
+] 
+}

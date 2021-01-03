@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Illinois State Redbirds",
+"current_class": null,
+"current_eligible_year":     1985,
+"dob": "1963-11-14",
+"draft": {
+ "round":        7,
+"season":     1985,
+"selection":      176,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Mike",
+"height":      600,
+"id":    11585,
+"jersey_number": "39",
+"last_name": "Prior",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      208 
+} 
+] 
+}

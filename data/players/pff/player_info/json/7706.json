@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "William & Mary Tribe",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-07-04",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Alex",
+"height":      604,
+"id":     7706,
+"jersey_number": "80",
+"last_name": "Gottlieb",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      255 
+} 
+] 
+}

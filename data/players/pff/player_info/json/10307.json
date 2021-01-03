@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Arkansas",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-01",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Jeremy",
+"height":      601,
+"id":    10307,
+"jersey_number": "8",
+"last_name": "Crayton",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      190 
+} 
+] 
+}

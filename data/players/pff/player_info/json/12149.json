@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho Vandals",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-03-17",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Austin",
+"height":      604,
+"id":    12149,
+"jersey_number": "00",
+"last_name": "Rehkow",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      214 
+} 
+] 
+}

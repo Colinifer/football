@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Illinois Leathernecks",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-03-30",
+"draft": {
+ "round": null,
+"season":     2001,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Rich",
+"height":      603,
+"id":      986,
+"jersey_number": "69",
+"last_name": "Seubert",
+"position": "G",
+"speed":      5.1,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      305 
+} 
+] 
+}

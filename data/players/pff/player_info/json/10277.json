@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bethel - Tennessee",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-12-07",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Jocquel",
+"height":      602,
+"id":    10277,
+"jersey_number": "39",
+"last_name": "Skinner",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      175 
+} 
+] 
+}

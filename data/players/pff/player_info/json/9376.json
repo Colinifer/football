@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bowling Green Falcons",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-05-20",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Jairus",
+"height":      605,
+"id":     9376,
+"jersey_number": "60D",
+"last_name": "Campbell",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      296 
+} 
+] 
+}

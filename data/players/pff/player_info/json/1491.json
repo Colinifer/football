@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1979-11-03",
+"draft": {
+ "round":        6,
+"season":     2003,
+"selection":      188,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Hanik",
+"height":      602,
+"id":     1491,
+"jersey_number": "37",
+"last_name": "Milligan",
+"position": "S",
+"speed":     4.52,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      200 
+} 
+] 
+}

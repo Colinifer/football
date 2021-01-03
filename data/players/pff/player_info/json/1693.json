@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Illinois Panthers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-04-21",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Tony",
+"height":      602,
+"id":     1693,
+"jersey_number": "9",
+"last_name": "Romo",
+"position": "QB",
+"speed":     5.01,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      219 
+} 
+] 
+}

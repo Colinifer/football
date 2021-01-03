@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-30",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      177,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Temarrick",
+"height":      605,
+"id":    10811,
+"jersey_number": "88",
+"last_name": "Hemingway",
+"position": "TE",
+"speed":     4.71,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      246 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-03-15",
+"draft": {
+ "round":        4,
+"season":     2009,
+"selection":      103,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Darell",
+"height":      603,
+"id":     5026,
+"jersey_number": "97",
+"last_name": "Scott",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      312 
+} 
+] 
+}

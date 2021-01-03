@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California Golden Bears",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-09-03",
+"draft": {
+ "round":        2,
+"season":     2002,
+"selection":       53,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Langston",
+"height":      608,
+"id":     1060,
+"jersey_number": "70",
+"last_name": "Walker",
+"position": "T",
+"speed":     5.26,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      345 
+} 
+] 
+}

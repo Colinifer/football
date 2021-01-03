@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa State Cyclones",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-10-23",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Jamal",
+"height":      510,
+"id":    12259,
+"jersey_number": "33",
+"last_name": "Perry",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      190 
+} 
+] 
+}

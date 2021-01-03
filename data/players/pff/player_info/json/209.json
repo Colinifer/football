@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas State Red Wolves",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-09-03",
+"draft": {
+ "round":        7,
+"season":     1996,
+"selection":      242,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Carlos",
+"height":      605,
+"id":      209,
+"jersey_number": "51",
+"last_name": "Emmons",
+"position": "LB",
+"speed":     4.88,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      250 
+} 
+] 
+}

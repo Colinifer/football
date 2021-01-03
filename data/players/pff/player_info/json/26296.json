@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chattanooga Mocs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-08-14",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Tae",
+"height":      601,
+"id":    26296,
+"jersey_number": "55",
+"last_name": "Davis",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      224 
+} 
+] 
+}

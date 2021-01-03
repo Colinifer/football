@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas Razorbacks",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-09-03",
+"draft": {
+ "round":        3,
+"season":     2004,
+"selection":       80,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Caleb",
+"height":      603,
+"id":     1801,
+"jersey_number": "58",
+"last_name": "Miller",
+"position": "LB",
+"speed":     4.66,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      228 
+} 
+] 
+}

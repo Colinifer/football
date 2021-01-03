@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Duke Blue Devils",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-07-22",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Breon",
+"height":      600,
+"id":    39398,
+"jersey_number": "39",
+"last_name": "Borders",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      189 
+} 
+] 
+}

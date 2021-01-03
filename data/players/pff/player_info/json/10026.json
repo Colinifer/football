@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Norfolk State Spartans",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-03-19",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Lynden",
+"height":      607,
+"id":    10026,
+"jersey_number": "48",
+"last_name": "Trail",
+"position": "ED",
+"speed":     4.91,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      260 
+} 
+] 
+}

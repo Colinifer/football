@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Buffalo Bulls",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1982-09-29",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Ramon",
+"height":      602,
+"id":     3949,
+"jersey_number": "52",
+"last_name": "Guzman",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      232 
+} 
+] 
+}

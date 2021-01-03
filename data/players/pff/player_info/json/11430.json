@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Seattle",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1988-12-13",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Eric",
+"height":      606,
+"id":    11430,
+"jersey_number": "46",
+"last_name": "Wallace",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      260 
+} 
+] 
+}

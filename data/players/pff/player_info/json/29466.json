@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Dakota State Bison",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-09-15",
+"draft": {
+ "round":        5,
+"season":     2019,
+"selection":      166,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Easton",
+"height":      601,
+"id":    29466,
+"jersey_number": "2",
+"last_name": "Stick",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      224 
+} 
+] 
+}

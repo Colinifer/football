@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kentucky Wildcats",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1971-03-19",
+"draft": {
+ "round":        7,
+"season":     1994,
+"selection":      222,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Marty",
+"height":      601,
+"id":    11564,
+"jersey_number": "58",
+"last_name": "Moore",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      245 
+} 
+] 
+}

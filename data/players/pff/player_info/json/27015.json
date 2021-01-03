@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UNLV Rebels",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-02-29",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Jocquez",
+"height":      511,
+"id":    27015,
+"jersey_number": "47",
+"last_name": "Kalili",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      185 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Akron Zips",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1974-09-01",
+"draft": {
+ "round":        3,
+"season":     1997,
+"selection":       73,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Jason",
+"height":      606,
+"id":      264,
+"jersey_number": "99",
+"last_name": "Taylor",
+"position": "ED",
+"speed":     4.55,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      255 
+} 
+] 
+}

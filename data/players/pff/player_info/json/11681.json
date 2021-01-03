@@ -1,0 +1,36 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     1987,
+"dob": "1965-08-25",
+"draft": {
+ "round":        1,
+"season":     1987,
+"selection":        2,
+"team": {
+    "abbreviation": "IND"
+},
+"type": "AD" 
+},
+"first_name": "Cornelius",
+"height":      603,
+"id":    11681,
+"jersey_number": "97",
+"last_name": "Bennett",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      240 
+} 
+] 
+}

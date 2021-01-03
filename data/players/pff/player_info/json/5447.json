@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Arizona Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-04-22",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "K.J.",
+"height":      601,
+"id":     5447,
+"jersey_number": "40",
+"last_name": "Gerard",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      187 
+} 
+] 
+}

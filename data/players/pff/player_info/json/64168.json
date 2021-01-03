@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Illinois Salukis",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-05-26",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Raphael",
+"height":      602,
+"id":    64168,
+"jersey_number": "14",
+"last_name": "Leonard",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      197 
+} 
+] 
+}

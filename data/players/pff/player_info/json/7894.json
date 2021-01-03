@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas Razorbacks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-08-16",
+"draft": {
+ "round":        4,
+"season":     2013,
+"selection":      112,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Tyler",
+"height":      602,
+"id":     7894,
+"jersey_number": "9",
+"last_name": "Wilson",
+"position": "QB",
+"speed":     4.95,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      215 
+} 
+] 
+}

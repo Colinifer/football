@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina State Wolfpack",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-01-01",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      129,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "NFL" 
+},
+"first_name": "Will",
+"height":      606,
+"id":    46980,
+"jersey_number": "76",
+"last_name": "Richardson Jr.",
+"position": "T",
+"speed":     5.26,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      303 
+} 
+] 
+}

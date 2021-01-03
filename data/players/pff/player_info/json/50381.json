@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-09-08",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Deatrick",
+"height":      509,
+"id":    50381,
+"jersey_number": "00",
+"last_name": "Nichols",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      185 
+} 
+] 
+}

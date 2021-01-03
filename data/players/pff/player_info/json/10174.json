@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado Buffaloes",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-03-04",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Daniel",
+"height":      601,
+"id":    10174,
+"jersey_number": "52",
+"last_name": "Munyer",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      305 
+} 
+] 
+}

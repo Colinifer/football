@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Atlantic Owls",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-08-04",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Greg",
+"height":      600,
+"id":    22842,
+"jersey_number": "1",
+"last_name": "Joseph",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      208 
+} 
+] 
+}

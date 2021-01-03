@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-06-29",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      197,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Jeremy",
+"height":      604,
+"id":    11952,
+"jersey_number": "00",
+"last_name": "Clark",
+"position": "CB",
+"speed":     5.02,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      206 
+} 
+] 
+}

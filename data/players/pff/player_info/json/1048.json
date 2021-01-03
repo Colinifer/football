@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington State Cougars",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1978-07-30",
+"draft": {
+ "round":        2,
+"season":     2002,
+"selection":       41,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Lamont",
+"height":      601,
+"id":     1048,
+"jersey_number": "34",
+"last_name": "Thompson",
+"position": "S",
+"speed":     4.59,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      220 
+} 
+] 
+}

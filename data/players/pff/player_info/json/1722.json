@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Rebels",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-01-03",
+"draft": {
+ "round":        1,
+"season":     2004,
+"selection":        1,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Eli",
+"height":      605,
+"id":     1722,
+"jersey_number": "10",
+"last_name": "Manning",
+"position": "QB",
+"speed":      4.9,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      220 
+} 
+] 
+}

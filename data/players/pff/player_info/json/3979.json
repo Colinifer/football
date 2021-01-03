@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grand Valley State",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-11-14",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Derrick",
+"height":      603,
+"id":     3979,
+"jersey_number": "99",
+"last_name": "Jones",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      282 
+} 
+] 
+}

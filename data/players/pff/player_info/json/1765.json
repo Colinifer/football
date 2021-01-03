@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa Hawkeyes",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-02-24",
+"draft": {
+ "round":        2,
+"season":     2004,
+"selection":       44,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Bob",
+"height":      508,
+"id":     1765,
+"jersey_number": "31",
+"last_name": "Sanders",
+"position": "S",
+"speed":     4.35,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      206 
+} 
+] 
+}

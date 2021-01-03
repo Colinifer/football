@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "James Madison Dukes",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-03-03",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "D.J.",
+"height":      603,
+"id":     7584,
+"jersey_number": "49",
+"last_name": "Bryant",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      245 
+} 
+] 
+}

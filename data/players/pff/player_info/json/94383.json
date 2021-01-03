@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kutztown",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-06-15",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Craig",
+"height":      511,
+"id":    94383,
+"jersey_number": "48",
+"last_name": "Reynolds",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      215 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Samford Bulldogs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-06-22",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Austin",
+"height":      603,
+"id":    29987,
+"jersey_number": "3",
+"last_name": "Barnard",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      207 
+} 
+] 
+}

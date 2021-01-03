@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hofstra",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-04-02",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Devale",
+"height":      510,
+"id":     3303,
+"jersey_number": "15",
+"last_name": "Ellis",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      174 
+} 
+] 
+}

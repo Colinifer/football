@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwest Missouri State",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-02-15",
+"draft": {
+ "round":        6,
+"season":     2008,
+"selection":      179,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Xavier",
+"height":      511,
+"id":     4493,
+"jersey_number": "25",
+"last_name": "Omon",
+"position": "HB",
+"speed":     4.52,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      226 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Michigan Chippewas",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-01",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Justin",
+"height":      511,
+"id":    10312,
+"jersey_number": "51",
+"last_name": "Cherocci",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      241 
+} 
+] 
+}

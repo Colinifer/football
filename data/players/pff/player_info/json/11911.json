@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wyoming Cowboys",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-11-09",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      156,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Brian",
+"height":      601,
+"id":    11911,
+"jersey_number": "23",
+"last_name": "Hill",
+"position": "HB",
+"speed":     4.54,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      219 
+} 
+] 
+}

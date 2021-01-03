@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lindenwood",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1991-01-20",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Harvey",
+"height":      600,
+"id":    11454,
+"jersey_number": "2",
+"last_name": "Binford",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      185 
+} 
+] 
+}

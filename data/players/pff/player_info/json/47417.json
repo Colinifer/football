@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washington State Cougars",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-11-01",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "River",
+"height":      600,
+"id":    47417,
+"jersey_number": "86",
+"last_name": "Cracraft",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      198 
+} 
+] 
+}

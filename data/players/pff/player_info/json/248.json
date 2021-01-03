@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona State Sun Devils",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1974-12-19",
+"draft": {
+ "round":        2,
+"season":     1997,
+"selection":       42,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Jake",
+"height":      602,
+"id":      248,
+"jersey_number": "16",
+"last_name": "Plummer",
+"position": "QB",
+"speed":     4.89,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      212 
+} 
+] 
+}

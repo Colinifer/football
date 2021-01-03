@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Arkansas Bears",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-05-30",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "FA" 
+},
+"first_name": "Chase",
+"height":      605,
+"id":    10263,
+"jersey_number": "83",
+"last_name": "Dixon",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      239 
+} 
+] 
+}

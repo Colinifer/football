@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "No College",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1971-11-14",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      508,
+"id":      753,
+"jersey_number": "84",
+"last_name": "Lewis",
+"position": "ST",
+"speed":      4.3,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      173 
+} 
+] 
+}

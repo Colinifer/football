@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Appalachian State Mountaineers",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1972-10-20",
+"draft": {
+ "round":        3,
+"season":     1997,
+"selection":       65,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Dexter",
+"height":      510,
+"id":      260,
+"jersey_number": "52",
+"last_name": "Coakley",
+"position": "LB",
+"speed":     4.52,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      236 
+} 
+] 
+}

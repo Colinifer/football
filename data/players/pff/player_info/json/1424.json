@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-02-02",
+"draft": {
+ "round":        4,
+"season":     2003,
+"selection":      112,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Matt",
+"height":      604,
+"id":     1424,
+"jersey_number": "57",
+"last_name": "Wilhelm",
+"position": "LB",
+"speed":     4.74,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      254 
+} 
+] 
+}

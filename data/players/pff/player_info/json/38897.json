@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon Ducks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-09-05",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      153,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Tyrell",
+"height":      604,
+"id":    38897,
+"jersey_number": "65",
+"last_name": "Crosby",
+"position": "T",
+"speed":     5.23,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      309 
+} 
+] 
+}

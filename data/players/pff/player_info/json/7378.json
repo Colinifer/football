@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nicholls State Colonels",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-09-23",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Bobby",
+"height":      511,
+"id":     7378,
+"jersey_number": "39",
+"last_name": "Felder",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      200 
+} 
+] 
+}

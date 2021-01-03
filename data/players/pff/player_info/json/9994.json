@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Montana State Bobcats",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-12-07",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Alex",
+"height":      602,
+"id":     9994,
+"jersey_number": "49",
+"last_name": "Singleton",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      232 
+} 
+] 
+}

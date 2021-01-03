@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah Utes",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-06-23",
+"draft": {
+ "round":        1,
+"season":     1998,
+"selection":       16,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Oilers",
+"primary_color": "#c8032b",
+"secondary_color": "#4790de",
+"slug": "tennessee-oilers" 
+},
+"type": "AD" 
+},
+"first_name": "Kevin",
+"height":      601,
+"id":      338,
+"jersey_number": "85",
+"last_name": "Dyson",
+"position": "WR",
+"speed":     4.42,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      212 
+} 
+] 
+}

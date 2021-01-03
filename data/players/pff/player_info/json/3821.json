@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTEP Miners",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-05-30",
+"draft": {
+ "round":        6,
+"season":     2007,
+"selection":      205,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Jordan",
+"height":      605,
+"id":     3821,
+"jersey_number": "5",
+"last_name": "Palmer",
+"position": "QB",
+"speed":     4.98,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      231 
+} 
+] 
+}

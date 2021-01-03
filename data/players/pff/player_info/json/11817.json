@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1996-11-22",
+"draft": {
+ "round":        2,
+"season":     2017,
+"selection":       62,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "JuJu",
+"height":      601,
+"id":    11817,
+"jersey_number": "19",
+"last_name": "Smith-Schuster",
+"position": "WR",
+"speed":     4.54,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      215 
+} 
+] 
+}

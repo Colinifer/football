@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Ragin' Cajuns",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-11-09",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Alonzo",
+"height":      601,
+"id":     9926,
+"jersey_number": "46",
+"last_name": "Harris",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      238 
+} 
+] 
+}

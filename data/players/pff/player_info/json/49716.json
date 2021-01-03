@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina Central Eagles",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-01-02",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Reggie",
+"height":      511,
+"id":    49716,
+"jersey_number": "47",
+"last_name": "Hunter",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      240 
+} 
+] 
+}

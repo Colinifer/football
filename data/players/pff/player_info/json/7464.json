@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Old Dominion Monarchs",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-02-17",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Edmon",
+"height":      606,
+"id":     7464,
+"jersey_number": "74",
+"last_name": "McClam",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      280 
+} 
+] 
+}

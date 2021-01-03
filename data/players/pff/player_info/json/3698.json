@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina State Wolfpack",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-02-14",
+"draft": {
+ "round":        3,
+"season":     2007,
+"selection":       82,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Tank",
+"height":      602,
+"id":     3698,
+"jersey_number": "93",
+"last_name": "Tyler",
+"position": "DI",
+"speed":     5.18,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      306 
+} 
+] 
+}

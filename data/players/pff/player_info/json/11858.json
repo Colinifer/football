@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Atlantic Owls",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-12-05",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":      103,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Trey",
+"height":      604,
+"id":    11858,
+"jersey_number": "91",
+"last_name": "Hendrickson",
+"position": "ED",
+"speed":     4.65,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      270 
+} 
+] 
+}

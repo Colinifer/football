@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Youngstown State Penguins",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-09-16",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      167,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Avery",
+"height":      603,
+"id":    11922,
+"jersey_number": "00",
+"last_name": "Moss",
+"position": "ED",
+"speed":     4.79,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      271 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maryland Terrapins",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-10-23",
+"draft": {
+ "round":        2,
+"season":     2016,
+"selection":       58,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Sean",
+"height":      601,
+"id":    10692,
+"jersey_number": "21",
+"last_name": "Davis",
+"position": "S",
+"speed":     4.46,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      202 
+} 
+] 
+}

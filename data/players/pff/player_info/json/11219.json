@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Vanderbilt Commodores",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-07-07",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "FA" 
+},
+"first_name": "Steven",
+"height":      605,
+"id":    11219,
+"jersey_number": "81",
+"last_name": "Scheu",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      250 
+} 
+] 
+}

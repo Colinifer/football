@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boston College Eagles",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1978-10-08",
+"draft": {
+ "round":        1,
+"season":     2002,
+"selection":       29,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Marc",
+"height":      608,
+"id":     1036,
+"jersey_number": "71",
+"last_name": "Colombo",
+"position": "T",
+"speed":     5.27,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      325 
+} 
+] 
+}

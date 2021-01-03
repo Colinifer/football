@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas State Red Wolves",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-05-19",
+"draft": {
+ "round":        2,
+"season":     2008,
+"selection":       43,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Tyrell",
+"height":      600,
+"id":     4357,
+"jersey_number": "38",
+"last_name": "Johnson",
+"position": "S",
+"speed":     4.41,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      207 
+} 
+] 
+}

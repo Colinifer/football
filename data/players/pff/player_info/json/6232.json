@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina Gamecocks",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-08-17",
+"draft": {
+ "round":        3,
+"season":     2011,
+"selection":       80,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      600,
+"id":     6232,
+"jersey_number": "35",
+"last_name": "Culliver",
+"position": "CB",
+"speed":     4.36,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      199 
+} 
+] 
+}

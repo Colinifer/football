@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Atlantic Owls",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-07-13",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Trevon",
+"height":      601,
+"id":    11093,
+"jersey_number": "00",
+"last_name": "Coley",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      310 
+} 
+] 
+}

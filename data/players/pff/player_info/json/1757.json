@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon Ducks",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1978-11-14",
+"draft": {
+ "round":        2,
+"season":     2004,
+"selection":       36,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Junior",
+"height":      604,
+"id":     1757,
+"jersey_number": "94",
+"last_name": "Siavii",
+"position": "DI",
+"speed":     5.16,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      336 
+} 
+] 
+}

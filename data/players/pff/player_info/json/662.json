@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1978-06-09",
+"draft": {
+ "round":        4,
+"season":     2000,
+"selection":      120,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Alvin",
+"height":      604,
+"id":      662,
+"jersey_number": "97",
+"last_name": "McKinley",
+"position": "DI",
+"speed":     5.09,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      310 
+} 
+] 
+}

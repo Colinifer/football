@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas-Pine Bluff Golden Lions",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-08-23",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Charles",
+"height":      602,
+"id":     4187,
+"jersey_number": "38",
+"last_name": "Ali",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      260 
+} 
+] 
+}

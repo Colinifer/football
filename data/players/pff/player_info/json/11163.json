@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Memphis Tigers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-12-26",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Tevin",
+"height":      602,
+"id":    11163,
+"jersey_number": "14",
+"last_name": "Jones",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      225 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Toledo Rockets",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-09-22",
+"draft": {
+ "round":        6,
+"season":     2002,
+"selection":      207,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Chester",
+"height":      511,
+"id":     1182,
+"jersey_number": "29",
+"last_name": "Taylor",
+"position": "HB",
+"speed":     4.58,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      213 
+} 
+] 
+}

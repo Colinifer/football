@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maryland Terrapins",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1986-03-18",
+"draft": {
+ "round":        5,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "SD" 
+},
+"first_name": "Jared",
+"height":      609,
+"id":     4279,
+"jersey_number": "78",
+"last_name": "Gaither",
+"position": "T",
+"speed":     5.06,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      350 
+} 
+] 
+}

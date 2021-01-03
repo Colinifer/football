@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Alabama Jaguars",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1991-10-01",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      510,
+"id":    12030,
+"jersey_number": "7",
+"last_name": "Magee",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      170 
+} 
+] 
+}

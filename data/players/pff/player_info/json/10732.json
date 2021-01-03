@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boston College Eagles",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-11-19",
+"draft": {
+ "round":        3,
+"season":     2016,
+"selection":       98,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Justin",
+"height":      602,
+"id":    10732,
+"jersey_number": "31",
+"last_name": "Simmons",
+"position": "S",
+"speed":     4.61,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      202 
+} 
+] 
+}

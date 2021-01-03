@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Carolina State Bulldogs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-04-16",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Javarius",
+"height":      607,
+"id":    46396,
+"jersey_number": "00",
+"last_name": "Leamon",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      332 
+} 
+] 
+}

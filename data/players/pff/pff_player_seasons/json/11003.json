@@ -1,0 +1,16 @@
+{
+ "special_teams_summary": {
+ "career": {},
+"seasons": [],
+"subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":    11003,
+"roster": "special",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

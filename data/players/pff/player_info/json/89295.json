@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "McNeese State Cowboys",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-04-21",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "FA" 
+},
+"first_name": "B.J.",
+"height":      601,
+"id":    89295,
+"jersey_number": "48",
+"last_name": "Blunt",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      220 
+} 
+] 
+}

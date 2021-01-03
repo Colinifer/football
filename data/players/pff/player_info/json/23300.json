@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Dakota State Bison",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-08-11",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Landon",
+"height":      607,
+"id":    23300,
+"jersey_number": "77",
+"last_name": "Lechler",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      299 
+} 
+] 
+}

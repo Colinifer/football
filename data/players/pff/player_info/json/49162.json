@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wake Forest Demon Deacons",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-10-11",
+"draft": {
+ "round":        2,
+"season":     2018,
+"selection":       54,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Jessie",
+"height":      601,
+"id":    49162,
+"jersey_number": "30",
+"last_name": "Bates III",
+"position": "S",
+"speed":      4.5,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      200 
+} 
+] 
+}

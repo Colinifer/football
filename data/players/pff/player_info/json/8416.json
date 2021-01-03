@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "SMU Mustangs",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-11-07",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Bryan",
+"height":      603,
+"id":     8416,
+"jersey_number": "61O",
+"last_name": "Collins",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      303 
+} 
+] 
+}

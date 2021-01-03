@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marshall Thundering Herd",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1976-06-26",
+"draft": {
+ "round":        1,
+"season":     2000,
+"selection":       18,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Chad",
+"height":      603,
+"id":      596,
+"jersey_number": "10",
+"last_name": "Pennington",
+"position": "QB",
+"speed":     4.81,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      225 
+} 
+] 
+}

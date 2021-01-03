@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Illinois Leathernecks",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-06-15",
+"draft": {
+ "round":        3,
+"season":     2001,
+"selection":       78,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "William",
+"height":      600,
+"id":      839,
+"jersey_number": "31",
+"last_name": "James",
+"position": "CB",
+"speed":     4.46,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      200 
+} 
+] 
+}

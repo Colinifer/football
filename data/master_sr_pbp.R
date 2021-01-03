@@ -1,10 +1,10 @@
 library(RJSONIO)
 library(tidyverse)
 
-sr_games_df <- readRDS(glue('data/games_{year}.rds')) %>% 
+sr_games_df <- readRDS(glue('data/games_{year}.rds')) %>%
   select(game_id, game_id_SR)
 
-# year <- 2020
+year <- 2020
 
 ### I store all my json files in the folder structure below. I save every file name to this vector and iterate through them
 all_json <- c(dir(glue('data/pbp/sportradar/{year}'), full=T),dir(glue('data/pbp/sportradar/post/{year}'), full=T)) %>% .[which(grepl('.json',.))] 

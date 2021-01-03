@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado Buffaloes",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-04-17",
+"draft": {
+ "round":        3,
+"season":     2003,
+"selection":       93,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      603,
+"id":     1407,
+"jersey_number": "22",
+"last_name": "Brown",
+"position": "HB",
+"speed":     4.54,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      220 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maine Black Bears",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1974-06-15",
+"draft": {
+ "round": null,
+"season":     1997,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      603,
+"id":      304,
+"jersey_number": "62",
+"last_name": "Flynn",
+"position": "C",
+"speed":     5.29,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      305 
+} 
+] 
+}

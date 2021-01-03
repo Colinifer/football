@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois Fighting Illini",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-11-05",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Aaron",
+"height":      603,
+"id":     1665,
+"jersey_number": "85",
+"last_name": "Moorehead",
+"position": "WR",
+"speed":     4.48,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      200 
+} 
+] 
+}

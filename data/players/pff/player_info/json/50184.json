@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rice Owls",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-19",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Brian",
+"height":      603,
+"id":    50184,
+"jersey_number": "62",
+"last_name": "Womac",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      250 
+} 
+] 
+}

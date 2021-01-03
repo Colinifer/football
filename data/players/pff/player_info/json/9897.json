@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "BYU Cougars",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-10-31",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Jordan",
+"height":      602,
+"id":     9897,
+"jersey_number": "19",
+"last_name": "Leslie",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      208 
+} 
+] 
+}

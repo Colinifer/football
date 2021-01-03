@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marshall Thundering Herd",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-10-19",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Eric",
+"height":      607,
+"id":    10129,
+"jersey_number": "46",
+"last_name": "Frohnapfel",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      235 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mount Union",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-11-28",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Jasper",
+"height":      511,
+"id":     9378,
+"jersey_number": "13",
+"last_name": "Collins",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      188 
+} 
+] 
+}

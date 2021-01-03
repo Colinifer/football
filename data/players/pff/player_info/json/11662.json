@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hawaii Warriors",
+"current_class": null,
+"current_eligible_year":     1991,
+"dob": "1970-11-06",
+"draft": {
+ "round":        8,
+"season":     1991,
+"selection":      209,
+"team": {
+ "abbreviation": "LAR",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Maa",
+"height":      602,
+"id":    11662,
+"jersey_number": "98",
+"last_name": "Tanuvasa",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      270 
+} 
+] 
+}

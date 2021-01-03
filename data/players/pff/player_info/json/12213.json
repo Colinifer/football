@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Akron Zips",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-10-19",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Larry",
+"height":      600,
+"id":    12213,
+"jersey_number": "33",
+"last_name": "Hope",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      183 
+} 
+] 
+}

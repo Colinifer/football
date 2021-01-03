@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon State Beavers",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-08-24",
+"draft": {
+ "round":        2,
+"season":     2007,
+"selection":       64,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Sabby",
+"height":      602,
+"id":     3680,
+"jersey_number": "42",
+"last_name": "Piscitelli",
+"position": "S",
+"speed":     4.47,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      235 
+} 
+] 
+}

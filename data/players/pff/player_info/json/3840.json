@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona Wildcats",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-05-09",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      224,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Michael",
+"height":      602,
+"id":     3840,
+"jersey_number": "43",
+"last_name": "Johnson",
+"position": "S",
+"speed":     4.62,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      205 
+} 
+] 
+}

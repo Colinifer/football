@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Connecticut Huskies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-04-03",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Alec",
+"height":      606,
+"id":    47202,
+"jersey_number": "87",
+"last_name": "Bloom",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      253 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-06-04",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      168,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "NFL" 
+},
+"first_name": "Jamarco",
+"height":      604,
+"id":    46226,
+"jersey_number": "73",
+"last_name": "Jones",
+"position": "G",
+"speed":      5.5,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      293 
+} 
+] 
+}

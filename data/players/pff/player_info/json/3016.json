@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cal Poly Mustangs",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-11-16",
+"draft": {
+ "round":        3,
+"season":     2006,
+"selection":       71,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      602,
+"id":     3016,
+"jersey_number": "51",
+"last_name": "Gocong",
+"position": "LB",
+"speed":      4.7,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      263 
+} 
+] 
+}

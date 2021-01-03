@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Portland State Vikings",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-05-04",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Shaun",
+"height":      511,
+"id":     3235,
+"jersey_number": "19",
+"last_name": "Bodiford",
+"position": "WR",
+"speed":     4.54,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      187 
+} 
+] 
+}

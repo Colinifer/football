@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sam Houston State Bearkats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-04-27",
+"draft": {
+ "round":        7,
+"season":     2016,
+"selection":      235,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Lachlan",
+"height":      604,
+"id":    10869,
+"jersey_number": "00",
+"last_name": "Edwards",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      209 
+} 
+] 
+}

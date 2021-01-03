@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10320,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       14,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2018,
+"season_id":     2018,
+"team_name": "IND" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":    12977,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       14,
+"position": "TE-L",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12977,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "43",
+"player_franchise_id":       14,
+"player_id":    10320,
+"position": "TE-L",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    12997,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "TE-R",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12997,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "43",
+"player_franchise_id":       14,
+"player_id":    10320,
+"position": "TE-R",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    13008,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "TE-R",
+"status": "P",
+"week":       -4 
+},
+"game_id":    13008,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "43",
+"player_franchise_id":       14,
+"player_id":    10320,
+"position": "TE-R",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":    13015,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       14,
+"position": "TE-R",
+"status": "S",
+"week":       -5 
+},
+"game_id":    13015,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "43",
+"player_franchise_id":       14,
+"player_id":    10320,
+"position": "TE-R",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

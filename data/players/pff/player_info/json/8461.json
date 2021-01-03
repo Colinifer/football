@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTEP Miners",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-12-14",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      511,
+"id":     8461,
+"jersey_number": "86",
+"last_name": "Edwards",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      200 
+} 
+] 
+}

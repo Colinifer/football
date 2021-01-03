@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Ragin' Cajuns",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-01-13",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Jamal",
+"height":      604,
+"id":    10900,
+"jersey_number": "19",
+"last_name": "Robinson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      204 
+} 
+] 
+}

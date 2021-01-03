@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Illinois Fighting Illini",
+"current_class": null,
+"current_eligible_year":     1989,
+"dob": "1967-11-17",
+"draft": {
+ "round":        9,
+"season":     1989,
+"selection":      236,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Howard",
+"height":      600,
+"id":    11706,
+"jersey_number": "29",
+"last_name": "Griffith",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      240 
+} 
+] 
+}

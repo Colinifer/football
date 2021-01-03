@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fordham Rams",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-03-17",
+"draft": {
+ "round":        5,
+"season":     2010,
+"selection":      155,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "John",
+"height":      605,
+"id":     5678,
+"jersey_number": "8",
+"last_name": "Skelton",
+"position": "QB",
+"speed":     4.85,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      244 
+} 
+] 
+}

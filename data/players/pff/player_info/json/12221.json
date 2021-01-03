@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Hampshire Wildcats",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-11-22",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Andrew",
+"height":      606,
+"id":    12221,
+"jersey_number": "00",
+"last_name": "Lauderdale",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      291 
+} 
+] 
+}

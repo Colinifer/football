@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A & M - Commerce",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-08-26",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Luis",
+"height":      602,
+"id":    66453,
+"jersey_number": "8",
+"last_name": "Perez",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      222 
+} 
+] 
+}

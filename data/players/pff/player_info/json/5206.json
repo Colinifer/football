@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Utah Thunderbirds",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-03-29",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Nick",
+"height":      509,
+"id":     5206,
+"jersey_number": "16",
+"last_name": "Miller",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      175 
+} 
+] 
+}

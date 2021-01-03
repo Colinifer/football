@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa State Cyclones",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-08-31",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Tom",
+"height":      604,
+"id":     9894,
+"jersey_number": "59",
+"last_name": "Farniok",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      301 
+} 
+] 
+}

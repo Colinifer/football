@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Richmond Spiders",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-10-12",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      604,
+"id":    28433,
+"jersey_number": "64",
+"last_name": "Yarbrough",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      300 
+} 
+] 
+}

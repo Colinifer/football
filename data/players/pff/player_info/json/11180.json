@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "SMU Mustangs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-02-14",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Shakiel",
+"height":      604,
+"id":    11180,
+"jersey_number": "47",
+"last_name": "Randolph",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      210 
+} 
+] 
+}

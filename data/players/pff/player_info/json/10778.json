@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Tigers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-04-27",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      144,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Connor",
+"height":      604,
+"id":    10778,
+"jersey_number": "60",
+"last_name": "McGovern",
+"position": "C",
+"speed":     5.11,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      306 
+} 
+] 
+}

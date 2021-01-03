@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "BYU Cougars",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1985-06-29",
+"draft": {
+ "round":        4,
+"season":     2010,
+"selection":      114,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Dennis",
+"height":      604,
+"id":     5638,
+"jersey_number": "88",
+"last_name": "Pitta",
+"position": "TE",
+"speed":     4.68,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      245 
+} 
+] 
+}

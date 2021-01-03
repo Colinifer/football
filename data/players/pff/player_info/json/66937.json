@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "British Columbia (Canada)",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-12-27",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Dakoda",
+"height":      605,
+"id":    66937,
+"jersey_number": "61",
+"last_name": "Shepley",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      290 
+} 
+] 
+}

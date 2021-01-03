@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Duquesne Dukes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-04-09",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Larson",
+"height":      605,
+"id":    38173,
+"jersey_number": "61",
+"last_name": "Graham",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      303 
+} 
+] 
+}

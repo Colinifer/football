@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hawaii Warriors",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-07-02",
+"draft": {
+ "round":        3,
+"season":     2003,
+"selection":       73,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Wayne",
+"height":      606,
+"id":     1388,
+"jersey_number": "72",
+"last_name": "Hunter",
+"position": "T",
+"speed":     5.08,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      303 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UC Davis Aggies",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-01-09",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Jonathan",
+"height":      602,
+"id":     5205,
+"jersey_number": "61",
+"last_name": "Compas",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      300 
+} 
+] 
+}

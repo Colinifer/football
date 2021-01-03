@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Southern Eagles",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-05-26",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Garrett",
+"height":      605,
+"id":    10061,
+"jersey_number": "69",
+"last_name": "Frye",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      290 
+} 
+] 
+}

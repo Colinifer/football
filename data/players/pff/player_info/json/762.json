@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alcorn State Braves",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1978-06-04",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Chad",
+"height":      608,
+"id":      762,
+"jersey_number": "69",
+"last_name": "Slaughter",
+"position": "T",
+"speed":      5.5,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      340 
+} 
+] 
+}

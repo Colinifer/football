@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Liberty Flames",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-11-13",
+"draft": {
+ "round": null,
+"season":     2005,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Sam",
+"height":      511,
+"id":     2599,
+"jersey_number": "38",
+"last_name": "Gado",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      210 
+} 
+] 
+}

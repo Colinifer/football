@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Alabama Jaguars",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-08-29",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Jeremy",
+"height":      511,
+"id":    50406,
+"jersey_number": "39",
+"last_name": "Reaves",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      205 
+} 
+] 
+}

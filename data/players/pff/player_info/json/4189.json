@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bowling Green Falcons",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-12-23",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Steve",
+"height":      603,
+"id":     4189,
+"jersey_number": "83",
+"last_name": "Sanders",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      201 
+} 
+] 
+}

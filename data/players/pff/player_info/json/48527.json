@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (OH) RedHawks",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-07-08",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Austin",
+"height":      605,
+"id":    48527,
+"jersey_number": "D49",
+"last_name": "Gearing",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      212 
+} 
+] 
+}

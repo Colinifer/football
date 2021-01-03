@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Iowa Hawkeyes",
+"current_class": null,
+"current_eligible_year":     1989,
+"dob": "1966-01-06",
+"draft": {
+ "round":        3,
+"season":     1989,
+"selection":       64,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Bob",
+"height":      603,
+"id":    11556,
+"jersey_number": "61",
+"last_name": "Kratch",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      288 
+} 
+] 
+}

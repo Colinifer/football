@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Kentucky Hilltoppers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1988-05-29",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Derrius",
+"height":      510,
+"id":     9392,
+"jersey_number": "34",
+"last_name": "Brooks",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      191 
+} 
+] 
+}

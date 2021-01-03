@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas Jayhawks",
+"current_class": null,
+"current_eligible_year":     1995,
+"dob": "1972-12-17",
+"draft": {
+ "round": null,
+"season":     1995,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Don",
+"height":      601,
+"id":      147,
+"jersey_number": "51",
+"last_name": "Davis",
+"position": "LB",
+"speed":     4.65,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      235 
+} 
+] 
+}

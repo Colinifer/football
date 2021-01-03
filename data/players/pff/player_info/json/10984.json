@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maryland Terrapins",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-09",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      511,
+"id":    10984,
+"jersey_number": "46",
+"last_name": "Ross",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      205 
+} 
+] 
+}

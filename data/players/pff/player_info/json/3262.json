@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (OH) RedHawks",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-09-01",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      603,
+"id":     3262,
+"jersey_number": "40",
+"last_name": "Busing",
+"position": "S",
+"speed":     4.76,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      231 
+} 
+] 
+}

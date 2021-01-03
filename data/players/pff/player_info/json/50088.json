@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stephen F. Austin Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-09-26",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      135,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "John",
+"height":      604,
+"id":    50088,
+"jersey_number": "91",
+"last_name": "Franklin-Myers",
+"position": "DI",
+"speed":     4.75,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      288 
+} 
+] 
+}

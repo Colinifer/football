@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wyoming Cowboys",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-08-12",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Adam",
+"height":      606,
+"id":     1612,
+"jersey_number": "72",
+"last_name": "Goldberg",
+"position": "T",
+"speed":     5.35,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      330 
+} 
+] 
+}

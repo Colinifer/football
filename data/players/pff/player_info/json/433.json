@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Saginaw Valley State",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-08-18",
+"draft": {
+ "round": null,
+"season":     1998,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Paul",
+"height":      604,
+"id":      433,
+"jersey_number": "96",
+"last_name": "Spicer",
+"position": "ED",
+"speed":        5,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      295 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Iowa State Cyclones",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-08-18",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "David",
+"height":      607,
+"id":    10063,
+"jersey_number": "95",
+"last_name": "Irving",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      290 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeast Missouri State Redhawks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-06-21",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Chad",
+"height":      604,
+"id":    50189,
+"jersey_number": "59",
+"last_name": "Meredith",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      255 
+} 
+] 
+}

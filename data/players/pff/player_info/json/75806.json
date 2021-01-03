@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Prairie View A&M Panthers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-08-09",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      600,
+"id":    75806,
+"jersey_number": "90",
+"last_name": "Stubbs",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      220 
+} 
+] 
+}

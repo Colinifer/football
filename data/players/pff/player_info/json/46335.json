@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maryland Terrapins",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-05-10",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      219,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Derwin",
+"height":      604,
+"id":    46335,
+"jersey_number": "00",
+"last_name": "Gray",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      320 
+} 
+] 
+}

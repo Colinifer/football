@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Vanderbilt Commodores",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-04-03",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Spencer",
+"height":      604,
+"id":    10998,
+"jersey_number": "77",
+"last_name": "Pulley",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      308 
+} 
+] 
+}

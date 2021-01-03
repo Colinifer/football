@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Richmond Spiders",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-05-02",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Alex",
+"height":      605,
+"id":    31454,
+"jersey_number": "64",
+"last_name": "Light",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      309 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Dakota Fighting Hawks",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1977-01-31",
+"draft": {
+ "round":        2,
+"season":     1999,
+"selection":       44,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Jim",
+"height":      603,
+"id":      469,
+"jersey_number": "40",
+"last_name": "Kleinsasser",
+"position": "FB",
+"speed":     4.79,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      274 
+} 
+] 
+}

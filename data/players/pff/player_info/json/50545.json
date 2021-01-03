@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Connecticut Huskies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-06-14",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Jamar",
+"height":      511,
+"id":    50545,
+"jersey_number": "21",
+"last_name": "Summers",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      186 
+} 
+] 
+}

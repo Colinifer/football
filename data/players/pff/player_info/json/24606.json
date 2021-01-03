@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Laval (Canada)",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-05-28",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Antony",
+"height":      606,
+"id":    24606,
+"jersey_number": "82",
+"last_name": "Auclair",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      256 
+} 
+] 
+}

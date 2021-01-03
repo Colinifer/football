@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wingate",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-09-19",
+"draft": {
+ "round":        5,
+"season":     2007,
+"selection":      145,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      511,
+"id":     3761,
+"jersey_number": "35",
+"last_name": "Jones",
+"position": "CB",
+"speed":     4.52,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      196 
+} 
+] 
+}

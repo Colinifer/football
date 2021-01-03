@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Texas Mean Green",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-06-22",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Antonio",
+"height":      605,
+"id":    10163,
+"jersey_number": "69",
+"last_name": "Johnson",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      302 
+} 
+] 
+}

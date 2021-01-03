@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "St. Cloud State",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1972-08-01",
+"draft": {
+ "round": null,
+"season":     1997,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Todd",
+"height":      602,
+"id":      299,
+"jersey_number": "4",
+"last_name": "Bouman",
+"position": "QB",
+"speed":     4.85,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      226 
+} 
+] 
+}

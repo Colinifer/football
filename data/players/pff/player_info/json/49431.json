@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulane Green Wave",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-07-21",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      221,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Donnie",
+"height":      600,
+"id":    49431,
+"jersey_number": "00",
+"last_name": "Lewis Jr.",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      195 
+} 
+] 
+}

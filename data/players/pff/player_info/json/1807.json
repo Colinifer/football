@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nevada Wolf Pack",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-09-25",
+"draft": {
+ "round":        3,
+"season":     2004,
+"selection":       86,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Jorge",
+"height":      601,
+"id":     1807,
+"jersey_number": "51",
+"last_name": "Cordova",
+"position": "LB",
+"speed":      4.7,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      241 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Duke Blue Devils",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1976-10-13",
+"draft": {
+ "round":        2,
+"season":     1999,
+"selection":       61,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Lennie",
+"height":      603,
+"id":      477,
+"jersey_number": "62",
+"last_name": "Friedman",
+"position": "G",
+"speed":     5.36,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      283 
+} 
+] 
+}

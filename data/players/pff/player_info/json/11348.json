@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lafayette Leopards",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-05-06",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      509,
+"id":    11348,
+"jersey_number": "D35",
+"last_name": "Smalley",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      184 
+} 
+] 
+}

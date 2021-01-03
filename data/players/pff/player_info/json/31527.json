@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Gardner-Webb Runnin' Bulldogs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": null,
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      604,
+"id":    31527,
+"jersey_number": "O49",
+"last_name": "Estes",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      236 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Illinois Panthers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-11-24",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Alexander",
+"height":      601,
+"id":    63664,
+"jersey_number": "00",
+"last_name": "Hollins",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      170 
+} 
+] 
+}

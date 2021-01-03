@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Texas A & M",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-05-22",
+"draft": {
+ "round":        2,
+"season":     2003,
+"selection":       52,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Chaun",
+"height":      602,
+"id":     1367,
+"jersey_number": "51",
+"last_name": "Thompson",
+"position": "ST",
+"speed":     4.58,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      250 
+} 
+] 
+}

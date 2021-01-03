@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego Toreros",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-04-19",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      600,
+"id":     5306,
+"jersey_number": "17",
+"last_name": "Matthews",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      197 
+} 
+] 
+}

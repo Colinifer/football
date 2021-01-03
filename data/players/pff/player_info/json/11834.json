@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-12-08",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       79,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "ArDarius",
+"height":      600,
+"id":    11834,
+"jersey_number": "0",
+"last_name": "Stewart",
+"position": "WR",
+"speed":     4.49,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      205 
+} 
+] 
+}

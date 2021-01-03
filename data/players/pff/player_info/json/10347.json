@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama State Hornets",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-07-09",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Jamel",
+"height":      602,
+"id":    10347,
+"jersey_number": "87",
+"last_name": "Johnson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      225 
+} 
+] 
+}

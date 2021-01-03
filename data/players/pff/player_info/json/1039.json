@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulane Green Wave",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-02-14",
+"draft": {
+ "round":        1,
+"season":     2002,
+"selection":       32,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Patrick",
+"height":      602,
+"id":     1039,
+"jersey_number": "9",
+"last_name": "Ramsey",
+"position": "QB",
+"speed":     5.18,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      217 
+} 
+] 
+}

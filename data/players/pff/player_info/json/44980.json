@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-10-03",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      230,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "NFL" 
+},
+"first_name": "Leon",
+"height":      602,
+"id":    44980,
+"jersey_number": "48",
+"last_name": "Jacobs",
+"position": "LB",
+"speed":     4.48,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      245 
+} 
+] 
+}

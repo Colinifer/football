@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lamar Cardinals",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-02-27",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Rodney",
+"height":      510,
+"id":    34739,
+"jersey_number": "D41",
+"last_name": "Randle",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      170 
+} 
+] 
+}

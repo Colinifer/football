@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Delaware Fightin Blue Hens",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-08-17",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Connor",
+"height":      605,
+"id":    22804,
+"jersey_number": "74",
+"last_name": "Bozick",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      310 
+} 
+] 
+}

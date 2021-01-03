@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho State Bengals",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-01-19",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Jeff",
+"height":      604,
+"id":     3269,
+"jersey_number": "92",
+"last_name": "Charleston",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      260 
+} 
+] 
+}

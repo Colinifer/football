@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Utah Thunderbirds",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1992-11-24",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      511,
+"id":    12192,
+"jersey_number": "27",
+"last_name": "Thornton",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      183 
+} 
+] 
+}

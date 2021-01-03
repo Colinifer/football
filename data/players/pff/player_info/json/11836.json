@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-04-09",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       81,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Fabian",
+"height":      600,
+"id":    11836,
+"jersey_number": "25",
+"last_name": "Moreau",
+"position": "CB",
+"speed":     4.35,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      200 
+} 
+] 
+}

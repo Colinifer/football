@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fort Hays State",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1993-10-09",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection":       72,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Nathan",
+"height":      604,
+"id":    24614,
+"jersey_number": "97",
+"last_name": "Shepherd",
+"position": "DI",
+"speed":     5.09,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      315 
+} 
+] 
+}

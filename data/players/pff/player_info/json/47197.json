@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Richmond Spiders",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-24",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "FA" 
+},
+"first_name": "Garrett",
+"height":      604,
+"id":    47197,
+"jersey_number": "46",
+"last_name": "Hudson",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      244 
+} 
+] 
+}

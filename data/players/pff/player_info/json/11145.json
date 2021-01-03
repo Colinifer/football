@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Iowa Panthers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-06",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Makinton",
+"height":      511,
+"id":    11145,
+"jersey_number": "00",
+"last_name": "Dorleant",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      182 
+} 
+] 
+}

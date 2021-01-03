@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southwestern Oklahoma State",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1991-11-17",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Trevon",
+"height":      600,
+"id":    10955,
+"jersey_number": "37",
+"last_name": "Hartfield",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      195 
+} 
+] 
+}

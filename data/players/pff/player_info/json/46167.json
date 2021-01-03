@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Jose State Spartans",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-23",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Jeremiah",
+"height":      603,
+"id":    46167,
+"jersey_number": "00",
+"last_name": "Kolone",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      316 
+} 
+] 
+}

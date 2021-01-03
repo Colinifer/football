@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wayne State (Neb.)",
+"current_class": null,
+"current_eligible_year":     1995,
+"dob": "1971-10-17",
+"draft": {
+ "round":        7,
+"season":     1995,
+"selection":      222,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Byron",
+"height":      601,
+"id":    11716,
+"jersey_number": "86",
+"last_name": "Chamberlain",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      242 
+} 
+] 
+}

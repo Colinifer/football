@@ -1,0 +1,146 @@
+{
+ "defense_summary": {
+ "career": {
+ "assists":       59,
+"forced_fumbles":       37,
+"hits":       69,
+"interceptions":        1,
+"pass_break_ups":        2,
+"player_id":     1447,
+"sacks":      106,
+"tackles":      258 
+},
+"seasons": [
+ {
+ "assists":        2,
+"forced_fumbles":        3,
+"franchise_id":       14,
+"hits":        1,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        5,
+"season":     2016,
+"season_id":     2016,
+"tackles":       14 
+},
+{
+ "assists":        2,
+"forced_fumbles":        1,
+"franchise_id":       14,
+"hits":        8,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        7,
+"season":     2015,
+"season_id":     2015,
+"tackles":       10 
+},
+{
+ "assists":        4,
+"forced_fumbles":        9,
+"franchise_id":       14,
+"hits":        7,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":       21,
+"season":     2013,
+"season_id":     2013,
+"tackles":       37 
+},
+{
+ "assists":        3,
+"forced_fumbles":        1,
+"franchise_id":       14,
+"hits":        5,
+"interceptions":        1,
+"pass_break_ups":        0,
+"sacks":        9,
+"season":     2012,
+"season_id":     2012,
+"tackles":       23 
+},
+{
+ "assists":        7,
+"forced_fumbles":        3,
+"franchise_id":       14,
+"hits":        8,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":       10,
+"season":     2011,
+"season_id":     2011,
+"tackles":       27 
+},
+{
+ "assists":       12,
+"forced_fumbles":        1,
+"franchise_id":       14,
+"hits":        7,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":       10,
+"season":     2010,
+"season_id":     2010,
+"tackles":       33 
+},
+{
+ "assists":        7,
+"forced_fumbles":        5,
+"franchise_id":       14,
+"hits":       14,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":       10,
+"season":     2009,
+"season_id":     2009,
+"tackles":       21 
+},
+{
+ "assists":        5,
+"forced_fumbles":        5,
+"franchise_id":       14,
+"hits":        4,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":       14,
+"season":     2008,
+"season_id":     2008,
+"tackles":       23 
+},
+{
+ "assists":        3,
+"forced_fumbles":        4,
+"franchise_id":       14,
+"hits":        7,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        8,
+"season":     2007,
+"season_id":     2007,
+"tackles":       22 
+},
+{
+ "assists":       14,
+"forced_fumbles":        5,
+"franchise_id":       14,
+"hits":        8,
+"interceptions":        0,
+"pass_break_ups":        2,
+"sacks":       12,
+"season":     2006,
+"season_id":     2006,
+"tackles":       48 
+} 
+],
+"subject": {
+ "eligible": "defense",
+"grade_keys": [ "defense", "defense_penalty", "run_defense", "pass_rush_defense", "coverage_defense", "tackle" ],
+"league_id":        1,
+"player_id":     1447,
+"roster": "defense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "batted_passes", "catch_rate", "hurries", "longest", "missed_tackles", "qb_rating_against", "receptions", "stops", "targets", "total_pressures", "touchdowns", "yards", "yards_after_catch", "yards_per_reception" ] 
+}

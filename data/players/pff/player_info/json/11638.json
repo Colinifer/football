@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Southern University Jaguars",
+"current_class": null,
+"current_eligible_year":     1991,
+"dob": "1968-01-29",
+"draft": {
+ "round":        3,
+"season":     1991,
+"selection":       59,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Aeneas",
+"height":      511,
+"id":    11638,
+"jersey_number": "35",
+"last_name": "Williams",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      200 
+} 
+] 
+}

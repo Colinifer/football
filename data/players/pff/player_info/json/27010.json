@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jacksonville State Gamecocks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-11-20",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Darius",
+"height":      602,
+"id":    27010,
+"jersey_number": "66",
+"last_name": "Jackson",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      242 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mount St. Joseph",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-04-29",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      608,
+"id":    10043,
+"jersey_number": "48",
+"last_name": "Peters",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      250 
+} 
+] 
+}

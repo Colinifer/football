@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mercyhurst",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1990-03-13",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Ian",
+"height":      601,
+"id":    10267,
+"jersey_number": "38",
+"last_name": "Wild",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      220 
+} 
+] 
+}

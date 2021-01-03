@@ -30,9 +30,9 @@ wide_win_rate <- all_win_rate %>%
   mutate(rswr_rk = min_rank(desc(rswr)), .before = rswr) %>%
   mutate(pbwr_rk = min_rank(desc(pbwr)), .before = pbwr) %>%
   mutate(rbwr_rk = min_rank(desc(rbwr)), .before = rbwr) %>%
-  mutate(def_wr_comb_rk = (prwr_rk + rswr_rk) / 2) %>%
-  mutate(off_wr_comb_rk = (rbwr_rk + pbwr_rk) / 2) %>%
-  mutate(total_wr_comb_rk = (prwr_rk + rswr_rk + rbwr_rk + pbwr_rk) / 4) %>% 
+  mutate(def_wr_comb_rk = (prwr_rk + rswr_rk) / 2,
+         off_wr_comb_rk = (rbwr_rk + pbwr_rk) / 2,
+         total_wr_comb_rk = (prwr_rk + rswr_rk + rbwr_rk + pbwr_rk) / 4) %>% 
   left_join(teams_colors_logos %>% filter(team_abbr != 'LAR') %>%
               select(team_abbr, team_name),
             by = c('team' = 'team_name'))
@@ -264,7 +264,7 @@ gt_def_tab <- gtdf %>%
   fmt_percent(
     columns = c(4, 6, 9, 11), 
     decimals = 0,
-    scale_values = F
+    scale_values = T
   ) %>% 
   # tab_style(
   #   style = cell_text(
@@ -456,7 +456,7 @@ gt_off_tab <- gtdf %>%
   fmt_percent(
     columns = c(4, 6, 9, 11), 
     decimals = 0,
-    scale_values = F
+    scale_values = T
   ) %>% 
   # tab_style(
   #   style = cell_text(
@@ -536,7 +536,7 @@ gt::gtsave(gt_off_tab, filename = 'espn_winrate_off_matchup.png', path = 'plots/
 p <- matchup_df_adv %>% 
   mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
   ggplot(aes(x = prwr, y = rswr)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 4/3) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
   geom_hline(yintercept = mean(matchup_df_adv$rswr), color = "red", linetype = "dashed") +
   geom_vline(xintercept =  mean(matchup_df_adv$prwr), color = "red", linetype = "dashed") +
   labs(x = "Pass Rush Win Rate %",
@@ -560,7 +560,7 @@ brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/defense_win_rate_{yea
 p <- matchup_df_adv %>% 
   mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
   ggplot(aes(x = pbwr, y = rbwr)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 4/3) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
   geom_hline(yintercept = mean(matchup_df_adv$rbwr), color = "red", linetype = "dashed") +
   geom_vline(xintercept =  mean(matchup_df_adv$pbwr), color = "red", linetype = "dashed") +
   labs(x = "Pass Block Win Rate %",
@@ -587,7 +587,7 @@ brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/offense_win_rate_{yea
 p <- matchup_df_adv %>% 
   mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
   ggplot(aes(x = prwr, y = opp_pbwr)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 4/3) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
   geom_hline(yintercept = mean(matchup_df_adv$opp_pbwr), color = "red", linetype = "dashed") +
   geom_vline(xintercept =  mean(matchup_df_adv$prwr), color = "red", linetype = "dashed") +
   scale_y_reverse() +
@@ -613,7 +613,7 @@ brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/matchup_pass_rush_win
 p <- matchup_df_adv %>% 
   mutate(team_logo_espn = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{team_abbr}.png')) %>% 
   ggplot(aes(x = rswr, y = opp_rbwr)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 4/3) +
+  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
   geom_hline(yintercept = mean(matchup_df_adv$opp_rbwr), color = "red", linetype = "dashed") +
   geom_vline(xintercept =  mean(matchup_df_adv$rswr), color = "red", linetype = "dashed") +
   scale_y_reverse() +
@@ -633,6 +633,17 @@ p <- matchup_df_adv %>%
   )
 
 brand_plot(p, asp = 16/12, save_name = glue('plots/desktop/matchup_run_stop_win_rate_{year}.png'), data_home = 'Data: ESPN', fade_borders = '')
+
+rm(
+  all_win_rate,
+  wide_win_rate,
+  matchup_winrate_df,
+  matchup_df_adv,
+  gtdf,
+  gt_def_tab,
+  gt_off_tab,
+  p
+)
 
 # Test --------------------------------------------------------------------
 

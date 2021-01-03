@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Tech Red Raiders",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-08-17",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Dartwan",
+"height":      601,
+"id":     9012,
+"jersey_number": "70D",
+"last_name": "Bush",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      265 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Montana Grizzlies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-09-10",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      181,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Tyrone",
+"height":      602,
+"id":    10815,
+"jersey_number": "50",
+"last_name": "Holmes",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      253 
+} 
+] 
+}

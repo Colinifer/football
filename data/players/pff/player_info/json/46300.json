@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fordham Rams",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-11-19",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      605,
+"id":    46300,
+"jersey_number": "68",
+"last_name": "Coyle",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      298 
+} 
+] 
+}

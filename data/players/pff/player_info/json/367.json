@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Michigan Eagles",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1974-12-05",
+"draft": {
+ "round":        2,
+"season":     1998,
+"selection":       60,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Charlie",
+"height":      602,
+"id":      367,
+"jersey_number": "16",
+"last_name": "Batch",
+"position": "QB",
+"speed":     4.89,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      216 
+} 
+] 
+}

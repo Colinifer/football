@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Murray State Racers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-12-22",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "D'Montre",
+"height":      600,
+"id":    50418,
+"jersey_number": "D40",
+"last_name": "Wade",
+"position": "CB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      200 
+} 
+] 
+}

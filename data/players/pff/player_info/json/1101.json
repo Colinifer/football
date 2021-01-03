@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas-Pine Bluff Golden Lions",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-04-05",
+"draft": {
+ "round":        4,
+"season":     2002,
+"selection":      100,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Dante",
+"height":      601,
+"id":     1101,
+"jersey_number": "33",
+"last_name": "Wesley",
+"position": "CB",
+"speed":     4.43,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      211 
+} 
+] 
+}

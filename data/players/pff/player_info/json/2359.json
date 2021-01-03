@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Tigers",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-04-14",
+"draft": {
+ "round":        5,
+"season":     2005,
+"selection":      142,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Damian",
+"height":      510,
+"id":     2359,
+"jersey_number": "29",
+"last_name": "Nash",
+"position": "HB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      220 
+} 
+] 
+}

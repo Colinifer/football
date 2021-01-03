@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Penn State Nittany Lions",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-11-27",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      182,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "NFL" 
+},
+"first_name": "Chris",
+"height":      601,
+"id":    50451,
+"jersey_number": "00",
+"last_name": "Campbell",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      195 
+} 
+] 
+}

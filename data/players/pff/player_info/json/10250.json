@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A & M - Commerce",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-10-14",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Danny",
+"height":      603,
+"id":    10250,
+"jersey_number": "47",
+"last_name": "Mason",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      235 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina State Wolfpack",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-11-12",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      104,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "NFL" 
+},
+"first_name": "Nyheim",
+"height":      509,
+"id":    48103,
+"jersey_number": "21",
+"last_name": "Hines",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      198 
+} 
+] 
+}

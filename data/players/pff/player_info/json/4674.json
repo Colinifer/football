@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado State Rams",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-09-11",
+"draft": {
+ "round": null,
+"season":     2008,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Caleb",
+"height":      602,
+"id":     4674,
+"jersey_number": "7",
+"last_name": "Hanie",
+"position": "QB",
+"speed":     4.87,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      225 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Montana Grizzlies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-07",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Ben",
+"height":      604,
+"id":    11386,
+"jersey_number": "12",
+"last_name": "Roberts",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      205 
+} 
+] 
+}

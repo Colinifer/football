@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado State Rams",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-10-20",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Lanston",
+"height":      602,
+"id":     8137,
+"jersey_number": "61",
+"last_name": "Tanyi",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      258 
+} 
+] 
+}

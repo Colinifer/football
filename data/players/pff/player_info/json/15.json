@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Oklahoma",
+"current_class": null,
+"current_eligible_year":     1991,
+"dob": "1969-09-03",
+"draft": {
+ "round":        3,
+"season":     1991,
+"selection":       61,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Keith",
+"height":      602,
+"id":       15,
+"jersey_number": "94",
+"last_name": "Traylor",
+"position": "DI",
+"speed":      4.8,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      337 
+} 
+] 
+}

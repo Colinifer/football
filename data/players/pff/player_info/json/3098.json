@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Minnesota Golden Gophers",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-03-08",
+"draft": {
+ "round":        5,
+"season":     2006,
+"selection":      153,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Anthony",
+"height":      605,
+"id":     3098,
+"jersey_number": "94",
+"last_name": "Montgomery",
+"position": "DI",
+"speed":     5.37,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      312 
+} 
+] 
+}

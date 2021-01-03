@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Vanderbilt Commodores",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-12-12",
+"draft": {
+ "round":        5,
+"season":     2008,
+"selection":      165,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Jonathan",
+"height":      602,
+"id":     4479,
+"jersey_number": "54",
+"last_name": "Goff",
+"position": "LB",
+"speed":     4.63,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      245 
+} 
+] 
+}

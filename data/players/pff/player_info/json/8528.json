@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wyoming Cowboys",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-04-04",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Korey",
+"height":      602,
+"id":     8528,
+"jersey_number": "47",
+"last_name": "Jones",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      233 
+} 
+] 
+}

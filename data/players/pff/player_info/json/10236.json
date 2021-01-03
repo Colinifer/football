@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Kentucky Colonels",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-03-18",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Jordan",
+"height":      605,
+"id":    10236,
+"jersey_number": "4",
+"last_name": "Berry",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      195 
+} 
+] 
+}

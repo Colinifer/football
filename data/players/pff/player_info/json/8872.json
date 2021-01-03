@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Tech Red Raiders",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-01-13",
+"draft": {
+ "round":        7,
+"season":     2014,
+"selection":      238,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Will",
+"height":      602,
+"id":     8872,
+"jersey_number": "40",
+"last_name": "Smith",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      231 
+} 
+] 
+}

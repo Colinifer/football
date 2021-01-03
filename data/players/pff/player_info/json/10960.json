@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Monmouth Hawks",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-23",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Hakeem",
+"height":      603,
+"id":    10960,
+"jersey_number": "49",
+"last_name": "Valles",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      250 
+} 
+] 
+}

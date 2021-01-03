@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colgate Raiders",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-07-20",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Patrick",
+"height":      602,
+"id":    49638,
+"jersey_number": "96",
+"last_name": "Afriyie",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      240 
+} 
+] 
+}

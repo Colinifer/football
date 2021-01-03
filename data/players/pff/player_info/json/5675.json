@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Illinois Panthers",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-07-19",
+"draft": {
+ "round":        5,
+"season":     2010,
+"selection":      152,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Otis",
+"height":      605,
+"id":     5675,
+"jersey_number": "67",
+"last_name": "Hudson",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      320 
+} 
+] 
+}

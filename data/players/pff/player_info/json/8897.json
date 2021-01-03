@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida A&M Rattlers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-12-01",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Frances",
+"height":      609,
+"id":     8897,
+"jersey_number": "61D",
+"last_name": "Mays",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      291 
+} 
+] 
+}

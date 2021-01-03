@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UNLV Rebels",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-04-03",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      602,
+"id":    49938,
+"jersey_number": "97",
+"last_name": "Hughes",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      308 
+} 
+] 
+}

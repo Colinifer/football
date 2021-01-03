@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jacksonville Dolphins",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1987-01-18",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Karl",
+"height":      604,
+"id":    10231,
+"jersey_number": "6",
+"last_name": "Schmitz",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      210 
+} 
+] 
+}

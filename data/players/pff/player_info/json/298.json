@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (OH) RedHawks",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1974-03-28",
+"draft": {
+ "round": null,
+"season":     1997,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Eric",
+"height":      603,
+"id":      298,
+"jersey_number": "80",
+"last_name": "Beverly",
+"position": "TE",
+"speed":     5.09,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      300 
+} 
+] 
+}

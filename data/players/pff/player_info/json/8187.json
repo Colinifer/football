@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bacone College Warriors",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1985-09-20",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Nic",
+"height":      606,
+"id":     8187,
+"jersey_number": "73O",
+"last_name": "Purcell",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      305 
+} 
+] 
+}

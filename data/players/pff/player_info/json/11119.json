@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Akron Zips",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-05-18",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Rodney",
+"height":      603,
+"id":    11119,
+"jersey_number": "99",
+"last_name": "Coe",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      305 
+} 
+] 
+}

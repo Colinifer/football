@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grambling State Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-01-25",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Trent",
+"height":      605,
+"id":    24481,
+"jersey_number": "73",
+"last_name": "Scott",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      320 
+} 
+] 
+}

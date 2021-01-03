@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame Fighting Irish",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-08-09",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      123,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "NFL" 
+},
+"first_name": "Durham",
+"height":      606,
+"id":    47257,
+"jersey_number": "81",
+"last_name": "Smythe",
+"position": "TE",
+"speed":     4.81,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      248 
+} 
+] 
+}

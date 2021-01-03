@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCF Knights",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-11-19",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Rayford",
+"height":      605,
+"id":     8111,
+"jersey_number": "46",
+"last_name": "Shipman",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      242 
+} 
+] 
+}

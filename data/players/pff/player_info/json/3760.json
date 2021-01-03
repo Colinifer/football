@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-04-29",
+"draft": {
+ "round":        5,
+"season":     2007,
+"selection":      144,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Brandon",
+"height":      601,
+"id":     3760,
+"jersey_number": "31",
+"last_name": "Harrison",
+"position": "S",
+"speed":      4.6,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      215 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wagner Seahawks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-09-08",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      212,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Greg",
+"height":      606,
+"id":    34397,
+"jersey_number": "64",
+"last_name": "Senat",
+"position": "T",
+"speed":     5.38,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      305 
+} 
+] 
+}

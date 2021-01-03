@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (OH) RedHawks",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-11-06",
+"draft": {
+ "round":        7,
+"season":     2009,
+"selection":      237,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Jake",
+"height":      603,
+"id":     5161,
+"jersey_number": "82",
+"last_name": "O'Connell",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      250 
+} 
+] 
+}

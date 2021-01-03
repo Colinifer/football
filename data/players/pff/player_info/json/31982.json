@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maine Black Bears",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-06-20",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      192,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Jamil",
+"height":      605,
+"id":    31982,
+"jersey_number": "64",
+"last_name": "Demby",
+"position": "G",
+"speed":     5.58,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      321 
+} 
+] 
+}

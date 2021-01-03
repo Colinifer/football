@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "William & Mary Tribe",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-12-02",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Luke",
+"height":      602,
+"id":    10940,
+"jersey_number": "46",
+"last_name": "Rhodes",
+"position": "LS",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      238 
+} 
+] 
+}

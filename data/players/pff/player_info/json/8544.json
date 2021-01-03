@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas State Red Wolves",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-04-27",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      603,
+"id":     8544,
+"jersey_number": "49",
+"last_name": "Joiner",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      240 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Princeton Tigers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-12-07",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Andrew",
+"height":      602,
+"id":     8568,
+"jersey_number": "94",
+"last_name": "Starks",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      240 
+} 
+] 
+}

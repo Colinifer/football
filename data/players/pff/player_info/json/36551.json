@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marshall Thundering Herd",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-11-12",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "FA" 
+},
+"first_name": "Ryan",
+"height":      607,
+"id":    36551,
+"jersey_number": "92",
+"last_name": "Bee",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      280 
+} 
+] 
+}

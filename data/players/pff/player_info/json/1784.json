@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-08-07",
+"draft": {
+ "round":        2,
+"season":     2004,
+"selection":       63,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Marquise",
+"height":      607,
+"id":     1784,
+"jersey_number": "91",
+"last_name": "Hill",
+"position": "ED",
+"speed":     5.25,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      300 
+} 
+] 
+}

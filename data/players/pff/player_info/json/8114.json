@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCF Knights",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-10-18",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Toby",
+"height":      605,
+"id":     8114,
+"jersey_number": "53",
+"last_name": "Jackson",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      257 
+} 
+] 
+}

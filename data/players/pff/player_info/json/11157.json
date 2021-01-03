@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTSA Roadrunners",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-06-24",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Brian",
+"height":      603,
+"id":    11157,
+"jersey_number": "78",
+"last_name": "Price",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      322 
+} 
+] 
+}

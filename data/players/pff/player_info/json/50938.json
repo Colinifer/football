@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico State Aggies",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-04-09",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Rodney",
+"height":      601,
+"id":    50938,
+"jersey_number": "D46",
+"last_name": "Butler",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      212 
+} 
+] 
+}

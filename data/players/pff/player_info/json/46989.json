@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulsa Golden Hurricane",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-02-25",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Willie",
+"height":      603,
+"id":    46989,
+"jersey_number": "66",
+"last_name": "Wright",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      300 
+} 
+] 
+}

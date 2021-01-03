@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Murray State Racers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-04-04",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Dontel",
+"height":      602,
+"id":     8305,
+"jersey_number": "5",
+"last_name": "Watkins",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      194 
+} 
+] 
+}

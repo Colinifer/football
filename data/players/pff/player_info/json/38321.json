@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-02-14",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      203,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "NFL" 
+},
+"first_name": "Tanner",
+"height":      604,
+"id":    38321,
+"jersey_number": "3",
+"last_name": "Lee",
+"position": "QB",
+"speed":     4.98,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      220 
+} 
+] 
+}

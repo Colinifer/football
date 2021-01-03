@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-09-19",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      245,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "NFL" 
+},
+"first_name": "Will",
+"height":      605,
+"id":    39386,
+"jersey_number": "64",
+"last_name": "Clapp",
+"position": "G",
+"speed":     5.39,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      311 
+} 
+] 
+}

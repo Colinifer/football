@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana-Monroe Warhawks",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1994-12-13",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Derrick",
+"height":      510,
+"id":    32342,
+"jersey_number": "00",
+"last_name": "Gore",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      212 
+} 
+] 
+}

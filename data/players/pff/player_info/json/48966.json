@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-07-11",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      163,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "NFL" 
+},
+"first_name": "Tim",
+"height":      603,
+"id":    48966,
+"jersey_number": "97",
+"last_name": "Settle",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      328 
+} 
+] 
+}

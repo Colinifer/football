@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego State Aztecs",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-09-24",
+"draft": {
+ "round":        5,
+"season":     2000,
+"selection":      149,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Kabeer",
+"height":      604,
+"id":      675,
+"jersey_number": "94",
+"last_name": "Gbaja-Biamila",
+"position": "ED",
+"speed":     4.65,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      250 
+} 
+] 
+}

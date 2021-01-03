@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-10",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection":       66,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Lorenzo",
+"height":      605,
+"id":    50126,
+"jersey_number": "59",
+"last_name": "Carter",
+"position": "ED",
+"speed":      4.5,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      250 
+} 
+] 
+}

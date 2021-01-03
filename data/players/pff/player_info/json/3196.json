@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colorado State Rams",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-07-28",
+"draft": {
+ "round":        7,
+"season":     2006,
+"selection":      251,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      510,
+"id":     3196,
+"jersey_number": "88",
+"last_name": "Anderson",
+"position": "WR",
+"speed":     4.57,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      193 
+} 
+] 
+}

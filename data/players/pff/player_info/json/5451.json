@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Troy Trojans",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-08-17",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Dion",
+"height":      605,
+"id":     5451,
+"jersey_number": "70",
+"last_name": "Gales",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      259 
+} 
+] 
+}

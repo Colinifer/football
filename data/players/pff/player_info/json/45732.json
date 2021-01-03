@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas Razorbacks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-06-17",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      226,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "NFL" 
+},
+"first_name": "David",
+"height":      601,
+"id":    45732,
+"jersey_number": "O49",
+"last_name": "Williams",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      229 
+} 
+] 
+}

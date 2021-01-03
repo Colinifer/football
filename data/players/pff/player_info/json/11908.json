@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Memphis Tigers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-01-21",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      153,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Jake",
+"height":      509,
+"id":    11908,
+"jersey_number": "4",
+"last_name": "Elliott",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      167 
+} 
+] 
+}

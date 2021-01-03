@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UAB Blazers",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1989-04-01",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "FA" 
+},
+"first_name": "Jimmy",
+"height":      603,
+"id":     9951,
+"jersey_number": "35D",
+"last_name": "Jean",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      180 
+} 
+] 
+}

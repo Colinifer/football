@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Incarnate Word Cardinals",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-09-28",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Silas",
+"height":      603,
+"id":    57870,
+"jersey_number": "59",
+"last_name": "Stewart",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      219 
+} 
+] 
+}

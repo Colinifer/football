@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Longhorns",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-10-27",
+"draft": {
+ "round":        4,
+"season":     2010,
+"selection":      131,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Roddrick",
+"height":      602,
+"id":     5654,
+"jersey_number": "55",
+"last_name": "Muckelroy",
+"position": "LB",
+"speed":     4.68,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      246 
+} 
+] 
+}

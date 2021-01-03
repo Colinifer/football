@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Youngstown State Penguins",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-08-19",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Jemaine",
+"height":      509,
+"id":     8593,
+"jersey_number": "36",
+"last_name": "Cook",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      210 
+} 
+] 
+}

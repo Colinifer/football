@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alcorn State Braves",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1986-05-27",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Roderick",
+"height":      510,
+"id":     8054,
+"jersey_number": "25",
+"last_name": "Williams",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      180 
+} 
+] 
+}

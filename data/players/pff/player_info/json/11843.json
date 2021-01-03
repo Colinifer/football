@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-10-13",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       88,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Eddie",
+"height":      604,
+"id":    11843,
+"jersey_number": "95",
+"last_name": "Vanderdoes",
+"position": "DI",
+"speed":     4.99,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      305 
+} 
+] 
+}

@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Mesa",
+"current_class": null,
+"current_eligible_year":     1989,
+"dob": "1965-09-05",
+"draft": {
+ "round":        5,
+"season":     1989,
+"selection":      126,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Tony",
+"height":      601,
+"id":    11725,
+"jersey_number": "80",
+"last_name": "Martin",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      180 
+} 
+] 
+}

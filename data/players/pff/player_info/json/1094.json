@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Villanova Wildcats",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-09-02",
+"draft": {
+ "round":        3,
+"season":     2002,
+"selection":       91,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Brian",
+"height":      508,
+"id":     1094,
+"jersey_number": "20",
+"last_name": "Westbrook",
+"position": "HB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      205 
+} 
+] 
+}

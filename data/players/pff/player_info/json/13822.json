@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Michigan Broncos",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-08-30",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "SD" 
+},
+"first_name": "Sam",
+"height":      601,
+"id":    13822,
+"jersey_number": "23",
+"last_name": "Beal",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      177 
+} 
+] 
+}

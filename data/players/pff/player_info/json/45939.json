@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Old Dominion Monarchs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-09-10",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Ray",
+"height":      509,
+"id":    45939,
+"jersey_number": "38",
+"last_name": "Lawry",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      205 
+} 
+] 
+}

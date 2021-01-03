@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ferris State",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-06-11",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Jake",
+"height":      600,
+"id":    11391,
+"jersey_number": "00",
+"last_name": "Lampman",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      205 
+} 
+] 
+}

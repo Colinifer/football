@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh State",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-24",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Juante",
+"height":      511,
+"id":    68148,
+"jersey_number": "39",
+"last_name": "Baldwin",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      188 
+} 
+] 
+}

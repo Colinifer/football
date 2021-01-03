@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UC Davis Aggies",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-04-19",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Colby",
+"height":      601,
+"id":    38062,
+"jersey_number": "6",
+"last_name": "Wadman",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      213 
+} 
+] 
+}

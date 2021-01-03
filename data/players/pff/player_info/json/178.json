@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Kentucky Colonels",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-11-15",
+"draft": {
+ "round":        2,
+"season":     1996,
+"selection":       54,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Jason",
+"height":      606,
+"id":      178,
+"jersey_number": "89",
+"last_name": "Dunn",
+"position": "TE",
+"speed":      4.7,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      274 
+} 
+] 
+}

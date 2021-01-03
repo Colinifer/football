@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Air Force Falcons",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-10-27",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      250,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Austin",
+"height":      603,
+"id":    41350,
+"jersey_number": "58",
+"last_name": "Cutting",
+"position": "LS",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      245 
+} 
+] 
+}

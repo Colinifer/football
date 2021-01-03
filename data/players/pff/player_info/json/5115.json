@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Jose State Spartans",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-11-15",
+"draft": {
+ "round":        6,
+"season":     2009,
+"selection":      191,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Coye",
+"height":      600,
+"id":     5115,
+"jersey_number": "31",
+"last_name": "Francies",
+"position": "CB",
+"speed":     4.63,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      185 
+} 
+] 
+}

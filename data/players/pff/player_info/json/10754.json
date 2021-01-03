@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Manitoba (Canada)",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-13",
+"draft": {
+ "round":        4,
+"season":     2016,
+"selection":      120,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      604,
+"id":    10754,
+"jersey_number": "93",
+"last_name": "Onyemata",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      300 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Georgia",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1993-10-08",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Desmond",
+"height":      606,
+"id":    15466,
+"jersey_number": "00",
+"last_name": "Harrison",
+"position": "T",
+"speed":      4.9,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      295 
+} 
+] 
+}

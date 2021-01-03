@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jacksonville State Gamecocks",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-14",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      602,
+"id":    10992,
+"jersey_number": "42",
+"last_name": "Landrum",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      245 
+} 
+] 
+}

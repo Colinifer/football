@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jackson State Tigers",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-12-08",
+"draft": {
+ "round":        5,
+"season":     1998,
+"selection":      150,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Corey",
+"height":      601,
+"id":      400,
+"jersey_number": "17",
+"last_name": "Bradford",
+"position": "WR",
+"speed":     4.47,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      197 
+} 
+] 
+}

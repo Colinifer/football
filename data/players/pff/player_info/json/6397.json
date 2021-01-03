@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bethel - Tennessee",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1986-10-08",
+"draft": {
+ "round":        7,
+"season":     2011,
+"selection":      245,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Michael",
+"height":      604,
+"id":     6397,
+"jersey_number": "68",
+"last_name": "Jasper",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      394 
+} 
+] 
+}

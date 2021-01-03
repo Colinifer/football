@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Humboldt State",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-27",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection":       94,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Alex",
+"height":      606,
+"id":    66578,
+"jersey_number": "65",
+"last_name": "Cappa",
+"position": "G",
+"speed":     5.39,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      305 
+} 
+] 
+}

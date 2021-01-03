@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-06-21",
+"draft": {
+ "round":        2,
+"season":     2018,
+"selection":       59,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Derrius",
+"height":      511,
+"id":    45664,
+"jersey_number": "29",
+"last_name": "Guice",
+"position": "HB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      225 
+} 
+] 
+}

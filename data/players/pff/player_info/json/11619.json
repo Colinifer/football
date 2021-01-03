@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Idaho Vandals",
+"current_class": null,
+"current_eligible_year":     1987,
+"dob": "1966-01-25",
+"draft": {
+ "round":       10,
+"season":     1987,
+"selection":      263,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Mark",
+"height":      603,
+"id":    11619,
+"jersey_number": "69",
+"last_name": "Schlereth",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      287 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Old Dominion Monarchs",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-09-09",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Rick",
+"height":      602,
+"id":    10007,
+"jersey_number": "45",
+"last_name": "Lovato",
+"position": "LS",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      249 
+} 
+] 
+}

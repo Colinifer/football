@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grand Valley State",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-10-17",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Eric",
+"height":      602,
+"id":     4115,
+"jersey_number": "18",
+"last_name": "Fowler",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      198 
+} 
+] 
+}

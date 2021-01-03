@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bowling Green Falcons",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-10-31",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Diyral",
+"height":      603,
+"id":     5373,
+"jersey_number": "53",
+"last_name": "Briggs",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      230 
+} 
+] 
+}

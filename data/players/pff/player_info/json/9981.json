@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stephen F. Austin Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-08-10",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Gus",
+"height":      510,
+"id":     9981,
+"jersey_number": "33",
+"last_name": "Johnson",
+"position": "HB",
+"speed":      4.7,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      224 
+} 
+] 
+}

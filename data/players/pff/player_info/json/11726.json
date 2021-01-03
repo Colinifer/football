@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico Lobos",
+"current_class": null,
+"current_eligible_year":     1990,
+"dob": "1967-06-07",
+"draft": {
+ "round":        6,
+"season":     1990,
+"selection":      140,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Terance",
+"height":      510,
+"id":    11726,
+"jersey_number": "81",
+"last_name": "Mathis",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      186 
+} 
+] 
+}

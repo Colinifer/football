@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio Bobcats",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-03-18",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       80,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Tarell",
+"height":      604,
+"id":    11835,
+"jersey_number": "93",
+"last_name": "Basham",
+"position": "ED",
+"speed":      4.7,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      266 
+} 
+] 
+}

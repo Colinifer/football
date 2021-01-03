@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Arkansas",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-08-31",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Jordan",
+"height":      511,
+"id":     1980,
+"jersey_number": "26",
+"last_name": "Babineaux",
+"position": "S",
+"speed":     4.65,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      200 
+} 
+] 
+}

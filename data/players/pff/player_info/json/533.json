@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alcorn State Braves",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1975-02-02",
+"draft": {
+ "round":        7,
+"season":     1999,
+"selection":      213,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Donald",
+"height":      600,
+"id":      533,
+"jersey_number": "80",
+"last_name": "Driver",
+"position": "WR",
+"speed":      4.4,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      190 
+} 
+] 
+}

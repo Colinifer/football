@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tusculum (Tn.)",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-01-03",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Caushaud",
+"height":      605,
+"id":     9944,
+"jersey_number": "97",
+"last_name": "Lyons",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      284 
+} 
+] 
+}

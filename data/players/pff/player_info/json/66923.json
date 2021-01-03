@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Notre Dame College",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1993-01-18",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Claudy",
+"height":      604,
+"id":    66923,
+"jersey_number": "60",
+"last_name": "Mathieu",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      269 
+} 
+] 
+}

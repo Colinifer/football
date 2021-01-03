@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oregon State Beavers",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1977-09-26",
+"draft": {
+ "round":        7,
+"season":     2001,
+"selection":      204,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "T.J.",
+"height":      601,
+"id":      921,
+"jersey_number": "84",
+"last_name": "Houshmandzadeh",
+"position": "WR",
+"speed":     4.54,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      197 
+} 
+] 
+}

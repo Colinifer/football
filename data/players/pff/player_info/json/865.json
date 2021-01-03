@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas Jayhawks",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-06-16",
+"draft": {
+ "round":        4,
+"season":     2001,
+"selection":      115,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "Moran",
+"height":      601,
+"id":      865,
+"jersey_number": "44",
+"last_name": "Norris",
+"position": "FB",
+"speed":     4.63,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      250 
+} 
+] 
+}

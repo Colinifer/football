@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chowan Hawks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-11-30",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "David",
+"height":      600,
+"id":     8121,
+"jersey_number": "40",
+"last_name": "Fulton",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      196 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisville Cardinals",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-09-10",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection":       74,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Geron",
+"height":      605,
+"id":    46375,
+"jersey_number": "74",
+"last_name": "Christian Sr.",
+"position": "T",
+"speed":     5.33,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      302 
+} 
+] 
+}

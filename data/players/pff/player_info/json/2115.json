@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Gardner-Webb Runnin' Bulldogs",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-08-08",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Jim",
+"height":      603,
+"id":     2115,
+"jersey_number": "50",
+"last_name": "Maxwell",
+"position": "LB",
+"speed":     4.75,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      242 
+} 
+] 
+}

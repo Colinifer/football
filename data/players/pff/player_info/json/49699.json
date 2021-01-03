@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Memphis Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-04-26",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      150,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "NFL" 
+},
+"first_name": "Genard",
+"height":      600,
+"id":    49699,
+"jersey_number": "58",
+"last_name": "Avery",
+"position": "ED",
+"speed":     4.59,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      250 
+} 
+] 
+}

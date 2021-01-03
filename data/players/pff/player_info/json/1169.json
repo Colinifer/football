@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UC Davis Aggies",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-08-25",
+"draft": {
+ "round":        6,
+"season":     2002,
+"selection":      186,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "AD" 
+},
+"first_name": "J.T.",
+"height":      602,
+"id":     1169,
+"jersey_number": "13",
+"last_name": "O'Sullivan",
+"position": "QB",
+"speed":     4.85,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      227 
+} 
+] 
+}

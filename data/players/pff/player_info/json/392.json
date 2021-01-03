@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hofstra",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-05-27",
+"draft": {
+ "round":        4,
+"season":     1998,
+"selection":      119,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Lance",
+"height":      600,
+"id":      392,
+"jersey_number": "31",
+"last_name": "Schulters",
+"position": "S",
+"speed":      4.7,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      202 
+} 
+] 
+}

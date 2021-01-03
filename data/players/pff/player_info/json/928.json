@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Princeton Tigers",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1980-01-26",
+"draft": {
+ "round":        7,
+"season":     2001,
+"selection":      222,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Dennis",
+"height":      604,
+"id":      928,
+"jersey_number": "64",
+"last_name": "Norman",
+"position": "C",
+"speed":     5.16,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      312 
+} 
+] 
+}

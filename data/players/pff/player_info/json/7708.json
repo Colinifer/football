@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Coastal Carolina Chanticleers",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-06-16",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Jamie",
+"height":      605,
+"id":     7708,
+"jersey_number": "85",
+"last_name": "Childers",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      246 
+} 
+] 
+}

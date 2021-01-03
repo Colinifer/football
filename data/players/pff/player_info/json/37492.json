@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois State Redbirds",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-21",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      151,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Davontae",
+"height":      511,
+"id":    37492,
+"jersey_number": "33",
+"last_name": "Harris",
+"position": "CB",
+"speed":     4.43,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      200 
+} 
+] 
+}

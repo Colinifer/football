@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chattanooga Mocs",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-12-07",
+"draft": {
+ "round":        3,
+"season":     1996,
+"selection":       89,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Terrell",
+"height":      603,
+"id":      188,
+"jersey_number": "81",
+"last_name": "Owens",
+"position": "WR",
+"speed":     4.55,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      226 
+} 
+] 
+}

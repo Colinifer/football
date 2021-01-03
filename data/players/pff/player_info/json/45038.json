@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rice Owls",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-08-17",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Austin",
+"height":      508,
+"id":    45038,
+"jersey_number": "48",
+"last_name": "Walter",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      197 
+} 
+] 
+}

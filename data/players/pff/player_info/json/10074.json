@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Heidelberg",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-08-20",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Donteea",
+"height":      510,
+"id":    10074,
+"jersey_number": "15",
+"last_name": "Dye Jr.",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      195 
+} 
+] 
+}

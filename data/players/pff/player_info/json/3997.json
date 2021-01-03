@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Massachusetts Minutemen",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-10-16",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      603,
+"id":     3997,
+"jersey_number": "17",
+"last_name": "London",
+"position": "WR",
+"speed":     4.58,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      210 
+} 
+] 
+}

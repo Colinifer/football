@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri S&T Miners",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-04-15",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Forrestal",
+"height":      608,
+"id":    10196,
+"jersey_number": "73",
+"last_name": "Hickman",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      315 
+} 
+] 
+}

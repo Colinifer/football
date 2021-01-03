@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Ragin' Cajuns",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-06-01",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      188,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Elijah",
+"height":      510,
+"id":    11943,
+"jersey_number": "00",
+"last_name": "McGuire",
+"position": "HB",
+"speed":     4.53,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      214 
+} 
+] 
+}

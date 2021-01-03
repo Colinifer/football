@@ -1,0 +1,36 @@
+{
+ "players": [
+ {
+ "college": "Washington Huskies",
+"current_class": null,
+"current_eligible_year":     1988,
+"dob": "1965-10-12",
+"draft": {
+ "round":        3,
+"season":     1988,
+"selection":       76,
+"team": {
+    "abbreviation": "IND"
+},
+"type": "AD" 
+},
+"first_name": "Chris",
+"height":      604,
+"id":    11699,
+"jersey_number": "12",
+"last_name": "Chandler",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      226 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana Ragin' Cajuns",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1980-10-09",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Kyries",
+"height":      603,
+"id":     4846,
+"jersey_number": "34",
+"last_name": "Hebert",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      220 
+} 
+] 
+}

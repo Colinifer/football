@@ -1,9 +1,0 @@
-provided <- function(data, condition, call) {
-    if (rlang::eval_tidy(enquo(condition), data)) {
-       rlang::eval_tidy(rlang::quo_squash(quo(data %>% !!enquo(call))))
-    } else {
-       data
-    }
-}
-
-pbp <- pbp %>% provided(any(http://is.na(play_type)),fix_play_types)

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mary Hardin - Baylor",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-03-07",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Blake",
+"height":      511,
+"id":    70356,
+"jersey_number": "00",
+"last_name": "Jackson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      200 
+} 
+] 
+}

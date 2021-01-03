@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Carson - Newman",
+"current_class": null,
+"current_eligible_year":     1992,
+"dob": "1970-05-27",
+"draft": {
+ "round":        3,
+"season":     1992,
+"selection":       64,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Todd",
+"height":      602,
+"id":    11561,
+"jersey_number": "59",
+"last_name": "Collins",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      245 
+} 
+] 
+}

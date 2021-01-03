@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Chattanooga Mocs",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-10-03",
+"draft": {
+ "round":        7,
+"season":     2001,
+"selection":      243,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Terdell",
+"height":      607,
+"id":      935,
+"jersey_number": "74",
+"last_name": "Sands",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      335 
+} 
+] 
+}

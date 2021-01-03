@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clarion",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-11-03",
+"draft": {
+ "round":        6,
+"season":     2003,
+"selection":      177,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Reggie",
+"height":      603,
+"id":     1482,
+"jersey_number": "74",
+"last_name": "Wells",
+"position": "T",
+"speed":     5.16,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      320 
+} 
+] 
+}

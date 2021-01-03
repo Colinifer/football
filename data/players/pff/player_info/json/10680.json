@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama Crimson Tide",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1995-03-21",
+"draft": {
+ "round":        2,
+"season":     2016,
+"selection":       46,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "A'Shawn",
+"height":      604,
+"id":    10680,
+"jersey_number": "94",
+"last_name": "Robinson",
+"position": "DI",
+"speed":      5.2,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      322 
+} 
+] 
+}

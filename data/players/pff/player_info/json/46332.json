@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Michigan Eagles",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-11-11",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Cole",
+"height":      606,
+"id":    46332,
+"jersey_number": "68",
+"last_name": "Gardner",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      304 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-11-24",
+"draft": {
+ "round":        2,
+"season":     2009,
+"selection":       50,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Mohamed",
+"height":      601,
+"id":     4973,
+"jersey_number": "86",
+"last_name": "Massaquoi",
+"position": "WR",
+"speed":      4.6,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      210 
+} 
+] 
+}

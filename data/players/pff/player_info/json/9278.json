@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri State Bears",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-08-06",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      607,
+"id":     9278,
+"jersey_number": "64",
+"last_name": "Grady",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      289 
+} 
+] 
+}

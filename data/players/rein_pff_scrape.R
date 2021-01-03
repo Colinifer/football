@@ -64,17 +64,18 @@ all_json <- dir('data/players/pff/player_info/json', full=T)
 all_cols <- c("id", "first_name", "last_name", "jersey_number", "height", "weight",
               "dob", "speed", "college", "current_eligible_year", "position")
 
+all_json <- dir('data/players/pff/player_info/json', full=T)
 pff_players <- purrr::map_df(all_json, function(x) {
   # start_time <- Sys.time()
   # print(x)
   player_json <- jsonlite::fromJSON(x)[[1]]
   player_df <- c(player_json %>% select(all_cols),
-    'team'=player_json$team$abbreviation,
-    'draft_team'=player_json$draft$team$abbreviation,
-    'draft_yr'=player_json$draft$season,
-    'draft_rnd'=player_json$draft$round,
-    'draft_pick'=player_json$draft$selection,
-    'draft_type'=player_json$draft$type
+    'team'=player_json$team$abbreviation
+    # 'draft_team'=player_json$draft$team,
+    # 'draft_yr'=player_json$draft$season,
+    # 'draft_rnd'=player_json$draft$round,
+    # 'draft_pick'=player_json$draft$selection,
+    # 'draft_type'=player_json$draft$type
   ) %>% as_tibble()
   # end_time <- Sys.time()
   # print(end_time - start_time)
@@ -105,16 +106,24 @@ players_to_check_row <- pff_players %>%
   ))) %>%
   pull(id)
 
-# Don't think this is pulling correct IDs, it's overwriting existing json files
-
 for (j in players_to_check_row) {
   start_time <- Sys.time()
-  RJSONIO::fromJSON(glue('https://premium.pff.com/api/v1/player/{pff_players %>% pull(ball_side) %>% nth(j)}/summary?league=nfl&career=true&player_id={pff_players %>% pull(id) %>% nth(j)}')) %>% 
+  RJSONIO::fromJSON(glue('https://premium.pff.com/api/v1/player/{pff_players %>% filter(id == j) %>% pull(ball_side)}/summary?league=nfl&career=true&player_id={j}')) %>% 
     RJSONIO::toJSON() %>% 
-    write(glue('data/players/pff/pff_player_seasons/json/{pff_players %>% pull(id) %>% nth(j)}.json'))
+    write(glue('data/players/pff/pff_player_seasons/json/{j}.json'))
   end_time <- Sys.time()
-  print(glue('{pff_players %>% pull(id) %>% nth(j)}, {end_time - start_time}'))
+  print(glue('{pff_players %>% filter(id == j) %>% pull(id)}, {end_time - start_time}'))
 }
+
+map(players_to_check_row, function(j) {
+  print(glue('{pff_players %>% filter(id == j) %>% dplyr::pull(id)}, 0'))
+  start_time <- Sys.time()
+  print(glue('{pff_players %>% filter(id == j) %>% dplyr::pull(id)}, {Sys.time() - start_time}'))
+  RJSONIO::fromJSON(glue('https://premium.pff.com/api/v1/player/{pff_players %>% filter(id == j) %>% dplyr::pull(ball_side)}/summary?league=nfl&career=true&player_id={j}')) %>% 
+    RJSONIO::toJSON() %>% 
+    write(glue('data/players/pff/pff_player_seasons/json/{j}.json'))
+  print(glue('{pff_players %>% filter(id == j) %>% dplyr::pull(id)}, {Sys.time() - start_time}'))
+})
 
 ### get all the JSON files and save them in a columnwise format
 all_json <- dir('data/players/pff/pff_player_seasons/json', full=T)
@@ -166,6 +175,7 @@ for (j in players_to_check_row) {
   RJSONIO::fromJSON(glue('https://premium.pff.com/api/v1/player/{player_season_df %>% pull(ball_side) %>% nth(j)}/summary?league=nfl&season={player_season_df %>% pull(season) %>% nth(j)}&player_id={player_season_df %>% pull(id) %>% nth(j)}')) %>% 
     RJSONIO::toJSON() %>% 
     write(glue('data/players/pff/game_status/json/{player_season_df %>% pull(season) %>% nth(j)}/{player_season_df %>% pull(id) %>% nth(j)}.json'))
+  print(player_season_df %>% pull(id, season) %>% nth(j))
 }
 
 

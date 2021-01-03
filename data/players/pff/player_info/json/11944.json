@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulane Green Wave",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-11-06",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      189,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Tanzel",
+"height":      601,
+"id":    11944,
+"jersey_number": "79",
+"last_name": "Smart",
+"position": "DI",
+"speed":     5.24,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      295 
+} 
+] 
+}

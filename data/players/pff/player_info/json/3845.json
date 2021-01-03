@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Jose State Spartans",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-12-18",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      229,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "John",
+"height":      600,
+"id":     3845,
+"jersey_number": "15",
+"last_name": "Broussard",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      173 
+} 
+] 
+}

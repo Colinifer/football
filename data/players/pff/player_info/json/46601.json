@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wyoming Cowboys",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-05-21",
+"draft": {
+ "round":        1,
+"season":     2018,
+"selection":        7,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Josh",
+"height":      605,
+"id":    46601,
+"jersey_number": "17",
+"last_name": "Allen",
+"position": "QB",
+"speed":     4.75,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      237 
+} 
+] 
+}

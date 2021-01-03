@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina A&T Aggies",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-04-04",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      225,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Darryl",
+"height":      606,
+"id":    37479,
+"jersey_number": "92",
+"last_name": "Johnson",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      253 
+} 
+] 
+}

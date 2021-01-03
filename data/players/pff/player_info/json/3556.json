@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwest Missouri State",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-09-21",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Steve",
+"height":      602,
+"id":     3556,
+"jersey_number": "70",
+"last_name": "Williams",
+"position": "DI",
+"speed":     5.21,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      306 
+} 
+] 
+}

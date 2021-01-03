@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Delta State",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1978-11-22",
+"draft": {
+ "round":        4,
+"season":     2004,
+"selection":      118,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Anthony",
+"height":      601,
+"id":     1839,
+"jersey_number": "95",
+"last_name": "Maddox",
+"position": "DI",
+"speed":      5.1,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      305 
+} 
+] 
+}

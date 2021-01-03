@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mount San Antonio College J.C.",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1976-01-11",
+"draft": {
+ "round":        7,
+"season":     2000,
+"selection":      253,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Alfonso",
+"height":      604,
+"id":      715,
+"jersey_number": "70",
+"last_name": "Boone",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      318 
+} 
+] 
+}

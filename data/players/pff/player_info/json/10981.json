@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida International Golden Panthers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-03-28",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Denzell",
+"height":      603,
+"id":    10981,
+"jersey_number": "D62",
+"last_name": "Perine",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      254 
+} 
+] 
+}

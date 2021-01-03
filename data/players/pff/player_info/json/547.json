@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota Coyotes",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1977-06-28",
+"draft": {
+ "round": null,
+"season":     1999,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      604,
+"id":      547,
+"jersey_number": "58",
+"last_name": "Chatham",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      250 
+} 
+] 
+}

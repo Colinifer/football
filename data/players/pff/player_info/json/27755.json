@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Dakota State Bison",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-06-20",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Bruce",
+"height":      511,
+"id":    27755,
+"jersey_number": "00",
+"last_name": "Anderson",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      210 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-15",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      164,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "NFL" 
+},
+"first_name": "Natrell",
+"height":      511,
+"id":    50440,
+"jersey_number": "30",
+"last_name": "Jamerson",
+"position": "S",
+"speed":      4.4,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      201 
+} 
+] 
+}

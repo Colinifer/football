@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jacksonville State Gamecocks",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-09-02",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Roc",
+"height":      510,
+"id":    27875,
+"jersey_number": "00",
+"last_name": "Thomas",
+"position": "HB",
+"speed":     4.56,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      198 
+} 
+] 
+}

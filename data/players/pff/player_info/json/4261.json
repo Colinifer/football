@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hampton Pirates",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-12-22",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Onrea",
+"height":      511,
+"id":     4261,
+"jersey_number": "17",
+"last_name": "Jones",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      203 
+} 
+] 
+}

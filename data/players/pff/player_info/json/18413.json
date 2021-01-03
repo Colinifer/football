@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisville Cardinals",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-04-04",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      205,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "NFL" 
+},
+"first_name": "Trevon",
+"height":      604,
+"id":    18413,
+"jersey_number": "59",
+"last_name": "Young",
+"position": "ED",
+"speed":     4.78,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      259 
+} 
+] 
+}

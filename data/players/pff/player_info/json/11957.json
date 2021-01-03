@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Utah Utes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-03-09",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      202,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "AD" 
+},
+"first_name": "Pita",
+"height":      601,
+"id":    11957,
+"jersey_number": "52",
+"last_name": "Taumoepenu",
+"position": "LB",
+"speed":     4.67,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      245 
+} 
+] 
+}

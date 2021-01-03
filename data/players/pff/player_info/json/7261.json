@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Furman Paladins",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-06-06",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Kadarron",
+"height":      601,
+"id":     7261,
+"jersey_number": "51",
+"last_name": "Anderson",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      235 
+} 
+] 
+}

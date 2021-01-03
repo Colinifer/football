@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia State Panthers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-07-07",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Wil",
+"height":      511,
+"id":    11096,
+"jersey_number": "3",
+"last_name": "Lutz",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      184 
+} 
+] 
+}

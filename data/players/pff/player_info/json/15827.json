@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern State Demons",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-08-16",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Bryant",
+"height":      602,
+"id":    15827,
+"jersey_number": "16",
+"last_name": "Mitchell",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      198 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Old Dominion Monarchs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-11-06",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Rashaad",
+"height":      605,
+"id":    12168,
+"jersey_number": "69",
+"last_name": "Coward",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      320 
+} 
+] 
+}

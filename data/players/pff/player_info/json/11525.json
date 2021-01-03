@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Western Illinois Leathernecks",
+"current_class": null,
+"current_eligible_year":     1987,
+"dob": "1964-01-23",
+"draft": {
+ "round":       10,
+"season":     1987,
+"selection":      276,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Frank",
+"height":      603,
+"id":    11525,
+"jersey_number": "52",
+"last_name": "Winters",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      305 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Troy Trojans",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-07-17",
+"draft": {
+ "round":        6,
+"season":     2010,
+"selection":      201,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Jorrick",
+"height":      511,
+"id":     5724,
+"jersey_number": "38",
+"last_name": "Calvin",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      184 
+} 
+] 
+}

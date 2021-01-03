@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "No College",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-04-13",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Efe",
+"height":      606,
+"id":    10235,
+"jersey_number": "94",
+"last_name": "Obada",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      265 
+} 
+] 
+}

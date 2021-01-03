@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Duke Blue Devils",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-30",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Lucas",
+"height":      603,
+"id":    11435,
+"jersey_number": "62",
+"last_name": "Patrick",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      313 
+} 
+] 
+}

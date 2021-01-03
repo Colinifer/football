@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "William & Mary Tribe",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-12-14",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      604,
+"id":    10181,
+"jersey_number": "57",
+"last_name": "Reilly",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      265 
+} 
+] 
+}

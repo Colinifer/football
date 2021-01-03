@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Idaho Vandals",
+"current_class": null,
+"current_eligible_year":     1987,
+"dob": "1965-10-22",
+"draft": {
+ "round":        6,
+"season":     1987,
+"selection":      151,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Marvin",
+"height":      606,
+"id":    11674,
+"jersey_number": "95",
+"last_name": "Washington",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      285 
+} 
+] 
+}

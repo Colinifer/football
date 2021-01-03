@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ball State Cardinals",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-10-11",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Robert",
+"height":      603,
+"id":     6434,
+"jersey_number": "59",
+"last_name": "Eddins",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      246 
+} 
+] 
+}

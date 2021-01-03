@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern University Jaguars",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-04-01",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Jared",
+"height":      601,
+"id":     7518,
+"jersey_number": "85",
+"last_name": "Green",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      188 
+} 
+] 
+}

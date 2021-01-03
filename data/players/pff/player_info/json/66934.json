@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Dartmouth Big Green",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-02-13",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Jack",
+"height":      604,
+"id":    66934,
+"jersey_number": "6",
+"last_name": "Heneghan",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      229 
+} 
+] 
+}

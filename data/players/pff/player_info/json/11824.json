@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Washington Eagles",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-06-15",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       69,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Cooper",
+"height":      602,
+"id":    11824,
+"jersey_number": "10",
+"last_name": "Kupp",
+"position": "WR",
+"speed":     4.62,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      208 
+} 
+] 
+}

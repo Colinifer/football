@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grand Valley State",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-02-19",
+"draft": {
+ "round":        6,
+"season":     2003,
+"selection":      175,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "David",
+"height":      601,
+"id":     1480,
+"jersey_number": "87",
+"last_name": "Kircus",
+"position": "WR",
+"speed":     4.49,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      190 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boston College Eagles",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-09-25",
+"draft": {
+ "round":        6,
+"season":     1998,
+"selection":      187,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Matt",
+"height":      604,
+"id":      408,
+"jersey_number": "8",
+"last_name": "Hasselbeck",
+"position": "QB",
+"speed":     4.97,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      223 
+} 
+] 
+}

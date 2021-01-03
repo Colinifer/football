@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rice Owls",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1974-09-26",
+"draft": {
+ "round": null,
+"season":     1996,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Larry",
+"height":      510,
+"id":      216,
+"jersey_number": "53",
+"last_name": "Izzo",
+"position": "LB",
+"speed":     4.56,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      228 
+} 
+] 
+}

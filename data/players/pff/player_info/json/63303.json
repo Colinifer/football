@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas-Pine Bluff Golden Lions",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-07-04",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Jamie",
+"height":      601,
+"id":    63303,
+"jersey_number": "7",
+"last_name": "Gillan",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      207 
+} 
+] 
+}

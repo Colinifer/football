@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A & M - Commerce",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1993-06-29",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      605,
+"id":    94368,
+"jersey_number": "96",
+"last_name": "Onuoha",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      255 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Michigan Broncos",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-02-26",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      604,
+"id":    45568,
+"jersey_number": "64",
+"last_name": "Keenoy",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      295 
+} 
+] 
+}

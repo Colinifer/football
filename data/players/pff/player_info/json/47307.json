@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Duke Blue Devils",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-04-20",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Daniel",
+"height":      604,
+"id":    47307,
+"jersey_number": "88",
+"last_name": "Helm",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      255 
+} 
+] 
+}

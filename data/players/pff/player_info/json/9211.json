@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Michigan",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-09-03",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Chad",
+"height":      603,
+"id":     9211,
+"jersey_number": "65",
+"last_name": "Anderson",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      321 
+} 
+] 
+}

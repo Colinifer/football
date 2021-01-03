@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Michigan Eagles",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-12-20",
+"draft": {
+ "round": null,
+"season":     1996,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Barry",
+"height":      604,
+"id":      224,
+"jersey_number": "68",
+"last_name": "Stokes",
+"position": "G",
+"speed":     5.35,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      310 
+} 
+] 
+}

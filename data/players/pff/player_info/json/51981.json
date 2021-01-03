@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lane",
+"current_class": null,
+"current_eligible_year": null,
+"dob": "1993-01-01",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Whitney",
+"height":      604,
+"id":    51981,
+"jersey_number": "90",
+"last_name": "Richardson",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      251 
+} 
+] 
+}

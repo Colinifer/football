@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Rutgers Scarlet Knights",
+"current_class": null,
+"current_eligible_year":     1985,
+"dob": "1965-02-02",
+"draft": {
+ "round":        7,
+"season":     1985,
+"selection":      190,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Harry",
+"height":      605,
+"id":    11630,
+"jersey_number": "74",
+"last_name": "Swayne",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      292 
+} 
+] 
+}

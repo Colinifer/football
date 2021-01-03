@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tusculum (Tn.)",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-10-18",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Rashaad",
+"height":      603,
+"id":     8474,
+"jersey_number": "18",
+"last_name": "Carter",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      205 
+} 
+] 
+}

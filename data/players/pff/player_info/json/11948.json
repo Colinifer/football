@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Georgia",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-05-17",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      192,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Alex",
+"height":      602,
+"id":    11948,
+"jersey_number": "40",
+"last_name": "Armah",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      255 
+} 
+] 
+}

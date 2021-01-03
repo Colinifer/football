@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1974-09-08",
+"draft": {
+ "round":        2,
+"season":     1996,
+"selection":       34,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Amani",
+"height":      603,
+"id":      169,
+"jersey_number": "81",
+"last_name": "Toomer",
+"position": "WR",
+"speed":     4.55,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      208 
+} 
+] 
+}

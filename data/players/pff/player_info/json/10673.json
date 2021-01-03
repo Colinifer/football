@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Kentucky Colonels",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-01-08",
+"draft": {
+ "round":        2,
+"season":     2016,
+"selection":       39,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Noah",
+"height":      602,
+"id":    10673,
+"jersey_number": "57",
+"last_name": "Spence",
+"position": "ED",
+"speed":      4.8,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      251 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Livingstone Blue Bears",
+"current_class": null,
+"current_eligible_year":     1991,
+"dob": "1969-08-16",
+"draft": {
+ "round":        5,
+"season":     1991,
+"selection":      124,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Ben",
+"height":      605,
+"id":    11598,
+"jersey_number": "87",
+"last_name": "Coates",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      245 
+} 
+] 
+}

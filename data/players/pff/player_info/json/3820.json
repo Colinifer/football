@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Arkansas Bears",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-07-20",
+"draft": {
+ "round":        6,
+"season":     2007,
+"selection":      204,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Jacob",
+"height":      603,
+"id":     3820,
+"jersey_number": "78",
+"last_name": "Ford",
+"position": "ED",
+"speed":     4.65,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      249 
+} 
+] 
+}

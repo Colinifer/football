@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charlotte 49ers",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-03-12",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Desmond",
+"height":      602,
+"id":    10050,
+"jersey_number": "39",
+"last_name": "Cooper",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      195 
+} 
+] 
+}

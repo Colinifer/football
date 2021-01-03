@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Portland State Vikings",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-01-02",
+"draft": {
+ "round":        7,
+"season":     2014,
+"selection":      226,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Mitchell",
+"height":      607,
+"id":     8860,
+"jersey_number": "79",
+"last_name": "Van Dyk",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      299 
+} 
+] 
+}

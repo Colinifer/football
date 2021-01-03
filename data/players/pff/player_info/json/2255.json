@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1983-07-23",
+"draft": {
+ "round":        2,
+"season":     2005,
+"selection":       38,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "AD" 
+},
+"first_name": "Stanford",
+"height":      601,
+"id":     2255,
+"jersey_number": "30",
+"last_name": "Routt",
+"position": "CB",
+"speed":     4.27,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      195 
+} 
+] 
+}

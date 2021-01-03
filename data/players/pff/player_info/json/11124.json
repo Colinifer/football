@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Norfolk State Spartans",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-02",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Deon",
+"height":      602,
+"id":    11124,
+"jersey_number": "58",
+"last_name": "King",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      220 
+} 
+] 
+}

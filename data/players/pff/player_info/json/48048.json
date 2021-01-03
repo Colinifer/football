@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota State Jackrabbits",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-09-14",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Jake",
+"height":      604,
+"id":    48048,
+"jersey_number": "9",
+"last_name": "Wieneke",
+"position": "WR",
+"speed":     4.67,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      221 
+} 
+] 
+}

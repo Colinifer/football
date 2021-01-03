@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Elizabeth City State Vikings",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1991-11-23",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Montario",
+"height":      511,
+"id":    11459,
+"jersey_number": "83",
+"last_name": "Hunter",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      192 
+} 
+] 
+}

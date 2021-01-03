@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ottawa (Ks)",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1980-08-30",
+"draft": {
+ "round":        7,
+"season":     2004,
+"selection":      235,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Derrick",
+"height":      511,
+"id":     1949,
+"jersey_number": "32",
+"last_name": "Ward",
+"position": "HB",
+"speed":     4.55,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      233 
+} 
+] 
+}

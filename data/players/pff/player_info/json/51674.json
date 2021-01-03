@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Greenville",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-07-10",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Nicholas",
+"height":      600,
+"id":    51674,
+"jersey_number": "50",
+"last_name": "Morrow",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      224 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego Toreros",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-04-03",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      165,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Jamal",
+"height":      510,
+"id":    11920,
+"jersey_number": "39",
+"last_name": "Agnew",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      190 
+} 
+] 
+}

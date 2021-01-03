@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kansas State Wildcats",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-06-13",
+"draft": {
+ "round":        6,
+"season":     2002,
+"selection":      173,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Demarcus",
+"height":      510,
+"id":     1161,
+"jersey_number": "38",
+"last_name": "Faggins",
+"position": "CB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      178 
+} 
+] 
+}

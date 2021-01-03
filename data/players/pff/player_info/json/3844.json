@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-10-09",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      228,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Deshawn",
+"height":      510,
+"id":     3844,
+"jersey_number": "35",
+"last_name": "Wynn",
+"position": "HB",
+"speed":     4.47,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      232 
+} 
+] 
+}

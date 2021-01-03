@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin - Whitewater",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-08-27",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      249,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Derek",
+"height":      509,
+"id":     3865,
+"jersey_number": "19",
+"last_name": "Stanley",
+"position": "WR",
+"speed":     4.34,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      179 
+} 
+] 
+}

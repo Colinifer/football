@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wyoming Cowboys",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-08-23",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      199,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Chase",
+"height":      604,
+"id":    11954,
+"jersey_number": "73",
+"last_name": "Roullier",
+"position": "C",
+"speed":     5.54,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      310 
+} 
+] 
+}

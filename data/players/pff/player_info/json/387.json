@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona Wildcats",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-03-23",
+"draft": {
+ "round":        4,
+"season":     1998,
+"selection":      107,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Oilers",
+"primary_color": "#c8032b",
+"secondary_color": "#4790de",
+"slug": "tennessee-oilers" 
+},
+"type": "AD" 
+},
+"first_name": "Joe",
+"height":      604,
+"id":      387,
+"jersey_number": "95",
+"last_name": "Salave'a",
+"position": "DI",
+"speed":     5.17,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      295 
+} 
+] 
+}

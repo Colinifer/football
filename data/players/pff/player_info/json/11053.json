@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Dakota Fighting Hawks",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-03-01",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Will",
+"height":      511,
+"id":    11053,
+"jersey_number": "39",
+"last_name": "Ratelle",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      250 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kent State Golden Flashes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-12-05",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Nick",
+"height":      510,
+"id":    47688,
+"jersey_number": "25",
+"last_name": "Holley",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      194 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Delta C.C.",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1974-06-27",
+"draft": {
+ "round":        4,
+"season":     1996,
+"selection":      127,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Juran",
+"height":      603,
+"id":      196,
+"jersey_number": "21",
+"last_name": "Bolden",
+"position": "CB",
+"speed":      4.5,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      210 
+} 
+] 
+}

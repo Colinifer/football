@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Rice Owls",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-12-21",
+"draft": {
+ "round":        5,
+"season":     2009,
+"selection":      144,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Jarett",
+"height":      510,
+"id":     5068,
+"jersey_number": "16",
+"last_name": "Dillard",
+"position": "WR",
+"speed":     4.52,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      187 
+} 
+] 
+}

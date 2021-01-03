@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Samford Bulldogs",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-04-12",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Devlin",
+"height":      601,
+"id":    29838,
+"jersey_number": "00",
+"last_name": "Hodges",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      210 
+} 
+] 
+}

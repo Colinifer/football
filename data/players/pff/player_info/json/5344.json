@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kent State Golden Flashes",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-08-21",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Rico",
+"height":      511,
+"id":     5344,
+"jersey_number": "44",
+"last_name": "Murray",
+"position": "ST",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      191 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Alabama Jaguars",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-03-16",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Melvin",
+"height":      603,
+"id":    10176,
+"jersey_number": "62",
+"last_name": "Meggs",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      300 
+} 
+] 
+}

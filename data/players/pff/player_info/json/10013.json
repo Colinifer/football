@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee State Tigers",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-09-19",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "De'Ante",
+"height":      511,
+"id":    10013,
+"jersey_number": "40",
+"last_name": "Saunders",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      200 
+} 
+] 
+}

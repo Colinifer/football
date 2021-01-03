@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Greenwich",
+"current_class": null,
+"current_eligible_year": null,
+"dob": "1996-11-04",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Tigie",
+"height":      511,
+"id":    66920,
+"jersey_number": "40",
+"last_name": "Sankoh",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      214 
+} 
+] 
+}

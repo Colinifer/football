@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Alabama Jaguars",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-01-30",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Braedon",
+"height":      604,
+"id":    10904,
+"jersey_number": "83",
+"last_name": "Bowman",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      239 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Texas A & M",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-09-05",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Markus",
+"height":      603,
+"id":    10157,
+"jersey_number": "49",
+"last_name": "Pierce-Brewster",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      243 
+} 
+] 
+}

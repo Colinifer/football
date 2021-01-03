@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wheaton",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-03-26",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Tyler",
+"height":      603,
+"id":    94381,
+"jersey_number": "39",
+"last_name": "Sigler",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      213 
+} 
+] 
+}

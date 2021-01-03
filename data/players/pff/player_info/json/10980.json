@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Massachusetts Minutemen",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-06",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Marken",
+"height":      511,
+"id":    10980,
+"jersey_number": "19",
+"last_name": "Michel",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      190 
+} 
+] 
+}

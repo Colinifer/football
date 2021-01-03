@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charlotte 49ers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-06-03",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       65,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Larry",
+"height":      603,
+"id":    11820,
+"jersey_number": "65",
+"last_name": "Ogunjobi",
+"position": "DI",
+"speed":     4.97,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      305 
+} 
+] 
+}

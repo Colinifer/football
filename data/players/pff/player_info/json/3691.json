@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois State Redbirds",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-05-20",
+"draft": {
+ "round":        3,
+"season":     2007,
+"selection":       75,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Laurent",
+"height":      602,
+"id":     3691,
+"jersey_number": "81",
+"last_name": "Robinson",
+"position": "WR",
+"speed":     4.38,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      195 
+} 
+] 
+}

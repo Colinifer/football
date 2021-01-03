@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Buffalo Bulls",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-05-21",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Jordan",
+"height":      600,
+"id":    12146,
+"jersey_number": "O39",
+"last_name": "Johnson",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      216 
+} 
+] 
+}

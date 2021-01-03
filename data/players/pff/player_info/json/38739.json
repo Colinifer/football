@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Villanova Wildcats",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-05-15",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      606,
+"id":    38739,
+"jersey_number": "75",
+"last_name": "Hitner",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      300 
+} 
+] 
+}

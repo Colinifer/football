@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-06-09",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      184,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "NFL" 
+},
+"first_name": "Marcell",
+"height":      600,
+"id":    51408,
+"jersey_number": "36",
+"last_name": "Harris",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      208 
+} 
+] 
+}

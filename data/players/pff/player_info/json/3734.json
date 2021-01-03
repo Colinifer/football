@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (OH) RedHawks",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-11-04",
+"draft": {
+ "round":        4,
+"season":     2007,
+"selection":      118,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Ryne",
+"height":      509,
+"id":     3734,
+"jersey_number": "10",
+"last_name": "Robinson",
+"position": "WR",
+"speed":     4.47,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      179 
+} 
+] 
+}

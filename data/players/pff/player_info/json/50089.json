@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stanford Cardinal",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-06-26",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      214,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Peter",
+"height":      603,
+"id":    50089,
+"jersey_number": "58",
+"last_name": "Kalambayi",
+"position": "ED",
+"speed":     4.57,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      254 
+} 
+] 
+}

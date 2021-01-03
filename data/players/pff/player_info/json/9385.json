@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia State Panthers",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-10-10",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Theo",
+"height":      604,
+"id":     9385,
+"jersey_number": "74D",
+"last_name": "Agnew",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      280 
+} 
+] 
+}

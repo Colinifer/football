@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Michigan Eagles",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-06-25",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Ka'John",
+"height":      604,
+"id":    46148,
+"jersey_number": "00",
+"last_name": "Armstrong",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      294 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Idaho Vandals",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-04-16",
+"draft": {
+ "round":        5,
+"season":     2004,
+"selection":      141,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Jake",
+"height":      605,
+"id":     1862,
+"jersey_number": "60",
+"last_name": "Scott",
+"position": "G",
+"speed":     5.06,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      280 
+} 
+] 
+}

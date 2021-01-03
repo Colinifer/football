@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio Bobcats",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-09-15",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Cameron",
+"height":      605,
+"id":    10021,
+"jersey_number": "98",
+"last_name": "McLeod",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      282 
+} 
+] 
+}

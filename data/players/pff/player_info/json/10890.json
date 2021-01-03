@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Duke Blue Devils",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-07-25",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Will",
+"height":      604,
+"id":    10890,
+"jersey_number": "7",
+"last_name": "Monday",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      210 
+} 
+] 
+}

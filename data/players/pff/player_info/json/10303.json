@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Villanova Wildcats",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-03-04",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Kevin",
+"height":      508,
+"id":    10303,
+"jersey_number": "39",
+"last_name": "Monangai",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      209 
+} 
+] 
+}

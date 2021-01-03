@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota State Jackrabbits",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-03-26",
+"draft": {
+ "round":        7,
+"season":     2019,
+"selection":      223,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Jordan",
+"height":      600,
+"id":    49407,
+"jersey_number": "00",
+"last_name": "Brown",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      201 
+} 
+] 
+}

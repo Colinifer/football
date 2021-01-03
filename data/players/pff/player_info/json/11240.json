@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Connecticut Huskies",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-28",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Andrew",
+"height":      600,
+"id":    11240,
+"jersey_number": "26",
+"last_name": "Adams",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      198 
+} 
+] 
+}

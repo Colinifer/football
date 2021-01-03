@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCF Knights",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-07-20",
+"draft": {
+ "round":        3,
+"season":     2017,
+"selection":       90,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Shaquill",
+"height":      600,
+"id":    11845,
+"jersey_number": "26",
+"last_name": "Griffin",
+"position": "CB",
+"speed":     4.38,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      198 
+} 
+] 
+}

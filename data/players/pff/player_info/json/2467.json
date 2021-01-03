@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Harvard Crimson",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-11-24",
+"draft": {
+ "round":        7,
+"season":     2005,
+"selection":      250,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Ryan",
+"height":      602,
+"id":     2467,
+"jersey_number": "14",
+"last_name": "Fitzpatrick",
+"position": "QB",
+"speed":     4.86,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      223 
+} 
+] 
+}

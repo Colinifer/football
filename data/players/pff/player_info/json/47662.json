@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana-Monroe Warhawks",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-08-13",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      203,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Marcus",
+"height":      508,
+"id":    47662,
+"jersey_number": "00",
+"last_name": "Green",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      191 
+} 
+] 
+}

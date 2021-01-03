@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin Badgers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-10-16",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      110,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "NFL" 
+},
+"first_name": "Nick",
+"height":      511,
+"id":    28495,
+"jersey_number": "00",
+"last_name": "Nelson",
+"position": "CB",
+"speed":     4.52,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      200 
+} 
+] 
+}

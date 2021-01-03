@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Washington Eagles",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-08-04",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Kendrick",
+"height":      601,
+"id":    12270,
+"jersey_number": "84",
+"last_name": "Bourne",
+"position": "WR",
+"speed":     4.68,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      203 
+} 
+] 
+}

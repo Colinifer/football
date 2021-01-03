@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Texas Mean Green",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-11-08",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Marcus",
+"height":      508,
+"id":     9298,
+"jersey_number": "35D",
+"last_name": "Trice",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      193 
+} 
+] 
+}

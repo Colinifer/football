@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ferris State",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-23",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Justin",
+"height":      603,
+"id":    10975,
+"jersey_number": "61",
+"last_name": "Zimmer",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      292 
+} 
+] 
+}

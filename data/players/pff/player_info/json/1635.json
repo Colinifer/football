@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Delaware State Hornets",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-05-08",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Jamaal",
+"height":      604,
+"id":     1635,
+"jersey_number": "67",
+"last_name": "Jackson",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      330 
+} 
+] 
+}

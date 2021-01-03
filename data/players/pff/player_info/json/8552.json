@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Minnesota State",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1986-04-29",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Junior",
+"height":      602,
+"id":     8552,
+"jersey_number": "99",
+"last_name": "Aumavae",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      310 
+} 
+] 
+}

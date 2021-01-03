@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "East Central (Ok.)",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-01-16",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Trinity",
+"height":      600,
+"id":    94356,
+"jersey_number": "00",
+"last_name": "Benson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      180 
+} 
+] 
+}

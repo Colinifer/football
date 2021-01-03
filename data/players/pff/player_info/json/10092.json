@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTSA Roadrunners",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-11-04",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Ashaad",
+"height":      603,
+"id":    10092,
+"jersey_number": "72",
+"last_name": "Mabry",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      314 
+} 
+] 
+}

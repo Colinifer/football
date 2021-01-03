@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washburn",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-04-13",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      180,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Corey",
+"height":      511,
+"id":    83833,
+"jersey_number": "27",
+"last_name": "Ballentine",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      196 
+} 
+] 
+}

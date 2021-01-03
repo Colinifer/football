@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Navy Midshipmen",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1977-03-29",
+"draft": {
+ "round":        2,
+"season":     1998,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "SD" 
+},
+"first_name": "Mike",
+"height":      606,
+"id":      329,
+"jersey_number": "68",
+"last_name": "Wahle",
+"position": "G",
+"speed":     5.15,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      304 
+} 
+] 
+}

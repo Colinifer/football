@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Coastal Carolina Chanticleers",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-04-14",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      217,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Tyler",
+"height":      601,
+"id":     3833,
+"jersey_number": "4",
+"last_name": "Thigpen",
+"position": "QB",
+"speed":     4.82,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      233 
+} 
+] 
+}

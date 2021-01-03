@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida International Golden Panthers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-06-29",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Jeremiah",
+"height":      511,
+"id":    11126,
+"jersey_number": "38",
+"last_name": "McKinnon",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      192 
+} 
+] 
+}

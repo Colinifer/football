@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marian University",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-05-12",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Krishawn",
+"height":      603,
+"id":    12014,
+"jersey_number": "00",
+"last_name": "Hogan",
+"position": "WR",
+"speed":     4.56,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      222 
+} 
+] 
+}

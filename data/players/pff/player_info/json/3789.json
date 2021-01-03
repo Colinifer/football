@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama State Hornets",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-12-17",
+"draft": {
+ "round":        5,
+"season":     2007,
+"selection":      173,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "AD" 
+},
+"first_name": "Michael",
+"height":      600,
+"id":     3789,
+"jersey_number": "20",
+"last_name": "Coe",
+"position": "CB",
+"speed":     4.53,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      190 
+} 
+] 
+}

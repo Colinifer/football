@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Savannah State Tigers",
+"current_class": null,
+"current_eligible_year":     1990,
+"dob": "1968-06-26",
+"draft": {
+ "round":        7,
+"season":     1990,
+"selection":      192,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Shannon",
+"height":      602,
+"id":    11715,
+"jersey_number": "84",
+"last_name": "Sharpe",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      228 
+} 
+] 
+}

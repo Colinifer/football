@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "McNeese State Cowboys",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1983-11-29",
+"draft": {
+ "round":        3,
+"season":     2008,
+"selection":       80,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "AD" 
+},
+"first_name": "Bryan",
+"height":      602,
+"id":     4394,
+"jersey_number": "53",
+"last_name": "Smith",
+"position": "ED",
+"speed":     4.74,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      228 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Illinois Salukis",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-03-23",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Adam",
+"height":      607,
+"id":    11134,
+"jersey_number": "86",
+"last_name": "Fuehne",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      260 
+} 
+] 
+}

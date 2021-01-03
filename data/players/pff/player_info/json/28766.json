@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "James Madison Dukes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-05-20",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Simeyon",
+"height":      601,
+"id":    28766,
+"jersey_number": "79",
+"last_name": "Robinson",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      242 
+} 
+] 
+}

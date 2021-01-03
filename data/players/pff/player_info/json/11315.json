@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Michigan",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-06-24",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Marcus",
+"height":      510,
+"id":    11315,
+"jersey_number": "16",
+"last_name": "Tucker",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      190 
+} 
+] 
+}

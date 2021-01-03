@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Miami (FL) Hurricanes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-02-23",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      107,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "NFL" 
+},
+"first_name": "Chris",
+"height":      604,
+"id":    47164,
+"jersey_number": "89",
+"last_name": "Herndon",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      253 
+} 
+] 
+}

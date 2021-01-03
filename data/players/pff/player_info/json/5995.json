@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Louisiana-Monroe Warhawks",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-12-30",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Aaron",
+"height":      604,
+"id":     5995,
+"jersey_number": "98",
+"last_name": "Morgan",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      238 
+} 
+] 
+}

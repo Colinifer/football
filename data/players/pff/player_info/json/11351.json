@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Utah Thunderbirds",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1990-09-13",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "James",
+"height":      603,
+"id":    11351,
+"jersey_number": "49",
+"last_name": "Cowser",
+"position": "ED",
+"speed":     4.82,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      245 
+} 
+] 
+}

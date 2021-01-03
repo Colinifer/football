@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Shepherd",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-03-20",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Billy",
+"height":      604,
+"id":    12347,
+"jersey_number": "48",
+"last_name": "Brown",
+"position": "TE",
+"speed":      4.7,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      255 
+} 
+] 
+}

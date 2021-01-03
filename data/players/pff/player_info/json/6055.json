@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UNLV Rebels",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-10-07",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Martin",
+"height":      601,
+"id":     6055,
+"jersey_number": "68",
+"last_name": "Tevaseu",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      310 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marshall Thundering Herd",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1986-03-19",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      250,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Ahmad",
+"height":      509,
+"id":     3866,
+"jersey_number": "44",
+"last_name": "Bradshaw",
+"position": "HB",
+"speed":     4.55,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      198 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Slippery Rock",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-20",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Cory",
+"height":      604,
+"id":    11309,
+"jersey_number": "68",
+"last_name": "Tucker",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      315 
+} 
+] 
+}

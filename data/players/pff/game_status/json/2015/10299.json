@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10299,
+"roster": "offense",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2015,
+"season_id":     2015,
+"team_name": "KC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     3354,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":       16,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":     3354,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "14",
+"player_franchise_id":       16,
+"player_id":    10299,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

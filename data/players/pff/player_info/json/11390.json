@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Buffalo Bulls",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-11-16",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Joe",
+"height":      602,
+"id":    11390,
+"jersey_number": "8",
+"last_name": "Licata",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      227 
+} 
+] 
+}

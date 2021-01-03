@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western New Mexico Mustangs",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-08-13",
+"draft": {
+ "round":        7,
+"season":     2003,
+"selection":      254,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Richard",
+"height":      608,
+"id":     1548,
+"jersey_number": "85",
+"last_name": "Angulo",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      260 
+} 
+] 
+}

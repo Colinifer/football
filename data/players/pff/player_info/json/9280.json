@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Texas Mean Green",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-08-06",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Brelan",
+"height":      508,
+"id":     9280,
+"jersey_number": "6",
+"last_name": "Chancellor",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      188 
+} 
+] 
+}

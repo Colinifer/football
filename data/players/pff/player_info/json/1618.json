@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Southern Tigers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-01-20",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Cortez",
+"height":      511,
+"id":     1618,
+"jersey_number": "85",
+"last_name": "Hankton",
+"position": "WR",
+"speed":     4.54,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      200 
+} 
+] 
+}

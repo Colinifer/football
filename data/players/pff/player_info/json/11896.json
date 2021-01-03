@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California Golden Bears",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-01-18",
+"draft": {
+ "round":        4,
+"season":     2017,
+"selection":      141,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Chad",
+"height":      602,
+"id":    11896,
+"jersey_number": "17",
+"last_name": "Hansen",
+"position": "WR",
+"speed":     4.53,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      202 
+} 
+] 
+}

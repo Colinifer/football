@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hampton Pirates",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-05-07",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Owen",
+"height":      604,
+"id":    48964,
+"jersey_number": "97",
+"last_name": "Obasuyi",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      290 
+} 
+] 
+}

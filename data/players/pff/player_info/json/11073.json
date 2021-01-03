@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maine Black Bears",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-12-04",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Bruce",
+"height":      603,
+"id":    11073,
+"jersey_number": "O69",
+"last_name": "Johnson",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      285 
+} 
+] 
+}

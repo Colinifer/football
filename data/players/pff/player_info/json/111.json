@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Southern State",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1970-05-15",
+"draft": {
+ "round": null,
+"season":     1994,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Rod",
+"height":      600,
+"id":      111,
+"jersey_number": "80",
+"last_name": "Smith",
+"position": "WR",
+"speed":     4.55,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      200 
+} 
+] 
+}

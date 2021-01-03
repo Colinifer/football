@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia State Panthers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-08-17",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Emmanuel",
+"height":      603,
+"id":     8183,
+"jersey_number": "87",
+"last_name": "Ogbuehi",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      250 
+} 
+] 
+}

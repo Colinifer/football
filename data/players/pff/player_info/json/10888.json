@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mars Hill Lions",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-10-19",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Johnny",
+"height":      604,
+"id":    10888,
+"jersey_number": "93",
+"last_name": "Maxey",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      293 
+} 
+] 
+}

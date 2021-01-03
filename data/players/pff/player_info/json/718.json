@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska - Omaha",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1976-12-24",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      605,
+"id":      718,
+"jersey_number": "67",
+"last_name": "Bober",
+"position": "G",
+"speed":      5.4,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      310 
+} 
+] 
+}

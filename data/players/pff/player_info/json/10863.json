@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Houston Cougars",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-07-07",
+"draft": {
+ "round":        7,
+"season":     2016,
+"selection":      229,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "De'Marcus",
+"height":      509,
+"id":    10863,
+"jersey_number": "14",
+"last_name": "Ayers",
+"position": "WR",
+"speed":     4.72,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      181 
+} 
+] 
+}

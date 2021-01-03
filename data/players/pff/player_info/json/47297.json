@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina State Wolfpack",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-07-20",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      165,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "NFL" 
+},
+"first_name": "Jaylen",
+"height":      600,
+"id":    47297,
+"jersey_number": "38",
+"last_name": "Samuels",
+"position": "HB",
+"speed":     4.54,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      225 
+} 
+] 
+}

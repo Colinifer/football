@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-11-27",
+"draft": {
+ "round":        4,
+"season":     1996,
+"selection":      109,
+"team": {
+ "abbreviation": "HOU",
+"city": "Houston",
+"id":       31,
+"nickname": "Oilers",
+"primary_color": "#c8032b",
+"secondary_color": "#4790de",
+"slug": "houston-oilers" 
+},
+"type": "AD" 
+},
+"first_name": "Jon",
+"height":      607,
+"id":      193,
+"jersey_number": "79",
+"last_name": "Runyan",
+"position": "T",
+"speed":     5.58,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      330 
+} 
+] 
+}

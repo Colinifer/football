@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UTSA Roadrunners",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-28",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Jason",
+"height":      604,
+"id":    11127,
+"jersey_number": "91",
+"last_name": "Neill",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      278 
+} 
+] 
+}

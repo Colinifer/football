@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-09-18",
+"draft": {
+ "round":        1,
+"season":     2017,
+"selection":       18,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Adoree'",
+"height":      511,
+"id":    11773,
+"jersey_number": "25",
+"last_name": "Jackson",
+"position": "CB",
+"speed":     4.42,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      185 
+} 
+] 
+}

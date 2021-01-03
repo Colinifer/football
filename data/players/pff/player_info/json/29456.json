@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Dakota State Bison",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-07-23",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      602,
+"id":    29456,
+"jersey_number": "49",
+"last_name": "Board",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      229 
+} 
+] 
+}

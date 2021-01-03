@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "No College",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1989-10-25",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Delvin",
+"height":      601,
+"id":    10251,
+"jersey_number": "40",
+"last_name": "Breaux",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      210 
+} 
+] 
+}

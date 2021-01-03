@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hampton Pirates",
+"current_class": null,
+"current_eligible_year":     2011,
+"dob": "1988-05-09",
+"draft": {
+ "round": null,
+"season":     2011,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Ricardo",
+"height":      603,
+"id":     6773,
+"jersey_number": "27",
+"last_name": "Silva",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      225 
+} 
+] 
+}

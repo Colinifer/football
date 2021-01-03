@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tennessee Tech Golden Eagles",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-11-23",
+"draft": {
+ "round":        5,
+"season":     2005,
+"selection":      163,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Frank",
+"height":      604,
+"id":     2380,
+"jersey_number": "65",
+"last_name": "Omiyale",
+"position": "T",
+"speed":      5.3,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      310 
+} 
+] 
+}

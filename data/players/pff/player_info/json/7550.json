@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeastern Louisiana Lions",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-04-21",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      511,
+"id":     7550,
+"jersey_number": "6",
+"last_name": "Collins",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      180 
+} 
+] 
+}

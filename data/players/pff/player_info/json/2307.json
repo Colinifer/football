@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cal Poly Mustangs",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1983-04-18",
+"draft": {
+ "round":        3,
+"season":     2005,
+"selection":       90,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Jordan",
+"height":      602,
+"id":     2307,
+"jersey_number": "57",
+"last_name": "Beck",
+"position": "ST",
+"speed":      4.6,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      233 
+} 
+] 
+}

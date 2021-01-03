@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Alabama Jaguars",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-02-12",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Montell",
+"height":      601,
+"id":     9906,
+"jersey_number": "40",
+"last_name": "Garner",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      185 
+} 
+] 
+}

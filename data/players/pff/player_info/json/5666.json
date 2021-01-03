@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Arkansas Bears",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-07-16",
+"draft": {
+ "round":        5,
+"season":     2010,
+"selection":      143,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Larry",
+"height":      600,
+"id":     5666,
+"jersey_number": "59",
+"last_name": "Hart",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      248 
+} 
+] 
+}

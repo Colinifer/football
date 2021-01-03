@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nicholls State Colonels",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-12-08",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Damion",
+"height":      601,
+"id":    33350,
+"jersey_number": "83",
+"last_name": "Jeanpiere Jr.",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      185 
+} 
+] 
+}

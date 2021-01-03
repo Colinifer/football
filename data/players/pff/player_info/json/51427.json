@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Kent State Golden Flashes",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-12-05",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Nate",
+"height":      600,
+"id":    51427,
+"jersey_number": "36",
+"last_name": "Holley",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      209 
+} 
+] 
+}

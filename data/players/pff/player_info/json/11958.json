@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Coastal Carolina Chanticleers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1992-11-24",
+"draft": {
+ "round":        6,
+"season":     2017,
+"selection":      203,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "De'Angelo",
+"height":      508,
+"id":    11958,
+"jersey_number": "32",
+"last_name": "Henderson Sr.",
+"position": "HB",
+"speed":     4.48,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      207 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Toledo Rockets",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1979-07-28",
+"draft": {
+ "round":        3,
+"season":     2005,
+"selection":      100,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Nick",
+"height":      604,
+"id":     2317,
+"jersey_number": "77",
+"last_name": "Kaczur",
+"position": "T",
+"speed":     5.28,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      319 
+} 
+] 
+}

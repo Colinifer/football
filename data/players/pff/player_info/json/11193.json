@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern State Demons",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-03-02",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Pace",
+"height":      606,
+"id":    11193,
+"jersey_number": "00",
+"last_name": "Murphy",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      310 
+} 
+] 
+}

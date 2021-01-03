@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Arkansas",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-02-23",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Don",
+"height":      601,
+"id":     8577,
+"jersey_number": "45",
+"last_name": "Unamba",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      192 
+} 
+] 
+}

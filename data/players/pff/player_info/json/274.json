@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cornell Big Red",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1975-02-12",
+"draft": {
+ "round":        4,
+"season":     1997,
+"selection":      114,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Seth",
+"height":      604,
+"id":      274,
+"jersey_number": "91",
+"last_name": "Payne",
+"position": "DI",
+"speed":     5.11,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      303 
+} 
+] 
+}

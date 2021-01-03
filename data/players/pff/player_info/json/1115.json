@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wisconsin - Stout",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1978-10-01",
+"draft": {
+ "round":        4,
+"season":     2002,
+"selection":      115,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "AD" 
+},
+"first_name": "Tony",
+"height":      601,
+"id":     1115,
+"jersey_number": "41",
+"last_name": "Beckham",
+"position": "CB",
+"speed":     4.37,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      195 
+} 
+] 
+}

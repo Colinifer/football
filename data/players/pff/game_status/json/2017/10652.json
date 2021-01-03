@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10652,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       14,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2017,
+"season_id":     2017,
+"team_name": "IND" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     7993,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "C",
+"status": "S",
+"week":        5 
+},
+"game_id":     7993,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "78",
+"player_franchise_id":       14,
+"player_id":    10652,
+"position": "C",
+"status": "S",
+"week":        5 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     8013,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       14,
+"position": "C",
+"status": "S",
+"week":        6 
+},
+"game_id":     8013,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "78",
+"player_franchise_id":       14,
+"player_id":    10652,
+"position": "C",
+"status": "S",
+"week":        6 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     8019,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "C",
+"status": "S",
+"week":        7 
+},
+"game_id":     8019,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "78",
+"player_franchise_id":       14,
+"player_id":    10652,
+"position": "C",
+"status": "S",
+"week":        7 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     8034,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       14,
+"position": "C",
+"status": "S",
+"week":        8 
+},
+"game_id":     8034,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "78",
+"player_franchise_id":       14,
+"player_id":    10652,
+"position": "C",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     8047,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       14,
+"position": "C",
+"status": "S",
+"week":        9 
+},
+"game_id":     8047,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "78",
+"player_franchise_id":       14,
+"player_id":    10652,
+"position": "C",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     8063,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "C",
+"status": "S",
+"week":       10 
+},
+"game_id":     8063,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "78",
+"player_franchise_id":       14,
+"player_id":    10652,
+"position": "C",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     8091,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "C",
+"status": "S",
+"week":       12 
+},
+"game_id":     8091,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "78",
+"player_franchise_id":       14,
+"player_id":    10652,
+"position": "C",
+"status": "S",
+"week":       12 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

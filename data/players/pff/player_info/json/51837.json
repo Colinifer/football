@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Harvard Crimson",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-02-19",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Anthony",
+"height":      602,
+"id":    51837,
+"jersey_number": "86",
+"last_name": "Firkser",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      246 
+} 
+] 
+}

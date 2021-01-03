@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Southern Eagles",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-04-27",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      183,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Ukeme",
+"height":      602,
+"id":    11938,
+"jersey_number": "54",
+"last_name": "Eligwe",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      239 
+} 
+] 
+}

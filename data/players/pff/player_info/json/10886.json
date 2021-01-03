@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Montana State Bobcats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-12-23",
+"draft": {
+ "round":        7,
+"season":     2016,
+"selection":      252,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Beau",
+"height":      605,
+"id":    10886,
+"jersey_number": "81",
+"last_name": "Sandland",
+"position": "TE",
+"speed":     4.74,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      252 
+} 
+] 
+}

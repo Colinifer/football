@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Gardner-Webb Runnin' Bulldogs",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1987-07-12",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Dobson",
+"height":      602,
+"id":     5374,
+"jersey_number": "14",
+"last_name": "Collins",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      178 
+} 
+] 
+}

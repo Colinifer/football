@@ -117,7 +117,9 @@ sr_sched_df <- tibble(
     )
 
 sr_sched_df %>% 
-  saveRDS('data/schedules/sportradar/sched_{year}.rds')
+  saveRDS(glue('data/schedules/sportradar/sched_{year}.rds'))
+
+sr_sched_df <- readRDS(glue('data/schedules/sportradar/sched_{year}.rds'))
 
 # Check missing play by play files
 gm_done <- gsub('.json','',dir(glue('data/pbp/sportradar/{year}')))

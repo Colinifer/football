@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lincoln (Mo.)",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1990-10-10",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Davon",
+"height":      607,
+"id":     9961,
+"jersey_number": "76D",
+"last_name": "Walls",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      290 
+} 
+] 
+}

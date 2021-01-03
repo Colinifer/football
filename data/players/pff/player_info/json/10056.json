@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tiffin",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-08-09",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      601,
+"id":    10056,
+"jersey_number": "45",
+"last_name": "Person",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      185 
+} 
+] 
+}

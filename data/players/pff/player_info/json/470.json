@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "LSU Tigers",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1976-06-05",
+"draft": {
+ "round":        2,
+"season":     1999,
+"selection":       46,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Kevin",
+"height":      508,
+"id":      470,
+"jersey_number": "33",
+"last_name": "Faulk",
+"position": "HB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      202 
+} 
+] 
+}

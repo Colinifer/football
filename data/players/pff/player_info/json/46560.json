@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulsa Golden Hurricane",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-11-19",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Dane",
+"height":      601,
+"id":    46560,
+"jersey_number": "7",
+"last_name": "Evans",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      215 
+} 
+] 
+}

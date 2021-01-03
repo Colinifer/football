@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Washington Eagles",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-09-22",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Jesse",
+"height":      508,
+"id":     2861,
+"jersey_number": "22",
+"last_name": "Chatman",
+"position": "HB",
+"speed":     4.78,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      215 
+} 
+] 
+}

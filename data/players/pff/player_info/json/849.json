@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Syracuse Orange",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-07-17",
+"draft": {
+ "round":        3,
+"season":     2001,
+"selection":       88,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "AD" 
+},
+"first_name": "Morlon",
+"height":      600,
+"id":      849,
+"jersey_number": "56",
+"last_name": "Greenwood",
+"position": "LB",
+"speed":     4.69,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      238 
+} 
+] 
+}

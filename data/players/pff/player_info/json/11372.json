@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stephen F. Austin Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-03-30",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "OAK",
+"city": "Oakland",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "oakland-raiders" 
+},
+"type": "FA" 
+},
+"first_name": "Terran",
+"height":      603,
+"id":    11372,
+"jersey_number": "79",
+"last_name": "Vaughn",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      300 
+} 
+] 
+}

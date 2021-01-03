@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Liberty Flames",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-11-14",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      601,
+"id":    11275,
+"jersey_number": "3",
+"last_name": "Lunsford",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      180 
+} 
+] 
+}

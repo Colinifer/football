@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bryant University Bulldogs",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-07-29",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Tom",
+"height":      511,
+"id":    94379,
+"jersey_number": "00",
+"last_name": "Kennedy",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      190 
+} 
+] 
+}

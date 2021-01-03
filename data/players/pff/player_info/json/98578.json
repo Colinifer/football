@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bryant University Bulldogs",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": null,
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Thomas",
+"height":      603,
+"id":    98578,
+"jersey_number": "D73",
+"last_name": "Costigan",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      230 
+} 
+] 
+}

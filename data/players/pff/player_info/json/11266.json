@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ferris State",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-22",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Jason",
+"height":      603,
+"id":    11266,
+"jersey_number": "86",
+"last_name": "Vander Laan",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      245 
+} 
+] 
+}

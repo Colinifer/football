@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Alabama Lions",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1981-12-18",
+"draft": {
+ "round": null,
+"season":     2005,
+"selection": null,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "FA" 
+},
+"first_name": "Evan",
+"height":      510,
+"id":     2730,
+"jersey_number": "41",
+"last_name": "Oglesby",
+"position": "ST",
+"speed":     4.53,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      185 
+} 
+] 
+}

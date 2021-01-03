@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-11-15",
+"draft": {
+ "round":        2,
+"season":     2005,
+"selection":       45,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "AD" 
+},
+"first_name": "Lofa",
+"height":      600,
+"id":     2262,
+"jersey_number": "51",
+"last_name": "Tatupu",
+"position": "LB",
+"speed":     4.83,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      238 
+} 
+] 
+}

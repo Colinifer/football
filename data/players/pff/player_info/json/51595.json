@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern Oklahoma State",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1992-11-02",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Joby",
+"height":      604,
+"id":    51595,
+"jersey_number": "D67",
+"last_name": "Saint Fleur",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      253 
+} 
+] 
+}

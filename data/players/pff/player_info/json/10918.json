@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grambling State Tigers",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-01-12",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Chester",
+"height":      600,
+"id":    10918,
+"jersey_number": "00",
+"last_name": "Rogers",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      184 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Baylor Bears",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-10-07",
+"draft": {
+ "round":        6,
+"season":     2012,
+"selection":      202,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Terrance",
+"height":      511,
+"id":     7187,
+"jersey_number": "42",
+"last_name": "Ganaway",
+"position": "HB",
+"speed":     4.67,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      240 
+} 
+] 
+}

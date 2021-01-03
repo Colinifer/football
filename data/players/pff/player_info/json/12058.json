@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Indiana (Pa.)",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-06-11",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Ethan",
+"height":      602,
+"id":    12058,
+"jersey_number": "62",
+"last_name": "Cooper",
+"position": "G",
+"speed":     5.36,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      322 
+} 
+] 
+}

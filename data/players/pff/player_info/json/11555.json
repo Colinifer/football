@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Ohio State Buckeyes",
+"current_class": null,
+"current_eligible_year":     1984,
+"dob": "1962-08-05",
+"draft": {
+ "round":        1,
+"season":     1984,
+"selection":       27,
+"team": null,
+"type": "AD" 
+},
+"first_name": "William",
+"height":      605,
+"id":    11555,
+"jersey_number": "76",
+"last_name": "Roberts",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      298 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Texas A & M",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1991-01-27",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Dustin",
+"height":      605,
+"id":     9156,
+"jersey_number": "2",
+"last_name": "Vaughan",
+"position": "QB",
+"speed":     4.95,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      234 
+} 
+] 
+}

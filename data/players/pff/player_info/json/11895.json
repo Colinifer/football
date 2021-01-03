@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Clemson Tigers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-10-01",
+"draft": {
+ "round":        4,
+"season":     2017,
+"selection":      140,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Wayne",
+"height":      600,
+"id":    11895,
+"jersey_number": "22",
+"last_name": "Gallman",
+"position": "HB",
+"speed":      4.6,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      210 
+} 
+] 
+}

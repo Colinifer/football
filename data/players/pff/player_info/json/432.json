@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Walla Walla CC WA",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-07-21",
+"draft": {
+ "round": null,
+"season":     1998,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      603,
+"id":      432,
+"jersey_number": "45",
+"last_name": "Sellers",
+"position": "FB",
+"speed":     4.67,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      260 
+} 
+] 
+}

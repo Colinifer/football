@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Columbia Lions",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1974-11-30",
+"draft": {
+ "round":        2,
+"season":     1997,
+"selection":       52,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Marcellus",
+"height":      605,
+"id":      252,
+"jersey_number": "75",
+"last_name": "Wiley",
+"position": "ED",
+"speed":     4.87,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      275 
+} 
+] 
+}

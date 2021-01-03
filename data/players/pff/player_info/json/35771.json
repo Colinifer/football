@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Citadel Bulldogs",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-08-13",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Noah",
+"height":      601,
+"id":    35771,
+"jersey_number": "56",
+"last_name": "Dawkins",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      215 
+} 
+] 
+}

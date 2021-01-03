@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "James Madison Dukes",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-12-31",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "FA" 
+},
+"first_name": "Andrew",
+"height":      603,
+"id":    28584,
+"jersey_number": "47",
+"last_name": "Ankrah",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      216 
+} 
+] 
+}

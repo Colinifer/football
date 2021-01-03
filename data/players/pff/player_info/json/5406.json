@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ball State Cardinals",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-08-26",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Darius",
+"height":      607,
+"id":     5406,
+"jersey_number": "49",
+"last_name": "Hill",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      247 
+} 
+] 
+}

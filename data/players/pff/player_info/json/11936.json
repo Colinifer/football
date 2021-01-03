@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Georgia",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1992-08-20",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      181,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Dylan",
+"height":      603,
+"id":    11936,
+"jersey_number": "49",
+"last_name": "Donahue",
+"position": "ED",
+"speed":     4.75,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      247 
+} 
+] 
+}

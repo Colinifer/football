@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Trinity International Trojans",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1970-07-24",
+"draft": {
+ "round": null,
+"season":     1997,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Karl",
+"height":      603,
+"id":      308,
+"jersey_number": "88",
+"last_name": "Hankton",
+"position": "WR",
+"speed":      4.6,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      202 
+} 
+] 
+}

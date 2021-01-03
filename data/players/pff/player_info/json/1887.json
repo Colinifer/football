@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska - Omaha",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-06-16",
+"draft": {
+ "round":        6,
+"season":     2004,
+"selection":      169,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Ryan",
+"height":      602,
+"id":     1887,
+"jersey_number": "87",
+"last_name": "Krause",
+"position": "TE",
+"speed":      4.6,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      256 
+} 
+] 
+}

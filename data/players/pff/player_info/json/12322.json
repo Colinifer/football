@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Monmouth Hawks",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-05-16",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Darnell",
+"height":      602,
+"id":    12322,
+"jersey_number": "49",
+"last_name": "Leslie",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      229 
+} 
+] 
+}

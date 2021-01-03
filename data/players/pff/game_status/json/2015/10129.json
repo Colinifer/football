@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10129,
+"roster": "offense",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2015,
+"season_id":     2015,
+"team_name": "SD" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     3343,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "P",
+"week":       -2 
+},
+"game_id":     3343,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "46",
+"player_franchise_id":       27,
+"player_id":    10129,
+"position": "TE-L",
+"status": "P",
+"week":       -2 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

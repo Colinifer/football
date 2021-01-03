@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stony Brook Seawolves",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-11-04",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Will",
+"height":      602,
+"id":    10070,
+"jersey_number": "85",
+"last_name": "Tye",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      260 
+} 
+] 
+}

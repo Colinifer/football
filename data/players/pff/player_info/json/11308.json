@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Newberry",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-17",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Alstevis",
+"height":      600,
+"id":    11308,
+"jersey_number": "40",
+"last_name": "Squirewell",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      265 
+} 
+] 
+}

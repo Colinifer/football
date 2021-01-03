@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pittsburgh Panthers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-03-31",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      125,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "NFL" 
+},
+"first_name": "Avonte",
+"height":      509,
+"id":    50543,
+"jersey_number": "29",
+"last_name": "Maddox",
+"position": "CB",
+"speed":     4.39,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      180 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pennsylvania Quakers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-04-04",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      144,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "NFL" 
+},
+"first_name": "Justin",
+"height":      603,
+"id":    66915,
+"jersey_number": "17",
+"last_name": "Watson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      215 
+} 
+] 
+}

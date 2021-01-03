@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois State Redbirds",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-11-02",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Mark",
+"height":      603,
+"id":    34637,
+"jersey_number": "61",
+"last_name": "Spelman",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      290 
+} 
+] 
+}

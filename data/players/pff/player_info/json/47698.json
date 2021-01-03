@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Tech Red Raiders",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-01-14",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      103,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "NFL" 
+},
+"first_name": "Keke",
+"height":      511,
+"id":    47698,
+"jersey_number": "16",
+"last_name": "Coutee",
+"position": "WR",
+"speed":     4.43,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      180 
+} 
+] 
+}

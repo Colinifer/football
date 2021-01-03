@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fordham Rams",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-09-14",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Greg",
+"height":      600,
+"id":     9379,
+"jersey_number": "15",
+"last_name": "Wilson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      185 
+} 
+] 
+}

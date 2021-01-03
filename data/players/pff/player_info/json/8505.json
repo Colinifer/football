@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Wagner Seahawks",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-10-29",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "C.O.",
+"height":      601,
+"id":     8505,
+"jersey_number": "47",
+"last_name": "Prime",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      261 
+} 
+] 
+}

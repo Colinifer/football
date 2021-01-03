@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama A&M Bulldogs",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-03-06",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Jamaal",
+"height":      606,
+"id":     8046,
+"jersey_number": "63O",
+"last_name": "Johnson-Webb",
+"position": "G",
+"speed":     5.37,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      306 
+} 
+] 
+}

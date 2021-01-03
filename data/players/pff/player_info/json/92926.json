@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "No College",
+"current_class": null,
+"current_eligible_year": null,
+"dob": "1992-08-27",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Durval",
+"height":      604,
+"id":    92926,
+"jersey_number": "00",
+"last_name": "Queiroz Neto",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      325 
+} 
+] 
+}

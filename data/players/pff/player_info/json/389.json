@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Richmond Spiders",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1975-01-14",
+"draft": {
+ "round":        4,
+"season":     1998,
+"selection":      113,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Shawn",
+"height":      602,
+"id":      389,
+"jersey_number": "51",
+"last_name": "Barber",
+"position": "LB",
+"speed":     4.57,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      240 
+} 
+] 
+}

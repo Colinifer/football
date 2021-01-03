@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Vanderbilt Commodores",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-12-12",
+"draft": {
+ "round":        2,
+"season":     2017,
+"selection":       57,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Zach",
+"height":      603,
+"id":    11812,
+"jersey_number": "41",
+"last_name": "Cunningham",
+"position": "LB",
+"speed":     4.67,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      238 
+} 
+] 
+}

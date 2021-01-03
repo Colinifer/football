@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeastern Louisiana Lions",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-03-12",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Devan",
+"height":      602,
+"id":     8412,
+"jersey_number": "59",
+"last_name": "Walker",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      240 
+} 
+] 
+}

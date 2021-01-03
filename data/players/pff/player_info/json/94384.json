@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Valdosta State",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-12-07",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Joe",
+"height":      606,
+"id":    94384,
+"jersey_number": "00",
+"last_name": "Fortson",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      230 
+} 
+] 
+}

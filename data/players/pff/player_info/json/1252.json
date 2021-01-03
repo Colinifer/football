@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Florida C.C.",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1977-07-20",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Clinton",
+"height":      602,
+"id":     1252,
+"jersey_number": "42",
+"last_name": "Hart",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      205 
+} 
+] 
+}

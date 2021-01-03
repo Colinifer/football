@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Morehouse",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-02-03",
+"draft": {
+ "round":        6,
+"season":     2010,
+"selection":      194,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Ramon",
+"height":      606,
+"id":     5717,
+"jersey_number": "70",
+"last_name": "Harewood",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      340 
+} 
+] 
+}

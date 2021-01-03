@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Saginaw Valley State",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1988-02-14",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Rob",
+"height":      605,
+"id":     5872,
+"jersey_number": "72",
+"last_name": "Callaway",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      312 
+} 
+] 
+}

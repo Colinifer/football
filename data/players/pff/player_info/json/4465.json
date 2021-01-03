@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Longhorns",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1985-10-16",
+"draft": {
+ "round":        5,
+"season":     2008,
+"selection":      151,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Frank",
+"height":      605,
+"id":     4465,
+"jersey_number": "70",
+"last_name": "Okam",
+"position": "DI",
+"speed":     5.32,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      320 
+} 
+] 
+}

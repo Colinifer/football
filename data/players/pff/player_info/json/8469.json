@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Towson Tigers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-01-28",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Frank",
+"height":      602,
+"id":     8469,
+"jersey_number": "57",
+"last_name": "Beltre",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      240 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Midwestern State",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-10-27",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      167,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Marqui",
+"height":      511,
+"id":    10801,
+"jersey_number": "00",
+"last_name": "Christian",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      207 
+} 
+] 
+}

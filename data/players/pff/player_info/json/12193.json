@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Indiana State Sycamores",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-04-30",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Robert",
+"height":      605,
+"id":    12193,
+"jersey_number": "85",
+"last_name": "Tonyan",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      237 
+} 
+] 
+}

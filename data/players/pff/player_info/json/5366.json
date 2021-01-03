@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Texas A & M",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1984-03-20",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Charly",
+"height":      601,
+"id":     5366,
+"jersey_number": "85",
+"last_name": "Martin",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      212 
+} 
+] 
+}

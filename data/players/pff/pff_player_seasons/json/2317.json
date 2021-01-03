@@ -1,0 +1,39 @@
+{
+ "offense_summary": {
+ "career": {
+ "player_id":     2317 
+},
+"seasons": [
+ {
+ "franchise_id":       19,
+"season":     2009,
+"season_id":     2009 
+},
+{
+ "franchise_id":       19,
+"season":     2008,
+"season_id":     2008 
+},
+{
+ "franchise_id":       19,
+"season":     2007,
+"season_id":     2007 
+},
+{
+ "franchise_id":       19,
+"season":     2006,
+"season_id":     2006 
+} 
+],
+"subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2317,
+"roster": "offense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

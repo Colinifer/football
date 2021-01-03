@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mount Union",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-10-02",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Tom",
+"height":      601,
+"id":    11477,
+"jersey_number": "D78",
+"last_name": "Lally",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      255 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio Bobcats",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-08-17",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      227,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "NFL" 
+},
+"first_name": "Quentin",
+"height":      601,
+"id":    51491,
+"jersey_number": "00",
+"last_name": "Poling",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      235 
+} 
+] 
+}

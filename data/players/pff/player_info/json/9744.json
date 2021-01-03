@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Hampshire Wildcats",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-07-23",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      603,
+"id":     9744,
+"jersey_number": "78O",
+"last_name": "Coccia",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      301 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "TCU Horned Frogs",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-06-23",
+"draft": {
+ "round":        1,
+"season":     2001,
+"selection":        5,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "LaDainian",
+"height":      510,
+"id":      777,
+"jersey_number": "21",
+"last_name": "Tomlinson",
+"position": "HB",
+"speed":     4.46,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      221 
+} 
+] 
+}

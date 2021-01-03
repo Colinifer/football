@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Holy Cross Crusaders",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-23",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Peter",
+"height":      602,
+"id":    54507,
+"jersey_number": "6",
+"last_name": "Pujals",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      210 
+} 
+] 
+}

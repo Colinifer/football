@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arizona State Sun Devils",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1977-09-28",
+"draft": {
+ "round":        3,
+"season":     2000,
+"selection":       76,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "J.R.",
+"height":      511,
+"id":      636,
+"jersey_number": "21",
+"last_name": "Redmond",
+"position": "HB",
+"speed":     4.45,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      215 
+} 
+] 
+}

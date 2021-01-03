@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Lindenwood",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-06-22",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Connor",
+"height":      600,
+"id":    12244,
+"jersey_number": "47",
+"last_name": "Harris",
+"position": "LB",
+"speed":     4.73,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      243 
+} 
+] 
+}

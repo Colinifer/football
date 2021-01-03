@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Illinois State Redbirds",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-12-28",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Cameron",
+"height":      604,
+"id":    12223,
+"jersey_number": "61",
+"last_name": "Lee",
+"position": "G",
+"speed":     5.44,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      312 
+} 
+] 
+}

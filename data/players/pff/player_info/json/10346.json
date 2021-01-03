@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California (Pa.)",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1990-04-02",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Erik",
+"height":      603,
+"id":    10346,
+"jersey_number": "25",
+"last_name": "Harris",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      225 
+} 
+] 
+}

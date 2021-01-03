@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Weber State Wildcats",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1988-01-11",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Joe",
+"height":      602,
+"id":     7635,
+"jersey_number": "4",
+"last_name": "Collins",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      185 
+} 
+] 
+}

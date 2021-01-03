@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Samford Bulldogs",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-04-22",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Shaheed",
+"height":      602,
+"id":    29875,
+"jersey_number": "0",
+"last_name": "Salmon",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      227 
+} 
+] 
+}

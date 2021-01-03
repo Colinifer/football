@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "William & Mary Tribe",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-19",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      604,
+"id":    30713,
+"jersey_number": "61",
+"last_name": "Durant",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      310 
+} 
+] 
+}

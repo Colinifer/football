@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "SMU Mustangs",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-07-29",
+"draft": {
+ "round":        5,
+"season":     2003,
+"selection":      172,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Kevin",
+"height":      509,
+"id":     1477,
+"jersey_number": "25",
+"last_name": "Garrett",
+"position": "CB",
+"speed":     4.32,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      194 
+} 
+] 
+}

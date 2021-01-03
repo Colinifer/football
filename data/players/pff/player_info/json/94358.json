@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Georgia",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-04-27",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "Devontae",
+"height":      507,
+"id":    94358,
+"jersey_number": "48",
+"last_name": "Jackson",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      176 
+} 
+] 
+}

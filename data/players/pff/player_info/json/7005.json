@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Metropolitan State",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1985-04-10",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Hayden",
+"height":      606,
+"id":     7005,
+"jersey_number": "82",
+"last_name": "Smith",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      265 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Carroll (Mont.)",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-10-10",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Casey",
+"height":      603,
+"id":     1607,
+"jersey_number": "82",
+"last_name": "Fitzsimmons",
+"position": "TE",
+"speed":     4.78,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      258 
+} 
+] 
+}

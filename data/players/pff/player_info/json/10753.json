@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Jose State Spartans",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-10-07",
+"draft": {
+ "round":        4,
+"season":     2016,
+"selection":      119,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Tyler",
+"height":      510,
+"id":    10753,
+"jersey_number": "32",
+"last_name": "Ervin",
+"position": "HB",
+"speed":     4.41,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      185 
+} 
+] 
+}

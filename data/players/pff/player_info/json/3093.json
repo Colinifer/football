@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Furman Paladins",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-08-15",
+"draft": {
+ "round":        5,
+"season":     2006,
+"selection":      148,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Ingle",
+"height":      602,
+"id":     3093,
+"jersey_number": "15",
+"last_name": "Martin",
+"position": "QB",
+"speed":     4.71,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      220 
+} 
+] 
+}

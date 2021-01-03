@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Princeton Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-06",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Charles",
+"height":      604,
+"id":    66929,
+"jersey_number": "6",
+"last_name": "Kanoff",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      205 
+} 
+] 
+}

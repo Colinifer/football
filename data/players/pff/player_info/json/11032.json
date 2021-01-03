@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sioux Falls",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-03-25",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      600,
+"id":    11032,
+"jersey_number": "45",
+"last_name": "Tidwell",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      191 
+} 
+] 
+}

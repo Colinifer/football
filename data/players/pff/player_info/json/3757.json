@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Carolina Central Eagles",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-01-21",
+"draft": {
+ "round":        5,
+"season":     2007,
+"selection":      141,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Greg",
+"height":      604,
+"id":     3757,
+"jersey_number": "93",
+"last_name": "Peterson",
+"position": "DI",
+"speed":     4.89,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      271 
+} 
+] 
+}

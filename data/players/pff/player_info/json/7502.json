@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Maine Black Bears",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-10-12",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Trevor",
+"height":      510,
+"id":     7502,
+"jersey_number": "44",
+"last_name": "Coston",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      199 
+} 
+] 
+}

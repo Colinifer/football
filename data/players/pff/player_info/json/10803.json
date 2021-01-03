@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Southern Eagles",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-05-26",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      169,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Antwione",
+"height":      603,
+"id":    10803,
+"jersey_number": "49",
+"last_name": "Williams",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      245 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-03-29",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      130,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "NFL" 
+},
+"first_name": "Josh",
+"height":      605,
+"id":    50120,
+"jersey_number": "94",
+"last_name": "Sweat",
+"position": "ED",
+"speed":     4.53,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      250 
+} 
+] 
+}

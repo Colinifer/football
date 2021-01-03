@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Dayton Flyers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": null,
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Sean",
+"height":      604,
+"id":    91474,
+"jersey_number": "00",
+"last_name": "Smith",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      228 
+} 
+] 
+}

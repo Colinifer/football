@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northwestern State Demons",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-04-21",
+"draft": {
+ "round":        5,
+"season":     2002,
+"selection":      164,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Craig",
+"height":      603,
+"id":     1154,
+"jersey_number": "16",
+"last_name": "Nall",
+"position": "QB",
+"speed":     4.88,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      230 
+} 
+] 
+}

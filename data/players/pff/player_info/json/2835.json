@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Carson - Newman",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-09-23",
+"draft": {
+ "round": null,
+"season":     2005,
+"selection": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"type": "FA" 
+},
+"first_name": "Leonard",
+"height":      600,
+"id":     2835,
+"jersey_number": "43",
+"last_name": "Weaver",
+"position": "HB",
+"speed":     4.81,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      251 
+} 
+] 
+}

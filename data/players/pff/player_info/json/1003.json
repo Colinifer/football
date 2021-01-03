@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Hampshire Wildcats",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1978-05-21",
+"draft": {
+ "round": null,
+"season":     2001,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Randal",
+"height":      603,
+"id":     1003,
+"jersey_number": "86",
+"last_name": "Williams",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      220 
+} 
+] 
+}

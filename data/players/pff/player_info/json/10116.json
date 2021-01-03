@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas State Bobcats",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-03-05",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "William",
+"height":      603,
+"id":    10116,
+"jersey_number": "8",
+"last_name": "Johnson",
+"position": "P",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      215 
+} 
+] 
+}

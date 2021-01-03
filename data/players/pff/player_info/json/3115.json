@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Cavaliers",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-09-08",
+"draft": {
+ "round":        6,
+"season":     2006,
+"selection":      170,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "AD" 
+},
+"first_name": "Wali",
+"height":      511,
+"id":     3115,
+"jersey_number": "33",
+"last_name": "Lundy",
+"position": "HB",
+"speed":     4.48,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      214 
+} 
+] 
+}

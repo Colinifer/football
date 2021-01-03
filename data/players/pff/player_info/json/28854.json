@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Longhorns",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1997-04-21",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      190,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "NFL" 
+},
+"first_name": "DeShon",
+"height":      601,
+"id":    28854,
+"jersey_number": "32",
+"last_name": "Elliott",
+"position": "S",
+"speed":     4.58,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      210 
+} 
+] 
+}

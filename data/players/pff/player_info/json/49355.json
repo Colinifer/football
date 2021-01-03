@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Boston College Eagles",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-02-20",
+"draft": {
+ "round":        3,
+"season":     2018,
+"selection":       99,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Isaac",
+"height":      601,
+"id":    49355,
+"jersey_number": "27",
+"last_name": "Yiadom",
+"position": "CB",
+"speed":     4.52,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      190 
+} 
+] 
+}

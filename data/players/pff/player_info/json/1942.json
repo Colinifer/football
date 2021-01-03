@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Dartmouth Big Green",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-01-15",
+"draft": {
+ "round":        7,
+"season":     2004,
+"selection":      228,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Casey",
+"height":      602,
+"id":     1942,
+"jersey_number": "48",
+"last_name": "Cramer",
+"position": "FB",
+"speed":     4.95,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      250 
+} 
+] 
+}

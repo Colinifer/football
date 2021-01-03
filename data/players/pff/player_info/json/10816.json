@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Navy Midshipmen",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-12-13",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      182,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Keenan",
+"height":      510,
+"id":    10816,
+"jersey_number": "19",
+"last_name": "Reynolds",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      190 
+} 
+] 
+}

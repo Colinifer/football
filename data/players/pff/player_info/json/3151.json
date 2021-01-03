@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nebraska Cornhuskers",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-07-21",
+"draft": {
+ "round":        6,
+"season":     2006,
+"selection":      206,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "LeKevin",
+"height":      603,
+"id":     3151,
+"jersey_number": "97",
+"last_name": "Smith",
+"position": "DI",
+"speed":     4.97,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      307 
+} 
+] 
+}

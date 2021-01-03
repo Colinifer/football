@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Elon Phoenix",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-02-14",
+"draft": {
+ "round":        6,
+"season":     2019,
+"selection":      193,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Oli",
+"height":      605,
+"id":    28394,
+"jersey_number": "74",
+"last_name": "Udoh",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      323 
+} 
+] 
+}

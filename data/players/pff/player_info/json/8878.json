@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Michigan Wolverines",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-02-09",
+"draft": {
+ "round":        7,
+"season":     2014,
+"selection":      244,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Jeremy",
+"height":      508,
+"id":     8878,
+"jersey_number": "83",
+"last_name": "Gallon",
+"position": "WR",
+"speed":     4.49,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      185 
+} 
+] 
+}

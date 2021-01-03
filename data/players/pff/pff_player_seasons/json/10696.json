@@ -1,0 +1,86 @@
+{
+ "defense_summary": {
+ "career": {
+ "assists":       28,
+"forced_fumbles":        4,
+"hits":        0,
+"interceptions":       11,
+"pass_break_ups":       51,
+"player_id":    10696,
+"sacks":        3,
+"tackles":      314 
+},
+"seasons": [
+ {
+ "assists":        3,
+"forced_fumbles":        2,
+"franchise_id":       21,
+"hits":        0,
+"interceptions":        3,
+"pass_break_ups":       14,
+"sacks":        0,
+"season":     2020,
+"season_id":     2020,
+"tackles":       44 
+},
+{
+ "assists":        6,
+"forced_fumbles":        0,
+"franchise_id":        5,
+"hits":        0,
+"interceptions":        3,
+"pass_break_ups":       10,
+"sacks":        1,
+"season":     2019,
+"season_id":     2019,
+"tackles":       61 
+},
+{
+ "assists":        3,
+"forced_fumbles":        1,
+"franchise_id":        5,
+"hits":        0,
+"interceptions":        1,
+"pass_break_ups":       13,
+"sacks":        1,
+"season":     2018,
+"season_id":     2018,
+"tackles":       67 
+},
+{
+ "assists":       12,
+"forced_fumbles":        1,
+"franchise_id":        5,
+"hits":        0,
+"interceptions":        2,
+"pass_break_ups":        7,
+"sacks":        1,
+"season":     2017,
+"season_id":     2017,
+"tackles":       84 
+},
+{
+ "assists":        4,
+"forced_fumbles":        0,
+"franchise_id":        5,
+"hits":        0,
+"interceptions":        2,
+"pass_break_ups":        7,
+"sacks":        0,
+"season":     2016,
+"season_id":     2016,
+"tackles":       58 
+} 
+],
+"subject": {
+ "eligible": "defense",
+"grade_keys": [ "defense", "defense_penalty", "run_defense", "pass_rush_defense", "coverage_defense", "tackle" ],
+"league_id":        1,
+"player_id":    10696,
+"roster": "defense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "batted_passes", "catch_rate", "hurries", "longest", "missed_tackles", "qb_rating_against", "receptions", "stops", "targets", "total_pressures", "touchdowns", "yards", "yards_after_catch", "yards_per_reception" ] 
+}

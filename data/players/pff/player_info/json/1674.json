@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Arizona Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-08-26",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Keith",
+"height":      600,
+"id":     1674,
+"jersey_number": "53",
+"last_name": "O'Neil",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      240 
+} 
+] 
+}

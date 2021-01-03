@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Campbell Fighting Camels",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-05-03",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Daniel",
+"height":      603,
+"id":    10954,
+"jersey_number": "48",
+"last_name": "Dillon",
+"position": "LS",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      235 
+} 
+] 
+}

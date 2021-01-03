@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico State Aggies",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-12-06",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Austin",
+"height":      511,
+"id":     9266,
+"jersey_number": "15",
+"last_name": "Franklin",
+"position": "WR",
+"speed":     4.56,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      189 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Elon Phoenix",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1989-12-28",
+"draft": {
+ "round":        7,
+"season":     2013,
+"selection":      238,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "AD" 
+},
+"first_name": "Aaron",
+"height":      602,
+"id":     8021,
+"jersey_number": "13",
+"last_name": "Mellette",
+"position": "WR",
+"speed":     4.54,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      217 
+} 
+] 
+}

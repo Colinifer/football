@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Central Oklahoma",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-03-13",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      602,
+"id":    68149,
+"jersey_number": "6",
+"last_name": "Crockett",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      192 
+} 
+] 
+}

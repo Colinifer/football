@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California Lutheran",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1991-02-12",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Eric",
+"height":      603,
+"id":     8103,
+"jersey_number": "14",
+"last_name": "Rogers",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      210 
+} 
+] 
+}

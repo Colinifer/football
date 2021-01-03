@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tulsa Golden Hurricane",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1971-07-31",
+"draft": {
+ "round":        7,
+"season":     1994,
+"selection":      197,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Gus",
+"height":      603,
+"id":       93,
+"jersey_number": "12",
+"last_name": "Frerotte",
+"position": "QB",
+"speed":     5.02,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      233 
+} 
+] 
+}

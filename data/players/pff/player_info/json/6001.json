@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "California (Pa.)",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-08-16",
+"draft": {
+ "round": null,
+"season":     2010,
+"selection": null,
+"team": {
+ "abbreviation": "SL",
+"city": "St. Louis",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#b49a59",
+"secondary_color": "#002145",
+"slug": "st-louis-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Dominique",
+"height":      602,
+"id":     6001,
+"jersey_number": "85",
+"last_name": "Curry",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      224 
+} 
+] 
+}

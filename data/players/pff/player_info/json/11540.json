@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ball State Cardinals",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1973-10-17",
+"draft": {
+ "round":        7,
+"season":     1996,
+"selection":      252,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Keith",
+"height":      603,
+"id":    11540,
+"jersey_number": "95",
+"last_name": "McKenzie",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      273 
+} 
+] 
+}

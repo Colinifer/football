@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Hawaii Warriors",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-12-04",
+"draft": {
+ "round":        2,
+"season":     2007,
+"selection":       58,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Ikaika",
+"height":      605,
+"id":     3674,
+"jersey_number": "79",
+"last_name": "Alama-Francis",
+"position": "LB",
+"speed":     4.86,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      280 
+} 
+] 
+}

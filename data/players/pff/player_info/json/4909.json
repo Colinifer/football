@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota Coyotes",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1981-06-02",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Stefan",
+"height":      506,
+"id":     4909,
+"jersey_number": "11",
+"last_name": "Logan",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      182 
+} 
+] 
+}

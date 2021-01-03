@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Azusa Pacific",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-03-23",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Luke",
+"height":      608,
+"id":     8079,
+"jersey_number": "76",
+"last_name": "Marquardt",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      315 
+} 
+] 
+}

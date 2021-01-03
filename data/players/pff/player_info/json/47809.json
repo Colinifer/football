@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USF Bulls",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-10-10",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      174,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Marquez",
+"height":      604,
+"id":    47809,
+"jersey_number": "83",
+"last_name": "Valdes-Scantling",
+"position": "WR",
+"speed":     4.37,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      206 
+} 
+] 
+}

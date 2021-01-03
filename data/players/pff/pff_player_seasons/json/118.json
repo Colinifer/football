@@ -1,0 +1,29 @@
+{
+ "offense_summary": {
+ "career": {
+ "player_id":      118 
+},
+"seasons": [
+ {
+ "franchise_id":       19,
+"season":     2007,
+"season_id":     2007 
+},
+{
+ "franchise_id":       15,
+"season":     2006,
+"season_id":     2006 
+} 
+],
+"subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      118,
+"roster": "offense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

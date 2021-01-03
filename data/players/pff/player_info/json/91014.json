@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stetson Hatters",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-08-16",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Donald",
+"height":      608,
+"id":    91014,
+"jersey_number": "89",
+"last_name": "Parham",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      257 
+} 
+] 
+}

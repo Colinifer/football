@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ball State Cardinals",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-11-10",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "FA" 
+},
+"first_name": "Dan",
+"height":      603,
+"id":     5313,
+"jersey_number": "73",
+"last_name": "Gerberry",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      302 
+} 
+] 
+}

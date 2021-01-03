@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sam Houston State Bearkats",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-03-19",
+"draft": {
+ "round":        6,
+"season":     2002,
+"selection":      174,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "AD" 
+},
+"first_name": "Keith",
+"height":      605,
+"id":     2911,
+"jersey_number": "87",
+"last_name": "Heinrich",
+"position": "TE",
+"speed":     4.77,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      250 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Princeton Tigers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-02-27",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Jesper",
+"height":      604,
+"id":    91465,
+"jersey_number": "00",
+"last_name": "Horsted",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      225 
+} 
+] 
+}

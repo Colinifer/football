@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Tech Hokies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-03-08",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      241,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "NFL" 
+},
+"first_name": "Greg",
+"height":      511,
+"id":    49354,
+"jersey_number": "37",
+"last_name": "Stroman",
+"position": "CB",
+"speed":     4.48,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      180 
+} 
+] 
+}

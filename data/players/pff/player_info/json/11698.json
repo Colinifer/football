@@ -1,0 +1,36 @@
+{
+ "players": [
+ {
+ "college": "Louisiana-Monroe Warhawks",
+"current_class": null,
+"current_eligible_year":     1986,
+"dob": "1962-08-15",
+"draft": {
+ "round":        3,
+"season":     1986,
+"selection":       67,
+"team": {
+    "abbreviation": "PIT"
+},
+"type": "AD" 
+},
+"first_name": "Bubby",
+"height":      603,
+"id":    11698,
+"jersey_number": "6",
+"last_name": "Brister",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      205 
+} 
+] 
+}

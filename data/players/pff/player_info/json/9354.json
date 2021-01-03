@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Haven",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1987-01-17",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Michael",
+"height":      605,
+"id":     9354,
+"jersey_number": "46",
+"last_name": "Flacco",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      251 
+} 
+] 
+}

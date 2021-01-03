@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "South Dakota Coyotes",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1977-10-11",
+"draft": {
+ "round": null,
+"season":     2001,
+"selection": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "FA" 
+},
+"first_name": "Josh",
+"height":      602,
+"id":      990,
+"jersey_number": "50",
+"last_name": "Stamer",
+"position": "ST",
+"speed":      4.7,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      238 
+} 
+] 
+}

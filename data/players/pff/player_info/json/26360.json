@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Illinois Salukis",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-04-29",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "FA" 
+},
+"first_name": "Craig",
+"height":      510,
+"id":    26360,
+"jersey_number": "39",
+"last_name": "James",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      195 
+} 
+] 
+}

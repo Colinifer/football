@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Stephen F. Austin Lumberjacks",
+"current_class": null,
+"current_eligible_year":     1988,
+"dob": "1968-06-01",
+"draft": {
+ "round":        5,
+"season":     1988,
+"selection":      115,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Larry",
+"height":      600,
+"id":    11676,
+"jersey_number": "31",
+"last_name": "Centers",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      225 
+} 
+] 
+}

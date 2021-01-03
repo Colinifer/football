@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "William & Mary Tribe",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-06-18",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "FA" 
+},
+"first_name": "Connor",
+"height":      604,
+"id":    46073,
+"jersey_number": "00",
+"last_name": "Hilland",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      298 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Harvard Crimson",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-03-13",
+"draft": {
+ "round":        5,
+"season":     2016,
+"selection":      170,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Cole",
+"height":      605,
+"id":    10804,
+"jersey_number": "64",
+"last_name": "Toner",
+"position": "G",
+"speed":     5.32,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      310 
+} 
+] 
+}

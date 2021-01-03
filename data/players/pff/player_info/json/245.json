@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Cavaliers",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1975-04-07",
+"draft": {
+ "round":        2,
+"season":     1997,
+"selection":       36,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Tiki",
+"height":      509,
+"id":      245,
+"jersey_number": "21",
+"last_name": "Barber",
+"position": "HB",
+"speed":     4.54,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      200 
+} 
+] 
+}

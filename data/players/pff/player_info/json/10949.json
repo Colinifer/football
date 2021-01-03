@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Portland State Vikings",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-08-20",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Kameron",
+"height":      604,
+"id":    10949,
+"jersey_number": "57",
+"last_name": "Canaday",
+"position": "LS",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      245 
+} 
+] 
+}

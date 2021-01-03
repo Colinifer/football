@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Midwestern State",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-01-17",
+"draft": {
+ "round": null,
+"season":     2001,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Dominic",
+"height":      509,
+"id":      979,
+"jersey_number": "38",
+"last_name": "Rhodes",
+"position": "HB",
+"speed":     4.52,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      203 
+} 
+] 
+}

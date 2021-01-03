@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Weber State Wildcats",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1985-02-14",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      255,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"type": "AD" 
+},
+"first_name": "Tim",
+"height":      510,
+"id":     5777,
+"jersey_number": "19",
+"last_name": "Toone",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      185 
+} 
+] 
+}

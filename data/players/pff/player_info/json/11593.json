@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A&M-Kingsville Javelinas",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1970-12-17",
+"draft": {
+ "round":        3,
+"season":     1993,
+"selection":       81,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Earl",
+"height":      604,
+"id":    11593,
+"jersey_number": "72",
+"last_name": "Dotson",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      317 
+} 
+] 
+}

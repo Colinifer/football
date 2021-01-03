@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Gardner-Webb Runnin' Bulldogs",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1971-09-01",
+"draft": {
+ "round":        4,
+"season":     1994,
+"selection":      126,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "Gabe",
+"height":      605,
+"id":    11542,
+"jersey_number": "98",
+"last_name": "Wilkins",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      305 
+} 
+] 
+}

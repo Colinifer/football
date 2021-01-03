@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Commonwealth",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1993-09-19",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Mo",
+"height":      605,
+"id":    12078,
+"jersey_number": "81",
+"last_name": "Alie-Cox",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      267 
+} 
+] 
+}

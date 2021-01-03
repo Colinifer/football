@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia State",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1994-12-23",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      204,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "NFL" 
+},
+"first_name": "Trenton",
+"height":      511,
+"id":    66446,
+"jersey_number": "36",
+"last_name": "Cannon",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      185 
+} 
+] 
+}

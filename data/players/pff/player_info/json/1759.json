@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tusculum (Tn.)",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1982-04-18",
+"draft": {
+ "round":        2,
+"season":     2004,
+"selection":       38,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "AD" 
+},
+"first_name": "Ricardo",
+"height":      511,
+"id":     1759,
+"jersey_number": "30",
+"last_name": "Colclough",
+"position": "CB",
+"speed":     4.49,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      186 
+} 
+] 
+}

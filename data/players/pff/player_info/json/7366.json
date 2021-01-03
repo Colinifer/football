@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Langston",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-12-20",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Antonio",
+"height":      511,
+"id":     7366,
+"jersey_number": "35",
+"last_name": "Dennard",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      185 
+} 
+] 
+}

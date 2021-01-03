@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Delaware Fightin Blue Hens",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-05-31",
+"draft": {
+ "round":        2,
+"season":     2019,
+"selection":       60,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"type": "AD" 
+},
+"first_name": "Nasir",
+"height":      600,
+"id":    33880,
+"jersey_number": "24",
+"last_name": "Adderley",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      206 
+} 
+] 
+}

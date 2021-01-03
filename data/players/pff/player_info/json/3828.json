@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Cal Poly Mustangs",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1984-02-10",
+"draft": {
+ "round":        7,
+"season":     2007,
+"selection":      212,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Courtney",
+"height":      601,
+"id":     3828,
+"jersey_number": "27",
+"last_name": "Brown",
+"position": "S",
+"speed":     4.59,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      200 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Carolina Catamounts",
+"current_class": null,
+"current_eligible_year":     2000,
+"dob": "1976-11-11",
+"draft": {
+ "round": null,
+"season":     2000,
+"selection": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"type": "FA" 
+},
+"first_name": "Brad",
+"height":      600,
+"id":      740,
+"jersey_number": "45",
+"last_name": "Hoover",
+"position": "FB",
+"speed":     4.75,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      245 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Alabama State Hornets",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-11-07",
+"draft": {
+ "round": null,
+"season":     2004,
+"selection": null,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"type": "FA" 
+},
+"first_name": "Chad",
+"height":      601,
+"id":     2109,
+"jersey_number": "15",
+"last_name": "Lucas",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      201 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas A&M-Kingsville Javelinas",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1974-12-07",
+"draft": {
+ "round":        6,
+"season":     1997,
+"selection":      169,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Al",
+"height":      601,
+"id":      282,
+"jersey_number": "31",
+"last_name": "Harris",
+"position": "CB",
+"speed":     4.68,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      185 
+} 
+] 
+}

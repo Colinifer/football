@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia State Panthers",
+"current_class": null,
+"current_eligible_year":     2013,
+"dob": "1990-08-04",
+"draft": {
+ "round": null,
+"season":     2013,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Donald",
+"height":      511,
+"id":     8182,
+"jersey_number": "33",
+"last_name": "Russell",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      212 
+} 
+] 
+}

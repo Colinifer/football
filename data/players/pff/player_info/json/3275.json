@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Valdosta State",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1981-10-23",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Richard",
+"height":      607,
+"id":     3275,
+"jersey_number": "76",
+"last_name": "Collier",
+"position": "T",
+"speed":     5.71,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      358 
+} 
+] 
+}

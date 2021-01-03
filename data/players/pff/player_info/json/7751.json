@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Abilene Christian Wildcats",
+"current_class": null,
+"current_eligible_year":     2012,
+"dob": "1989-05-19",
+"draft": {
+ "round": null,
+"season":     2012,
+"selection": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "FA" 
+},
+"first_name": "Aston",
+"height":      602,
+"id":     7751,
+"jersey_number": "71",
+"last_name": "Whiteside",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      257 
+} 
+] 
+}

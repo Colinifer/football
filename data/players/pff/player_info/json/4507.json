@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Jackson State Tigers",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1984-07-10",
+"draft": {
+ "round":        6,
+"season":     2008,
+"selection":      193,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Jaymar",
+"height":      600,
+"id":     4507,
+"jersey_number": "83",
+"last_name": "Johnson",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      176 
+} 
+] 
+}

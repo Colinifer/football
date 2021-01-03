@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "USC Trojans",
+"current_class": null,
+"current_eligible_year":     1996,
+"dob": "1972-07-22",
+"draft": {
+ "round":        1,
+"season":     1996,
+"selection":        1,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Keyshawn",
+"height":      603,
+"id":      153,
+"jersey_number": "19",
+"last_name": "Johnson",
+"position": "WR",
+"speed":     4.55,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      211 
+} 
+] 
+}

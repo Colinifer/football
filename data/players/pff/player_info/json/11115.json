@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Montana State Bobcats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-09-15",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "John",
+"height":      607,
+"id":    11115,
+"jersey_number": "79",
+"last_name": "Weidenaar",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      280 
+} 
+] 
+}

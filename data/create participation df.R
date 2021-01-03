@@ -41,7 +41,8 @@ part_df %>%
 
 rm(
   part_json_file_names,
-  part_szn_df
+  player_infos,
+  part_df
 )
 
 

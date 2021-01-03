@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mississippi Valley State Delta Devils",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-04-15",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Bryant",
+"height":      601,
+"id":    48536,
+"jersey_number": "62",
+"last_name": "Jones",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      304 
+} 
+] 
+}

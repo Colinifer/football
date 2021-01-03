@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Colgate Raiders",
+"current_class": null,
+"current_eligible_year":     1985,
+"dob": "1963-05-28",
+"draft": {
+ "round": null,
+"season":     1985,
+"selection": null,
+"team": null,
+"type": "FA" 
+},
+"first_name": "Eugene",
+"height":      601,
+"id":    11583,
+"jersey_number": "41",
+"last_name": "Robinson",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      200 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Pennsylvania Quakers",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1976-12-02",
+"draft": {
+ "round":        7,
+"season":     1999,
+"selection":      253,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "AD" 
+},
+"first_name": "Jim",
+"height":      511,
+"id":      541,
+"jersey_number": "20",
+"last_name": "Finn",
+"position": "FB",
+"speed":     4.62,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      245 
+} 
+] 
+}

@@ -1,0 +1,24 @@
+{
+ "offense_summary": {
+ "career": {
+ "player_id":    10929 
+},
+"seasons": [
+ {
+ "franchise_id":       30,
+"season":     2016,
+"season_id":     2016 
+} 
+],
+"subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10929,
+"roster": "offense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

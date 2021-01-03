@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Colgate Raiders",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-04-21",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Jamaal",
+"height":      511,
+"id":     3246,
+"jersey_number": "35",
+"last_name": "Branch",
+"position": "ST",
+"speed": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      230 
+} 
+] 
+}

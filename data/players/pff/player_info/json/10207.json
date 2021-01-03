@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Marist Red Foxes",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1991-05-12",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "FA" 
+},
+"first_name": "Jason",
+"height":      510,
+"id":    10207,
+"jersey_number": "5",
+"last_name": "Myers",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      190 
+} 
+] 
+}

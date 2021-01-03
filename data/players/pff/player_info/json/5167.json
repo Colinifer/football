@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nevada Wolf Pack",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1985-03-11",
+"draft": {
+ "round":        7,
+"season":     2009,
+"selection":      243,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Marko",
+"height":      604,
+"id":     5167,
+"jersey_number": "84",
+"last_name": "Mitchell",
+"position": "WR",
+"speed":     4.43,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      218 
+} 
+] 
+}

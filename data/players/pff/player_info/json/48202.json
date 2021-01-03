@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UCLA Bruins",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-11-13",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      162,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "NFL" 
+},
+"first_name": "Jordan",
+"height":      601,
+"id":    48202,
+"jersey_number": "13",
+"last_name": "Lasley",
+"position": "WR",
+"speed":      4.5,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      213 
+} 
+] 
+}

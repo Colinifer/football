@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Abilene Christian Wildcats",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1984-02-10",
+"draft": {
+ "round":        6,
+"season":     2009,
+"selection":      209,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "AD" 
+},
+"first_name": "Bernard",
+"height":      510,
+"id":     5133,
+"jersey_number": "34",
+"last_name": "Scott",
+"position": "HB",
+"speed":     4.44,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      200 
+} 
+] 
+}

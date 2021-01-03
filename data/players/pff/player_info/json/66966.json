@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeastern Oklahoma State",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1992-12-13",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Codey",
+"height":      606,
+"id":    66966,
+"jersey_number": "00",
+"last_name": "McElroy",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      258 
+} 
+] 
+}

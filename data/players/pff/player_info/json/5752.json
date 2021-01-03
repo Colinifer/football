@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico Lobos",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-07-05",
+"draft": {
+ "round":        7,
+"season":     2010,
+"selection":      229,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "AD" 
+},
+"first_name": "Erik",
+"height":      606,
+"id":     5752,
+"jersey_number": "70",
+"last_name": "Cook",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      318 
+} 
+] 
+}

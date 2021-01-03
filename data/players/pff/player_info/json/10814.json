@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Aalen (Germany)",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-10-16",
+"draft": {
+ "round":        6,
+"season":     2016,
+"selection":      180,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Moritz",
+"height":      605,
+"id":    10814,
+"jersey_number": "49",
+"last_name": "Bohringer",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      243 
+} 
+] 
+}

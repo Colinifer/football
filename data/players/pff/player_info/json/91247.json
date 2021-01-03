@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Regina (Canada)",
+"current_class": null,
+"current_eligible_year": null,
+"dob": "1993-06-14",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "FA" 
+},
+"first_name": "Tevaughn",
+"height":      600,
+"id":    91247,
+"jersey_number": "37",
+"last_name": "Campbell",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LAC",
+"city": "Los Angeles",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#002a5e",
+"secondary_color": "#ffc20e",
+"slug": "los-angeles-chargers" 
+},
+"weight":      195 
+} 
+] 
+}

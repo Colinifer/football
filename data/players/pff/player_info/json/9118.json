@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grand Valley State",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1990-05-24",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      602,
+"id":     9118,
+"jersey_number": "61",
+"last_name": "Armstrong",
+"position": "C",
+"speed":     5.36,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"weight":      302 
+} 
+] 
+}

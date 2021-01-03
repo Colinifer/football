@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Morgan State Bears",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1980-06-18",
+"draft": {
+ "round":        3,
+"season":     2003,
+"selection":       91,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Visanthe",
+"height":      604,
+"id":     1406,
+"jersey_number": "80",
+"last_name": "Shiancoe",
+"position": "TE",
+"speed":     4.65,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      250 
+} 
+] 
+}

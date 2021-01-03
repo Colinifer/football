@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Simon Fraser",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1991-03-31",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"type": "FA" 
+},
+"first_name": "Adam",
+"height":      605,
+"id":    51601,
+"jersey_number": "49",
+"last_name": "Zaruba",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "PHI",
+"city": "Philadelphia",
+"id":       24,
+"nickname": "Eagles",
+"primary_color": "#004c54",
+"secondary_color": "#a5acaf",
+"slug": "philadelphia-eagles" 
+},
+"weight":      265 
+} 
+] 
+}

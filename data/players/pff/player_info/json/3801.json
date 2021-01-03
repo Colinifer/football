@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Washburn",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-05-23",
+"draft": {
+ "round":        6,
+"season":     2007,
+"selection":      185,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Trey",
+"height":      602,
+"id":     3801,
+"jersey_number": "97",
+"last_name": "Lewis",
+"position": "DI",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      320 
+} 
+] 
+}

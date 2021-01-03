@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Connecticut State",
+"current_class": null,
+"current_eligible_year":     1997,
+"dob": "1975-08-23",
+"draft": {
+ "round": null,
+"season":     1997,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Joe",
+"height":      603,
+"id":      296,
+"jersey_number": "63",
+"last_name": "Andruzzi",
+"position": "G",
+"speed":     5.14,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      312 
+} 
+] 
+}

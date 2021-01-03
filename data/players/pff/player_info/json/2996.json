@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico Lobos",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1983-05-08",
+"draft": {
+ "round":        2,
+"season":     2006,
+"selection":       51,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"type": "AD" 
+},
+"first_name": "Ryan",
+"height":      607,
+"id":     2996,
+"jersey_number": "63",
+"last_name": "Cook",
+"position": "G",
+"speed":     5.47,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      328 
+} 
+] 
+}

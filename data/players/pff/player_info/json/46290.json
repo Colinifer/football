@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Nevada Wolf Pack",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-12-17",
+"draft": {
+ "round":        2,
+"season":     2018,
+"selection":       33,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "AD" 
+},
+"first_name": "Austin",
+"height":      604,
+"id":    46290,
+"jersey_number": "63",
+"last_name": "Corbett",
+"position": "G",
+"speed":     5.15,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      306 
+} 
+] 
+}

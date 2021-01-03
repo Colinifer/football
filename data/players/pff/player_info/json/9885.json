@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Concordia Cobbers",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1993-03-12",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Tom",
+"height":      510,
+"id":     9885,
+"jersey_number": "5",
+"last_name": "Obarski",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      175 
+} 
+] 
+}

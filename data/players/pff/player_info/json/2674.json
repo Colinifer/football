@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Princeton Tigers",
+"current_class": null,
+"current_eligible_year":     2005,
+"dob": "1982-03-19",
+"draft": {
+ "round": null,
+"season":     2005,
+"selection": null,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Redskins",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-redskins" 
+},
+"type": "FA" 
+},
+"first_name": "Zak",
+"height":      600,
+"id":     2674,
+"jersey_number": "45",
+"last_name": "Keasey",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      236 
+} 
+] 
+}

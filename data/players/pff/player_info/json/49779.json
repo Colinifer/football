@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Murray State Racers",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-08-28",
+"draft": {
+ "round":        3,
+"season":     2019,
+"selection":       98,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Quincy",
+"height":      511,
+"id":    49779,
+"jersey_number": "56",
+"last_name": "Williams",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"weight":      226 
+} 
+] 
+}

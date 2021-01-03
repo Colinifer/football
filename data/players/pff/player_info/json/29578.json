@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Mexico Lobos",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-11-16",
+"draft": {
+ "round":        7,
+"season":     2018,
+"selection":      229,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"type": "NFL" 
+},
+"first_name": "Jason",
+"height":      511,
+"id":    29578,
+"jersey_number": "7",
+"last_name": "Sanders",
+"position": "K",
+"speed": null,
+"team": {
+ "abbreviation": "MIA",
+"city": "Miami",
+"id":       17,
+"nickname": "Dolphins",
+"primary_color": "#008e97",
+"secondary_color": "#fc4c02",
+"slug": "miami-dolphins" 
+},
+"weight":      186 
+} 
+] 
+}

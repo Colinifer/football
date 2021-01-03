@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida Gators",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1985-09-23",
+"draft": {
+ "round":        4,
+"season":     2007,
+"selection":      121,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Marcus",
+"height":      602,
+"id":     3737,
+"jersey_number": "79",
+"last_name": "Thomas",
+"position": "DI",
+"speed":     4.96,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      296 
+} 
+] 
+}

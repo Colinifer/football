@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Southern Tigers",
+"current_class": null,
+"current_eligible_year":     2003,
+"dob": "1981-02-25",
+"draft": {
+ "round": null,
+"season":     2003,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Oliver",
+"height":      511,
+"id":     1581,
+"jersey_number": "35",
+"last_name": "Celestin",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      207 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Virginia Cavaliers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-01-25",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      147,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "NFL" 
+},
+"first_name": "Micah",
+"height":      600,
+"id":    50879,
+"jersey_number": "59",
+"last_name": "Kiser",
+"position": "LB",
+"speed":     4.66,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      244 
+} 
+] 
+}

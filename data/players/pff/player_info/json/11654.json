@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "North Dakota State Bison",
+"current_class": null,
+"current_eligible_year":     1985,
+"dob": "1964-12-17",
+"draft": {
+ "round":       12,
+"season":     1985,
+"selection":      334,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Tyrone",
+"height":      511,
+"id":    11654,
+"jersey_number": "34",
+"last_name": "Braxton",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      190 
+} 
+] 
+}

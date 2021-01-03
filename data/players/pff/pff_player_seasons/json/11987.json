@@ -1,0 +1,74 @@
+{
+ "defense_summary": {
+ "career": {
+ "assists":       11,
+"forced_fumbles":        1,
+"hits":        1,
+"interceptions":        0,
+"pass_break_ups":        5,
+"player_id":    11987,
+"sacks":        1,
+"tackles":       75 
+},
+"seasons": [
+ {
+ "assists":        0,
+"forced_fumbles":        0,
+"franchise_id":        8,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        0,
+"season":     2020,
+"season_id":     2020,
+"tackles":        0 
+},
+{
+ "assists":        2,
+"forced_fumbles":        0,
+"franchise_id":       28,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        0,
+"season":     2019,
+"season_id":     2019,
+"tackles":        6 
+},
+{
+ "assists":        9,
+"forced_fumbles":        1,
+"franchise_id":       28,
+"hits":        1,
+"interceptions":        0,
+"pass_break_ups":        5,
+"sacks":        1,
+"season":     2018,
+"season_id":     2018,
+"tackles":       64 
+},
+{
+ "assists":        0,
+"forced_fumbles":        0,
+"franchise_id": [       18,       28 ],
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        0,
+"season":     2017,
+"season_id":     2017,
+"tackles":        5 
+} 
+],
+"subject": {
+ "eligible": "defense",
+"grade_keys": [ "defense", "defense_penalty", "run_defense", "pass_rush_defense", "coverage_defense", "tackle" ],
+"league_id":        1,
+"player_id":    11987,
+"roster": "defense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "batted_passes", "catch_rate", "hurries", "longest", "missed_tackles", "qb_rating_against", "receptions", "stops", "targets", "total_pressures", "touchdowns", "yards", "yards_after_catch", "yards_per_reception" ] 
+}

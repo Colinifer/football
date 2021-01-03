@@ -1,0 +1,54 @@
+{
+ "offense_summary": {
+ "career": {
+ "player_id":     2404 
+},
+"seasons": [
+ {
+ "franchise_id": [        7,       31 ],
+"season":     2014,
+"season_id":     2014 
+},
+{
+ "franchise_id":       19,
+"season":     2013,
+"season_id":     2013 
+},
+{
+ "franchise_id":        2,
+"season":     2011,
+"season_id":     2011 
+},
+{
+ "franchise_id":        2,
+"season":     2010,
+"season_id":     2010 
+},
+{
+ "franchise_id":        2,
+"season":     2009,
+"season_id":     2009 
+},
+{
+ "franchise_id":       16,
+"season":     2007,
+"season_id":     2007 
+},
+{
+ "franchise_id":       16,
+"season":     2006,
+"season_id":     2006 
+} 
+],
+"subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2404,
+"roster": "offense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

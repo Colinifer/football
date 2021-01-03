@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Tarleton State Texans",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1994-12-24",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Xavier",
+"height":      510,
+"id":    94355,
+"jersey_number": "41",
+"last_name": "Turner",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "SEA",
+"city": "Seattle",
+"id":       29,
+"nickname": "Seahawks",
+"primary_color": "#002244",
+"secondary_color": "#69be28",
+"slug": "seattle-seahawks" 
+},
+"weight":      226 
+} 
+] 
+}

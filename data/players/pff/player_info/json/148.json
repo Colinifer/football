@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Middle Tennessee Blue Raiders",
+"current_class": null,
+"current_eligible_year":     1995,
+"dob": "1973-07-09",
+"draft": {
+ "round": null,
+"season":     1995,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Kelly",
+"height":      602,
+"id":      148,
+"jersey_number": "13",
+"last_name": "Holcomb",
+"position": "QB",
+"speed":     5.05,
+"team": {
+ "abbreviation": "MIN",
+"city": "Minnesota",
+"id":       18,
+"nickname": "Vikings",
+"primary_color": "#4f2683",
+"secondary_color": "#ffc62f",
+"slug": "minnesota-vikings" 
+},
+"weight":      212 
+} 
+] 
+}

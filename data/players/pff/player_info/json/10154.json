@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Western Oregon Wolves",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-02-12",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Tyrell",
+"height":      604,
+"id":    10154,
+"jersey_number": "16",
+"last_name": "Williams",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      205 
+} 
+] 
+}

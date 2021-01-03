@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1994-07-01",
+"draft": {
+ "round":        3,
+"season":     2016,
+"selection":       83,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Jordan",
+"height":      603,
+"id":    10717,
+"jersey_number": "48",
+"last_name": "Jenkins",
+"position": "ED",
+"speed":      4.8,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      259 
+} 
+] 
+}

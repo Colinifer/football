@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southeastern Louisiana Lions",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-03-06",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Bryan",
+"height":      603,
+"id":     9699,
+"jersey_number": "7",
+"last_name": "Bennett",
+"position": "QB",
+"speed":     4.81,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      215 
+} 
+] 
+}

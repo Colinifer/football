@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Towson Tigers",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-03-18",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "NO",
+"city": "New Orleans",
+"id":       20,
+"nickname": "Saints",
+"primary_color": "#d3bc8d",
+"secondary_color": "#000000",
+"slug": "new-orleans-saints" 
+},
+"type": "FA" 
+},
+"first_name": "Darius",
+"height":      506,
+"id":    45898,
+"jersey_number": "32",
+"last_name": "Victor",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      226 
+} 
+] 
+}

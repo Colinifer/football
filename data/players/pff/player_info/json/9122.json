@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Youngstown State Penguins",
+"current_class": null,
+"current_eligible_year":     2014,
+"dob": "1992-06-24",
+"draft": {
+ "round": null,
+"season":     2014,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Chris",
+"height":      604,
+"id":     9122,
+"jersey_number": "61",
+"last_name": "Elkins",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"weight":      300 
+} 
+] 
+}

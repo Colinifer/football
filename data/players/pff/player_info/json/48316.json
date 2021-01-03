@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Tigers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-05-23",
+"draft": {
+ "round":        4,
+"season":     2018,
+"selection":      133,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "AD" 
+},
+"first_name": "J'Mon",
+"height":      603,
+"id":    48316,
+"jersey_number": "00",
+"last_name": "Moore",
+"position": "WR",
+"speed":      4.6,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      205 
+} 
+] 
+}

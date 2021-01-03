@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Southern Nazarene",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-05-14",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Will",
+"height":      603,
+"id":    66449,
+"jersey_number": "66",
+"last_name": "House",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      326 
+} 
+] 
+}

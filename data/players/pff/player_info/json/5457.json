@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Eastern Illinois Panthers",
+"current_class": null,
+"current_eligible_year":     2009,
+"dob": "1986-03-25",
+"draft": {
+ "round": null,
+"season":     2009,
+"selection": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "FA" 
+},
+"first_name": "Pierre",
+"height":      604,
+"id":     5457,
+"jersey_number": "97",
+"last_name": "Walters",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"weight":      269 
+} 
+] 
+}

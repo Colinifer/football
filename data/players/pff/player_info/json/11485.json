@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Northern Michigan",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-07-13",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Kyle",
+"height":      602,
+"id":    11485,
+"jersey_number": "77",
+"last_name": "Steuck",
+"position": "C",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      310 
+} 
+] 
+}

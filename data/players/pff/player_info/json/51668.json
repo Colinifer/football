@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Trinity International Trojans",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-08-07",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Jarell",
+"height":      510,
+"id":    51668,
+"jersey_number": "37",
+"last_name": "Carter",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "LV",
+"city": "Las Vegas",
+"id":       23,
+"nickname": "Raiders",
+"primary_color": "#000000",
+"secondary_color": "#a5acaf",
+"slug": "las-vegas-raiders" 
+},
+"weight":      196 
+} 
+] 
+}

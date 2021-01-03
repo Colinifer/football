@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Barry University",
+"current_class": null,
+"current_eligible_year": null,
+"dob": "1992-11-16",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"type": "FA" 
+},
+"first_name": "Jevoni",
+"height":      608,
+"id":    66437,
+"jersey_number": "81",
+"last_name": "Robinson",
+"position": "TE",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      256 
+} 
+] 
+}

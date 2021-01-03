@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Menlo (Ca.)",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-06-04",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"type": "FA" 
+},
+"first_name": "Nate",
+"height":      603,
+"id":     1259,
+"jersey_number": "89",
+"last_name": "Jackson",
+"position": "TE",
+"speed":     4.82,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      235 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Air Force Falcons",
+"current_class": null,
+"current_eligible_year":     1999,
+"dob": "1977-05-12",
+"draft": {
+ "round":        7,
+"season":     1999,
+"selection":      248,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Bryce",
+"height":      604,
+"id":      539,
+"jersey_number": "94",
+"last_name": "Fisher",
+"position": "ED",
+"speed":        5,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Titans",
+"primary_color": "#0c2340",
+"secondary_color": "#418fde",
+"slug": "tennessee-titans" 
+},
+"weight":      272 
+} 
+] 
+}

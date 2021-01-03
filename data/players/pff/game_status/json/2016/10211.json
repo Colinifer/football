@@ -1,0 +1,251 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10211,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        5,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2016,
+"season_id":     2016,
+"team_name": "CAR" 
+},
+{
+ "franchise_id":       20,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2016,
+"season_id":     2016,
+"team_name": "NO" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     4040,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       20,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+"game_id":     4040,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "86",
+"player_franchise_id":       20,
+"player_id":    10211,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     4055,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       20,
+"position": "TE-L",
+"status": "P",
+"week":       -3 
+},
+"game_id":     4055,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "86",
+"player_franchise_id":       20,
+"player_id":    10211,
+"position": "TE-L",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     4075,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "TE-L",
+"status": "P",
+"week":       -4 
+},
+"game_id":     4075,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "86",
+"player_franchise_id":       20,
+"player_id":    10211,
+"position": "TE-L",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     4087,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "TE-L",
+"status": "P",
+"week":       -5 
+},
+"game_id":     4087,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "86",
+"player_franchise_id":       20,
+"player_id":    10211,
+"position": "TE-L",
+"status": "P",
+"week":       -5 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     4123,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       20,
+"position": "TE-L",
+"status": "S",
+"week":        2 
+},
+"game_id":     4123,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "86",
+"player_franchise_id":       20,
+"player_id":    10211,
+"position": "TE-L",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     4141,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "TE-L",
+"status": "S",
+"week":        3 
+},
+"game_id":     4141,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "86",
+"player_franchise_id":       20,
+"player_id":    10211,
+"position": "TE-L",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     4153,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       20,
+"position": "TE-L",
+"status": "P",
+"week":        4 
+},
+"game_id":     4153,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "86",
+"player_franchise_id":       20,
+"player_id":    10211,
+"position": "TE-L",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     4320,
+"home_franchise_id":        5,
+"home_team_name": "CAR",
+"player_franchise_id":        5,
+"position": "TE-L",
+"status": "P",
+"week":       16 
+},
+"game_id":     4320,
+"home_franchise_id":        5,
+"home_team_name": "CAR",
+"jersey_number": "82",
+"player_franchise_id":        5,
+"player_id":    10211,
+"position": "TE-L",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     4343,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":        5,
+"position": "TE-L",
+"status": "P",
+"week":       17 
+},
+"game_id":     4343,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "82",
+"player_franchise_id":        5,
+"player_id":    10211,
+"position": "TE-L",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

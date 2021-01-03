@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Ohio Bobcats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1993-08-31",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "SD",
+"city": "San Diego",
+"id":       27,
+"nickname": "Chargers",
+"primary_color": "#6cbbfc",
+"secondary_color": "#ffc20e",
+"slug": "san-diego-chargers" 
+},
+"type": "FA" 
+},
+"first_name": "Mike",
+"height":      606,
+"id":    10996,
+"jersey_number": "O74",
+"last_name": "McQueen",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      287 
+} 
+] 
+}

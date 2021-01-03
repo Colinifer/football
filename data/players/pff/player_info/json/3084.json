@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Syracuse Orange",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1984-04-23",
+"draft": {
+ "round":        5,
+"season":     2006,
+"selection":      139,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "AD" 
+},
+"first_name": "Quinn",
+"height":      605,
+"id":     3084,
+"jersey_number": "69",
+"last_name": "Ojinnaka",
+"position": "G",
+"speed":     5.44,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      309 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Stephen F. Austin Lumberjacks",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-08-23",
+"draft": {
+ "round":        5,
+"season":     2001,
+"selection":      150,
+"team": {
+ "abbreviation": "KC",
+"city": "Kansas City",
+"id":       16,
+"nickname": "Chiefs",
+"primary_color": "#e31837",
+"secondary_color": "#ffb81c",
+"slug": "kansas-city-chiefs" 
+},
+"type": "AD" 
+},
+"first_name": "Derrick",
+"height":      510,
+"id":      889,
+"jersey_number": "23",
+"last_name": "Blaylock",
+"position": "HB",
+"speed":     4.36,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      205 
+} 
+] 
+}

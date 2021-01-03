@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "West Chester",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-06-13",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"type": "FA" 
+},
+"first_name": "Nydair",
+"height":      511,
+"id":    94364,
+"jersey_number": "41",
+"last_name": "Rouse",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      188 
+} 
+] 
+}

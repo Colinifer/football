@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Harvard Crimson",
+"current_class": null,
+"current_eligible_year":     2007,
+"dob": "1983-10-08",
+"draft": {
+ "round": null,
+"season":     2007,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Clifton",
+"height":      509,
+"id":     3923,
+"jersey_number": "30",
+"last_name": "Dawson",
+"position": "HB",
+"speed":     4.48,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      212 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Arkansas Razorbacks",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-08-10",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      154,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"type": "AD" 
+},
+"first_name": "Jeremy",
+"height":      605,
+"id":    11909,
+"jersey_number": "87",
+"last_name": "Sprinkle",
+"position": "TE",
+"speed":     4.69,
+"team": {
+ "abbreviation": "WAS",
+"city": "Washington",
+"id":       32,
+"nickname": "Football Team",
+"primary_color": "#773141",
+"secondary_color": "#ffb612",
+"slug": "washington-football-team" 
+},
+"weight":      252 
+} 
+] 
+}

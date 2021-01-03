@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "New Hampshire Wildcats",
+"current_class": null,
+"current_eligible_year":     1992,
+"dob": "1969-10-09",
+"draft": {
+ "round":        5,
+"season":     1992,
+"selection":      116,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Dwayne",
+"height":      604,
+"id":    11567,
+"jersey_number": "95",
+"last_name": "Sabb",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      248 
+} 
+] 
+}

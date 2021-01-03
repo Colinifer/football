@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Florida State Seminoles",
+"current_class": null,
+"current_eligible_year":     1998,
+"dob": "1976-08-10",
+"draft": {
+ "round":        2,
+"season":     1998,
+"selection":       46,
+"team": {
+ "abbreviation": "TEN",
+"city": "Tennessee",
+"id":       31,
+"nickname": "Oilers",
+"primary_color": "#c8032b",
+"secondary_color": "#4790de",
+"slug": "tennessee-oilers" 
+},
+"type": "AD" 
+},
+"first_name": "Samari",
+"height":      600,
+"id":      360,
+"jersey_number": "22",
+"last_name": "Rolle",
+"position": "CB",
+"speed":      4.5,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"weight":      175 
+} 
+] 
+}

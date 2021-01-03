@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Charleston (WV)",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-10-26",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "FA" 
+},
+"first_name": "Kahzin",
+"height":      604,
+"id":    91477,
+"jersey_number": "41",
+"last_name": "Daniels",
+"position": "ED",
+"speed": null,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"weight":      240 
+} 
+] 
+}

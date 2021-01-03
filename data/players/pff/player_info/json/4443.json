@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Auburn Tigers",
+"current_class": null,
+"current_eligible_year":     2008,
+"dob": "1984-02-23",
+"draft": {
+ "round":        4,
+"season":     2008,
+"selection":      129,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "AD" 
+},
+"first_name": "Jonathan",
+"height":      510,
+"id":     4443,
+"jersey_number": "29",
+"last_name": "Wilhite",
+"position": "CB",
+"speed":     4.38,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"weight":      185 
+} 
+] 
+}

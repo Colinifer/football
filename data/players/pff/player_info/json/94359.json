@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Dartmouth Big Green",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1997-03-17",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#002145",
+"secondary_color": "#ffffff",
+"slug": "los-angeles-rams" 
+},
+"type": "FA" 
+},
+"first_name": "Matt",
+"height":      607,
+"id":    94359,
+"jersey_number": "63",
+"last_name": "Kaskey",
+"position": "T",
+"speed": null,
+"team": {
+ "abbreviation": "CAR",
+"city": "Carolina",
+"id":        5,
+"nickname": "Panthers",
+"primary_color": "#0085ca",
+"secondary_color": "#bfc0bf",
+"slug": "carolina-panthers" 
+},
+"weight":      325 
+} 
+] 
+}

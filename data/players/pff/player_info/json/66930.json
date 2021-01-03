@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Missouri Western State",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-07-22",
+"draft": {
+ "round": null,
+"season":     2018,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Jonathan",
+"height":      511,
+"id":    66930,
+"jersey_number": "36",
+"last_name": "Owens",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      210 
+} 
+] 
+}

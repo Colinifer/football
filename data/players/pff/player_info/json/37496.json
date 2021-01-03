@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "San Diego Toreros",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1995-08-22",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"type": "FA" 
+},
+"first_name": "Brian",
+"height":      600,
+"id":    37496,
+"jersey_number": "14",
+"last_name": "Riley",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      275 
+} 
+] 
+}

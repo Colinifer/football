@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Wake Forest Demon Deacons",
+"current_class": null,
+"current_eligible_year":     1990,
+"dob": "1968-03-07",
+"draft": {
+ "round":        3,
+"season":     1990,
+"selection":       58,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Ricky",
+"height":      600,
+"id":       11,
+"jersey_number": "11",
+"last_name": "Proehl",
+"position": "WR",
+"speed":     4.58,
+"team": {
+ "abbreviation": "IND",
+"city": "Indianapolis",
+"id":       14,
+"nickname": "Colts",
+"primary_color": "#002c5f",
+"secondary_color": "#ffffff",
+"slug": "indianapolis-colts" 
+},
+"weight":      190 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "UNLV Rebels",
+"current_class": null,
+"current_eligible_year":     2006,
+"dob": "1982-11-18",
+"draft": {
+ "round": null,
+"season":     2006,
+"selection": null,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"type": "FA" 
+},
+"first_name": "Greg",
+"height":      608,
+"id":     3597,
+"jersey_number": "83",
+"last_name": "Estandia",
+"position": "TE",
+"speed":     4.91,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      264 
+} 
+] 
+}

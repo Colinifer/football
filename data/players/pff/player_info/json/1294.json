@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Grambling State Tigers",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1978-10-22",
+"draft": {
+ "round": null,
+"season":     2002,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Kalvin",
+"height":      510,
+"id":     1294,
+"jersey_number": "24",
+"last_name": "Pearson",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      190 
+} 
+] 
+}

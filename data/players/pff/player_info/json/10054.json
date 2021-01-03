@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Winston - Salem State",
+"current_class": null,
+"current_eligible_year":     2015,
+"dob": "1992-08-15",
+"draft": {
+ "round": null,
+"season":     2015,
+"selection": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "FA" 
+},
+"first_name": "Phillip",
+"height":      604,
+"id":    10054,
+"jersey_number": "1",
+"last_name": "Sims",
+"position": "QB",
+"speed": null,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"weight":      210 
+} 
+] 
+}

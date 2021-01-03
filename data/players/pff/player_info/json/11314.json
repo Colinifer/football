@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Mercyhurst",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-04-29",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "PIT",
+"city": "Pittsburgh",
+"id":       25,
+"nickname": "Steelers",
+"primary_color": "#000000",
+"secondary_color": "#ffb612",
+"slug": "pittsburgh-steelers" 
+},
+"type": "FA" 
+},
+"first_name": "Brandon",
+"height":      508,
+"id":    11314,
+"jersey_number": "O38",
+"last_name": "Brown-Dukes",
+"position": "HB",
+"speed": null,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"weight":      200 
+} 
+] 
+}

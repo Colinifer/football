@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sonoma State",
+"current_class": null,
+"current_eligible_year":     1994,
+"dob": "1971-11-27",
+"draft": {
+ "round":        2,
+"season":     1994,
+"selection":       46,
+"team": {
+ "abbreviation": "DAL",
+"city": "Dallas",
+"id":        9,
+"nickname": "Cowboys",
+"primary_color": "#002244",
+"secondary_color": "#ffffff",
+"slug": "dallas-cowboys" 
+},
+"type": "AD" 
+},
+"first_name": "Larry",
+"height":      603,
+"id":       84,
+"jersey_number": "71",
+"last_name": "Allen",
+"position": "G",
+"speed":     5.11,
+"team": {
+ "abbreviation": "SF",
+"city": "San Francisco",
+"id":       28,
+"nickname": "49ers",
+"primary_color": "#aa0000",
+"secondary_color": "#ad995d",
+"slug": "san-francisco-49ers" 
+},
+"weight":      325 
+} 
+] 
+}

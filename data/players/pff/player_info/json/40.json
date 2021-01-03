@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Texas Southern Tigers",
+"current_class": null,
+"current_eligible_year":     1993,
+"dob": "1971-11-21",
+"draft": {
+ "round":        2,
+"season":     1993,
+"selection":       40,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"type": "AD" 
+},
+"first_name": "Michael",
+"height":      604,
+"id":       40,
+"jersey_number": "92",
+"last_name": "Strahan",
+"position": "ED",
+"speed":     4.91,
+"team": {
+ "abbreviation": "NYG",
+"city": "New York",
+"id":       21,
+"nickname": "Giants",
+"primary_color": "#012352",
+"secondary_color": "#a30d2d",
+"slug": "new-york-giants" 
+},
+"weight":      275 
+} 
+] 
+}

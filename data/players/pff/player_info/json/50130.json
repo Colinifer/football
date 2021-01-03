@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Oklahoma Sooners",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-04-24",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      160,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"type": "AD" 
+},
+"first_name": "Ogbonnia",
+"height":      602,
+"id":    50130,
+"jersey_number": "45",
+"last_name": "Okoronkwo",
+"position": "ED",
+"speed":     4.77,
+"team": {
+ "abbreviation": "LA",
+"city": "Los Angeles",
+"id":       26,
+"nickname": "Rams",
+"primary_color": "#003594",
+"secondary_color": "#ffd100",
+"slug": "los-angeles-rams" 
+},
+"weight":      253 
+} 
+] 
+}

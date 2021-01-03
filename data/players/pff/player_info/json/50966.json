@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Purdue Boilermakers",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1996-08-24",
+"draft": {
+ "round":        5,
+"season":     2018,
+"selection":      143,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"type": "NFL" 
+},
+"first_name": "Ja'Whaun",
+"height":      602,
+"id":    50966,
+"jersey_number": "51",
+"last_name": "Bentley",
+"position": "LB",
+"speed": null,
+"team": {
+ "abbreviation": "NE",
+"city": "New England",
+"id":       19,
+"nickname": "Patriots",
+"primary_color": "#002244",
+"secondary_color": "#c60c30",
+"slug": "new-england-patriots" 
+},
+"weight":      255 
+} 
+] 
+}

@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Yale Bulldogs",
+"current_class": null,
+"current_eligible_year":     2004,
+"dob": "1981-10-17",
+"draft": {
+ "round":        6,
+"season":     2004,
+"selection":      181,
+"team": {
+ "abbreviation": "TB",
+"city": "Tampa Bay",
+"id":       30,
+"nickname": "Buccaneers",
+"primary_color": "#d50a0a",
+"secondary_color": "#34302b",
+"slug": "tampa-bay-buccaneers" 
+},
+"type": "AD" 
+},
+"first_name": "Nate",
+"height":      606,
+"id":     1899,
+"jersey_number": "80",
+"last_name": "Lawrie",
+"position": "TE",
+"speed":     5.15,
+"team": {
+ "abbreviation": "CIN",
+"city": "Cincinnati",
+"id":        7,
+"nickname": "Bengals",
+"primary_color": "#fb4f14",
+"secondary_color": "#000000",
+"slug": "cincinnati-bengals" 
+},
+"weight":      262 
+} 
+] 
+}

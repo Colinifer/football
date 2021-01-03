@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Fort Hays State",
+"current_class": null,
+"current_eligible_year":     2019,
+"dob": "1996-07-01",
+"draft": {
+ "round": null,
+"season":     2019,
+"selection": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"type": "FA" 
+},
+"first_name": "Doyin",
+"height":      601,
+"id":    94360,
+"jersey_number": "43",
+"last_name": "Jibowu",
+"position": "S",
+"speed": null,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      196 
+} 
+] 
+}

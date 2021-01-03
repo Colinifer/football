@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sam Houston State Bearkats",
+"current_class": null,
+"current_eligible_year":     2016,
+"dob": "1992-10-22",
+"draft": {
+ "round": null,
+"season":     2016,
+"selection": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"type": "FA" 
+},
+"first_name": "Mikell",
+"height":      511,
+"id":    11061,
+"jersey_number": "D49",
+"last_name": "Everette",
+"position": "CB",
+"speed": null,
+"team": {
+ "abbreviation": "CLV",
+"city": "Cleveland",
+"id":        8,
+"nickname": "Browns",
+"primary_color": "#311d00",
+"secondary_color": "#ff3c00",
+"slug": "cleveland-browns" 
+},
+"weight":      185 
+} 
+] 
+}

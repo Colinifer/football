@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Connecticut Huskies",
+"current_class": null,
+"current_eligible_year":     2018,
+"dob": "1995-03-04",
+"draft": {
+ "round":        6,
+"season":     2018,
+"selection":      180,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"type": "AD" 
+},
+"first_name": "Folorunso",
+"height":      604,
+"id":    38558,
+"jersey_number": "94",
+"last_name": "Fatukasi",
+"position": "DI",
+"speed":     5.29,
+"team": {
+ "abbreviation": "NYJ",
+"city": "New York",
+"id":       22,
+"nickname": "Jets",
+"primary_color": "#125740",
+"secondary_color": "#ffffff",
+"slug": "new-york-jets" 
+},
+"weight":      318 
+} 
+] 
+}

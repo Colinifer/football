@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Murray State Racers",
+"current_class": null,
+"current_eligible_year":     2010,
+"dob": "1987-11-09",
+"draft": {
+ "round":        5,
+"season":     2010,
+"selection":      153,
+"team": {
+ "abbreviation": "JAX",
+"city": "Jacksonville",
+"id":       15,
+"nickname": "Jaguars",
+"primary_color": "#006778",
+"secondary_color": "#d7a22a",
+"slug": "jacksonville-jaguars" 
+},
+"type": "AD" 
+},
+"first_name": "Austen",
+"height":      606,
+"id":     5676,
+"jersey_number": "73D",
+"last_name": "Lane",
+"position": "ED",
+"speed":     4.84,
+"team": {
+ "abbreviation": "CHI",
+"city": "Chicago",
+"id":        6,
+"nickname": "Bears",
+"primary_color": "#0b162a",
+"secondary_color": "#c83803",
+"slug": "chicago-bears" 
+},
+"weight":      274 
+} 
+] 
+}

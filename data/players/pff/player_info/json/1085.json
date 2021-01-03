@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Sam Houston State Bearkats",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1979-07-04",
+"draft": {
+ "round":        3,
+"season":     2002,
+"selection":       81,
+"team": {
+ "abbreviation": "ARZ",
+"city": "Arizona",
+"id":        1,
+"nickname": "Cardinals",
+"primary_color": "#97233f",
+"secondary_color": "#ffffff",
+"slug": "arizona-cardinals" 
+},
+"type": "AD" 
+},
+"first_name": "Josh",
+"height":      604,
+"id":     1085,
+"jersey_number": "3",
+"last_name": "McCown",
+"position": "QB",
+"speed":     4.59,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      218 
+} 
+] 
+}

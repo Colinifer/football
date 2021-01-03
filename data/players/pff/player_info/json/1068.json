@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "BYU Cougars",
+"current_class": null,
+"current_eligible_year":     2002,
+"dob": "1977-06-15",
+"draft": {
+ "round":        2,
+"season":     2002,
+"selection":       61,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"type": "AD" 
+},
+"first_name": "Ryan",
+"height":      607,
+"id":     1068,
+"jersey_number": "77",
+"last_name": "Denney",
+"position": "ED",
+"speed":     4.86,
+"team": {
+ "abbreviation": "HST",
+"city": "Houston",
+"id":       13,
+"nickname": "Texans",
+"primary_color": "#03202f",
+"secondary_color": "#a71930",
+"slug": "houston-texans" 
+},
+"weight":      275 
+} 
+] 
+}

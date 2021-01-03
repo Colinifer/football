@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Iowa State Cyclones",
+"current_class": null,
+"current_eligible_year":     1989,
+"dob": "1968-10-14",
+"draft": {
+ "round":        5,
+"season":     1989,
+"selection":      121,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Gene",
+"height":      602,
+"id":    11620,
+"jersey_number": "69",
+"last_name": "Williams",
+"position": "G",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      320 
+} 
+] 
+}

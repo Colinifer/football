@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Citadel Bulldogs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1994-10-20",
+"draft": {
+ "round": null,
+"season":     2017,
+"selection": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"type": "FA" 
+},
+"first_name": "Tyler",
+"height":      511,
+"id":    24345,
+"jersey_number": "O39",
+"last_name": "Renew",
+"position": "FB",
+"speed": null,
+"team": {
+ "abbreviation": "ATL",
+"city": "Atlanta",
+"id":        2,
+"nickname": "Falcons",
+"primary_color": "#a71930",
+"secondary_color": "#000000",
+"slug": "atlanta-falcons" 
+},
+"weight":      210 
+} 
+] 
+}

@@ -1,0 +1,34 @@
+{
+ "players": [
+ {
+ "college": "Chadron State",
+"current_class": null,
+"current_eligible_year":     1989,
+"dob": "1964-12-18",
+"draft": {
+ "round":        3,
+"season":     1989,
+"selection":       82,
+"team": null,
+"type": "AD" 
+},
+"first_name": "Don",
+"height":      511,
+"id":    11611,
+"jersey_number": "82",
+"last_name": "Beebe",
+"position": "WR",
+"speed": null,
+"team": {
+ "abbreviation": "GB",
+"city": "Green Bay",
+"id":       12,
+"nickname": "Packers",
+"primary_color": "#183028",
+"secondary_color": "#ffb81c",
+"slug": "green-bay-packers" 
+},
+"weight":      185 
+} 
+] 
+}

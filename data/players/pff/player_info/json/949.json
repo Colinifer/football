@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Bethune-Cookman Wildcats",
+"current_class": null,
+"current_eligible_year":     2001,
+"dob": "1979-04-16",
+"draft": {
+ "round": null,
+"season":     2001,
+"selection": null,
+"team": {
+ "abbreviation": "BLT",
+"city": "Baltimore",
+"id":        3,
+"nickname": "Ravens",
+"primary_color": "#1a195f",
+"secondary_color": "#000000",
+"slug": "baltimore-ravens" 
+},
+"type": "FA" 
+},
+"first_name": "Damion",
+"height":      605,
+"id":      949,
+"jersey_number": "74",
+"last_name": "Cook",
+"position": "T",
+"speed":     5.25,
+"team": {
+ "abbreviation": "DET",
+"city": "Detroit",
+"id":       11,
+"nickname": "Lions",
+"primary_color": "#0076b6",
+"secondary_color": "#b0b7bc",
+"slug": "detroit-lions" 
+},
+"weight":      325 
+} 
+] 
+}

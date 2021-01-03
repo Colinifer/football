@@ -1,0 +1,42 @@
+{
+ "players": [
+ {
+ "college": "Georgia Bulldogs",
+"current_class": null,
+"current_eligible_year":     2017,
+"dob": "1995-04-09",
+"draft": {
+ "round":        5,
+"season":     2017,
+"selection":      172,
+"team": {
+ "abbreviation": "DEN",
+"city": "Denver",
+"id":       10,
+"nickname": "Broncos",
+"primary_color": "#fb4f14",
+"secondary_color": "#002244",
+"slug": "denver-broncos" 
+},
+"type": "AD" 
+},
+"first_name": "Isaiah",
+"height":      508,
+"id":    11927,
+"jersey_number": "19",
+"last_name": "McKenzie",
+"position": "WR",
+"speed":     4.42,
+"team": {
+ "abbreviation": "BUF",
+"city": "Buffalo",
+"id":        4,
+"nickname": "Bills",
+"primary_color": "#00338d",
+"secondary_color": "#c60c30",
+"slug": "buffalo-bills" 
+},
+"weight":      173 
+} 
+] 
+}
