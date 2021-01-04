@@ -12,7 +12,6 @@ current_season <- year
 # Download play-by-play data, decode player IDs, and 
 pbp_df <- pbp_ds %>% 
   filter(season == current_season) %>% 
-  select(-xyac_median_yardage) %>% 
   collect() %>% 
   decode_player_ids(fast = TRUE) %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
@@ -159,7 +158,7 @@ p <-
              alpha = 0.4) + 
   # scale_fill_manual(values =  NFL_pri,
   #                   name = "Team") +
-  ggimage::geom_image(data = summary_images_df, aes(x = 27.7, y = -16.5, image = team_logo_espn),
+  ggimage::geom_image(data = summary_images_df, aes(x = 27.5, y = -16.5, image = team_logo_espn),
     size = .2, by = "width", asp = asp
   ) +
   ggimage::geom_image(data = summary_images_df, aes(x = 0, y = -19, image = headshot_url),

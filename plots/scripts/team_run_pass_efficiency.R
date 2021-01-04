@@ -3,12 +3,17 @@ library(tidyverse)
 season <- year
 
 pbp_df <-
-  purrr::map_df(season, function(x) {
-    readRDS(
-      # url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true"))
-      glue::glue('data/pbp/play_by_play_{x}.rds')
-      )
-  }) %>% decode_player_ids(fast = TRUE) 
+  # purrr::map_df(season, function(x) {
+  #   readRDS(
+  #     # url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true"))
+  #     glue::glue('data/pbp/play_by_play_{x}.rds')
+  #     )
+  # }) %>%
+  pbp_ds %>% 
+  filter(season >= current_season & 
+           game_id != '2020_12_NO_DEN') %>% # THis game is pointless
+  collect() %>% 
+  decode_player_ids(fast = TRUE) 
 
 prem_epa_df <- pbp_df %>%
   filter(down <= 2 & wp <= .8 & wp >= .2 & half_seconds_remaining >= 120) %>%
@@ -92,8 +97,8 @@ p <- ggplot(data = prem_epa_df, aes(x = pass_epa_prem, y = pass_freq)) +
   geom_grob(aes(
     x = pass_epa_prem,
     y = pass_freq,
-    label = grob_img_adj(team_logo_espn, alpha = 0.7),
-    vp.height = 0.1
+    label = grob_img_adj(team_logo_espn, alpha = 0.8),
+    vp.height = 0.15
   )) +
   scale_x_continuous(
     labels = plus_lab_format(accuracy = .01),

@@ -129,7 +129,7 @@ p <- wide_win_rate %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_rushing/team_rush_epa_rbwr_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_rushing/team_rush_epa_rbwr_{current_season}.png'), data_home = 'Data: @nflfastR & ESPN', fade_borders = '')
 
 
 # RB EPA to RBWR ----------------------------------------------------------
@@ -289,7 +289,7 @@ p <- p_data %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, save_name = glue('plots/desktop/team_rushing/rb_rush_epa_rbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, save_name = glue('plots/desktop/team_rushing/rb_rush_epa_rbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR & ESPN', fade_borders = '')
 
 # RB rush attempts + Total EPA
 p_data <- wide_win_rate %>% 
@@ -340,7 +340,7 @@ p <- p_data %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, save_name = glue('plots/desktop/team_rushing/rb_rush_attempts_epa_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, save_name = glue('plots/desktop/team_rushing/rb_rush_attempts_epa_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR & ESPN', fade_borders = '')
 
 
 # Team Pass EPA to Pass Block Win Rate ------------------------------------
@@ -377,7 +377,7 @@ p <- wide_win_rate %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, save_name = glue('plots/desktop/team_passing/team_pass_epa_rbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, save_name = glue('plots/desktop/team_passing/team_pass_epa_rbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR & ESPN', fade_borders = '')
 
 # Passer to Pass Block Win Rate -------------------------------------------
 
@@ -432,8 +432,8 @@ summary_df <-
   ) %>% 
   group_by(passer_player_id) %>%
   summarise(pa = n(),
-            total_cpoe = mean(cpoe),
-            total_epa = mean(epa)
+            total_cpoe = mean(cpoe, na.rm = T),
+            total_epa = sum(epa, na.rm = T)
   ) %>%
   left_join(pbp_df %>% 
               filter(!is.na(passer_player_id)
@@ -557,7 +557,7 @@ p <- p_data %>%
     # caption = "Data: @nflscrapR",
     title = glue("{year} NFL Team Passing Efficiency"),
     subtitle = glue(
-      "How successful are QBs at passing as compared to their O-Line's success\n
+      "How successful are QBs at passing as compared to their O-Line's success?\n
                        DAKOTA compared to OL Pass Block Win Rate"
     )
   ) +
@@ -567,7 +567,7 @@ p <- p_data %>%
         # panel.background = element_rect(fill = color_cw[3])
         )
 
-brand_plot(p, save_name = glue('plots/desktop/qb_passing/pb_pass_dakota_pbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, save_name = glue('plots/desktop/qb_passing/pb_pass_dakota_pbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR & ESPN', fade_borders = '')
 
 # CPOE + PBWR
 p_data <- wide_win_rate %>%
@@ -624,7 +624,7 @@ p <- p_data %>%
   theme(axis.title.y = element_text(angle = 90),
         plot.title = element_text(size = 16))
 
-brand_plot(p, save_name = glue('plots/desktop/qb_passing/pb_pass_cpoe_pbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, save_name = glue('plots/desktop/qb_passing/pb_pass_cpoe_pbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR & ESPN', fade_borders = '')
 
 # CPOE + PBWR
 p_data <- wide_win_rate %>%
@@ -674,7 +674,7 @@ p <- p_data %>%
     # caption = "Data: @nflscrapR",
     title = glue("{year} NFL Team Passing Efficiency"),
     subtitle = glue(
-      "How successful are QBs at passing as compared to their O-Line's success\n
+      "How successful are QBs at passing as compared to their O-Line's success?\n
                        Total EPA compared to OL Pass Block Win Rate"
     )
   ) +
@@ -682,4 +682,4 @@ p <- p_data %>%
   theme(axis.title.y = element_text(angle = 90),
         plot.title = element_text(size = 16))
 
-brand_plot(p, save_name = glue('plots/desktop/qb_passing/pb_pass_total_epa_pbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p, save_name = glue('plots/desktop/qb_passing/pb_pass_total_epa_pbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR & ESPN', fade_borders = '')

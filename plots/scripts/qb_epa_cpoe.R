@@ -12,7 +12,6 @@ current_season <- year
   pbp_df <- pbp_ds %>% 
     filter(season >= current_season & 
              game_id != '2020_12_NO_DEN') %>% # THis game is pointless
-    select(-xyac_median_yardage) %>% 
     collect() %>% 
     decode_player_ids(fast = TRUE) %>% 
     mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),

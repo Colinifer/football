@@ -8,18 +8,25 @@ library(tidyverse)
 
 # Parameter --------------------------------------------------------------------
 
-season <- year
+current_season <- year
 wp_limit <- 0.5
 
 # Load the data ----------------------------------------------------------------
 
-pbp_df <- purrr::map_df(season, function(x) {
-  readRDS(
-    # url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true"))
-    glue::glue('data/pbp/play_by_play_{x}.rds')
-    )
-  # }) %>% filter(week < 9)
-}) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
+pbp_df <- 
+#   purrr::map_df(current_season, function(x) {
+#   readRDS(
+#     # url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true"))
+#     glue::glue('data/pbp/play_by_play_{x}.rds')
+#     )
+#   # }) %>% filter(week < 9)
+# }) %>% 
+  pbp_ds %>% 
+  filter(season >= current_season & 
+           game_id != '2020_12_NO_DEN') %>% # THis game is pointless
+  collect() %>% 
+  decode_player_ids(fast = TRUE) %>% 
+  filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
 
 n_week <- fx.n_week(pbp_df)
 
@@ -143,7 +150,7 @@ wins_above_expected_scatter <- chart %>%
   labs(
     x = glue::glue("Percentage of snaps with win probability (vegas_wp) over {100 * wp_limit}%"),
     y = "True win percentage (including ties as half a win)",
-    title = "NFL Team Efficiency",
+    title = glue("NFL Team Efficiency {current_season}"),
     subtitle = glue("Through week {n_week}")
   ) +
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
@@ -157,7 +164,7 @@ wins_above_expected_scatter <- chart %>%
     legend.position = "top"
   ) + NULL
 
-brand_plot(wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_scatter_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_scatter_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Create bar plot  -------------------------------------------------------------
 wins_above_expected_bar <- chart %>%
@@ -169,7 +176,7 @@ wins_above_expected_bar <- chart %>%
   labs(
     x = "Rank",
     y = "Win Percentage Over Expectation",
-    title = "NFL Team Efficiency",
+    title = glue("NFL Team Efficiency {current_season}"),
     subtitle = glue("How Lucky are the Teams? Through week {n_week}")
   ) +
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
@@ -184,7 +191,7 @@ wins_above_expected_bar <- chart %>%
   ) +
   NULL
 
-brand_plot(wins_above_expected_bar, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_bar_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(wins_above_expected_bar, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_bar_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 
 # Pythagorean Wins
@@ -198,7 +205,7 @@ pythagorean_wins_above_expected_scatter <- chart %>%
   labs(
     x = glue::glue("Pythagorean expected win probability"),
     y = "True win percentage (including ties as half a win)",
-    title = "NFL Team Pythagorean Expectation",
+    title = glue("NFL Team Pythagorean Expectation {current_season}"),
     subtitle = glue("Pythagorean expected wins through week {n_week}")
   ) +
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
@@ -212,8 +219,8 @@ pythagorean_wins_above_expected_scatter <- chart %>%
     legend.position = "top"
   ) + NULL
 
-brand_plot(pythagorean_wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/pythag_wins_above_expected_scatter_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(pythagorean_wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/pythag_wins_above_expected_scatter_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-rm(season, wp_limit, outcomes, wp_combined, chart, wins_above_expected_scatter, wins_above_expected_bar, pythagorean_wins_above_expected_scatter)
+rm(current_season, wp_limit, outcomes, wp_combined, chart, wins_above_expected_scatter, wins_above_expected_bar, pythagorean_wins_above_expected_scatter)
 
 # })

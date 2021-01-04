@@ -1,0 +1,50 @@
+---
+title: "README"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "plots/desktop/",
+  echo = TRUE
+  )
+```
+
+## Setup/Installation
+
+Most of this repo relies on a personal package I created and nflfastR('https://github.com/mrcaseb/nflfastR') but some simple setup and most of the scripts with automatically render visualizations from NFL data.
+
+Below is some sample code to most of the scripts running out of the gate:
+
+```{r packages, echo = FALSE}
+# Dev releases or packages not available on CRAN
+# devtools::install_github("mrcaseb/nflfastR")
+# devtools::install_github("dynastyprocess/ffscrapr")
+# devtools::install_github("jthomasmock/espnscrapeR")
+devtools::install_github("colinifer/initR", auth_token = Sys.getenv('authtoken'))
+source('init.R')
+```
+
+## Create standard session objects/variables
+Load the custom/person GG theme for plots
+
+```{r, echo=FALSE}
+source('plots/assets/plot_theme.R')
+```
+
+## Plots
+
+Team wins over/under expected. The farther a team is beyond the mean, the more they have outperformed expectations according to the nflfastR win probability model.
+
+```{r echo=FALSE, fig.align='center', fig.cap='', out.width='100%'}
+knitr::include_graphics('https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/team_wins/wins_above_expected_scatter_2020.png')
+```
+
+QB EPA as a function of team pass blocking.
+
+```{r echo=FALSE, fig.align='center', fig.cap='', out.width='100%'}
+knitr::include_graphics('https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/team_wins/wins_above_expected_scatter_2020.png')
+```
+

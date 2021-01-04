@@ -24,7 +24,8 @@ new_scrape_df <- schedule_df %>%
   fast_scraper(pp = TRUE) %>% 
   clean_pbp() %>% 
   add_qb_epa() %>% 
-  add_xyac()
+  add_xyac() %>% 
+  mutate(xyac_median_yardage = xyac_median_yardage %>% as.double())
 
 new_scrape_ids <- new_scrape_df %>% 
   pull(game_id) %>% 
