@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5426,
+"roster": "offense",
+"season":     2011,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        9,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2011,
+"season_id":     2011,
+"team_name": "DAL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     2151,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "RT",
+"status": "P",
+"week":        7 
+},
+"game_id":     2151,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "78",
+"player_franchise_id":        9,
+"player_id":     5426,
+"position": "RT",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     2196,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "LT",
+"status": "P",
+"week":       10 
+},
+"game_id":     2196,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "78",
+"player_franchise_id":        9,
+"player_id":     5426,
+"position": "LT",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     2267,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":        9,
+"position": "RT",
+"status": "P",
+"week":       15 
+},
+"game_id":     2267,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "78",
+"player_franchise_id":        9,
+"player_id":     5426,
+"position": "RT",
+"status": "P",
+"week":       15 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

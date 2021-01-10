@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    48017,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       20,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2019,
+"season_id":     2019,
+"team_name": "NO" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":    13776,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "SRWR",
+"status": "P",
+"week":        1 
+},
+"game_id":    13776,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "18",
+"player_franchise_id":       20,
+"player_id":    48017,
+"position": "SRWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":    14880,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       20,
+"position": "LWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14880,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "18",
+"player_franchise_id":       20,
+"player_id":    48017,
+"position": "LWR",
+"status": "P",
+"week":       -4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

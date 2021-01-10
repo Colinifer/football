@@ -1,0 +1,307 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4547,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2016,
+"season_id":     2016,
+"team_name": "BLT" 
+},
+{
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2016,
+"season_id":     2016,
+"team_name": "DEN" 
+},
+{
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2016,
+"season_id":     2016,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     4048,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":        3,
+"position": "HB",
+"status": "S",
+"week":       -3 
+},
+"game_id":     4048,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "29",
+"player_franchise_id":        3,
+"player_id":     4547,
+"position": "HB",
+"status": "S",
+"week":       -3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     4068,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "HB",
+"status": "S",
+"week":       -4 
+},
+"game_id":     4068,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "29",
+"player_franchise_id":        3,
+"player_id":     4547,
+"position": "HB",
+"status": "S",
+"week":       -4 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     4096,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "HB",
+"status": "S",
+"week":        1 
+},
+"game_id":     4096,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "29",
+"player_franchise_id":        3,
+"player_id":     4547,
+"position": "HB",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     4119,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        3,
+"position": "HB",
+"status": "S",
+"week":        2 
+},
+"game_id":     4119,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "29",
+"player_franchise_id":        3,
+"player_id":     4547,
+"position": "HB",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     4131,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":        3,
+"position": "HB",
+"status": "S",
+"week":        3 
+},
+"game_id":     4131,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "29",
+"player_franchise_id":        3,
+"player_id":     4547,
+"position": "HB",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":     4174,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "HB",
+"status": "P",
+"week":        6 
+},
+"game_id":     4174,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "30",
+"player_franchise_id":       11,
+"player_id":     4547,
+"position": "HB",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     4193,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "HB",
+"status": "P",
+"week":        7 
+},
+"game_id":     4193,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "30",
+"player_franchise_id":       11,
+"player_id":     4547,
+"position": "HB",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     4296,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       10,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+"game_id":     4296,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "20",
+"player_franchise_id":       10,
+"player_id":     4547,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     4310,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "HB",
+"status": "S",
+"week":       15 
+},
+"game_id":     4310,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "20",
+"player_franchise_id":       10,
+"player_id":     4547,
+"position": "HB",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     4332,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       10,
+"position": "HB",
+"status": "S",
+"week":       16 
+},
+"game_id":     4332,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "20",
+"player_franchise_id":       10,
+"player_id":     4547,
+"position": "HB",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     4346,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "HB",
+"status": "S",
+"week":       17 
+},
+"game_id":     4346,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "20",
+"player_franchise_id":       10,
+"player_id":     4547,
+"position": "HB",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

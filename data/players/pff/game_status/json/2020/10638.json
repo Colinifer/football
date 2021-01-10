@@ -14,7 +14,7 @@
  {
  "franchise_id":        9,
 "league_id":        1,
-"player_game_count":       14,
+"player_game_count":       15,
 "season":     2020,
 "season_id":     2020,
 "team_name": "DAL" 
@@ -356,6 +356,30 @@
 "position": "HB",
 "status": "S",
 "week":       16 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":    18782,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":        9,
+"position": "HB",
+"status": "S",
+"week":       17 
+},
+"game_id":    18782,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "21",
+"player_franchise_id":        9,
+"player_id":    10638,
+"position": "HB",
+"status": "S",
+"week":       17 
 } 
 ] 
 },

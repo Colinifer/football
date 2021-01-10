@@ -1,0 +1,243 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7117,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        9,
+"league_id":        1,
+"player_game_count":        9,
+"season":     2017,
+"season_id":     2017,
+"team_name": "DAL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":     7977,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "C",
+"status": "P",
+"week":        4 
+},
+"game_id":     7977,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "C",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     8024,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":        9,
+"position": "RG",
+"status": "P",
+"week":        7 
+},
+"game_id":     8024,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "RG",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     8052,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "RG",
+"status": "P",
+"week":        9 
+},
+"game_id":     8052,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "RG",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8083,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "RG",
+"status": "P",
+"week":       12 
+},
+"game_id":     8083,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "RG",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     8098,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "RG",
+"status": "P",
+"week":       13 
+},
+"game_id":     8098,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "RG",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     8144,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":        9,
+"position": "RG",
+"status": "P",
+"week":       15 
+},
+"game_id":     8144,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "RG",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     8167,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":        9,
+"position": "RG",
+"status": "P",
+"week":       17 
+},
+"game_id":     8167,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "RG",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     8178,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "C",
+"status": "S",
+"week":       -1 
+},
+"game_id":     8178,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "C",
+"status": "S",
+"week":       -1 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     8221,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "C",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8221,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     7117,
+"position": "C",
+"status": "P",
+"week":       -4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

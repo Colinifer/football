@@ -1,0 +1,74 @@
+{
+ "defense_summary": {
+ "career": {
+ "assists":       11,
+"forced_fumbles":        3,
+"hits":        7,
+"interceptions":        0,
+"pass_break_ups":        2,
+"player_id":     2627,
+"sacks":       10,
+"tackles":       31 
+},
+"seasons": [
+ {
+ "assists":        2,
+"forced_fumbles":        0,
+"franchise_id": [       27,       28 ],
+"hits":        3,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        2,
+"season":     2009,
+"season_id":     2009,
+"tackles":        3 
+},
+{
+ "assists":        1,
+"forced_fumbles":        2,
+"franchise_id":       27,
+"hits":        3,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        3,
+"season":     2008,
+"season_id":     2008,
+"tackles":       13 
+},
+{
+ "assists":        2,
+"forced_fumbles":        0,
+"franchise_id":       27,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        2,
+"season":     2007,
+"season_id":     2007,
+"tackles":        5 
+},
+{
+ "assists":        6,
+"forced_fumbles":        1,
+"franchise_id":       27,
+"hits":        1,
+"interceptions":        0,
+"pass_break_ups":        2,
+"sacks":        3,
+"season":     2006,
+"season_id":     2006,
+"tackles":       10 
+} 
+],
+"subject": {
+ "eligible": "defense",
+"grade_keys": [ "defense", "defense_penalty", "run_defense", "pass_rush_defense", "coverage_defense", "tackle" ],
+"league_id":        1,
+"player_id":     2627,
+"roster": "defense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "batted_passes", "catch_rate", "hurries", "longest", "missed_tackles", "qb_rating_against", "receptions", "stops", "targets", "total_pressures", "touchdowns", "yards", "yards_after_catch", "yards_per_reception" ] 
+}

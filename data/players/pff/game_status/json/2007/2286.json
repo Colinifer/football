@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2286,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       23,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2007,
+"season_id":     2007,
+"team_name": "OAK" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":      927,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       23,
+"position": "QB",
+"status": "P",
+"week":       14 
+},
+"game_id":      927,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "16",
+"player_franchise_id":       23,
+"player_id":     2286,
+"position": "QB",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

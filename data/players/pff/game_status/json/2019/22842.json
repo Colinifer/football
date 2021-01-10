@@ -1,0 +1,212 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":    22842,
+"roster": "special",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        8,
+"league_id":        1,
+"player_game_count":        2,
+"pu_def_rush":        0,
+"season":     2019,
+"season_id":     2019,
+"team_name": "CLV" 
+},
+{
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":        5,
+"pu_def_rush":        0,
+"season":     2019,
+"season_id":     2019,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":    13993,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "K",
+"status": "P",
+"week":       16 
+},
+"game_id":    13993,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":    22842,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    14014,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       31,
+"position": "K",
+"status": "P",
+"week":       17 
+},
+"game_id":    14014,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":    22842,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":    14840,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "K",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14840,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "17",
+"player_franchise_id":        8,
+"player_id":    22842,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":    14861,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":        8,
+"position": "K",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14861,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "17",
+"player_franchise_id":        8,
+"player_id":    22842,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    16802,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       31,
+"position": "K",
+"status": "P",
+"week":       18 
+},
+"game_id":    16802,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":    22842,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       18 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    16805,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       31,
+"position": "K",
+"status": "P",
+"week":       19 
+},
+"game_id":    16805,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":    22842,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       19 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    16809,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       31,
+"position": "K",
+"status": "P",
+"week":       20 
+},
+"game_id":    16809,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":    22842,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       20 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

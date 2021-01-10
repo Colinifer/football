@@ -1,0 +1,267 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2994,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":       10,
+"season":     2007,
+"season_id":     2007,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":      738,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "P",
+"week":        1 
+},
+"game_id":      738,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":      758,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "S",
+"week":        2 
+},
+"game_id":      758,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":      841,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "P",
+"week":        8 
+},
+"game_id":      841,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":      852,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "S",
+"week":        9 
+},
+"game_id":      852,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":      885,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "S",
+"week":       11 
+},
+"game_id":      885,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "S",
+"week":       11 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":      892,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "S",
+"week":       12 
+},
+"game_id":      892,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "S",
+"week":       12 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":      911,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "S",
+"week":       13 
+},
+"game_id":      911,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "S",
+"week":       13 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":      936,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "S",
+"week":       14 
+},
+"game_id":      936,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "S",
+"week":       14 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":      945,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "S",
+"week":       15 
+},
+"game_id":      945,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":      986,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "QB",
+"status": "S",
+"week":       17 
+},
+"game_id":      986,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "11",
+"player_franchise_id":       22,
+"player_id":     2994,
+"position": "QB",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

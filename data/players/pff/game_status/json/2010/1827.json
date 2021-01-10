@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1827,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       15,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2010,
+"season_id":     2010,
+"team_name": "JAX" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     1755,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "P",
+"week":        2 
+},
+"game_id":     1755,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "12",
+"player_franchise_id":       15,
+"player_id":     1827,
+"position": "QB",
+"status": "P",
+"week":        2 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

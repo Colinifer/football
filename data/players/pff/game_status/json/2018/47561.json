@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    47561,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2018,
+"season_id":     2018,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     9346,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+"game_id":     9346,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "84",
+"player_franchise_id":        3,
+"player_id":    47561,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":    12965,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "SLWR",
+"status": "P",
+"week":       -1 
+},
+"game_id":    12965,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "84",
+"player_franchise_id":        3,
+"player_id":    47561,
+"position": "SLWR",
+"status": "P",
+"week":       -1 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":    12973,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "SRWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12973,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "84",
+"player_franchise_id":        3,
+"player_id":    47561,
+"position": "SRWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    12997,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":        3,
+"position": "SRWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12997,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "84",
+"player_franchise_id":        3,
+"player_id":    47561,
+"position": "SRWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    13009,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":        3,
+"position": "SRWR",
+"status": "S",
+"week":       -4 
+},
+"game_id":    13009,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "84",
+"player_franchise_id":        3,
+"player_id":    47561,
+"position": "SRWR",
+"status": "S",
+"week":       -4 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":    13021,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "SRWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":    13021,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "84",
+"player_franchise_id":        3,
+"player_id":    47561,
+"position": "SRWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

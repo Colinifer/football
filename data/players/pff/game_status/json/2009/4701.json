@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4701,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2009,
+"season_id":     2009,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     1593,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       22,
+"position": "TE-L",
+"status": "S",
+"week":       14 
+},
+"game_id":     1593,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "82",
+"player_franchise_id":       22,
+"player_id":     4701,
+"position": "TE-L",
+"status": "S",
+"week":       14 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     1610,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "TE-L",
+"status": "P",
+"week":       15 
+},
+"game_id":     1610,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "82",
+"player_franchise_id":       22,
+"player_id":     4701,
+"position": "TE-L",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     1645,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "TE-L",
+"status": "P",
+"week":       17 
+},
+"game_id":     1645,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "82",
+"player_franchise_id":       22,
+"player_id":     4701,
+"position": "TE-L",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     1651,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       22,
+"position": "TE-R",
+"status": "P",
+"week":       18 
+},
+"game_id":     1651,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "82",
+"player_franchise_id":       22,
+"player_id":     4701,
+"position": "TE-R",
+"status": "P",
+"week":       18 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

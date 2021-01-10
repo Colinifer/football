@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5861,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2017,
+"season_id":     2017,
+"team_name": "LAC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     8077,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "S",
+"week":       11 
+},
+"game_id":     8077,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     5861,
+"position": "TE-L",
+"status": "S",
+"week":       11 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8083,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "S",
+"week":       12 
+},
+"game_id":     8083,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     5861,
+"position": "TE-L",
+"status": "S",
+"week":       12 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     8109,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "P",
+"week":       13 
+},
+"game_id":     8109,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     5861,
+"position": "TE-L",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     8125,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "S",
+"week":       14 
+},
+"game_id":     8125,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     5861,
+"position": "TE-L",
+"status": "S",
+"week":       14 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8132,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "P",
+"week":       15 
+},
+"game_id":     8132,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     5861,
+"position": "TE-L",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8153,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "P",
+"week":       16 
+},
+"game_id":     8153,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     5861,
+"position": "TE-L",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     8176,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "P",
+"week":       17 
+},
+"game_id":     8176,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     5861,
+"position": "TE-L",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

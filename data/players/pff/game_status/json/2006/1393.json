@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1393,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2006,
+"season_id":     2006,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     3879,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       22,
+"position": "LG",
+"status": "P",
+"week":       10 
+},
+"game_id":     3879,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "71",
+"player_franchise_id":       22,
+"player_id":     1393,
+"position": "LG",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     3926,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       22,
+"position": "LG",
+"status": "P",
+"week":       13 
+},
+"game_id":     3926,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "71",
+"player_franchise_id":       22,
+"player_id":     1393,
+"position": "LG",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     3991,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "RG",
+"status": "P",
+"week":       17 
+},
+"game_id":     3991,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "71",
+"player_franchise_id":       22,
+"player_id":     1393,
+"position": "RG",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,237 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     1858,
+"roster": "special",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       15,
+"league_id":        1,
+"player_game_count":        3,
+"pu_def_rush":        0,
+"season":     2015,
+"season_id":     2015,
+"team_name": "JAX" 
+},
+{
+ "franchise_id":       25,
+"league_id":        1,
+"player_game_count":        5,
+"pu_def_rush":        0,
+"season":     2015,
+"season_id":     2015,
+"team_name": "PIT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3353,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "K",
+"status": "P",
+"week":       -2 
+},
+"game_id":     3353,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "10",
+"player_franchise_id":       15,
+"player_id":     1858,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     3368,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       15,
+"position": "K",
+"status": "P",
+"week":       -3 
+},
+"game_id":     3368,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "10",
+"player_franchise_id":       15,
+"player_id":     1858,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     3376,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "K",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3376,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "10",
+"player_franchise_id":       15,
+"player_id":     1858,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     3403,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "K",
+"status": "P",
+"week":       -5 
+},
+"game_id":     3403,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "08",
+"player_franchise_id":       25,
+"player_id":     1858,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -5 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3406,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       25,
+"position": "K",
+"status": "P",
+"week":        1 
+},
+"game_id":     3406,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "08",
+"player_franchise_id":       25,
+"player_id":     1858,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     3429,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "K",
+"status": "P",
+"week":        2 
+},
+"game_id":     3429,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "08",
+"player_franchise_id":       25,
+"player_id":     1858,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3440,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       25,
+"position": "K",
+"status": "P",
+"week":        3 
+},
+"game_id":     3440,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "08",
+"player_franchise_id":       25,
+"player_id":     1858,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     3454,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "K",
+"status": "P",
+"week":        4 
+},
+"game_id":     3454,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "08",
+"player_franchise_id":       25,
+"player_id":     1858,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":        4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

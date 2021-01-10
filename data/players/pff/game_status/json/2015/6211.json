@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6211,
+"roster": "offense",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        7,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2015,
+"season_id":     2015,
+"team_name": "CIN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     3352,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":     3352,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "11",
+"player_franchise_id":        7,
+"player_id":     6211,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     3373,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":     3373,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "11",
+"player_franchise_id":        7,
+"player_id":     6211,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     3386,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3386,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "11",
+"player_franchise_id":        7,
+"player_id":     6211,
+"position": "LWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     3392,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "S",
+"week":       -5 
+},
+"game_id":     3392,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "11",
+"player_franchise_id":        7,
+"player_id":     6211,
+"position": "LWR",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7952,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2013,
+"season_id":     2013,
+"team_name": "KC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2689,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       16,
+"position": "C",
+"status": "P",
+"week":       -2 
+},
+"game_id":     2689,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "52O",
+"player_franchise_id":       16,
+"player_id":     7952,
+"position": "C",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     2701,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "C",
+"status": "P",
+"week":       -3 
+},
+"game_id":     2701,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "52",
+"player_franchise_id":       16,
+"player_id":     7952,
+"position": "C",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2718,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       16,
+"position": "C",
+"status": "P",
+"week":       -4 
+},
+"game_id":     2718,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "52O",
+"player_franchise_id":       16,
+"player_id":     7952,
+"position": "C",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     2737,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "C",
+"status": "S",
+"week":       -5 
+},
+"game_id":     2737,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "52O",
+"player_franchise_id":       16,
+"player_id":     7952,
+"position": "C",
+"status": "S",
+"week":       -5 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2749,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       16,
+"position": "C",
+"status": "P",
+"week":        1 
+},
+"game_id":     2749,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "64",
+"player_franchise_id":       16,
+"player_id":     7952,
+"position": "C",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2996,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       16,
+"position": "C",
+"status": "S",
+"week":       17 
+},
+"game_id":     2996,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "64",
+"player_franchise_id":       16,
+"player_id":     7952,
+"position": "C",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

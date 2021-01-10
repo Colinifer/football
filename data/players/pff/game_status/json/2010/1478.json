@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1478,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        8,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2010,
+"season_id":     2010,
+"team_name": "CLV" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     1750,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "RT",
+"status": "P",
+"week":        2 
+},
+"game_id":     1750,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "79",
+"player_franchise_id":        8,
+"player_id":     1478,
+"position": "RT",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     1765,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        8,
+"position": "RT",
+"status": "P",
+"week":        3 
+},
+"game_id":     1765,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "79",
+"player_franchise_id":        8,
+"player_id":     1478,
+"position": "RT",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     1776,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "RT",
+"status": "S",
+"week":        4 
+},
+"game_id":     1776,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "79",
+"player_franchise_id":        8,
+"player_id":     1478,
+"position": "RT",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     1796,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "RT",
+"status": "S",
+"week":        5 
+},
+"game_id":     1796,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "79",
+"player_franchise_id":        8,
+"player_id":     1478,
+"position": "RT",
+"status": "S",
+"week":        5 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     1806,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":        8,
+"position": "RT",
+"status": "S",
+"week":        6 
+},
+"game_id":     1806,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "79",
+"player_franchise_id":        8,
+"player_id":     1478,
+"position": "RT",
+"status": "S",
+"week":        6 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

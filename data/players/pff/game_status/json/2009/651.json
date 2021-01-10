@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      651,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2009,
+"season_id":     2009,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     1428,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "FB",
+"status": "P",
+"week":        3 
+},
+"game_id":     1428,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "44",
+"player_franchise_id":       11,
+"player_id":      651,
+"position": "FB",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1443,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       11,
+"position": "FB",
+"status": "P",
+"week":        4 
+},
+"game_id":     1443,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "44",
+"player_franchise_id":       11,
+"player_id":      651,
+"position": "FB",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1472,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       11,
+"position": "FB",
+"status": "P",
+"week":        6 
+},
+"game_id":     1472,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "44",
+"player_franchise_id":       11,
+"player_id":      651,
+"position": "FB",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     1501,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "FB",
+"status": "S",
+"week":        8 
+},
+"game_id":     1501,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "44",
+"player_franchise_id":       11,
+"player_id":      651,
+"position": "FB",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1518,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       11,
+"position": "FB",
+"status": "P",
+"week":        9 
+},
+"game_id":     1518,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "44",
+"player_franchise_id":       11,
+"player_id":      651,
+"position": "FB",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1529,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       11,
+"position": "FB",
+"status": "P",
+"week":       10 
+},
+"game_id":     1529,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "44",
+"player_franchise_id":       11,
+"player_id":      651,
+"position": "FB",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1595,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       11,
+"position": "FB",
+"status": "P",
+"week":       14 
+},
+"game_id":     1595,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "44",
+"player_franchise_id":       11,
+"player_id":      651,
+"position": "FB",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

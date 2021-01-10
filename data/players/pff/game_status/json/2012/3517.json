@@ -1,0 +1,323 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3517,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       15,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2012,
+"season_id":     2012,
+"team_name": "JAX" 
+},
+{
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2012,
+"season_id":     2012,
+"team_name": "SD" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     2405,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       27,
+"position": "SRWR",
+"status": "P",
+"week":        1 
+},
+"game_id":     2405,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     3517,
+"position": "SRWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     2419,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "LWR",
+"status": "P",
+"week":        2 
+},
+"game_id":     2419,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     3517,
+"position": "LWR",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     2423,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "LWR",
+"status": "P",
+"week":        3 
+},
+"game_id":     2423,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     3517,
+"position": "LWR",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     2498,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       15,
+"position": "SRWR",
+"status": "P",
+"week":        8 
+},
+"game_id":     2498,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "86",
+"player_franchise_id":       15,
+"player_id":     3517,
+"position": "SRWR",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     2516,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "SRWR",
+"status": "P",
+"week":        9 
+},
+"game_id":     2516,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "86",
+"player_franchise_id":       15,
+"player_id":     3517,
+"position": "SRWR",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2522,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "SRWR",
+"status": "P",
+"week":       10 
+},
+"game_id":     2522,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "86",
+"player_franchise_id":       15,
+"player_id":     3517,
+"position": "SRWR",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     2543,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       15,
+"position": "SLWR",
+"status": "P",
+"week":       11 
+},
+"game_id":     2543,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "86",
+"player_franchise_id":       15,
+"player_id":     3517,
+"position": "SLWR",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     2564,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "RWR",
+"status": "P",
+"week":       12 
+},
+"game_id":     2564,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "86",
+"player_franchise_id":       15,
+"player_id":     3517,
+"position": "RWR",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     2594,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       27,
+"position": "SLWR",
+"status": "P",
+"week":       14 
+},
+"game_id":     2594,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     3517,
+"position": "SLWR",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     2599,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "SLWR",
+"status": "S",
+"week":       15 
+},
+"game_id":     2599,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     3517,
+"position": "SLWR",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     2625,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       27,
+"position": "SRWR",
+"status": "P",
+"week":       16 
+},
+"game_id":     2625,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     3517,
+"position": "SRWR",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     2642,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "SLWR",
+"status": "P",
+"week":       17 
+},
+"game_id":     2642,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "87",
+"player_franchise_id":       27,
+"player_id":     3517,
+"position": "SLWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

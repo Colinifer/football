@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2837,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       29,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2006,
+"season_id":     2006,
+"team_name": "SEA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     3802,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       29,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+"game_id":     3802,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "30",
+"player_franchise_id":       29,
+"player_id":     2837,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     3987,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       29,
+"position": "HB",
+"status": "P",
+"week":       17 
+},
+"game_id":     3987,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "30",
+"player_franchise_id":       29,
+"player_id":     2837,
+"position": "HB",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

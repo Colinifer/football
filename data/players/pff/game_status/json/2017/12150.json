@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    12150,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        4,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2017,
+"season_id":     2017,
+"team_name": "BUF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":     8181,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8181,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "87",
+"player_franchise_id":        4,
+"player_id":    12150,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     8195,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":        4,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8195,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "89",
+"player_franchise_id":        4,
+"player_id":    12150,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     8215,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        4,
+"position": "SRWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8215,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "89",
+"player_franchise_id":        4,
+"player_id":    12150,
+"position": "SRWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     8230,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "SRWR",
+"status": "S",
+"week":       -5 
+},
+"game_id":     8230,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "89",
+"player_franchise_id":        4,
+"player_id":    12150,
+"position": "SRWR",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

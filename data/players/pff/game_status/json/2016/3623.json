@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3623,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       18,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2016,
+"season_id":     2016,
+"team_name": "MIN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":     4103,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       18,
+"position": "HB",
+"status": "S",
+"week":        1 
+},
+"game_id":     4103,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "28",
+"player_franchise_id":       18,
+"player_id":     3623,
+"position": "HB",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     4115,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "HB",
+"status": "S",
+"week":        2 
+},
+"game_id":     4115,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "28",
+"player_franchise_id":       18,
+"player_id":     3623,
+"position": "HB",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     4317,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "HB",
+"status": "S",
+"week":       15 
+},
+"game_id":     4317,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "28",
+"player_franchise_id":       18,
+"player_id":     3623,
+"position": "HB",
+"status": "S",
+"week":       15 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -14,7 +14,7 @@
  {
  "franchise_id":       31,
 "league_id":        1,
-"player_game_count":       15,
+"player_game_count":       16,
 "season":     2020,
 "season_id":     2020,
 "team_name": "TEN" 
@@ -380,6 +380,30 @@
 "position": "HB",
 "status": "S",
 "week":       16 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18778,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       31,
+"position": "HB",
+"status": "S",
+"week":       17 
+},
+"game_id":    18778,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "22",
+"player_franchise_id":       31,
+"player_id":    10679,
+"position": "HB",
+"status": "S",
+"week":       17 
 } 
 ] 
 },

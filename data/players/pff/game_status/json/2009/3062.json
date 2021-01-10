@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3062,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2009,
+"season_id":     2009,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     1397,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        1 
+},
+"game_id":     1397,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":     3062,
+"position": "HB",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     1416,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        2 
+},
+"game_id":     1416,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":     3062,
+"position": "HB",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     1436,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        3 
+},
+"game_id":     1436,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":     3062,
+"position": "HB",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     1451,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+"game_id":     1451,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":     3062,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     1470,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        5 
+},
+"game_id":     1470,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":     3062,
+"position": "HB",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     1481,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        6 
+},
+"game_id":     1481,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":     3062,
+"position": "HB",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     1493,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        7 
+},
+"game_id":     1493,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":     3062,
+"position": "HB",
+"status": "P",
+"week":        7 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

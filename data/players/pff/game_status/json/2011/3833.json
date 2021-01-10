@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3833,
+"roster": "offense",
+"season":     2011,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        4,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2011,
+"season_id":     2011,
+"team_name": "BUF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     2065,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":        4,
+"position": "QB",
+"status": "P",
+"week":        1 
+},
+"game_id":     2065,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "04",
+"player_franchise_id":        4,
+"player_id":     3833,
+"position": "QB",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     2208,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":        4,
+"position": "QB",
+"status": "P",
+"week":       11 
+},
+"game_id":     2208,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "04",
+"player_franchise_id":        4,
+"player_id":     3833,
+"position": "QB",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     2254,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":        4,
+"position": "QB",
+"status": "P",
+"week":       14 
+},
+"game_id":     2254,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "04",
+"player_franchise_id":        4,
+"player_id":     3833,
+"position": "QB",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

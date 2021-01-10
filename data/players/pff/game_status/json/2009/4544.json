@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4544,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       24,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2009,
+"season_id":     2009,
+"team_name": "PHI" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     1417,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "LT",
+"status": "P",
+"week":        2 
+},
+"game_id":     1417,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "65",
+"player_franchise_id":       24,
+"player_id":     4544,
+"position": "LT",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     1462,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "LT",
+"status": "P",
+"week":        5 
+},
+"game_id":     1462,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "65",
+"player_franchise_id":       24,
+"player_id":     4544,
+"position": "LT",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     1480,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       24,
+"position": "LT",
+"status": "P",
+"week":        6 
+},
+"game_id":     1480,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "65",
+"player_franchise_id":       24,
+"player_id":     4544,
+"position": "LT",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     1536,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       24,
+"position": "TE-L",
+"status": "P",
+"week":       10 
+},
+"game_id":     1536,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "65",
+"player_franchise_id":       24,
+"player_id":     4544,
+"position": "TE-L",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     1565,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "TE-R",
+"status": "P",
+"week":       12 
+},
+"game_id":     1565,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "65",
+"player_franchise_id":       24,
+"player_id":     4544,
+"position": "TE-R",
+"status": "P",
+"week":       12 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

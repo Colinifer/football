@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    12318,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2018,
+"season_id":     2018,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":    12979,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       11,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12979,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "03",
+"player_franchise_id":       11,
+"player_id":    12318,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":    12986,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12986,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "03",
+"player_franchise_id":       11,
+"player_id":    12318,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":    13003,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       11,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":    13003,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "03",
+"player_franchise_id":       11,
+"player_id":    12318,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":    13016,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "LWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":    13016,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "03",
+"player_franchise_id":       11,
+"player_id":    12318,
+"position": "LWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

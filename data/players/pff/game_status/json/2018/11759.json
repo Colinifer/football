@@ -1,0 +1,291 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11759,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       15,
+"league_id":        1,
+"player_game_count":       11,
+"season":     2018,
+"season_id":     2018,
+"team_name": "JAX" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     9345,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":        1 
+},
+"game_id":     9345,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     9392,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":        4 
+},
+"game_id":     9392,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     9476,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       10 
+},
+"game_id":     9476,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     9497,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       11 
+},
+"game_id":     9497,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       11 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     9502,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       12 
+},
+"game_id":     9502,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       12 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     9530,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       14 
+},
+"game_id":     9530,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       14 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     9554,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       15 
+},
+"game_id":     9554,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     9567,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       16 
+},
+"game_id":     9567,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":    12971,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       -2 
+},
+"game_id":    12971,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       -2 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":    12990,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       -3 
+},
+"game_id":    12990,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       -3 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":    13010,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "HB",
+"status": "S",
+"week":       -4 
+},
+"game_id":    13010,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "27",
+"player_franchise_id":       15,
+"player_id":    11759,
+"position": "HB",
+"status": "S",
+"week":       -4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

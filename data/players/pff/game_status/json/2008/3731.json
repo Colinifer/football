@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3731,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2008,
+"season_id":     2008,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     1079,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       31,
+"position": "C",
+"status": "P",
+"week":        2 
+},
+"game_id":     1079,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "64",
+"player_franchise_id":       31,
+"player_id":     3731,
+"position": "C",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     1154,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       31,
+"position": "C",
+"status": "P",
+"week":        7 
+},
+"game_id":     1154,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "64",
+"player_franchise_id":       31,
+"player_id":     3731,
+"position": "C",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     1179,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "LG",
+"status": "P",
+"week":        8 
+},
+"game_id":     1179,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "64",
+"player_franchise_id":       31,
+"player_id":     3731,
+"position": "LG",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     1292,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "C",
+"status": "P",
+"week":       16 
+},
+"game_id":     1292,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "64",
+"player_franchise_id":       31,
+"player_id":     3731,
+"position": "C",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     1304,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       31,
+"position": "C",
+"status": "S",
+"week":       17 
+},
+"game_id":     1304,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "64",
+"player_franchise_id":       31,
+"player_id":     3731,
+"position": "C",
+"status": "S",
+"week":       17 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1323,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "C",
+"status": "S",
+"week":       19 
+},
+"game_id":     1323,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "64",
+"player_franchise_id":       31,
+"player_id":     3731,
+"position": "C",
+"status": "S",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,26 @@
+{
+ "special_teams_summary": {
+ "career": {
+ "player_id":    28040,
+"pu_def_rush":        0 
+},
+"seasons": [
+ {
+ "franchise_id":       14,
+"pu_def_rush":        0,
+"season":     2019,
+"season_id":     2019 
+} 
+],
+"subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":    28040,
+"roster": "special",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

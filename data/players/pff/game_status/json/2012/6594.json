@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6594,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        2,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2012,
+"season_id":     2012,
+"team_name": "ATL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     2391,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":        2,
+"position": "TE-L",
+"status": "P",
+"week":        1 
+},
+"game_id":     2391,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "87",
+"player_franchise_id":        2,
+"player_id":     6594,
+"position": "TE-L",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     2423,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":        2,
+"position": "TE-R",
+"status": "P",
+"week":        3 
+},
+"game_id":     2423,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "87",
+"player_franchise_id":        2,
+"player_id":     6594,
+"position": "TE-R",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     2439,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "TE-R",
+"status": "P",
+"week":        4 
+},
+"game_id":     2439,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "87",
+"player_franchise_id":        2,
+"player_id":     6594,
+"position": "TE-R",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     2454,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":        2,
+"position": "TE-R",
+"status": "P",
+"week":        5 
+},
+"game_id":     2454,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "87",
+"player_franchise_id":        2,
+"player_id":     6594,
+"position": "TE-R",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     2478,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "TE-L",
+"status": "P",
+"week":        6 
+},
+"game_id":     2478,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "87",
+"player_franchise_id":        2,
+"player_id":     6594,
+"position": "TE-L",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     2495,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":        2,
+"position": "TE-R",
+"status": "P",
+"week":        8 
+},
+"game_id":     2495,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "87",
+"player_franchise_id":        2,
+"player_id":     6594,
+"position": "TE-R",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     2514,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "TE-R",
+"status": "P",
+"week":        9 
+},
+"game_id":     2514,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "87",
+"player_franchise_id":        2,
+"player_id":     6594,
+"position": "TE-R",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     2523,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":        2,
+"position": "TE-L",
+"status": "P",
+"week":       10 
+},
+"game_id":     2523,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "87",
+"player_franchise_id":        2,
+"player_id":     6594,
+"position": "TE-L",
+"status": "P",
+"week":       10 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -14,7 +14,7 @@
  {
  "franchise_id":        6,
 "league_id":        1,
-"player_game_count":       15,
+"player_game_count":       16,
 "season":     2020,
 "season_id":     2020,
 "team_name": "CHI" 
@@ -380,6 +380,30 @@
 "position": "RT",
 "status": "S",
 "week":       16 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    18774,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "RT",
+"status": "S",
+"week":       17 
+},
+"game_id":    18774,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "74",
+"player_franchise_id":        6,
+"player_id":    10665,
+"position": "RT",
+"status": "S",
+"week":       17 
 } 
 ] 
 },

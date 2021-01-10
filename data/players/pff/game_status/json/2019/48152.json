@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    48152,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2019,
+"season_id":     2019,
+"team_name": "KC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":    14850,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14850,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "83",
+"player_franchise_id":       16,
+"player_id":    48152,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":    14863,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       16,
+"position": "SLWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14863,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "83",
+"player_franchise_id":       16,
+"player_id":    48152,
+"position": "SLWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    14881,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "SRWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14881,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "83",
+"player_franchise_id":       16,
+"player_id":    48152,
+"position": "SRWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":    14895,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       16,
+"position": "SRWR",
+"status": "S",
+"week":       -5 
+},
+"game_id":    14895,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "83",
+"player_franchise_id":       16,
+"player_id":    48152,
+"position": "SRWR",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

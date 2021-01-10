@@ -1,0 +1,203 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":    10949,
+"roster": "special",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        1,
+"league_id":        1,
+"player_game_count":        7,
+"pu_def_rush":        0,
+"season":     2016,
+"season_id":     2016,
+"team_name": "ARZ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     4041,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        1,
+"position": "LS",
+"status": "P",
+"week":       -2 
+},
+"game_id":     4041,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "86",
+"player_franchise_id":        1,
+"player_id":    10949,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     4046,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":        1,
+"position": "LS",
+"status": "P",
+"week":       -3 
+},
+"game_id":     4046,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "86",
+"player_franchise_id":        1,
+"player_id":    10949,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     4064,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":        1,
+"position": "LS",
+"status": "P",
+"week":       -4 
+},
+"game_id":     4064,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "86",
+"player_franchise_id":        1,
+"player_id":    10949,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     4090,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        1,
+"position": "LS",
+"status": "P",
+"week":       -5 
+},
+"game_id":     4090,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "86",
+"player_franchise_id":        1,
+"player_id":    10949,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -5 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     4107,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        1,
+"position": "LS",
+"status": "P",
+"week":        1 
+},
+"game_id":     4107,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "86",
+"player_franchise_id":        1,
+"player_id":    10949,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     4110,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        1,
+"position": "LS",
+"status": "P",
+"week":        2 
+},
+"game_id":     4110,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "86",
+"player_franchise_id":        1,
+"player_id":    10949,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     4127,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        1,
+"position": "LS",
+"status": "P",
+"week":        3 
+},
+"game_id":     4127,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "86",
+"player_franchise_id":        1,
+"player_id":    10949,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        3 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

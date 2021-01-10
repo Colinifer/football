@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    46594,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2018,
+"season_id":     2018,
+"team_name": "LAC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":    12981,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":       27,
+"position": "QB",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12981,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "09",
+"player_franchise_id":       27,
+"player_id":    46594,
+"position": "QB",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":    13011,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "QB",
+"status": "P",
+"week":       -4 
+},
+"game_id":    13011,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "09",
+"player_franchise_id":       27,
+"player_id":    46594,
+"position": "QB",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":    13028,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       27,
+"position": "QB",
+"status": "P",
+"week":       -5 
+},
+"game_id":    13028,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "09",
+"player_franchise_id":       27,
+"player_id":    46594,
+"position": "QB",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

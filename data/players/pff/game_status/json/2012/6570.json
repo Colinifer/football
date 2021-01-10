@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6570,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        6,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2012,
+"season_id":     2012,
+"team_name": "CHI" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     2452,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        6,
+"position": "SRWR",
+"status": "P",
+"week":        4 
+},
+"game_id":     2452,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "18",
+"player_franchise_id":        6,
+"player_id":     6570,
+"position": "SRWR",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     2457,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":        6,
+"position": "SLWR",
+"status": "P",
+"week":        5 
+},
+"game_id":     2457,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "18",
+"player_franchise_id":        6,
+"player_id":     6570,
+"position": "SLWR",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     2578,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "LWR",
+"status": "P",
+"week":       13 
+},
+"game_id":     2578,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "18",
+"player_franchise_id":        6,
+"player_id":     6570,
+"position": "LWR",
+"status": "P",
+"week":       13 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

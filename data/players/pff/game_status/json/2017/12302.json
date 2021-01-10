@@ -1,0 +1,203 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    12302,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       14,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2017,
+"season_id":     2017,
+"team_name": "IND" 
+},
+{
+ "franchise_id":       32,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2017,
+"season_id":     2017,
+"team_name": "WAS" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     8034,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       14,
+"position": "RG",
+"status": "P",
+"week":        8 
+},
+"game_id":     8034,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "68",
+"player_franchise_id":       14,
+"player_id":    12302,
+"position": "RG",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     8047,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       14,
+"position": "RG",
+"status": "S",
+"week":        9 
+},
+"game_id":     8047,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "68",
+"player_franchise_id":       14,
+"player_id":    12302,
+"position": "RG",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     8063,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "RG",
+"status": "S",
+"week":       10 
+},
+"game_id":     8063,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "68",
+"player_franchise_id":       14,
+"player_id":    12302,
+"position": "RG",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     8183,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       32,
+"position": "RG",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8183,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "67",
+"player_franchise_id":       32,
+"player_id":    12302,
+"position": "RG",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     8203,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8203,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "67",
+"player_franchise_id":       32,
+"player_id":    12302,
+"position": "LG",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     8225,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8225,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "67",
+"player_franchise_id":       32,
+"player_id":    12302,
+"position": "LG",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     8233,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":       -5 
+},
+"game_id":     8233,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "67",
+"player_franchise_id":       32,
+"player_id":    12302,
+"position": "LG",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

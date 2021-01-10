@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4860,
+"roster": "offense",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       25,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2015,
+"season_id":     2015,
+"team_name": "PIT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3377,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3377,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "56",
+"player_franchise_id":       25,
+"player_id":     4860,
+"position": "LG",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     3403,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "S",
+"week":       -5 
+},
+"game_id":     3403,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "56",
+"player_franchise_id":       25,
+"player_id":     4860,
+"position": "LG",
+"status": "S",
+"week":       -5 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3579,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       25,
+"position": null,
+"status": null,
+"week":       12 
+},
+"game_id":     3579,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "64",
+"player_franchise_id":       25,
+"player_id":     4860,
+"position": null,
+"status": null,
+"week":       12 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     3596,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "C",
+"status": "P",
+"week":       13 
+},
+"game_id":     3596,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "64",
+"player_franchise_id":       25,
+"player_id":     4860,
+"position": "C",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3603,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       25,
+"position": "C",
+"status": "P",
+"week":       14 
+},
+"game_id":     3603,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "64",
+"player_franchise_id":       25,
+"player_id":     4860,
+"position": "C",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3669,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       25,
+"position": "C",
+"status": "P",
+"week":       19 
+},
+"game_id":     3669,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "64",
+"player_franchise_id":       25,
+"player_id":     4860,
+"position": "C",
+"status": "P",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

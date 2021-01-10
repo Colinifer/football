@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3377,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       26,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2010,
+"season_id":     2010,
+"team_name": "SL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     1753,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       26,
+"position": "TE-R",
+"status": "P",
+"week":        2 
+},
+"game_id":     1753,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "87",
+"player_franchise_id":       26,
+"player_id":     3377,
+"position": "TE-R",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     1768,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       26,
+"position": "TE-R",
+"status": "S",
+"week":        3 
+},
+"game_id":     1768,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "87",
+"player_franchise_id":       26,
+"player_id":     3377,
+"position": "TE-R",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1782,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       26,
+"position": "TE-R",
+"status": "S",
+"week":        4 
+},
+"game_id":     1782,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "87",
+"player_franchise_id":       26,
+"player_id":     3377,
+"position": "TE-R",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     1793,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       26,
+"position": "TE-L",
+"status": "P",
+"week":        5 
+},
+"game_id":     1793,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "87",
+"player_franchise_id":       26,
+"player_id":     3377,
+"position": "TE-L",
+"status": "P",
+"week":        5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

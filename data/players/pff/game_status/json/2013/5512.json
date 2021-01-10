@@ -1,0 +1,153 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     5512,
+"roster": "special",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       32,
+"league_id":        1,
+"player_game_count":        5,
+"pu_def_rush":        0,
+"season":     2013,
+"season_id":     2013,
+"team_name": "WAS" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     2756,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "LS",
+"status": "P",
+"week":        1 
+},
+"game_id":     2756,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "57",
+"player_franchise_id":       32,
+"player_id":     5512,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2763,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       32,
+"position": "LS",
+"status": "P",
+"week":        2 
+},
+"game_id":     2763,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "57",
+"player_franchise_id":       32,
+"player_id":     5512,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     2783,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "LS",
+"status": "P",
+"week":        3 
+},
+"game_id":     2783,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "57",
+"player_franchise_id":       32,
+"player_id":     5512,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2801,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       32,
+"position": "LS",
+"status": "P",
+"week":        4 
+},
+"game_id":     2801,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "57",
+"player_franchise_id":       32,
+"player_id":     5512,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2832,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       32,
+"position": "LS",
+"status": "P",
+"week":        6 
+},
+"game_id":     2832,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "57",
+"player_franchise_id":       32,
+"player_id":     5512,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        6 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

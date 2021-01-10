@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7218,
+"roster": "offense",
+"season":     2014,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       20,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2014,
+"season_id":     2014,
+"team_name": "NO" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     3021,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       20,
+"position": "RG",
+"status": "S",
+"week":       -2 
+},
+"game_id":     3021,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "70",
+"player_franchise_id":       20,
+"player_id":     7218,
+"position": "RG",
+"status": "S",
+"week":       -2 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     3028,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "RG",
+"status": "S",
+"week":       -3 
+},
+"game_id":     3028,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "70",
+"player_franchise_id":       20,
+"player_id":     7218,
+"position": "RG",
+"status": "S",
+"week":       -3 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     3048,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       20,
+"position": "RG",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3048,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "70",
+"player_franchise_id":       20,
+"player_id":     7218,
+"position": "RG",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     3070,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "RG",
+"status": "P",
+"week":       -5 
+},
+"game_id":     3070,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "70",
+"player_franchise_id":       20,
+"player_id":     7218,
+"position": "RG",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

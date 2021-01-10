@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    61603,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       29,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2019,
+"season_id":     2019,
+"team_name": "SEA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":    14847,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       29,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14847,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "09",
+"player_franchise_id":       29,
+"player_id":    61603,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":    14867,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       29,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14867,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "09",
+"player_franchise_id":       29,
+"player_id":    61603,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":    14883,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       29,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14883,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "09",
+"player_franchise_id":       29,
+"player_id":    61603,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":    14900,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       29,
+"position": "LWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":    14900,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "09",
+"player_franchise_id":       29,
+"player_id":    61603,
+"position": "LWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

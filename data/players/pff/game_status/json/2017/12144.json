@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    12144,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2017,
+"season_id":     2017,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     8183,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8183,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "06",
+"player_franchise_id":        3,
+"player_id":    12144,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

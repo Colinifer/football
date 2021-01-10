@@ -1,0 +1,203 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4940,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       18,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2013,
+"season_id":     2013,
+"team_name": "MIN" 
+},
+{
+ "franchise_id":       30,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2013,
+"season_id":     2013,
+"team_name": "TB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     2678,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "QB",
+"status": "S",
+"week":       -2 
+},
+"game_id":     2678,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "05",
+"player_franchise_id":       30,
+"player_id":     4940,
+"position": "QB",
+"status": "S",
+"week":       -2 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     2699,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       30,
+"position": "QB",
+"status": "S",
+"week":       -3 
+},
+"game_id":     2699,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "05",
+"player_franchise_id":       30,
+"player_id":     4940,
+"position": "QB",
+"status": "S",
+"week":       -3 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     2717,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       30,
+"position": "QB",
+"status": "S",
+"week":       -4 
+},
+"game_id":     2717,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "05",
+"player_franchise_id":       30,
+"player_id":     4940,
+"position": "QB",
+"status": "S",
+"week":       -4 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     2751,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       30,
+"position": "QB",
+"status": "S",
+"week":        1 
+},
+"game_id":     2751,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "05",
+"player_franchise_id":       30,
+"player_id":     4940,
+"position": "QB",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     2769,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "QB",
+"status": "S",
+"week":        2 
+},
+"game_id":     2769,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "05",
+"player_franchise_id":       30,
+"player_id":     4940,
+"position": "QB",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     2780,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       30,
+"position": "QB",
+"status": "S",
+"week":        3 
+},
+"game_id":     2780,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "05",
+"player_franchise_id":       30,
+"player_id":     4940,
+"position": "QB",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":     2848,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       18,
+"position": "QB",
+"status": "S",
+"week":        7 
+},
+"game_id":     2848,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "12",
+"player_franchise_id":       18,
+"player_id":     4940,
+"position": "QB",
+"status": "S",
+"week":        7 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

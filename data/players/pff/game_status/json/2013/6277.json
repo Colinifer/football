@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6277,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       23,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2013,
+"season_id":     2013,
+"team_name": "OAK" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2801,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": null,
+"status": null,
+"week":        4 
+},
+"game_id":     2801,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "22",
+"player_franchise_id":       23,
+"player_id":     6277,
+"position": null,
+"status": null,
+"week":        4 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     2939,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       23,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+"game_id":     2939,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "22",
+"player_franchise_id":       23,
+"player_id":     6277,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2962,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+"game_id":     2962,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "22",
+"player_franchise_id":       23,
+"player_id":     6277,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     2979,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       23,
+"position": "HB",
+"status": "P",
+"week":       16 
+},
+"game_id":     2979,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "22",
+"player_franchise_id":       23,
+"player_id":     6277,
+"position": "HB",
+"status": "P",
+"week":       16 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6327,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2013,
+"season_id":     2013,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2679,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "LT",
+"status": "P",
+"week":       -2 
+},
+"game_id":     2679,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "68",
+"player_franchise_id":       31,
+"player_id":     6327,
+"position": "LT",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     2703,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       31,
+"position": "LT",
+"status": "P",
+"week":       -3 
+},
+"game_id":     2703,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "68",
+"player_franchise_id":       31,
+"player_id":     6327,
+"position": "LT",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     2720,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "LT",
+"status": "P",
+"week":       -4 
+},
+"game_id":     2720,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "68",
+"player_franchise_id":       31,
+"player_id":     6327,
+"position": "LT",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     2734,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       31,
+"position": "LT",
+"status": "P",
+"week":       -5 
+},
+"game_id":     2734,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "68",
+"player_franchise_id":       31,
+"player_id":     6327,
+"position": "LT",
+"status": "P",
+"week":       -5 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     2970,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       31,
+"position": "RT",
+"status": "S",
+"week":       16 
+},
+"game_id":     2970,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "68",
+"player_franchise_id":       31,
+"player_id":     6327,
+"position": "RT",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2993,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "RT",
+"status": "S",
+"week":       17 
+},
+"game_id":     2993,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "68",
+"player_franchise_id":       31,
+"player_id":     6327,
+"position": "RT",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,227 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5679,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2013,
+"season_id":     2013,
+"team_name": "BLT" 
+},
+{
+ "franchise_id":       14,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2013,
+"season_id":     2013,
+"team_name": "IND" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     2695,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":     2695,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "16",
+"player_franchise_id":        3,
+"player_id":     5679,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     2716,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":     2716,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "85",
+"player_franchise_id":       14,
+"player_id":     5679,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2727,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       14,
+"position": "LWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":     2727,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "85",
+"player_franchise_id":       14,
+"player_id":     5679,
+"position": "LWR",
+"status": "P",
+"week":       -5 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2795,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       14,
+"position": "LWR",
+"status": "P",
+"week":        4 
+},
+"game_id":     2795,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "85",
+"player_franchise_id":       14,
+"player_id":     5679,
+"position": "LWR",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2873,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       14,
+"position": "RWR",
+"status": "P",
+"week":        9 
+},
+"game_id":     2873,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "85",
+"player_franchise_id":       14,
+"player_id":     5679,
+"position": "RWR",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     2881,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "LWR",
+"status": "P",
+"week":       10 
+},
+"game_id":     2881,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "85",
+"player_franchise_id":       14,
+"player_id":     5679,
+"position": "LWR",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2889,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       14,
+"position": "RWR",
+"status": "P",
+"week":       11 
+},
+"game_id":     2889,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "85",
+"player_franchise_id":       14,
+"player_id":     5679,
+"position": "RWR",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2913,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":       14,
+"position": "RWR",
+"status": "P",
+"week":       12 
+},
+"game_id":     2913,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "85",
+"player_franchise_id":       14,
+"player_id":     5679,
+"position": "RWR",
+"status": "P",
+"week":       12 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5120,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       26,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2009,
+"season_id":     2009,
+"team_name": "SL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     1590,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       26,
+"position": "QB",
+"status": "S",
+"week":       14 
+},
+"game_id":     1590,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "09",
+"player_franchise_id":       26,
+"player_id":     5120,
+"position": "QB",
+"status": "S",
+"week":       14 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     1609,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       26,
+"position": "QB",
+"status": "S",
+"week":       15 
+},
+"game_id":     1609,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "09",
+"player_franchise_id":       26,
+"player_id":     5120,
+"position": "QB",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     1630,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":       26,
+"position": "QB",
+"status": "S",
+"week":       16 
+},
+"game_id":     1630,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "09",
+"player_franchise_id":       26,
+"player_id":     5120,
+"position": "QB",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     1642,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       26,
+"position": "QB",
+"status": "S",
+"week":       17 
+},
+"game_id":     1642,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "09",
+"player_franchise_id":       26,
+"player_id":     5120,
+"position": "QB",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

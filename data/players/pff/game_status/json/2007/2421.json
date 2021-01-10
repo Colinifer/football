@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2421,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       25,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2007,
+"season_id":     2007,
+"team_name": "PIT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":      733,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":        1 
+},
+"game_id":      733,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "68",
+"player_franchise_id":       25,
+"player_id":     2421,
+"position": "LG",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":      751,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":        2 
+},
+"game_id":      751,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "68",
+"player_franchise_id":       25,
+"player_id":     2421,
+"position": "LG",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":      798,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":        5 
+},
+"game_id":      798,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "68",
+"player_franchise_id":       25,
+"player_id":     2421,
+"position": "LG",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":      860,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":        9 
+},
+"game_id":      860,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "68",
+"player_franchise_id":       25,
+"player_id":     2421,
+"position": "LG",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":      866,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":       10 
+},
+"game_id":      866,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "68",
+"player_franchise_id":       25,
+"player_id":     2421,
+"position": "LG",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":      955,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":       16 
+},
+"game_id":      955,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "68",
+"player_franchise_id":       25,
+"player_id":     2421,
+"position": "LG",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":      973,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":       17 
+},
+"game_id":      973,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "68",
+"player_franchise_id":       25,
+"player_id":     2421,
+"position": "LG",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":      988,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       25,
+"position": "LG",
+"status": "P",
+"week":       18 
+},
+"game_id":      988,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "68",
+"player_franchise_id":       25,
+"player_id":     2421,
+"position": "LG",
+"status": "P",
+"week":       18 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

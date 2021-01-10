@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4983,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       21,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2016,
+"season_id":     2016,
+"team_name": "NYG" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     4250,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       21,
+"position": "LT",
+"status": "P",
+"week":       11 
+},
+"game_id":     4250,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "65",
+"player_franchise_id":       21,
+"player_id":     4983,
+"position": "LT",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     4262,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":       21,
+"position": "LT",
+"status": "P",
+"week":       12 
+},
+"game_id":     4262,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "65",
+"player_franchise_id":       21,
+"player_id":     4983,
+"position": "LT",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     4345,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       21,
+"position": "LT",
+"status": "P",
+"week":       17 
+},
+"game_id":     4345,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "65",
+"player_franchise_id":       21,
+"player_id":     4983,
+"position": "LT",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

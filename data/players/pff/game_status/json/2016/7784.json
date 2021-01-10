@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7784,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       15,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2016,
+"season_id":     2016,
+"team_name": "JAX" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     4037,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       15,
+"position": "LT",
+"status": "S",
+"week":       -2 
+},
+"game_id":     4037,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "76",
+"player_franchise_id":       15,
+"player_id":     7784,
+"position": "LT",
+"status": "S",
+"week":       -2 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     4061,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "LT",
+"status": "S",
+"week":       -3 
+},
+"game_id":     4061,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "76",
+"player_franchise_id":       15,
+"player_id":     7784,
+"position": "LT",
+"status": "S",
+"week":       -3 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     4065,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "LG",
+"status": "S",
+"week":       -4 
+},
+"game_id":     4065,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "76",
+"player_franchise_id":       15,
+"player_id":     7784,
+"position": "LG",
+"status": "S",
+"week":       -4 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     4098,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "LG",
+"status": "S",
+"week":        1 
+},
+"game_id":     4098,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "76",
+"player_franchise_id":       15,
+"player_id":     7784,
+"position": "LG",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     4114,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       15,
+"position": "LG",
+"status": "S",
+"week":        2 
+},
+"game_id":     4114,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "76",
+"player_franchise_id":       15,
+"player_id":     7784,
+"position": "LG",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     4131,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "LT",
+"status": "S",
+"week":        3 
+},
+"game_id":     4131,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "76",
+"player_franchise_id":       15,
+"player_id":     7784,
+"position": "LT",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     4143,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "LG",
+"status": "S",
+"week":        4 
+},
+"game_id":     4143,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "76",
+"player_franchise_id":       15,
+"player_id":     7784,
+"position": "LG",
+"status": "S",
+"week":        4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

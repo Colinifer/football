@@ -1,0 +1,34 @@
+{
+ "offense_summary": {
+ "career": {
+ "player_id":    46936 
+},
+"seasons": [
+ {
+ "franchise_id":       32,
+"season":     2020,
+"season_id":     2020 
+},
+{
+ "franchise_id":       13,
+"season":     2019,
+"season_id":     2019 
+},
+{
+ "franchise_id":       17,
+"season":     2018,
+"season_id":     2018 
+} 
+],
+"subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    46936,
+"roster": "offense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

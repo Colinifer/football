@@ -22,7 +22,7 @@
 {
  "franchise_id":        7,
 "league_id":        1,
-"player_game_count":        8,
+"player_game_count":        9,
 "season":     2020,
 "season_id":     2020,
 "team_name": "CIN" 
@@ -292,6 +292,30 @@
 "position": "RG",
 "status": "S",
 "week":       16 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    18775,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "RG",
+"status": "S",
+"week":       17 
+},
+"game_id":    18775,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "67",
+"player_franchise_id":        7,
+"player_id":    10110,
+"position": "RG",
+"status": "S",
+"week":       17 
 } 
 ] 
 },

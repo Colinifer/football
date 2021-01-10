@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2112,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2008,
+"season_id":     2008,
+"team_name": "DEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     1133,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "RWR",
+"status": "P",
+"week":        5 
+},
+"game_id":     1133,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "17",
+"player_franchise_id":       10,
+"player_id":     2112,
+"position": "RWR",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     1146,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "SRWR",
+"status": "P",
+"week":        6 
+},
+"game_id":     1146,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "17",
+"player_franchise_id":       10,
+"player_id":     2112,
+"position": "SRWR",
+"status": "P",
+"week":        6 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

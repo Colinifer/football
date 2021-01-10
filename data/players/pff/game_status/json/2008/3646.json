@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3646,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2008,
+"season_id":     2008,
+"team_name": "SD" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     1110,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "SRWR",
+"status": "P",
+"week":        3 
+},
+"game_id":     1110,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "84",
+"player_franchise_id":       27,
+"player_id":     3646,
+"position": "SRWR",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     1119,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       27,
+"position": "SLWR",
+"status": "P",
+"week":        4 
+},
+"game_id":     1119,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "84",
+"player_franchise_id":       27,
+"player_id":     3646,
+"position": "SLWR",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     1128,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       27,
+"position": "LWR",
+"status": "P",
+"week":        5 
+},
+"game_id":     1128,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "84",
+"player_franchise_id":       27,
+"player_id":     3646,
+"position": "LWR",
+"status": "P",
+"week":        5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

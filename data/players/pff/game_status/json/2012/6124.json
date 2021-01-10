@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6124,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       13,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2012,
+"season_id":     2012,
+"team_name": "HST" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2412,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       13,
+"position": "FB",
+"status": "P",
+"week":        2 
+},
+"game_id":     2412,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "40",
+"player_franchise_id":       13,
+"player_id":     6124,
+"position": "FB",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     2450,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "FB",
+"status": "P",
+"week":        4 
+},
+"game_id":     2450,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "40",
+"player_franchise_id":       13,
+"player_id":     6124,
+"position": "FB",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     2472,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "FB",
+"status": "P",
+"week":        6 
+},
+"game_id":     2472,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "40",
+"player_franchise_id":       13,
+"player_id":     6124,
+"position": "FB",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     2483,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "FB",
+"status": "P",
+"week":        7 
+},
+"game_id":     2483,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "40",
+"player_franchise_id":       13,
+"player_id":     6124,
+"position": "FB",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2528,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       13,
+"position": "FB",
+"status": "P",
+"week":       10 
+},
+"game_id":     2528,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "40",
+"player_franchise_id":       13,
+"player_id":     6124,
+"position": "FB",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     2543,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "FB",
+"status": "P",
+"week":       11 
+},
+"game_id":     2543,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "40",
+"player_franchise_id":       13,
+"player_id":     6124,
+"position": "FB",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2597,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       13,
+"position": "FB",
+"status": "P",
+"week":       14 
+},
+"game_id":     2597,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "40",
+"player_franchise_id":       13,
+"player_id":     6124,
+"position": "FB",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

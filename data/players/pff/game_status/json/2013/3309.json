@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3309,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       19,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2013,
+"season_id":     2013,
+"team_name": "NE" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     2686,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       19,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+"game_id":     2686,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "86",
+"player_franchise_id":       19,
+"player_id":     3309,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     2733,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "TE-L",
+"status": "P",
+"week":       -5 
+},
+"game_id":     2733,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "86",
+"player_franchise_id":       19,
+"player_id":     3309,
+"position": "TE-L",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,179 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      797,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2008,
+"season_id":     2008,
+"team_name": "SD" 
+},
+{
+ "franchise_id":       30,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2008,
+"season_id":     2008,
+"team_name": "TB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     1133,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       30,
+"position": "HB",
+"status": "P",
+"week":        5 
+},
+"game_id":     1133,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "29",
+"player_franchise_id":       30,
+"player_id":      797,
+"position": "HB",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     1144,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "HB",
+"status": "P",
+"week":        6 
+},
+"game_id":     1144,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "29",
+"player_franchise_id":       30,
+"player_id":      797,
+"position": "HB",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1164,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "HB",
+"status": "P",
+"week":        7 
+},
+"game_id":     1164,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "29",
+"player_franchise_id":       30,
+"player_id":      797,
+"position": "HB",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     1185,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       30,
+"position": "HB",
+"status": "P",
+"week":        9 
+},
+"game_id":     1185,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "29",
+"player_franchise_id":       30,
+"player_id":      797,
+"position": "HB",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     1320,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "P",
+"week":       18 
+},
+"game_id":     1320,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "29",
+"player_franchise_id":       27,
+"player_id":      797,
+"position": "HB",
+"status": "P",
+"week":       18 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     1326,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "P",
+"week":       19 
+},
+"game_id":     1326,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "29",
+"player_franchise_id":       27,
+"player_id":      797,
+"position": "HB",
+"status": "P",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -12,18 +12,18 @@
 },
 "week_totals": [
  {
- "assists":       31,
+ "assists":       33,
 "forced_fumbles":        1,
 "franchise_id":       15,
 "hits":        1,
 "interceptions":        1,
 "league_id":        1,
-"pass_break_ups":        3,
-"player_game_count":       13,
+"pass_break_ups":        4,
+"player_game_count":       14,
 "sacks":        1,
 "season":     2020,
 "season_id":     2020,
-"tackles":       80,
+"tackles":       84,
 "team_name": "JAX" 
 } 
 ],
@@ -430,6 +430,37 @@
 "status": "S",
 "tackles":        6,
 "week":       16 
+},
+{
+ "assists":        2,
+"away_franchise_id":       15,
+"away_team_name": "JAX",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":    18779,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       15,
+"position": "MLB",
+"status": "S",
+"week":       17 
+},
+"game_id":    18779,
+"hits":        0,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"interceptions":        0,
+"jersey_number": "44",
+"pass_break_ups":        1,
+"player_franchise_id":       15,
+"player_id":    10670,
+"position": "MLB",
+"sacks":        0,
+"status": "S",
+"tackles":        4,
+"week":       17 
 } 
 ] 
 },

@@ -1,0 +1,83 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10970,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        2,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2017,
+"season_id":     2017,
+"team_name": "ATL" 
+},
+{
+ "franchise_id":       30,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2017,
+"season_id":     2017,
+"team_name": "TB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     8180,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8180,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "68",
+"player_franchise_id":        2,
+"player_id":    10970,
+"position": "LT",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     8233,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "RT",
+"status": "P",
+"week":       -5 
+},
+"game_id":     8233,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "72",
+"player_franchise_id":       30,
+"player_id":    10970,
+"position": "RT",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

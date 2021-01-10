@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11288,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       29,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2018,
+"season_id":     2018,
+"team_name": "SEA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":    12977,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       29,
+"position": "SLWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12977,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "19",
+"player_franchise_id":       29,
+"player_id":    11288,
+"position": "SLWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":    12996,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       29,
+"position": "SRWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12996,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "19",
+"player_franchise_id":       29,
+"player_id":    11288,
+"position": "SRWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":    13002,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       29,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":    13002,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "19",
+"player_franchise_id":       29,
+"player_id":    11288,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

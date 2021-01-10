@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7860,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       24,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2018,
+"season_id":     2018,
+"team_name": "PHI" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     9338,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "P",
+"week":        1 
+},
+"game_id":     9338,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "80",
+"player_franchise_id":       24,
+"player_id":     7860,
+"position": "RWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":    13018,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "S",
+"week":       -5 
+},
+"game_id":    13018,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "80",
+"player_franchise_id":       24,
+"player_id":     7860,
+"position": "RWR",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

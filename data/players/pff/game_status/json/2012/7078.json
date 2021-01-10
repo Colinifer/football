@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7078,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       13,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2012,
+"season_id":     2012,
+"team_name": "HST" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2550,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       13,
+"position": "LG",
+"status": "P",
+"week":       12 
+},
+"game_id":     2550,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "79",
+"player_franchise_id":       13,
+"player_id":     7078,
+"position": "LG",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2571,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       13,
+"position": "RG",
+"status": "P",
+"week":       13 
+},
+"game_id":     2571,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "79",
+"player_franchise_id":       13,
+"player_id":     7078,
+"position": "RG",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2597,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       13,
+"position": "RG",
+"status": "P",
+"week":       14 
+},
+"game_id":     2597,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "79",
+"player_franchise_id":       13,
+"player_id":     7078,
+"position": "RG",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2603,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "RG",
+"status": "P",
+"week":       15 
+},
+"game_id":     2603,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "79",
+"player_franchise_id":       13,
+"player_id":     7078,
+"position": "RG",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":     2620,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "RG",
+"status": "P",
+"week":       16 
+},
+"game_id":     2620,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "79",
+"player_franchise_id":       13,
+"player_id":     7078,
+"position": "RG",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2637,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       13,
+"position": "RG",
+"status": "P",
+"week":       17 
+},
+"game_id":     2637,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "79",
+"player_franchise_id":       13,
+"player_id":     7078,
+"position": "RG",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     2646,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "RG",
+"status": "P",
+"week":       18 
+},
+"game_id":     2646,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "79",
+"player_franchise_id":       13,
+"player_id":     7078,
+"position": "RG",
+"status": "P",
+"week":       18 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2673,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       13,
+"position": "RG",
+"status": "P",
+"week":       19 
+},
+"game_id":     2673,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "79",
+"player_franchise_id":       13,
+"player_id":     7078,
+"position": "RG",
+"status": "P",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

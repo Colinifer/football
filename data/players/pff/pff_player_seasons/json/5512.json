@@ -1,0 +1,68 @@
+{
+ "special_teams_summary": {
+ "career": {
+ "player_id":     5512,
+"pu_def_rush":        0 
+},
+"seasons": [
+ {
+ "franchise_id":       32,
+"pu_def_rush":        0,
+"season":     2020,
+"season_id":     2020 
+},
+{
+ "franchise_id":       32,
+"pu_def_rush":        0,
+"season":     2019,
+"season_id":     2019 
+},
+{
+ "franchise_id":       32,
+"pu_def_rush":        0,
+"season":     2018,
+"season_id":     2018 
+},
+{
+ "franchise_id":       32,
+"pu_def_rush":        0,
+"season":     2017,
+"season_id":     2017 
+},
+{
+ "franchise_id":       32,
+"pu_def_rush":        0,
+"season":     2016,
+"season_id":     2016 
+},
+{
+ "franchise_id":       32,
+"pu_def_rush":        0,
+"season":     2015,
+"season_id":     2015 
+},
+{
+ "franchise_id":       32,
+"pu_def_rush":        0,
+"season":     2014,
+"season_id":     2014 
+},
+{
+ "franchise_id":       32,
+"pu_def_rush":        0,
+"season":     2013,
+"season_id":     2013 
+} 
+],
+"subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     5512,
+"roster": "special",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

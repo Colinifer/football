@@ -1,0 +1,203 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     6020,
+"roster": "special",
+"season":     2014,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        7,
+"pu_def_rush":        0,
+"season":     2014,
+"season_id":     2014,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     3076,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LS",
+"status": "P",
+"week":        1 
+},
+"game_id":     3076,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "46",
+"player_franchise_id":        3,
+"player_id":     6020,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3090,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LS",
+"status": "P",
+"week":        2 
+},
+"game_id":     3090,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "46",
+"player_franchise_id":        3,
+"player_id":     6020,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     3109,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        3,
+"position": "LS",
+"status": "P",
+"week":        3 
+},
+"game_id":     3109,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "46",
+"player_franchise_id":        3,
+"player_id":     6020,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     3123,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LS",
+"status": "P",
+"week":        4 
+},
+"game_id":     3123,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "46",
+"player_franchise_id":        3,
+"player_id":     6020,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     3139,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":        3,
+"position": "LS",
+"status": "P",
+"week":        5 
+},
+"game_id":     3139,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "46",
+"player_franchise_id":        3,
+"player_id":     6020,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     3158,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":        3,
+"position": "LS",
+"status": "P",
+"week":        6 
+},
+"game_id":     3158,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "46",
+"player_franchise_id":        3,
+"player_id":     6020,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     3166,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LS",
+"status": "P",
+"week":        7 
+},
+"game_id":     3166,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "46",
+"player_franchise_id":        3,
+"player_id":     6020,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":        7 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

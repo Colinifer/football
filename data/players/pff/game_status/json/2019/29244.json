@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    29244,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       29,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2019,
+"season_id":     2019,
+"team_name": "SEA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":    16808,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       29,
+"position": "LG",
+"status": "P",
+"week":       19 
+},
+"game_id":    16808,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "60",
+"player_franchise_id":       29,
+"player_id":    29244,
+"position": "LG",
+"status": "P",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

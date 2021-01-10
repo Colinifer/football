@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    47912,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       13,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2019,
+"season_id":     2019,
+"team_name": "HST" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":    14845,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       13,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14845,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "18",
+"player_franchise_id":       13,
+"player_id":    47912,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":    14864,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14864,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "18",
+"player_franchise_id":       13,
+"player_id":    47912,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":    14878,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       13,
+"position": "SLWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14878,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "18",
+"player_franchise_id":       13,
+"player_id":    47912,
+"position": "SLWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":    14896,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "SLWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":    14896,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "18",
+"player_franchise_id":       13,
+"player_id":    47912,
+"position": "SLWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

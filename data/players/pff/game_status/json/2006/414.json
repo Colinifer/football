@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      414,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        1,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2006,
+"season_id":     2006,
+"team_name": "ARZ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     3752,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        1,
+"position": "RT",
+"status": "S",
+"week":        1 
+},
+"game_id":     3752,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "63",
+"player_franchise_id":        1,
+"player_id":      414,
+"position": "RT",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     3766,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":        1,
+"position": "LG",
+"status": "S",
+"week":        2 
+},
+"game_id":     3766,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "63",
+"player_franchise_id":        1,
+"player_id":      414,
+"position": "LG",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     3832,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        1,
+"position": "RG",
+"status": "S",
+"week":        6 
+},
+"game_id":     3832,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "63",
+"player_franchise_id":        1,
+"player_id":      414,
+"position": "RG",
+"status": "S",
+"week":        6 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     3841,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":        1,
+"position": "RG",
+"status": "S",
+"week":        7 
+},
+"game_id":     3841,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "63",
+"player_franchise_id":        1,
+"player_id":      414,
+"position": "RG",
+"status": "S",
+"week":        7 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     3847,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":        1,
+"position": "LG",
+"status": "S",
+"week":        8 
+},
+"game_id":     3847,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "63",
+"player_franchise_id":        1,
+"player_id":      414,
+"position": "LG",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     3886,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        1,
+"position": "LG",
+"status": "S",
+"week":       10 
+},
+"game_id":     3886,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "63",
+"player_franchise_id":        1,
+"player_id":      414,
+"position": "LG",
+"status": "S",
+"week":       10 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

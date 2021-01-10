@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3271,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2010,
+"season_id":     2010,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1960,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       11,
+"position": "SLWR",
+"status": "P",
+"week":       16 
+},
+"game_id":     1960,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "87",
+"player_franchise_id":       11,
+"player_id":     3271,
+"position": "SLWR",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":     1976,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "RWR",
+"status": "P",
+"week":       17 
+},
+"game_id":     1976,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "87",
+"player_franchise_id":       11,
+"player_id":     3271,
+"position": "RWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

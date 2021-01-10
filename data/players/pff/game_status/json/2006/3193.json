@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3193,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        4,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2006,
+"season_id":     2006,
+"team_name": "BUF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     3805,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "P",
+"week":        5 
+},
+"game_id":     3805,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "62",
+"player_franchise_id":        4,
+"player_id":     3193,
+"position": "RG",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     3834,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "LG",
+"status": "S",
+"week":        7 
+},
+"game_id":     3834,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "62",
+"player_franchise_id":        4,
+"player_id":     3193,
+"position": "LG",
+"status": "S",
+"week":        7 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

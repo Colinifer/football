@@ -12,18 +12,18 @@
 },
 "week_totals": [
  {
- "assists":        5,
+ "assists":        6,
 "forced_fumbles":        0,
 "franchise_id":       13,
 "hits":        0,
 "interceptions":        1,
 "league_id":        1,
-"pass_break_ups":        5,
-"player_game_count":       15,
+"pass_break_ups":        6,
+"player_game_count":       16,
 "sacks":        0,
 "season":     2020,
 "season_id":     2020,
-"tackles":       62,
+"tackles":       66,
 "team_name": "HST" 
 } 
 ],
@@ -492,6 +492,37 @@
 "status": "S",
 "tackles":        6,
 "week":       16 
+},
+{
+ "assists":        1,
+"away_franchise_id":       31,
+"away_team_name": "TEN",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18778,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "RCB",
+"status": "S",
+"week":       17 
+},
+"game_id":    18778,
+"hits":        0,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"interceptions":        0,
+"jersey_number": "26",
+"pass_break_ups":        1,
+"player_franchise_id":       13,
+"player_id":    10645,
+"position": "RCB",
+"sacks":        0,
+"status": "S",
+"tackles":        4,
+"week":       17 
 } 
 ] 
 },

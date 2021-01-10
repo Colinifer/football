@@ -1,0 +1,137 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":    11091,
+"roster": "special",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       13,
+"league_id":        1,
+"player_game_count":        3,
+"pu_def_rush":        0,
+"season":     2018,
+"season_id":     2018,
+"team_name": "HST" 
+},
+{
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        1,
+"pu_def_rush":        0,
+"season":     2018,
+"season_id":     2018,
+"team_name": "LAC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    12994,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "K",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12994,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "06",
+"player_franchise_id":       13,
+"player_id":    11091,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":    13006,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       13,
+"position": "K",
+"status": "P",
+"week":       -4 
+},
+"game_id":    13006,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"jersey_number": "06",
+"player_franchise_id":       13,
+"player_id":    11091,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":    13025,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "K",
+"status": "P",
+"week":       -5 
+},
+"game_id":    13025,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "06",
+"player_franchise_id":       13,
+"player_id":    11091,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -5 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":    13613,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       27,
+"position": "K",
+"status": "P",
+"week":       19 
+},
+"game_id":    13613,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "06",
+"player_franchise_id":       27,
+"player_id":    11091,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

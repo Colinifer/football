@@ -19,7 +19,7 @@
 "interceptions":        0,
 "league_id":        1,
 "pass_break_ups":        0,
-"player_game_count":       14,
+"player_game_count":       15,
 "sacks":        8,
 "season":     2020,
 "season_id":     2020,
@@ -461,6 +461,37 @@
 "status": "S",
 "tackles":        0,
 "week":       16 
+},
+{
+ "assists":        0,
+"away_franchise_id":       27,
+"away_team_name": "LAC",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":    18780,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "DLT",
+"status": "P",
+"week":       17 
+},
+"game_id":    18780,
+"hits":        0,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"interceptions":        0,
+"jersey_number": "95",
+"pass_break_ups":        0,
+"player_franchise_id":       16,
+"player_id":    10671,
+"position": "DLT",
+"sacks":        0,
+"status": "P",
+"tackles":        0,
+"week":       17 
 } 
 ] 
 },

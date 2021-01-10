@@ -19,11 +19,11 @@
 "interceptions":        0,
 "league_id":        1,
 "pass_break_ups":        0,
-"player_game_count":       13,
+"player_game_count":       14,
 "sacks":        2,
 "season":     2020,
 "season_id":     2020,
-"tackles":       34,
+"tackles":       36,
 "team_name": "BLT" 
 } 
 ],
@@ -430,6 +430,37 @@
 "status": "S",
 "tackles":        1,
 "week":       16 
+},
+{
+ "assists":        0,
+"away_franchise_id":        3,
+"away_team_name": "BLT",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    18775,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        3,
+"position": "DLT",
+"status": "P",
+"week":       17 
+},
+"game_id":    18775,
+"hits":        0,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"interceptions":        0,
+"jersey_number": "95",
+"pass_break_ups":        0,
+"player_franchise_id":        3,
+"player_id":     7040,
+"position": "DLT",
+"sacks":        0,
+"status": "P",
+"tackles":        2,
+"week":       17 
 } 
 ] 
 },

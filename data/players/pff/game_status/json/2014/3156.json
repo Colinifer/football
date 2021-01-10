@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3156,
+"roster": "offense",
+"season":     2014,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        2,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2014,
+"season_id":     2014,
+"team_name": "ATL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     3058,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":        2,
+"position": "RT",
+"status": "P",
+"week":       -5 
+},
+"game_id":     3058,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "64O",
+"player_franchise_id":        2,
+"player_id":     3156,
+"position": "RT",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

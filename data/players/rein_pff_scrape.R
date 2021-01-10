@@ -183,27 +183,19 @@ for (j in players_to_check_row) {
 all_json <- unlist(sapply(dir('data/players/pff/game_status/json', full = T), function(yr) dir(yr, full = T)))
 names(all_json) <- NULL
 
-player_games_df <- map_df(all_json, function(x) {
+player_games_df <- map_df(all_json %>% head(10), function(x) {
   pl_json <- RJSONIO::fromJSON(x)[[1]]
   subject_info <- c('player_id'=pl_json$subject$player_id,
                     'season'=pl_json$subject$season,
                     'eligible'=pl_json$subject$eligible,
                     'roster'=pl_json$subject$roster,
                     'secondary'=pl_json$subject$secondary)
-  games_df <- data.frame(t(sapply(pl_json$weeks, function(wk) c(wk$game, 'jersey_number'=wk$jersey_number))))
+  games_df <- sapply(pl_json$weeks, function(wk) c(wk$game, 'jersey_number'=wk$jersey_number)) %>% 
+    t() %>% 
+    as_tibble()
   return(cbind(rbind(subject_info), games_df, row.names = NULL))
-})
-
-player_games_df <- map_df(all_json, function(x) {
-  pl_json <- RJSONIO::fromJSON(x)[[1]]
-  subject_info <- c('player_id'=pl_json$subject$player_id,
-                  'season'=pl_json$subject$season,
-                  'eligible'=pl_json$subject$eligible,
-                  'roster'=pl_json$subject$roster,
-                  'secondary'=pl_json$subject$secondary)
-  games_df <- data.frame(t(sapply(pl_json$weeks, function(wk) c(wk$game, 'jersey_number'=wk$jersey_number))))
-  return(cbind(rbind(subject_info), games_df, row.names = NULL))
-})
+}) %>% 
+  as_tibble()
 
 ### remove NULLs
 for (z in 1:ncol(player_games_df)) player_games_df[,z] <- sapply(player_games_df[,z], function(y) ifelse(is.null(y), NA, y))

@@ -1,0 +1,203 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     8104,
+"roster": "special",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        4,
+"league_id":        1,
+"player_game_count":        7,
+"pu_def_rush":        0,
+"season":     2018,
+"season_id":     2018,
+"team_name": "BUF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     9460,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "P",
+"status": "P",
+"week":        9 
+},
+"game_id":     9460,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "06",
+"player_franchise_id":        4,
+"player_id":     8104,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     9479,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":        4,
+"position": "P",
+"status": "P",
+"week":       10 
+},
+"game_id":     9479,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "06",
+"player_franchise_id":        4,
+"player_id":     8104,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     9502,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "P",
+"status": "P",
+"week":       12 
+},
+"game_id":     9502,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "06",
+"player_franchise_id":        4,
+"player_id":     8104,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":    12966,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "P",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12966,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "06",
+"player_franchise_id":        4,
+"player_id":     8104,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":    12987,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        4,
+"position": "P",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12987,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "06",
+"player_franchise_id":        4,
+"player_id":     8104,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":    13012,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "P",
+"status": "P",
+"week":       -4 
+},
+"game_id":    13012,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "06",
+"player_franchise_id":        4,
+"player_id":     8104,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":    13022,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        4,
+"position": "P",
+"status": "P",
+"week":       -5 
+},
+"game_id":    13022,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "06",
+"player_franchise_id":        4,
+"player_id":     8104,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

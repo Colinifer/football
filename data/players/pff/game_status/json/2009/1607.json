@@ -1,0 +1,267 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1607,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":       10,
+"season":     2009,
+"season_id":     2009,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1402,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       11,
+"position": "TE-L",
+"status": "P",
+"week":        1 
+},
+"game_id":     1402,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-L",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":     1412,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "TE-R",
+"status": "P",
+"week":        2 
+},
+"game_id":     1412,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-R",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     1428,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "TE-L",
+"status": "P",
+"week":        3 
+},
+"game_id":     1428,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-L",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1443,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       11,
+"position": "TE-L",
+"status": "P",
+"week":        4 
+},
+"game_id":     1443,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-L",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     1501,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "TE-R",
+"status": "P",
+"week":        8 
+},
+"game_id":     1501,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-R",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1518,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       11,
+"position": "TE-L",
+"status": "S",
+"week":        9 
+},
+"game_id":     1518,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-L",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1529,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       11,
+"position": "TE-L",
+"status": "P",
+"week":       10 
+},
+"game_id":     1529,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-L",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     1541,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "TE-R",
+"status": "P",
+"week":       11 
+},
+"game_id":     1541,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-R",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     1555,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "TE-R",
+"status": "P",
+"week":       12 
+},
+"game_id":     1555,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-R",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1574,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       11,
+"position": "TE-R",
+"status": "P",
+"week":       13 
+},
+"game_id":     1574,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "82",
+"player_franchise_id":       11,
+"player_id":     1607,
+"position": "TE-R",
+"status": "P",
+"week":       13 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

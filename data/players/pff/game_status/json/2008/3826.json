@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3826,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       29,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2008,
+"season_id":     2008,
+"team_name": "SEA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1070,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":       29,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+"game_id":     1070,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "82",
+"player_franchise_id":       29,
+"player_id":     3826,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1164,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       29,
+"position": "SLWR",
+"status": "P",
+"week":        7 
+},
+"game_id":     1164,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "82",
+"player_franchise_id":       29,
+"player_id":     3826,
+"position": "SLWR",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1177,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       29,
+"position": "LWR",
+"status": "S",
+"week":        8 
+},
+"game_id":     1177,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "82",
+"player_franchise_id":       29,
+"player_id":     3826,
+"position": "LWR",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     1190,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       29,
+"position": "LWR",
+"status": "P",
+"week":        9 
+},
+"game_id":     1190,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "82",
+"player_franchise_id":       29,
+"player_id":     3826,
+"position": "LWR",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1199,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       29,
+"position": "LWR",
+"status": "P",
+"week":       10 
+},
+"game_id":     1199,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "82",
+"player_franchise_id":       29,
+"player_id":     3826,
+"position": "LWR",
+"status": "P",
+"week":       10 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

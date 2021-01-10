@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3735,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       12,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2007,
+"season_id":     2007,
+"team_name": "GB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":      846,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       12,
+"position": "RG",
+"status": "P",
+"week":        8 
+},
+"game_id":      846,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "78",
+"player_franchise_id":       12,
+"player_id":     3735,
+"position": "RG",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":      862,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "LG",
+"status": "P",
+"week":       10 
+},
+"game_id":      862,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "78",
+"player_franchise_id":       12,
+"player_id":     3735,
+"position": "LG",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":      976,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "LG",
+"status": "P",
+"week":       17 
+},
+"game_id":      976,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "78",
+"player_franchise_id":       12,
+"player_id":     3735,
+"position": "LG",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":      991,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "LG",
+"status": "P",
+"week":       19 
+},
+"game_id":      991,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "78",
+"player_franchise_id":       12,
+"player_id":     3735,
+"position": "LG",
+"status": "P",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6363,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       28,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2016,
+"season_id":     2016,
+"team_name": "SF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     4035,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "TE-L",
+"status": "P",
+"week":       -2 
+},
+"game_id":     4035,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "49",
+"player_franchise_id":       28,
+"player_id":     6363,
+"position": "TE-L",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     4060,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       28,
+"position": "TE-R",
+"status": "P",
+"week":       -3 
+},
+"game_id":     4060,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "49",
+"player_franchise_id":       28,
+"player_id":     6363,
+"position": "TE-R",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     4069,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "TE-L",
+"status": "P",
+"week":       -4 
+},
+"game_id":     4069,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "49",
+"player_franchise_id":       28,
+"player_id":     6363,
+"position": "TE-L",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     4083,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       28,
+"position": "TE-L",
+"status": "S",
+"week":       -5 
+},
+"game_id":     4083,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "49",
+"player_franchise_id":       28,
+"player_id":     6363,
+"position": "TE-L",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

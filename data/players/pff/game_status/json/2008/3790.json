@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3790,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2008,
+"season_id":     2008,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1092,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":       10 
+},
+"game_id":     1092,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     1167,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":        8 
+},
+"game_id":     1167,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1182,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":        9 
+},
+"game_id":     1182,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1244,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":       13 
+},
+"game_id":     1244,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1288,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":       16 
+},
+"game_id":     1288,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     1306,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":       17 
+},
+"game_id":     1306,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1321,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":       18 
+},
+"game_id":     1321,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":       18 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,178 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     3316,
+"roster": "special",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        6,
+"pu_def_rush":        0,
+"season":     2016,
+"season_id":     2016,
+"team_name": "DEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4267,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "LS",
+"status": "P",
+"week":       12 
+},
+"game_id":     4267,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "45",
+"player_franchise_id":       10,
+"player_id":     3316,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     4277,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       10,
+"position": "LS",
+"status": "P",
+"week":       13 
+},
+"game_id":     4277,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "45",
+"player_franchise_id":       10,
+"player_id":     3316,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     4296,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       10,
+"position": "LS",
+"status": "P",
+"week":       14 
+},
+"game_id":     4296,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "45",
+"player_franchise_id":       10,
+"player_id":     3316,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     4310,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "LS",
+"status": "P",
+"week":       15 
+},
+"game_id":     4310,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "45",
+"player_franchise_id":       10,
+"player_id":     3316,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     4332,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       10,
+"position": "LS",
+"status": "P",
+"week":       16 
+},
+"game_id":     4332,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "45",
+"player_franchise_id":       10,
+"player_id":     3316,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     4346,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "LS",
+"status": "P",
+"week":       17 
+},
+"game_id":     4346,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "45",
+"player_franchise_id":       10,
+"player_id":     3316,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

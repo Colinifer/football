@@ -13,17 +13,17 @@
 "week_totals": [
  {
  "assists":       14,
-"forced_fumbles":        0,
+"forced_fumbles":        1,
 "franchise_id":       26,
 "hits":        7,
 "interceptions":        0,
 "league_id":        1,
 "pass_break_ups":        0,
-"player_game_count":       15,
-"sacks":       10,
+"player_game_count":       16,
+"sacks":       11,
 "season":     2020,
 "season_id":     2020,
-"tackles":       30,
+"tackles":       31,
 "team_name": "LA" 
 } 
 ],
@@ -492,6 +492,37 @@
 "status": "S",
 "tackles":        4,
 "week":       16 
+},
+{
+ "assists":        0,
+"away_franchise_id":        1,
+"away_team_name": "ARZ",
+"forced_fumbles":        1,
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":    18786,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       26,
+"position": "LOLB",
+"status": "S",
+"week":       17 
+},
+"game_id":    18786,
+"hits":        0,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"interceptions":        0,
+"jersey_number": "54",
+"pass_break_ups":        0,
+"player_franchise_id":       26,
+"player_id":    10643,
+"position": "LOLB",
+"sacks":        1,
+"status": "S",
+"tackles":        1,
+"week":       17 
 } 
 ] 
 },

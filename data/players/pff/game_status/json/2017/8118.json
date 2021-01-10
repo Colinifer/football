@@ -1,0 +1,53 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     8118,
+"roster": "special",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":        1,
+"pu_def_rush":        0,
+"season":     2017,
+"season_id":     2017,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     8190,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       31,
+"position": "K",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8190,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "03",
+"player_franchise_id":       31,
+"player_id":     8118,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -2 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

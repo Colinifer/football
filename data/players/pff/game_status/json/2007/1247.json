@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1247,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       15,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2007,
+"season_id":     2007,
+"team_name": "JAX" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":      811,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "P",
+"week":        6 
+},
+"game_id":      811,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "05",
+"player_franchise_id":       15,
+"player_id":     1247,
+"position": "QB",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":      833,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "P",
+"week":        7 
+},
+"game_id":      833,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "05",
+"player_franchise_id":       15,
+"player_id":     1247,
+"position": "QB",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":      843,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "S",
+"week":        8 
+},
+"game_id":      843,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "05",
+"player_franchise_id":       15,
+"player_id":     1247,
+"position": "QB",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":      853,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "S",
+"week":        9 
+},
+"game_id":      853,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "05",
+"player_franchise_id":       15,
+"player_id":     1247,
+"position": "QB",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":      867,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "S",
+"week":       10 
+},
+"game_id":      867,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "05",
+"player_franchise_id":       15,
+"player_id":     1247,
+"position": "QB",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":      929,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "P",
+"week":       14 
+},
+"game_id":      929,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "05",
+"player_franchise_id":       15,
+"player_id":     1247,
+"position": "QB",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":      962,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "P",
+"week":       16 
+},
+"game_id":      962,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "05",
+"player_franchise_id":       15,
+"player_id":     1247,
+"position": "QB",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":      977,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       15,
+"position": "QB",
+"status": "S",
+"week":       17 
+},
+"game_id":      977,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "05",
+"player_franchise_id":       15,
+"player_id":     1247,
+"position": "QB",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5398,
+"roster": "offense",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       13,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2015,
+"season_id":     2015,
+"team_name": "HST" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     3458,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":       13,
+"position": "HB",
+"status": "S",
+"week":        4 
+},
+"game_id":     3458,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "23",
+"player_franchise_id":       13,
+"player_id":     5398,
+"position": "HB",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     3469,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "HB",
+"status": "S",
+"week":        5 
+},
+"game_id":     3469,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "23",
+"player_franchise_id":       13,
+"player_id":     5398,
+"position": "HB",
+"status": "S",
+"week":        5 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     3487,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       13,
+"position": "HB",
+"status": "S",
+"week":        6 
+},
+"game_id":     3487,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "23",
+"player_franchise_id":       13,
+"player_id":     5398,
+"position": "HB",
+"status": "S",
+"week":        6 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     3503,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       13,
+"position": "HB",
+"status": "S",
+"week":        7 
+},
+"game_id":     3503,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "23",
+"player_franchise_id":       13,
+"player_id":     5398,
+"position": "HB",
+"status": "S",
+"week":        7 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3106,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2013,
+"season_id":     2013,
+"team_name": "DEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     2828,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "RG",
+"status": "P",
+"week":        6 
+},
+"game_id":     2828,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "73",
+"player_franchise_id":       10,
+"player_id":     3106,
+"position": "RG",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     2847,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       10,
+"position": "RG",
+"status": "S",
+"week":        7 
+},
+"game_id":     2847,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "73",
+"player_franchise_id":       10,
+"player_id":     3106,
+"position": "RG",
+"status": "S",
+"week":        7 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

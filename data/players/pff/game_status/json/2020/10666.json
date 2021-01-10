@@ -19,7 +19,7 @@
 "interceptions":        0,
 "league_id":        1,
 "pass_break_ups":        0,
-"player_game_count":       15,
+"player_game_count":       16,
 "sacks":       10,
 "season":     2020,
 "season_id":     2020,
@@ -492,6 +492,37 @@
 "status": "S",
 "tackles":        2,
 "week":       16 
+},
+{
+ "assists":        0,
+"away_franchise_id":       17,
+"away_team_name": "MIA",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       17,
+"away_team_name": "MIA",
+"game_id":    18772,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":       17,
+"position": "DRT",
+"status": "S",
+"week":       17 
+},
+"game_id":    18772,
+"hits":        0,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"interceptions":        0,
+"jersey_number": "91",
+"pass_break_ups":        0,
+"player_franchise_id":       17,
+"player_id":    10666,
+"position": "DRT",
+"sacks":        0,
+"status": "S",
+"tackles":        0,
+"week":       17 
 } 
 ] 
 },

@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5046,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       13,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2009,
+"season_id":     2009,
+"team_name": "HST" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     1514,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       13,
+"position": "TE-R",
+"status": "P",
+"week":        9 
+},
+"game_id":     1514,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "87",
+"player_franchise_id":       13,
+"player_id":     5046,
+"position": "TE-R",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     1554,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "TE-L",
+"status": "P",
+"week":       11 
+},
+"game_id":     1554,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "87",
+"player_franchise_id":       13,
+"player_id":     5046,
+"position": "TE-L",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     1579,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       13,
+"position": "TE-R",
+"status": "P",
+"week":       13 
+},
+"game_id":     1579,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "87",
+"player_franchise_id":       13,
+"player_id":     5046,
+"position": "TE-R",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1596,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       13,
+"position": "TE-L",
+"status": "P",
+"week":       14 
+},
+"game_id":     1596,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "87",
+"player_franchise_id":       13,
+"player_id":     5046,
+"position": "TE-L",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

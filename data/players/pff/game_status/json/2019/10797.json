@@ -1,0 +1,299 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10797,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       12,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2019,
+"season_id":     2019,
+"team_name": "GB" 
+},
+{
+ "franchise_id":       23,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2019,
+"season_id":     2019,
+"team_name": "OAK" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    13762,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       12,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+"game_id":    13762,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "11",
+"player_franchise_id":       12,
+"player_id":    10797,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":    13781,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "SRWR",
+"status": "P",
+"week":        2 
+},
+"game_id":    13781,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "11",
+"player_franchise_id":       12,
+"player_id":    10797,
+"position": "SRWR",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":    13814,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       23,
+"position": "RWR",
+"status": "S",
+"week":        4 
+},
+"game_id":    13814,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "11",
+"player_franchise_id":       23,
+"player_id":    10797,
+"position": "RWR",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":    13828,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "RWR",
+"status": "S",
+"week":        5 
+},
+"game_id":    13828,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "11",
+"player_franchise_id":       23,
+"player_id":    10797,
+"position": "RWR",
+"status": "S",
+"week":        5 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":    13859,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       23,
+"position": "RWR",
+"status": "S",
+"week":        7 
+},
+"game_id":    13859,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "11",
+"player_franchise_id":       23,
+"player_id":    10797,
+"position": "RWR",
+"status": "S",
+"week":        7 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":    13877,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       23,
+"position": "RWR",
+"status": "S",
+"week":        8 
+},
+"game_id":    13877,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "11",
+"player_franchise_id":       23,
+"player_id":    10797,
+"position": "RWR",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":    13891,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "SLWR",
+"status": "P",
+"week":        9 
+},
+"game_id":    13891,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "11",
+"player_franchise_id":       23,
+"player_id":    10797,
+"position": "SLWR",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":    13931,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       23,
+"position": "LWR",
+"status": "P",
+"week":       12 
+},
+"game_id":    13931,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "11",
+"player_franchise_id":       23,
+"player_id":    10797,
+"position": "LWR",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":    13943,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       23,
+"position": "LWR",
+"status": "P",
+"week":       13 
+},
+"game_id":    13943,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "11",
+"player_franchise_id":       23,
+"player_id":    10797,
+"position": "LWR",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    14874,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       12,
+"position": "LWR",
+"status": "S",
+"week":       -4 
+},
+"game_id":    14874,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "11",
+"player_franchise_id":       12,
+"player_id":    10797,
+"position": "LWR",
+"status": "S",
+"week":       -4 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":    14895,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "LWR",
+"status": "S",
+"week":       -5 
+},
+"game_id":    14895,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "11",
+"player_franchise_id":       12,
+"player_id":    10797,
+"position": "LWR",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

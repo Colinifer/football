@@ -14,7 +14,7 @@
  {
  "franchise_id":        5,
 "league_id":        1,
-"player_game_count":       15,
+"player_game_count":       16,
 "season":     2020,
 "season_id":     2020,
 "team_name": "CAR" 
@@ -380,6 +380,30 @@
 "position": "TE-R",
 "status": "S",
 "week":       16 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":    18773,
+"home_franchise_id":        5,
+"home_team_name": "CAR",
+"player_franchise_id":        5,
+"position": "TE-R",
+"status": "S",
+"week":       17 
+},
+"game_id":    18773,
+"home_franchise_id":        5,
+"home_team_name": "CAR",
+"jersey_number": "82",
+"player_franchise_id":        5,
+"player_id":    10211,
+"position": "TE-R",
+"status": "S",
+"week":       17 
 } 
 ] 
 },

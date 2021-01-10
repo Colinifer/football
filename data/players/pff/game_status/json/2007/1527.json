@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1527,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2007,
+"season_id":     2007,
+"team_name": "SD" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":      842,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "FB",
+"status": "P",
+"week":        8 
+},
+"game_id":      842,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "34",
+"player_franchise_id":       27,
+"player_id":     1527,
+"position": "FB",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":      932,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       27,
+"position": "FB",
+"status": "P",
+"week":       14 
+},
+"game_id":      932,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "34",
+"player_franchise_id":       27,
+"player_id":     1527,
+"position": "FB",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":      952,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "FB",
+"status": "S",
+"week":       15 
+},
+"game_id":      952,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "34",
+"player_franchise_id":       27,
+"player_id":     1527,
+"position": "FB",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":      970,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "FB",
+"status": "S",
+"week":       16 
+},
+"game_id":      970,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "34",
+"player_franchise_id":       27,
+"player_id":     1527,
+"position": "FB",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":      985,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       27,
+"position": "FB",
+"status": "S",
+"week":       17 
+},
+"game_id":      985,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "34",
+"player_franchise_id":       27,
+"player_id":     1527,
+"position": "FB",
+"status": "S",
+"week":       17 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":      990,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "FB",
+"status": "S",
+"week":       18 
+},
+"game_id":      990,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "34",
+"player_franchise_id":       27,
+"player_id":     1527,
+"position": "FB",
+"status": "S",
+"week":       18 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":      993,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       27,
+"position": "FB",
+"status": "S",
+"week":       19 
+},
+"game_id":      993,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "34",
+"player_franchise_id":       27,
+"player_id":     1527,
+"position": "FB",
+"status": "S",
+"week":       19 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":      995,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       27,
+"position": "FB",
+"status": "P",
+"week":       20 
+},
+"game_id":      995,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "34",
+"player_franchise_id":       27,
+"player_id":     1527,
+"position": "FB",
+"status": "P",
+"week":       20 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    26501,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        2,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2019,
+"season_id":     2019,
+"team_name": "ATL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":    14836,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "RT",
+"status": "P",
+"week":       -1 
+},
+"game_id":    14836,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "65",
+"player_franchise_id":        2,
+"player_id":    26501,
+"position": "RT",
+"status": "P",
+"week":       -1 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":    14842,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":        2,
+"position": "RT",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14842,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "65",
+"player_franchise_id":        2,
+"player_id":    26501,
+"position": "RT",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":    14854,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "RT",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14854,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "65",
+"player_franchise_id":        2,
+"player_id":    26501,
+"position": "RT",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":    14870,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "RT",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14870,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "65",
+"player_franchise_id":        2,
+"player_id":    26501,
+"position": "RT",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":    14888,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":        2,
+"position": "RT",
+"status": "P",
+"week":       -5 
+},
+"game_id":    14888,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "65",
+"player_franchise_id":        2,
+"player_id":    26501,
+"position": "RT",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

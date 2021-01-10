@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5032,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2018,
+"season_id":     2018,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     9352,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "RG",
+"status": "S",
+"week":        1 
+},
+"game_id":     9352,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "76",
+"player_franchise_id":       11,
+"player_id":     5032,
+"position": "RG",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     9384,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "RG",
+"status": "S",
+"week":        3 
+},
+"game_id":     9384,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "76",
+"player_franchise_id":       11,
+"player_id":     5032,
+"position": "RG",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     9390,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       11,
+"position": "RG",
+"status": "S",
+"week":        4 
+},
+"game_id":     9390,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "76",
+"player_franchise_id":       11,
+"player_id":     5032,
+"position": "RG",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     9437,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       11,
+"position": "RG",
+"status": "S",
+"week":        7 
+},
+"game_id":     9437,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "76",
+"player_franchise_id":       11,
+"player_id":     5032,
+"position": "RG",
+"status": "S",
+"week":        7 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     9450,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "RG",
+"status": "S",
+"week":        8 
+},
+"game_id":     9450,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "76",
+"player_franchise_id":       11,
+"player_id":     5032,
+"position": "RG",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     9464,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       11,
+"position": "RG",
+"status": "S",
+"week":        9 
+},
+"game_id":     9464,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "76",
+"player_franchise_id":       11,
+"player_id":     5032,
+"position": "RG",
+"status": "S",
+"week":        9 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,107 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7533,
+"roster": "offense",
+"season":     2014,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2014,
+"season_id":     2014,
+"team_name": "DET" 
+},
+{
+ "franchise_id":       24,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2014,
+"season_id":     2014,
+"team_name": "PHI" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     3019,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       24,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+"game_id":     3019,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "82",
+"player_franchise_id":       24,
+"player_id":     7533,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     3042,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "TE-R",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3042,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "82",
+"player_franchise_id":       24,
+"player_id":     7533,
+"position": "TE-R",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     3059,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":       11,
+"position": "FB",
+"status": "P",
+"week":       -5 
+},
+"game_id":     3059,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "44O",
+"player_franchise_id":       11,
+"player_id":     7533,
+"position": "FB",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

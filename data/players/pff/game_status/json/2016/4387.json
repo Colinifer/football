@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4387,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2016,
+"season_id":     2016,
+"team_name": "KC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4155,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       16,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+"game_id":     4155,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "25",
+"player_franchise_id":       16,
+"player_id":     4387,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4181,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       16,
+"position": "HB",
+"status": "P",
+"week":        6 
+},
+"game_id":     4181,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "25",
+"player_franchise_id":       16,
+"player_id":     4387,
+"position": "HB",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     4195,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "HB",
+"status": "P",
+"week":        7 
+},
+"game_id":     4195,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "25",
+"player_franchise_id":       16,
+"player_id":     4387,
+"position": "HB",
+"status": "P",
+"week":        7 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

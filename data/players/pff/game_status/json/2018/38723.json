@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    38723,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       12,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2018,
+"season_id":     2018,
+"team_name": "GB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    12974,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12974,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "01",
+"player_franchise_id":       12,
+"player_id":    38723,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":    12983,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12983,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "01",
+"player_franchise_id":       12,
+"player_id":    38723,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    13026,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       12,
+"position": "SRWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":    13026,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "01",
+"player_franchise_id":       12,
+"player_id":    38723,
+"position": "SRWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

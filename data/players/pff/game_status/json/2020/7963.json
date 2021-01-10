@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7963,
+"roster": "offense",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       30,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2020,
+"season_id":     2020,
+"team_name": "TB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":    18588,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+"game_id":    18588,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "44",
+"player_franchise_id":       30,
+"player_id":     7963,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":    18746,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":       30,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+"game_id":    18746,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "44",
+"player_franchise_id":       30,
+"player_id":     7963,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":    18758,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       30,
+"position": "HB",
+"status": "P",
+"week":       16 
+},
+"game_id":    18758,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "44",
+"player_franchise_id":       30,
+"player_id":     7963,
+"position": "HB",
+"status": "P",
+"week":       16 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

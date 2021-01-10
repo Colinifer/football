@@ -1,0 +1,243 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4335,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        2,
+"league_id":        1,
+"player_game_count":        9,
+"season":     2008,
+"season_id":     2008,
+"team_name": "ATL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1069,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "S",
+"week":        1 
+},
+"game_id":     1069,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     1087,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "S",
+"week":        2 
+},
+"game_id":     1087,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     1095,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "S",
+"week":        3 
+},
+"game_id":     1095,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     1130,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "S",
+"week":        5 
+},
+"game_id":     1130,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "S",
+"week":        5 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     1142,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "S",
+"week":        6 
+},
+"game_id":     1142,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "S",
+"week":        6 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     1277,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "P",
+"week":       15 
+},
+"game_id":     1277,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     1296,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "P",
+"week":       16 
+},
+"game_id":     1296,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     1313,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "P",
+"week":       17 
+},
+"game_id":     1313,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     1319,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        2,
+"position": "LT",
+"status": "P",
+"week":       18 
+},
+"game_id":     1319,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "72",
+"player_franchise_id":        2,
+"player_id":     4335,
+"position": "LT",
+"status": "P",
+"week":       18 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

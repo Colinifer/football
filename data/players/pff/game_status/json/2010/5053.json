@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5053,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2010,
+"season_id":     2010,
+"team_name": "DEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     1790,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       10,
+"position": "HB",
+"status": "P",
+"week":        5 
+},
+"game_id":     1790,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "29",
+"player_franchise_id":       10,
+"player_id":     5053,
+"position": "HB",
+"status": "P",
+"week":        5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

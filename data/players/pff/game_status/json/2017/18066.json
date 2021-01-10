@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    18066,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       23,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2017,
+"season_id":     2017,
+"team_name": "OAK" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     8192,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":       23,
+"position": "LG",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8192,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "60",
+"player_franchise_id":       23,
+"player_id":    18066,
+"position": "LG",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":     8207,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "LG",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8207,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "60",
+"player_franchise_id":       23,
+"player_id":    18066,
+"position": "LG",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     8221,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       23,
+"position": "LG",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8221,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "60",
+"player_franchise_id":       23,
+"player_id":    18066,
+"position": "LG",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     8242,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "LG",
+"status": "P",
+"week":       -5 
+},
+"game_id":     8242,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "60",
+"player_franchise_id":       23,
+"player_id":    18066,
+"position": "LG",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

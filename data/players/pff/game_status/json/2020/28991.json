@@ -1,0 +1,291 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    28991,
+"roster": "offense",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       28,
+"league_id":        1,
+"player_game_count":       11,
+"season":     2020,
+"season_id":     2020,
+"team_name": "SF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":    18544,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+"game_id":    18544,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":    18622,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "LWR",
+"status": "P",
+"week":        6 
+},
+"game_id":    18622,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "LWR",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    18636,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       28,
+"position": "LWR",
+"status": "P",
+"week":        7 
+},
+"game_id":    18636,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "LWR",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    18652,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "LWR",
+"status": "S",
+"week":        9 
+},
+"game_id":    18652,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "LWR",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    18677,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       28,
+"position": "LWR",
+"status": "S",
+"week":       10 
+},
+"game_id":    18677,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "LWR",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    18705,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       28,
+"position": "RWR",
+"status": "S",
+"week":       12 
+},
+"game_id":    18705,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "RWR",
+"status": "S",
+"week":       12 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":    18723,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "LWR",
+"status": "S",
+"week":       13 
+},
+"game_id":    18723,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "LWR",
+"status": "S",
+"week":       13 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":    18737,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "RWR",
+"status": "P",
+"week":       14 
+},
+"game_id":    18737,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "RWR",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    18754,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       28,
+"position": "RWR",
+"status": "S",
+"week":       15 
+},
+"game_id":    18754,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "RWR",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    18757,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":       28,
+"position": "LWR",
+"status": "S",
+"week":       16 
+},
+"game_id":    18757,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "LWR",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":    18787,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "LWR",
+"status": "S",
+"week":       17 
+},
+"game_id":    18787,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "13",
+"player_franchise_id":       28,
+"player_id":    28991,
+"position": "LWR",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

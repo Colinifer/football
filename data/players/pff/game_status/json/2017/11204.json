@@ -1,0 +1,103 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":    11204,
+"roster": "special",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":        3,
+"pu_def_rush":        0,
+"season":     2017,
+"season_id":     2017,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     8199,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "LS",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8199,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "49",
+"player_franchise_id":       31,
+"player_id":    11204,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     8224,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "LS",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8224,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "49",
+"player_franchise_id":       31,
+"player_id":    11204,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     8239,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       31,
+"position": "LS",
+"status": "P",
+"week":       -5 
+},
+"game_id":     8239,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "49",
+"player_franchise_id":       31,
+"player_id":    11204,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

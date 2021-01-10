@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    44891,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       18,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2019,
+"season_id":     2019,
+"team_name": "MIN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":    14867,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "LT",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14867,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "O79",
+"player_franchise_id":       18,
+"player_id":    44891,
+"position": "LT",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":    14885,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":       18,
+"position": "LT",
+"status": "P",
+"week":       -5 
+},
+"game_id":    14885,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "O79",
+"player_franchise_id":       18,
+"player_id":    44891,
+"position": "LT",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

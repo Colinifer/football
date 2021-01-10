@@ -14,7 +14,7 @@
  {
  "franchise_id":       25,
 "league_id":        1,
-"player_game_count":       10,
+"player_game_count":       11,
 "pu_def_rush":        0,
 "season":     2020,
 "season_id":     2020,
@@ -271,6 +271,31 @@
 "pu_def_rush":        0,
 "status": "P",
 "week":       16 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":    18776,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":       25,
+"position": "P",
+"status": "P",
+"week":       17 
+},
+"game_id":    18776,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "04",
+"player_franchise_id":       25,
+"player_id":    10236,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       17 
 } 
 ] 
 },

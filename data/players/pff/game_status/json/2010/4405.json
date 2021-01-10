@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4405,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       12,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2010,
+"season_id":     2010,
+"team_name": "GB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     1738,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       12,
+"position": "TE-R",
+"status": "S",
+"week":        1 
+},
+"game_id":     1738,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "88",
+"player_franchise_id":       12,
+"player_id":     4405,
+"position": "TE-R",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     1743,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "TE-R",
+"status": "S",
+"week":        2 
+},
+"game_id":     1743,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "88",
+"player_franchise_id":       12,
+"player_id":     4405,
+"position": "TE-R",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     1774,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       12,
+"position": "TE-R",
+"status": "S",
+"week":        3 
+},
+"game_id":     1774,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "88",
+"player_franchise_id":       12,
+"player_id":     4405,
+"position": "TE-R",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1779,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "TE-R",
+"status": "S",
+"week":        4 
+},
+"game_id":     1779,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "88",
+"player_franchise_id":       12,
+"player_id":     4405,
+"position": "TE-R",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     1792,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       12,
+"position": "TE-R",
+"status": "S",
+"week":        5 
+},
+"game_id":     1792,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "88",
+"player_franchise_id":       12,
+"player_id":     4405,
+"position": "TE-R",
+"status": "S",
+"week":        5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

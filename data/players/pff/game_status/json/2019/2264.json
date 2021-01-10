@@ -1,0 +1,128 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     2264,
+"roster": "special",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       19,
+"league_id":        1,
+"player_game_count":        4,
+"pu_def_rush":        0,
+"season":     2019,
+"season_id":     2019,
+"team_name": "NE" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":    13833,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       19,
+"position": "K",
+"status": "P",
+"week":        5 
+},
+"game_id":    13833,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "02",
+"player_franchise_id":       19,
+"player_id":     2264,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":    13840,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "K",
+"status": "P",
+"week":        6 
+},
+"game_id":    13840,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "02",
+"player_franchise_id":       19,
+"player_id":     2264,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":    13867,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       19,
+"position": "K",
+"status": "P",
+"week":        7 
+},
+"game_id":    13867,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "02",
+"player_franchise_id":       19,
+"player_id":     2264,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":    13880,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "K",
+"status": "P",
+"week":        8 
+},
+"game_id":    13880,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "02",
+"player_franchise_id":       19,
+"player_id":     2264,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":        8 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

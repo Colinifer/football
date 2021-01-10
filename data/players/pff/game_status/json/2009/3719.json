@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3719,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       19,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2009,
+"season_id":     2009,
+"team_name": "NE" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     1537,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       19,
+"position": "RWR",
+"status": "P",
+"week":       10 
+},
+"game_id":     1537,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "09",
+"player_franchise_id":       19,
+"player_id":     3719,
+"position": "RWR",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     1550,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "RWR",
+"status": "S",
+"week":       11 
+},
+"game_id":     1550,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "15",
+"player_franchise_id":       19,
+"player_id":     3719,
+"position": "RWR",
+"status": "S",
+"week":       11 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     1570,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       19,
+"position": "LWR",
+"status": "S",
+"week":       12 
+},
+"game_id":     1570,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "15",
+"player_franchise_id":       19,
+"player_id":     3719,
+"position": "LWR",
+"status": "S",
+"week":       12 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     1598,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "LWR",
+"status": "P",
+"week":       14 
+},
+"game_id":     1598,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "15",
+"player_franchise_id":       19,
+"player_id":     3719,
+"position": "LWR",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     1641,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       19,
+"position": "LWR",
+"status": "P",
+"week":       17 
+},
+"game_id":     1641,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "15",
+"player_franchise_id":       19,
+"player_id":     3719,
+"position": "LWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

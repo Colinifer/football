@@ -14,7 +14,7 @@
  {
  "franchise_id":       22,
 "league_id":        1,
-"player_game_count":        5,
+"player_game_count":        6,
 "season":     2020,
 "season_id":     2020,
 "team_name": "NYJ" 
@@ -140,6 +140,30 @@
 "position": "TE-R",
 "status": "P",
 "week":       16 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":    18781,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       22,
+"position": "TE-R",
+"status": "P",
+"week":       17 
+},
+"game_id":    18781,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "87",
+"player_franchise_id":       22,
+"player_id":    10144,
+"position": "TE-R",
+"status": "P",
+"week":       17 
 } 
 ] 
 },

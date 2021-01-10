@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4383,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2012,
+"season_id":     2012,
+"team_name": "DEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     2600,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       10,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+"game_id":     2600,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "40",
+"player_franchise_id":       10,
+"player_id":     4383,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     2618,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "FB",
+"status": "P",
+"week":       16 
+},
+"game_id":     2618,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "40",
+"player_franchise_id":       10,
+"player_id":     4383,
+"position": "FB",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2639,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "FB",
+"status": "P",
+"week":       17 
+},
+"game_id":     2639,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "40",
+"player_franchise_id":       10,
+"player_id":     4383,
+"position": "FB",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     2670,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "FB",
+"status": "P",
+"week":       19 
+},
+"game_id":     2670,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "40",
+"player_franchise_id":       10,
+"player_id":     4383,
+"position": "FB",
+"status": "P",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

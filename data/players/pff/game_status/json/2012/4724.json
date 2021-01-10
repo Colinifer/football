@@ -1,0 +1,127 @@
+{
+ "defense_summary": {
+ "subject": {
+ "eligible": "defense",
+"grade_keys": [ "defense", "defense_penalty", "run_defense", "pass_rush_defense", "coverage_defense", "tackle" ],
+"league_id":        1,
+"player_id":     4724,
+"roster": "defense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "assists":        0,
+"forced_fumbles":        0,
+"franchise_id":       22,
+"hits":        1,
+"interceptions":        0,
+"league_id":        1,
+"pass_break_ups":        0,
+"player_game_count":        3,
+"sacks":        0,
+"season":     2012,
+"season_id":     2012,
+"tackles":        1,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "assists":        0,
+"away_franchise_id":        4,
+"away_team_name": "BUF",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     2392,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "LE",
+"status": "P",
+"week":        1 
+},
+"game_id":     2392,
+"hits":        0,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"interceptions":        0,
+"jersey_number": "94",
+"pass_break_ups":        0,
+"player_franchise_id":       22,
+"player_id":     4724,
+"position": "LE",
+"sacks":        0,
+"status": "P",
+"tackles":        0,
+"week":        1 
+},
+{
+ "assists":        0,
+"away_franchise_id":       22,
+"away_team_name": "NYJ",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     2416,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       22,
+"position": "LE",
+"status": "P",
+"week":        2 
+},
+"game_id":     2416,
+"hits":        0,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"interceptions":        0,
+"jersey_number": "94",
+"pass_break_ups":        0,
+"player_franchise_id":       22,
+"player_id":     4724,
+"position": "LE",
+"sacks":        0,
+"status": "P",
+"tackles":        0,
+"week":        2 
+},
+{
+ "assists":        0,
+"away_franchise_id":       22,
+"away_team_name": "NYJ",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     2431,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       22,
+"position": "LE",
+"status": "P",
+"week":        3 
+},
+"game_id":     2431,
+"hits":        1,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"interceptions":        0,
+"jersey_number": "94",
+"pass_break_ups":        0,
+"player_franchise_id":       22,
+"player_id":     4724,
+"position": "LE",
+"sacks":        0,
+"status": "P",
+"tackles":        1,
+"week":        3 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "batted_passes", "catch_rate", "hurries", "longest", "missed_tackles", "qb_rating_against", "receptions", "stops", "targets", "total_pressures", "touchdowns", "yards", "yards_after_catch", "yards_per_reception" ] 
+}

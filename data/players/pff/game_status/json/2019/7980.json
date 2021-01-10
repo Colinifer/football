@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7980,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2019,
+"season_id":     2019,
+"team_name": "DEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":    14847,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       10,
+"position": "HB",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14847,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "27",
+"player_franchise_id":       10,
+"player_id":     7980,
+"position": "HB",
+"status": "P",
+"week":       -2 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

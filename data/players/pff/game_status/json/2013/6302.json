@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6302,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        8,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2013,
+"season_id":     2013,
+"team_name": "CLV" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     2680,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "RG",
+"status": "S",
+"week":       -2 
+},
+"game_id":     2680,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "62",
+"player_franchise_id":        8,
+"player_id":     6302,
+"position": "RG",
+"status": "S",
+"week":       -2 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     2694,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "RG",
+"status": "S",
+"week":       -3 
+},
+"game_id":     2694,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "62",
+"player_franchise_id":        8,
+"player_id":     6302,
+"position": "RG",
+"status": "S",
+"week":       -3 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     2937,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":        8,
+"position": "LG",
+"status": "P",
+"week":       14 
+},
+"game_id":     2937,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "62",
+"player_franchise_id":        8,
+"player_id":     6302,
+"position": "LG",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     2952,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "LG",
+"status": "S",
+"week":       15 
+},
+"game_id":     2952,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "62",
+"player_franchise_id":        8,
+"player_id":     6302,
+"position": "LG",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     2972,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":        8,
+"position": "LG",
+"status": "S",
+"week":       16 
+},
+"game_id":     2972,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "62",
+"player_franchise_id":        8,
+"player_id":     6302,
+"position": "LG",
+"status": "S",
+"week":       16 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

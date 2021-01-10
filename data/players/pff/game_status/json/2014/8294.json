@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     8294,
+"roster": "offense",
+"season":     2014,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       29,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2014,
+"season_id":     2014,
+"team_name": "SEA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     3014,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       29,
+"position": "SRWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":     3014,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "14",
+"player_franchise_id":       29,
+"player_id":     8294,
+"position": "SRWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     3030,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       29,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":     3030,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "14",
+"player_franchise_id":       29,
+"player_id":     8294,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     3047,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       29,
+"position": "SRWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3047,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "14",
+"player_franchise_id":       29,
+"player_id":     8294,
+"position": "SRWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     3072,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       29,
+"position": "SLWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":     3072,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "14",
+"player_franchise_id":       29,
+"player_id":     8294,
+"position": "SLWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

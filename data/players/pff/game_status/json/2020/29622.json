@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    29622,
+"roster": "offense",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       23,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2020,
+"season_id":     2020,
+"team_name": "LV" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       23,
+"away_team_name": "LV",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "LV",
+"game_id":    18600,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       23,
+"position": "LWR",
+"status": "P",
+"week":        5 
+},
+"game_id":    18600,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "10",
+"player_franchise_id":       23,
+"player_id":    29622,
+"position": "LWR",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":    18637,
+"home_franchise_id":       23,
+"home_team_name": "LV",
+"player_franchise_id":       23,
+"position": "RWR",
+"status": "P",
+"week":        7 
+},
+"game_id":    18637,
+"home_franchise_id":       23,
+"home_team_name": "LV",
+"jersey_number": "10",
+"player_franchise_id":       23,
+"player_id":    29622,
+"position": "RWR",
+"status": "P",
+"week":        7 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

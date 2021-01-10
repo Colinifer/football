@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1236,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        8,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2007,
+"season_id":     2007,
+"team_name": "CLV" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":      733,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "TE-R",
+"status": "P",
+"week":        1 
+},
+"game_id":      733,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "87",
+"player_franchise_id":        8,
+"player_id":     1236,
+"position": "TE-R",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":      781,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "TE-R",
+"status": "P",
+"week":        4 
+},
+"game_id":      781,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "87",
+"player_franchise_id":        8,
+"player_id":     1236,
+"position": "TE-R",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":      936,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":        8,
+"position": "TE-L",
+"status": "P",
+"week":       14 
+},
+"game_id":      936,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "87",
+"player_franchise_id":        8,
+"player_id":     1236,
+"position": "TE-L",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":      975,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "TE-R",
+"status": "P",
+"week":       17 
+},
+"game_id":      975,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "87",
+"player_franchise_id":        8,
+"player_id":     1236,
+"position": "TE-R",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

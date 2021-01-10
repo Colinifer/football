@@ -1,0 +1,195 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10760,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        7,
+"season":     2016,
+"season_id":     2016,
+"team_name": "KC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     4043,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":     4043,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "14",
+"player_franchise_id":       16,
+"player_id":    10760,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4052,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       16,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":     4052,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"jersey_number": "14",
+"player_franchise_id":       16,
+"player_id":    10760,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4070,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       16,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":     4070,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "14",
+"player_franchise_id":       16,
+"player_id":    10760,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     4091,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "RWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":     4091,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "14",
+"player_franchise_id":       16,
+"player_id":    10760,
+"position": "RWR",
+"status": "P",
+"week":       -5 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4121,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       16,
+"position": "LWR",
+"status": "P",
+"week":        2 
+},
+"game_id":     4121,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "14",
+"player_franchise_id":       16,
+"player_id":    10760,
+"position": "LWR",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4272,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":       16,
+"position": "RWR",
+"status": "P",
+"week":       13 
+},
+"game_id":     4272,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "14",
+"player_franchise_id":       16,
+"player_id":    10760,
+"position": "RWR",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4348,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       16,
+"position": "RWR",
+"status": "P",
+"week":       17 
+},
+"game_id":     4348,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "14",
+"player_franchise_id":       16,
+"player_id":    10760,
+"position": "RWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

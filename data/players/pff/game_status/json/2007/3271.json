@@ -1,0 +1,155 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3271,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2007,
+"season_id":     2007,
+"team_name": "DEN" 
+},
+{
+ "franchise_id":       30,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2007,
+"season_id":     2007,
+"team_name": "TB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":      803,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "SLWR",
+"status": "P",
+"week":        5 
+},
+"game_id":      803,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "86",
+"player_franchise_id":       10,
+"player_id":     3271,
+"position": "SLWR",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":      832,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "RWR",
+"status": "P",
+"week":        7 
+},
+"game_id":      832,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "86",
+"player_franchise_id":       10,
+"player_id":     3271,
+"position": "RWR",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":      846,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "RWR",
+"status": "P",
+"week":        8 
+},
+"game_id":      846,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "86",
+"player_franchise_id":       10,
+"player_id":     3271,
+"position": "RWR",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":      849,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       10,
+"position": "RWR",
+"status": "P",
+"week":        9 
+},
+"game_id":      849,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "86",
+"player_franchise_id":       10,
+"player_id":     3271,
+"position": "RWR",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":      981,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "SRWR",
+"status": "P",
+"week":       17 
+},
+"game_id":      981,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "18",
+"player_franchise_id":       30,
+"player_id":     3271,
+"position": "SRWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2096,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        9,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2006,
+"season_id":     2006,
+"team_name": "DAL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     3886,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        9,
+"position": "HB",
+"status": "P",
+"week":       10 
+},
+"game_id":     3886,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "27",
+"player_franchise_id":        9,
+"player_id":     2096,
+"position": "HB",
+"status": "P",
+"week":       10 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

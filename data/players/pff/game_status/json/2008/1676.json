@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1676,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2008,
+"season_id":     2008,
+"team_name": "SD" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     1090,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       27,
+"position": "SLWR",
+"status": "P",
+"week":        2 
+},
+"game_id":     1090,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "81",
+"player_franchise_id":       27,
+"player_id":     1676,
+"position": "SLWR",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     1152,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":       27,
+"position": "SLWR",
+"status": "P",
+"week":        7 
+},
+"game_id":     1152,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "81",
+"player_franchise_id":       27,
+"player_id":     1676,
+"position": "SLWR",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     1301,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       27,
+"position": "SLWR",
+"status": "P",
+"week":       16 
+},
+"game_id":     1301,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "81",
+"player_franchise_id":       27,
+"player_id":     1676,
+"position": "SLWR",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     1316,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "RWR",
+"status": "P",
+"week":       17 
+},
+"game_id":     1316,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "81",
+"player_franchise_id":       27,
+"player_id":     1676,
+"position": "RWR",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     1320,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "RWR",
+"status": "P",
+"week":       18 
+},
+"game_id":     1320,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "81",
+"player_franchise_id":       27,
+"player_id":     1676,
+"position": "RWR",
+"status": "P",
+"week":       18 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     1326,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       27,
+"position": "SLWR",
+"status": "P",
+"week":       19 
+},
+"game_id":     1326,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "81",
+"player_franchise_id":       27,
+"player_id":     1676,
+"position": "SLWR",
+"status": "P",
+"week":       19 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

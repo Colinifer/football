@@ -14,7 +14,7 @@
  {
  "franchise_id":       24,
 "league_id":        1,
-"player_game_count":       15,
+"player_game_count":       16,
 "pu_def_rush":        0,
 "season":     2020,
 "season_id":     2020,
@@ -396,6 +396,31 @@
 "pu_def_rush":        0,
 "status": "P",
 "week":       16 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":    18783,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "LS",
+"status": "P",
+"week":       17 
+},
+"game_id":    18783,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "45",
+"player_franchise_id":       24,
+"player_id":    10007,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       17 
 } 
 ] 
 },

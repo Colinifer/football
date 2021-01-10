@@ -1,0 +1,267 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11945,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":       10,
+"season":     2017,
+"season_id":     2017,
+"team_name": "LAC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     8025,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "P",
+"week":        7 
+},
+"game_id":     8025,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8059,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "P",
+"week":       10 
+},
+"game_id":     8059,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     8077,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "P",
+"week":       11 
+},
+"game_id":     8077,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     8125,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "P",
+"week":       14 
+},
+"game_id":     8125,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8132,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "P",
+"week":       15 
+},
+"game_id":     8132,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8153,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "S",
+"week":       16 
+},
+"game_id":     8153,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     8194,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8194,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     8209,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8209,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8220,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8220,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":     8241,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       27,
+"position": "LT",
+"status": "S",
+"week":       -5 
+},
+"game_id":     8241,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "69",
+"player_franchise_id":       27,
+"player_id":    11945,
+"position": "LT",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    48097,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2019,
+"season_id":     2019,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":    14013,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LWR",
+"status": "P",
+"week":       17 
+},
+"game_id":    14013,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "12",
+"player_franchise_id":        3,
+"player_id":    48097,
+"position": "LWR",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":    14839,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14839,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "12",
+"player_franchise_id":        3,
+"player_id":    48097,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    14855,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14855,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "12",
+"player_franchise_id":        3,
+"player_id":    48097,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    14872,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":        3,
+"position": "LWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14872,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "12",
+"player_franchise_id":        3,
+"player_id":    48097,
+"position": "LWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    14892,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":        3,
+"position": "LWR",
+"status": "S",
+"week":       -5 
+},
+"game_id":    14892,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "12",
+"player_franchise_id":        3,
+"player_id":    48097,
+"position": "LWR",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

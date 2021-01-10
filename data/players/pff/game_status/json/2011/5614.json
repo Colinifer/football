@@ -1,0 +1,155 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5614,
+"roster": "offense",
+"season":     2011,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       15,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2011,
+"season_id":     2011,
+"team_name": "JAX" 
+},
+{
+ "franchise_id":       19,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2011,
+"season_id":     2011,
+"team_name": "NE" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     2142,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "LWR",
+"status": "P",
+"week":        6 
+},
+"game_id":     2142,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "17",
+"player_franchise_id":       19,
+"player_id":     5614,
+"position": "LWR",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     2170,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       19,
+"position": "RWR",
+"status": "P",
+"week":        8 
+},
+"game_id":     2170,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "17",
+"player_franchise_id":       19,
+"player_id":     5614,
+"position": "RWR",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2217,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+"game_id":     2217,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "17",
+"player_franchise_id":       19,
+"player_id":     5614,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     2266,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":       15,
+"position": "RWR",
+"status": "P",
+"week":       15 
+},
+"game_id":     2266,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "15",
+"player_franchise_id":       15,
+"player_id":     5614,
+"position": "RWR",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2306,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "LWR",
+"status": "P",
+"week":       17 
+},
+"game_id":     2306,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "15",
+"player_franchise_id":       15,
+"player_id":     5614,
+"position": "LWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

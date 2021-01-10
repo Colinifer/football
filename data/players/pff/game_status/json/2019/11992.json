@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11992,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        8,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2019,
+"season_id":     2019,
+"team_name": "CLV" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":    14840,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "RT",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14840,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "60",
+"player_franchise_id":        8,
+"player_id":    11992,
+"position": "RT",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":    14861,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":        8,
+"position": "RT",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14861,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "60",
+"player_franchise_id":        8,
+"player_id":    11992,
+"position": "RT",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":    14875,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":        8,
+"position": "RT",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14875,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "60",
+"player_franchise_id":        8,
+"player_id":    11992,
+"position": "RT",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":    14890,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        8,
+"position": "LT",
+"status": "S",
+"week":       -5 
+},
+"game_id":    14890,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "60",
+"player_franchise_id":        8,
+"player_id":    11992,
+"position": "LT",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

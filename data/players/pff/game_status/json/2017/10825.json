@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10825,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2017,
+"season_id":     2017,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     7923,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "QB",
+"status": "X",
+"week":        1 
+},
+"game_id":     7923,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "14",
+"player_franchise_id":       11,
+"player_id":    10825,
+"position": "QB",
+"status": "X",
+"week":        1 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     8101,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       11,
+"position": "QB",
+"status": "P",
+"week":       13 
+},
+"game_id":     8101,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "14",
+"player_franchise_id":       11,
+"player_id":    10825,
+"position": "QB",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     8193,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       11,
+"position": "QB",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8193,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "14",
+"player_franchise_id":       11,
+"player_id":    10825,
+"position": "QB",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     8202,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "QB",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8202,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "14",
+"player_franchise_id":       11,
+"player_id":    10825,
+"position": "QB",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     8213,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "QB",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8213,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "14",
+"player_franchise_id":       11,
+"player_id":    10825,
+"position": "QB",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     8230,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":       11,
+"position": "QB",
+"status": "S",
+"week":       -5 
+},
+"game_id":     8230,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "14",
+"player_franchise_id":       11,
+"player_id":    10825,
+"position": "QB",
+"status": "S",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

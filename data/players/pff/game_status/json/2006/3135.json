@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3135,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2006,
+"season_id":     2006,
+"team_name": "KC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     3749,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+"game_id":     3749,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "80",
+"player_franchise_id":       16,
+"player_id":     3135,
+"position": "LWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     3826,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       16,
+"position": "LWR",
+"status": "P",
+"week":        6 
+},
+"game_id":     3826,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "80",
+"player_franchise_id":       16,
+"player_id":     3135,
+"position": "LWR",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     3895,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+"game_id":     3895,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "80",
+"player_franchise_id":       16,
+"player_id":     3135,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     3962,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       16,
+"position": "SLWR",
+"status": "P",
+"week":       15 
+},
+"game_id":     3962,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "80",
+"player_franchise_id":       16,
+"player_id":     3135,
+"position": "SLWR",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     3971,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       16,
+"position": "SLWR",
+"status": "P",
+"week":       16 
+},
+"game_id":     3971,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "80",
+"player_franchise_id":       16,
+"player_id":     3135,
+"position": "SLWR",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     3995,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "SLWR",
+"status": "P",
+"week":       17 
+},
+"game_id":     3995,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "80",
+"player_franchise_id":       16,
+"player_id":     3135,
+"position": "SLWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

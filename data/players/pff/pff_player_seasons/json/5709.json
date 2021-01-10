@@ -1,0 +1,32 @@
+{
+ "special_teams_summary": {
+ "career": {
+ "player_id":     5709,
+"pu_def_rush":        5 
+},
+"seasons": [
+ {
+ "franchise_id":       32,
+"pu_def_rush":        4,
+"season":     2014,
+"season_id":     2014 
+},
+{
+ "franchise_id":       24,
+"pu_def_rush":        1,
+"season":     2013,
+"season_id":     2013 
+} 
+],
+"subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     5709,
+"roster": "special",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

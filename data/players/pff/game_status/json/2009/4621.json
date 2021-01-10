@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4621,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       32,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2009,
+"season_id":     2009,
+"team_name": "WAS" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     1618,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "RT",
+"status": "P",
+"week":       15 
+},
+"game_id":     1618,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "73",
+"player_franchise_id":       32,
+"player_id":     4621,
+"position": "RT",
+"status": "P",
+"week":       15 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

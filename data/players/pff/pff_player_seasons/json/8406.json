@@ -1,0 +1,38 @@
+{
+ "defense_summary": {
+ "career": {
+ "assists":        2,
+"forced_fumbles":        0,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        0,
+"player_id":     8406,
+"sacks":        0,
+"tackles":        0 
+},
+"seasons": [
+ {
+ "assists":        2,
+"forced_fumbles":        0,
+"franchise_id":       27,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        0,
+"season":     2013,
+"season_id":     2013,
+"tackles":        0 
+} 
+],
+"subject": {
+ "eligible": "defense",
+"grade_keys": [ "defense", "defense_penalty", "run_defense", "pass_rush_defense", "coverage_defense", "tackle" ],
+"league_id":        1,
+"player_id":     8406,
+"roster": "defense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "batted_passes", "catch_rate", "hurries", "longest", "missed_tackles", "qb_rating_against", "receptions", "stops", "targets", "total_pressures", "touchdowns", "yards", "yards_after_catch", "yards_per_reception" ] 
+}

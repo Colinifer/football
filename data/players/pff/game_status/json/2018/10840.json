@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10840,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       26,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2018,
+"season_id":     2018,
+"team_name": "LA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":    12973,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       26,
+"position": "LWR",
+"status": "S",
+"week":       -2 
+},
+"game_id":    12973,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "88",
+"player_franchise_id":       26,
+"player_id":    10840,
+"position": "LWR",
+"status": "S",
+"week":       -2 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":    12991,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       26,
+"position": "LWR",
+"status": "S",
+"week":       -3 
+},
+"game_id":    12991,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"jersey_number": "88",
+"player_franchise_id":       26,
+"player_id":    10840,
+"position": "LWR",
+"status": "S",
+"week":       -3 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

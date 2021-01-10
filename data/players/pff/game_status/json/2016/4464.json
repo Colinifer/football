@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4464,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2016,
+"season_id":     2016,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     4205,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":       22,
+"position": "RT",
+"status": "S",
+"week":        8 
+},
+"game_id":     4205,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "68",
+"player_franchise_id":       22,
+"player_id":     4464,
+"position": "RT",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     4218,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       22,
+"position": "RT",
+"status": "S",
+"week":        9 
+},
+"game_id":     4218,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "68",
+"player_franchise_id":       22,
+"player_id":     4464,
+"position": "RT",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":     4231,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "RT",
+"status": "S",
+"week":       10 
+},
+"game_id":     4231,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "68",
+"player_franchise_id":       22,
+"player_id":     4464,
+"position": "RT",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     4269,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "RT",
+"status": "S",
+"week":       12 
+},
+"game_id":     4269,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "68",
+"player_franchise_id":       22,
+"player_id":     4464,
+"position": "RT",
+"status": "S",
+"week":       12 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     4285,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "RT",
+"status": "S",
+"week":       13 
+},
+"game_id":     4285,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "68",
+"player_franchise_id":       22,
+"player_id":     4464,
+"position": "RT",
+"status": "S",
+"week":       13 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

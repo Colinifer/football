@@ -19,7 +19,7 @@
 "interceptions":        0,
 "league_id":        1,
 "pass_break_ups":        0,
-"player_game_count":        7,
+"player_game_count":        8,
 "sacks":        0,
 "season":     2020,
 "season_id":     2020,
@@ -244,6 +244,37 @@
 "status": "P",
 "tackles":        0,
 "week":       16 
+},
+{
+ "assists":        0,
+"away_franchise_id":       31,
+"away_team_name": "TEN",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18778,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       31,
+"position": "ROLB",
+"status": "X",
+"week":       17 
+},
+"game_id":    18778,
+"hits":        0,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"interceptions":        0,
+"jersey_number": "49",
+"pass_break_ups":        0,
+"player_franchise_id":       31,
+"player_id":    10127,
+"position": "ROLB",
+"sacks":        0,
+"status": "X",
+"tackles":        0,
+"week":       17 
 } 
 ] 
 },

@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11930,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2019,
+"season_id":     2019,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    14893,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       31,
+"position": "RWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":    14893,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "18",
+"player_franchise_id":       31,
+"player_id":    11930,
+"position": "RWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

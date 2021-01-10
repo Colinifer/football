@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4564,
+"roster": "offense",
+"season":     2014,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        9,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2014,
+"season_id":     2014,
+"team_name": "DAL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     3015,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":        9,
+"position": "LG",
+"status": "S",
+"week":       -2 
+},
+"game_id":     3015,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     4564,
+"position": "LG",
+"status": "S",
+"week":       -2 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     3034,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "C",
+"status": "P",
+"week":       -3 
+},
+"game_id":     3034,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     4564,
+"position": "C",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     3050,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":        9,
+"position": "LG",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3050,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     4564,
+"position": "LG",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     3194,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "LG",
+"status": "P",
+"week":        8 
+},
+"game_id":     3194,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     4564,
+"position": "LG",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     3198,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "LG",
+"status": "S",
+"week":        9 
+},
+"game_id":     3198,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     4564,
+"position": "LG",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     3310,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "RG",
+"status": "P",
+"week":       16 
+},
+"game_id":     3310,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "73",
+"player_franchise_id":        9,
+"player_id":     4564,
+"position": "RG",
+"status": "P",
+"week":       16 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

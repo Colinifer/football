@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2123,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2007,
+"season_id":     2007,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":      926,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "SLWR",
+"status": "P",
+"week":       14 
+},
+"game_id":      926,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "10",
+"player_franchise_id":       11,
+"player_id":     2123,
+"position": "SLWR",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":      952,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       11,
+"position": "SRWR",
+"status": "P",
+"week":       15 
+},
+"game_id":      952,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "10",
+"player_franchise_id":       11,
+"player_id":     2123,
+"position": "SRWR",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":      960,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "SRWR",
+"status": "P",
+"week":       16 
+},
+"game_id":      960,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "10",
+"player_franchise_id":       11,
+"player_id":     2123,
+"position": "SRWR",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":      976,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       11,
+"position": "SRWR",
+"status": "P",
+"week":       17 
+},
+"game_id":      976,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "10",
+"player_franchise_id":       11,
+"player_id":     2123,
+"position": "SRWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3308,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       14,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2009,
+"season_id":     2009,
+"team_name": "IND" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1445,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "LT",
+"status": "P",
+"week":        4 
+},
+"game_id":     1445,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "76",
+"player_franchise_id":       14,
+"player_id":     3308,
+"position": "LT",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     1469,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       14,
+"position": "TE-L",
+"status": "P",
+"week":        5 
+},
+"game_id":     1469,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "76",
+"player_franchise_id":       14,
+"player_id":     3308,
+"position": "TE-L",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     1514,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "TE-L",
+"status": "P",
+"week":        9 
+},
+"game_id":     1514,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "76",
+"player_franchise_id":       14,
+"player_id":     3308,
+"position": "TE-L",
+"status": "P",
+"week":        9 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

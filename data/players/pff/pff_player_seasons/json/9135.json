@@ -1,0 +1,98 @@
+{
+ "defense_summary": {
+ "career": {
+ "assists":        7,
+"forced_fumbles":        1,
+"hits":        1,
+"interceptions":        3,
+"pass_break_ups":        8,
+"player_id":     9135,
+"sacks":        1,
+"tackles":       52 
+},
+"seasons": [
+ {
+ "assists":        0,
+"forced_fumbles":        0,
+"franchise_id":       17,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        0,
+"season":     2019,
+"season_id":     2019,
+"tackles":        1 
+},
+{
+ "assists":        2,
+"forced_fumbles":        0,
+"franchise_id":       15,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        2,
+"sacks":        1,
+"season":     2018,
+"season_id":     2018,
+"tackles":       16 
+},
+{
+ "assists":        1,
+"forced_fumbles":        0,
+"franchise_id":       15,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        1,
+"sacks":        0,
+"season":     2017,
+"season_id":     2017,
+"tackles":       11 
+},
+{
+ "assists":        0,
+"forced_fumbles":        0,
+"franchise_id":       31,
+"hits":        0,
+"interceptions":        0,
+"pass_break_ups":        0,
+"sacks":        0,
+"season":     2016,
+"season_id":     2016,
+"tackles":        1 
+},
+{
+ "assists":        4,
+"forced_fumbles":        0,
+"franchise_id":        9,
+"hits":        1,
+"interceptions":        0,
+"pass_break_ups":        4,
+"sacks":        0,
+"season":     2015,
+"season_id":     2015,
+"tackles":       13 
+},
+{
+ "assists":        0,
+"forced_fumbles":        1,
+"franchise_id":        9,
+"hits":        0,
+"interceptions":        3,
+"pass_break_ups":        1,
+"sacks":        0,
+"season":     2014,
+"season_id":     2014,
+"tackles":       10 
+} 
+],
+"subject": {
+ "eligible": "defense",
+"grade_keys": [ "defense", "defense_penalty", "run_defense", "pass_rush_defense", "coverage_defense", "tackle" ],
+"league_id":        1,
+"player_id":     9135,
+"roster": "defense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "batted_passes", "catch_rate", "hurries", "longest", "missed_tackles", "qb_rating_against", "receptions", "stops", "targets", "total_pressures", "touchdowns", "yards", "yards_after_catch", "yards_per_reception" ] 
+}

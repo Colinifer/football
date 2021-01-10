@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1177,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        6,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2008,
+"season_id":     2008,
+"team_name": "CHI" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     1195,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "HB",
+"status": "P",
+"week":       10 
+},
+"game_id":     1195,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "29",
+"player_franchise_id":        6,
+"player_id":     1177,
+"position": "HB",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     1215,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":        6,
+"position": "HB",
+"status": "P",
+"week":       11 
+},
+"game_id":     1215,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "29",
+"player_franchise_id":        6,
+"player_id":     1177,
+"position": "HB",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     1233,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":        6,
+"position": "HB",
+"status": "P",
+"week":       12 
+},
+"game_id":     1233,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "29",
+"player_franchise_id":        6,
+"player_id":     1177,
+"position": "HB",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     1253,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":        6,
+"position": "HB",
+"status": "P",
+"week":       13 
+},
+"game_id":     1253,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "29",
+"player_franchise_id":        6,
+"player_id":     1177,
+"position": "HB",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":     1257,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+"game_id":     1257,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "29",
+"player_franchise_id":        6,
+"player_id":     1177,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     1271,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+"game_id":     1271,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "29",
+"player_franchise_id":        6,
+"player_id":     1177,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     1302,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "HB",
+"status": "P",
+"week":       16 
+},
+"game_id":     1302,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "29",
+"player_franchise_id":        6,
+"player_id":     1177,
+"position": "HB",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     1312,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":        6,
+"position": "HB",
+"status": "P",
+"week":       17 
+},
+"game_id":     1312,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "29",
+"player_franchise_id":        6,
+"player_id":     1177,
+"position": "HB",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

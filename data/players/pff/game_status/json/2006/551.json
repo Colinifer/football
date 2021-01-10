@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      551,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       30,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2006,
+"season_id":     2006,
+"team_name": "TB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     3810,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       30,
+"position": "LT",
+"status": "P",
+"week":        5 
+},
+"game_id":     3810,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "74",
+"player_franchise_id":       30,
+"player_id":      551,
+"position": "LT",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     3904,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "RT",
+"status": "P",
+"week":       11 
+},
+"game_id":     3904,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "74",
+"player_franchise_id":       30,
+"player_id":      551,
+"position": "RT",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     3907,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       30,
+"position": "RT",
+"status": "P",
+"week":       12 
+},
+"game_id":     3907,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "74",
+"player_franchise_id":       30,
+"player_id":      551,
+"position": "RT",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     3928,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       30,
+"position": "RG",
+"status": "P",
+"week":       13 
+},
+"game_id":     3928,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "74",
+"player_franchise_id":       30,
+"player_id":      551,
+"position": "RG",
+"status": "P",
+"week":       13 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

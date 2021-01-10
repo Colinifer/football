@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      309,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2007,
+"season_id":     2007,
+"team_name": "KC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":      829,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       16,
+"position": "HB",
+"status": "P",
+"week":        7 
+},
+"game_id":      829,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "31",
+"player_franchise_id":       16,
+"player_id":      309,
+"position": "HB",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":      850,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "HB",
+"status": "P",
+"week":        9 
+},
+"game_id":      850,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "31",
+"player_franchise_id":       16,
+"player_id":      309,
+"position": "HB",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":      863,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "HB",
+"status": "S",
+"week":       10 
+},
+"game_id":      863,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "31",
+"player_franchise_id":       16,
+"player_id":      309,
+"position": "HB",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":      882,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       16,
+"position": "HB",
+"status": "S",
+"week":       11 
+},
+"game_id":      882,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "31",
+"player_franchise_id":       16,
+"player_id":      309,
+"position": "HB",
+"status": "S",
+"week":       11 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

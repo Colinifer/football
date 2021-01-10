@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11345,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2016,
+"season_id":     2016,
+"team_name": "KC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     4043,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "LG",
+"status": "P",
+"week":       -2 
+},
+"game_id":     4043,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "65",
+"player_franchise_id":       16,
+"player_id":    11345,
+"position": "LG",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     4052,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       16,
+"position": "RG",
+"status": "P",
+"week":       -3 
+},
+"game_id":     4052,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"jersey_number": "65",
+"player_franchise_id":       16,
+"player_id":    11345,
+"position": "RG",
+"status": "P",
+"week":       -3 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

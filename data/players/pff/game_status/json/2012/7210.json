@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7210,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2012,
+"season_id":     2012,
+"team_name": "SD" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     2419,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "RG",
+"status": "P",
+"week":        2 
+},
+"game_id":     2419,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "60",
+"player_franchise_id":       27,
+"player_id":     7210,
+"position": "RG",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     2447,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       27,
+"position": "RT",
+"status": "P",
+"week":        4 
+},
+"game_id":     2447,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "60",
+"player_franchise_id":       27,
+"player_id":     7210,
+"position": "RT",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2508,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "C",
+"status": "P",
+"week":        9 
+},
+"game_id":     2508,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "60",
+"player_franchise_id":       27,
+"player_id":     7210,
+"position": "C",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     2547,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       27,
+"position": "RG",
+"status": "P",
+"week":       11 
+},
+"game_id":     2547,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "60",
+"player_franchise_id":       27,
+"player_id":     7210,
+"position": "RG",
+"status": "P",
+"week":       11 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

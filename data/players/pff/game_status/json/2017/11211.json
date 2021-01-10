@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11211,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       17,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2017,
+"season_id":     2017,
+"team_name": "MIA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     7931,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       17,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+"game_id":     7931,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "87",
+"player_franchise_id":       17,
+"player_id":    11211,
+"position": "LWR",
+"status": "P",
+"week":       11 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

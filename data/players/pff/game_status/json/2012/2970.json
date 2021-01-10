@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2970,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2012,
+"season_id":     2012,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     2392,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "LWR",
+"status": "S",
+"week":        1 
+},
+"game_id":     2392,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "10",
+"player_franchise_id":       22,
+"player_id":     2970,
+"position": "LWR",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     2416,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       22,
+"position": "LWR",
+"status": "S",
+"week":        2 
+},
+"game_id":     2416,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "10",
+"player_franchise_id":       22,
+"player_id":     2970,
+"position": "LWR",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     2431,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       22,
+"position": "LWR",
+"status": "S",
+"week":        3 
+},
+"game_id":     2431,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "10",
+"player_franchise_id":       22,
+"player_id":     2970,
+"position": "LWR",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     2449,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "RWR",
+"status": "S",
+"week":        4 
+},
+"game_id":     2449,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "10",
+"player_franchise_id":       22,
+"player_id":     2970,
+"position": "RWR",
+"status": "S",
+"week":        4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

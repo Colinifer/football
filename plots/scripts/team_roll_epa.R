@@ -18,7 +18,6 @@ pbp_df <- pbp_ds %>%
            season_type == 'REG' &
            !is.na(posteam) & 
            (rush == 1 | pass == 1)) %>% 
-  select(-xyac_median_yardage) %>% 
   collect()
 print(current_season)
 
@@ -26,36 +25,71 @@ n_week <- fx.n_week(pbp_df)
 
 # Tiers -------------------------------------------------------------------
 
+ma_plays <- 250
+
+# net_epa <- 
+  
+pbp_df %>%
+  filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
+  mutate(team = posteam,
+         opp_team = defteam) %>% 
+  rbind(pbp_df %>%
+           filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
+           mutate(team = defteam,
+                  opp_team = posteam)) %>% 
+  arrange(team, game_id, play_id) %>% 
+  group_by(team, season) %>%
+  mutate(
+    play_count = row_number()
+  ) %>% 
+  select(
+    play_count,
+    game_id,
+    week,
+    team,
+    posteam,
+    defteam,
+    epa
+  ) %>% 
+  mutate(
+    off_epa = ifelse(team == posteam, epa, NA),
+    def_epa = ifelse(team == defteam, epa, NA),
+    cu_epa = cummean(epa),  #this field is not used in this vignette but it could be substituted later to graph the cumulative EPA
+    ma_epa = zoo::rollapply(epa, ma_plays, mean, na.rm = TRUE, fill = NA),
+    ma_off_epa = zoo::rollapply(off_epa, ma_plays, mean, na.rm = TRUE, fill = NA),
+    ma_def_epa = zoo::rollapply(def_epa, ma_plays, mean, na.rm = TRUE, fill = NA),
+    ma_net_epa = ma_off_epa - ma_def_epa
+  ) %>% 
+  filter(team == 'NO') %>% 
+  # select(play_count, ma_off_epa, ma_def_epa) %>% 
+  ggplot(aes()) +
+  geom_line(aes(x = play_count, y = ma_off_epa), size = 1, color = 'black', linetype = 'dotted', na.rm = T) +
+  geom_line(aes(x = play_count, y = ma_def_epa), size = 1, color = 'red', linetype = 'dotted', na.rm = T) + 
+  # geom_line(aes(x = play_count, y = ma_epa), color = 'black') + 
+  # geom_smooth(aes(x = play_count, y = ma_net_epa), method = 'loess', color = 'black')
+  geom_line(aes(x = play_count, y = ma_net_epa), size = 2, color = 'black')
+
 offense <- pbp_df %>%
   filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
   group_by(posteam, season)%>%
   mutate(
-    cu_epa=cummean(EPA),  #this field is not used in this vignette but it could be substituted later to graph the cumulative EPA
-    ma_epa=rollapply(EPA,ma_plays,mean,align='right',fill=NA)
-  )
-  summarize(
-    n_pass=sum(pass, na.rm = T),
-    n_rush=sum(rush, na.rm = T),
-    epa_per_pass=sum(epa*pass, na.rm = T)/n_pass,
-    epa_per_rush=sum(epa*rush, na.rm = T)/n_rush,
-    success_per_pass=sum(pass*epa>0, na.rm = T)/n_pass,
-    success_per_rush=sum(rush*epa>0, na.rm = T)/n_rush,
-    off_epa=mean(epa, na.rm = T),
-    off_success=mean(success, na.rm = T)
+    cu_epa = cummean(epa),  #this field is not used in this vignette but it could be substituted later to graph the cumulative EPA
+    ma_epa = rollapply(epa,ma_plays,mean,align='right',fill=NA),
+    ma_epa_offense = rollapply(epa,ma_plays,mean,align='right',fill=NA),
+    ma_epa_defense = 
+    play_count = row_number(),
+    week_team = paste0("WK", ifelse(week > 9, week, paste0(0,week)), " ", defteam)
   )
 
 defense <- pbp_df %>%
   filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
   group_by(defteam, season) %>%
-  summarize(
-    def_n_pass=sum(pass, na.rm = T),
-    def_n_rush=sum(rush, na.rm = T),
-    def_epa_per_pass=sum(epa*pass, na.rm = T)/def_n_pass,
-    def_epa_per_rush=sum(epa*rush, na.rm = T)/def_n_rush,
-    def_success_per_pass=sum(pass*epa>0, na.rm = T)/def_n_pass,
-    def_success_per_rush=sum(rush*epa>0, na.rm = T)/def_n_rush,
-    def_epa=mean(epa, na.rm = T),
-    def_success=mean(success, na.rm = T)
+  group_by(posteam, season)%>%
+  mutate(
+    cu_epa = cummean(epa),  #this field is not used in this vignette but it could be substituted later to graph the cumulative EPA
+    ma_epa_defense = rollapply(epa,ma_plays,mean,align='right',fill=NA),
+    play_count = row_number(),
+    week_team = paste0("WK", ifelse(week > 9, week, paste0(0,week)), " ", defteam)
   )
 
 chart_all <- offense %>% 

@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1085,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2006,
+"season_id":     2006,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     3892,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":       11,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+"game_id":     3892,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "12",
+"player_franchise_id":       11,
+"player_id":     1085,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     3932,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       11,
+"position": "LWR",
+"status": "P",
+"week":       13 
+},
+"game_id":     3932,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "12",
+"player_franchise_id":       11,
+"player_id":     1085,
+"position": "LWR",
+"status": "P",
+"week":       13 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

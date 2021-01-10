@@ -1,0 +1,112 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     6566,
+"roster": "special",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        6,
+"league_id":        1,
+"player_game_count":        1,
+"pu_def_rush":        0,
+"season":     2015,
+"season_id":     2015,
+"team_name": "CHI" 
+},
+{
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        2,
+"pu_def_rush":        0,
+"season":     2015,
+"season_id":     2015,
+"team_name": "DEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     3366,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       10,
+"position": "P",
+"status": "P",
+"week":       -3 
+},
+"game_id":     3366,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "05",
+"player_franchise_id":       10,
+"player_id":     6566,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     3380,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "P",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3380,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "05",
+"player_franchise_id":       10,
+"player_id":     6566,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     3455,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "P",
+"status": "P",
+"week":        4 
+},
+"game_id":     3455,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "04",
+"player_franchise_id":        6,
+"player_id":     6566,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":        4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

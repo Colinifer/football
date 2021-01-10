@@ -39,7 +39,7 @@ outcomes <- pbp_df %>%
     home_win = if_else(result > 0, 1, 0),
     home_tie = if_else(result == 0, 1, 0),
     home_score = first(home_score),
-    home_result = first(result)
+    home_result = first(home_score) - first(away_score)
   ) %>%
   group_by(season, home_team) %>%
   summarise(
@@ -59,7 +59,7 @@ outcomes <- pbp_df %>%
         away_win = if_else(result < 0, 1, 0),
         away_tie = if_else(result == 0, 1, 0),
         away_score = first(away_score),
-        away_result = first(result)
+        away_result = first(away_score) - first(home_score)
       ) %>%
       group_by(season, away_team) %>%
       summarise(
@@ -67,7 +67,7 @@ outcomes <- pbp_df %>%
         away_wins = sum(away_win),
         away_ties = sum(away_tie),
         away_points = sum(away_score),
-        away_result = first(away_result)
+        away_result = sum(away_result)
       ) %>%
       ungroup(),
     by = c("season", "home_team" = "away_team")
@@ -82,12 +82,15 @@ outcomes <- pbp_df %>%
     points_diff = home_result + away_result,
     points_for = home_points + away_points,
     points_against = points_for - points_diff,
+    expo = ((points_for + points_against) / games) ^ 0.251, # From football perspective
+    pyth = points_for ^ expo / (points_for ^ expo + points_against ^ expo),
+    pyth_xwins_fp = games * pyth,
     pyth_xwins = (points_diff /(games * 2.0625)) + 8,
-    pyth_xlosses = 16 - pyth_xwins,
-    pyth_xwin_percentage = pyth_xwins / 16 #total games at end of season
+    pyth_xlosses = games - pyth_xwins,
+    pyth_xwin_percentage = pyth_xwins / games #total games at end of season
   ) %>%
   select(
-    season, team, games, wins, losses, ties, win_percentage, points_diff, points_for, points_against, pyth_xwins, pyth_xlosses, pyth_xwin_percentage
+    season, team, games, wins, losses, ties, win_percentage, points_diff, points_for, points_against, pyth_xwins_fp, pyth_xwins, pyth_xlosses, pyth_xwin_percentage
   )
 
 # Compute percentage of plays with wp > wp_lim ---------------------------------

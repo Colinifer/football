@@ -1,0 +1,103 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     6670,
+"roster": "special",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       21,
+"league_id":        1,
+"player_game_count":        3,
+"pu_def_rush":        0,
+"season":     2015,
+"season_id":     2015,
+"team_name": "NYG" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     3613,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       21,
+"position": "LS",
+"status": "P",
+"week":       14 
+},
+"game_id":     3613,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "57",
+"player_franchise_id":       21,
+"player_id":     6670,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     3619,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       21,
+"position": "LS",
+"status": "P",
+"week":       15 
+},
+"game_id":     3619,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "57",
+"player_franchise_id":       21,
+"player_id":     6670,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     3632,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       21,
+"position": "LS",
+"status": "P",
+"week":       16 
+},
+"game_id":     3632,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "57",
+"player_franchise_id":       21,
+"player_id":     6670,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       16 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

@@ -14,7 +14,7 @@
  {
  "franchise_id":       14,
 "league_id":        1,
-"player_game_count":       14,
+"player_game_count":       15,
 "season":     2020,
 "season_id":     2020,
 "team_name": "IND" 
@@ -356,6 +356,30 @@
 "position": "C",
 "status": "S",
 "week":       16 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":    18779,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "C",
+"status": "S",
+"week":       17 
+},
+"game_id":    18779,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "78",
+"player_franchise_id":       14,
+"player_id":    10652,
+"position": "C",
+"status": "S",
+"week":       17 
 } 
 ] 
 },

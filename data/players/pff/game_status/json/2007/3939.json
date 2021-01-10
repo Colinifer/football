@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3939,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        4,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2007,
+"season_id":     2007,
+"team_name": "BUF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":      980,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":        4,
+"position": "RT",
+"status": "P",
+"week":       17 
+},
+"game_id":      980,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "63",
+"player_franchise_id":        4,
+"player_id":     3939,
+"position": "RT",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

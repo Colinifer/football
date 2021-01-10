@@ -1,0 +1,131 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4928,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        9,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2016,
+"season_id":     2016,
+"team_name": "DAL" 
+},
+{
+ "franchise_id":       10,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2016,
+"season_id":     2016,
+"team_name": "DEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     4033,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       10,
+"position": "QB",
+"status": "S",
+"week":       -2 
+},
+"game_id":     4033,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "06",
+"player_franchise_id":       10,
+"player_id":     4928,
+"position": "QB",
+"status": "S",
+"week":       -2 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     4060,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       10,
+"position": "QB",
+"status": "P",
+"week":       -3 
+},
+"game_id":     4060,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "06",
+"player_franchise_id":       10,
+"player_id":     4928,
+"position": "QB",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     4216,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        9,
+"position": "QB",
+"status": "P",
+"week":        9 
+},
+"game_id":     4216,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "03",
+"player_franchise_id":        9,
+"player_id":     4928,
+"position": "QB",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     4341,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":        9,
+"position": "QB",
+"status": "P",
+"week":       17 
+},
+"game_id":     4341,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "03",
+"player_franchise_id":        9,
+"player_id":     4928,
+"position": "QB",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5179,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2009,
+"season_id":     2009,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1574,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       11,
+"position": "TE-R",
+"status": "P",
+"week":       13 
+},
+"game_id":     1574,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "47",
+"player_franchise_id":       11,
+"player_id":     5179,
+"position": "TE-R",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1595,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       11,
+"position": "TE-R",
+"status": "P",
+"week":       14 
+},
+"game_id":     1595,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "47",
+"player_franchise_id":       11,
+"player_id":     5179,
+"position": "TE-R",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

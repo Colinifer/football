@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1782,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2008,
+"season_id":     2008,
+"team_name": "SD" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     1316,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "TE-R",
+"status": "P",
+"week":       17 
+},
+"game_id":     1316,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "88",
+"player_franchise_id":       27,
+"player_id":     1782,
+"position": "TE-R",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     1320,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "TE-L",
+"status": "S",
+"week":       18 
+},
+"game_id":     1320,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "88",
+"player_franchise_id":       27,
+"player_id":     1782,
+"position": "TE-L",
+"status": "S",
+"week":       18 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

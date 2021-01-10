@@ -14,7 +14,7 @@
  {
  "franchise_id":       11,
 "league_id":        1,
-"player_game_count":       15,
+"player_game_count":       16,
 "season":     2020,
 "season_id":     2020,
 "team_name": "DET" 
@@ -380,6 +380,30 @@
 "position": "LT",
 "status": "S",
 "week":       16 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":    18777,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "LT",
+"status": "S",
+"week":       17 
+},
+"game_id":    18777,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "68",
+"player_franchise_id":       11,
+"player_id":    10650,
+"position": "LT",
+"status": "S",
+"week":       17 
 } 
 ] 
 },

@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11082,
+"roster": "offense",
+"season":     2016,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       24,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2016,
+"season_id":     2016,
+"team_name": "PHI" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     4044,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":     4044,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "80",
+"player_franchise_id":       24,
+"player_id":    11082,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     4059,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       24,
+"position": "SRWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":     4059,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "80",
+"player_franchise_id":       24,
+"player_id":    11082,
+"position": "SRWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     4074,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":     4074,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "80",
+"player_franchise_id":       24,
+"player_id":    11082,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     4081,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":     4081,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "80",
+"player_franchise_id":       24,
+"player_id":    11082,
+"position": "RWR",
+"status": "P",
+"week":       -5 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     4270,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "P",
+"week":       12 
+},
+"game_id":     4270,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "19",
+"player_franchise_id":       24,
+"player_id":    11082,
+"position": "RWR",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     4275,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "S",
+"week":       13 
+},
+"game_id":     4275,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "19",
+"player_franchise_id":       24,
+"player_id":    11082,
+"position": "RWR",
+"status": "S",
+"week":       13 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     4294,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "P",
+"week":       14 
+},
+"game_id":     4294,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "19",
+"player_franchise_id":       24,
+"player_id":    11082,
+"position": "RWR",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     4341,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       24,
+"position": "RWR",
+"status": "S",
+"week":       17 
+},
+"game_id":     4341,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "19",
+"player_franchise_id":       24,
+"player_id":    11082,
+"position": "RWR",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

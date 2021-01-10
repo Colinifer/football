@@ -1,0 +1,243 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7943,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       21,
+"league_id":        1,
+"player_game_count":        9,
+"season":     2017,
+"season_id":     2017,
+"team_name": "NYG" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     8012,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "S",
+"week":        6 
+},
+"game_id":     8012,
+"home_franchise_id":       10,
+"home_team_name": "DEN",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "S",
+"week":        6 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     8026,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "S",
+"week":        7 
+},
+"game_id":     8026,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "S",
+"week":        7 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":     8048,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "P",
+"week":        9 
+},
+"game_id":     8048,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     8066,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "P",
+"week":       10 
+},
+"game_id":     8066,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     8074,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+"game_id":     8074,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     8084,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "S",
+"week":       12 
+},
+"game_id":     8084,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "S",
+"week":       12 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     8111,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "P",
+"week":       13 
+},
+"game_id":     8111,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     8140,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "P",
+"week":       15 
+},
+"game_id":     8140,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     8210,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":       21,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8210,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "12",
+"player_franchise_id":       21,
+"player_id":     7943,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

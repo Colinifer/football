@@ -1,0 +1,127 @@
+{
+ "defense_summary": {
+ "subject": {
+ "eligible": "defense",
+"grade_keys": [ "defense", "defense_penalty", "run_defense", "pass_rush_defense", "coverage_defense", "tackle" ],
+"league_id":        1,
+"player_id":     8360,
+"roster": "defense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "assists":        0,
+"forced_fumbles":        0,
+"franchise_id":       27,
+"hits":        0,
+"interceptions":        0,
+"league_id":        1,
+"pass_break_ups":        0,
+"player_game_count":        3,
+"sacks":        0,
+"season":     2013,
+"season_id":     2013,
+"tackles":        4,
+"team_name": "SD" 
+} 
+],
+"weeks": [
+ {
+ "assists":        0,
+"away_franchise_id":       27,
+"away_team_name": "SD",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     2723,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":       27,
+"position": "RE",
+"status": "P",
+"week":       -4 
+},
+"game_id":     2723,
+"hits":        0,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"interceptions":        0,
+"jersey_number": "98",
+"pass_break_ups":        0,
+"player_franchise_id":       27,
+"player_id":     8360,
+"position": "RE",
+"sacks":        0,
+"status": "P",
+"tackles":        0,
+"week":       -4 
+},
+{
+ "assists":        0,
+"away_franchise_id":       27,
+"away_team_name": "SD",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     2697,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":       27,
+"position": "RE",
+"status": "P",
+"week":       -3 
+},
+"game_id":     2697,
+"hits":        0,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"interceptions":        0,
+"jersey_number": "98",
+"pass_break_ups":        0,
+"player_franchise_id":       27,
+"player_id":     8360,
+"position": "RE",
+"sacks":        0,
+"status": "P",
+"tackles":        3,
+"week":       -3 
+},
+{
+ "assists":        0,
+"away_franchise_id":       29,
+"away_team_name": "SEA",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     2683,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       27,
+"position": "RE",
+"status": "P",
+"week":       -2 
+},
+"game_id":     2683,
+"hits":        0,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"interceptions":        0,
+"jersey_number": "98",
+"pass_break_ups":        0,
+"player_franchise_id":       27,
+"player_id":     8360,
+"position": "RE",
+"sacks":        0,
+"status": "P",
+"tackles":        1,
+"week":       -2 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "batted_passes", "catch_rate", "hurries", "longest", "missed_tackles", "qb_rating_against", "receptions", "stops", "targets", "total_pressures", "touchdowns", "yards", "yards_after_catch", "yards_per_reception" ] 
+}

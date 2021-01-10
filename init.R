@@ -190,14 +190,28 @@ pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
 xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
 sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
 
-source('plots/assets/plot_theme.R')
-# source('plots/scripts/team_tiers.R')
-# source('plots/scripts/dakota_career.R')
-# source('plots/scripts/qb_cayoe.R')
+source('plots/assets/plot_theme.R', echo = F)
+
+map(
+  dir(path = 'plots/scripts', full.names = TRUE)[1], 
+  source
+  )
+
+source('plots/scripts/season_point_differential.R', echo = F)
+source('plots/scripts/team_tiers.R', echo = F)
+source('plots/scripts/wins_above_expectation.R', echo = F)
+source('plots/scripts/team_run_pass_efficiency.R', echo = F)
+source('plots/scripts/dakota_career.R', echo = F)
+source('plots/scripts/qb_cayoe.R', echo = F)
+source('plots/scripts/qb_cpoe_adot.R', echo = F)
+source('plots/scripts/qb_epa_cpoe.R', echo = F)
+source('plots/scripts/wr_cayoe.R', echo = F)
 # source('fantasy_football/xfantasy_points.R')
 # source('fantasy_football/xfantasy_points_test_theme.R')
 # source('plots/scripts/espn_winrate.R')
-# source('plots/scripts/defense_cpoe_adot.R')
-# source('plots/scripts/defense_epa_cpoe.R')
+source('plots/scripts/defense_cpoe_adot.R', echo = F)
+source('plots/scripts/defense_epa_cpoe.R', echo = F)
+source('plots/scripts/defense_cayoe.R', echo = F)
+source('plots/scripts/epa_winrate_efficiency.R', echo = F)
 # rm(list = ls())
 

@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5775,
+"roster": "offense",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       20,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2015,
+"season_id":     2015,
+"team_name": "NO" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     3345,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       20,
+"position": "FB",
+"status": "P",
+"week":       -2 
+},
+"game_id":     3345,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "41",
+"player_franchise_id":       20,
+"player_id":     5775,
+"position": "FB",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     3362,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "FB",
+"status": "P",
+"week":       -3 
+},
+"game_id":     3362,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "41",
+"player_franchise_id":       20,
+"player_id":     5775,
+"position": "FB",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     3388,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "FB",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3388,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "41",
+"player_franchise_id":       20,
+"player_id":     5775,
+"position": "FB",
+"status": "P",
+"week":       -4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

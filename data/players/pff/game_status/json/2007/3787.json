@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3787,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2007,
+"season_id":     2007,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":      968,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       22,
+"position": "RT",
+"status": "P",
+"week":       16 
+},
+"game_id":      968,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "76",
+"player_franchise_id":       22,
+"player_id":     3787,
+"position": "RT",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":      986,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "RT",
+"status": "P",
+"week":       17 
+},
+"game_id":      986,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "76",
+"player_franchise_id":       22,
+"player_id":     3787,
+"position": "RT",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

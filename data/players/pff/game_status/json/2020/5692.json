@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5692,
+"roster": "offense",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2020,
+"season_id":     2020,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18729,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       31,
+"position": "RT",
+"status": "P",
+"week":       14 
+},
+"game_id":    18729,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "78",
+"player_franchise_id":       31,
+"player_id":     5692,
+"position": "RT",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":    18745,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "RT",
+"status": "P",
+"week":       15 
+},
+"game_id":    18745,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "78",
+"player_franchise_id":       31,
+"player_id":     5692,
+"position": "RT",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18770,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       31,
+"position": "RT",
+"status": "P",
+"week":       16 
+},
+"game_id":    18770,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "78",
+"player_franchise_id":       31,
+"player_id":     5692,
+"position": "RT",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    18778,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       31,
+"position": "RT",
+"status": "P",
+"week":       17 
+},
+"game_id":    18778,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "78",
+"player_franchise_id":       31,
+"player_id":     5692,
+"position": "RT",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

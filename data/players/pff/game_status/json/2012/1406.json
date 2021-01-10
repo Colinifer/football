@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1406,
+"roster": "offense",
+"season":     2012,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       19,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2012,
+"season_id":     2012,
+"team_name": "NE" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     2524,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "TE-L",
+"status": "P",
+"week":       10 
+},
+"game_id":     2524,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "80",
+"player_franchise_id":       19,
+"player_id":     1406,
+"position": "TE-L",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     2542,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "TE-L",
+"status": "P",
+"week":       11 
+},
+"game_id":     2542,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "80",
+"player_franchise_id":       19,
+"player_id":     1406,
+"position": "TE-L",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     2551,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       19,
+"position": "TE-R",
+"status": "P",
+"week":       12 
+},
+"game_id":     2551,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "80",
+"player_franchise_id":       19,
+"player_id":     1406,
+"position": "TE-R",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     2597,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       19,
+"position": "TE-R",
+"status": "P",
+"week":       14 
+},
+"game_id":     2597,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "80",
+"player_franchise_id":       19,
+"player_id":     1406,
+"position": "TE-R",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

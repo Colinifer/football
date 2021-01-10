@@ -1,0 +1,267 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4413,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":       10,
+"season":     2010,
+"season_id":     2010,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     1765,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "TE-L",
+"status": "P",
+"week":        3 
+},
+"game_id":     1765,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "TE-L",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1777,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":        3,
+"position": "TE-R",
+"status": "P",
+"week":        4 
+},
+"game_id":     1777,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "TE-R",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     1790,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "TE-R",
+"status": "P",
+"week":        5 
+},
+"game_id":     1790,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "TE-R",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1805,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":        3,
+"position": "TE-R",
+"status": "P",
+"week":        6 
+},
+"game_id":     1805,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "TE-R",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     1819,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "TE-L",
+"status": "P",
+"week":        7 
+},
+"game_id":     1819,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "TE-L",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1872,
+"home_franchise_id":        5,
+"home_team_name": "CAR",
+"player_franchise_id":        3,
+"position": "TE-L",
+"status": "P",
+"week":       11 
+},
+"game_id":     1872,
+"home_franchise_id":        5,
+"home_team_name": "CAR",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "TE-L",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":     1896,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LT",
+"status": "P",
+"week":       12 
+},
+"game_id":     1896,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "LT",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1934,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":        3,
+"position": "RT",
+"status": "S",
+"week":       14 
+},
+"game_id":     1934,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "RT",
+"status": "S",
+"week":       14 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     1969,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "LT",
+"status": "P",
+"week":       17 
+},
+"game_id":     1969,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "LT",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1985,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":        3,
+"position": "TE-R",
+"status": "P",
+"week":       18 
+},
+"game_id":     1985,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "64",
+"player_franchise_id":        3,
+"player_id":     4413,
+"position": "TE-R",
+"status": "P",
+"week":       18 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

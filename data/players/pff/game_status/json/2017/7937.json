@@ -1,0 +1,237 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     7937,
+"roster": "special",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        5,
+"pu_def_rush":        0,
+"season":     2017,
+"season_id":     2017,
+"team_name": "DET" 
+},
+{
+ "franchise_id":       14,
+"league_id":        1,
+"player_game_count":        3,
+"pu_def_rush":        0,
+"season":     2017,
+"season_id":     2017,
+"team_name": "IND" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     7953,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       11,
+"position": "P",
+"status": "P",
+"week":        2 
+},
+"game_id":     7953,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "18",
+"player_franchise_id":       11,
+"player_id":     7937,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":     7956,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "P",
+"status": "P",
+"week":        3 
+},
+"game_id":     7956,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "18",
+"player_franchise_id":       11,
+"player_id":     7937,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     7975,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       11,
+"position": "P",
+"status": "P",
+"week":        4 
+},
+"game_id":     7975,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "18",
+"player_franchise_id":       11,
+"player_id":     7937,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     7989,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "P",
+"status": "P",
+"week":        5 
+},
+"game_id":     7989,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "18",
+"player_franchise_id":       11,
+"player_id":     7937,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     8003,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       11,
+"position": "P",
+"status": "P",
+"week":        6 
+},
+"game_id":     8003,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "18",
+"player_franchise_id":       11,
+"player_id":     7937,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     8193,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "P",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8193,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "09",
+"player_franchise_id":       14,
+"player_id":     7937,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     8201,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       14,
+"position": "P",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8201,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "09",
+"player_franchise_id":       14,
+"player_id":     7937,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     8219,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       14,
+"position": "P",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8219,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "09",
+"player_franchise_id":       14,
+"player_id":     7937,
+"position": "P",
+"pu_def_rush":        0,
+"status": "P",
+"week":       -4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

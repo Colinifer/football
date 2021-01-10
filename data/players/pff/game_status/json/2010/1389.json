@@ -1,0 +1,107 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1389,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2010,
+"season_id":     2010,
+"team_name": "KC" 
+},
+{
+ "franchise_id":       17,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2010,
+"season_id":     2010,
+"team_name": "MIA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     1937,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       17,
+"position": "RWR",
+"status": "P",
+"week":       15 
+},
+"game_id":     1937,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "83",
+"player_franchise_id":       17,
+"player_id":     1389,
+"position": "RWR",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1960,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       17,
+"position": "RWR",
+"status": "P",
+"week":       16 
+},
+"game_id":     1960,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "83",
+"player_franchise_id":       17,
+"player_id":     1389,
+"position": "RWR",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1985,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "LWR",
+"status": "P",
+"week":       18 
+},
+"game_id":     1985,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "17",
+"player_franchise_id":       16,
+"player_id":     1389,
+"position": "LWR",
+"status": "P",
+"week":       18 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

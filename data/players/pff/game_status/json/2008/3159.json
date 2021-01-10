@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3159,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       23,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2008,
+"season_id":     2008,
+"team_name": "OAK" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     1078,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "LG",
+"status": "P",
+"week":        1 
+},
+"game_id":     1078,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "51",
+"player_franchise_id":       23,
+"player_id":     3159,
+"position": "LG",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "SD",
+"game_id":     1119,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "RG",
+"status": "S",
+"week":        4 
+},
+"game_id":     1119,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "51",
+"player_franchise_id":       23,
+"player_id":     3159,
+"position": "RG",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     1202,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "C",
+"status": "P",
+"week":       10 
+},
+"game_id":     1202,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "51",
+"player_franchise_id":       23,
+"player_id":     3159,
+"position": "C",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     1309,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       23,
+"position": "C",
+"status": "P",
+"week":       17 
+},
+"game_id":     1309,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "51",
+"player_franchise_id":       23,
+"player_id":     3159,
+"position": "C",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11894,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       32,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2019,
+"season_id":     2019,
+"team_name": "WAS" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":    14840,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":       32,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14840,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "16",
+"player_franchise_id":       32,
+"player_id":    11894,
+"position": "RWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":    14856,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14856,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "16",
+"player_franchise_id":       32,
+"player_id":    11894,
+"position": "RWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":    14870,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":       32,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14870,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "16",
+"player_franchise_id":       32,
+"player_id":    11894,
+"position": "RWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    14892,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "RWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":    14892,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "16",
+"player_franchise_id":       32,
+"player_id":    11894,
+"position": "RWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

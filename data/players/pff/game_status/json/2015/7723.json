@@ -1,0 +1,51 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7723,
+"roster": "offense",
+"season":     2015,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       18,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2015,
+"season_id":     2015,
+"team_name": "MIN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":     3363,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "LT",
+"status": "P",
+"week":       -3 
+},
+"game_id":     3363,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "78O",
+"player_franchise_id":       18,
+"player_id":     7723,
+"position": "LT",
+"status": "P",
+"week":       -3 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

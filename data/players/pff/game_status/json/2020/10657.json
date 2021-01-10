@@ -14,7 +14,7 @@
  {
  "franchise_id":        2,
 "league_id":        1,
-"player_game_count":        3,
+"player_game_count":        4,
 "season":     2020,
 "season_id":     2020,
 "team_name": "ATL" 
@@ -92,6 +92,30 @@
 "position": "RWR",
 "status": "P",
 "week":       16 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":    18784,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":        2,
+"position": "RWR",
+"status": "P",
+"week":       17 
+},
+"game_id":    18784,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "80",
+"player_franchise_id":        2,
+"player_id":    10657,
+"position": "RWR",
+"status": "P",
+"week":       17 
 } 
 ] 
 },

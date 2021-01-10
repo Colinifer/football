@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2300,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        7,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2009,
+"season_id":     2009,
+"team_name": "CIN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     1403,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "RWR",
+"status": "P",
+"week":        1 
+},
+"game_id":     1403,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "15",
+"player_franchise_id":        7,
+"player_id":     2300,
+"position": "RWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     1413,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "P",
+"week":        2 
+},
+"game_id":     1413,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "15",
+"player_franchise_id":        7,
+"player_id":     2300,
+"position": "LWR",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":     1427,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "P",
+"week":        3 
+},
+"game_id":     1427,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "15",
+"player_franchise_id":        7,
+"player_id":     2300,
+"position": "LWR",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     1444,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "P",
+"week":        4 
+},
+"game_id":     1444,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "15",
+"player_franchise_id":        7,
+"player_id":     2300,
+"position": "LWR",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":     1464,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "P",
+"week":        5 
+},
+"game_id":     1464,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "15",
+"player_franchise_id":        7,
+"player_id":     2300,
+"position": "LWR",
+"status": "P",
+"week":        5 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     1471,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "RWR",
+"status": "P",
+"week":        6 
+},
+"game_id":     1471,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "15",
+"player_franchise_id":        7,
+"player_id":     2300,
+"position": "RWR",
+"status": "P",
+"week":        6 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     1485,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "LWR",
+"status": "P",
+"week":        7 
+},
+"game_id":     1485,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "15",
+"player_franchise_id":        7,
+"player_id":     2300,
+"position": "LWR",
+"status": "P",
+"week":        7 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":     1513,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "RWR",
+"status": "P",
+"week":        9 
+},
+"game_id":     1513,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "15",
+"player_franchise_id":        7,
+"player_id":     2300,
+"position": "RWR",
+"status": "P",
+"week":        9 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

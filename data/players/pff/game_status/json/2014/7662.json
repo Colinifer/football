@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     7662,
+"roster": "offense",
+"season":     2014,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       26,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2014,
+"season_id":     2014,
+"team_name": "SL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     3032,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       26,
+"position": "TE-R",
+"status": "P",
+"week":       -3 
+},
+"game_id":     3032,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "47O",
+"player_franchise_id":       26,
+"player_id":     7662,
+"position": "TE-R",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     3052,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"player_franchise_id":       26,
+"position": "TE-L",
+"status": "P",
+"week":       -4 
+},
+"game_id":     3052,
+"home_franchise_id":        8,
+"home_team_name": "CLV",
+"jersey_number": "47O",
+"player_franchise_id":       26,
+"player_id":     7662,
+"position": "TE-L",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "SL",
+"game_id":     3062,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       26,
+"position": "TE-R",
+"status": "P",
+"week":       -5 
+},
+"game_id":     3062,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "47O",
+"player_franchise_id":       26,
+"player_id":     7662,
+"position": "TE-R",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,137 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":    33285,
+"roster": "special",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       15,
+"league_id":        1,
+"player_game_count":        3,
+"pu_def_rush":        0,
+"season":     2020,
+"season_id":     2020,
+"team_name": "JAX" 
+},
+{
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":        1,
+"pu_def_rush":        0,
+"season":     2020,
+"season_id":     2020,
+"team_name": "NYJ" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":    18670,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       15,
+"position": "K",
+"status": "P",
+"week":       10 
+},
+"game_id":    18670,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "03",
+"player_franchise_id":       15,
+"player_id":    33285,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":    18686,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       15,
+"position": "K",
+"status": "P",
+"week":       11 
+},
+"game_id":    18686,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "03",
+"player_franchise_id":       15,
+"player_id":    33285,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":    18714,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       15,
+"position": "K",
+"status": "P",
+"week":       13 
+},
+"game_id":    18714,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "03",
+"player_franchise_id":       15,
+"player_id":    33285,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":    18781,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":       22,
+"position": "K",
+"status": "P",
+"week":       17 
+},
+"game_id":    18781,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "03",
+"player_franchise_id":       22,
+"player_id":    33285,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

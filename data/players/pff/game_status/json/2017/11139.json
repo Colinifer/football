@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    11139,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       11,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2017,
+"season_id":     2017,
+"team_name": "DET" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     8193,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       11,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8193,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "89",
+"player_franchise_id":       11,
+"player_id":    11139,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     8213,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "TE-L",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8213,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "89",
+"player_franchise_id":       11,
+"player_id":    11139,
+"position": "TE-L",
+"status": "P",
+"week":       -4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

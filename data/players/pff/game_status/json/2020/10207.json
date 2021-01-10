@@ -14,7 +14,7 @@
  {
  "franchise_id":       29,
 "league_id":        1,
-"player_game_count":       15,
+"player_game_count":       16,
 "pu_def_rush":        0,
 "season":     2020,
 "season_id":     2020,
@@ -396,6 +396,31 @@
 "pu_def_rush":        0,
 "status": "P",
 "week":       16 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":    18787,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       29,
+"position": "K",
+"status": "P",
+"week":       17 
+},
+"game_id":    18787,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "05",
+"player_franchise_id":       29,
+"player_id":    10207,
+"position": "K",
+"pu_def_rush":        0,
+"status": "P",
+"week":       17 
 } 
 ] 
 },

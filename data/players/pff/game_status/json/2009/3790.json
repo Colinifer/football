@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3790,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2009,
+"season_id":     2009,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     1398,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "SRWR",
+"status": "P",
+"week":        1 
+},
+"game_id":     1398,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "SRWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     1434,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":        3 
+},
+"game_id":     1434,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1595,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":       14 
+},
+"game_id":     1595,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     1613,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "QB",
+"status": "P",
+"week":       15 
+},
+"game_id":     1613,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "10",
+"player_franchise_id":        3,
+"player_id":     3790,
+"position": "QB",
+"status": "P",
+"week":       15 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

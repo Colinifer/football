@@ -1,0 +1,291 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6162,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       31,
+"league_id":        1,
+"player_game_count":       11,
+"season":     2018,
+"season_id":     2018,
+"team_name": "TEN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     9341,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "P",
+"week":        1 
+},
+"game_id":     9341,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game": {
+ "away_franchise_id":       13,
+"away_team_name": "HST",
+"game_id":     9360,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "S",
+"week":        2 
+},
+"game_id":     9360,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     9374,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "S",
+"week":        3 
+},
+"game_id":     9374,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     9489,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "P",
+"week":       11 
+},
+"game_id":     9489,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     9525,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "P",
+"week":       13 
+},
+"game_id":     9525,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     9556,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "P",
+"week":       15 
+},
+"game_id":     9556,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     9570,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "P",
+"week":       16 
+},
+"game_id":     9570,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     9586,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "S",
+"week":       17 
+},
+"game_id":     9586,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "S",
+"week":       17 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    12974,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12974,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game": {
+ "away_franchise_id":       30,
+"away_team_name": "TB",
+"game_id":    12993,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12993,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":    13007,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":       31,
+"position": "QB",
+"status": "P",
+"week":       -4 
+},
+"game_id":    13007,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "07",
+"player_franchise_id":       31,
+"player_id":     6162,
+"position": "QB",
+"status": "P",
+"week":       -4 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

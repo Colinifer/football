@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3785,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       14,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2008,
+"season_id":     2008,
+"team_name": "IND" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1279,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "LWR",
+"status": "P",
+"week":       15 
+},
+"game_id":     1279,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "83",
+"player_franchise_id":       14,
+"player_id":     3785,
+"position": "LWR",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":     1304,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "RWR",
+"status": "P",
+"week":       17 
+},
+"game_id":     1304,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "83",
+"player_franchise_id":       14,
+"player_id":     3785,
+"position": "RWR",
+"status": "P",
+"week":       17 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":     1320,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       14,
+"position": "SRWR",
+"status": "P",
+"week":       18 
+},
+"game_id":     1320,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "83",
+"player_franchise_id":       14,
+"player_id":     3785,
+"position": "SRWR",
+"status": "P",
+"week":       18 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,267 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      322,
+"roster": "offense",
+"season":     2008,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       28,
+"league_id":        1,
+"player_game_count":       10,
+"season":     2008,
+"season_id":     2008,
+"team_name": "SF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     1088,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "P",
+"week":        2 
+},
+"game_id":     1088,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1104,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "S",
+"week":        3 
+},
+"game_id":     1104,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     1116,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "S",
+"week":        4 
+},
+"game_id":     1116,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     1135,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "S",
+"week":        5 
+},
+"game_id":     1135,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "S",
+"week":        5 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     1149,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "S",
+"week":        6 
+},
+"game_id":     1149,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "S",
+"week":        6 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     1158,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "S",
+"week":        7 
+},
+"game_id":     1158,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "S",
+"week":        7 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1177,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "S",
+"week":        8 
+},
+"game_id":     1177,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     1281,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "P",
+"week":       15 
+},
+"game_id":     1281,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     1298,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "S",
+"week":       16 
+},
+"game_id":     1298,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     1317,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       28,
+"position": "RT",
+"status": "S",
+"week":       17 
+},
+"game_id":     1317,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "65",
+"player_franchise_id":       28,
+"player_id":      322,
+"position": "RT",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

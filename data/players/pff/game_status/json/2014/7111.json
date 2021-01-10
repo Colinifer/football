@@ -1,0 +1,53 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":     7111,
+"roster": "special",
+"season":     2014,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       30,
+"league_id":        1,
+"player_game_count":        1,
+"pu_def_rush":        1,
+"season":     2014,
+"season_id":     2014,
+"team_name": "TB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":     3324,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       30,
+"position": "ST",
+"status": "P",
+"week":       17 
+},
+"game_id":     3324,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "86",
+"player_franchise_id":       30,
+"player_id":     7111,
+"position": "ST",
+"pu_def_rush":        1,
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

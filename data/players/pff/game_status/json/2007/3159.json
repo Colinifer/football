@@ -1,0 +1,75 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3159,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       23,
+"league_id":        1,
+"player_game_count":        2,
+"season":     2007,
+"season_id":     2007,
+"team_name": "OAK" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":      773,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       23,
+"position": "LG",
+"status": "P",
+"week":        3 
+},
+"game_id":      773,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "51",
+"player_franchise_id":       23,
+"player_id":     3159,
+"position": "LG",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "OAK",
+"game_id":      884,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       23,
+"position": "C",
+"status": "P",
+"week":       11 
+},
+"game_id":      884,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "51",
+"player_franchise_id":       23,
+"player_id":     3159,
+"position": "C",
+"status": "P",
+"week":       11 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

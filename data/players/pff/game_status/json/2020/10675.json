@@ -12,18 +12,18 @@
 },
 "week_totals": [
  {
- "assists":       12,
+ "assists":       14,
 "forced_fumbles":        1,
 "franchise_id":       11,
 "hits":        3,
 "interceptions":        0,
 "league_id":        1,
 "pass_break_ups":        0,
-"player_game_count":       15,
+"player_game_count":       16,
 "sacks":        1,
 "season":     2020,
 "season_id":     2020,
-"tackles":       31,
+"tackles":       33,
 "team_name": "DET" 
 } 
 ],
@@ -492,6 +492,37 @@
 "status": "P",
 "tackles":        1,
 "week":       16 
+},
+{
+ "assists":        2,
+"away_franchise_id":       18,
+"away_team_name": "MIN",
+"forced_fumbles":        0,
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":    18777,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       11,
+"position": "MLB",
+"status": "S",
+"week":       17 
+},
+"game_id":    18777,
+"hits":        0,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"interceptions":        0,
+"jersey_number": "59",
+"pass_break_ups":        0,
+"player_franchise_id":       11,
+"player_id":    10675,
+"position": "MLB",
+"sacks":        0,
+"status": "S",
+"tackles":        2,
+"week":       17 
 } 
 ] 
 },

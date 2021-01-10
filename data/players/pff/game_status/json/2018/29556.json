@@ -1,0 +1,155 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    29556,
+"roster": "offense",
+"season":     2018,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       16,
+"league_id":        1,
+"player_game_count":        1,
+"season":     2018,
+"season_id":     2018,
+"team_name": "KC" 
+},
+{
+ "franchise_id":       20,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2018,
+"season_id":     2018,
+"team_name": "NO" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":     9478,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       16,
+"position": "TE-R",
+"status": "P",
+"week":       10 
+},
+"game_id":     9478,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "82",
+"player_franchise_id":       16,
+"player_id":    29556,
+"position": "TE-R",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":    12971,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"player_franchise_id":       20,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+"game_id":    12971,
+"home_franchise_id":       15,
+"home_team_name": "JAX",
+"jersey_number": "83",
+"player_franchise_id":       20,
+"player_id":    29556,
+"position": "TE-R",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game": {
+ "away_franchise_id":        1,
+"away_team_name": "ARZ",
+"game_id":    12989,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "TE-R",
+"status": "P",
+"week":       -3 
+},
+"game_id":    12989,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "83",
+"player_franchise_id":       20,
+"player_id":    29556,
+"position": "TE-R",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game": {
+ "away_franchise_id":       20,
+"away_team_name": "NO",
+"game_id":    13011,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       20,
+"position": "TE-R",
+"status": "P",
+"week":       -4 
+},
+"game_id":    13011,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "83",
+"player_franchise_id":       20,
+"player_id":    29556,
+"position": "TE-R",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":    13024,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       20,
+"position": "TE-R",
+"status": "P",
+"week":       -5 
+},
+"game_id":    13024,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "83",
+"player_franchise_id":       20,
+"player_id":    29556,
+"position": "TE-R",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

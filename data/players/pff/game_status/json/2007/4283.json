@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     4283,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2007,
+"season_id":     2007,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":      876,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "RWR",
+"status": "P",
+"week":       11 
+},
+"game_id":      876,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "17",
+"player_franchise_id":        3,
+"player_id":     4283,
+"position": "RWR",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":      904,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":        3,
+"position": "LWR",
+"status": "P",
+"week":       12 
+},
+"game_id":      904,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "17",
+"player_franchise_id":        3,
+"player_id":     4283,
+"position": "LWR",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":      937,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "SRWR",
+"status": "P",
+"week":       14 
+},
+"game_id":      937,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "17",
+"player_franchise_id":        3,
+"player_id":     4283,
+"position": "SRWR",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":      973,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        3,
+"position": "RWR",
+"status": "P",
+"week":       17 
+},
+"game_id":      973,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "17",
+"player_franchise_id":        3,
+"player_id":     4283,
+"position": "RWR",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,53 @@
+{
+ "special_teams_summary": {
+ "subject": {
+ "eligible": "special",
+"grade_keys": [ "kickoff_kicker", "kickoff_coverage", "fgep_offense", "long_snap", "punt_coverage", "punt_return_blocking", "misc_st", "fgep_defense", "special_teams_penalty", "fgep_kicker", "punter", "kickoff_return_blocking", "punt_return", "kick_return" ],
+"league_id":        1,
+"player_id":    39090,
+"roster": "special",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        3,
+"league_id":        1,
+"player_game_count":        1,
+"pu_def_rush":        0,
+"season":     2020,
+"season_id":     2020,
+"team_name": "BLT" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game": {
+ "away_franchise_id":        3,
+"away_team_name": "BLT",
+"game_id":    18695,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"player_franchise_id":        3,
+"position": "LS",
+"status": "P",
+"week":       12 
+},
+"game_id":    18695,
+"home_franchise_id":       25,
+"home_team_name": "PIT",
+"jersey_number": "60",
+"player_franchise_id":        3,
+"player_id":    39090,
+"position": "LS",
+"pu_def_rush":        0,
+"status": "P",
+"week":       12 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts", "assists", "missed_tackles", "tackles" ] 
+}

@@ -1,0 +1,39 @@
+{
+ "offense_summary": {
+ "career": {
+ "player_id":     9017 
+},
+"seasons": [
+ {
+ "franchise_id":       31,
+"season":     2017,
+"season_id":     2017 
+},
+{
+ "franchise_id":       30,
+"season":     2016,
+"season_id":     2016 
+},
+{
+ "franchise_id": [       19,       24 ],
+"season":     2015,
+"season_id":     2015 
+},
+{
+ "franchise_id":        8,
+"season":     2014,
+"season_id":     2014 
+} 
+],
+"subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     9017,
+"roster": "offense",
+"secondary": false,
+"week": [] 
+} 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

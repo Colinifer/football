@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6329,
+"roster": "offense",
+"season":     2013,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       32,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2013,
+"season_id":     2013,
+"team_name": "WAS" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2679,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":       32,
+"position": "HB",
+"status": "P",
+"week":       -2 
+},
+"game_id":     2679,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "22",
+"player_franchise_id":       32,
+"player_id":     6329,
+"position": "HB",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2731,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":       32,
+"position": "HB",
+"status": "S",
+"week":       -5 
+},
+"game_id":     2731,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "22",
+"player_franchise_id":       32,
+"player_id":     6329,
+"position": "HB",
+"status": "S",
+"week":       -5 
+},
+{
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     2917,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "HB",
+"status": "P",
+"week":       12 
+},
+"game_id":     2917,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "22",
+"player_franchise_id":       32,
+"player_id":     6329,
+"position": "HB",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game": {
+ "away_franchise_id":       21,
+"away_team_name": "NYG",
+"game_id":     2932,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "HB",
+"status": "P",
+"week":       13 
+},
+"game_id":     2932,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "22",
+"player_franchise_id":       32,
+"player_id":     6329,
+"position": "HB",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game": {
+ "away_franchise_id":       16,
+"away_team_name": "KC",
+"game_id":     2943,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+"game_id":     2943,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "22",
+"player_franchise_id":       32,
+"player_id":     6329,
+"position": "HB",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     2266,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       18,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2007,
+"season_id":     2007,
+"team_name": "MIN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":      838,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "RT",
+"status": "P",
+"week":        8 
+},
+"game_id":      838,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "72",
+"player_franchise_id":       18,
+"player_id":     2266,
+"position": "RT",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":      912,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "C",
+"status": "P",
+"week":       13 
+},
+"game_id":      912,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "72",
+"player_franchise_id":       18,
+"player_id":     2266,
+"position": "C",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":      954,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "RT",
+"status": "P",
+"week":       15 
+},
+"game_id":      954,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "72",
+"player_franchise_id":       18,
+"player_id":     2266,
+"position": "RT",
+"status": "P",
+"week":       15 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

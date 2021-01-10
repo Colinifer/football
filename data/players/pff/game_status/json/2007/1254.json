@@ -1,0 +1,171 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     1254,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       18,
+"league_id":        1,
+"player_game_count":        6,
+"season":     2007,
+"season_id":     2007,
+"team_name": "MIN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":      737,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "RG",
+"status": "S",
+"week":        1 
+},
+"game_id":      737,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "79",
+"player_franchise_id":       18,
+"player_id":     1254,
+"position": "RG",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":      756,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":       18,
+"position": "RG",
+"status": "S",
+"week":        2 
+},
+"game_id":      756,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "79",
+"player_franchise_id":       18,
+"player_id":     1254,
+"position": "RG",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":      766,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       18,
+"position": "RG",
+"status": "S",
+"week":        3 
+},
+"game_id":      766,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "79",
+"player_franchise_id":       18,
+"player_id":     1254,
+"position": "RG",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":      785,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "RG",
+"status": "S",
+"week":        4 
+},
+"game_id":      785,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "79",
+"player_franchise_id":       18,
+"player_id":     1254,
+"position": "RG",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":      912,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "LG",
+"status": "P",
+"week":       13 
+},
+"game_id":      912,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "79",
+"player_franchise_id":       18,
+"player_id":     1254,
+"position": "LG",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":      954,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       18,
+"position": "RG",
+"status": "P",
+"week":       15 
+},
+"game_id":      954,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "79",
+"player_franchise_id":       18,
+"player_id":     1254,
+"position": "RG",
+"status": "P",
+"week":       15 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

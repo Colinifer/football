@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     3107,
+"roster": "offense",
+"season":     2007,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       14,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2007,
+"season_id":     2007,
+"team_name": "IND" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":      873,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"player_franchise_id":       14,
+"position": "LT",
+"status": "P",
+"week":       10 
+},
+"game_id":      873,
+"home_franchise_id":       27,
+"home_team_name": "SD",
+"jersey_number": "75",
+"player_franchise_id":       14,
+"player_id":     3107,
+"position": "LT",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":      893,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"player_franchise_id":       14,
+"position": "LT",
+"status": "P",
+"week":       12 
+},
+"game_id":      893,
+"home_franchise_id":        2,
+"home_team_name": "ATL",
+"jersey_number": "75",
+"player_franchise_id":       14,
+"player_id":     3107,
+"position": "LT",
+"status": "P",
+"week":       12 
+},
+{
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game": {
+ "away_franchise_id":       14,
+"away_team_name": "IND",
+"game_id":      937,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":       14,
+"position": "LT",
+"status": "P",
+"week":       14 
+},
+"game_id":      937,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "75",
+"player_franchise_id":       14,
+"player_id":     3107,
+"position": "LT",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game": {
+ "away_franchise_id":       31,
+"away_team_name": "TEN",
+"game_id":      978,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       14,
+"position": "RT",
+"status": "P",
+"week":       17 
+},
+"game_id":      978,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "75",
+"player_franchise_id":       14,
+"player_id":     3107,
+"position": "RT",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

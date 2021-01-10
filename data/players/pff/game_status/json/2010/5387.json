@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     5387,
+"roster": "offense",
+"season":     2010,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        9,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2010,
+"season_id":     2010,
+"team_name": "DAL" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     1740,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":        9,
+"position": "SRWR",
+"status": "P",
+"week":        1 
+},
+"game_id":     1740,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "85",
+"player_franchise_id":        9,
+"player_id":     5387,
+"position": "SRWR",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     1746,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "RWR",
+"status": "P",
+"week":        2 
+},
+"game_id":     1746,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "85",
+"player_franchise_id":        9,
+"player_id":     5387,
+"position": "RWR",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":     1914,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":        9,
+"position": "RWR",
+"status": "P",
+"week":       13 
+},
+"game_id":     1914,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "85",
+"player_franchise_id":        9,
+"player_id":     5387,
+"position": "RWR",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":     1933,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":        9,
+"position": "RWR",
+"status": "P",
+"week":       14 
+},
+"game_id":     1933,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "85",
+"player_franchise_id":        9,
+"player_id":     5387,
+"position": "RWR",
+"status": "P",
+"week":       14 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

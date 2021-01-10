@@ -1,0 +1,99 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      642,
+"roster": "offense",
+"season":     2009,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       29,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2009,
+"season_id":     2009,
+"team_name": "SEA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1500,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"player_franchise_id":       29,
+"position": "LT",
+"status": "S",
+"week":        8 
+},
+"game_id":     1500,
+"home_franchise_id":        9,
+"home_team_name": "DAL",
+"jersey_number": "77",
+"player_franchise_id":       29,
+"player_id":      642,
+"position": "LT",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":     1518,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       29,
+"position": "LT",
+"status": "S",
+"week":        9 
+},
+"game_id":     1518,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "77",
+"player_franchise_id":       29,
+"player_id":      642,
+"position": "LT",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game": {
+ "away_franchise_id":       29,
+"away_team_name": "SEA",
+"game_id":     1562,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"player_franchise_id":       29,
+"position": "TE-R",
+"status": "P",
+"week":       12 
+},
+"game_id":     1562,
+"home_franchise_id":       26,
+"home_team_name": "SL",
+"jersey_number": "77",
+"player_franchise_id":       29,
+"player_id":      642,
+"position": "TE-R",
+"status": "P",
+"week":       12 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

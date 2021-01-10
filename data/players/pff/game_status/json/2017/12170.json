@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    12170,
+"roster": "offense",
+"season":     2017,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        6,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2017,
+"season_id":     2017,
+"team_name": "CHI" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     7941,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"player_franchise_id":        6,
+"position": "RWR",
+"status": "P",
+"week":        2 
+},
+"game_id":     7941,
+"home_franchise_id":       30,
+"home_team_name": "TB",
+"jersey_number": "19",
+"player_franchise_id":        6,
+"player_id":    12170,
+"position": "RWR",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     8001,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"player_franchise_id":        6,
+"position": "LWR",
+"status": "S",
+"week":        6 
+},
+"game_id":     8001,
+"home_franchise_id":        3,
+"home_team_name": "BLT",
+"jersey_number": "19",
+"player_franchise_id":        6,
+"player_id":    12170,
+"position": "LWR",
+"status": "S",
+"week":        6 
+},
+{
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game": {
+ "away_franchise_id":        5,
+"away_team_name": "CAR",
+"game_id":     8017,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "LWR",
+"status": "S",
+"week":        7 
+},
+"game_id":     8017,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "19",
+"player_franchise_id":        6,
+"player_id":    12170,
+"position": "LWR",
+"status": "S",
+"week":        7 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     8033,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":        6,
+"position": "LWR",
+"status": "S",
+"week":        8 
+},
+"game_id":     8033,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "19",
+"player_franchise_id":        6,
+"player_id":    12170,
+"position": "LWR",
+"status": "S",
+"week":        8 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":     8184,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+"game_id":     8184,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "19",
+"player_franchise_id":        6,
+"player_id":    12170,
+"position": "LWR",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     8205,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"player_franchise_id":        6,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+"game_id":     8205,
+"home_franchise_id":        1,
+"home_team_name": "ARZ",
+"jersey_number": "19",
+"player_franchise_id":        6,
+"player_id":    12170,
+"position": "LWR",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game": {
+ "away_franchise_id":        6,
+"away_team_name": "CHI",
+"game_id":     8224,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"player_franchise_id":        6,
+"position": "LWR",
+"status": "P",
+"week":       -4 
+},
+"game_id":     8224,
+"home_franchise_id":       31,
+"home_team_name": "TEN",
+"jersey_number": "19",
+"player_franchise_id":        6,
+"player_id":    12170,
+"position": "LWR",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game": {
+ "away_franchise_id":        8,
+"away_team_name": "CLV",
+"game_id":     8235,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"player_franchise_id":        6,
+"position": "LWR",
+"status": "P",
+"week":       -5 
+},
+"game_id":     8235,
+"home_franchise_id":        6,
+"home_team_name": "CHI",
+"jersey_number": "19",
+"player_franchise_id":        6,
+"player_id":    12170,
+"position": "LWR",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

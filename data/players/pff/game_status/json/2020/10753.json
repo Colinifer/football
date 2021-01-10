@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    10753,
+"roster": "offense",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       12,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2020,
+"season_id":     2020,
+"team_name": "GB" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    18539,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"player_franchise_id":       12,
+"position": "HB",
+"status": "P",
+"week":        1 
+},
+"game_id":    18539,
+"home_franchise_id":       18,
+"home_team_name": "MIN",
+"jersey_number": "32",
+"player_franchise_id":       12,
+"player_id":    10753,
+"position": "HB",
+"status": "P",
+"week":        1 
+},
+{
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game": {
+ "away_franchise_id":       11,
+"away_team_name": "DET",
+"game_id":    18551,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "HB",
+"status": "P",
+"week":        2 
+},
+"game_id":    18551,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "32",
+"player_franchise_id":       12,
+"player_id":    10753,
+"position": "HB",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    18578,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"player_franchise_id":       12,
+"position": "HB",
+"status": "P",
+"week":        3 
+},
+"game_id":    18578,
+"home_franchise_id":       20,
+"home_team_name": "NO",
+"jersey_number": "32",
+"player_franchise_id":       12,
+"player_id":    10753,
+"position": "HB",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":    18595,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+"game_id":    18595,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "32",
+"player_franchise_id":       12,
+"player_id":    10753,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":    18644,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "HB",
+"status": "P",
+"week":        8 
+},
+"game_id":    18644,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "32",
+"player_franchise_id":       12,
+"player_id":    10753,
+"position": "HB",
+"status": "P",
+"week":        8 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":    18652,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"player_franchise_id":       12,
+"position": "HB",
+"status": "P",
+"week":        9 
+},
+"game_id":    18652,
+"home_franchise_id":       28,
+"home_team_name": "SF",
+"jersey_number": "32",
+"player_franchise_id":       12,
+"player_id":    10753,
+"position": "HB",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game": {
+ "away_franchise_id":       15,
+"away_team_name": "JAX",
+"game_id":    18670,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "HB",
+"status": "P",
+"week":       10 
+},
+"game_id":    18670,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "32",
+"player_franchise_id":       12,
+"player_id":    10753,
+"position": "HB",
+"status": "P",
+"week":       10 
+},
+{
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game": {
+ "away_franchise_id":       24,
+"away_team_name": "PHI",
+"game_id":    18720,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"player_franchise_id":       12,
+"position": "HB",
+"status": "P",
+"week":       13 
+},
+"game_id":    18720,
+"home_franchise_id":       12,
+"home_team_name": "GB",
+"jersey_number": "32",
+"player_franchise_id":       12,
+"player_id":    10753,
+"position": "HB",
+"status": "P",
+"week":       13 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

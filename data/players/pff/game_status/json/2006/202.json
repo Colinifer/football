@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":      202,
+"roster": "offense",
+"season":     2006,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        4,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2006,
+"season_id":     2006,
+"team_name": "BUF" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     3759,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "S",
+"week":        1 
+},
+"game_id":     3759,
+"home_franchise_id":       19,
+"home_team_name": "NE",
+"jersey_number": "58",
+"player_franchise_id":        4,
+"player_id":      202,
+"position": "RG",
+"status": "S",
+"week":        1 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     3770,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "S",
+"week":        2 
+},
+"game_id":     3770,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "58",
+"player_franchise_id":        4,
+"player_id":      202,
+"position": "RG",
+"status": "S",
+"week":        2 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     3776,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "S",
+"week":        3 
+},
+"game_id":     3776,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "58",
+"player_franchise_id":        4,
+"player_id":      202,
+"position": "RG",
+"status": "S",
+"week":        3 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":     3792,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "S",
+"week":        4 
+},
+"game_id":     3792,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "58",
+"player_franchise_id":        4,
+"player_id":      202,
+"position": "RG",
+"status": "S",
+"week":        4 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     3822,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "S",
+"week":        6 
+},
+"game_id":     3822,
+"home_franchise_id":       11,
+"home_team_name": "DET",
+"jersey_number": "58",
+"player_franchise_id":        4,
+"player_id":      202,
+"position": "RG",
+"status": "S",
+"week":        6 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     3834,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "S",
+"week":        7 
+},
+"game_id":     3834,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "58",
+"player_franchise_id":        4,
+"player_id":      202,
+"position": "RG",
+"status": "S",
+"week":        7 
+},
+{
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game": {
+ "away_franchise_id":       12,
+"away_team_name": "GB",
+"game_id":     3869,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "S",
+"week":        9 
+},
+"game_id":     3869,
+"home_franchise_id":        4,
+"home_team_name": "BUF",
+"jersey_number": "58",
+"player_franchise_id":        4,
+"player_id":      202,
+"position": "RG",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game": {
+ "away_franchise_id":        4,
+"away_team_name": "BUF",
+"game_id":     3884,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":        4,
+"position": "RG",
+"status": "S",
+"week":       10 
+},
+"game_id":     3884,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "58",
+"player_franchise_id":        4,
+"player_id":      202,
+"position": "RG",
+"status": "S",
+"week":       10 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

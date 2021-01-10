@@ -1,0 +1,299 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    45741,
+"roster": "offense",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       22,
+"league_id":        1,
+"player_game_count":        3,
+"season":     2020,
+"season_id":     2020,
+"team_name": "NYJ" 
+},
+{
+ "franchise_id":       27,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2020,
+"season_id":     2020,
+"team_name": "LAC" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":    18554,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        2 
+},
+"game_id":    18554,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":        2 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":    18573,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        3 
+},
+"game_id":    18573,
+"home_franchise_id":       14,
+"home_team_name": "IND",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":    18580,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"player_franchise_id":       22,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+"game_id":    18580,
+"home_franchise_id":       22,
+"home_team_name": "NYJ",
+"jersey_number": "29",
+"player_franchise_id":       22,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":        4 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":    18620,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "S",
+"week":       11 
+},
+"game_id":    18620,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "31",
+"player_franchise_id":       27,
+"player_id":    45741,
+"position": "HB",
+"status": "S",
+"week":       11 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":    18630,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "S",
+"week":       10 
+},
+"game_id":    18630,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "31",
+"player_franchise_id":       27,
+"player_id":    45741,
+"position": "HB",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":       23,
+"away_team_name": "LV",
+"game": {
+ "away_franchise_id":       23,
+"away_team_name": "LV",
+"game_id":    18661,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "P",
+"week":        9 
+},
+"game_id":    18661,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "31",
+"player_franchise_id":       27,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":        9 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":    18721,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "P",
+"week":       13 
+},
+"game_id":    18721,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "31",
+"player_franchise_id":       27,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game": {
+ "away_franchise_id":        2,
+"away_team_name": "ATL",
+"game_id":    18735,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+"game_id":    18735,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "31",
+"player_franchise_id":       27,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":    18740,
+"home_franchise_id":       23,
+"home_team_name": "LV",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+"game_id":    18740,
+"home_franchise_id":       23,
+"home_team_name": "LV",
+"jersey_number": "31",
+"player_franchise_id":       27,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":       15 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":    18760,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "P",
+"week":       16 
+},
+"game_id":    18760,
+"home_franchise_id":       27,
+"home_team_name": "LAC",
+"jersey_number": "31",
+"player_franchise_id":       27,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":       16 
+},
+{
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game": {
+ "away_franchise_id":       27,
+"away_team_name": "LAC",
+"game_id":    18780,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"player_franchise_id":       27,
+"position": "HB",
+"status": "P",
+"week":       17 
+},
+"game_id":    18780,
+"home_franchise_id":       16,
+"home_team_name": "KC",
+"jersey_number": "31",
+"player_franchise_id":       27,
+"player_id":    45741,
+"position": "HB",
+"status": "P",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,219 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":     6369,
+"roster": "offense",
+"season":     2011,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       32,
+"league_id":        1,
+"player_game_count":        8,
+"season":     2011,
+"season_id":     2011,
+"team_name": "WAS" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game": {
+ "away_franchise_id":       28,
+"away_team_name": "SF",
+"game_id":     2182,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":        9 
+},
+"game_id":     2182,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "79",
+"player_franchise_id":       32,
+"player_id":     6369,
+"position": "LG",
+"status": "S",
+"week":        9 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2197,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":       10 
+},
+"game_id":     2197,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "79",
+"player_franchise_id":       32,
+"player_id":     6369,
+"position": "LG",
+"status": "S",
+"week":       10 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2231,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":       12 
+},
+"game_id":     2231,
+"home_franchise_id":       29,
+"home_team_name": "SEA",
+"jersey_number": "79",
+"player_franchise_id":       32,
+"player_id":     6369,
+"position": "LG",
+"status": "S",
+"week":       12 
+},
+{
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game": {
+ "away_franchise_id":       22,
+"away_team_name": "NYJ",
+"game_id":     2244,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":       13 
+},
+"game_id":     2244,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "79",
+"player_franchise_id":       32,
+"player_id":     6369,
+"position": "LG",
+"status": "S",
+"week":       13 
+},
+{
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game": {
+ "away_franchise_id":       19,
+"away_team_name": "NE",
+"game_id":     2263,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":       14 
+},
+"game_id":     2263,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "79",
+"player_franchise_id":       32,
+"player_id":     6369,
+"position": "LG",
+"status": "S",
+"week":       14 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2276,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":       15 
+},
+"game_id":     2276,
+"home_franchise_id":       21,
+"home_team_name": "NYG",
+"jersey_number": "79",
+"player_franchise_id":       32,
+"player_id":     6369,
+"position": "LG",
+"status": "S",
+"week":       15 
+},
+{
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game": {
+ "away_franchise_id":       18,
+"away_team_name": "MIN",
+"game_id":     2292,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":       16 
+},
+"game_id":     2292,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "79",
+"player_franchise_id":       32,
+"player_id":     6369,
+"position": "LG",
+"status": "S",
+"week":       16 
+},
+{
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game": {
+ "away_franchise_id":       32,
+"away_team_name": "WAS",
+"game_id":     2303,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":       32,
+"position": "LG",
+"status": "S",
+"week":       17 
+},
+"game_id":     2303,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "79",
+"player_franchise_id":       32,
+"player_id":     6369,
+"position": "LG",
+"status": "S",
+"week":       17 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,147 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    46426,
+"roster": "offense",
+"season":     2020,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":        7,
+"league_id":        1,
+"player_game_count":        5,
+"season":     2020,
+"season_id":     2020,
+"team_name": "CIN" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":    18571,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"player_franchise_id":        7,
+"position": "QB",
+"status": "P",
+"week":        3 
+},
+"game_id":    18571,
+"home_franchise_id":       24,
+"home_team_name": "PHI",
+"jersey_number": "05",
+"player_franchise_id":        7,
+"player_id":    46426,
+"position": "QB",
+"status": "P",
+"week":        3 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":    18688,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"player_franchise_id":        7,
+"position": "QB",
+"status": "P",
+"week":       11 
+},
+"game_id":    18688,
+"home_franchise_id":       32,
+"home_team_name": "WAS",
+"jersey_number": "05",
+"player_franchise_id":        7,
+"player_id":    46426,
+"position": "QB",
+"status": "P",
+"week":       11 
+},
+{
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game": {
+ "away_franchise_id":        7,
+"away_team_name": "CIN",
+"game_id":    18713,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"player_franchise_id":        7,
+"position": "QB",
+"status": "P",
+"week":       13 
+},
+"game_id":    18713,
+"home_franchise_id":       17,
+"home_team_name": "MIA",
+"jersey_number": "05",
+"player_franchise_id":        7,
+"player_id":    46426,
+"position": "QB",
+"status": "P",
+"week":       13 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":    18727,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "QB",
+"status": "P",
+"week":       14 
+},
+"game_id":    18727,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "05",
+"player_franchise_id":        7,
+"player_id":    46426,
+"position": "QB",
+"status": "P",
+"week":       14 
+},
+{
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game": {
+ "away_franchise_id":       25,
+"away_team_name": "PIT",
+"game_id":    18755,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"player_franchise_id":        7,
+"position": "QB",
+"status": "S",
+"week":       15 
+},
+"game_id":    18755,
+"home_franchise_id":        7,
+"home_team_name": "CIN",
+"jersey_number": "05",
+"player_franchise_id":        7,
+"player_id":    46426,
+"position": "QB",
+"status": "S",
+"week":       15 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}

@@ -1,0 +1,123 @@
+{
+ "offense_summary": {
+ "subject": {
+ "eligible": "offense",
+"grade_keys": [ "offense", "offense_penalty", "tackle", "hands", "screen_block", "run", "pass_block", "run_block", "pass_route", "pass", "snap" ],
+"league_id":        1,
+"player_id":    46454,
+"roster": "offense",
+"season":     2019,
+"secondary": false,
+"week": [] 
+},
+"week_totals": [
+ {
+ "franchise_id":       26,
+"league_id":        1,
+"player_game_count":        4,
+"season":     2019,
+"season_id":     2019,
+"team_name": "LA" 
+} 
+],
+"weeks": [
+ {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":    14851,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"player_franchise_id":       26,
+"position": "QB",
+"status": "P",
+"week":       -2 
+},
+"game_id":    14851,
+"home_franchise_id":       23,
+"home_team_name": "OAK",
+"jersey_number": "09",
+"player_franchise_id":       26,
+"player_id":    46454,
+"position": "QB",
+"status": "P",
+"week":       -2 
+},
+{
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game": {
+ "away_franchise_id":        9,
+"away_team_name": "DAL",
+"game_id":    14865,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       26,
+"position": "QB",
+"status": "P",
+"week":       -3 
+},
+"game_id":    14865,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"jersey_number": "09",
+"player_franchise_id":       26,
+"player_id":    46454,
+"position": "QB",
+"status": "P",
+"week":       -3 
+},
+{
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game": {
+ "away_franchise_id":       10,
+"away_team_name": "DEN",
+"game_id":    14882,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"player_franchise_id":       26,
+"position": "QB",
+"status": "P",
+"week":       -4 
+},
+"game_id":    14882,
+"home_franchise_id":       26,
+"home_team_name": "LA",
+"jersey_number": "09",
+"player_franchise_id":       26,
+"player_id":    46454,
+"position": "QB",
+"status": "P",
+"week":       -4 
+},
+{
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game": {
+ "away_franchise_id":       26,
+"away_team_name": "LA",
+"game_id":    14896,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"player_franchise_id":       26,
+"position": "QB",
+"status": "P",
+"week":       -5 
+},
+"game_id":    14896,
+"home_franchise_id":       13,
+"home_team_name": "HST",
+"jersey_number": "09",
+"player_franchise_id":       26,
+"player_id":    46454,
+"position": "QB",
+"status": "P",
+"week":       -5 
+} 
+] 
+},
+"restricted": [ "first_downs", "penalties", "declined_penalties", "grades", "snap_counts" ] 
+}
