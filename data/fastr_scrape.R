@@ -40,6 +40,7 @@ pbp_df %>%
 
 # Bind the new PBP scrape
 pbp_df <- rbind(pbp_df %>% 
+                  select(-year) %>% 
                   filter(!(game_id %in% new_scrape_ids)), 
                 new_scrape_df
                 )
