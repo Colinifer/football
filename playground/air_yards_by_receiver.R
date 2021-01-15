@@ -1,5 +1,10 @@
-defteam_rec <- full_pbp_df %>% 
-  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+defteam_rec <- pbp_ds %>% 
+  filter(season == current_season & 
+           pass_attempt==1 & 
+           season_type=='REG' & 
+           two_point_attempt==0 & 
+           !is.na(receiver_id)
+         ) %>% 
   select(season, 
          game_id, 
          play_id, 
@@ -14,6 +19,7 @@ defteam_rec <- full_pbp_df %>%
          pass_location,
          cp,
          pass_touchdown) %>% 
+  collect() %>% 
   # filter(!is.na(receiver)) %>% 
   # filter(defteam == 'LV') %>%
   group_by(receiver_player_id) %>% 
@@ -99,8 +105,13 @@ defteam_rec %>%
 
 
 # posteam_rec <- 
-team_pass_totals <- full_pbp_df %>% 
-  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+team_pass_totals <- pbp_ds %>% 
+  filter(season == current_season & 
+           pass_attempt==1 & 
+           season_type=='REG' 
+         & two_point_attempt==0 
+         & !is.na(receiver_id)
+         ) %>% 
   select(season, 
          game_id, 
          play_id, 
@@ -115,6 +126,7 @@ team_pass_totals <- full_pbp_df %>%
          pass_location,
          cp,
          pass_touchdown) %>% 
+  collect() %>% 
   # filter(!is.na(receiver)) %>% 
   # filter(posteam == 'LAC') %>%
   group_by(posteam) %>% 
@@ -163,8 +175,13 @@ team_pass_totals <- full_pbp_df %>%
   ) %>% rename(team = posteam)
   
   
-rec_totals <- full_pbp_df %>% 
-  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+rec_totals <- pbp_ds %>% 
+  filter(season == current_season & 
+           pass_attempt==1 & 
+           season_type=='REG' & 
+           two_point_attempt==0 & 
+           !is.na(receiver_id)
+         ) %>% 
   select(season, 
          game_id, 
          play_id, 
@@ -179,6 +196,7 @@ rec_totals <- full_pbp_df %>%
          pass_location,
          cp,
          pass_touchdown) %>% 
+  collect() %>% 
   # filter(!is.na(receiver)) %>% 
   # filter(posteam == 'LAC') %>%
   group_by(receiver_player_id) %>% 
@@ -238,9 +256,13 @@ rec_totals <- full_pbp_df %>%
     air_yards_pg_market_share = air_yards_pg / air_yards_pg_market_cap %>% as.integer(),
     wopr = (1.5 * targets_market_share) + (0.7 * air_yards_market_share) %>% as.integer()
   ) %>% 
-  left_join(full_pbp_df %>% 
-              select(-game_id_SR) %>% 
-              left_join(sr_part_df %>% 
+  left_join(sr_pbp_df %>% 
+              # filter(season == current_season) %>% 
+              select(-game_id_SR) %>%
+              # collect() %>% 
+              left_join(part_ds %>% 
+                          filter(year == current_season) %>% 
+                          collect() %>% 
                           left_join(sr_games_df) %>% 
                           mutate(play_id = as.integer(play_id),
                                  team = ifelse(team == 'JAC', 'JAX', team)), 

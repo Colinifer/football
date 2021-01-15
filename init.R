@@ -65,6 +65,8 @@ library("nflfastR")
 
 rm(pkgs, installed_packages)
 
+options(tibble.print_min=25)
+
 `%notin%` <- Negate(`%in%`)
 
 # source("../initR/init.R")
@@ -102,7 +104,7 @@ roster_df <-
   ) %>%
   as_tibble()
 
-schedule_df <- fast_scraper_schedules(seasons = year, pp = TRUE)
+schedule_df <- fast_scraper_schedules(seasons = year, pp = FALSE)
 
 schedule_df %>% 
   saveRDS(glue('data/schedules/sched_{year}.rds'))

@@ -11,6 +11,7 @@ current_season <- year
 # lapply(2007:2019, function(season){
   pbp_df <- pbp_ds %>% 
     filter(season >= current_season & 
+             season_type == 'REG' &
              game_id != '2020_12_NO_DEN') %>% # THis game is pointless
     collect() %>% 
     decode_player_ids(fast = TRUE) %>% 

@@ -11,7 +11,8 @@ current_season <- year
 
 # Download play-by-play data, decode player IDs, and 
 pbp_df <- pbp_ds %>% 
-  filter(season == current_season) %>% 
+  filter(season == current_season &
+           season_type == 'REG') %>% 
   collect() %>% 
   decode_player_ids(fast = TRUE) %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),

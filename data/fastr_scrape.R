@@ -19,7 +19,8 @@ new_scrape_df <- schedule_df %>%
              collect() %>% 
              unique() %>% 
              pull(game_id))) &
-           gameday <= Sys.Date()) %>% 
+           gameday <= Sys.Date() &
+           game_id != '2020_12_NO_DEN') %>% 
   pull(game_id) %>% 
   fast_scraper(pp = TRUE) %>% 
   clean_pbp() %>% 
@@ -40,7 +41,7 @@ pbp_df %>%
 
 # Bind the new PBP scrape
 pbp_df <- rbind(pbp_df %>% 
-                  select(-year) %>% 
+                  select(-year) %>%
                   filter(!(game_id %in% new_scrape_ids)), 
                 new_scrape_df
                 )
