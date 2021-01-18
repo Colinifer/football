@@ -272,7 +272,7 @@ current_season <- year
     )
   
   p_desktop <- p +
-    facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 5) +
+    facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 6) +
     # coord_fixed(ratio=35) +
     theme_cw +
     theme(
@@ -294,7 +294,7 @@ current_season <- year
     )
   
   p_mobile <- p +
-    facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 2) +
+    facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 3) +
     theme_cw +
     theme(
       axis.title = element_text(size = 8),

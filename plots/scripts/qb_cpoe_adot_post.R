@@ -207,7 +207,7 @@ p <-
 
 p_desktop <- p +
   # Use the named character vector to replace CPOE rank with Player name
-  facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 5) +
+  facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 6) +
   theme_cw +
   theme(
     axis.title = element_text(size = 8),
@@ -230,7 +230,7 @@ p_desktop <- p +
 # Mobile
 p_mobile <- p +
   # Use the named character vector to replace CPOE rank with Player name
-  facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 2) +
+  facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 3) +
   theme_cw +
   theme(
     axis.title = element_text(size = 8),
