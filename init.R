@@ -162,7 +162,7 @@ matchup_df <- schedule_df %>%
 sr_games_df <- readRDS('data/schedules/sportradar/games_2020.rds')
 
 # source('data/master_sr_pbp.R')
-pbp_df <- readRDS(glue('data/pbp/play_by_play_{year}.rds'))
+pbp_df <- readRDS(glue('data/pbp/play_by_play_{current_season}.rds'))
 pbp_df %>% select(game_date) %>% arrange(game_date) %>%  unique() %>%  tail()
 pbp_df %>% select(game_id) %>% unique() %>% tail()
 # pbp_df <-

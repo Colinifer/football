@@ -40,16 +40,18 @@ pbp_df %>%
   names()
 
 # Bind the new PBP scrape
-pbp_df <- rbind(pbp_df %>% 
+pbp_df <- rbind(pbp_ds %>% 
+                  filter(season == current_season) %>% 
+                  collect() %>% 
                   select(-year) %>%
                   filter(!(game_id %in% new_scrape_ids)), 
                 new_scrape_df
                 )
 
 pbp_df %>% 
-  saveRDS(glue('data/pbp/play_by_play_{year}.rds'))
+  saveRDS(glue('data/pbp/play_by_play_{current_season}.rds'))
 pbp_df %>% 
-  write_parquet(glue('data/pbp/fastr/{year}/pbp_{year}.parquet'))
+  write_parquet(glue('data/pbp/fastr/{year}/pbp_{current_season}.parquet'))
 
 
 # Add XYAC ----------------------------------------------------------------
@@ -83,7 +85,7 @@ pbp_game_ids <- pbp_df %>%
   unique()
 
 # Read XYAC dataframe
-pbp_xyac_df <- readRDS(glue('data/pbp/xyac_play_by_play_{year}.rds'))
+pbp_xyac_df <- readRDS(glue('data/pbp/xyac_play_by_play_{current_season}.rds'))
 
 # Get all XYAC game IDs
 xyac_game_ids <- pbp_xyac_df %>% 
@@ -103,9 +105,9 @@ pbp_xyac_df <- rbind(pbp_xyac_df %>%
                        add_xyac_dist)
 
 pbp_xyac_df %>% 
-  saveRDS(glue('data/pbp/xyac_play_by_play_{year}.rds'))
+  saveRDS(glue('data/pbp/xyac_play_by_play_{current_season}.rds'))
 pbp_xyac_df %>% 
-  write_parquet(glue('data/pbp/xyac/{year}/xyac_pbp_{year}.parquet'))
+  write_parquet(glue('data/pbp/xyac/{year}/xyac_pbp_{current_season}.parquet'))
 
 rm(
   new_scrape_df,
