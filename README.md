@@ -3,7 +3,7 @@ README
 
 ## Setup/Installation
 
-Most of this repo relies on a personal package I created (![InitR](https://github.com/Colinifer/initR) and
+Most of this repo relies on a personal package I created ![InitR](https://github.com/Colinifer/initR) and
 ![nflfastR](https://github.com/mrcaseb/nflfastR) but with some simple
 setup, most of the scripts will automatically render visualizations
 from NFL data.
