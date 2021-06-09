@@ -3,109 +3,70 @@ README
 
 ## Setup/Installation
 
-Most of this repo relies on a personal package I created ![InitR](https://github.com/Colinifer/initR) and
-![nflfastR](https://github.com/mrcaseb/nflfastR) but with some simple
+Most of this repo relies on a personal package I created [InitR](https://github.com/Colinifer/initR) ([@mrcaseb](https://twitter.com/mrcaseb/) and [@benbbaldwin](https://twitter.com/benbbaldwin/)) and
+[nflfastR](https://twitter.com/mrcaseb/) but with some simple
 setup, most of the scripts will automatically render visualizations
 from NFL data.
 
-## Create standard session objects/variables
+`InitR` contains personal functions to help connect to my private PostgreSQL instance. These can be swapped using the `DBI` package in the `tidyverse`.
 
-The functions below help to load standard data and create standard
-environment variables used in other scripts.
+# Plots
 
-``` r
-fx.get_sleeper_api_players()
-fx.get_espn_players()
+## Team Wins
+### Team wins over/under expected
 
-# nflfastR data
-roster_df <-
-  readRDS(
-    url(
-      'https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true'
-    )
-  ) %>%
-  as_tibble()
+Script: [link](plots/scripts/wins_above_expectation.R)
 
-schedule_df <- fast_scraper_schedules(seasons = year, pp = TRUE)
+Which teams has the luckiest/unluckiest records based on W-L and percentage of snaps above 50% on [@nflfastR's](https://github.com/nflverse/nflfastR) win probability model?
 
-matchup_df <- schedule_df %>% 
-  mutate(posteam = home_team,
-         oppteam = away_team) %>%
-  select(
-    game_id,
-    season,
-    game_type,
-    week,
-    gameday,
-    weekday,
-    gametime,
-    posteam,
-    oppteam,
-    away_team,
-    home_team,
-    away_score,
-    home_score,
-    home_result,
-    stadium,
-    location,
-    roof,
-    surface,
-    old_game_id
-  ) %>% rbind(
-    schedule_df %>%
-      mutate(posteam = away_team,
-             oppteam = home_team) %>%
-      select(
-        game_id,
-        season,
-        game_type,
-        week,
-        gameday,
-        weekday,
-        gametime,
-        posteam,
-        oppteam,
-        away_team,
-        home_team,
-        away_score,
-        home_score,
-        home_result,
-        stadium,
-        location,
-        roof,
-        surface,
-        old_game_id
-      )
-  ) %>% arrange(old_game_id)
+| | |
+|:-------------------------:|:-------------------------:|
+|<img src="plots/desktop/team_wins/wins_above_expected_scatter_2020.png" width="100%" style="display: block; margin: auto;" /> | <img src="plots/desktop/team_wins/wins_above_expected_bar_2020.png" width="100%" style="display: block; margin: auto;" />|
+<hr>
 
-sr_games_df <- readRDS('data/schedules/sportradar/games_2020.rds')
+## Offensive Passing Efficiency
+### QB Passing Efficiency as a function of throwing distance (air yards)
 
-# source('data/master_sr_pbp.R')
-pbp_df <- readRDS(glue('data/pbp/play_by_play_{year}.rds'))
-```
+QB completion percentage over expected (CPOE) by depth of target (DOT). A higher CPOE implies the QB completed more passes at the specified range downfield.
 
-Loading parquet/arrow files is fastest for multiple seasons of data.
+Script: [link](plots/scripts/qb_cpoe_adot.R)
+<img src="plots/desktop/qb_cpoe_vs_dot/qb_cpoe_vs_dot_2020.png" width="100%" style="display: block; margin: auto;" />
+<hr>
 
-``` r
-part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
-pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
-xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
-sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
-```
+### QB CPOE and EPA per dropback by game
 
-## Plots
+A higher CPOE and EPA means the QB completed more passes and a higher expected points per dropback.
 
-Team wins over/under expected
-<img src="https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/team_wins/wins_above_expected_scatter_2020.png" width="100%" style="display: block; margin: auto;" />
-
-
-QB Passing Efficiency as a function of throwing distance (air yards)
-<img src="https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/qb_cpoe_vs_dot/qb_cpoe_vs_dot_2020.png" width="100%" style="display: block; margin: auto;" />
-
-
-QB CPOE (completion percentage over expected) and EPA (expected points added) by game
+Script: [link](https://github.com/Colinifer/football/blob/master/plots/scripts/qb_epa_cpoe.R)
 <img src="https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/qb_epa_vs_cpoe/qb_epa_vs_cpoe_2020.png" width="100%" style="display: block; margin: auto;" />
+<hr>
 
+### QB Passing Efficiency compared to ESPN's O-line Pass Block Win Rate
 
-QB Passing Efficiency compared to ESPN's O-line pass block win rate
+DAKOTA is a composite score created by [Ben Baldwin](https://twitter.com/benbbaldwin) of a QB's completion percentage over expected (CPOE) and expected points added (EPA) per dropback. PBWR is a metric created by ESPN ([Seth Walder et al.](https://www.espn.com/nfl/story/_/id/26888038/pass-blocking-matters-more-pass-rushing-prove-it))
+
+Script: [link](https://github.com/Colinifer/football/blob/master/plots/scripts/qb_efficiency.R)
 <img src="https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/qb_passing/pb_pass_dakota_pbwr_2020.png" width="100%" style="display: block; margin: auto;" />
+<hr>
+
+## Defensive Passing Efficiency
+### Defensive Passing Efficiency as a function of throwing distance (air yards).
+
+A lower CPOE means the defense allowed fewer completions than expected per opposing dropback.
+
+Script: [link](https://github.com/Colinifer/football/blob/master/plots/scripts/defense_cpoe_adot.R)
+<img src="https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/defense/defense_cpoe_vs_dot/defense_cpoe_vs_dot_2020.png" width="100%" style="display: block; margin: auto;" />
+<hr>
+
+### Defensive CPOE and EPA allowed per dropback by game.
+
+A lower CPOE and EPA means the defense allowed fewer completions and EPA per opposing dropback.
+
+Script: [link](https://github.com/Colinifer/football/blob/master/plots/scripts/defense_epa_cpoe.R)
+<img src="https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/defense/defense_epa_vs_cpoe/defense_epa_vs_cpoe_2020.png" width="100%" style="display: block; margin: auto;" />
+<hr>
+
+### Defensive CAYOE
+
+Script: [link](https://github.com/Colinifer/football/blob/master/plots/scripts/defense_cayoe.R)
+<img src="https://raw.githubusercontent.com/Colinifer/football/master/plots/desktop/defense/defense_cayoe_2020.png" width="100%" style="display: block; margin: auto;" />
