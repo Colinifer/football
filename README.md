@@ -3,12 +3,9 @@ README
 
 ## Setup/Installation
 
-Most of this repo relies on a personal package I created [InitR](https://github.com/Colinifer/initR) ([@mrcaseb](https://twitter.com/mrcaseb/) and [@benbbaldwin](https://twitter.com/benbbaldwin/)) and
-[nflfastR](https://twitter.com/mrcaseb/) but with some simple
-setup, most of the scripts will automatically render visualizations
-from NFL data.
-
-`InitR` contains personal functions to help connect to my private PostgreSQL instance. These can be swapped using the `DBI` package in the `tidyverse`.
+Most of this repo relies on a personal package I created [InitR](https://github.com/Colinifer/initR) and
+[nflfastR](https://twitter.com/mrcaseb/) (by: [@mrcaseb](https://twitter.com/mrcaseb/), [@benbbaldwin](https://twitter.com/benbbaldwin/)). With some simple
+setup, most of the scripts will automatically render visualizations from NFL play-by-play data.
 
 # Plots
 
