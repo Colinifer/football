@@ -14,11 +14,10 @@ from NFL data.
 
 ## Team Wins
 ### Team wins over/under expected
-
-Script: [link](plots/scripts/wins_above_expectation.R)
-
 Which teams has the luckiest/unluckiest records based on W-L and percentage of snaps above 50% on [@nflfastR's](https://github.com/nflverse/nflfastR) win probability model?
 
+
+Script: [link](plots/scripts/wins_above_expectation.R)
 | | |
 |:-------------------------:|:-------------------------:|
 |<img src="plots/desktop/team_wins/wins_above_expected_scatter_2020.png" width="100%" style="display: block; margin: auto;" /> | <img src="plots/desktop/team_wins/wins_above_expected_bar_2020.png" width="100%" style="display: block; margin: auto;" />|
