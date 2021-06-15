@@ -1,6 +1,7 @@
 # Packages & Init Setup ---------------------------------------------------
 
 # devtools::install_github("mrcaseb/nflfastR")
+# devtools::install_github(repo = "saiemgilani/cfbfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
 # devtools::install_github("jthomasmock/espnscrapeR")
 # devtools::install_github("colinifer/initR", auth_token = Sys.getenv('authtoken'))
@@ -9,14 +10,15 @@ pkgs <- c(
   'devtools',
   'tidyverse',
   'nflfastR',
+  'cfbfastR',
   'gsisdecoder',
   'espnscrapeR',
   'DBI',
   'odbc',
   'RPostgres',
-  # 'RMariaDB',
   'arrow',
   'shiny',
+  'qs',
   'distill',
   'httr',
   'readr',
@@ -78,46 +80,24 @@ year <- fx.get_year()
 
 # Create standard objects -------------------------------------------------
 
-# Connect to DB
-con <- dbConnect(
-  RPostgres::Postgres(),
-  host = ifelse(
-    fromJSON(
-      readLines("http://api.hostip.info/get_json.php",
-                warn = F)
-    )$ip == Sys.getenv('ip'),
-    Sys.getenv('local'),
-    Sys.getenv('ip')
-  ),
-  port = Sys.getenv('postgres_port'),
-  user = Sys.getenv('db_user'),
-  password = Sys.getenv('db_password'),
-  dbname = proj_name,
-  # database = "football",
-  # Server = "localhost\\SQLEXPRESS",
-  # Database = "datawarehouse",
-  NULL
-)
-
 # Based on NAS sleep schedule
-if ((
-  Sys.Date() %>% lubridate::wday() > 1 & # If day is greater than Sunday
-  Sys.Date() %>% lubridate::wday() < 6 & # and day is less than Saturday
-  Sys.time() %>% format("%H") %>% as.integer() >= 17 & # and greater than 5PM
-  Sys.time() %>% format("%H") %>% as.integer() <= 23 # and less than 12AM
-) == TRUE) {
-  # source("../initR/con.R")
-  dbListTables(con)
-  dbDisconnect(con)
-}
+# if ((
+#   Sys.Date() %>% lubridate::wday() > 1 & # If day is greater than Sunday
+#   Sys.Date() %>% lubridate::wday() < 6 & # and day is less than Saturday
+#   Sys.time() %>% format("%H") %>% as.integer() >= 17 & # and greater than 5PM
+#   Sys.time() %>% format("%H") %>% as.integer() <= 23 # and less than 12AM
+# ) == TRUE) {
+#   con <- fx.db_con()
+#   # source("../initR/con.R")
+#   dbListTables(con)
+#   dbDisconnect(con)
+# }
 
 update_db(
   tblname = "nflfastR_pbp",
   force_rebuild = FALSE,
-  db_connection = con
+  db_connection = fx.db_con(), 
 )
-
-dbDisconnect(con)
 
 # Create variables --------------------------------------------------------
 fx.get_sleeper_api_players()
@@ -126,12 +106,7 @@ fx.get_espn_players()
 
 # nflfastR data
 roster_df <-
-  readRDS(
-    url(
-      'https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true'
-    )
-  ) %>%
-  as_tibble()
+  fast_scraper_roster(1999:2020)
 
 schedule_df <- fast_scraper_schedules(seasons = year, pp = FALSE)
 
