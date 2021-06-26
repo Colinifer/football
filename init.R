@@ -1,6 +1,6 @@
 # Packages & Init Setup ---------------------------------------------------
 
-# devtools::install_github("mrcaseb/nflfastR")
+# devtools::install_github("nflverse/nflfastR")
 # devtools::install_github(repo = "saiemgilani/cfbfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
 # devtools::install_github("jthomasmock/espnscrapeR")
@@ -11,6 +11,7 @@ pkgs <- c(
   'tidyverse',
   'nflfastR',
   'cfbfastR',
+  'ffscrapr',
   'gsisdecoder',
   'espnscrapeR',
   'DBI',
@@ -59,9 +60,6 @@ if (any(installed_packages == FALSE)) {
   install.packages(pkgs[!installed_packages])
 }
 lapply(pkgs, library, character.only = TRUE)
-# library("nflscrapR") # doesn't work anymore
-library("nflfastR")
-# library("ffscrapr")
 
 # Detach all packages
 # lapply(paste0('package:', names(sessionInfo()$otherPkgs)), detach, character.only=TRUE, unload=TRUE)
@@ -191,10 +189,10 @@ pbp_df %>% select(game_id) %>% unique() %>% tail()
 #     readRDS)
 #   )
 
-part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
-pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
-xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
-sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
+# part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
+# pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
+# xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
+# sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
 
 source('plots/assets/plot_theme.R', echo = F)
 
