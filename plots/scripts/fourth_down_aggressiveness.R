@@ -1,3 +1,5 @@
+current_season <- 2017
+
 nfl_colors <- tibble(
   NFL_pri %>% names(), 
   NFL_pri
@@ -5,27 +7,59 @@ nfl_colors <- tibble(
 
 names(nfl_colors) <- c('team_name', 'team_color')
 
-con <- fx.db_con()
-pbp <- tbl(con, 'nflfastR_pbp') %>% 
-  filter(season == 2017 & 
+# con <- fx.db_con()
+pbp <- 
+  # tbl(con, 'nflfastR_pbp') %>% 
+  nflfastR::load_pbp(current_season) %>%
+  filter(season == current_season & 
            down == 4) %>% 
-  collect()
-dbDisconnect(con)
+  # collect() %>% 
+  identity()
+# dbDisconnect(con)
 
-decisions <- readRDS(url('https://github.com/guga31bb/fourth_calculator/blob/main/data/decisions_2017.rds?raw=true'))
-
-decisions %>% 
+decisions <- 
+  readRDS(url(glue('https://github.com/guga31bb/fourth_calculator/blob/main/data/decisions_{current_season}.rds?raw=true'))) %>% 
   group_by(posteam) %>% 
   filter(
     prior_wp > .1
   ) %>% 
-  summarise(
-    sum_should_go = sum(should_go),
-    total_go = sum(go),
-    go_rate = total_go / sum_should_go
+  left_join(
+    pbp %>% 
+      select(game_id, play_id, fixed_drive, fixed_drive_result),
+    by = c('game_id', 'play_id', 'fixed_drive')
   ) %>% 
-  arrange(
-    -go_rate
+  mutate(
+    is_touchdown_drive = ifelse(fixed_drive_result == 'Touchdown', 1, 0)
+  ) %>% 
+  summarise(
+    sum_should_go = sum(should_go, na.rm = TRUE),
+    total_go = sum(go),
+    go_rate = total_go / sum_should_go,
+    touchdown_drives = sum(is_touchdown_drive, na.rm = TRUE)
+  ) %>% 
+  mutate(
+    posteam = case_when(posteam == 'LA' ~ 'LAR',
+                        TRUE ~ posteam)
+  ) %>% 
+  left_join(
+    nfl_colors,
+    by = c('posteam' = 'team_name')
+  ) %>% 
+  left_join(
+    nflfastR::teams_colors_logos %>% select(team_abbr, team_logo_espn, team_logo_wikipedia),
+    by = c('posteam' = 'team_abbr')
+  ) %>%
+  mutate(
+    team_color = case_when(
+      posteam != 'PHI' ~ '#a7a7a7ff',
+      TRUE ~ team_color
+    ),
+    grob = map(seq_along(team_logo_espn), function(x) {
+      grid::rasterGrob(magick::image_modulate(magick::image_read(team_logo_espn[[x]]), saturation = 0))
+    })
+  ) %>% 
+  mutate(
+    posteam = fct_reorder(posteam, -go_rate)
   )
 
 go_rate_df <- pbp %>% 
@@ -46,6 +80,7 @@ go_rate_df <- pbp %>%
     half_seconds_remaining,
     wp,
     yardline_100,
+    fixed_drive_result,
     NULL
   ) %>% 
   # filter(
@@ -56,13 +91,14 @@ go_rate_df <- pbp %>%
     go = ifelse(play_type %notin% c('punt', 'field_goal', 'no_play', 'qb_kneel') & !is.na(play_type), 1, 0)
   ) %>% 
   group_by(posteam) %>% 
+  mutate(
+    is_touchdown_drive = ifelse(fixed_drive_result == 'Touchdown', 1, 0)
+  ) %>% 
   summarise(
     n = n(),
     total_go = sum(go),
-    go_rate = sum(go) / n
-  ) %>% 
-  arrange(
-    -total_go
+    go_rate = sum(go) / n,
+    touchdown_drives = sum(is_touchdown_drive, na.rm = TRUE)
   ) %>% 
   mutate(
     posteam = case_when(posteam == 'LA' ~ 'LAR',
@@ -77,34 +113,510 @@ go_rate_df <- pbp %>%
     by = c('posteam' = 'team_abbr')
   ) %>%
   mutate(
+    team_color = case_when(
+      posteam != 'PHI' ~ '#a7a7a7ff',
+      TRUE ~ team_color
+    ),
     grob = map(seq_along(team_logo_espn), function(x) {
-      grid::rasterGrob(magick::image_read(team_logo_espn[[x]]))
+      grid::rasterGrob(magick::image_modulate(magick::image_read(team_logo_espn[[x]]), saturation = 0))
     })
-  ) 
+  )
 
-go_rate_bar <- go_rate_df %>%
-  arrange(-go_rate) %>% 
+
+# nflfastR situations -----------------------------------------------------
+
+# 4th down "go" rate
+go_rate_bar <- go_rate_df %>% 
+  mutate(
+    posteam = fct_reorder(posteam, -go_rate)
+  ) %>%
   ggplot(aes(x = posteam, y = go_rate)) +
-  geom_hline(aes(yintercept = mean(go_rate)), color = 'red', linetype = 'dashed') +
-  geom_col(width = 0.5, colour = go_rate_df$team_color, fill = go_rate_df$team_color, alpha = 0.5) +
-  ggpp::geom_grob(aes(x = posteam, y = go_rate, label = grob), vp.width = 0.035) +
-  # scale_x_continuous(expand = c(0,0)) +
+  geom_hline(aes(yintercept = mean(go_rate)),
+             color = color_cw[8],
+             linetype = 'dashed') +
+  geom_col(
+    aes(x = posteam, y = go_rate),
+    width = 0.5,
+    colour = go_rate_df$team_color,
+    fill = go_rate_df$team_color,
+    alpha = 1
+  ) +
+  ggpp::geom_grob(aes(x = posteam, y = go_rate, label = grob), vp.width = 0.035) + 
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
   labs(
-    x = 'Rank',
-    y = 'Win Percentage Over Expectation',
-    title = glue('NFL Team Efficiency {current_season}'),
-    subtitle = glue('How Lucky are the Teams? Through week {n_week}')
-  ) +
-  # ggthemes::theme_stata(scheme = 'sj', base_size = 8) +
-  theme_cw +
-  theme(
-    plot.title = element_text(face = 'bold'),
-    plot.caption = element_text(hjust = 1),
-    axis.title.y = element_text(angle = 90),
-    axis.text.y = element_text(angle = 0, vjust = 0.5),
-    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = 'bold'),
-    legend.position = 'top'
-  ) +
-  NULL
+    x = 'Team',
+    y = '"Go for it" Rate',
+    title = glue('NFL 4th down aggressiveness, {current_season} '),
+    subtitle = glue('How frequently did teams "go for it" on 4th down in {current_season}? Red line = League avg.'),
+    caption = glue('')
+  )
+# ggthemes::theme_stata(scheme = 'sj', base_size = 8) +
 
-brand_plot(wins_above_expected_bar, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_bar_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+brand_plot(
+  go_rate_bar +
+    theme_cw_light +
+    theme(
+      plot.title = element_text(size = 20),
+      plot.subtitle = element_text(size = 12),
+      plot.caption = element_text(hjust = 1),
+      axis.title = element_text(size = 20),
+      axis.title.y = element_text(angle = 90),
+      axis.ticks.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.text.y = element_text(
+        angle = 0,
+        vjust = 0.5,
+        size = 12
+      ),
+      legend.title = element_text(
+        size = 8,
+        hjust = 0,
+        vjust = 0.5,
+        face = 'bold'
+      ),
+      legend.position = 'top'
+    ),
+  asp = 16 / 10,
+  save_name = glue(
+    'plots/desktop/team_stats/fourth_down_aggressiveness_{current_season}_light.png'
+  ),
+  dark = FALSE,
+  data_author = 'Chart: Colin Welsh',
+  data_home = 'Data: nflfastR',
+  fade_borders = ''
+)
+
+brand_plot(
+  go_rate_bar +
+    theme_cw_dark +
+    theme(
+      plot.title = element_text(size = 20),
+      plot.subtitle = element_text(size = 12),
+      plot.caption = element_text(hjust = 1),
+      axis.title = element_text(size = 20),
+      axis.title.y = element_text(angle = 90),
+      axis.ticks.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.text.y = element_text(
+        angle = 0,
+        vjust = 0.5,
+        size = 12
+      ),
+      legend.title = element_text(
+        size = 8,
+        hjust = 0,
+        vjust = 0.5,
+        face = 'bold'
+      ),
+      legend.position = 'top'
+    ),
+  asp = 16 / 10,
+  save_name = glue(
+    'plots/desktop/team_stats/fourth_down_aggressiveness_{current_season}_dark.png'
+  ),
+  dark = TRUE,
+  data_author = 'Chart: Colin Welsh',
+  data_home = 'Data: nflfastR',
+  fade_borders = ''
+)
+
+
+# NYT Recommended ---------------------------------------------------------
+
+# 4th down "go" rate
+go_rate_nyt_bar <- decisions %>% 
+  mutate(
+    posteam = fct_reorder(posteam, -go_rate)
+  ) %>%
+  ggplot(aes(x = posteam, y = go_rate)) +
+  geom_hline(aes(yintercept = mean(go_rate)),
+             color = color_cw[8],
+             linetype = 'dashed') +
+  geom_col(
+    aes(x = posteam, y = go_rate),
+    width = 0.5,
+    colour = decisions$team_color,
+    fill = decisions$team_color,
+    alpha = 1
+  ) +
+  ggpp::geom_grob(aes(x = posteam, y = go_rate, label = grob), vp.width = 0.035) +
+  coord_cartesian(ylim = c(0,.50)) + 
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  labs(
+    x = 'Team',
+    y = '"Go for it" Rate',
+    title = glue('NFL 4th down aggressiveness, {current_season} '),
+    subtitle = glue('Red line = League avg.\nFilters: NYT recommended "go" situations, nflfastR win probability > 10%, and exclude final 1 minute of each half'))
+
+# ggthemes::theme_stata(scheme = 'sj', base_size = 8) +
+
+brand_plot(
+  go_rate_nyt_bar +
+    theme_cw_light +
+    theme(
+      plot.title = element_text(size = 20),
+      plot.subtitle = element_text(size = 9),
+      axis.title = element_text(size = 20),
+      axis.title.y = element_text(angle = 90),
+      axis.ticks.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.text.y = element_text(
+        angle = 0,
+        vjust = 0.5,
+        size = 12
+      ),
+      legend.title = element_text(
+        size = 8,
+        hjust = 0,
+        vjust = 0.5,
+        face = 'bold'
+      ),
+      legend.position = 'top'
+    ),
+  asp = 16 / 10,
+  save_name = glue(
+    'plots/desktop/team_stats/fourth_down_aggressiveness_{current_season}_nyt_light.png'
+  ),
+  dark = FALSE,
+  data_author = 'Chart: Colin Welsh',
+  data_home = 'Data: nflfastR & NYT 4th Down Bot',
+  fade_borders = ''
+)
+
+brand_plot(
+  go_rate_nyt_bar +
+    theme_cw_dark +
+    theme(
+      plot.title = element_text(size = 20),
+      plot.subtitle = element_text(size = 9),
+      axis.title = element_text(size = 20),
+      axis.title.y = element_text(angle = 90),
+      axis.ticks.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.text.y = element_text(
+        angle = 0,
+        vjust = 0.5,
+        size = 12
+      ),
+      legend.title = element_text(
+        size = 8,
+        hjust = 0,
+        vjust = 0.5,
+        face = 'bold'
+      ),
+      legend.position = 'top'
+    ),
+  asp = 16 / 10,
+  save_name = glue(
+    'plots/desktop/team_stats/fourth_down_aggressiveness_{current_season}_nyt_dark.png'
+  ),
+  dark = TRUE,
+  data_author = 'Chart: Colin Welsh',
+  data_home = 'Data: nflfastR & NYT 4th Down Bot',
+  fade_borders = ''
+)
+
+
+# Touchdowns generated from drives with 4th down conversions
+touchdowns_nyt_bar <- decisions %>% 
+  mutate(
+    posteam = fct_reorder(posteam, -touchdown_drives)
+  ) %>%
+  ggplot(aes(x = posteam, y = touchdown_drives)) +
+  geom_hline(aes(yintercept = mean(touchdown_drives)),
+             color = color_cw[8],
+             linetype = 'dashed') +
+  geom_col(
+    aes(x = posteam, y = touchdown_drives),
+    width = 0.5,
+    colour = decisions$team_color,
+    fill = decisions$team_color,
+    alpha = 1
+  ) +
+  ggpp::geom_grob(aes(x = posteam, y = touchdown_drives, label = grob), vp.width = 0.035) + 
+  coord_cartesian(ylim = c(
+    0,
+    decisions %>% 
+      pull(touchdown_drives) %>% 
+      max() %>% 
+      DescTools::RoundTo(5)
+  )) + 
+  labs(
+    x = 'Team',
+    y = 'Touchdowns Generated',
+    title = glue('# of touchdowns from drives with 4th down conversions, {current_season} '),
+    subtitle = glue('Red line = League avg.\nFilters: NYT recommended "go" situations, nflfastR win probability > 10%, and exclude final 1 minute of each half'))
+
+# ggthemes::theme_stata(scheme = 'sj', base_size = 8) +
+
+brand_plot(
+  touchdowns_nyt_bar +
+    theme_cw_light +
+    theme(
+      plot.title = element_text(size = 16),
+      plot.subtitle = element_text(size = 9),
+      axis.title = element_text(size = 16),
+      axis.title.y = element_text(angle = 90),
+      axis.ticks.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.text.y = element_text(
+        angle = 0,
+        vjust = 0.5,
+        size = 12
+      ),
+      legend.title = element_text(
+        size = 8,
+        hjust = 0,
+        vjust = 0.5,
+        face = 'bold'
+      ),
+      legend.position = 'top'
+    ),
+  asp = 16 / 10,
+  save_name = glue(
+    'plots/desktop/team_stats/touchdowns_from_fourth_attempts_{current_season}_nyt_light.png'
+  ),
+  dark = FALSE,
+  data_author = 'Chart: Colin Welsh',
+  data_home = 'Data: nflfastR & NYT 4th Down Bot',
+  fade_borders = ''
+)
+
+brand_plot(
+  touchdowns_nyt_bar +
+    theme_cw_dark +
+    theme(
+      plot.title = element_text(size = 16),
+      plot.subtitle = element_text(size = 9),
+      axis.title = element_text(size = 16),
+      axis.title.y = element_text(angle = 90),
+      axis.ticks.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.text.y = element_text(
+        angle = 0,
+        vjust = 0.5,
+        size = 12
+      ),
+      legend.title = element_text(
+        size = 8,
+        hjust = 0,
+        vjust = 0.5,
+        face = 'bold'
+      ),
+      legend.position = 'top'
+    ),
+  asp = 16 / 10,
+  save_name = glue(
+    'plots/desktop/team_stats/touchdowns_from_fourth_attempts_{current_season}_nyt_dark.png'
+  ),
+  dark = TRUE,
+  data_author = 'Chart: Colin Welsh',
+  data_home = 'Data: nflfastR & NYT 4th Down Bot',
+  fade_borders = ''
+)
+
+# League avg. -------------------------------------------------------------
+pbp <- 
+  # tbl(con, 'nflfastR_pbp') %>% 
+  nflfastR::load_pbp(2017:2020) %>%
+  filter(down == 4) %>% 
+  # collect() %>% 
+  identity()
+# dbDisconnect(con)
+
+decisions <- 
+  map_df(2017:2020, function(x){readRDS(url(glue('https://github.com/guga31bb/fourth_calculator/blob/main/data/decisions_{x}.rds?raw=true')))}) %>% 
+  group_by(posteam, season) %>% 
+  filter(
+    prior_wp > .1
+  ) %>% 
+  left_join(
+    pbp %>% 
+      select(game_id, play_id, fixed_drive, fixed_drive_result),
+    by = c('game_id', 'play_id', 'fixed_drive')
+  ) %>% 
+  mutate(
+    is_touchdown_drive = ifelse(fixed_drive_result == 'Touchdown', 1, 0)
+  ) %>% 
+  summarise(
+    sum_should_go = sum(should_go, na.rm = TRUE),
+    total_go = sum(go, na.rm = TRUE),
+    go_rate = total_go / sum_should_go,
+    touchdown_drives = sum(is_touchdown_drive, na.rm = TRUE)
+  ) %>% 
+  mutate(
+    posteam = case_when(posteam == 'LA' ~ 'LAR',
+                        TRUE ~ posteam)
+  ) %>% 
+  left_join(
+    nfl_colors,
+    by = c('posteam' = 'team_name')
+  ) %>% 
+  left_join(
+    nflfastR::teams_colors_logos %>% select(team_abbr, team_logo_espn, team_logo_wikipedia),
+    by = c('posteam' = 'team_abbr')
+  ) %>%
+  mutate(
+    team_color = case_when(
+      posteam != 'PHI' ~ '#a7a7a7ff',
+      TRUE ~ team_color
+    ),
+    grob = map(seq_along(team_logo_espn), function(x) {
+      grid::rasterGrob(magick::image_modulate(magick::image_read(team_logo_espn[[x]]), saturation = 0))
+    })
+  ) %>% 
+  mutate(
+    posteam = fct_reorder(posteam, -go_rate)
+  )
+
+season_avg <- decisions %>% 
+  group_by(season) %>% 
+  summarise(
+    go_rate_avg = mean(go_rate)
+  )
+
+leage_conversion_rate <- decisions %>%
+  ggplot(aes(x = season, y = go_rate)) +
+  # geom_beeswarm() +
+  geom_point(
+    aes(x = season,
+        y = go_rate, 
+        alpha = 0.10),
+    shape = 16,
+    color = 'black',
+    size = 3
+  ) +
+  geom_line(
+    data = season_avg,
+    aes(x = season, y = go_rate_avg),
+    color = color_cw[8],
+    linetype = 'dashed',
+    size = 1.5
+  ) +
+  geom_line(
+    data = decisions %>%
+      filter(posteam == 'PHI'),
+    aes(x = season,
+        y = go_rate),
+    color = decisions %>% filter(posteam == 'PHI') %>% pull(team_color),
+    linetype = 'solid',
+    size = 2
+  ) +
+  geom_point(data = season_avg,
+             aes(x = season,
+                     y = go_rate_avg),
+             shape = 16,
+             color = color_cw[8],
+             size = 3) +
+  geom_point(data = decisions %>%
+               filter(posteam == 'PHI'),
+             aes(x = season,
+                 y = go_rate),
+             shape = 16,
+             color = decisions %>% filter(posteam == 'PHI') %>% pull(team_color),
+             size = 3) +
+  geom_label(
+    data = decisions %>%
+      filter(posteam == 'PHI'),
+    aes(x = season, 
+        y = go_rate,
+        label = scales::percent(round(go_rate, digits = 4))),
+    family = 'Montserrat',
+    fill = decisions %>% filter(posteam == 'PHI') %>% pull(team_color),
+    color = 'white',
+    nudge_y = -.03,
+    size = 2.5,
+    label.size = 0 
+  ) + 
+  geom_label(
+    data = season_avg,
+    aes(x = season, 
+        y = go_rate_avg,
+        label = scales::percent(round(go_rate_avg, digits = 4))),
+    family = 'Montserrat',
+    fill = color_cw[8],
+    color = 'white',
+    nudge_y = -.03,
+    size = 2.5,
+    label.size = 0
+  ) + 
+  ggpp::geom_grob(data = decisions %>%
+                    filter(posteam == 'PHI'), 
+                  aes(x = season, 
+                      y = go_rate, 
+                      label = grob), 
+                  vp.width = 0.035) + 
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  labs(
+    x = 'Season',
+    y = '"Go for it" Rate by Team',
+    title = glue('League-wide "go rate" on 4th down, 2017-2020'),
+    subtitle = glue(
+      'Red line = League avg.\nFilters: NYT recommended "go" situations, nflfastR win probability > 10%, and exclude final 1 minute of each half'
+    )
+  )
+
+# ggthemes::theme_stata(scheme = 'sj', base_size = 8) +
+
+brand_plot(
+  leage_conversion_rate +
+    theme_cw_light +
+    theme(
+      plot.title = element_text(size = 20),
+      plot.subtitle = element_text(size = 9),
+      axis.title = element_text(size = 20),
+      axis.title.y = element_text(angle = 90),
+      axis.text = element_text(
+        angle = 0,
+        vjust = 0.5,
+        size = 12
+      ),
+      legend.title = element_text(
+        size = 8,
+        hjust = 0,
+        vjust = 0.5,
+        face = 'bold'
+      ),
+      legend.position = 'none'
+    ),
+  asp = 16 / 10,
+  save_name = glue(
+    'plots/desktop/team_stats/leage_wide_go_rate_2017-2020_light.png'
+  ),
+  dark = FALSE,
+  data_author = 'Chart: Colin Welsh',
+  data_home = 'Data: nflfastR & NYT 4th Down Bot',
+  fade_borders = ''
+)
+
+brand_plot(
+  leage_conversion_rate +
+    theme_cw_dark +
+    theme(
+      plot.title = element_text(size = 20),
+      plot.subtitle = element_text(size = 9),
+      axis.title = element_text(size = 20),
+      axis.title.y = element_text(angle = 90),
+      axis.text = element_text(
+        angle = 0,
+        vjust = 0.5,
+        size = 12
+      ),
+      legend.title = element_text(
+        size = 8,
+        hjust = 0,
+        vjust = 0.5,
+        face = 'bold'
+      ),
+      legend.position = 'none'
+    ),
+  asp = 16 / 10,
+  save_name = glue(
+    'plots/desktop/team_stats/leage_wide_go_rate_2017-2020_dark.png'
+  ),
+  dark = TRUE,
+  data_author = 'Chart: Colin Welsh',
+  data_home = 'Data: nflfastR & NYT 4th Down Bot',
+  fade_borders = ''
+)

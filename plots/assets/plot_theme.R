@@ -61,7 +61,7 @@ ESPN_logo_url = function(x) ifelse(is.na(x),NA,ifelse(x=='KC',paste0('https://ra
 .tm_div_order_alt <- c('BUF', 'MIA', 'NE', 'NYJ', 'DAL', 'NYG', 'PHI', 'WAS', 'BAL', 'CIN', 'CLE', 'PIT', 'CHI', 'DET', 'GB', 'MIN', 'HOU', 'IND', 'JAX', 'TEN', 'ATL', 'CAR', 'NO', 'TB', 'DEN', 'KC', 'LAC', 'LV', 'ARI', 'LA', 'SEA', 'SF')
 
 # main function to save my branded plots
-brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home = '', fade_borders = '', fade_prop = 0.5, axis_rot = F, tm_wordmarks = F) {
+brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, dark = TRUE, data_author = '', data_home = '', fade_borders = '', fade_prop = 0.5, axis_rot = F, tm_wordmarks = F) {
 	
     ## start by adding team wordmarks
   if (tm_wordmarks) {
@@ -105,10 +105,10 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
   
   # showtext_auto()
   
-  author_txt <- textGrob('Chart: Colin Welsh', x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=color_cw[5], fontfamily="Montserrat", fontsize=6), hjust=0)
-  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=color_cw[5], fontfamily="Montserrat", fontsize=6), hjust=1)
+  author_txt <- textGrob(data_author, x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=ifelse(dark == TRUE, color_cw[5], color_cw[1]), fontfamily="Montserrat", fontsize=6), hjust=0)
+  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=ifelse(dark == TRUE, color_cw[5], color_cw[1]), fontfamily="Montserrat", fontsize=6), hjust=1)
   # footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c('grey95', 'darkblue'), space = 'rgb')(1000)), draw = F)
-  footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c(color_cw[1]), space = 'rgb')(1000)), draw = F)
+  footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c(ifelse(dark == TRUE, color_cw[1], '#fcfcfc')), space = 'rgb')(1000)), draw = F)
   footer <- grobTree(footer_bg, author_txt, data_txt)
 
   
@@ -159,7 +159,7 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, data_home =
 }
 
 # main cw theme
-theme_cw <-  theme(
+theme_cw_dark <-  theme(
   line = element_line(lineend = 'round', color = color_cw[1]),
   text = element_text(family = "Montserrat", color = color_cw[5]),
   plot.background = element_rect(fill = color_cw[1], color = 'transparent'),
@@ -176,9 +176,34 @@ theme_cw <-  theme(
   legend.background = element_rect(fill = color_cw[2], color = color_cw[5]),
   legend.key = element_blank(),
   panel.grid.minor = element_blank(),
-  panel.grid.major = element_line(color=color_cw[4], size = 0.3),
+  panel.grid.major = element_line(color = color_cw[4], size = 0.3),
   strip.background = element_rect(fill = color_cw[3]),
   strip.text = element_text(size = 6, color = color_cw[5], family = "Chivo"),
+  legend.position = 'bottom',
+  panel.spacing.y = unit(0, 'lines'),
+  panel.spacing.x = unit(0.1, 'lines')
+)
+
+theme_cw_light <-  theme(
+  line = element_line(lineend = 'round', color = color_cw[5]),
+  text = element_text(family = "Montserrat", color = color_cw[1]),
+  plot.background = element_rect(fill = '#fcfcfc', color = 'transparent'),
+  panel.border = element_rect(color = color_cw[5], fill = NA),
+  panel.background = element_rect(fill = color_cw[5], color = 'transparent'),
+  axis.ticks = element_line(color = color_cw[1], size = 0.5),
+  axis.ticks.length = unit(2.75, 'pt'),
+  axis.title = element_text(family = "Chivo", face = "bold", size = 8, color = color_cw[3]),
+  axis.title.y = element_text(angle = 90, vjust = 0.5),
+  axis.text = element_text(size = 7, color = color_cw[1]),
+  plot.title = element_text(family = "Chivo", face = "bold", size = 14),
+  plot.subtitle = element_text(size = 8, color = color_cw[3]),
+  plot.caption = element_text(family = "Montserrat", size = 5),
+  legend.background = element_rect(fill = color_cw[5], color = color_cw[5]),
+  legend.key = element_blank(),
+  panel.grid.minor = element_blank(),
+  panel.grid.major = element_line(color = '#fcfcfc', size = 0.3),
+  strip.background = element_rect(fill = color_cw[5]),
+  strip.text = element_text(size = 6, color = color_cw[3], family = "Chivo"),
   legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
   panel.spacing.x = unit(0.1, 'lines')
