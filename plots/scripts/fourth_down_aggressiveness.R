@@ -1,4 +1,4 @@
-current_season <- 2017
+current_season <- 2020
 
 nfl_colors <- tibble(
   NFL_pri %>% names(), 
@@ -16,6 +16,12 @@ pbp <-
   # collect() %>% 
   identity()
 # dbDisconnect(con)
+
+# Playoff teams
+playoff_teams <- pbp %>% 
+  filter(week > 17) %>% 
+  pull(posteam) %>% 
+  unique()
 
 decisions <- 
   readRDS(url(glue('https://github.com/guga31bb/fourth_calculator/blob/main/data/decisions_{current_season}.rds?raw=true'))) %>% 
