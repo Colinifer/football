@@ -17,12 +17,6 @@ pbp <-
   identity()
 # dbDisconnect(con)
 
-# Playoff teams
-playoff_teams <- pbp %>% 
-  filter(week > 17) %>% 
-  pull(posteam) %>% 
-  unique()
-
 decisions <- 
   readRDS(url(glue('https://github.com/guga31bb/fourth_calculator/blob/main/data/decisions_{current_season}.rds?raw=true'))) %>% 
   group_by(posteam) %>% 
@@ -431,6 +425,16 @@ pbp <-
   identity()
 # dbDisconnect(con)
 
+# Playoff teams
+playoff_teams <- pbp %>% 
+  filter(week > 17) %>% 
+  select(season, posteam) %>% 
+  filter(!is.na(posteam)) %>% 
+  unique() %>% 
+  mutate(
+    is_playoff_team = TRUE
+  )
+
 decisions <- 
   map_df(2017:2020, function(x){readRDS(url(glue('https://github.com/guga31bb/fourth_calculator/blob/main/data/decisions_{x}.rds?raw=true')))}) %>% 
   group_by(posteam, season) %>% 
@@ -474,15 +478,33 @@ decisions <-
   ) %>% 
   mutate(
     posteam = fct_reorder(posteam, -go_rate)
+  ) %>%
+  left_join(
+    playoff_teams,
+    by = c('posteam', 'season')
+  ) %>% 
+  mutate(
+    is_playoff_team = ifelse(!is.na(is_playoff_team) == TRUE, TRUE, FALSE)
   )
 
 season_avg <- decisions %>% 
   group_by(season) %>% 
   summarise(
     go_rate_avg = mean(go_rate)
+  ) %>% 
+  left_join(
+    decisions %>% 
+      group_by(season) %>% 
+      filter(
+        is_playoff_team == TRUE
+      ) %>% 
+      summarise(
+        playoff_team_go_rate_avg = mean(go_rate)
+      ),
+    by = c('season')
   )
 
-leage_conversion_rate <- decisions %>%
+league_conversion_rate <- decisions %>%
   ggplot(aes(x = season, y = go_rate)) +
   # geom_beeswarm() +
   geom_point(
@@ -566,7 +588,7 @@ leage_conversion_rate <- decisions %>%
 # ggthemes::theme_stata(scheme = 'sj', base_size = 8) +
 
 brand_plot(
-  leage_conversion_rate +
+  league_conversion_rate +
     theme_cw_light +
     theme(
       plot.title = element_text(size = 20),
@@ -588,7 +610,7 @@ brand_plot(
     ),
   asp = 16 / 10,
   save_name = glue(
-    'plots/desktop/team_stats/leage_wide_go_rate_2017-2020_light.png'
+    'plots/desktop/team_stats/league_wide_go_rate_2017-2020_light.png'
   ),
   dark = FALSE,
   data_author = 'Chart: Colin Welsh',
@@ -597,7 +619,7 @@ brand_plot(
 )
 
 brand_plot(
-  leage_conversion_rate +
+  league_conversion_rate +
     theme_cw_dark +
     theme(
       plot.title = element_text(size = 20),
@@ -619,7 +641,7 @@ brand_plot(
     ),
   asp = 16 / 10,
   save_name = glue(
-    'plots/desktop/team_stats/leage_wide_go_rate_2017-2020_dark.png'
+    'plots/desktop/team_stats/league_wide_go_rate_2017-2020_dark.png'
   ),
   dark = TRUE,
   data_author = 'Chart: Colin Welsh',

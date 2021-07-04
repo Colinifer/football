@@ -52,6 +52,7 @@ pkgs <- c(
   'tidytext',
   'RCurl',
   'pracma',
+  'DescTools',
   'initR'
 )
 installed_packages <- pkgs %in%
