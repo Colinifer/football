@@ -191,7 +191,7 @@ p_desktop <- p +
     subtitle = "Defenses allowing the lowest QB DAKOTA to opposing teams, ordered by @benbbaldwin's DAKOTA rating\nWhite Dot = Most Recent Game. Red Line = League Average."
   ) +
   facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 8) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title = element_text(size = 8),
     axis.text = element_text(size = 5),
@@ -218,7 +218,7 @@ p_mobile <- p +
     subtitle = "Defenses allowing the lowest QB DAKOTA to opposing teams,\nordered by @benbbaldwin's DAKOTA rating\nWhite Dot = Most Recent Game. Red Line = League Average."
   ) +
   facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 4) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title = element_text(size = 8),
     axis.text = element_text(size = 5),

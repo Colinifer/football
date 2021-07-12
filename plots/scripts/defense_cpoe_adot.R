@@ -141,7 +141,7 @@ p <-
 
 p_desktop <- p + 
   facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 8) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title = element_text(size = 8),
     axis.text = element_text(size = 5),
@@ -162,7 +162,7 @@ p_desktop <- p +
 
 p_mobile <- p +
   facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 4) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title = element_text(size = 8),
     axis.text = element_text(size = 5),

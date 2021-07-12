@@ -120,7 +120,7 @@ p <- wide_win_rate %>%
        # caption = "Data: @nflscrapR",
        title = glue("{year} NFL Team Rushing Efficiency"),
        subtitle = glue("How successful are teams at rushing  as compared to their O-Line's success")) +
-  theme_cw + 
+  theme_cw_dark + 
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),
@@ -282,7 +282,7 @@ p <- p_data %>%
        # caption = "Data: @nflscrapR",
        title = glue("{year} NFL Team Rushing Efficiency"),
        subtitle = glue("How successful are RBs at rushing as compared to their O-Line's success")) +
-  theme_cw + 
+  theme_cw_dark + 
   theme(
     axis.title.y = element_text(angle = 90),
     plot.title = element_text(size = 16)
@@ -333,7 +333,7 @@ p <- p_data %>%
        # caption = "Data: @nflscrapR",
        title = glue("{year} NFL Team Rushing Efficiency"),
        subtitle = glue("How successful are RBs at rushing as compared to their O-Line's success")) +
-  theme_cw + 
+  theme_cw_dark + 
   theme(
     axis.title.y = element_text(angle = 90),
     plot.title = element_text(size = 16)
@@ -368,7 +368,7 @@ p <- wide_win_rate %>%
        # caption = "Data: @nflscrapR",
        title = glue("{year} NFL Team Passing Efficiency"),
        subtitle = glue("How successful are teams at passing as compared to their O-Line's success")) +
-  theme_cw + 
+  theme_cw_dark + 
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),
@@ -561,7 +561,7 @@ p <- p_data %>%
                        DAKOTA compared to OL Pass Block Win Rate"
     )
   ) +
-  theme_cw +
+  theme_cw_dark +
   theme(axis.title.y = element_text(angle = 90),
         plot.title = element_text(size = 16)
         # panel.background = element_rect(fill = color_cw[3])
@@ -620,7 +620,7 @@ p <- p_data %>%
                        CPOE compared to OL Pass Block Win Rate"
     )
   ) +
-  theme_cw +
+  theme_cw_dark +
   theme(axis.title.y = element_text(angle = 90),
         plot.title = element_text(size = 16))
 
@@ -678,7 +678,7 @@ p <- p_data %>%
                        Total EPA compared to OL Pass Block Win Rate"
     )
   ) +
-  theme_cw +
+  theme_cw_dark +
   theme(axis.title.y = element_text(angle = 90),
         plot.title = element_text(size = 16))
 

@@ -44,6 +44,7 @@ pkgs <- c(
   'ggpmisc',
   'ggbeeswarm',
   'cowplot',
+  'webshot',
   'gridExtra',
   'grid',
   'extrafont',
