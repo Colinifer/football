@@ -181,15 +181,19 @@ pbp_df %>% select(game_id) %>% unique() %>% tail()
 #   decode_player_ids(fast = T)
 
 # Participation dataframe
-# sr_part_df <- do.call(
-#   rbind, 
-#   lapply(
-#     dir(
-#       glue('data/part/'), 
-#       pattern = glue('{year}.rds'), 
-#       full.names = T), 
-#     readRDS)
-#   )
+sr_part_df <- do.call(
+  rbind,
+  lapply(
+    dir(
+      glue('data/part/'),
+      pattern = glue('{year}.rds'),
+      full.names = T),
+    readRDS)
+  )
+
+dbWriteTable(con,
+             'part',
+             sr_part_df)
 
 # part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
 # pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')

@@ -1,4 +1,8 @@
-defteam_rec <- pbp_ds %>% 
+con <- fx.db_con()
+
+current_season <- 2020
+
+defteam_rec <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season & 
            pass_attempt==1 & 
            season_type=='REG' & 
@@ -105,7 +109,7 @@ defteam_rec %>%
 
 
 # posteam_rec <- 
-team_pass_totals <- pbp_ds %>% 
+team_pass_totals <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season & 
            pass_attempt==1 & 
            season_type=='REG' 
@@ -173,9 +177,9 @@ team_pass_totals <- pbp_ds %>%
     rec_m_perct = rec_m / targets,
     rec_r_perct = rec_r / targets
   ) %>% rename(team = posteam)
-  
-  
-rec_totals <- pbp_ds %>% 
+
+
+rec_totals <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season & 
            pass_attempt==1 & 
            season_type=='REG' & 
@@ -254,13 +258,14 @@ rec_totals <- pbp_ds %>%
     air_yards_market_share = tot_air_yards / air_yards_market_cap %>% as.integer(),
     air_yards_pg_market_cap = team_pass_totals %>% filter(team == posteam) %>% select(air_yards_pg) %>% as.integer(),
     air_yards_pg_market_share = air_yards_pg / air_yards_pg_market_cap %>% as.integer(),
-    wopr = (1.5 * targets_market_share) + (0.7 * air_yards_market_share) %>% as.integer()
+    wopr = (1.5 * targets_market_share) + (0.7 * air_yards_market_share) %>% as.integer(),
+    sum_shares = targets_market_share + air_yards_market_share
   ) %>% 
   left_join(sr_pbp_df %>% 
               # filter(season == current_season) %>% 
               select(-game_id_SR) %>%
               # collect() %>% 
-              left_join(part_ds %>% 
+              left_join(tbl(con, 'part') %>% 
                           filter(year == current_season) %>% 
                           collect() %>% 
                           left_join(sr_games_df) %>% 
