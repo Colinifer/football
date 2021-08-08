@@ -191,9 +191,11 @@ sr_part_df <- do.call(
     readRDS)
   )
 
-dbWriteTable(con,
-             'part',
-             sr_part_df)
+con <- fx.db_con()
+tbl(con, 'part')
+# dbWriteTable(con,
+#              'part',
+#              sr_part_df)
 
 # part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
 # pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
