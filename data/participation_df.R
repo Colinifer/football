@@ -79,3 +79,19 @@ rm(
 #   arrange(-n)
 # 
 
+# Participation dataframe
+sr_part_df <- do.call(
+  rbind,
+  lapply(
+    dir(
+      glue('data/part/'),
+      pattern = glue('{year}.rds'),
+      full.names = T),
+    readRDS)
+)
+
+con <- fx.db_con()
+tbl(con, 'part')
+# dbWriteTable(con,
+#              'part',
+#              sr_part_df)

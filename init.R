@@ -5,6 +5,7 @@
 # devtools::install_github("dynastyprocess/ffscrapr")
 # devtools::install_github("jthomasmock/espnscrapeR")
 # devtools::install_github("colinifer/initR", auth_token = Sys.getenv('authtoken'))
+# devtools::install_github('gregce/ipify')
 proj_name <- 'football'
 pkgs <- c(
   'devtools',
@@ -180,23 +181,7 @@ pbp_df %>% select(game_id) %>% unique() %>% tail()
 #   )) %>%
 #   decode_player_ids(fast = T)
 
-# Participation dataframe
-sr_part_df <- do.call(
-  rbind,
-  lapply(
-    dir(
-      glue('data/part/'),
-      pattern = glue('{year}.rds'),
-      full.names = T),
-    readRDS)
-  )
-
-con <- fx.db_con()
-tbl(con, 'part')
-# dbWriteTable(con,
-#              'part',
-#              sr_part_df)
-
+# Deprecated on M1 chipset
 # part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
 # pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
 # xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
