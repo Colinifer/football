@@ -11,6 +11,7 @@ pkgs <- c(
   'devtools',
   'tidyverse',
   'nflfastR',
+  'nflreadr',
   'cfbfastR',
   'ffscrapr',
   'gsisdecoder',
