@@ -1,4 +1,4 @@
-SELECT defteam AS team,
+SELECT defteam,
     season,
     COUNT(DISTINCT game_id) AS games,
     COUNT(game_id) AS rushes_allowed,
@@ -7,8 +7,8 @@ SELECT defteam AS team,
     SUM(yards_gained) / COUNT(DISTINCT game_id) AS rush_yards_allowed_pg,
     SUM(rush_touchdown) AS tot_rush_td_allowed,
     SUM(rush_touchdown) / COUNT(DISTINCT game_id) AS rush_td_allowed_pg,
-    AVG(epa) AS avg_epa,
-    SUM(epa) AS tot_epa
+    AVG(epa) AS avg_rush_epa_allowed,
+    SUM(epa) AS tot_rush_epa_allowed
 FROM "nflfastR_pbp"
 WHERE (
         rush_attempt = 1.0
@@ -17,4 +17,4 @@ WHERE (
         AND NOT(((rusher_player_id) IS NULL))
     )
 GROUP BY season,
-    team;
+    defteam;

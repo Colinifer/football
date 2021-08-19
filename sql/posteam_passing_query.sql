@@ -1,4 +1,4 @@
-SELECT posteam AS team,
+SELECT posteam,
     season,
     COUNT(DISTINCT game_id) AS games,
     COUNT(game_id) AS targets,
@@ -13,8 +13,8 @@ SELECT posteam AS team,
     SUM(pass_touchdown) AS tot_pass_td,
     SUM(pass_touchdown) / COUNT(DISTINCT game_id) AS pass_td_pg,
     AVG(cpoe) AS avg_cpoe,
-    AVG(epa) AS avg_epa,
-    SUM(epa) AS tot_epa
+    AVG(epa) AS avg_pass_epa,
+    SUM(epa) AS tot_pass_epa
 FROM "nflfastR_pbp"
 WHERE (
         pass_attempt = 1.0
@@ -23,4 +23,4 @@ WHERE (
         AND NOT(((receiver_player_id) IS NULL))
     )
 GROUP BY season,
-    team;
+    posteam;

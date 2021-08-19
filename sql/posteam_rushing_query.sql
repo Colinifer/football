@@ -1,4 +1,4 @@
-SELECT posteam AS team,
+SELECT posteam,
     season,
     COUNT(DISTINCT game_id) AS games,
     COUNT(game_id) AS rush_attempts,
@@ -7,8 +7,8 @@ SELECT posteam AS team,
     SUM(yards_gained) / COUNT(DISTINCT game_id) AS rush_yards_pg,
     SUM(rush_touchdown) AS tot_rush_td,
     SUM(rush_touchdown) / COUNT(DISTINCT game_id) AS rush_td_pg,
-    AVG(epa) AS avg_epa,
-    SUM(epa) AS tot_epa
+    AVG(epa) AS avg_rush_epa,
+    SUM(epa) AS tot_rush_epa
 FROM "nflfastR_pbp"
 WHERE (
         rush_attempt = 1.0
@@ -17,4 +17,4 @@ WHERE (
         AND NOT(((rusher_player_id) IS NULL))
     )
 GROUP BY season,
-    team;
+    posteam;
