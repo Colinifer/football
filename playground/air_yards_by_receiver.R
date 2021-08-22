@@ -178,6 +178,30 @@ team_pass_totals <- tbl(con, 'nflfastR_pbp') %>%
     rec_r_perct = rec_r / targets
   ) %>% rename(team = posteam)
 
+# con <- fx.db_con()
+team_totals <- tbl(con, 'team_stats') %>% 
+  collect()
+
+team_totals_edit <- team_totals %>% 
+  mutate(
+    net_epa = tot_pass_epa + tot_rush_epa - tot_pass_epa_allowed - tot_rush_epa_allowed,
+    net_avg_epa = avg_pass_epa + avg_rush_epa - avg_pass_epa_allowed - avg_rush_epa_allowed
+  ) %>% 
+  select(
+    team,
+    tot_pass_epa,
+    tot_rush_epa,
+    tot_pass_epa_allowed,
+    tot_rush_epa_allowed,
+    net_avg_epa,
+    net_epa,
+    avg_cpoe,
+    avg_cpoe_allowed,
+    NULL
+  ) %>% 
+  arrange(
+    -net_epa
+  )
 
 rec_totals <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season & 

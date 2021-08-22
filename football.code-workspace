@@ -10,11 +10,11 @@
 				"previewLimit": 50,
 				"server": "72.78.233.235",
 				"port": 4432,
-				"askForPassword": true,
 				"driver": "PostgreSQL",
 				"name": "football-remote",
 				"database": "football",
-				"username": "publiccolin"
+				"username": "publiccolin",
+				"password": "VYgIlmCeNg3wIoLe"
 			}
 		]
 	}

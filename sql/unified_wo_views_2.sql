@@ -50,8 +50,8 @@ SELECT
     d.rush_td_allowed_pg,
     d.avg_rush_epa_allowed,
     d.tot_rush_epa_allowed
-FROM "nflfastR_pbp" a
-    INNER JOIN (
+FROM "nflfastR_pbp" AS a
+    LEFT JOIN (
         SELECT defteam,
             season,
             COUNT(DISTINCT game_id) AS games,
@@ -79,9 +79,9 @@ FROM "nflfastR_pbp" a
             )
         GROUP BY season,
             defteam
-    ) b ON a.posteam = b.defteam
+    ) AS b ON a.posteam = b.defteam
     AND a.season = b.season
-    INNER JOIN (
+    LEFT JOIN (
         SELECT posteam,
             season,
             COUNT(DISTINCT game_id) AS games,
@@ -103,9 +103,9 @@ FROM "nflfastR_pbp" a
             )
         GROUP BY season,
             posteam
-    ) c ON a.posteam = c.posteam
+    ) AS c ON a.posteam = c.posteam
     AND a.season = c.season
-    INNER JOIN (
+    LEFT JOIN (
         SELECT defteam,
             season,
             COUNT(DISTINCT game_id) AS games,
@@ -127,6 +127,7 @@ FROM "nflfastR_pbp" a
             )
         GROUP BY season,
             defteam
-) d ON a.posteam = d.defteam
+) AS d ON a.posteam = d.defteam
 AND a.season = d.season
-WHERE (a.season = 2020.0);
+WHERE (a.season = 2020.0)
+GROUP BY a.posteam, a.season;
