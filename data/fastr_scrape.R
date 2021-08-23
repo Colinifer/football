@@ -4,7 +4,9 @@ library(viridis)
 
 current_season <- year
 
-existing_game_ids <- pbp_ds %>% 
+con <- fx.db_con()
+
+existing_game_ids <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season) %>% 
   select(game_id) %>% 
   collect() %>% 
@@ -13,7 +15,7 @@ existing_game_ids <- pbp_ds %>%
 
 # Scrape new games
 new_scrape_df <- schedule_df %>% 
-  filter(!(game_id %in% (pbp_ds %>% 
+  filter(!(game_id %in% (tbl(con, 'nflfastR_pbp') %>% 
              filter(season == current_season) %>% 
              select(game_id) %>% 
              collect() %>% 
@@ -22,7 +24,7 @@ new_scrape_df <- schedule_df %>%
            gameday <= Sys.Date() &
            game_id != '2020_12_NO_DEN') %>% 
   pull(game_id) %>% 
-  fast_scraper(pp = TRUE) %>% 
+  fast_scraper() %>% 
   clean_pbp() %>% 
   add_qb_epa() %>% 
   add_xyac() %>% 
@@ -40,7 +42,7 @@ pbp_df %>%
   names()
 
 # Bind the new PBP scrape
-pbp_df <- rbind(pbp_ds %>% 
+pbp_df <- rbind(tbl(con, 'nflfastR_pbp') %>% 
                   filter(season == current_season) %>% 
                   collect() %>% 
                   select(-year) %>%
@@ -50,8 +52,8 @@ pbp_df <- rbind(pbp_ds %>%
 
 pbp_df %>% 
   saveRDS(glue('data/pbp/play_by_play_{current_season}.rds'))
-pbp_df %>% 
-  write_parquet(glue('data/pbp/fastr/{year}/pbp_{current_season}.parquet'))
+# pbp_df %>% 
+#   write_parquet(glue('data/pbp/fastr/{year}/pbp_{current_season}.parquet'))
 
 
 # Add XYAC ----------------------------------------------------------------

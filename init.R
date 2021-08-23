@@ -101,14 +101,13 @@ update_db(
   db_connection = fx.db_con(), 
 )
 
-# Create variables --------------------------------------------------------
+# Create variables & dataframes -------------------------------------------
 fx.get_sleeper_api_players()
 # source("fantasy_football/ff_init.R")
 fx.get_espn_players()
 
 # nflfastR data
-roster_df <-
-  fast_scraper_roster(1999:2020)
+roster_df <-  fast_scraper_roster(1999:2020)
 
 schedule_df <- fast_scraper_schedules(seasons = year, pp = FALSE)
 
@@ -168,19 +167,10 @@ matchup_df <- schedule_df %>%
 sr_games_df <- readRDS('data/schedules/sportradar/games_2020.rds')
 
 # source('data/master_sr_pbp.R')
-pbp_df <- readRDS(glue('data/pbp/play_by_play_{current_season}.rds'))
-pbp_df %>% select(game_date) %>% arrange(game_date) %>%  unique() %>%  tail()
-pbp_df %>% select(game_id) %>% unique() %>% tail()
-# pbp_df <-
-#   readRDS(glue('data/pbp/play_by_play_{year}.rds')) %>%
-#   decode_player_ids(fast = T)
-# pbp_df <-
-#   readRDS(url(
-#     glue(
-#       'https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'
-#     )
-#   )) %>%
-#   decode_player_ids(fast = T)
+pbp_df <- 
+  tbl(con, 'nflfastR_pbp') %>% 
+  filter(season == current_season) %>% 
+  collect()
 
 # Deprecated on M1 chipset
 # part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
@@ -189,6 +179,10 @@ pbp_df %>% select(game_id) %>% unique() %>% tail()
 # sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
 
 source('plots/assets/plot_theme.R', echo = F)
+# source('data/fastr_scrape.R')
+source('data/fastr_mods.R')
+
+# Source plot scripts -----------------------------------------------------
 
 map(
   dir(path = 'plots/scripts', full.names = TRUE)[1], 
