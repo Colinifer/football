@@ -7,7 +7,7 @@ current_season <- year
 #   pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'))) %>% decode_player_ids(fast = TRUE)
 # }
 
-pbp_df <- pbp_ds %>% 
+pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= current_season-1) %>% 
   select(-xyac_median_yardage) %>% 
   collect() %>% 
@@ -17,7 +17,12 @@ my_week <- fx.n_week(pbp_df)
 
 sr_part_df <- do.call(rbind, lapply(2019:current_season, function(x) {
   readRDS(glue('data/part/sportradar_part_{x}.rds')) %>% 
-    select()
+    # select() %>% 
+    identity()
+}))
+
+sr_games_df <- do.call(rbind, lapply(2019:current_season, function(x) {
+  readRDS(glue('data/schedules/sportradar/games_{x}.rds'))
 }))
 
 sr_part_df_clean <- sr_part_df %>%

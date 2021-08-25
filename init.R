@@ -109,10 +109,10 @@ fx.get_espn_players()
 # nflfastR data
 roster_df <-  fast_scraper_roster(1999:2020)
 
-schedule_df <- fast_scraper_schedules(seasons = year, pp = FALSE)
+schedule_df <- fast_scraper_schedules(seasons = year)
 
-schedule_df %>% 
-  saveRDS(glue('data/schedules/sched_{year}.rds'))
+# schedule_df %>% 
+#   saveRDS(glue('data/schedules/sched_{year}.rds'))
   
 matchup_df <- schedule_df %>% 
   mutate(posteam = home_team,
@@ -167,6 +167,7 @@ matchup_df <- schedule_df %>%
 sr_games_df <- readRDS('data/schedules/sportradar/games_2020.rds')
 
 # source('data/master_sr_pbp.R')
+con <- fx.db_con()
 pbp_df <- 
   tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season) %>% 
@@ -184,26 +185,26 @@ source('data/fastr_mods.R')
 
 # Source plot scripts -----------------------------------------------------
 
-map(
-  dir(path = 'plots/scripts', full.names = TRUE)[1], 
-  source
-  )
-
-source('plots/scripts/season_point_differential.R', echo = F)
-source('plots/scripts/team_tiers.R', echo = F)
-source('plots/scripts/wins_above_expectation.R', echo = F)
-source('plots/scripts/team_run_pass_efficiency.R', echo = F)
-source('plots/scripts/dakota_career.R', echo = F)
-source('plots/scripts/qb_cayoe.R', echo = F)
-source('plots/scripts/qb_cpoe_adot.R', echo = F)
-source('plots/scripts/qb_epa_cpoe.R', echo = F)
-source('plots/scripts/wr_cayoe.R', echo = F)
-# source('fantasy_football/xfantasy_points.R')
-# source('fantasy_football/xfantasy_points_test_theme.R')
-# source('plots/scripts/espn_winrate.R')
-source('plots/scripts/defense_cpoe_adot.R', echo = F)
-source('plots/scripts/defense_epa_cpoe.R', echo = F)
-source('plots/scripts/defense_cayoe.R', echo = F)
-source('plots/scripts/epa_winrate_efficiency.R', echo = F)
-# rm(list = ls())
+# map(
+#   dir(path = 'plots/scripts', full.names = TRUE)[1], 
+#   source
+#   )
+# 
+# source('plots/scripts/season_point_differential.R', echo = F)
+# source('plots/scripts/team_tiers.R', echo = F)
+# source('plots/scripts/wins_above_expectation.R', echo = F)
+# source('plots/scripts/team_run_pass_efficiency.R', echo = F)
+# source('plots/scripts/dakota_career.R', echo = F)
+# source('plots/scripts/qb_cayoe.R', echo = F)
+# source('plots/scripts/qb_cpoe_adot.R', echo = F)
+# source('plots/scripts/qb_epa_cpoe.R', echo = F)
+# source('plots/scripts/wr_cayoe.R', echo = F)
+# # source('fantasy_football/xfantasy_points.R')
+# # source('fantasy_football/xfantasy_points_test_theme.R')
+# # source('plots/scripts/espn_winrate.R')
+# source('plots/scripts/defense_cpoe_adot.R', echo = F)
+# source('plots/scripts/defense_epa_cpoe.R', echo = F)
+# source('plots/scripts/defense_cayoe.R', echo = F)
+# source('plots/scripts/epa_winrate_efficiency.R', echo = F)
+# # rm(list = ls())
 

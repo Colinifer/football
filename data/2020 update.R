@@ -79,7 +79,8 @@ sr_sched_df <- tibble(
   gm_venue_surface,
   gm_venue_long,
   gm_venue_lat,
-  gm_weather
+  gm_weather,
+  NULL
 ) %>% 
   mutate(
     gm_home = ifelse(gm_home == 'JAC', 'JAX', gm_home),
@@ -113,7 +114,8 @@ sr_sched_df <- tibble(
     gm_venue_surface,
     gm_venue_long,
     gm_venue_lat,
-    gm_weather
+    gm_weather,
+    NULL
     )
 
 sr_sched_df %>% 

@@ -1,3 +1,5 @@
+# Player stats ------------------------------------------------------------
+
 calculate_player_stats <- function(pbp, weekly = FALSE) {
   
   
@@ -65,7 +67,7 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
   # get passing stats
   pass_df <- data %>%
     dplyr::filter(.data$play_type %in% c("pass", "qb_spike")) %>%
-    dplyr::group_by(.data$passer_player_id, .data$week, .data$season) %>%
+    dplyr::group_by(.data$passer_player_id, .data$week, .data$season) %>% 
     dplyr::summarize(
       passing_yards_after_catch = sum((.data$passing_yards - .data$air_yards) * .data$complete_pass, na.rm = TRUE),
       name_pass = dplyr::first(.data$passer_player_name),
@@ -124,7 +126,10 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
   # rush df 1: primary rusher
   rushes <- data %>%
     dplyr::filter(.data$play_type %in% c("run", "qb_kneel")) %>%
-    dplyr::group_by(.data$rusher_player_id, .data$week, .data$season) %>%
+    dplyr::group_by(.data$rusher_player_id, .data$week, .data$season) %>% 
+    dplyr::mutate(
+      hvt = ifelse(yardline_100 <= 10, 1, 0)
+    ) %>% 
     dplyr::summarize(
       name_rush = dplyr::first(.data$rusher_player_name),
       team_rush = dplyr::first(.data$posteam),
@@ -134,7 +139,8 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
       rushing_fumbles = sum(.data$fumble == 1 & .data$fumbled_1_player_id == .data$rusher_player_id & is.na(.data$lateral_rusher_player_id)),
       rushing_fumbles_lost = sum(.data$fumble_lost == 1 & .data$fumbled_1_player_id == .data$rusher_player_id & is.na(.data$lateral_rusher_player_id)),
       rushing_first_downs = sum(.data$first_down_rush & is.na(.data$lateral_rusher_player_id)),
-      rushing_epa = sum(.data$epa, na.rm = TRUE)
+      rushing_epa = sum(.data$epa, na.rm = TRUE),
+      hvt = sum(.data$hvt)
     ) %>%
     dplyr::ungroup()
   
@@ -213,7 +219,10 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
   
   # receiver df 1: primary receiver
   rec <- data %>%
-    dplyr::filter(!is.na(.data$receiver_player_id)) %>%
+    dplyr::filter(!is.na(.data$receiver_player_id)) %>% 
+    dplyr::mutate(
+      hvt = ifelse(yardline_100 <= 10, 1, 0)
+    ) %>% 
     dplyr::group_by(.data$receiver_player_id, .data$week, .data$season) %>%
     dplyr::summarize(
       name_receiver = dplyr::first(.data$receiver_player_name),
@@ -227,13 +236,17 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
       receiving_air_yards = sum(.data$air_yards, na.rm = TRUE),
       receiving_yards_after_catch = sum(.data$yards_after_catch, na.rm = TRUE),
       receiving_first_downs = sum(.data$first_down_pass & is.na(.data$lateral_receiver_player_id)),
-      receiving_epa = sum(.data$epa, na.rm = TRUE)
+      receiving_epa = sum(.data$epa, na.rm = TRUE),
+      hvt = sum(.data$hvt, na.rm = TRUE)
     ) %>%
     dplyr::ungroup()
   
   # receiver df 2: lateral
   laterals <- data %>%
     dplyr::filter(!is.na(.data$lateral_receiver_player_id)) %>%
+    dplyr::mutate(
+      hvt = ifelse(yardline_100 <= 10, 1, 0)
+    ) %>% 
     dplyr::group_by(.data$lateral_receiver_player_id, .data$week, .data$season) %>%
     dplyr::summarize(
       lateral_yards = sum(.data$lateral_receiving_yards, na.rm = TRUE),
@@ -241,7 +254,8 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
       lateral_att = dplyr::n(),
       lateral_fds = sum(.data$first_down_pass, na.rm = T),
       lateral_fumbles = sum(.data$fumble, na.rm = T),
-      lateral_fumbles_lost = sum(.data$fumble_lost, na.rm = T)
+      lateral_fumbles_lost = sum(.data$fumble_lost, na.rm = T),
+      hvt = sum(.data$hvt, na.rm = TRUE)
     ) %>%
     dplyr::ungroup() %>%
     dplyr::rename(receiver_player_id = .data$lateral_receiver_player_id) %>%
@@ -297,7 +311,7 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
                   "receiving_yards", "receiving_air_yards", "receiving_yards_after_catch",
                   "receptions", "targets", "receiving_tds", "receiving_fumbles",
                   "receiving_fumbles_lost", "receiving_first_downs", "receiving_epa",
-                  "racr", "target_share", "air_yards_share", "wopr")
+                  "racr", "target_share", "air_yards_share", "wopr", "hvt")
   
   rec_two_points <- two_points %>%
     dplyr::filter(.data$pass_attempt == 1) %>%
@@ -371,13 +385,13 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
       
       # rushing stats
       "carries", "rushing_yards", "rushing_tds", "rushing_fumbles", "rushing_fumbles_lost",
-      "rushing_first_downs", "rushing_epa", "rushing_2pt_conversions",
+      "rushing_first_downs", "rushing_epa", "rushing_2pt_conversions", "hvt",
       
       # receiving stats
       "receptions", "targets", "receiving_yards", "receiving_tds", "receiving_fumbles",
       "receiving_fumbles_lost", "receiving_air_yards", "receiving_yards_after_catch",
       "receiving_first_downs", "receiving_epa", "receiving_2pt_conversions", "racr",
-      "target_share", "air_yards_share", "wopr",
+      "target_share", "air_yards_share", "wopr", "hvt",
       
       # special teams
       "special_teams_tds"
@@ -486,4 +500,128 @@ calculate_player_stats <- function(pbp, weekly = FALSE) {
   }
   
   return(player_df)
+}
+
+
+# XYAC transform ----------------------------------------------------------
+
+# Link: https://github.com/nflverse/nflfastR/blob/master/R/helper_add_xyac.R
+add_xyac <- function(pbp, ...) {
+  if (nrow(pbp) == 0) {
+    # user_message("Nothing to do. Return passed data frame.", "info")
+  } else {
+    # testing only
+    # pbp <- g
+    
+    pbp <- pbp %>% dplyr::select(-tidyselect::any_of(drop.cols.xyac))
+    
+    # for joining at the end
+    pbp <- pbp %>%
+      dplyr::mutate(index = 1:dplyr::n())
+    
+    # prepare_xyac_data helper function shown below
+    passes <- prepare_xyac_data(pbp) %>%
+      dplyr::filter(.data$valid_pass == 1, .data$distance_to_goal != 0)
+    
+    if (!nrow(passes) == 0) {
+      # user_message("Computing xyac...", "todo")
+      join_data <- passes %>%
+        dplyr::select(
+          "index", "distance_to_goal", "season", "week", "home_team", "posteam", "roof",
+          "half_seconds_remaining", "down", "ydstogo",
+          "posteam_timeouts_remaining", "defteam_timeouts_remaining",
+          "original_spot" = "yardline_100", "original_ep" = "ep", "air_epa", "air_yards"
+        ) %>%
+        dplyr::mutate(
+          down = as.integer(.data$down),
+          ydstogo = as.integer(.data$ydstogo),
+          original_ydstogo = .data$ydstogo
+        ) %>%
+        dplyr::select("index":"ydstogo", "original_ydstogo", dplyr::everything())
+      
+      xyac_vars <-
+        stats::predict(
+          fastrmodels::xyac_model,
+          as.matrix(passes %>% xyac_model_select())
+        ) %>%
+        tibble::as_tibble() %>%
+        dplyr::rename(prob = "value") %>%
+        dplyr::bind_cols(
+          tibble::tibble(
+            "yac" = rep_len(-5:70, length.out = nrow(passes) * 76),
+            "index" = rep(passes$index, times = rep_len(76, length.out = nrow(passes)))
+          ) %>%
+            dplyr::left_join(join_data, by = "index") %>%
+            dplyr::mutate(
+              half_seconds_remaining = dplyr::if_else(
+                .data$half_seconds_remaining <= 6,
+                0,
+                .data$half_seconds_remaining - 6
+              )
+            )
+        ) %>%
+        dplyr::group_by(.data$index) %>%
+        dplyr::mutate(
+          max_loss = dplyr::if_else(.data$distance_to_goal < 95, -5, .data$distance_to_goal - 99),
+          max_gain = dplyr::if_else(.data$distance_to_goal > 70, 70, .data$distance_to_goal),
+          cum_prob = cumsum(.data$prob),
+          prob = dplyr::case_when(
+            # truncate probs at loss greater than max loss
+            .data$yac == .data$max_loss ~ .data$cum_prob,
+            # same for gains bigger than possible
+            .data$yac == .data$max_gain ~ 1 - dplyr::lag(.data$cum_prob, 1),
+            TRUE ~ .data$prob
+          ),
+          # get end result for each possibility
+          yardline_100 = .data$distance_to_goal - .data$yac
+        ) %>%
+        dplyr::filter(.data$yac >= .data$max_loss, .data$yac <= .data$max_gain) %>%
+        dplyr::select(-.data$cum_prob) %>%
+        dplyr::mutate(
+          posteam_timeouts_pre = .data$posteam_timeouts_remaining,
+          defeam_timeouts_pre = .data$defteam_timeouts_remaining,
+          gain = .data$original_spot - .data$yardline_100,
+          turnover = dplyr::if_else(.data$down == 4 & .data$gain < .data$ydstogo, as.integer(1), as.integer(0)),
+          down = dplyr::if_else(.data$gain >= .data$ydstogo, 1, .data$down + 1),
+          ydstogo = dplyr::if_else(.data$gain >= .data$ydstogo, 10, .data$ydstogo - .data$gain),
+          # possession change if 4th down failed
+          down = dplyr::if_else(.data$turnover == 1, as.integer(1), as.integer(.data$down)),
+          ydstogo = dplyr::if_else(.data$turnover == 1, as.integer(10), as.integer(.data$ydstogo)),
+          # flip yardline_100 and timeouts for turnovers
+          yardline_100 = dplyr::if_else(.data$turnover == 1, as.integer(100 - .data$yardline_100), as.integer(.data$yardline_100)),
+          posteam_timeouts_remaining = dplyr::if_else(
+            .data$turnover == 1,
+            .data$defeam_timeouts_pre,
+            .data$posteam_timeouts_pre
+          ),
+          defteam_timeouts_remaining = dplyr::if_else(
+            .data$turnover == 1,
+            .data$posteam_timeouts_pre,
+            .data$defeam_timeouts_pre
+          ),
+          # ydstogo can't be bigger than yardline
+          ydstogo = dplyr::if_else(.data$ydstogo >= .data$yardline_100, as.integer(.data$yardline_100), as.integer(.data$ydstogo))
+        ) %>%
+        dplyr::ungroup()
+      
+      pbp <- pbp %>%
+        dplyr::left_join(xyac_vars, by = "index") %>%
+        dplyr::select(-.data$index)
+      
+      # message_completed("added xyac variables", ...)
+    } else { # means no valid pass plays in the pbp
+      pbp <- pbp %>%
+        dplyr::mutate(
+          xyac_epa = NA_real_,
+          xyac_mean_yardage = NA_real_,
+          xyac_median_yardage = NA_real_,
+          xyac_success = NA_real_,
+          xyac_fd = NA_real_
+        ) %>%
+        dplyr::select(-.data$index)
+      # user_message("No non-NA values for xyac calculation detected. xyac variables set to NA", "info")
+    }
+  }
+  
+  return(pbp)
 }
