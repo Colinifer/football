@@ -165,13 +165,8 @@ matchup_df <- schedule_df %>%
   ) %>% arrange(old_game_id)
 
 sr_games_df <- readRDS('data/schedules/sportradar/games_2020.rds')
-
 # source('data/master_sr_pbp.R')
-con <- fx.db_con()
-pbp_df <- 
-  tbl(con, 'nflfastR_pbp') %>% 
-  filter(season == current_season) %>% 
-  collect()
+
 
 # Deprecated on M1 chipset
 # part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
@@ -181,7 +176,25 @@ pbp_df <-
 
 source('plots/assets/plot_theme.R', echo = F)
 # source('data/fastr_scrape.R')
+source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R')
+source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R')
 source('data/fastr_mods.R')
+
+con <- fx.db_con()
+pbp_df <- 
+  tbl(con, 'nflfastR_pbp') %>% 
+  filter(season == current_season) %>% 
+  collect()
+dbDisconnect(con)
+
+pbp_df %>% 
+  calculate_player_stats_mod()
+
+rlang::env_unlock(env = asNamespace('nflfastR'))
+rlang::env_binding_unlock(env = asNamespace('nflfastR'))
+assign('calculate_player_stats', calculate_player_stats_mod, envir = asNamespace('nflfastR'))
+rlang::env_binding_lock(env = asNamespace('nflfastR'))
+rlang::env_lock(asNamespace('nflfastR'))
 
 # Source plot scripts -----------------------------------------------------
 
