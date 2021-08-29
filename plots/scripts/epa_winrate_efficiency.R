@@ -508,7 +508,7 @@ summary_images_df <-
   arrange(season_dakota %>% desc()) %>% 
   head(32)
 
-# DAKOTA + PBWR
+# DAKOTA + PBWR -----------------------------------------------------------
 p_data <- wide_win_rate %>%
   select(team_abbr, pbwr) %>%
   left_join(
@@ -569,7 +569,7 @@ p <- p_data %>%
 
 brand_plot(p, save_name = glue('plots/desktop/qb_passing/pb_pass_dakota_pbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR & ESPN', fade_borders = '')
 
-# CPOE + PBWR
+# CPOE + PBWR -------------------------------------------------------------
 p_data <- wide_win_rate %>%
   select(team_abbr, pbwr) %>%
   left_join(
@@ -626,7 +626,7 @@ p <- p_data %>%
 
 brand_plot(p, save_name = glue('plots/desktop/qb_passing/pb_pass_cpoe_pbwr_{current_season}.png'), asp = 16/10, data_home = 'Data: @nflfastR & ESPN', fade_borders = '')
 
-# CPOE + PBWR
+# CPOE + PBWR -------------------------------------------------------------
 p_data <- wide_win_rate %>%
   select(team_abbr, pbwr) %>%
   left_join(

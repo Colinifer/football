@@ -185,7 +185,8 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       rushing_tds = .data$tds + .data$lateral_tds,
       rushing_first_downs = .data$rushing_first_downs + .data$lateral_fds,
       rushing_fumbles = .data$rushing_fumbles + .data$lateral_fumbles,
-      rushing_fumbles_lost = .data$rushing_fumbles_lost + .data$lateral_fumbles_lost
+      rushing_fumbles_lost = .data$rushing_fumbles_lost + .data$lateral_fumbles_lost,
+      hvt_percentage = hvt / carries
     ) %>%
     dplyr::rename(player_id = .data$rusher_player_id) %>%
     dplyr::select("player_id", "week", "season", "name_rush", "team_rush",
@@ -420,7 +421,8 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         2 * (.data$passing_2pt_conversions + .data$rushing_2pt_conversions + .data$receiving_2pt_conversions) +
         -2 * (.data$sack_fumbles_lost + .data$rushing_fumbles_lost + .data$receiving_fumbles_lost),
       
-      fantasy_points_ppr = .data$fantasy_points + .data$receptions
+      fantasy_points_ppr = .data$fantasy_points + .data$receptions,
+      fantasy_points_half_ppr = .data$fantasy_points + (.data$receptions * .5)
     ) %>%
     dplyr::arrange(.data$player_id, .data$season, .data$week)
   
@@ -449,11 +451,6 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         passing_epa = dplyr::if_else(all(is.na(.data$passing_epa)), NA_real_, sum(.data$passing_epa, na.rm = TRUE)),
         passing_2pt_conversions = sum(.data$passing_2pt_conversions),
         pacr = .data$passing_yards / .data$passing_air_yards,
-        pacr = dplyr::case_when(
-          is.nan(.data$pacr) ~ NA_real_,
-          .data$passing_air_yards <= 0 ~ 0,
-          TRUE ~ .data$pacr
-        ),
         
         # rushing
         carries = sum(.data$carries),
@@ -479,14 +476,6 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         receiving_epa = dplyr::if_else(all(is.na(.data$receiving_epa)), NA_real_, sum(.data$receiving_epa, na.rm = TRUE)),
         receiving_2pt_conversions = sum(.data$receiving_2pt_conversions),
         racr = .data$receiving_yards / .data$receiving_air_yards,
-        racr = dplyr::case_when(
-          is.nan(.data$racr) ~ NA_real_,
-          .data$receiving_air_yards == 0 ~ 0,
-          # following Josh Hermsmeyer's definition, RACR stays < 0 for RBs (and FBs) and is set to
-          # 0 for Receivers. The list "racr_ids" includes all known RB and FB gsis_ids
-          .data$receiving_air_yards < 0 & !.data$player_id %in% racr_ids$gsis_id ~ 0,
-          TRUE ~ .data$racr
-        ),
         target_share = dplyr::if_else(all(is.na(.data$target_share)), NA_real_, mean(.data$target_share, na.rm = TRUE)),
         air_yards_share = dplyr::if_else(all(is.na(.data$air_yards_share)), NA_real_, mean(.data$air_yards_share, na.rm = TRUE)),
         wopr = 1.5 * .data$target_share + 0.7 * .data$air_yards_share,
@@ -496,9 +485,27 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         
         # fantasy
         fantasy_points = sum(.data$fantasy_points),
-        fantasy_points_ppr = sum(.data$fantasy_points_ppr)
+        fantasy_points_ppr = sum(.data$fantasy_points_ppr),
+        fantasy_points_half_ppr = sum(.data$fantasy_points_half_ppr)
       ) %>%
-      dplyr::ungroup() %>%
+      dplyr::ungroup() %>% 
+      dplyr::mutate(
+        hvt_percentage = hvt / carries,
+        hvt_per_game = hvt / games,
+        racr = dplyr::case_when(
+          is.nan(.data$racr) ~ NA_real_,
+          .data$receiving_air_yards == 0 ~ 0,
+          # following Josh Hermsmeyer's definition, RACR stays < 0 for RBs (and FBs) and is set to
+          # 0 for Receivers. The list "racr_ids" includes all known RB and FB gsis_ids
+          .data$receiving_air_yards < 0 & !.data$player_id %in% racr_ids$gsis_id ~ 0,
+          TRUE ~ .data$racr
+        ),
+        pacr = dplyr::case_when(
+          is.nan(.data$pacr) ~ NA_real_,
+          .data$passing_air_yards <= 0 ~ 0,
+          TRUE ~ .data$pacr
+        )
+      ) %>% 
       add_dakota(pbp = pbp, weekly = weekly) %>%
       dplyr::select(
         .data$player_id:.data$pacr,

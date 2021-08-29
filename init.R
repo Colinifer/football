@@ -187,9 +187,6 @@ pbp_df <-
   collect()
 dbDisconnect(con)
 
-pbp_df %>% 
-  calculate_player_stats_mod()
-
 rlang::env_unlock(env = asNamespace('nflfastR'))
 rlang::env_binding_unlock(env = asNamespace('nflfastR'))
 assign('calculate_player_stats', calculate_player_stats_mod, envir = asNamespace('nflfastR'))

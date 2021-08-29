@@ -9,7 +9,8 @@ current_season <- year
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
 # lapply(2007:2019, function(season){
-  pbp_df <- pbp_ds %>% 
+con <- fx.db_con()
+  pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
     filter(season >= current_season & 
              season_type == 'REG' &
              game_id != '2020_12_NO_DEN') %>% # THis game is pointless
