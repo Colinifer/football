@@ -186,12 +186,13 @@ pbp_df <-
   filter(season == current_season) %>% 
   collect()
 dbDisconnect(con)
+# pbp_df <- readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true"))
 
-rlang::env_unlock(env = asNamespace('nflfastR'))
-rlang::env_binding_unlock(env = asNamespace('nflfastR'))
-assign('calculate_player_stats', calculate_player_stats_mod, envir = asNamespace('nflfastR'))
-rlang::env_binding_lock(env = asNamespace('nflfastR'))
-rlang::env_lock(asNamespace('nflfastR'))
+player_stats <- pbp_df %>% 
+  calculate_player_stats_mod()
+
+player_stats_weekly <- pbp_df %>% 
+  calculate_player_stats_mod(weekly = TRUE)
 
 # Source plot scripts -----------------------------------------------------
 
