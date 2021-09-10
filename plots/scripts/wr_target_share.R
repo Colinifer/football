@@ -55,16 +55,23 @@ top_rushers <- player_stats %>%
 # RB HVT ------------------------------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/rb-hvt/
 player_stats %>%
+  left_join(
+    player_df %>% 
+      select(
+        gsis_id,
+        on_roster
+        ),
+    by = c('player_id' = 'gsis_id')
+  ) %>% 
   filter(season >= current_season-1 &
-           carries >= 50) %>%
+           carries >= 50 & 
+           on_roster == FALSE) %>%
   ggplot(aes(x = hvt_percentage, y = hvt_per_game)) +
   geom_point(
-    color = player_stats %>%
-      filter(season >= current_season-1 &
-               carries >= 50) %>% pull(team_color2),
-    fill = player_stats %>%
-      filter(season >= current_season-1 &
-               carries >= 50) %>% pull(team_color),
+    aes(
+      color = team_color2,
+      fill = team_color
+    ),
     shape = 21,
     size = 3
   ) +
@@ -84,7 +91,7 @@ player_stats %>%
 # Air Yards Market Share plot ---------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/market-share/
 player_stats %>%
-  filter(season == current_season &
+  filter(season >= current_season-1 &
            targets >= 50) %>%
   ggplot(aes(x = target_share, y = air_yards_share)) +
   geom_point(

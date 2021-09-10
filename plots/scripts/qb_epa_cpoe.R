@@ -13,7 +13,7 @@ con <- fx.db_con()
   pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
     filter(season >= current_season & 
              season_type == 'REG' &
-             game_id != '2020_12_NO_DEN') %>% # THis game is pointless
+             game_id != '2020_12_NO_DEN') %>% # This game is pointless
     collect() %>% 
     decode_player_ids(fast = TRUE) %>% 
     mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
@@ -27,16 +27,7 @@ con <- fx.db_con()
   
   # load roster data from nflfastR data repo
   roster_df <-
-    readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true")) %>% 
-    decode_player_ids(fast = TRUE) %>% 
-    select(team = team.abbr,
-           first_name = teamPlayers.firstName,
-           last_name = teamPlayers.lastName,
-           gsis = teamPlayers.gsisId,
-           headshot_url = teamPlayers.headshot_url
-    ) %>%
-    mutate(full_name = glue('{first_name} {last_name}')) %>%
-    select(-first_name, -last_name) %>% unique() %>% 
+    roster_df %>% 
     mutate(# some headshot urls are broken. They are checked here and set to a default 
       headshot_url = dplyr::if_else(condition = full_name %in% c('Brett Basanez', 
                                                                  'JaMarcus Russell', 
@@ -132,8 +123,9 @@ con <- fx.db_con()
     left_join(
       teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
       by = c('team' = 'team_abbr')
-    ) %>% mutate(season = game_id %>% substr(1, 4)) %>% 
-    mutate_at(vars(season_dakota), funs(factor(., levels=unique(.))))
+    ) %>% mutate(season = game_id %>% substr(1, 4),
+                 season_dakota = factor(season_dakota, levels=unique(season_dakota)))
+    # mutate_at(vars(season_dakota), funs(factor(., levels=unique(.)))) # funs is deprecated
   
   # create data frame used to add the logos
   # arranged by name because name is used for the facet
@@ -270,7 +262,7 @@ con <- fx.db_con()
   
   p_desktop <- p +
     facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 8) +
-    theme_cw +
+    theme_cw_dark +
     theme(
       axis.title = element_text(size = 8),
       axis.text = element_text(size = 5),
@@ -291,7 +283,7 @@ con <- fx.db_con()
   
   p_mobile <- p +
     facet_wrap(~season_dakota, labeller = labeller(season_dakota = panel_label), ncol = 4) +
-    theme_cw +
+    theme_cw_dark +
     theme(
       axis.title = element_text(size = 8),
       axis.text = element_text(size = 5),
@@ -318,5 +310,5 @@ con <- fx.db_con()
   # save the plot
   brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_epa_vs_cpoe/qb_epa_vs_cpoe_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
   
-  rm(current_season, epa_cpoe, top_32, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, grob_img_adj, asp, p, p_desktop, p_mobile)
+  rm(epa_cpoe, top_32, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, grob_img_adj, asp, p, p_desktop, p_mobile)
 # })

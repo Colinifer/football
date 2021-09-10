@@ -27,8 +27,4 @@ player_df <- roster_df %>%
   mutate(
     on_roster = case_when(is.na(on_roster) ~ FALSE,
                           TRUE ~ on_roster)
-  ) %>% 
-  left_join(
-    player_stats %>% 
-      select()
   )

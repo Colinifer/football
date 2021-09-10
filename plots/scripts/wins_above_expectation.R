@@ -148,7 +148,7 @@ wins_above_expected_scatter <- chart %>%
   geom_abline(intercept = 0, slope = 1) +
   geom_hline(aes(yintercept = mean(win_percentage)), color = "red", linetype = "dashed") +
   geom_vline(aes(xintercept = mean(wp_lim_percentage)), color = "red", linetype = "dashed") +
-  ggpmisc::geom_grob(aes(x = wp_lim_percentage, y = win_percentage, label = grob), vp.width = 0.05) +
+  ggpp::geom_grob(aes(x = wp_lim_percentage, y = win_percentage, label = grob), vp.width = 0.05) +
   coord_cartesian(xlim = c(0, 1), ylim = c(0, 1)) +
   labs(
     x = glue::glue("Percentage of snaps with win probability (vegas_wp) over {100 * wp_limit}%"),
@@ -157,7 +157,7 @@ wins_above_expected_scatter <- chart %>%
     subtitle = glue("Through week {n_week}")
   ) +
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     plot.title = element_text(face = "bold"),
     plot.caption = element_text(hjust = 1),
@@ -174,7 +174,7 @@ wins_above_expected_bar <- chart %>%
   ggplot(aes(x = seq_along(diff), y = diff)) +
   geom_hline(aes(yintercept = mean(diff)), color = "red", linetype = "dashed") +
   geom_col(width = 0.5, colour = chart$team_color, fill = chart$team_color, alpha = 0.5) +
-  ggpmisc::geom_grob(aes(x = seq_along(diff), y = diff, label = grob), vp.width = 0.035) +
+  ggpp::geom_grob(aes(x = seq_along(diff), y = diff, label = grob), vp.width = 0.035) +
   # scale_x_continuous(expand = c(0,0)) +
   labs(
     x = "Rank",
@@ -183,7 +183,7 @@ wins_above_expected_bar <- chart %>%
     subtitle = glue("How Lucky are the Teams? Through week {n_week}")
   ) +
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     plot.title = element_text(face = "bold"),
     plot.caption = element_text(hjust = 1),
@@ -203,7 +203,7 @@ pythagorean_wins_above_expected_scatter <- chart %>%
   geom_abline(intercept = 0, slope = 1) +
   geom_hline(aes(yintercept = mean(win_percentage)), color = "red", linetype = "dashed") +
   geom_vline(aes(xintercept = mean(pyth_xwin_percentage)), color = "red", linetype = "dashed") +
-  ggpmisc::geom_grob(aes(x = pyth_xwin_percentage, y = win_percentage, label = grob), vp.width = 0.05) +
+  ggpp::geom_grob(aes(x = pyth_xwin_percentage, y = win_percentage, label = grob), vp.width = 0.05) +
   coord_cartesian(xlim = c(0, 1), ylim = c(0, 1)) +
   labs(
     x = glue::glue("Pythagorean expected win probability"),
@@ -212,7 +212,7 @@ pythagorean_wins_above_expected_scatter <- chart %>%
     subtitle = glue("Pythagorean expected wins through week {n_week}")
   ) +
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     plot.title = element_text(face = "bold"),
     plot.caption = element_text(hjust = 1),
@@ -224,6 +224,6 @@ pythagorean_wins_above_expected_scatter <- chart %>%
 
 brand_plot(pythagorean_wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/pythag_wins_above_expected_scatter_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-rm(current_season, wp_limit, outcomes, wp_combined, chart, wins_above_expected_scatter, wins_above_expected_bar, pythagorean_wins_above_expected_scatter)
+rm(wp_limit, outcomes, wp_combined, chart, wins_above_expected_scatter, wins_above_expected_bar, pythagorean_wins_above_expected_scatter)
 
 # })

@@ -14,23 +14,25 @@ roster_df <-
   ) %>% 
   decode_player_ids(fast = T)
 
-print("Scraping 2006:2020 PBP for career results")
+print(glue("Scraping 2006:{current_season} PBP for career results"))
 # pbp_df <- do.call(rbind, lapply(2006:year, function(yr) {
 #   readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
 # })) %>% decode_player_ids(fast = T)
-pbp_df <- pbp_ds %>% 
+con <- fx.db_con()
+pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= 2006) %>% 
   select(-xyac_median_yardage) %>% 
   collect() %>% 
   decode_player_ids(fast = T)
+dbDisconnect(con)
 
 all_qb_id <- pbp_df %>% 
   pull(passer_id) %>% table %>% 
   .[which(. >= 50)] %>% 
   names
 
-qb_2020_id <- pbp_df %>% 
-  filter(season==2020) %>% 
+qb_current_season_id <- pbp_df %>% 
+  filter(season == current_season) %>% 
   pull(passer_id) %>% 
   table %>% 
   .[which(. >= 3)] %>%
@@ -73,8 +75,8 @@ min_plays <- 450
 
 p <- qb_top_bottom %>% 
   # left_join(roster_df %>% filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) %>%
-  # filter(!is.na(team.season) & car_plays>=min_plays & qb_id %in% qb_2020_id) %>% 
-  filter(car_plays>=min_plays & qb_id %in% qb_2020_id) %>% 
+  # filter(!is.na(team.season) & car_plays>=min_plays & qb_id %in% qb_current_season_id) %>% 
+  filter(car_plays>=min_plays & qb_id %in% qb_current_season_id) %>% 
   arrange(-car_dakota) %>% 
   mutate(rank = row_number()) %>% 
   ggplot(aes(x = curr_dakota, xend = high_dakota, y = rank, yend = rank)) +
@@ -91,7 +93,7 @@ p <- qb_top_bottom %>%
        fill = "Index score",
        x = 'EPA+CPOE Composite Index (DAKOTA)',
        y = NULL) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     plot.title = element_text(size = 12),
     plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
@@ -111,4 +113,4 @@ brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_
 end_time <- Sys.time()
 end_time - start_time
 
-rm(pbp_df, all_qb_id, qb_2020_id, qb_top_bottom, min_plays, start_time, end_time)
+rm(pbp_df, all_qb_id, qb_current_season_id, qb_top_bottom, min_plays, start_time, end_time)

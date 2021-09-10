@@ -10,19 +10,20 @@ current_season <- year
 # lapply(2009:2019, function(season){
 
 # Download play-by-play data, decode player IDs, and 
-pbp_df <- pbp_ds %>% 
+con <- fx.db_con()
+pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season &
            season_type == 'REG') %>% 
   collect() %>% 
   decode_player_ids(fast = TRUE) %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam))
+dbDisconnect(con)
 
 # load roster data from nflfastR data repo
 roster_df <-
-  readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true")) %>% 
-  decode_player_ids(fast = TRUE) %>% 
-  mutate(team.abbr = ifelse(team.abbr == "LA", "LAR", team.abbr))
+  roster_df %>% 
+  mutate(team = ifelse(team == "LA", "LAR", team))
 
 # compute cpoe grouped by air_yards
 cpoe <-
@@ -90,8 +91,9 @@ summary_df <-
     by = c('team' = 'team_abbr')
   ) %>% 
   mutate(facet_label_wrap = glue('{full_name}: {total_cpoe %>% round(2)}'),
-         rounded_cpoe = total_cpoe %>% round(2)) %>% 
-  mutate_at(vars(total_cpoe), funs(factor(., levels=unique(.))))
+         rounded_cpoe = total_cpoe %>% round(2),
+         total_cpoe = factor(total_cpoe, levels=unique(total_cpoe))) 
+  # mutate_at(vars(total_cpoe), funs(factor(., levels=unique(.)))) # funs is deprecated
 
 # create data frame used to add the logos
 # arranged by name because name is used for the facet
@@ -187,7 +189,7 @@ p <-
 p_desktop <- p +
   # Use the named character vector to replace CPOE rank with Player name
   facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 8) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title = element_text(size = 8),
     axis.text = element_text(size = 5),
@@ -210,7 +212,7 @@ p_desktop <- p +
 p_mobile <- p +
   # Use the named character vector to replace CPOE rank with Player name
   facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 4) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title = element_text(size = 8),
     axis.text = element_text(size = 5),
@@ -235,5 +237,5 @@ brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/qb_cpoe_vs_do
 # save the plot
 brand_plot(p_mobile, asp = 9/16, save_name = glue('plots/mobile/qb_cpoe_vs_dot/qb_cpoe_vs_dot_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-rm(current_season, roster_df, cpoe, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
+rm(cpoe, summary_df, colors_raw, n_eval, colors, mean, summary_images_df, panel_label, asp, p, p_desktop, p_mobile)
 # })

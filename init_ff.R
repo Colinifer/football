@@ -1,5 +1,5 @@
 # https://ffscrapr.ffverse.com/reference/index.html
-year <- 2021
+year
 
 ff_conn_beep_boop <- ffscrapr::espn_connect(season = year,
                        league_id = initR::fantasy_key %>% pull(league_id) %>% nth(1),
