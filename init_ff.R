@@ -47,22 +47,22 @@ ff_rosters_drinkers <- ff_rosters(ff_conn_drinkers) %>%
   mutate(on_roster = TRUE) %>% 
   saveRDS(glue('fantasy_football/data/rosters/{year}/drinkers_rosters.rds'))
 
-ff_rosters_beep_boop <- 
-  readRDS(glue('fantasy_football/data/rosters/{year}/beep_boop_rosters.rds'))
+ff_rosters_drinkers <- 
+  readRDS(glue('fantasy_football/data/rosters/{year}/drinkers_rosters.rds'))
 
-ff_rosters_family <- ff_rosters(ff_conn_family) %>% 
+ff_rosters(ff_conn_family) %>% 
   mutate(on_roster = TRUE) %>% 
   saveRDS(glue('fantasy_football/data/rosters/{year}/family_rosters.rds'))
 
-ff_rosters_beep_boop <- 
-  readRDS(glue('fantasy_football/data/rosters/{year}/beep_boop_rosters.rds'))
+ff_rosters_family <- 
+  readRDS(glue('fantasy_football/data/rosters/{year}/family_rosters.rds'))
 
 ff_rosters(ff_conn_kepler) %>% 
   mutate(on_roster = TRUE) %>% 
   saveRDS(glue('fantasy_football/data/rosters/{year}/kepler_rosters.rds'))
 
-ff_rosters_beep_boop <- 
-  readRDS(glue('fantasy_football/data/rosters/{year}/beep_boop_rosters.rds'))
+ff_rosters_kepler <- 
+  readRDS(glue('fantasy_football/data/rosters/{year}/kepler_rosters.rds'))
 
 # Schedules
 ff_schedule_beep_boop <- ff_schedule(ff_conn_beep_boop)

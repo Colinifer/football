@@ -102,18 +102,18 @@ update_db(
 )
 
 # Create variables & dataframes -------------------------------------------
-fx.get_sleeper_api_players()
+sleeper_players_df <- fx.get_sleeper_api_players()
 # source("fantasy_football/ff_init.R")
-fx.get_espn_players()
+espn_players_df <- fx.get_espn_players()
 
 # nflfastR data
-roster_df <-  fast_scraper_roster(1999:2020)
+roster_df <-  fast_scraper_roster(1999:year)
 
 schedule_df <- fast_scraper_schedules(seasons = year)
 
 # schedule_df %>% 
 #   saveRDS(glue('data/schedules/sched_{year}.rds'))
-  
+
 matchup_df <- schedule_df %>% 
   mutate(posteam = home_team,
          oppteam = away_team) %>%
@@ -164,7 +164,7 @@ matchup_df <- schedule_df %>%
       )
   ) %>% arrange(old_game_id)
 
-sr_games_df <- readRDS('data/schedules/sportradar/games_2020.rds')
+sr_games_df <- readRDS(glue('data/schedules/sportradar/games_{year}.rds'))
 # source('data/master_sr_pbp.R')
 
 
