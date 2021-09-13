@@ -1,7 +1,7 @@
 # Packages & Init Setup ---------------------------------------------------
 
 # devtools::install_github("nflverse/nflfastR")
-# devtools::install_github(repo = "saiemgilani/cfbfastR")
+# devtools::install_github("saiemgilani/cfbfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
 # devtools::install_github("jthomasmock/espnscrapeR")
 # devtools::install_github("colinifer/initR", auth_token = Sys.getenv('authtoken'))
@@ -82,6 +82,13 @@ year <- fx.get_year()
 
 # Create standard objects -------------------------------------------------
 
+source('plots/assets/plot_theme.R', echo = F)
+# source('data/fastr_scrape.R')
+source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R')
+source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R')
+source('data/fastr_mods.R')
+source('data/cfb_fastr_mods.R')
+
 # Based on NAS sleep schedule
 # if ((
 #   Sys.Date() %>% lubridate::wday() > 1 & # If day is greater than Sunday
@@ -95,10 +102,29 @@ year <- fx.get_year()
 #   dbDisconnect(con)
 # }
 
-update_db(
+nflfastR::update_db(
   tblname = "nflfastR_pbp",
   force_rebuild = FALSE,
-  db_connection = fx.db_con(), 
+  db_connection = fx.db_con(x.host = 'localhost')
+)
+
+nflfastR::update_db(
+  tblname = "nflfastR_pbp",
+  force_rebuild = FALSE,
+  db_connection = fx.db_con()
+)
+
+source('https://github.com/saiemgilani/cfbfastR/raw/a08cb191b15cc3f14cee524589684e7276fe7011/R/cfb_pbp.R')
+update_cfb_db_mod(
+  tblname = 'cfbfastR_pbp',
+  force_rebuild = FALSE,
+  db_connection = fx.db_con(x.host = 'localhost')
+)
+
+update_cfb_db_mod(
+  tblname = 'cfbfastR_pbp',
+  force_rebuild = TRUE,
+  db_connection = fx.db_con()
 )
 
 # Create variables & dataframes -------------------------------------------
@@ -174,19 +200,20 @@ sr_games_df <- readRDS(glue('data/schedules/sportradar/games_{year}.rds'))
 # xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
 # sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
 
-source('plots/assets/plot_theme.R', echo = F)
-# source('data/fastr_scrape.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R')
-source('data/fastr_mods.R')
 
-con <- fx.db_con()
+con <- fx.db_con(x.host = 'localhost')
 pbp_df <- 
   tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season) %>% 
   collect()
 dbDisconnect(con)
 # pbp_df <- readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true"))
+
+team_stats <- pbp_df %>% 
+  calculate_team_stats_mod()
+
+team_stats_weekly <- pbp_df %>% 
+  calculate_team_stats_mod(weekly = TRUE)
 
 player_stats <- pbp_df %>% 
   calculate_player_stats_mod()

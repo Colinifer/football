@@ -7,11 +7,11 @@ current_season <- year
 
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
-# lapply(2006:2020, function(season){
-pbp_df <-
-  pbp_ds %>% 
-  filter(season == current_season) %>% 
-  select(-xyac_median_yardage) %>% 
+con <- fx.db_con(x.host = 'localhost')
+# lapply(2006:2019, function(season){
+pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+  filter(season == current_season &
+           season_type == 'REG') %>% 
   collect() %>% 
   decode_player_ids(fast = TRUE) %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
@@ -22,6 +22,7 @@ pbp_df <-
          defteam = ifelse(season < 2017 & defteam == 'LAC', 'SD', defteam),
          posteam = ifelse(season < 2020 & posteam == 'LV', 'OAK', posteam),
          defteam = ifelse(season < 2020 & defteam == 'LV', 'OAK', defteam))
+dbDisconnect(con)
 
 # compute cpoe grouped by air_yards
 cpoe <-

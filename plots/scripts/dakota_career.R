@@ -9,16 +9,11 @@ start_time <- Sys.time()
 #   left_join(readRDS(url('https://github.com/ajreinhard/NFL/blob/master/nflfastR%20ID%20mapping/gsis_map.rds?raw=true')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
 #   mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
 
-roster_df <-
-  readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')
-  ) %>% 
-  decode_player_ids(fast = T)
-
 print(glue("Scraping 2006:{current_season} PBP for career results"))
 # pbp_df <- do.call(rbind, lapply(2006:year, function(yr) {
 #   readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
 # })) %>% decode_player_ids(fast = T)
-con <- fx.db_con()
+con <- fx.db_con(x.host = 'localhost')
 pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= 2006) %>% 
   select(-xyac_median_yardage) %>% 

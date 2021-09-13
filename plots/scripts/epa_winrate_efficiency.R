@@ -10,6 +10,7 @@ library(webshot)
 
 current_season <- year
 
+con <- fx.db_con(x.host = 'localhost')
 pbp_df <- 
 #   purrr::map_df(current_season, function(x) {
 #   readRDS(url(
@@ -17,9 +18,9 @@ pbp_df <-
 #   ))
 #   # }) %>% filter(week < 9)
 # }) %>% 
-  pbp_ds %>% 
-  filter(year == current_season) %>% 
-  select(-xyac_median_yardage) %>% 
+  tbl(con, 'nflfastR_pbp') %>% 
+  filter(season == current_season) %>% 
+  select(-xyac_median_yardage) %>%
   collect() %>% 
   decode_player_ids %>% 
   filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
@@ -61,7 +62,7 @@ offense <- pbp_df %>%
   )
 
 # Get ESPN Win Rates
-all_win_rate <- scrape_espn_win_rate()
+all_win_rate <- scrape_espn_win_rate(season = current_season)
 
 wide_win_rate <- all_win_rate %>%
   pivot_wider(names_from = stat,

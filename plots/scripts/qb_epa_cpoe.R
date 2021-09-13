@@ -9,7 +9,7 @@ current_season <- year
 # Load pbp for the chosen season from nflfastR data repo
 # can be multiple seasons
 # lapply(2007:2019, function(season){
-con <- fx.db_con()
+con <- fx.db_con(x.host = 'localhost')
   pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
     filter(season >= current_season & 
              season_type == 'REG' &

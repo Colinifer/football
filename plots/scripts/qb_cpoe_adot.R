@@ -10,7 +10,7 @@ current_season <- year
 # lapply(2009:2019, function(season){
 
 # Download play-by-play data, decode player IDs, and 
-con <- fx.db_con()
+con <- fx.db_con(x.host = 'localhost')
 pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season &
            season_type == 'REG') %>% 

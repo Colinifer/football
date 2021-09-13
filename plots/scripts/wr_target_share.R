@@ -91,16 +91,13 @@ player_stats %>%
 # Air Yards Market Share plot ---------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/market-share/
 player_stats %>%
-  filter(season >= current_season-1 &
-           targets >= 50) %>%
+  filter(season >= current_season-1) %>%
   ggplot(aes(x = target_share, y = air_yards_share)) +
   geom_point(
     color = player_stats %>%
-      filter(season == 2020 &
-               targets >= 50) %>% pull(team_color2),
+      filter(season >= current_season-1) %>% pull(team_color2),
     fill = player_stats %>%
-      filter(season == 2020 &
-               targets >= 50) %>% pull(team_color),
+      filter(season >= current_season-1) %>% pull(team_color),
     shape = 21,
     size = 3
   ) +
