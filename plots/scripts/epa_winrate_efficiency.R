@@ -19,11 +19,13 @@ pbp_df <-
 #   # }) %>% filter(week < 9)
 # }) %>% 
   tbl(con, 'nflfastR_pbp') %>% 
-  filter(season == current_season) %>% 
+  filter(season == current_season & 
+           season_type == 'REG' & 
+           !is.na(posteam) & 
+           (rush == 1 | pass == 1)) %>% 
   select(-xyac_median_yardage) %>%
   collect() %>% 
-  decode_player_ids %>% 
-  filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
+  decode_player_ids
 print(current_season)
 
 n_week <- fx.n_week(pbp_df)

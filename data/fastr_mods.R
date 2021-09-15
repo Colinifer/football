@@ -1,3 +1,72 @@
+
+# Update Schedule ---------------------------------------------------------
+
+update_schedule_db <- function (dbdir = ".", dbname = "schedule_db", tblname = "nflfastR_schedule", 
+          force_rebuild = FALSE, db_connection = NULL) 
+{
+  rule_header("Update nflfastR Schedule Database")
+  if (!is_installed("DBI") | !is_installed("purrr") | (!is_installed("RSQLite") & 
+                                                       is.null(db_connection))) {
+    cli::cli_abort("{my_time()} | Packages {.val DBI}, {.val RSQLite} and {.val purrr} required for database communication. Please install them.")
+  }
+  if (any(force_rebuild == "NEW")) {
+    cli::cli_abort("{my_time()} | The argument {.val force_rebuild = NEW} is only for internal usage!")
+  }
+  if (!(is.logical(force_rebuild) | is.numeric(force_rebuild))) {
+    cli::cli_abort("{my_time()} | The argument {.val force_rebuild} has to be either logical or numeric!")
+  }
+  if (!dir.exists(dbdir) & is.null(db_connection)) {
+    cli::cli_alert_danger("{my_time()} | Directory {.file {dbdir}} doesn't exist yet. Try creating...")
+    dir.create(dbdir)
+  }
+  if (is.null(db_connection)) {
+    connection <- DBI::dbConnect(RSQLite::SQLite(), glue::glue("{dbdir}/{dbname}"))
+  }
+  else {
+    connection <- db_connection
+  }
+  if (!DBI::dbExistsTable(connection, tblname)) {
+    build_db(tblname, connection, rebuild = "NEW")
+  }
+  else if (DBI::dbExistsTable(connection, tblname) & all(force_rebuild != 
+                                                         FALSE)) {
+    build_db(tblname, connection, rebuild = force_rebuild)
+  }
+  user_message("Checking for missing completed games...", 
+               "todo")
+  completed_games <- load_lees_games() %>% dplyr::filter(.data$season >= 
+                                                           1999, !is.na(.data$result), !.data$game_id %in% c("1999_01_BAL_STL", 
+                                                                                                             "2000_06_BUF_MIA", "2000_03_SD_KC")) %>% dplyr::arrange(.data$gameday) %>% 
+    dplyr::pull(.data$game_id)
+  missing <- get_missing_games(completed_games, connection, 
+                               tblname)
+  if (length(missing) > 16) {
+    build_db(tblname, connection, show_message = FALSE, 
+             rebuild = as.numeric(unique(stringr::str_sub(missing, 
+                                                          1, 4))))
+    missing <- get_missing_games(completed_games, connection, 
+                                 tblname)
+  }
+  if (length(missing) > 0) {
+    new_pbp <- build_nflfastR_pbp(missing, rules = FALSE)
+    if (nrow(new_pbp) == 0) {
+      user_message("Raw data of new games are not yet ready. Please try again in about 10 minutes.", 
+                   "oops")
+    }
+    else {
+      user_message("Appending new data to database...", 
+                   "todo")
+      DBI::dbWriteTable(connection, tblname, new_pbp, 
+                        append = TRUE)
+    }
+  }
+  message_completed("Database update completed", in_builder = TRUE)
+  cli::cli_alert_info("{my_time()} | Path to your db: {.file {DBI::dbGetInfo(connection)$dbname}}")
+  if (is.null(db_connection)) 
+    DBI::dbDisconnect(connection)
+  rule_footer("DONE")
+}
+
 # Player stats ------------------------------------------------------------
 
 calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
@@ -767,9 +836,9 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
       lateral_yards = sum(.data$lateral_receiving_yards, na.rm = TRUE),
       lateral_tds = sum(.data$td_player_id == .data$lateral_receiver_player_id, na.rm = TRUE),
       lateral_att = dplyr::n(),
-      lateral_fds = sum(.data$first_down_pass, na.rm = T),
-      lateral_fumbles = sum(.data$fumble, na.rm = T),
-      lateral_fumbles_lost = sum(.data$fumble_lost, na.rm = T)
+      lateral_fds = sum(.data$first_down_pass, na.rm = TRUE),
+      lateral_fumbles = sum(.data$fumble, na.rm = TRUE),
+      lateral_fumbles_lost = sum(.data$fumble_lost, na.rm = TRUE)
     ) %>%
     rename(team = .data$posteam) %>% 
     dplyr::ungroup() %>%
@@ -781,6 +850,16 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
         ) %>%
         dplyr::select("season", "week", "team" = .data$team_abbr, "lateral_yards" = .data$yards) %>%
         dplyr::mutate(lateral_tds = 0L, lateral_att = 1L)
+    ) %>% 
+    group_by(team, week, season) %>% 
+    summarize(
+      lateral_receiving_receiving_redzone_targets = sum(.data$lateral_receiving_receiving_redzone_targets, na.rm = TRUE),
+      lateral_yards = sum(.data$lateral_yards, na.rm = TRUE),
+      lateral_tds = sum(.data$lateral_tds, na.rm = TRUE),
+      lateral_att = sum(.data$lateral_att, na.rm = TRUE),
+      lateral_fds = sum(.data$lateral_fds, na.rm = TRUE),
+      lateral_fumbles = sum(.data$lateral_fumbles, na.rm = TRUE),
+      lateral_fumbles_lost = sum(.data$lateral_fumbles_lost, na.rm = TRUE)
     )
   
   # receiver df 3: team receiving for WOPR

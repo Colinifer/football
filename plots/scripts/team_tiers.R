@@ -13,7 +13,8 @@ current_season <- year
 # }) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
 # print(current_season)
 
-pbp_df <- pbp_ds %>% 
+con <- fx.db_con(x.host = 'localhost')
+pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season & 
            season_type == 'REG' &
            !is.na(posteam) & 
@@ -227,7 +228,7 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.2, alpha=.2) +
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
   scale_y_reverse() +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),
@@ -264,7 +265,7 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.1, alpha=.2) +
   geom_abline(slope=slope, intercept=-.2, alpha=.2) +
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),
@@ -304,7 +305,7 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
   scale_x_reverse() +
   scale_y_reverse() +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),
@@ -381,7 +382,7 @@ if (n_week < 17) {
     geom_abline(slope=slope, intercept=-.1, alpha=.2) +
     geom_abline(slope=slope, intercept=-.2, alpha=.2) +
     geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-    theme_cw +
+    theme_cw_dark +
     theme(
       axis.title.y = element_text(angle = 90),
       legend.position = c(0.99, 0.99),
@@ -417,7 +418,7 @@ if (n_week < 17) {
     geom_abline(slope=slope, intercept=-.1, alpha=.2) +
     geom_abline(slope=slope, intercept=-.2, alpha=.2) +
     geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-    theme_cw +
+    theme_cw_dark +
     theme(
       axis.title.y = element_text(angle = 90),
       legend.position = c(0.99, 0.99),
@@ -453,7 +454,7 @@ if (n_week < 17) {
     geom_abline(slope=slope, intercept=-.1, alpha=.2) +
     geom_abline(slope=slope, intercept=-.2, alpha=.2) +
     geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-    theme_cw +
+    theme_cw_dark +
     theme(
       axis.title.y = element_text(angle = 90),
       legend.position = c(0.99, 0.99),

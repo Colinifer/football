@@ -3,6 +3,7 @@ library(viridis)
 source('plots/assets/plot_theme.R')
 load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
 
+current_season <- year
 start_time <- Sys.time()
 
 # roster_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')) %>% 
