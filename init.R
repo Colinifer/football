@@ -86,6 +86,8 @@ source('plots/assets/plot_theme.R', echo = F)
 # source('data/fastr_scrape.R')
 source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R')
 source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R')
+source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R')
+source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R')
 source('data/fastr_mods.R')
 source('data/cfb_fastr_mods.R')
 

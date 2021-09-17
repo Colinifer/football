@@ -1,9 +1,9 @@
 # Data --------------------------------------------------------------------
 
-pbp_df <- 
+xyac_pbp_df <- 
   # readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
   pbp_df %>% 
-  add_xyac() %>% 
+  add_xyac_mod() %>% 
   filter(
     season.x == current_season &
       pass_attempt == 1 &
@@ -39,9 +39,9 @@ pbp_df <-
   collect() %>% 
   decode_player_ids(fast = TRUE) %>% 
   rename_at(.vars = vars(ends_with('.x')),
-            .funs = funs(sub('[.]x$', '', .)))
+            .funs = sub('[.]x$', '', .))
 
-cayoe <- pbp_df %>% 
+cayoe <- xyac_pbp_df %>% 
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
     comp_air_yards = ifelse(complete_pass == 1, air_yards, 0),
@@ -142,7 +142,7 @@ cayoe_filtered %>%
   gt() %>%
   tab_header(title = glue('Completed Air Yards Over Expected (CAYOE) {current_season}'), 
              subtitle = glue('Through week {my_week} | Min. {summary(cayoe$pass_attempts)[4] %>% round()} > 0 air yards')) %>% 
-  cols_move_to_start(columns = vars(Rank)) %>% 
+  cols_move_to_start(columns = c(Rank)) %>% 
   cols_label(
     games = 'GP',
     headshot_url = '',
@@ -161,12 +161,12 @@ cayoe_filtered %>%
     sum_cayoe = "Total CAYOE",
     cayoe_a = html("CAYOE<br>(per Pass Attempt)")
   ) %>% 
-  fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) %>% 
-  fmt_number(columns = vars(exp_td), decimals = 1) %>% 
-  fmt_number(columns = vars(comp_air_yards, exp_air_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
+  fmt_number(columns = c(sum_cayoe, cayoe_a), decimals = 2) %>% 
+  fmt_number(columns = c(exp_td), decimals = 1) %>% 
+  fmt_number(columns = c(comp_air_yards, exp_air_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
   tab_style(style = cell_text(font = "Chivo", size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
   tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
-  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(passer))) %>% 
+  tab_style(style = cell_text(align = 'left'), locations = cells_body(c(passer))) %>% 
   tab_style(
     style = cell_borders(
       sides = "left",
@@ -182,7 +182,7 @@ cayoe_filtered %>%
   tab_style(
     style = cell_text(font = "Chivo", weight = "bold"),
     locations = cells_body(
-      columns = vars(Rank, passer)
+      columns = c(Rank, passer)
     )
   ) %>% 
   tab_style(
@@ -191,28 +191,28 @@ cayoe_filtered %>%
       columns = c(5:13)
     )
   ) %>% 
-  tab_spanner(label = 'Actual', columns = vars(completions, comp_air_yards, td)) %>% 
-  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_air_yards, exp_td)) %>% 
+  tab_spanner(label = 'Actual', columns = c(completions, comp_air_yards, td)) %>% 
+  tab_spanner(label = 'Expected', columns = c(exp_completions, exp_air_yards, exp_td)) %>% 
   tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') %>% 
   data_color(
-    columns = vars(sum_cayoe),
+    columns = c(sum_cayoe),
     colors = scales::col_quantile(palette = c(color_cw[8], color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$sum_cayoe), 0, min(cayoe_filtered$sum_cayoe))),
     autocolor_text = FALSE
   ) %>% 
   data_color(
-    columns = vars(cayoe_a),
+    columns = c(cayoe_a),
     colors = scales::col_quantile(palette = c(color_cw[8], color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$cayoe_a), 0, min(cayoe_filtered$cayoe_a))),
     autocolor_text = FALSE
   ) %>% 
   text_transform(
-    locations = cells_body(vars(headshot_url)),
+    locations = cells_body(c(headshot_url)),
     fn = function(x) web_image(url = x)
   ) %>% 
   text_transform(
-    locations = cells_body(vars(posteam)),
+    locations = cells_body(c(posteam)),
     fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'))
   ) %>% 
-  cols_width(vars(posteam) ~ px(45)) %>% 
+  cols_width(c(posteam) ~ px(45)) %>% 
   tab_options(
     table.font.color = color_cw[5],
     data_row.padding = '2px',
@@ -227,9 +227,9 @@ cayoe_filtered %>%
     table_body.border.bottom.color = '#999999',
     row_group.border.bottom.width = 1,
     row_group.border.bottom.color = color_cw[5],
-    table.border.top.color = 'transparent',
+    # table.border.top.color = 'transparent',
     table.background.color = color_cw[1],
-    table.border.bottom.color = 'transparent',
+    # table.border.bottom.color = 'transparent',
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 

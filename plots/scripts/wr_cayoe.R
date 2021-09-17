@@ -3,9 +3,10 @@
 # pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
 current_season <- year
 
-pbp_df <- 
+xyac_pbp_df <- 
   # readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
-  xyac_ds %>% 
+  pbp_df %>% 
+  add_xyac_mod() %>% 
   filter(
     season.x == current_season &
       pass_attempt == 1 &
@@ -41,7 +42,7 @@ pbp_df <-
   rename_at(.vars = vars(ends_with('.x')),
             .funs = funs(sub('[.]x$', '', .)))
 
-cayoe <- pbp_df %>% 
+cayoe <- xyac_pbp_df %>% 
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
     air_yards = air_yards,
@@ -236,9 +237,9 @@ cayoe_filtered %>%
     table_body.border.bottom.color = '#999999',
     row_group.border.bottom.width = 1,
     row_group.border.bottom.color = color_cw[5],
-    table.border.top.color = 'transparent',
+    # table.border.top.color = 'transparent',
     table.background.color = color_cw[1],
-    table.border.bottom.color = 'transparent',
+    # table.border.bottom.color = 'transparent',
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 
@@ -362,9 +363,9 @@ cayoe_filtered %>%
     table_body.border.bottom.color = '#999999',
     row_group.border.bottom.width = 1,
     row_group.border.bottom.color = color_cw[5],
-    table.border.top.color = 'transparent',
+    # table.border.top.color = 'transparent',
     table.background.color = color_cw[1],
-    table.border.bottom.color = 'transparent',
+    # table.border.bottom.color = 'transparent',
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 

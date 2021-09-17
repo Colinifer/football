@@ -12,7 +12,7 @@ current_season <- year
 wp_limit <- 0.5
 
 # Load the data ----------------------------------------------------------------
-
+con <- fx.db_con(x.host = 'localhost')
 pbp_df <- 
 #   purrr::map_df(current_season, function(x) {
 #   readRDS(
@@ -21,7 +21,7 @@ pbp_df <-
 #     )
 #   # }) %>% filter(week < 9)
 # }) %>% 
-  pbp_ds %>% 
+  tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= current_season & 
            game_id != '2020_12_NO_DEN') %>% # THis game is pointless
   collect() %>% 

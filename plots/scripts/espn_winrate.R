@@ -50,7 +50,8 @@ wide_win_rate %>%
 matchup_winrate_df <- wide_win_rate %>% 
   left_join(
     matchup_df %>% 
-      filter(week == n_week + 1) %>% 
+      filter(season == current_season & 
+               week == n_week + 1) %>% 
       select(posteam, oppteam, weekday, gametime),
     by = c('team_abbr' = 'posteam')
     ) %>% 
@@ -88,7 +89,8 @@ matchup_winrate_df <- wide_win_rate %>%
 matchup_df_adv <- wide_win_rate %>% 
   left_join(
     matchup_df %>% 
-      filter(week == n_week + 1) %>% 
+      filter(season == current_season & 
+               week == n_week + 1) %>% 
       select(posteam, oppteam, weekday, gametime),
     by = c('team_abbr' = 'posteam')
   ) %>% 
@@ -214,7 +216,7 @@ gt_def_tab <- gtdf %>%
     )
   ) %>%
   text_transform(
-    locations = cells_body(vars(team_abbr, oppteam)),
+    locations = cells_body(c(team_abbr, oppteam)),
     fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'), height = 50)
   ) %>% 
   cols_label(
@@ -240,10 +242,10 @@ gt_def_tab <- gtdf %>%
   ) %>% 
   opt_all_caps() %>% 
   cols_width(
-    vars(team) ~ px(264),
+    c(team) ~ px(264),
     columns = contains('r_rk') ~ px(50),
     columns = contains('comb') ~ px(100),
-    vars(team_abbr) ~ px(75),
+    c(team_abbr) ~ px(75),
     everything() ~ px(80)
   ) %>% 
   tab_style(
@@ -272,7 +274,7 @@ gt_def_tab <- gtdf %>%
   #     color = color_cw[3]
   #   ),
   #   locations = cells_body(
-  #     vars(team_abbr, team)
+  #     c(team_abbr, team)
   #   )
   # ) %>%
   tab_spanner(
@@ -313,7 +315,7 @@ gt_def_tab <- gtdf %>%
     table.font.names = "Monsterrat",
     # table.border.bottom.color = 'transparent',
     table.border.bottom.width = px(3),
-    table.border.top.color = 'transparent',
+    # table.border.top.color = 'transparent',
     # table.border.top.width = px(3),
     heading.align = 'left',
     column_labels.border.bottom.color = color_cw[5],
@@ -321,7 +323,7 @@ gt_def_tab <- gtdf %>%
     heading.title.font.size = px(30),
     heading.title.font.weight = 'bold',
     heading.subtitle.font.size = px(20),
-    heading.border.bottom.color = 'transparent',
+    # heading.border.bottom.color = 'transparent',
     heading.border.bottom.width = px(3),
     table.background.color = color_cw[1],
     table_body.hlines.color = color_cw[3],
@@ -406,7 +408,7 @@ gt_off_tab <- gtdf %>%
     )
   ) %>%
   text_transform(
-    locations = cells_body(vars(team_abbr, oppteam)),
+    locations = cells_body(c(team_abbr, oppteam)),
     fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'), height = 50)
   ) %>% 
   cols_label(
@@ -432,10 +434,10 @@ gt_off_tab <- gtdf %>%
   ) %>% 
   opt_all_caps() %>% 
   cols_width(
-    vars(team) ~ px(264),
+    c(team) ~ px(264),
     columns = contains('r_rk') ~ px(50),
     columns = contains('comb') ~ px(100),
-    vars(team_abbr) ~ px(75),
+    c(team_abbr) ~ px(75),
     everything() ~ px(80)
   ) %>% 
   tab_style(
@@ -464,7 +466,7 @@ gt_off_tab <- gtdf %>%
   #     color = color_cw[3]
   #   ),
   #   locations = cells_body(
-  #     vars(team_abbr, team)
+  #     c(team_abbr, team)
   #   )
   # ) %>%
   tab_spanner(
@@ -505,7 +507,7 @@ gt_off_tab <- gtdf %>%
     table.font.names = "Monsterrat",
     # table.border.bottom.color = 'transparent',
     table.border.bottom.width = px(3),
-    table.border.top.color = 'transparent',
+    # table.border.top.color = 'transparent',
     # table.border.top.width = px(3),
     heading.align = 'left',
     column_labels.border.bottom.color = color_cw[5],
@@ -513,7 +515,7 @@ gt_off_tab <- gtdf %>%
     heading.title.font.size = px(30),
     heading.title.font.weight = 'bold',
     heading.subtitle.font.size = px(20),
-    heading.border.bottom.color = 'transparent',
+    # heading.border.bottom.color = 'transparent',
     heading.border.bottom.width = px(3),
     table.background.color = color_cw[1],
     table_body.hlines.color = color_cw[3],
@@ -545,7 +547,7 @@ p <- matchup_df_adv %>%
        title = glue("{year} NFL Defensive Line Win Rate"),
        subtitle = glue("Through week {n_week}")) +
   # geom_abline(slope= 1, intercept=0, alpha=.2) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),
@@ -569,7 +571,7 @@ p <- matchup_df_adv %>%
        title = glue("{year} NFL Offensive Line Win Rate"),
        subtitle = glue("Through week {n_week}")) +
   # geom_abline(slope= 1, intercept=0, alpha=.2) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),
@@ -597,7 +599,7 @@ p <- matchup_df_adv %>%
        title = glue("{year} Week {n_week + 1} OL/DL Passing Matchups"),
        subtitle = glue("Pass rush win rate vs. week {n_week + 1} opponent pass block win rate")) +
   # geom_abline(slope= 1, intercept=0, alpha=.2) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),
@@ -623,7 +625,7 @@ p <- matchup_df_adv %>%
        title = glue("{year} Week {n_week + 1} OL/DL Rushing Matchups"),
        subtitle = glue("Run stop win rate vs. week {n_week + 1} opponent run block win rate")) +
   # geom_abline(slope= 1, intercept=0, alpha=.2) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),

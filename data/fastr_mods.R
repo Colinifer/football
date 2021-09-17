@@ -1068,14 +1068,14 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
 # XYAC transform ----------------------------------------------------------
 
 # Link: https://github.com/nflverse/nflfastR/blob/master/R/helper_add_xyac.R
-add_xyac <- function(pbp, ...) {
+add_xyac_mod <- function(pbp, ...) {
   if (nrow(pbp) == 0) {
     # user_message("Nothing to do. Return passed data frame.", "info")
   } else {
     # testing only
     # pbp <- g
     
-    pbp <- pbp %>% dplyr::select(-tidyselect::any_of(drop.cols.xyac))
+    pbp <- pbp %>% dplyr::select(-tidyselect::contains('xyac'))
     
     # for joining at the end
     pbp <- pbp %>%

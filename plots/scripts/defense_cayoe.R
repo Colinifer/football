@@ -3,7 +3,8 @@
 current_season <- year
 
 # lapply(2017:2019, function(season){
-pbp_df <- xyac_ds %>% 
+xyac_pbp_df <- pbp_df %>% 
+  add_xyac_mod() %>% 
   filter(season.x == current_season &
            pass_attempt == 1 &
            season_type == 'REG' &
@@ -40,7 +41,7 @@ my_week <- fx.n_week(pbp_df)
 
 
 # Completed Air Yards Over Expected
-cayoe <- pbp_df %>% 
+cayoe <- xyac_pbp_df %>% 
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
     comp_air_yards = ifelse(complete_pass == 1, air_yards, 0),
@@ -216,9 +217,9 @@ cayoe_filtered %>%
     table_body.border.bottom.color = '#999999',
     row_group.border.bottom.width = 1,
     row_group.border.bottom.color = color_cw[5],
-    table.border.top.color = 'transparent',
+    # table.border.top.color = 'transparent',
     table.background.color = color_cw[1],
-    table.border.bottom.color = 'transparent',
+    # table.border.bottom.color = 'transparent',
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
   ) %>% 
