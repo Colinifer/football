@@ -6,6 +6,18 @@ current_season <- year
 
 con <- fx.db_con()
 
+roster_df <-  fast_scraper_roster(year)
+dbWriteTable(conn = con, 'nflfastR_rosters', roster_df)
+
+schedule_df <- fast_scraper_schedules(1999:year)
+dbWriteTable(con, 'nflfastR_schedule', schedule_df)
+
+trades_df <- nflreadr::load_trades()
+dbWriteTable(con, 'nflfastR_trades', trades_df)
+
+draft_df <- nflreadr::load_draft_picks()
+dbWriteTable(con, 'nflfastR_draft', draft_df)
+
 existing_game_ids <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season) %>% 
   select(game_id) %>% 

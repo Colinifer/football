@@ -116,16 +116,14 @@ nflfastR::update_db(
   db_connection = fx.db_con()
 )
 
-source('https://github.com/saiemgilani/cfbfastR/raw/a08cb191b15cc3f14cee524589684e7276fe7011/R/cfb_pbp.R')
+source('https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/R/cfb_pbp.R')
 update_cfb_db_mod(
   tblname = 'cfbfastR_pbp',
-  force_rebuild = FALSE,
   db_connection = fx.db_con(x.host = 'localhost')
 )
 
 update_cfb_db_mod(
   tblname = 'cfbfastR_pbp',
-  force_rebuild = FALSE,
   db_connection = fx.db_con()
 )
 
@@ -135,19 +133,27 @@ update_cfb_db_mod(
 # espn_players_df <- fx.get_espn_players() # not working, relies on roster load
 
 # nflfastR data
-con <- fx.db_con(x.host = 'localhost')
+update_roster(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+roster_df <- tbl(con, 'nflfastR_rosters') %>% 
+  filter(season == year) %>% 
+  collect()
+update_schedule_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+schedule_df <- tbl(con, 'nflfastR_schedule') %>% 
+  filter(season == year) %>% 
+  collect()
+update_trades_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+trades_df <- tbl(con, 'nflfastR_trades') %>% 
+  filter(season == year) %>% 
+  collect()
+update_draft_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+draft_df <- tbl(con, 'nflfastR_draft') %>% 
+  filter(season == year) %>% 
+  collect()
 
-roster_df <-  fast_scraper_roster(1999:year)
-dbWriteTable(conn = con, 'nflfastR_rosters', roster_df)
-
-schedule_df <- fast_scraper_schedules(1999:year)
-dbWriteTable(con, 'nflfastR_schedule', schedule_df)
-
-trades_df <- nflreadr::load_trades()
-dbWriteTable(con, 'nflfastR_trades', trades_df)
-
-draft_df <- nflreadr::load_draft_picks()
-dbWriteTable(con, 'nflfastR_draft', draft_df)
+pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+  filter(season == year) %>% 
+  collect()
+dbDisconnect(con)
 
 # schedule_df %>% 
 #   saveRDS(glue('data/schedules/sched_{year}.rds'))
@@ -203,7 +209,7 @@ matchup_df <- schedule_df %>%
       )
   ) %>% arrange(old_game_id)
 
-sr_games_df <- readRDS(glue('data/schedules/sportradar/games_{year}.rds'))
+# sr_games_df <- readRDS(glue('data/schedules/sportradar/games_{year}.rds'))
 # source('data/master_sr_pbp.R')
 
 
@@ -214,14 +220,7 @@ sr_games_df <- readRDS(glue('data/schedules/sportradar/games_{year}.rds'))
 # sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
 
 
-con <- fx.db_con(x.host = 'localhost')
-pbp_df <- 
-  tbl(con, 'nflfastR_pbp') %>% 
-  filter(season == year) %>% 
-  collect()
-dbDisconnect(con)
 # pbp_df <- readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true"))
-
 team_stats <- pbp_df %>% 
   calculate_team_stats_mod()
 
