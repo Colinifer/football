@@ -11,30 +11,30 @@ start_time <- Sys.time()
 #   mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
 
 print(glue("Scraping 2006:{current_season} PBP for career results"))
-# pbp_df <- do.call(rbind, lapply(2006:year, function(yr) {
+# pbp <- do.call(rbind, lapply(2006:year, function(yr) {
 #   readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
 # })) %>% decode_player_ids(fast = T)
 con <- fx.db_con(x.host = 'localhost')
-pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= 2006) %>% 
   select(-xyac_median_yardage) %>% 
   collect() %>% 
   decode_player_ids(fast = T)
 dbDisconnect(con)
 
-all_qb_id <- pbp_df %>% 
+all_qb_id <- pbp %>% 
   pull(passer_id) %>% table %>% 
   .[which(. >= 50)] %>% 
   names
 
-qb_current_season_id <- pbp_df %>% 
+qb_current_season_id <- pbp %>% 
   filter(season == current_season) %>% 
   pull(passer_id) %>% 
   table %>% 
   .[which(. >= 3)] %>%
   names
 
-qb_top_bottom <- pbp_df %>% 
+qb_top_bottom <- pbp %>% 
   mutate(qb_id = ifelse(is.na(passer_id), rusher_id, passer_id)) %>%
   filter(qb_id %in% all_qb_id) %>% 
   group_by(qb_id) %>%
@@ -64,7 +64,7 @@ qb_top_bottom <- pbp_df %>%
   mutate(car_dakota = mgcv::predict.gam(dakota_model, .))
 
 qb_top_bottom <- qb_top_bottom %>% 
-  left_join(sleeper_players_df %>% select(gsis_id, full_name, headshot_url),
+  left_join(roster_df %>% select(gsis_id, full_name, headshot_url),
             by = c("qb_id" = "gsis_id"))
 
 min_plays <- 450
@@ -109,4 +109,4 @@ brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_
 end_time <- Sys.time()
 end_time - start_time
 
-rm(pbp_df, all_qb_id, qb_current_season_id, qb_top_bottom, min_plays, start_time, end_time)
+rm(pbp, all_qb_id, qb_current_season_id, qb_top_bottom, min_plays, start_time, end_time)

@@ -1,5 +1,18 @@
 Project Roadmap
 ================
 
-- add update db roster function
-- add update db schedule function
+DB Updates functions:
+- Fix cfbfastR update
+- SR data
+
+Player/Team Stats:
+- Add snaps
+- Participation counts/routes
+- Pts/drive
+- Eckel rate
+- Pts/Eckel
+- Early downs EPA
+
+Team Tiers
+- Early down Pass/Rush EPA
+- Early down Offense/Defense EPA

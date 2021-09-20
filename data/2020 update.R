@@ -77,8 +77,8 @@ sr_sched_df <- tibble(
   gm_venue,
   gm_venue_roof,
   gm_venue_surface,
-  gm_venue_long,
-  gm_venue_lat,
+  # gm_venue_long,
+  # gm_venue_lat,
   gm_weather,
   NULL
 ) %>% 
@@ -112,8 +112,8 @@ sr_sched_df <- tibble(
     gm_venue,
     gm_venue_roof,
     gm_venue_surface,
-    gm_venue_long,
-    gm_venue_lat,
+    # gm_venue_long,
+    # gm_venue_lat,
     gm_weather,
     NULL
     )

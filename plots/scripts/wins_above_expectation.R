@@ -13,7 +13,7 @@ wp_limit <- 0.5
 
 # Load the data ----------------------------------------------------------------
 con <- fx.db_con(x.host = 'localhost')
-pbp_df <- 
+pbp <- 
 #   purrr::map_df(current_season, function(x) {
 #   readRDS(
 #     # url(glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true"))
@@ -28,11 +28,11 @@ pbp_df <-
   decode_player_ids(fast = TRUE) %>% 
   filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
 
-n_week <- fx.n_week(pbp_df)
+n_week <- fx.n_week(pbp)
 
 # Compute outcomes and win percentage ------------------------------------------
 
-outcomes <- pbp_df %>%
+outcomes <- pbp %>%
   group_by(season, game_id, home_team) %>%
   filter(row_number()==n()) %>% 
   summarise(
@@ -50,9 +50,9 @@ outcomes <- pbp_df %>%
     home_result = sum(home_result)
   ) %>%
   ungroup() %>%
-  left_join(
+  full_join(
     # away games
-    pbp_df %>%
+    pbp %>%
       group_by(season, game_id, away_team) %>%
       filter(row_number()==n()) %>% 
       summarise(
@@ -73,6 +73,7 @@ outcomes <- pbp_df %>%
     by = c("season", "home_team" = "away_team")
   ) %>%
   rename(team = "home_team") %>%
+  replace(is.na(.), 0) %>% 
   mutate(
     games = home_games + away_games,
     wins = home_wins + away_wins,
@@ -87,7 +88,7 @@ outcomes <- pbp_df %>%
     pyth_xwins_fp = games * pyth,
     pyth_xwins = (points_diff /(games * 2.0625)) + 8,
     pyth_xlosses = games - pyth_xwins,
-    pyth_xwin_percentage = pyth_xwins / games #total games at end of season
+    pyth_xwin_percentage = pyth_xwins / ifelse(season >= 2021, 17, 16) #total games at end of season
   ) %>%
   select(
     season, team, games, wins, losses, ties, win_percentage, points_diff, points_for, points_against, pyth_xwins_fp, pyth_xwins, pyth_xlosses, pyth_xwin_percentage
@@ -95,7 +96,7 @@ outcomes <- pbp_df %>%
 
 # Compute percentage of plays with wp > wp_lim ---------------------------------
 
-wp_combined <- pbp_df %>%
+wp_combined <- pbp %>%
   filter(!is.na(vegas_wp) & !is.na(posteam)) %>%
   group_by(season, posteam) %>%
   summarise(
@@ -104,7 +105,7 @@ wp_combined <- pbp_df %>%
   ) %>%
   ungroup() %>%
   left_join(
-    pbp_df %>%
+    pbp %>%
       filter(!is.na(vegas_wp) & !is.na(posteam)) %>%
       group_by(season, defteam) %>%
       summarise(
@@ -173,7 +174,7 @@ brand_plot(wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/des
 wins_above_expected_bar <- chart %>%
   ggplot(aes(x = seq_along(diff), y = diff)) +
   geom_hline(aes(yintercept = mean(diff)), color = "red", linetype = "dashed") +
-  geom_col(width = 0.5, colour = chart$team_color, fill = chart$team_color, alpha = 0.5) +
+  geom_col(width = 0.5, color = chart$team_color, fill = chart$team_color, alpha = 0.5) +
   ggpp::geom_grob(aes(x = seq_along(diff), y = diff, label = grob), vp.width = 0.035) +
   # scale_x_continuous(expand = c(0,0)) +
   labs(

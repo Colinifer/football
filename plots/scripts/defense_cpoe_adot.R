@@ -9,7 +9,7 @@ current_season <- year
 # can be multiple seasons
 con <- fx.db_con(x.host = 'localhost')
 # lapply(2006:2019, function(season){
-pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season &
            season_type == 'REG') %>% 
   collect() %>% 
@@ -26,7 +26,7 @@ dbDisconnect(con)
 
 # compute cpoe grouped by air_yards
 cpoe <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(cpoe)) %>%
   group_by(defteam, air_yards) %>%
   summarise(count = n(), cpoe = mean(cpoe, na.rm = T))
@@ -37,7 +37,7 @@ cpoe <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(cpoe)) %>%
   group_by(defteam) %>%
   summarise(plays = n(),
@@ -188,7 +188,6 @@ brand_plot(p_desktop, asp = 16/10, save_name = glue('plots/desktop/defense/defen
 brand_plot( p_mobile, asp = 10/16, save_name = glue('plots/mobile/defense/defense_cpoe_vs_dot/defense_cpoe_vs_dot_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 rm(
-  current_season,
   cpoe,
   summary_df,
   colors_raw,

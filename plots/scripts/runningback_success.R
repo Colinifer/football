@@ -11,14 +11,15 @@ library(INLA)
 
 current_season <- year
 # current_season <- 2010
-
-pbp_df <- pbp_ds %>% 
-  filter(season >= current_season & 
+con <- fx.db_con(x.host = 'localhost')
+pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+  filter(season >= 2010 & 
            season_type == 'REG' &
            !is.na(posteam)) %>% 
   select(-xyac_median_yardage) %>% 
   collect()
 print(current_season)
+dbDisconnect(con)
 
 n_week <- fx.n_week(pbp_df)
 

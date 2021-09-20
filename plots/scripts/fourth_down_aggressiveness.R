@@ -7,15 +7,15 @@ nfl_colors <- tibble(
 
 names(nfl_colors) <- c('team_name', 'team_color')
 
-# con <- fx.db_con()
+con <- fx.db_con(x.host = 'localhost')
 pbp <- 
-  # tbl(con, 'nflfastR_pbp') %>% 
-  nflfastR::load_pbp(current_season) %>%
+  tbl(con, 'nflfastR_pbp') %>%
+  # nflfastR::load_pbp(current_season) %>%
   filter(season == current_season & 
            down == 4) %>% 
-  # collect() %>% 
+  collect() %>%
   identity()
-# dbDisconnect(con)
+dbDisconnect(con)
 
 decisions <- 
   readRDS(url(glue('https://github.com/guga31bb/fourth_calculator/blob/main/data/decisions_{current_season}.rds?raw=true'))) %>% 
@@ -417,13 +417,15 @@ brand_plot(
 )
 
 # League avg. -------------------------------------------------------------
+con <- fx.db_con(x.host = 'localhost')
 pbp <- 
-  # tbl(con, 'nflfastR_pbp') %>% 
-  nflfastR::load_pbp(2017:2020) %>%
-  filter(down == 4) %>% 
-  # collect() %>% 
+  tbl(con, 'nflfastR_pbp') %>%
+  # nflfastR::load_pbp(2017:2021) %>%
+  filter(season %in% c(2017:2021) & 
+           down == 4) %>% 
+  collect() %>%
   identity()
-# dbDisconnect(con)
+dbDisconnect(con)
 
 # Playoff teams
 playoff_teams <- pbp %>% 

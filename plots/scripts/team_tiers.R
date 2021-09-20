@@ -5,7 +5,7 @@ library(pracma)
 start_time <- Sys.time()
 current_season <- year
 
-# pbp_df <- purrr::map_df(current_season, function(x) {
+# pbp <- purrr::map_df(current_season, function(x) {
 #   readRDS(url(
 #     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
 #   ))
@@ -14,7 +14,7 @@ current_season <- year
 # print(current_season)
 
 con <- fx.db_con(x.host = 'localhost')
-pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season & 
            season_type == 'REG' &
            !is.na(posteam) & 
@@ -23,13 +23,13 @@ pbp_df <- tbl(con, 'nflfastR_pbp') %>%
   collect()
 print(current_season)
 
-n_week <- fx.n_week(pbp_df)
+n_week <- fx.n_week(pbp)
 
 # If week < 10, us current weeks in season
-time_series <- dplyr::if_else(pbp_df %>%
+time_series <- dplyr::if_else(pbp %>%
   select(week) %>%
   max() - 1 < 10,
-  pbp_df %>%
+  pbp %>%
     select(week) %>%
     max() - 2,
   10)
@@ -40,7 +40,7 @@ qb_min <- 320 #min # of qb plays
 
 # Adjust EPA --------------------------------------------------------------
 # https://www.opensourcefootball.com/posts/2020-08-20-adjusting-epa-for-strenght-of-opponent/
-epa_data <- pbp_df %>%
+epa_data <- pbp %>%
   filter(posteam != '') %>% 
   # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
   dplyr::filter(!is.na(posteam)) %>%
@@ -48,7 +48,7 @@ epa_data <- pbp_df %>%
   dplyr::summarise(
     off_epa = mean(epa, na.rm = T),
   ) %>%
-  dplyr::left_join(pbp_df %>%
+  dplyr::left_join(pbp %>%
                      filter(play_type == "pass" | play_type == "run") %>%
                      dplyr::group_by(game_id, season, week, defteam, away_team) %>%
                      dplyr::summarise(def_epa = mean(epa, na.rm = T)),
@@ -58,7 +58,7 @@ epa_data <- pbp_df %>%
   dplyr::mutate(opponent = ifelse(posteam == home_team, away_team, home_team)) %>%
   dplyr::select(game_id, season, week, home_team, away_team, posteam, opponent, off_epa, def_epa)
 
-offense <- pbp_df %>%
+offense <- pbp %>%
   filter(!is.na(epa) & !is.na(posteam)) %>% 
   group_by(posteam, season) %>%
   summarize(
@@ -170,7 +170,7 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers
 
 # Tiers -------------------------------------------------------------------
 
-offense <- pbp_df %>%
+offense <- pbp %>%
   filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
   group_by(posteam, season)%>%
   summarize(
@@ -184,7 +184,7 @@ offense <- pbp_df %>%
     off_success=mean(success, na.rm = T)
   )
 
-defense <- pbp_df %>%
+defense <- pbp %>%
   filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
   group_by(defteam, season) %>%
   summarize(
@@ -468,5 +468,5 @@ if (n_week < 17) {
 end_time <- Sys.time()
 end_time - start_time
 
-rm(time_series, res, slope, qb_min, epa_data, offense, opponent_data, chart_all, matchup_chart_all, p, start_time, end_time)
+rm(pbp, time_series, res, slope, qb_min, epa_data, offense, defense, opponent_data, chart_all, matchup_chart_all, p, start_time, end_time)
 # })

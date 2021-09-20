@@ -133,7 +133,8 @@ update_cfb_db_mod(
 # espn_players_df <- fx.get_espn_players() # not working, relies on roster load
 
 # nflfastR data
-update_roster(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+con <- fx.db_con(x.host = 'localhost')
+update_roster_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
 roster_df <- tbl(con, 'nflfastR_rosters') %>% 
   filter(season == year) %>% 
   collect()
@@ -221,17 +222,75 @@ matchup_df <- schedule_df %>%
 
 
 # pbp_df <- readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true"))
-team_stats <- pbp_df %>% 
-  calculate_team_stats_mod()
+team_stats <- pbp_df %>%
+  calculate_team_stats_mod() %>%
+  left_join(
+    pbp_df %>% 
+      group_by(posteam) %>% 
+      rename(team = posteam) %>% 
+      filter(play_type %in% c('pass', 'run')) %>% 
+      summarise(
+        offense_snaps = n()
+        )
+  ) %>% 
+  left_join(
+    pbp_df %>% 
+      group_by(defteam) %>% 
+      rename(team = defteam) %>% 
+      filter(play_type %in% c('pass', 'run')) %>% 
+      summarise(
+        defense_snaps = n()
+      )
+  )
 
 team_stats_weekly <- pbp_df %>% 
-  calculate_team_stats_mod(weekly = TRUE)
+  calculate_team_stats_mod(weekly = TRUE) %>% 
+  left_join(
+    pbp_df %>% 
+      group_by(posteam, game_id) %>% 
+      rename(team = posteam) %>% 
+      filter(play_type %in% c('pass', 'run')) %>% 
+      summarise(
+        offense_snaps = n()
+      ),
+    by = c('team')
+  ) %>% 
+  left_join(
+    pbp_df %>% 
+      group_by(defteam, game_id) %>% 
+      rename(team = defteam) %>% 
+      filter(play_type %in% c('pass', 'run')) %>% 
+      summarise(
+        defense_snaps = n()
+      ),
+    by = c('team')
+  )
 
 player_stats <- pbp_df %>% 
-  calculate_player_stats_mod()
+  calculate_player_stats_mod() 
+  # %>%
+  # left_join(
+  #   roster_df %>%
+  #     select(season, gsis_id, pfr_id),
+  #   by = c('player_id' = 'gsis_id')
+  # ) %>%
+  # left_join(
+  #   nflreadr::load_snap_counts(),
+  #   by = c('pfr_id', 'game_id')
+  # )
+  
 
 player_stats_weekly <- pbp_df %>% 
-  calculate_player_stats_mod(weekly = TRUE)
+  calculate_player_stats_mod(weekly = TRUE) %>% 
+  left_join(
+    roster_df %>%
+      select(season, gsis_id, pfr_id),
+    by = c('player_id' = 'gsis_id')
+  ) %>%
+  left_join(
+    nflreadr::load_snap_counts(),
+    by = c('pfr_id', 'game_id')
+  )
 
 # Source plot scripts -----------------------------------------------------
 

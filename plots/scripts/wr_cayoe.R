@@ -38,9 +38,10 @@ xyac_pbp_df <-
     pass_attempt
   ) %>% 
   collect() %>% 
-  decode_player_ids(fast = TRUE) %>% 
-  rename_at(.vars = vars(ends_with('.x')),
-            .funs = funs(sub('[.]x$', '', .)))
+  decode_player_ids(fast = TRUE)
+  # %>% 
+  #   rename_at(.vars = vars(ends_with('.x')),
+  #             .funs = funs(sub('[.]x$', '', .)))
 
 cayoe <- xyac_pbp_df %>% 
   mutate(
@@ -112,7 +113,7 @@ summary(cayoe$targets)
 cayoe_filtered <- cayoe %>% 
   filter(targets >= summary(targets)[4]) %>% 
   left_join(
-    sleeper_players_df %>% 
+    roster_df %>% 
       select(gsis_id,
              headshot_url,
              team,

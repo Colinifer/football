@@ -10,9 +10,11 @@ year
 #                        readRDS(x)})
 #           )
 
-clean_all_pbp_df <- pbp_ds %>% 
+con <- fx.db_con(x.host = 'localhost')
+clean_all_pbp_df <- 
+  tbl(con, 'nflfastR_pbp') %>% 
   filter(season_type == 'REG') %>% 
-  select(-xyac_median_yardage) %>% 
+  select(-xyac_median_yardage) %>%
   collect() %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam),
@@ -32,6 +34,7 @@ clean_all_pbp_df <- pbp_ds %>%
          away_team = ifelse(season < 2020 & away_team == 'LV', 'OAK', away_team)) %>% 
   mutate(home_result = home_score - away_score,
          away_result = away_score - home_score)
+dbDisconnect(con)
 
 all_point_diff <- clean_all_pbp_df %>% 
   group_by(season, game_id, week, home_team, home_result) %>% 
@@ -159,7 +162,7 @@ p <- all_point_diff %>%
     title = glue('{year} Best/Worst Team Point Differential'),
     subtitle = 'All Regular Season Games from 1999-2020'
   ) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     legend.position = 'none',
     # panel.grid.minor = element_line(color=color_cw[1], size = 0.3),

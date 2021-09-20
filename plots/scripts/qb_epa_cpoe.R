@@ -10,7 +10,7 @@ current_season <- year
 # can be multiple seasons
 # lapply(2007:2019, function(season){
 con <- fx.db_con(x.host = 'localhost')
-  pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+  pbp <- tbl(con, 'nflfastR_pbp') %>% 
     filter(season >= current_season & 
              season_type == 'REG' &
              game_id != '2020_12_NO_DEN') %>% # This game is pointless
@@ -43,11 +43,11 @@ con <- fx.db_con(x.host = 'localhost')
   
   # compute cpoe grouped by air_yards
   epa_cpoe <-
-    pbp_df %>%
+    pbp %>%
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)) %>%
     group_by(game_id, passer_player_id) %>%
     summarise(cpoe = mean(cpoe), epa = mean(epa)) %>% 
-    left_join(pbp_df %>%
+    left_join(pbp %>%
                 filter(!is.na(cpoe) &
                          !is.na(epa) & !is.na(passer_player_id)) %>%
                 group_by(passer_player_id) %>%
@@ -58,7 +58,7 @@ con <- fx.db_con(x.host = 'localhost')
     )
   
   top_32 <- 
-    pbp_df %>%
+    pbp %>%
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
     ) %>%
     group_by(passer_player_id) %>%
@@ -82,7 +82,7 @@ con <- fx.db_con(x.host = 'localhost')
   # first arranged by number of plays to filter the 30 QBs with most pass attempts
   # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
   summary_df <-
-    pbp_df %>%
+    pbp %>%
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
     ) %>% 
     group_by(game_id, week, passer_player_id) %>%
@@ -90,7 +90,7 @@ con <- fx.db_con(x.host = 'localhost')
               total_cpoe = mean(cpoe),
               total_epa = mean(epa)
     ) %>%
-    left_join(pbp_df %>% 
+    left_join(pbp %>% 
                 filter(!is.na(passer_player_id)
                 ) %>% 
                 select(passer_player_id, 
@@ -106,7 +106,7 @@ con <- fx.db_con(x.host = 'localhost')
     filter(!is.na(team)) %>% 
     filter(passer_player_id %in% top_32) %>%
     left_join(
-      sleeper_players_df %>%
+      roster_df %>%
         select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
       by = c('passer_player_id' = 'gsis_id')
     ) %>%

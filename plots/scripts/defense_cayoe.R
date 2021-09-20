@@ -33,9 +33,10 @@ xyac_pbp_df <- pbp_df %>%
     gain,
     pass_attempt
   ) %>% 
-  collect() %>% 
-  rename_at(.vars = vars(ends_with('.x')),
-            .funs = funs(sub('[.]x$', '', .)))
+  collect()
+  # %>% 
+  #   rename_at(.vars = vars(ends_with('.x')),
+  #             .funs = funs(sub('[.]x$', '', .)))
 
 my_week <- fx.n_week(pbp_df)
 

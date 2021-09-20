@@ -422,11 +422,12 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         !is.na(.data$team_receiver) ~ .data$team_receiver,
         TRUE ~ .data$team_st
       )
-    ) %>%
+    ) %>% 
+    dplyr::left_join(data %>% select(season, game_id, week, recent_team = posteam) %>% unique(), by = c('season', 'week', 'recent_team')) %>% 
     dplyr::select(tidyselect::any_of(c(
       
       # id information
-      "player_id", "player_name", "recent_team", "season", "week", "season_type",
+      "player_id", "player_name", "recent_team", "season", "week", "game_id", "season_type",
       
       # passing stats
       "completions", "attempts", "passing_yards", "passing_tds", "interceptions",
@@ -911,6 +912,11 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
     ) %>%
     dplyr::rename(team = .data$posteam)
   
+  
+  # Snap Counts -------------------------------------------------------------
+  
+  
+  
   # Combine all stats -------------------------------------------------------
   
   # combine all the stats together
@@ -918,11 +924,12 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::full_join(rush_df, by = c("team", "week", "season")) %>%
     dplyr::full_join(rec_df, by = c("team", "week", "season")) %>%
     dplyr::full_join(st_tds, by = c("team", "week", "season")) %>%
-    dplyr::left_join(s_type, by = c("season", "week")) %>%
+    dplyr::left_join(s_type, by = c("season", "week")) %>% 
+    dplyr::left_join(data %>% select(season, game_id, week, team = posteam) %>% unique(), by = c('season', 'team', 'week')) %>% 
     dplyr::select(tidyselect::any_of(c(
       
       # id information
-      "team", "season", "week", "season_type",
+      "team", "season", "week", "game_id", "season_type", # 'offense_snaps', 'defense_snaps',
       
       # passing stats
       "completions", "attempts", "passing_yards", "passing_tds", "interceptions",

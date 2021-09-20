@@ -11,7 +11,7 @@ current_season <- year
 
 # Download play-by-play data, decode player IDs, and 
 con <- fx.db_con(x.host = 'localhost')
-pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season &
            season_type == 'REG') %>% 
   collect() %>% 
@@ -27,7 +27,7 @@ roster_df <-
 
 # compute cpoe grouped by air_yards
 cpoe <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(cpoe)) %>%
   group_by(passer_player_id, air_yards) %>%
   summarise(count = n(), cpoe = mean(cpoe, na.rm = T))
@@ -38,7 +38,7 @@ cpoe <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(cpoe)
          ) %>%
   group_by(posteam, passer_player_id) %>%
@@ -49,7 +49,7 @@ summary_df <-
   group_by(posteam) %>% 
   filter(row_number() == 1) %>% 
   ungroup() %>% 
-  left_join(pbp_df %>% 
+  left_join(pbp %>% 
               filter(!is.na(passer_player_id)
                      ) %>% 
               select(passer_player_id, 
@@ -62,7 +62,7 @@ summary_df <-
             desc()
           ) %>%
   left_join(
-    sleeper_players_df %>%
+    roster_df %>%
       select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
     by = c('passer_player_id' = 'gsis_id')
   ) %>%
