@@ -34,9 +34,9 @@ time_series <- dplyr::if_else(pbp %>%
     max() - 2,
   10)
 
-res <- 800 #size of exported plots
-slope = -1.5 #for the tiers stuff
-qb_min <- 320 #min # of qb plays
+res <- 800 # size of exported plots
+slope = -1.5 # for the tiers stuff
+qb_min <- 320 # min # of qb plays
 
 # Adjust EPA --------------------------------------------------------------
 # https://www.opensourcefootball.com/posts/2020-08-20-adjusting-epa-for-strenght-of-opponent/
@@ -172,7 +172,7 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers
 
 offense <- pbp %>%
   filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
-  group_by(posteam, season)%>%
+  group_by(posteam, season) %>%
   summarize(
     n_pass=sum(pass, na.rm = T),
     n_rush=sum(rush, na.rm = T),
@@ -182,6 +182,20 @@ offense <- pbp %>%
     success_per_rush=sum(rush*epa>0, na.rm = T)/n_rush,
     off_epa=mean(epa, na.rm = T),
     off_success=mean(success, na.rm = T)
+  )
+
+early_down_offense <- pbp %>%
+  filter(!is.na(posteam) & down < 3 & (rush == 1 | pass == 1)) %>% 
+  group_by(posteam, season) %>%
+  summarize(
+    early_down_n_pass = sum(pass, na.rm = T),
+    early_down_n_rush = sum(rush, na.rm = T),
+    early_down_epa_per_pass = sum(epa*pass, na.rm = T)/early_down_n_pass,
+    early_down_epa_per_rush = sum(epa*rush, na.rm = T)/early_down_n_rush,
+    early_down_success_per_pass = sum(pass*epa>0, na.rm = T)/early_down_n_pass,
+    early_down_success_per_rush = sum(rush*epa>0, na.rm = T)/early_down_n_rush,
+    early_down_off_epa = mean(epa, na.rm = T),
+    early_down_off_success = mean(success, na.rm = T)
   )
 
 defense <- pbp %>%
@@ -198,8 +212,24 @@ defense <- pbp %>%
     def_success=mean(success, na.rm = T)
   )
 
+early_down_defense <- pbp %>%
+  filter(!is.na(defteam) & down < 3 & (rush == 1 | pass == 1)) %>% 
+  group_by(defteam, season) %>%
+  summarize(
+    def_early_down_n_pass = sum(pass, na.rm = T),
+    def_early_down_n_rush = sum(rush, na.rm = T),
+    def_early_down_epa_per_pass = sum(epa*pass, na.rm = T)/def_early_down_n_pass,
+    def_early_down_epa_per_rush = sum(epa*rush, na.rm = T)/def_early_down_n_rush,
+    def_early_down_success_per_pass = sum(pass*epa>0, na.rm = T)/def_early_down_n_pass,
+    def_early_down_success_per_rush = sum(rush*epa>0, na.rm = T)/def_early_down_n_rush,
+    def_early_down_epa = mean(epa, na.rm = T),
+    def_early_down_success = mean(success, na.rm = T)
+  )
+
 chart_all <- offense %>% 
-  inner_join(defense, by=c("season", "posteam" = "defteam")) %>%
+  inner_join(defense, by = c("season", "posteam" = "defteam")) %>% 
+  inner_join(early_down_offense, by = c('season', 'posteam')) %>% 
+  inner_join(early_down_defense, by = c('season', 'posteam' = 'defteam')) %>% 
   left_join(teams_colors_logos, by = c("posteam" = "team_abbr"))
 
 p <- chart_all %>% 
@@ -238,6 +268,43 @@ p <- chart_all %>%
   )
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+p <- chart_all %>% 
+  ggplot(aes(x = early_down_off_epa, y = def_early_down_epa)) +
+  # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
+  geom_grob(data = chart_all,
+            aes(
+              x = early_down_off_epa,
+              y = def_early_down_epa,
+              label = grob_img_adj(team_logo_espn),
+              vp.height = 0.08
+            )) +
+  geom_hline(yintercept = mean(chart_all$def_early_down_epa, na.rm = T), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(chart_all$early_down_off_epa, na.rm = T), color = "red", linetype = "dashed") +
+  labs(x = "Offense early down EPA/play",
+       y = "Defense early down EPA/play",
+       # caption = "Data: @nflscrapR",
+       title = glue("{current_season} NFL Team Tiers"),
+       subtitle = glue("Offense and defense early down EPA per play through week {n_week}")) +
+  geom_abline(slope=slope, intercept=.4, alpha=.2) +
+  geom_abline(slope=slope, intercept=.3, alpha=.2) +
+  geom_abline(slope=slope, intercept=0, alpha=.2) +
+  geom_abline(slope=slope, intercept=.1, alpha=.2) +
+  geom_abline(slope=slope, intercept=.2, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  scale_y_reverse() +
+  theme_cw_dark +
+  theme(
+    axis.title.y = element_text(angle = 90),
+    legend.position = c(0.99, 0.99),
+    legend.justification = c(1, 1) ,
+    plot.title = element_text(size = 16),
+    #panel.grid.minor = element_blank()
+  )
+
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/early_down_team_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Pass v Rush EPA
 p <- chart_all %>% 

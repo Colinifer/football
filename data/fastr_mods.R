@@ -43,6 +43,17 @@ update_draft_db <- function(season = year, db_connection = NULL){
   DBI::dbDisconnect(con)
 }
 
+# Update QBR --------------------------------------------------------------
+
+update_ngs_db <- function(season = year, db_connection = NULL){
+  con <- db_connection
+  draft_df <- nflreadr::load_espn_qbr(seasons = season)
+  DBI::dbExecute(db_connection, glue('DELETE FROM "nflfastR_draft" WHERE "season" = {season}'))
+  
+  DBI::dbWriteTable(conn = db_connection, name = 'nflfastR_draft', value = draft_df, append = TRUE)
+  DBI::dbDisconnect(con)
+}
+
 # Player stats ------------------------------------------------------------
 
 calculate_player_stats_mod <- function(pbp, weekly = FALSE) {

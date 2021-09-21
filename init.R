@@ -134,19 +134,19 @@ update_cfb_db_mod(
 
 # nflfastR data
 con <- fx.db_con(x.host = 'localhost')
-update_roster_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+# update_roster_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
 roster_df <- tbl(con, 'nflfastR_rosters') %>% 
   filter(season == year) %>% 
   collect()
-update_schedule_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+# update_schedule_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
 schedule_df <- tbl(con, 'nflfastR_schedule') %>% 
   filter(season == year) %>% 
   collect()
-update_trades_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+# update_trades_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
 trades_df <- tbl(con, 'nflfastR_trades') %>% 
   filter(season == year) %>% 
   collect()
-update_draft_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
+# update_draft_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
 draft_df <- tbl(con, 'nflfastR_draft') %>% 
   filter(season == year) %>% 
   collect()
