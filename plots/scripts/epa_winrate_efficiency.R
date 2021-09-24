@@ -11,7 +11,7 @@ library(webshot)
 current_season <- year
 
 con <- fx.db_con(x.host = 'localhost')
-pbp_df <- 
+pbp <- 
 #   purrr::map_df(current_season, function(x) {
 #   readRDS(url(
 #     glue::glue("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{x}.rds?raw=true")
@@ -28,10 +28,10 @@ pbp_df <-
   decode_player_ids
 print(current_season)
 
-n_week <- fx.n_week(pbp_df)
+n_week <- fx.n_week(pbp)
 
 # Calculate avg epa
-epa_data <- pbp_df %>%
+epa_data <- pbp %>%
   filter(posteam != '') %>% 
   # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
   dplyr::filter(!is.na(posteam)) %>%
@@ -39,7 +39,7 @@ epa_data <- pbp_df %>%
   dplyr::summarise(
     off_epa = mean(epa, na.rm = T),
   ) %>%
-  dplyr::left_join(pbp_df %>%
+  dplyr::left_join(pbp %>%
                      filter(play_type == "pass" | play_type == "run") %>%
                      dplyr::group_by(game_id, season, week, defteam, away_team) %>%
                      dplyr::summarise(def_epa = mean(epa, na.rm = T)),
@@ -49,7 +49,7 @@ epa_data <- pbp_df %>%
   dplyr::mutate(opponent = ifelse(posteam == home_team, away_team, home_team)) %>%
   dplyr::select(game_id, season, week, home_team, away_team, posteam, opponent, off_epa, def_epa)
 
-offense <- pbp_df %>%
+offense <- pbp %>%
   filter(!is.na(epa) & !is.na(posteam)) %>% 
   group_by(posteam, season) %>%
   summarize(
@@ -139,13 +139,13 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_rushing/team_rus
 
 # compute cpoe grouped by air_yards
 rb_epa <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(epa) & !is.na(rusher_player_id)) %>%
   group_by(rusher_player_id) %>%
   summarise(total_yards = sum(yards_gained), epa = mean(epa))
 
 top_32 <- 
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(epa) & !is.na(rusher_player_id)
   ) %>%
   group_by(rusher_player_id) %>%
@@ -154,7 +154,7 @@ top_32 <-
             total_epa = mean(epa)
   ) %>%
   left_join(
-    sleeper_players_df %>% 
+    roster_df %>% 
       select(gsis_id, position),
     by = c('rusher_player_id' = 'gsis_id')
     ) %>%
@@ -172,14 +172,14 @@ top_32 <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(epa) & !is.na(rusher_player_id)
   ) %>% 
   group_by(rusher_player_id) %>%
   summarise(rush_attempts = n(),
             total_epa = mean(epa)
   ) %>%
-  left_join(pbp_df %>% 
+  left_join(pbp %>% 
               filter(!is.na(rusher_player_id)
               ) %>% 
               select(rusher_player_id, 
@@ -196,7 +196,7 @@ summary_df <-
   ) %>% 
   filter(rusher_player_id %in% top_32) %>%
   left_join(
-    sleeper_players_df %>%
+    roster_df %>%
       select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
     by = c('rusher_player_id' = 'gsis_id')
   ) %>%
@@ -388,11 +388,11 @@ load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=t
 
 # compute cpoe grouped by air_yards
 epa_cpoe <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)) %>%
   group_by(passer_player_id) %>%
   summarise(cpoe = mean(cpoe), epa = mean(epa)) %>% 
-  left_join(pbp_df %>%
+  left_join(pbp %>%
               filter(!is.na(cpoe) &
                        !is.na(epa) & !is.na(passer_player_id)) %>%
               group_by(passer_player_id) %>%
@@ -403,7 +403,7 @@ epa_cpoe <-
   )
 
 top_32 <- 
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
   ) %>%
   group_by(passer_player_id) %>%
@@ -413,7 +413,7 @@ top_32 <-
             total_epa = mean(epa)
   ) %>%
   left_join(
-    sleeper_players_df %>% 
+    roster_df %>% 
       select(gsis_id, position),
     by = c('passer_player_id' = 'gsis_id')
   ) %>% 
@@ -430,7 +430,7 @@ top_32 <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp_df %>%
+  pbp %>%
   filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
   ) %>% 
   group_by(passer_player_id) %>%
@@ -438,7 +438,7 @@ summary_df <-
             total_cpoe = mean(cpoe, na.rm = T),
             total_epa = sum(epa, na.rm = T)
   ) %>%
-  left_join(pbp_df %>% 
+  left_join(pbp %>% 
               filter(!is.na(passer_player_id)
               ) %>% 
               select(passer_player_id, 
@@ -455,7 +455,7 @@ summary_df <-
   ) %>% 
   filter(passer_player_id %in% top_32) %>%
   left_join(
-    sleeper_players_df %>%
+    roster_df %>%
       select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
     by = c('passer_player_id' = 'gsis_id')
   ) %>%
