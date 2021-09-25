@@ -104,29 +104,6 @@ source('data/cfb_fastr_mods.R')
 #   dbDisconnect(con)
 # }
 
-nflfastR::update_db(
-  tblname = "nflfastR_pbp",
-  force_rebuild = FALSE,
-  db_connection = fx.db_con(x.host = 'localhost')
-)
-
-nflfastR::update_db(
-  tblname = "nflfastR_pbp",
-  force_rebuild = FALSE,
-  db_connection = fx.db_con()
-)
-
-source('https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/R/cfb_pbp.R')
-update_cfb_db_mod(
-  tblname = 'cfbfastR_pbp',
-  db_connection = fx.db_con(x.host = 'localhost')
-)
-
-update_cfb_db_mod(
-  tblname = 'cfbfastR_pbp',
-  db_connection = fx.db_con()
-)
-
 # Create variables & dataframes -------------------------------------------
 # sleeper_players_df <- fx.get_sleeper_api_players()
 # source("fantasy_football/ff_init.R")
@@ -292,28 +269,29 @@ player_stats_weekly <- pbp_df %>%
     by = c('pfr_id', 'game_id')
   )
 
-# Source plot scripts -----------------------------------------------------
 
-# map(
-#   dir(path = 'plots/scripts', full.names = TRUE)[1], 
-#   source
-#   )
-# 
-# source('plots/scripts/season_point_differential.R', echo = F)
-# source('plots/scripts/team_tiers.R', echo = F)
-# source('plots/scripts/wins_above_expectation.R', echo = F)
-# source('plots/scripts/team_run_pass_efficiency.R', echo = F)
-# source('plots/scripts/dakota_career.R', echo = F)
-# source('plots/scripts/qb_cayoe.R', echo = F)
-# source('plots/scripts/qb_cpoe_adot.R', echo = F)
-# source('plots/scripts/qb_epa_cpoe.R', echo = F)
-# source('plots/scripts/wr_cayoe.R', echo = F)
-# # source('fantasy_football/xfantasy_points.R')
-# # source('fantasy_football/xfantasy_points_test_theme.R')
-# # source('plots/scripts/espn_winrate.R')
-# source('plots/scripts/defense_cpoe_adot.R', echo = F)
-# source('plots/scripts/defense_epa_cpoe.R', echo = F)
-# source('plots/scripts/defense_cayoe.R', echo = F)
-# source('plots/scripts/epa_winrate_efficiency.R', echo = F)
-# # rm(list = ls())
+# Update DBs --------------------------------------------------------------
+
+nflfastR::update_db(
+  tblname = "nflfastR_pbp",
+  force_rebuild = FALSE,
+  db_connection = fx.db_con(x.host = 'localhost')
+)
+
+nflfastR::update_db(
+  tblname = "nflfastR_pbp",
+  force_rebuild = FALSE,
+  db_connection = fx.db_con()
+)
+
+source('https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/R/cfb_pbp.R')
+update_cfb_db_mod(
+  tblname = 'cfbfastR_pbp',
+  db_connection = fx.db_con(x.host = 'localhost')
+)
+
+update_cfb_db_mod(
+  tblname = 'cfbfastR_pbp',
+  db_connection = fx.db_con()
+)
 
