@@ -256,18 +256,9 @@ player_stats <- pbp_df %>%
   #   by = c('pfr_id', 'game_id')
   # )
   
-
 player_stats_weekly <- pbp_df %>% 
-  calculate_player_stats_mod(weekly = TRUE) %>% 
-  left_join(
-    roster_df %>%
-      select(season, gsis_id, pfr_id),
-    by = c('player_id' = 'gsis_id')
-  ) %>%
-  left_join(
-    nflreadr::load_snap_counts(),
-    by = c('pfr_id', 'game_id')
-  )
+  calculate_player_stats_mod(weekly = TRUE)
+
 
 
 # Update DBs --------------------------------------------------------------

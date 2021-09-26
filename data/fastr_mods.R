@@ -10,6 +10,10 @@ update_schedule_db <- function(season = year, db_connection = NULL){
   DBI::dbDisconnect(con)
 }
 
+
+
+
+
 # Update Roster -----------------------------------------------------------
 
 update_roster_db <- function(season = year, db_connection = NULL){
@@ -20,6 +24,10 @@ update_roster_db <- function(season = year, db_connection = NULL){
   DBI::dbWriteTable(conn = db_connection, name = 'nflfastR_rosters', value = roster_df, append = TRUE)
   DBI::dbDisconnect(con)
 }
+
+
+
+
 
 # Update Trades -----------------------------------------------------------
 
@@ -32,6 +40,10 @@ update_trades_db <- function(season = year, db_connection = NULL){
   DBI::dbDisconnect(con)
 }
 
+
+
+
+
 # Update Draft ------------------------------------------------------------
 
 update_draft_db <- function(season = year, db_connection = NULL){
@@ -43,6 +55,10 @@ update_draft_db <- function(season = year, db_connection = NULL){
   DBI::dbDisconnect(con)
 }
 
+
+
+
+
 # Update QBR --------------------------------------------------------------
 
 update_ngs_db <- function(season = year, db_connection = NULL){
@@ -53,6 +69,10 @@ update_ngs_db <- function(season = year, db_connection = NULL){
   DBI::dbWriteTable(conn = db_connection, name = 'nflfastR_draft', value = draft_df, append = TRUE)
   DBI::dbDisconnect(con)
 }
+
+
+
+
 
 # Player stats ------------------------------------------------------------
 
@@ -118,6 +138,9 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::select(.data$season, .data$season_type, .data$week) %>%
     dplyr::distinct()
   
+  # Get data seasons
+  data_seasons <- pbp %>% pull(season) %>% unique()
+
   # load gsis_ids of FBs and RBs for RACR
   racr_ids <- nflreadr::qs_from_url("https://github.com/nflverse/nflfastR-roster/raw/master/data/nflfastR-RB_ids.qs")
   
@@ -149,6 +172,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         .data$passing_air_yards <= 0 ~ 0,
         TRUE ~ .data$pacr
       ),
+      anya = (.data$passing_yards - .data$sack_yards + (20 * passing_tds) - (45 * interceptions)) / (attempts + sacks)
     ) %>%
     dplyr::rename(player_id = .data$passer_player_id) %>%
     dplyr::ungroup()
@@ -412,25 +436,66 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     ) %>%
     dplyr::rename(player_id = .data$td_player_id)
   
+
+  # Combine all stats -------------------------------------------------------
+
+  if (length(which(data_seasons >= 2013)) > 0) {
+    snaps_df <-
+      nflreadr::load_snap_counts(seasons = data_seasons[data_seasons >= 2013]) %>%
+      left_join(roster_df %>%
+                  select(gsis_id, pfr_id, first_name, last_name),
+                by = c('pfr_id')) %>% 
+      left_join(schedule_df %>% 
+                  select(game_id, week),
+                by = c('game_id')) %>% 
+      mutate(
+        name_snaps = paste0(substr(first_name, 1, 1), '.', last_name),
+        offense_snaps = offense_snaps %>% as.integer(),
+        offense_pct = offense_pct / 100,
+        defense_snaps = defense_snaps %>% as.integer(),
+        defense_pct = defense_pct / 100,
+        st_snaps = st_snaps %>% as.integer(),
+        st_pct = st_pct / 100
+      ) %>% 
+      select(
+        player_id = gsis_id,
+        week,
+        season,
+        name_snaps,
+        team_snaps = team,
+        offense_snaps:st_pct
+      )
+  } else {
+    snaps_df <- tibble() %>%
+      mutate(player_id = as.character(NA),
+             week = as.integer(NA),
+             season = as.integer(NA),
+             name_snaps = as.character(NA))
+  }
+
+  
   # Combine all stats -------------------------------------------------------
   
   # combine all the stats together
   player_df <- pass_df %>%
     dplyr::full_join(rush_df, by = c("player_id", "week", "season")) %>%
     dplyr::full_join(rec_df, by = c("player_id", "week", "season")) %>%
-    dplyr::full_join(st_tds, by = c("player_id", "week", "season")) %>%
+    dplyr::full_join(st_tds, by = c("player_id", "week", "season")) %>% 
+    dplyr::full_join(snaps_df, by = c("player_id", "week", "season")) %>% 
     dplyr::left_join(s_type, by = c("season", "week")) %>%
     dplyr::mutate(
       player_name = dplyr::case_when(
         !is.na(.data$name_pass) ~ .data$name_pass,
         !is.na(.data$name_rush) ~ .data$name_rush,
         !is.na(.data$name_receiver) ~ .data$name_receiver,
+        !is.na(.data$name_snaps) ~ .data$name_snaps,
         TRUE ~ .data$name_st
       ),
       recent_team = dplyr::case_when(
         !is.na(.data$team_pass) ~ .data$team_pass,
         !is.na(.data$team_rush) ~ .data$team_rush,
         !is.na(.data$team_receiver) ~ .data$team_receiver,
+        !is.na(.data$team_snaps) ~ .data$team_snaps,
         TRUE ~ .data$team_st
       )
     ) %>% 
@@ -440,10 +505,13 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       # id information
       "player_id", "player_name", "recent_team", "season", "week", "game_id", "season_type",
       
+      # offense stats
+      "offense_snaps", "offense_pct",
+      
       # passing stats
       "completions", "attempts", "passing_yards", "passing_tds", "interceptions",
       "sacks", "sack_yards", "sack_fumbles", "sack_fumbles_lost", "passing_air_yards", "passing_yards_after_catch",
-      "passing_first_downs", "passing_epa", "passing_2pt_conversions", "pacr", "dakota",
+      "passing_first_downs", "passing_epa", "passing_2pt_conversions", "pacr", "anya", "dakota",
       
       # rushing stats
       "carries", "rushing_yards", "rushing_tds", "rushing_fumbles", "rushing_fumbles_lost",
@@ -456,7 +524,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       "target_share", "air_yards_share", "wopr", "hvt",
       
       # special teams
-      "special_teams_tds"
+      "special_teams_tds", "st_snaps", "st_pct"
       
     ))) %>%
     dplyr::filter(!is.na(.data$player_id))
@@ -486,12 +554,19 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   
   # if user doesn't want week-by-week input, aggregate the whole df
   if (isFALSE(weekly)) {
-    player_df <- player_df %>%
+    player_df <- player_df %>% 
+      mutate(
+        potential_offense_snaps = .data$offense_snaps / .data$offense_pct,
+        potential_st_snaps = .data$st_snaps / .data$st_pct
+      ) %>% 
       dplyr::group_by(.data$player_id) %>%
       dplyr::summarise(
         player_name = custom_mode(.data$player_name),
         games = dplyr::n(),
         recent_team = dplyr::last(.data$recent_team),
+        offense_snaps = sum(.data$offense_snaps),
+        # potential_offense_snaps = sum(.data$potential_offense_snaps), # total potential_snaps
+        offense_pct = sum(.data$offense_snaps) / sum(.data$potential_offense_snaps), # calculate total snaps percentage
         # passing
         completions = sum(.data$completions),
         attempts = sum(.data$attempts),
@@ -508,6 +583,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         passing_epa = dplyr::if_else(all(is.na(.data$passing_epa)), NA_real_, sum(.data$passing_epa, na.rm = TRUE)),
         passing_2pt_conversions = sum(.data$passing_2pt_conversions),
         pacr = .data$passing_yards / .data$passing_air_yards,
+        anya = (passing_yards - sack_yards + (20 * passing_tds) - (45 * interceptions)) / (attempts + sacks),
         
         # rushing
         carries = sum(.data$carries),
@@ -539,6 +615,9 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         
         # special teams
         special_teams_tds = sum(.data$special_teams_tds),
+        st_snaps = sum(.data$st_snaps),
+        # potential_st_snaps = sum(.data$potential_st_snaps), # total potential_snaps
+        st_pct = sum(.data$st_snaps) / sum(.data$potential_st_snaps), # calculate total snaps percentage
         
         # fantasy
         fantasy_points = sum(.data$fantasy_points),
