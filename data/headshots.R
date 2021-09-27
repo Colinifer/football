@@ -1,4 +1,3 @@
-
 player_stats %>% 
   left_join(roster_df %>% 
               select(gsis_id, position, headshot_url),
@@ -29,13 +28,21 @@ headshots <- player_stats %>%
   filter(!is.na(headshot_url)) %>% 
   select(season, headshot_url, player_id)
 
-headshots <- roster_df %>% 
-  filter(season == 2018) %>% 
-  unique() %>% 
+year <- 2013
+
+existing_headshots <- list.files(path = paste0('data/headshots/', year, '/')) %>% 
+  gsub(pattern = '.png', replacement = '')
+
+headshots <- roster_df %>%
+  filter(season == year & position %in% c('QB', 'WR', 'RB', 'TE') &
+           !is.na(gsis_id) & 
+           !(gsis_id %in% existing_headshots)) %>%
+  unique() %>%
   pull(headshot_url)
 
 map(headshots, function(x){
+  print(x)
   join_data <- roster_df %>% 
-    filter(headshot_url == x & season == 2018)
-  download.file(join_data$headshot_url, destfile = paste0('data/headshots/', join_data$season, '/', join_data$gsis_id, '.png'), method='curl')
+    filter(headshot_url == x & season == year)
+  download.file(url = join_data$headshot_url, destfile = paste0('data/headshots/', join_data$season, '/', join_data$gsis_id, '.png'), method='curl')
 })

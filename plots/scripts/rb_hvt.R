@@ -1,5 +1,5 @@
 # Data --------------------------------------------------------------------
-map(2015:current_season,function(x){
+map(current_season,function(x){
   print(x)
   
   con <- fx.db_con(x.host = 'localhost')
