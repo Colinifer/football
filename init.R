@@ -230,7 +230,7 @@ team_stats_weekly <- pbp_df %>%
       summarise(
         offense_snaps = n()
       ),
-    by = c('team')
+    by = c('team', 'game_id')
   ) %>% 
   left_join(
     pbp_df %>% 
@@ -240,7 +240,7 @@ team_stats_weekly <- pbp_df %>%
       summarise(
         defense_snaps = n()
       ),
-    by = c('team')
+    by = c('team', 'game_id')
   )
 
 player_stats <- pbp_df %>% 

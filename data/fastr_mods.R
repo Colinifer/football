@@ -530,7 +530,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::filter(!is.na(.data$player_id))
   
   player_df_nas <- is.na(player_df)
-  epa_index <- which(dimnames(player_df_nas)[[2]] %in% c("passing_epa", "rushing_epa", "receiving_epa", "dakota", "racr", "target_share", "air_yards_share", "wopr", "pacr"))
+  epa_index <- which(dimnames(player_df_nas)[[2]] %in% c("season_type", "game_id", "week", "passing_epa", "rushing_epa", "receiving_epa", "dakota", "racr", "target_share", "air_yards_share", "wopr", "pacr"))
   player_df_nas[,epa_index] <- c(FALSE)
   
   player_df[player_df_nas] <- 0

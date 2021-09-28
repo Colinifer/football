@@ -171,7 +171,7 @@ wins_above_expected_scatter <- chart %>%
 brand_plot(wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_scatter_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Create bar plot  -------------------------------------------------------------
-wins_above_expected_bar <- chart %>%
+wins_above_expected_bar_dark <- chart %>%
   ggplot(aes(x = seq_along(diff), y = diff)) +
   geom_hline(aes(yintercept = mean(diff)), color = "red", linetype = "dashed") +
   geom_col(width = 0.5, color = chart$team_color, fill = chart$team_color, alpha = 0.5) +
@@ -181,7 +181,7 @@ wins_above_expected_bar <- chart %>%
     x = "Rank",
     y = "Win Percentage Over Expectation",
     title = glue("NFL Team Efficiency {current_season}"),
-    subtitle = glue("How Lucky are the Teams? Through week {n_week}")
+    subtitle = glue("How Lucky is each Team? Through week {n_week}")
   ) +
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
   theme_cw_dark +
@@ -195,7 +195,33 @@ wins_above_expected_bar <- chart %>%
   ) +
   NULL
 
-brand_plot(wins_above_expected_bar, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_bar_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(wins_above_expected_bar_dark, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_bar_{current_season}_dark.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+wins_above_expected_bar_light <- chart %>%
+  ggplot(aes(x = seq_along(diff), y = diff)) +
+  geom_hline(aes(yintercept = mean(diff)), color = "red", linetype = "dashed") +
+  geom_col(width = 0.5, color = chart$team_color, fill = chart$team_color, alpha = 0.5) +
+  ggpp::geom_grob(aes(x = seq_along(diff), y = diff, label = grob), vp.width = 0.035) +
+  # scale_x_continuous(expand = c(0,0)) +
+  labs(
+    x = "Rank",
+    y = "Win Percentage Over Expectation",
+    title = glue("NFL Team Efficiency {current_season}"),
+    subtitle = glue("How Lucky is each Team? Through week {n_week}")
+  ) +
+  # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
+  theme_cw_light +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(hjust = 1),
+    axis.title.y = element_text(angle = 90),
+    axis.text.y = element_text(angle = 0, vjust = 0.5),
+    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = "bold"),
+    legend.position = "top"
+  ) +
+  NULL
+
+brand_plot(wins_above_expected_bar_light, asp = 16/10, save_name = glue('plots/desktop/team_wins/wins_above_expected_bar_{current_season}_light.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 
 # Pythagorean Wins
@@ -225,6 +251,6 @@ pythagorean_wins_above_expected_scatter <- chart %>%
 
 brand_plot(pythagorean_wins_above_expected_scatter, asp = 16/10, save_name = glue('plots/desktop/team_wins/pythag_wins_above_expected_scatter_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
-rm(wp_limit, outcomes, wp_combined, chart, wins_above_expected_scatter, wins_above_expected_bar, pythagorean_wins_above_expected_scatter)
+rm(wp_limit, outcomes, wp_combined, chart, wins_above_expected_scatter, wins_above_expected_bar_dark, wins_above_expected_bar_light, pythagorean_wins_above_expected_scatter)
 
 # })

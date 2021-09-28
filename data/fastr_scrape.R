@@ -4,7 +4,7 @@ library(viridis)
 
 current_season <- year
 
-con <- fx.db_con()
+con <- fx.db_con(x.host = 'localhost')
 
 roster_df <-  fast_scraper_roster(year)
 dbWriteTable(conn = con, 'nflfastR_rosters', roster_df)
@@ -17,6 +17,20 @@ dbWriteTable(con, 'nflfastR_trades', trades_df)
 
 draft_df <- nflreadr::load_draft_picks()
 dbWriteTable(con, 'nflfastR_draft', draft_df)
+
+pbp <- tbl(con, 'nflfastR_pbp') %>% 
+  filter(season >= 2006) %>% 
+  collect()
+
+team_stats_df <- pbp %>% 
+  calculate_team_stats_mod(weekly = TRUE)
+
+dbWriteTable(con, 'nflfastR_team_stats', team_stats_df)
+
+player_stats_df <- pbp %>% 
+  calculate_player_stats_mod(weekly = TRUE)
+
+dbWriteTable(con, 'nflfastR_player_stats', player_stats_df)
 
 existing_game_ids <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season) %>% 
