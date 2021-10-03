@@ -275,13 +275,13 @@ nflfastR::update_db(
   db_connection = fx.db_con()
 )
 
-source('https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/R/cfb_pbp.R')
-update_cfb_db_mod(
+# source('https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/R/cfb_pbp.R') # used for update_cfb_db_mod function
+update_cfb_db(
   tblname = 'cfbfastR_pbp',
   db_connection = fx.db_con(x.host = 'localhost')
 )
 
-update_cfb_db_mod(
+update_cfb_db(
   tblname = 'cfbfastR_pbp',
   db_connection = fx.db_con()
 )

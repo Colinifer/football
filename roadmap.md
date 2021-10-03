@@ -2,7 +2,6 @@ Project Roadmap
 ================
 
 DB Updates functions:
-- Fix cfbfastR update
 - SR data
 
 Player/Team Stats:

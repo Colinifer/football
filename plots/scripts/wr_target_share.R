@@ -2,7 +2,7 @@
 
 current_season <- year
 
-con <- fx.db_con()
+con <- fx.db_con(x.host = 'localhost')
 pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= 2006) %>% 
   collect()
@@ -91,7 +91,7 @@ player_stats %>%
 # Air Yards Market Share plot ---------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/market-share/
 player_stats %>%
-  filter(season >= current_season-1) %>%
+  filter(season >= current_season) %>%
   ggplot(aes(x = target_share, y = air_yards_share)) +
   geom_point(
     color = player_stats %>%

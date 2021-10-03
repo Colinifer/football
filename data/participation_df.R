@@ -84,14 +84,14 @@ sr_part_df <- do.call(
   rbind,
   lapply(
     dir(
-      glue('data/part/'),
+      glue('data/part'),
       pattern = glue('{year}.rds'),
       full.names = T),
     readRDS)
 )
 
 con <- fx.db_con()
-tbl(con, 'part')
+tbl(con, 'sr_participation')
 # dbWriteTable(con,
 #              'part',
 #              sr_part_df)

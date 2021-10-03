@@ -28,7 +28,7 @@ headshots <- player_stats %>%
   filter(!is.na(headshot_url)) %>% 
   select(season, headshot_url, player_id)
 
-year <- 2013
+year <- 2021
 
 existing_headshots <- list.files(path = paste0('data/headshots/', year, '/')) %>% 
   gsub(pattern = '.png', replacement = '')
@@ -44,5 +44,7 @@ map(headshots, function(x){
   print(x)
   join_data <- roster_df %>% 
     filter(headshot_url == x & season == year)
-  download.file(url = join_data$headshot_url, destfile = paste0('data/headshots/', join_data$season, '/', join_data$gsis_id, '.png'), method='curl')
+  try(download.file(url = join_data$headshot_url, destfile = paste0('data/headshots/', join_data$season, '/', join_data$gsis_id, '.png'), method='curl'))
+  print(join_data$headshot_url)
 })
+

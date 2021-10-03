@@ -2,26 +2,38 @@
 
 current_season <- year
 
-# pbp_df <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
-# if (exists("pbp_df") == FALSE) {
-#   pbp_df <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'))) %>% decode_player_ids(fast = TRUE)
+# pbp <- readRDS(url('https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_2020.rds'))
+# if (exists("pbp") == FALSE) {
+#   pbp <- readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true'))) %>% decode_player_ids(fast = TRUE)
 # }
+con <- fx.db_con(x.host = 'localhost')
 
-pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= current_season-1) %>% 
   select(-xyac_median_yardage) %>% 
   collect() %>% 
   decode_player_ids(fast = TRUE)
 
-my_week <- fx.n_week(pbp_df)
+my_week <- fx.n_week(pbp)
 
-sr_part_df <- do.call(rbind, lapply(2019:current_season, function(x) {
+sr_part_df <- 
+  do.call(rbind, lapply(2019:current_season, function(x) {
   readRDS(glue('data/part/sportradar_part_{x}.rds')) %>% 
     # select() %>% 
     identity()
-}))
+})) %>% 
+  filter(position %in% c('QB', 'RB', 'WR', 'TE')) %>% 
+  left_join(
+    sr_
+  )
+  left_join(
+    pbp %>% 
+      select(
+        
+      )
+  )
 
-sr_games_df <- do.call(rbind, lapply(2019:current_season, function(x) {
+sr_games_df_19 <- do.call(rbind, lapply(2020, function(x) {
   readRDS(glue('data/schedules/sportradar/games_{x}.rds'))
 }))
 
@@ -41,7 +53,7 @@ sr_part_games_fastr <- sr_part_df_clean %>%
   pull(game_id) %>% 
   unique()
 
-yprr <- pbp_df %>%
+yprr <- pbp %>%
   # select(game_id_SR) %>%
   left_join(
     sr_part_df_clean %>% 

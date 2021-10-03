@@ -444,7 +444,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       nflreadr::load_snap_counts(seasons = data_seasons[data_seasons >= 2013]) %>%
       left_join(roster_df %>%
                   select(gsis_id, pfr_id, first_name, last_name),
-                by = c('pfr_id')) %>% 
+                by = c('pfr_player_id' = 'pfr_id')) %>% 
       left_join(schedule_df %>% 
                   select(game_id, week),
                 by = c('game_id')) %>% 
