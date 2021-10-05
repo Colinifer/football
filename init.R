@@ -89,7 +89,7 @@ source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_g
 source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R')
 source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R')
 source('data/fastr_mods.R')
-source('data/cfb_fastr_mods.R')
+# source('data/cfb_fastr_mods.R')
 
 # Based on NAS sleep schedule
 # if ((
@@ -113,7 +113,7 @@ source('data/cfb_fastr_mods.R')
 con <- fx.db_con(x.host = 'localhost')
 # update_roster_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
 roster_df <- tbl(con, 'nflfastR_rosters') %>% 
-  filter(season == year) %>% 
+  filter(season == year) %>%
   collect()
 # update_schedule_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
 schedule_df <- tbl(con, 'nflfastR_schedule') %>% 
@@ -267,7 +267,7 @@ team_stats_weekly <- pbp_df %>%
 player_stats <- pbp_df %>% 
   calculate_player_stats_mod() 
 
-player_stats %>%
+ff_players <- player_stats %>%
   left_join(
     fantasy_rosters %>% 
       filter(league == 'Drinkers' & 
@@ -282,20 +282,13 @@ player_stats %>%
         position,
         gsis_id
       ),
-    by = c('player_id' = 'gsis_id', 'season', 'position')
+    by = c('player_id' = 'gsis_id')
   ) %>% 
-  filter(position %in% c('RB', 'WR', 'TE'))
-
-roster_df %>% 
-  filter(is.na(espn_id)) %>% 
-  select(team, full_name, position, gsis_id, headshot_url, espn_id) %>% 
-  left_join(
-    player_stats %>% 
-      select(player_id, offense_snaps), 
-    by =c('gsis_id' = 'player_id')) %>% 
-  filter(offense_snaps > 0) %>% 
-  arrange(-offense_snaps) %>% 
-  write_csv('rookies.csv')
+  filter(position %in% c('RB', 'WR', 'TE')) %>% 
+  mutate(
+    on_roster = case_when(is.na(on_roster) ~ FALSE,
+                          TRUE ~ on_roster)
+  )
 
   # %>%
   # left_join(

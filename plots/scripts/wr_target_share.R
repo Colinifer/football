@@ -36,7 +36,7 @@ player_stats <- map_df(pbp_df %>%
                                   everything())
                        })
 
-top_rushers <- player_stats %>%
+top_rushers <- ff_players %>%
   select(
     season,
     recent_team,
@@ -47,7 +47,8 @@ top_rushers <- player_stats %>%
     hvt,
     hvt_percentage,
     receiving_air_yards,
-    receiving_yards
+    receiving_yards,
+    on_roster
   ) %>%
   arrange(-hvt)
 
