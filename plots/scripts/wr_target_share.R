@@ -56,7 +56,7 @@ top_rushers <- player_stats %>%
 # https://fantasyevaluator.com/nfl-tools/rb-hvt/
 player_stats %>%
   left_join(
-    player_df %>% 
+    roster_df %>% 
       select(
         gsis_id,
         on_roster

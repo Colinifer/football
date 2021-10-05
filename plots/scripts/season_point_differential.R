@@ -161,7 +161,9 @@ p <- all_point_diff %>%
     y = 'Point Differential',
     title = glue('{year} Best/Worst Team Point Differential'),
     subtitle = 'All Regular Season Games from 1999-2020'
-  ) +
+  )
+
+p_dark <- p + 
   theme_cw_dark +
   theme(
     legend.position = 'none',
@@ -169,9 +171,18 @@ p <- all_point_diff %>%
     panel.grid.major = element_line(color=color_cw[1], size = 0.4)
   )
 
-p
+p_light <- p  +
+  theme_cw_light +
+  theme(
+    legend.position = 'none',
+    # panel.grid.minor = element_line(color=color_cw[1], size = 0.3),
+    panel.grid.major = element_line(color=color_cw[1], size = 0.4)
+  )
 
-brand_plot(p,  asp = 16/10, save_name = glue('plots/desktop/team_tiers/season_point_diff_{year}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+brand_plot(p_dark,  asp = 16/10, save_name = glue('plots/desktop/team_tiers/season_point_diff_{year}_dark.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+brand_plot(p_light,  asp = 16/10, save_name = glue('plots/desktop/team_tiers/season_point_diff_{year}_light.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
 
 # rm(clean_all_pbp_df, all_point_diff, best_worst_teams, p)
 # })

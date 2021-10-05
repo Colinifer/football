@@ -447,7 +447,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
                 by = c('pfr_player_id' = 'pfr_id')) %>% 
       left_join(schedule_df %>% 
                   select(game_id, week),
-                by = c('game_id')) %>% 
+                by = c('game_id', 'week')) %>% 
       mutate(
         name_snaps = paste0(substr(first_name, 1, 1), '.', last_name),
         offense_snaps = offense_snaps %>% as.integer(),

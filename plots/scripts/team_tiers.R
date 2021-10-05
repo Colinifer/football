@@ -157,7 +157,7 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.2, alpha=.2) +
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
   scale_y_reverse() +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
     legend.position = c(0.99, 0.99),

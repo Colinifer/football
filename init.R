@@ -133,6 +133,27 @@ pbp_df <- tbl(con, 'nflfastR_pbp') %>%
   collect()
 dbDisconnect(con)
 
+
+source('init_ff.R')
+# Rosters
+fantasy_rosters <- ff_rosters(ff_conn_beep_boop) %>%
+  mutate(on_roster = TRUE,
+         league = 'Beep Boop') %>%
+  rbind(ff_rosters(ff_conn_drinkers) %>%
+          mutate(on_roster = TRUE,
+                 league = 'Drinkers')) %>%
+  rbind(ff_rosters(ff_conn_kepler) %>%
+          mutate(on_roster = TRUE,
+                 league = 'Kepler')) %>%
+  rbind(ff_rosters(ff_conn_family) %>%
+          mutate(on_roster = TRUE,
+                 league = 'Family')) %>% 
+  left_join(roster_df %>% 
+              select(
+                gsis_id,
+                espn_id),
+            by = c('player_id' = 'espn_id'))
+
 # schedule_df %>% 
 #   saveRDS(glue('data/schedules/sched_{year}.rds'))
 
@@ -245,6 +266,37 @@ team_stats_weekly <- pbp_df %>%
 
 player_stats <- pbp_df %>% 
   calculate_player_stats_mod() 
+
+player_stats %>%
+  left_join(
+    fantasy_rosters %>% 
+      filter(league == 'Drinkers' & 
+               pos %in% c('RB', 'WR', 'TE')) %>% 
+      select(on_roster, franchise_name, gsis_id),
+    by = c('player_id' = 'gsis_id')
+  ) %>% 
+  left_join(
+    roster_df %>% 
+      select(
+        season,
+        position,
+        gsis_id
+      ),
+    by = c('player_id' = 'gsis_id', 'season', 'position')
+  ) %>% 
+  filter(position %in% c('RB', 'WR', 'TE'))
+
+roster_df %>% 
+  filter(is.na(espn_id)) %>% 
+  select(team, full_name, position, gsis_id, headshot_url, espn_id) %>% 
+  left_join(
+    player_stats %>% 
+      select(player_id, offense_snaps), 
+    by =c('gsis_id' = 'player_id')) %>% 
+  filter(offense_snaps > 0) %>% 
+  arrange(-offense_snaps) %>% 
+  write_csv('rookies.csv')
+
   # %>%
   # left_join(
   #   roster_df %>%
