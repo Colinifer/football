@@ -12,9 +12,11 @@ library(webshot)
 # n_week <- pbp_df %>% select(week) %>% max()
 # rm(pbp_df)
 
+year
+
 n_week <- fx.n_week(pbp_df)
 
-all_win_rate <- scrape_espn_win_rate()
+all_win_rate <- scrape_espn_win_rate(season = year)
 
 wide_win_rate <- all_win_rate %>%
   pivot_wider(names_from = stat,
@@ -41,16 +43,16 @@ wide_win_rate <-
   wide_win_rate %>% 
   select(team, team_abbr, prwr_rk, prwr, rswr_rk, rswr, def_wr_comb_rk, pbwr_rk, pbwr, rbwr_rk, rbwr, off_wr_comb_rk, total_wr_comb_rk)
 
-wide_win_rate %>% 
-  select(!team_abbr) %>% 
-  summarize(across(!contains('rk'), mean)) %>% 
-  mutate(team = 'NFL')
+# wide_win_rate %>% 
+#   select(!team_abbr) %>% 
+#   summarize(across(!contains('rk'), mean)) %>% 
+#   mutate(team = 'NFL')
 
 
 matchup_winrate_df <- wide_win_rate %>% 
   left_join(
     matchup_df %>% 
-      filter(season == current_season & 
+      filter(season == year & 
                week == n_week + 1) %>% 
       select(posteam, oppteam, weekday, gametime),
     by = c('team_abbr' = 'posteam')
@@ -89,7 +91,7 @@ matchup_winrate_df <- wide_win_rate %>%
 matchup_df_adv <- wide_win_rate %>% 
   left_join(
     matchup_df %>% 
-      filter(season == current_season & 
+      filter(season == year & 
                week == n_week + 1) %>% 
       select(posteam, oppteam, weekday, gametime),
     by = c('team_abbr' = 'posteam')
@@ -295,7 +297,7 @@ gt_def_tab <- gtdf %>%
   cols_align(align = 'center', columns = 2:16) %>% 
   cols_align(align = 'left', columns = c(1,2)) %>% 
   tab_header(
-    title = '2020 NFL pass-rushing, run-stopping, blocking leaderboard: Win rate rankings',
+    title = glue('{year} NFL pass-rushing, run-stopping, blocking leaderboard: Win rate rankings'),
     subtitle = glue('Data through week {n_week}')
   ) %>% 
   tab_style(
@@ -336,7 +338,7 @@ gt_def_tab <- gtdf %>%
 
 # gt_tab
 
-gt::gtsave(gt_def_tab, filename = 'espn_winrate_def_matchup.png', path = 'plots/desktop/', zoom = 1, vwidth = 100000)
+gt::gtsave(gt_def_tab, filename = glue('espn_winrate_def_matchup_{year}.png'), path = 'plots/desktop/', zoom = 1, vwidth = 100000)
 
 
 # Sort by offense matchup
@@ -487,7 +489,7 @@ gt_off_tab <- gtdf %>%
   cols_align(align = 'center', columns = 2:16) %>% 
   cols_align(align = 'left', columns = c(1,2)) %>% 
   tab_header(
-    title = '2020 NFL pass-rushing, run-stopping, blocking leaderboard: Win rate rankings',
+    title = glue('{year} NFL pass-rushing, run-stopping, blocking leaderboard: Win rate rankings'),
     subtitle = glue('Data through week {n_week}')
   ) %>% 
   tab_style(
@@ -528,7 +530,7 @@ gt_off_tab <- gtdf %>%
 
 # gt_tab
 
-gt::gtsave(gt_off_tab, filename = 'espn_winrate_off_matchup.png', path = 'plots/desktop/', zoom = 1, vwidth = 100000)
+gt::gtsave(gt_off_tab, filename = glue('espn_winrate_off_matchup_{year}.png'), path = 'plots/desktop/', zoom = 1, vwidth = 100000)
 
 # Win Rate Scatter Plot ---------------------------------------------------
 

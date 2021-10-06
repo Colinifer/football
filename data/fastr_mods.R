@@ -451,11 +451,11 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       mutate(
         name_snaps = paste0(substr(first_name, 1, 1), '.', last_name),
         offense_snaps = offense_snaps %>% as.integer(),
-        offense_pct = offense_pct / 100,
+        offense_pct = offense_pct,
         defense_snaps = defense_snaps %>% as.integer(),
-        defense_pct = defense_pct / 100,
+        defense_pct = defense_pct,
         st_snaps = st_snaps %>% as.integer(),
-        st_pct = st_pct / 100
+        st_pct = st_pct
       ) %>% 
       select(
         player_id = gsis_id,

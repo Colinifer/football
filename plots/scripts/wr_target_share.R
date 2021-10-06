@@ -3,16 +3,16 @@
 current_season <- year
 
 con <- fx.db_con(x.host = 'localhost')
-pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= 2006) %>% 
   collect()
 dbDisconnect(con)
 
-player_stats <- map_df(pbp_df %>%
+player_stats <- map_df(pbp %>%
                          pull(season) %>%
                          unique(),
                        function(x) {
-                         pbp_df %>%
+                         pbp %>%
                            filter(season == x) %>%
                            calculate_player_stats_mod() %>%
                            mutate(season = x) %>%
@@ -55,24 +55,14 @@ top_rushers <- ff_players %>%
 
 # RB HVT ------------------------------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/rb-hvt/
-player_stats %>%
-  left_join(
-    roster_df %>% 
-      select(
-        gsis_id,
-        on_roster
-        ),
-    by = c('player_id' = 'gsis_id')
-  ) %>% 
-  filter(season >= current_season-1 &
-           carries >= 50 & 
-           on_roster == FALSE) %>%
+fx.ff_free_agents(league_name = 'Family') %>% 
+  # filter(carries >= 50) %>%
   ggplot(aes(x = hvt_percentage, y = hvt_per_game)) +
   geom_point(
     aes(
       color = team_color2,
       fill = team_color
-    ),
+      ),
     shape = 21,
     size = 3
   ) +
@@ -91,14 +81,14 @@ player_stats %>%
 
 # Air Yards Market Share plot ---------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/market-share/
-player_stats %>%
-  filter(season >= current_season) %>%
+fx.ff_free_agents(league_name = 'Family') %>%
+  filter(air_yards_share > .08 & 
+           target_share > .08) %>% 
+  # filter(on_roster == FALSE) %>% 
   ggplot(aes(x = target_share, y = air_yards_share)) +
   geom_point(
-    color = player_stats %>%
-      filter(season >= current_season-1) %>% pull(team_color2),
-    fill = player_stats %>%
-      filter(season >= current_season-1) %>% pull(team_color),
+    aes(color = team_color2,
+    fill = team_color),
     shape = 21,
     size = 3
   ) +

@@ -267,28 +267,7 @@ team_stats_weekly <- pbp_df %>%
 player_stats <- pbp_df %>% 
   calculate_player_stats_mod() 
 
-ff_players <- player_stats %>%
-  left_join(
-    fantasy_rosters %>% 
-      filter(league == 'Drinkers' & 
-               pos %in% c('RB', 'WR', 'TE')) %>% 
-      select(on_roster, franchise_name, gsis_id),
-    by = c('player_id' = 'gsis_id')
-  ) %>% 
-  left_join(
-    roster_df %>% 
-      select(
-        season,
-        position,
-        gsis_id
-      ),
-    by = c('player_id' = 'gsis_id')
-  ) %>% 
-  filter(position %in% c('RB', 'WR', 'TE')) %>% 
-  mutate(
-    on_roster = case_when(is.na(on_roster) ~ FALSE,
-                          TRUE ~ on_roster)
-  )
+ff_free_agents <- fx.ff_free_agents(player_stats, 'Beep Boop')
 
   # %>%
   # left_join(
