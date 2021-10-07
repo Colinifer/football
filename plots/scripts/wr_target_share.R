@@ -55,8 +55,8 @@ top_rushers <- ff_players %>%
 
 # RB HVT ------------------------------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/rb-hvt/
-fx.ff_free_agents(league_name = 'Family') %>% 
-  # filter(carries >= 50) %>%
+fx.ff_free_agents(league_name = 'Beep Boop') %>% 
+  filter(hvt > 0) %>%
   ggplot(aes(x = hvt_percentage, y = hvt_per_game)) +
   geom_point(
     aes(
@@ -65,7 +65,9 @@ fx.ff_free_agents(league_name = 'Family') %>%
       ),
     shape = 21,
     size = 3
-  ) +
+  ) + 
+  scale_color_identity() + 
+  scale_fill_identity() + 
   geom_text_repel(
     aes(label = player_name),
     # segment.color = p_data %>%
@@ -92,6 +94,8 @@ fx.ff_free_agents(league_name = 'Family') %>%
     shape = 21,
     size = 3
   ) +
+  scale_color_identity() + 
+  scale_fill_identity() + 
   geom_text_repel(
     aes(label = player_name),
     # segment.color = p_data %>%
@@ -103,35 +107,23 @@ fx.ff_free_agents(league_name = 'Family') %>%
     size = 2.5,
     nudge_y = -.007
   ) +
+  # scale_color_manual(values =  team_color2,
+  #                    name = "Team") +
   theme_cw_dark
 
 sample_players <- player_stats %>%
-  filter(season == current_season &
-           (targets >= 50 | attempts >= 150 | carries >= 40)) %>% 
+  filter(targets >= 50 | attempts >= 150 | carries >= 40) %>% 
   pull(player_id)
 
 player_stats_weekly %>% 
-  filter(player_id %in% sample_players) %>% 
   left_join(
     roster_df %>% 
-      filter(season >= 2006) %>% 
-      select(season,
-             gsis_id,
-             position),
-    by = c('player_id' = 'gsis_id', 'season')
-  ) %>% 
-  left_join(
-    teams_colors_logos %>% select(team_abbr, team_color, team_color2),
-    by = c('recent_team' = 'team_abbr')
-  ) %>%
-  select(season,
-         recent_team,
-         player_id,
-         player_name,
-         position,
-         everything()) %>% 
+      select(
+        gsis_id,
+        position
+      ),
+    by = c('player_id' = 'gsis_id')) %>% 
   filter(position == 'WR' & 
-           season == 2020 & 
-           player_name == 'S.Diggs') %>% 
+           player_name %in% c('J.Jefferson', 'D.Samuel', 'A.Cooper', 'R.Anderson')) %>% 
   ggplot(aes(x = week, y = wopr)) +
   geom_line(aes(group = player_id))
