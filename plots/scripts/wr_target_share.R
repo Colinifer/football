@@ -127,3 +127,34 @@ player_stats_weekly %>%
            player_name %in% c('J.Jefferson', 'D.Samuel', 'A.Cooper', 'R.Anderson')) %>% 
   ggplot(aes(x = week, y = wopr)) +
   geom_line(aes(group = player_id))
+
+# Targets Share & ADoT plot -----------------------------------------------
+# https://fantasyevaluator.com/nfl-tools/market-share/
+fx.ff_free_agents(league_name = 'Family') %>% 
+  mutate(adot = receiving_air_yards / targets) %>% 
+  filter(air_yards_share > .08 & 
+           target_share > .08) %>% 
+  # filter(on_roster == FALSE) %>% 
+  ggplot(aes(x = target_share, y = adot)) +
+  geom_point(
+    aes(color = team_color2,
+        fill = team_color),
+    shape = 21,
+    size = 3
+  ) +
+  scale_color_identity() + 
+  scale_fill_identity() + 
+  geom_text_repel(
+    aes(label = player_name),
+    # segment.color = p_data %>%
+    #   arrange(-pbwr) %>%
+    #   pull(team_color),
+    min.segment.length = .5,
+    family = 'Montserrat',
+    color = color_cw[5],
+    size = 2.5,
+    nudge_y = -.007
+  ) +
+  # scale_color_manual(values =  team_color2,
+  #                    name = "Team") +
+  theme_cw_dark
