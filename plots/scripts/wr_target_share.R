@@ -36,7 +36,7 @@ player_stats <- map_df(pbp %>%
                                   everything())
                        })
 
-top_rushers <- ff_players %>%
+top_rushers <- ff_free_agents %>%
   select(
     season,
     recent_team,
@@ -83,9 +83,10 @@ fx.ff_free_agents(league_name = 'Beep Boop') %>%
 
 # Air Yards Market Share plot ---------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/market-share/
-fx.ff_free_agents(league_name = 'Family') %>%
-  filter(air_yards_share > .08 & 
-           target_share > .08) %>% 
+fx.ff_free_agents(league_name = 'Beep Boop') %>%
+  filter(air_yards_share > .15 & 
+           target_share > .15 & 
+           position %in% c('WR', 'TE')) %>% 
   # filter(on_roster == FALSE) %>% 
   ggplot(aes(x = target_share, y = air_yards_share)) +
   geom_point(
@@ -124,16 +125,16 @@ player_stats_weekly %>%
       ),
     by = c('player_id' = 'gsis_id')) %>% 
   filter(position == 'WR' & 
-           player_name %in% c('J.Jefferson', 'D.Samuel', 'A.Cooper', 'R.Anderson')) %>% 
+           player_name %in% c('J.Jefferson', 'D.Samuel', 'A.Cooper', 'R.Anderson', 'M.Williams')) %>% 
   ggplot(aes(x = week, y = wopr)) +
   geom_line(aes(group = player_id))
 
 # Targets Share & ADoT plot -----------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/market-share/
-fx.ff_free_agents(league_name = 'Family') %>% 
+fx.ff_free_agents(league_name = 'Beep Boop') %>% 
   mutate(adot = receiving_air_yards / targets) %>% 
-  filter(air_yards_share > .08 & 
-           target_share > .08) %>% 
+  filter(air_yards_share > .15 & 
+           target_share > .15) %>% 
   # filter(on_roster == FALSE) %>% 
   ggplot(aes(x = target_share, y = adot)) +
   geom_point(

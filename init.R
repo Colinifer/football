@@ -290,19 +290,20 @@ player_stats_weekly <- pbp_df %>%
 nflfastR::update_db(
   tblname = "nflfastR_pbp",
   force_rebuild = FALSE,
-  db_connection = fx.db_con(x.host = 'localhost')
+  db_connection = initR::fx.db_con(x.host = 'localhost')
 )
 
 nflfastR::update_db(
   tblname = "nflfastR_pbp",
   force_rebuild = FALSE,
-  db_connection = fx.db_con()
+  db_connection = initR::fx.db_con()
 )
 
 # source('https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/R/cfb_pbp.R') # used for update_cfb_db_mod function
-update_cfb_db(
+cfbfastR::update_cfb_db(
   tblname = 'cfbfastR_pbp',
-  db_connection = fx.db_con(x.host = 'localhost')
+  force_rebuild = TRUE,
+  db_connection = initR::fx.db_con(x.host = 'localhost')
 )
 
 update_cfb_db(

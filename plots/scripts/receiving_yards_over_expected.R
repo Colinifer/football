@@ -88,10 +88,22 @@ pbp_df %>%
     cayoe_a = sum_cayoe / targets) %>%
   ungroup() %>% 
   arrange(-exp_air_yards) %>% 
+  left_join(roster_df %>% 
+              filter(season == current_season) %>% 
+              select(receiver_player_id = gsis_id, espn_id, position, headshot_url)) %>% 
+  left_join(fx.ff_free_agents(league_name = 'Beep Boop') %>% 
+              select(receiver_player_id = player_id, on_roster)) %>% 
+  filter(position == c('WR')) %>% 
   mutate(rk = row_number()) %>% 
-  select(rk, receiver, exp_air_yards, air_yards) %>% 
-  filter(rk <= 25) %>% 
-  ggplot(aes(x = rk, y = exp_air_yards)) + 
-  geom_segment(aes(xend = rk, yend = air_yards)) + 
+  select(rk, receiver, exp_air_yards, air_yards, on_roster) %>% 
+  filter(rk <= 30) %>% 
+  ggplot(aes(x = rk, y = air_yards)) + 
+  geom_segment(aes(xend = rk, yend = exp_air_yards)) + 
+  geom_text(aes(y = exp_air_yards, label = receiver)) + 
   scale_x_reverse() + 
   coord_flip()
+
+  
+  
+  
+  
