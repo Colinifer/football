@@ -302,7 +302,7 @@ nflfastR::update_db(
 # source('https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/R/cfb_pbp.R') # used for update_cfb_db_mod function
 cfbfastR::update_cfb_db(
   tblname = 'cfbfastR_pbp',
-  force_rebuild = TRUE,
+  force_rebuild = FALSE,
   db_connection = initR::fx.db_con(x.host = 'localhost')
 )
 
