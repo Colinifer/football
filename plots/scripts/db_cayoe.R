@@ -5,7 +5,8 @@ current_season <- year
 
 pbp_df <- 
   # readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
-  xyac_ds %>% 
+  pbp_df %>% 
+  add_xyac_mod() %>% 
   filter(
     season.x == current_season &
       pass_attempt == 1 &
