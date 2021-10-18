@@ -125,7 +125,7 @@ player_stats_weekly %>%
       ),
     by = c('player_id' = 'gsis_id')) %>% 
   filter(position == 'WR' & 
-           player_name %in% c('A.Cooper', 'K.Allen')) %>% 
+           player_name %in% c('M.Williams', 'K.Allen')) %>% 
   ggplot(aes(x = week, y = wopr)) +
   geom_line(aes(group = player_id))
 

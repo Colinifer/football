@@ -97,8 +97,8 @@ pbp_df %>%
   mutate(rk = row_number()) %>% 
   select(rk, receiver, exp_air_yards, air_yards, on_roster) %>% 
   filter(rk <= 30) %>% 
-  ggplot(aes(x = rk, y = air_yards)) + 
-  geom_segment(aes(xend = rk, yend = exp_air_yards)) + 
+  ggplot(aes(x = rk, y = exp_air_yards)) + 
+  geom_segment(aes(xend = rk, yend = air_yards)) + 
   geom_text(aes(y = exp_air_yards, label = receiver)) + 
   scale_x_reverse() + 
   coord_flip()

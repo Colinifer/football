@@ -110,8 +110,10 @@ roster_df <-
 rusher_summary %>%
   left_join(roster_df %>% 
               select(
-                full_name
-              )
+                full_name,
+                gsis_id
+              ),
+            by = c('ID' = 'gsis_id')
             )
 
 rusher_summary %>% 
