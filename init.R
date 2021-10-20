@@ -13,6 +13,7 @@ pkgs <- c(
   'nflfastR',
   'nflreadr',
   'cfbfastR',
+  'nfl4th',
   'ffscrapr',
   'gsisdecoder',
   'espnscrapeR',

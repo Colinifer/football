@@ -1,4 +1,4 @@
-# current_season <- 2020
+current_season <- 2021
 
 nfl_colors <- tibble(
   NFL_pri %>% names(), 
@@ -17,23 +17,23 @@ pbp <-
   identity()
 dbDisconnect(con)
 
-decisions <- 
-  readRDS(url(glue('https://github.com/guga31bb/fourth_calculator/blob/main/data/decisions_{current_season}.rds?raw=true'))) %>% 
+pbp <- nfl4th::load_4th_pbp(current_season)
+# pbp <- nfl4th::load_4th_pbp(2020)
+
+decisions <- pbp %>% 
   group_by(posteam) %>% 
   filter(
-    prior_wp > .1
-  ) %>% 
-  left_join(
-    pbp %>% 
-      select(game_id, play_id, fixed_drive, fixed_drive_result),
-    by = c('game_id', 'play_id', 'fixed_drive')
+    wp > .1 & 
+      !is.na(go_boost)
   ) %>% 
   mutate(
-    is_touchdown_drive = ifelse(fixed_drive_result == 'Touchdown', 1, 0)
+    is_touchdown_drive = ifelse(fixed_drive_result == 'Touchdown', 1, 0),
+    should_go = case_when(go_boost > 0 ~ 1,
+                         go_boost < 0 ~ 0)
   ) %>% 
   summarise(
     sum_should_go = sum(should_go, na.rm = TRUE),
-    total_go = sum(go),
+    total_go = sum(fourth_down_converted, na.rm = TRUE) + sum(fourth_down_failed, na.rm = TRUE),
     go_rate = total_go / sum_should_go,
     touchdown_drives = sum(is_touchdown_drive, na.rm = TRUE)
   ) %>% 
@@ -83,10 +83,11 @@ go_rate_df <- pbp %>%
     fixed_drive_result,
     NULL
   ) %>% 
-  # filter(
-  #   half_seconds_remaining > 60 & 
-  #     wp > .2
-  # ) %>%
+  filter(
+    # half_seconds_remaining > 60 &
+    #   wp > .2 & 
+    down == 4
+  ) %>%
   mutate(
     go = ifelse(play_type %notin% c('punt', 'field_goal', 'no_play', 'qb_kneel') & !is.na(play_type), 1, 0)
   ) %>% 
@@ -241,7 +242,7 @@ go_rate_nyt_bar <- decisions %>%
     alpha = 1
   ) +
   ggpp::geom_grob(aes(x = posteam, y = go_rate, label = grob), vp.width = 0.035) +
-  coord_cartesian(ylim = c(0,.50)) + 
+  # coord_cartesian(ylim = c(0,.50)) + 
   scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
   labs(
     x = 'Team',
@@ -335,13 +336,13 @@ touchdowns_nyt_bar <- decisions %>%
     alpha = 1
   ) +
   ggpp::geom_grob(aes(x = posteam, y = touchdown_drives, label = grob), vp.width = 0.035) + 
-  coord_cartesian(ylim = c(
-    0,
-    decisions %>% 
-      pull(touchdown_drives) %>% 
-      max() %>% 
-      DescTools::RoundTo(5)
-  )) + 
+  # coord_cartesian(ylim = c(
+  #   0,
+  #   decisions %>% 
+  #     pull(touchdown_drives) %>% 
+  #     max() %>% 
+  #     DescTools::RoundTo(5)
+  # )) + 
   labs(
     x = 'Team',
     y = 'Touchdowns Generated',
