@@ -307,8 +307,9 @@ cfbfastR::update_cfb_db(
   db_connection = initR::fx.db_con(x.host = 'localhost')
 )
 
-update_cfb_db(
+cfbfastR::update_cfb_db(
   tblname = 'cfbfastR_pbp',
-  db_connection = fx.db_con()
+  force_rebuild = FALSE,
+  db_connection = initR::fx.db_con()
 )
 
