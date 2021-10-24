@@ -159,3 +159,4 @@ fx.ff_free_agents(league_name = 'Beep Boop') %>%
   # scale_color_manual(values =  team_color2,
   #                    name = "Team") +
   theme_cw_dark
+
