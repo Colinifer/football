@@ -1,4 +1,77 @@
 
+
+# Stats -------------------------------------------------------------------
+
+
+# Player Stats ------------------------------------------------------------
+player_information <- c(
+  "player_id",
+  "player_name",
+  "recent_team",
+  "games",
+  "offense_snaps",
+  "offense_pct"
+)
+
+passing_stats <- c(
+  # passing stats
+  "completions",
+  "attempts",
+  "passing_yards",
+  "passing_tds",
+  "interceptions",
+  "sacks",
+  "sack_yards",
+  "sack_fumbles",
+  "sack_fumbles_lost",
+  "passing_air_yards",
+  "passing_yards_after_catch",
+  "passing_first_downs",
+  "passing_epa",
+  "passing_2pt_conversions",
+  "pacr",
+  "anya",
+  "dakota"
+)
+
+receiving_stats <- c(
+  # receiving stats
+  "receptions",
+  "targets",
+  "receiving_yards",
+  "receiving_tds",
+  "receiving_fumbles",
+  "receiving_fumbles_lost",
+  "receiving_air_yards",
+  "receiving_yards_after_catch",
+  "receiving_first_downs",
+  "receiving_epa",
+  "receiving_2pt_conversions",
+  "racr",
+  "target_share",
+  "air_yards_share",
+  "wopr",
+  "hvt"
+)
+
+rushing_stats <- c(
+  "carries",
+  "rushing_yards",
+  "rushing_tds",
+  "rushing_fumbles",
+  "rushing_fumbles_lost",
+  "rushing_first_downs",
+  "rushing_epa",
+  "rushing_2pt_conversions",
+  "hvt"
+)
+
+fantasy_stats <- c(
+  "fantasy_points",
+  "fantasy_points_ppr",
+  "fantasy_points_half_ppr"
+)
+
 # Update Schedule ---------------------------------------------------------
 
 update_schedule_db <- function(season = year, db_connection = NULL){
