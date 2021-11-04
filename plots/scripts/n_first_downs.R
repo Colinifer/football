@@ -25,7 +25,8 @@ pbp_df %>%
   ) %>% 
   mutate(
     eckel_rate = total_eckel / n_drive
-  )
+  ) %>% 
+  arrange(-eckel_rate)
 
 pbp_df %>% 
   filter(!is.na(passer_player_id)) %>% 

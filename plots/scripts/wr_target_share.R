@@ -105,8 +105,8 @@ fx.ff_free_agents(league_name = 'Beep Boop') %>%
     min.segment.length = .5,
     family = 'Montserrat',
     color = color_cw[5],
-    size = 2.5,
-    nudge_y = -.007
+    size = 2.5
+    # nudge_y = -.007
   ) +
   # scale_color_manual(values =  team_color2,
   #                    name = "Team") +
@@ -125,9 +125,15 @@ player_stats_weekly %>%
       ),
     by = c('player_id' = 'gsis_id')) %>% 
   filter(position == 'WR' & 
-           player_name %in% c('M.Williams', 'K.Allen')) %>% 
+           player_name %in% c('J.Jefferson', 'A.Brown')) %>% 
+  group_by(player_id) %>% 
+  mutate(
+    mean_wopr = mean(wopr)
+  ) %>% 
   ggplot(aes(x = week, y = wopr)) +
-  geom_line(aes(group = player_id))
+  geom_line(aes(group = player_id, color = player_name)) +
+  # geom_smooth(aes(group = player_id, color = player_name), se = FALSE) + 
+  geom_line(aes(y = mean_wopr, group = player_id, color = player_id), label = player_name)
 
 # Targets Share & ADoT plot -----------------------------------------------
 # https://fantasyevaluator.com/nfl-tools/market-share/
