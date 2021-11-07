@@ -35,6 +35,7 @@ pbp_df %>%
     passer_player_name = first(passer_player_name),
     games_played = n_distinct(game_id),
     total_air_yards = sum(air_yards, na.rm = TRUE),
+    mean_air_yards = mean(air_yards, na.rm = TRUE),
     total_pass_attempts = sum(pass_attempt, na.rm = TRUE)
   ) %>% 
   ungroup() %>% 
@@ -42,7 +43,7 @@ pbp_df %>%
     adot = total_air_yards / total_pass_attempts
   ) %>% 
   filter(total_pass_attempts >= (max(games_played)*8)) %>% 
-  arrange(-adot)
+  arrange(-mean_air_yards)
 
 pbp_df %>% 
   group_by(passer_player_id) %>% 

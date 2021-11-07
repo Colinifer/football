@@ -94,30 +94,14 @@ year <- fx.get_year()
 
 source('plots/assets/plot_theme.R', echo = F)
 # source('data/fastr_scrape.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R')
+# source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R')
+# source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R')
+# source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R')
+# source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R')
 source('data/fastr_mods.R')
 # source('data/cfb_fastr_mods.R')
 
-# Based on NAS sleep schedule
-# if ((
-#   Sys.Date() %>% lubridate::wday() > 1 & # If day is greater than Sunday
-#   Sys.Date() %>% lubridate::wday() < 6 & # and day is less than Saturday
-#   Sys.time() %>% format("%H") %>% as.integer() >= 17 & # and greater than 5PM
-#   Sys.time() %>% format("%H") %>% as.integer() <= 23 # and less than 12AM
-# ) == TRUE) {
-#   con <- fx.db_con()
-#   # source("../initR/con.R")
-#   dbListTables(con)
-#   dbDisconnect(con)
-# }
-
 # Create variables & dataframes -------------------------------------------
-# sleeper_players_df <- fx.get_sleeper_api_players()
-# source("fantasy_football/ff_init.R")
-# espn_players_df <- fx.get_espn_players() # not working, relies on roster load
 
 # nflfastR data
 con <- fx.db_con(x.host = 'localhost')
@@ -202,29 +186,29 @@ server <- function(input, output, session) {
         server = TRUE
         )
     
-    u.player_comparisons <- input$player_comparisons
+    # u.player_comparisons <- input$player_comparisons
     
-    output$wopr_plot <- player_stats_weekly %>%
-        left_join(
-            roster_df %>%
-                select(
-                    gsis_id,
-                    position
-                ),
-            by = c('player_id' = 'gsis_id')) %>% 
-        mutate(
-            full_player_info = paste(recent_team, player_name)
-        ) %>% 
-        filter(position == 'WR' &
-                   full_player_info %in% u.player_comparisons) %>%
-        group_by(player_id) %>%
-        mutate(
-            mean_wopr = mean(wopr)
-        ) %>%
-        ggplot(aes(x = week, y = wopr)) +
-        geom_line(aes(group = player_id, color = player_name)) +
-        # geom_smooth(aes(group = player_id, color = player_name), se = FALSE) +
-        geom_line(aes(y = mean_wopr, group = player_id, color = player_id), label = player_name)
+    # output$wopr_plot <- player_stats_weekly %>%
+    #     left_join(
+    #         roster_df %>%
+    #             select(
+    #                 gsis_id,
+    #                 position
+    #             ),
+    #         by = c('player_id' = 'gsis_id')) %>% 
+    #     mutate(
+    #         full_player_info = paste(recent_team, player_name)
+    #     ) %>% 
+    #     filter(position == 'WR' &
+    #                full_player_info %in% u.player_comparisons) %>%
+    #     group_by(player_id) %>%
+    #     mutate(
+    #         mean_wopr = mean(wopr)
+    #     ) %>%
+    #     ggplot(aes(x = week, y = wopr)) +
+    #     geom_line(aes(group = player_id, color = player_name)) +
+    #     # geom_smooth(aes(group = player_id, color = player_name), se = FALSE) +
+    #     geom_line(aes(y = mean_wopr, group = player_id, color = player_id), label = player_name)
 }
 
 # Run the application 
