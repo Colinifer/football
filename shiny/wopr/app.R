@@ -166,14 +166,25 @@ u.players <- player_stats_weekly %>%
     pull(full_player_info)
 
 ui <- fluidPage(
-    
-    selectizeInput(
-        'player_comparisons', 
-        'Select Players', 
-        choices = u.players, 
-        multiple = TRUE
+    titlePanel(),
+    sidebarLayout(
+        sidebarPanel(
+            selectizeInput(
+                'player_comparisons', 
+                'Select Players', 
+                choices = u.players, 
+                multiple = TRUE
+            )
         ),
-    plotOutput('wopr_plot', width = '900px')
+        mainPanel(plotOutput('wopr_plot', width = '900px'))
+    )
+    # selectizeInput(
+    #     'player_comparisons', 
+    #     'Select Players', 
+    #     choices = u.players, 
+    #     multiple = TRUE
+    #     ),
+    # plotOutput('wopr_plot', width = '900px')
 )
 
 # Define server logic required to draw a histogram
