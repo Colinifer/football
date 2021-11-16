@@ -72,6 +72,20 @@ fantasy_stats <- c(
   "fantasy_points_half_ppr"
 )
 
+player_ids <- c(
+  'player_id',
+  'espn_id',
+  'sportradar_id',
+  'yahoo_id',
+  'rotowire_id',
+  'pff_id',
+  'pfr_id',
+  'fantasy_data_id',
+  'sleeper_id',
+  'position',
+  'headshot_url'   
+)
+
 # Update Schedule ---------------------------------------------------------
 
 update_schedule_db <- function(season = year, db_connection = NULL){
@@ -82,7 +96,6 @@ update_schedule_db <- function(season = year, db_connection = NULL){
   DBI::dbWriteTable(conn = db_connection, name = 'nflfastR_schedule', value = schedule_df, append = TRUE)
   DBI::dbDisconnect(con)
 }
-
 
 
 
@@ -151,6 +164,17 @@ update_ngs_db <- function(season = year, db_connection = NULL){
 
 calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   
+  pbp_season <- pbp %>% 
+    pull(season) %>% 
+    unique()
+  
+  nflreadr::load_rosters(pbp_season) %>% 
+    select(
+      player_id = gsis_id,
+      contains('_id'),
+      position,
+      headshot_url
+    )
   
   # Prepare data ------------------------------------------------------------
   
