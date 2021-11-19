@@ -1,4 +1,4 @@
-pbp_df %>%
+exp_air_yards_df <- pbp_df %>%
   add_xyac_mod() %>%
   filter(
     season.x == current_season &
@@ -96,12 +96,15 @@ pbp_df %>%
   filter(position == c('WR')) %>% 
   mutate(rk = row_number()) %>% 
   select(rk, receiver, exp_air_yards, air_yards, on_roster) %>% 
-  filter(rk <= 30) %>% 
+  filter(rk <= 30)
+
+exp_air_yards_df %>% 
   ggplot(aes(x = rk, y = exp_air_yards)) + 
-  geom_segment(aes(xend = rk, yend = air_yards)) + 
-  geom_text(aes(y = exp_air_yards, label = receiver)) + 
+  geom_segment(aes(xend = rk, yend = air_yards), color = color_cw[5]) + 
+  geom_text(aes(y = exp_air_yards, label = receiver), color = color_cw[5]) + 
   scale_x_reverse() + 
-  coord_flip()
+  coord_flip() + 
+  theme_cw_dark
 
   
   
