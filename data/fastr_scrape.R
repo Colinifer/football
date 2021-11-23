@@ -6,7 +6,7 @@ current_season <- year
 
 con <- fx.db_con(x.host = 'localhost')
 
-roster_df <-  fast_scraper_roster(year)
+roster_df <-  fast_scraper_roster(1999:year)
 dbWriteTable(conn = con, 'nflfastR_rosters', roster_df)
 
 schedule_df <- fast_scraper_schedules(1999:year)

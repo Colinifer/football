@@ -11,10 +11,19 @@ year
 #           )
 
 con <- fx.db_con(x.host = 'localhost')
-clean_all_pbp_df <- 
-  tbl(con, 'nflfastR_pbp') %>% 
-  filter(season_type == 'REG') %>% 
-  select(-xyac_median_yardage) %>%
+clean_all_pbp_df <-
+  tbl(con, 'nflfastR_pbp') %>%
+  filter(season_type == 'REG') %>%
+  select(season,
+         game_id,
+         week,
+         home_team,
+         away_team,
+         home_score,
+         away_score,
+         posteam,
+         defteam,
+         -xyac_median_yardage) %>% 
   collect() %>% 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam),

@@ -17,7 +17,16 @@ print(glue("Scraping 2006:{current_season} PBP for career results"))
 con <- fx.db_con(x.host = 'localhost')
 pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= 2006) %>% 
-  select(-xyac_median_yardage) %>% 
+  select(
+    season,
+    week,
+    game_id,
+    passer_id,
+    rusher_id,
+    qb_epa,
+    cpoe,
+    -xyac_median_yardage
+  ) %>% 
   collect() %>% 
   decode_player_ids(fast = T)
 dbDisconnect(con)

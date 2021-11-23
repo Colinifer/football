@@ -137,7 +137,7 @@ cayoe_filtered %>%
     sum_cayoe,
     cayoe_a
   ) %>%
-  arrange(-cayoe_a) %>% 
+  arrange(-exp_air_yards) %>% 
   dplyr::slice(1:50) %>% 
   mutate(Rank = paste0('#',row_number())) %>%
   gt() %>%
