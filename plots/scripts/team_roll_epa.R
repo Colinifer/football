@@ -13,7 +13,8 @@ current_season <- year
 # }) %>% filter(season_type == 'REG') %>% filter(!is.na(posteam) & (rush == 1 | pass == 1))
 # print(current_season)
 
-pbp_df <- pbp_ds %>% 
+con <- fx.db_con(x.host = 'localhost')
+pbp <- tbl(con, 'nflfastR') %>% 
   filter(season == current_season & 
            season_type == 'REG' &
            !is.na(posteam) & 
@@ -29,7 +30,7 @@ ma_plays <- 250
 
 # net_epa <- 
   
-pbp_df %>%
+pbp %>%
   filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
   mutate(team = posteam,
          opp_team = defteam) %>% 
