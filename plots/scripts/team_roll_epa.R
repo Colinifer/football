@@ -14,7 +14,7 @@ current_season <- year
 # print(current_season)
 
 con <- fx.db_con(x.host = 'localhost')
-pbp <- tbl(con, 'nflfastR') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season == current_season & 
            season_type == 'REG' &
            !is.na(posteam) & 
@@ -26,7 +26,7 @@ n_week <- fx.n_week(pbp_df)
 
 # Tiers -------------------------------------------------------------------
 
-ma_plays <- 250
+ma_plays <- 100
 
 # net_epa <- 
   
@@ -34,7 +34,7 @@ pbp %>%
   filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
   mutate(team = posteam,
          opp_team = defteam) %>% 
-  rbind(pbp_df %>%
+  rbind(pbp %>%
            filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
            mutate(team = defteam,
                   opp_team = posteam)) %>% 
@@ -61,9 +61,10 @@ pbp %>%
     ma_def_epa = zoo::rollapply(def_epa, ma_plays, mean, na.rm = TRUE, fill = NA),
     ma_net_epa = ma_off_epa - ma_def_epa
   ) %>% 
-  filter(team == 'NO') %>% 
+  filter(team == 'KC') %>% 
   # select(play_count, ma_off_epa, ma_def_epa) %>% 
-  ggplot(aes()) +
+  ggplot(aes()) + 
+  geom_abline(slope=0, intercept=0, alpha=.8, color = 'red') +
   geom_line(aes(x = play_count, y = ma_off_epa), size = 1, color = 'black', linetype = 'dotted', na.rm = T) +
   geom_line(aes(x = play_count, y = ma_def_epa), size = 1, color = 'red', linetype = 'dotted', na.rm = T) + 
   # geom_line(aes(x = play_count, y = ma_epa), color = 'black') + 

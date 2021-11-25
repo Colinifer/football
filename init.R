@@ -30,6 +30,7 @@ pkgs <- c(
   'pander',
   'furrr',
   'na.tools',
+  'zoo',
   'ggimage',
   'teamcolors',
   'glue',
