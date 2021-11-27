@@ -85,7 +85,8 @@ exp_air_yards_df <- pbp_df %>%
   ) %>%
   mutate(# half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
     # ppr_pts_diff = PPR_pts - exp_PPR_pts,
-    cayoe_a = sum_cayoe / targets) %>%
+    cayoe_a = sum_cayoe / targets
+    ) %>%
   ungroup() %>% 
   arrange(-exp_air_yards) %>% 
   left_join(roster_df %>% 

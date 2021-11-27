@@ -86,6 +86,7 @@ year <- fx.get_year()
 # Create standard objects -------------------------------------------------
 
 source('plots/assets/plot_theme.R', echo = F)
+source('plots/assets/gt_themes.R')
 # source('data/fastr_scrape.R')
 source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R')
 source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R')
