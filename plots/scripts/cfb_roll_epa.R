@@ -11,10 +11,14 @@ print(current_season)
 
 n_week <- fx.n_week(pbp)
 
-team_info <- readRDS('data/cfb/cfb_team_info.rds')
+cfb_team_info <- readRDS('data/cfb/cfb_team_info.rds') %>% 
+  rename(
+    logos_light = `logos[0]`, 
+    logos_dark = `logos[1]`
+  )
 
-team_colors_logos <- team_info %>% 
-  select(school, abbreviation, color, logos_light = `logos[0]`, logos_dark = `logos[1]`, alt_color) %>%
+team_colors_logos <- cfb_team_info %>% 
+  select(school, abbreviation, color, logos_light, logos_dark, alt_color) %>%
   unnest(logos_light) %>%
   group_by(school) %>%
   # slice(1) %>% 

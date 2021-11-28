@@ -93,6 +93,7 @@ source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_g
 source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R')
 source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R')
 source('data/fastr_mods.R')
+source('init/init_cfb.R')
 # source('data/cfb_fastr_mods.R')
 
 # Based on NAS sleep schedule
@@ -303,7 +304,6 @@ nflfastR::update_db(
   db_connection = initR::fx.db_con()
 )
 
-# source('https://raw.githubusercontent.com/saiemgilani/cfbfastR/master/R/cfb_pbp.R') # used for update_cfb_db_mod function
 cfbfastR::update_cfb_db(
   tblname = 'cfbfastR_pbp',
   force_rebuild = FALSE,
