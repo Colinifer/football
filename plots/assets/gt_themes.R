@@ -77,6 +77,10 @@ gt_theme_pff <- function(data, ...) {
 gt_theme_cw <- function(data, ...) {
   data %>%
     # Add team logos w/ web_image
+    # text_transform(
+    #   locations = cells_body(c(posteam)),
+    #   fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'))
+    # ) %>% 
     text_transform(
       locations = cells_body(
         columns = c(team_logo_espn)
@@ -95,6 +99,8 @@ gt_theme_cw <- function(data, ...) {
     ) %>%
     # hide spanner with transparent color
     # Change font color and weight for numeric col
+    tab_style(style = cell_text(font = "Chivo", size = 'xx-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
+    tab_style(style = cell_text(font = "Chivo", size = 'large', weight = 'normal'), locations = cells_title(groups = 'subtitle')) %>% 
     tab_style(
       style = list(
         cell_text(color = color_cw[5], weight = 'normal')

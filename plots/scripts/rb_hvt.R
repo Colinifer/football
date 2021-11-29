@@ -68,7 +68,8 @@ map(current_season,function(x){
       fantasy_points_half_ppr = '.5 PPR',
       fantasy_points_ppr = 'PPR'
     ) %>% 
-    tab_style(style = cell_text(font = 'Chivo', size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
+    tab_style(style = cell_text(font = 'Chivo', size = 'xx-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
+    tab_style(style = cell_text(font = 'Chivo', size = 'large', weight = 'normal'), locations = cells_title(groups = 'subtitle')) %>% 
     tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
     tab_style(style = cell_text(align = 'left'), locations = cells_body(c(player_name))) %>% 
     tab_style(

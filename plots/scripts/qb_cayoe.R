@@ -165,7 +165,8 @@ cayoe_filtered %>%
   fmt_number(columns = c(sum_cayoe, cayoe_a), decimals = 2) %>% 
   fmt_number(columns = c(exp_td), decimals = 1) %>% 
   fmt_number(columns = c(comp_air_yards, exp_air_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
-  tab_style(style = cell_text(font = "Chivo", size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
+  tab_style(style = cell_text(font = "Chivo", size = 'xx-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
+  tab_style(style = cell_text(font = "Chivo", size = 'large', weight = 'normal'), locations = cells_title(groups = 'subtitle')) %>% 
   tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
   tab_style(style = cell_text(align = 'left'), locations = cells_body(c(passer))) %>% 
   tab_style(

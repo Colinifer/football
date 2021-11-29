@@ -38,135 +38,6 @@ res <- 800 # size of exported plots
 slope = -1.5 # for the tiers stuff
 qb_min <- 320 # min # of qb plays
 
-# Adjust EPA --------------------------------------------------------------
-# https://www.opensourcefootball.com/posts/2020-08-20-adjusting-epa-for-strenght-of-opponent/
-epa_data <- pbp %>%
-  filter(posteam != '') %>% 
-  # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
-  dplyr::filter(!is.na(posteam)) %>%
-  dplyr::group_by(game_id, season, week, posteam, home_team) %>%
-  dplyr::summarise(
-    off_epa = mean(epa, na.rm = T),
-  ) %>%
-  dplyr::left_join(pbp %>%
-                     filter(play_type == "pass" | play_type == "run") %>%
-                     dplyr::group_by(game_id, season, week, defteam, away_team) %>%
-                     dplyr::summarise(def_epa = mean(epa, na.rm = T)),
-                   by = c("game_id", "posteam" = "defteam", "season", "week"),
-                   all.x = T
-  ) %>%
-  dplyr::mutate(opponent = ifelse(posteam == home_team, away_team, home_team)) %>%
-  dplyr::select(game_id, season, week, home_team, away_team, posteam, opponent, off_epa, def_epa)
-
-offense <- pbp %>%
-  filter(!is.na(epa) & !is.na(posteam)) %>% 
-  group_by(posteam, season) %>%
-  summarize(
-    n_pass=sum(pass, na.rm = T),
-    n_rush=sum(rush, na.rm = T),
-    epa_per_pass=sum(epa*pass, na.rm = T)/n_pass,
-    epa_per_rush=sum(epa*rush, na.rm = T)/n_rush,
-    success_per_pass=sum(pass*epa>0, na.rm = T)/n_pass,
-    success_per_rush=sum(rush*epa>0, na.rm = T)/n_rush,
-    off_epa=mean(epa, na.rm = T),
-    off_success=mean(success, na.rm = T)
-  )
-
-# Construct opponent dataset and lag the moving average of their last ten games.
-opponent_data <- epa_data %>%
-  dplyr::select(-opponent) %>%
-  dplyr::rename(
-    opp_off_epa = off_epa,
-    opp_def_epa = def_epa
-  ) %>%
-  dplyr::group_by(posteam) %>%
-  dplyr::arrange(season, week) %>%
-  dplyr::mutate(
-    opp_def_epa = pracma::movavg(opp_def_epa, n = time_series - 1, type = "s"),
-    opp_def_epa = dplyr::lag(opp_def_epa),
-    opp_off_epa = pracma::movavg(opp_off_epa, n = time_series - 1, type = "s"),
-    opp_off_epa = dplyr::lag(opp_off_epa)
-  )
-
-# Merge opponent data back in with the weekly epa data
-epa_data <- epa_data %>%
-  left_join(
-    opponent_data,
-    by = c("game_id", "season", "week", "home_team", "away_team", "opponent" = "posteam"),
-    all.x = TRUE
-  )
-
-epa_data <- epa_data %>%
-  dplyr::left_join(epa_data %>%
-                     dplyr::filter(posteam == home_team) %>%
-                     dplyr::group_by(season, week) %>%
-                     dplyr::summarise(
-                       league_mean = mean(off_epa + def_epa)
-                     ) %>%
-                     dplyr::ungroup() %>%
-                     dplyr::group_by(season) %>%
-                     dplyr::mutate(
-                       league_mean = lag(pracma::movavg(league_mean, n = as.integer(time_series), type = "s"), ) # We lag because we need to know the league mean up to that point in the season
-                     ),
-                   by = c("season", "week"),
-                   all.x = TRUE
-  )
-
-# Adjust EPA
-epa_data <- epa_data %>%
-  dplyr::mutate(
-    off_adjustment_factor = ifelse(!is.na(league_mean), league_mean - opp_def_epa, 0),
-    def_adjustment_factor = ifelse(!is.na(league_mean), league_mean - opp_off_epa, 0),
-    adjusted_off_epa = off_epa + off_adjustment_factor,
-    adjusted_def_epa = def_epa + def_adjustment_factor,
-  )
-
-chart_all <- epa_data %>% 
-  filter(season == current_season) %>% 
-  arrange(posteam) %>% 
-  group_by(posteam) %>% 
-  summarize(
-    adjusted_off_epa = mean(adjusted_off_epa, na.rm = T),
-    adjusted_def_epa = mean(adjusted_def_epa, na.rm = T)
-  ) %>% 
-  # filter(row_number() == n()) %>% 
-  left_join(teams_colors_logos, by = c("posteam" = "team_abbr"))
-
-p <- chart_all %>% 
-  ggplot(aes(x = adjusted_off_epa, y = adjusted_def_epa)) +
-  # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/10) +
-  geom_hline(yintercept = mean(chart_all$adjusted_def_epa, na.rm = T), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$adjusted_off_epa, na.rm = T), color = "red", linetype = "dashed") +
-  geom_grob(aes(
-    x = adjusted_off_epa,
-    y = adjusted_def_epa,
-    label = grob_img_adj(team_logo_espn),
-    vp.height = 0.08
-  )) +
-  labs(x = "Adj. Offense EPA/play",
-       y = "Adj. Defense EPA/play",
-       # caption = "Data: @nflscrapR",
-       title = glue("{current_season} NFL Adjusted Team Tiers"),
-       subtitle = glue("Offense and defense adjusted EPA per play through week {n_week}\nAdjusted for previous matchups")) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-  scale_y_reverse() +
-  theme_cw_dark +
-  theme(
-    axis.title.y = element_text(angle = 90),
-    legend.position = c(0.99, 0.99),
-    legend.justification = c(1, 1) ,
-    plot.title = element_text(size = 16),
-    #panel.grid.minor = element_blank()
-  )
-
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_adj_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 # Tiers -------------------------------------------------------------------
 
@@ -382,6 +253,140 @@ p <- chart_all %>%
   )
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_def_pass_and_rush_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+
+
+# Adjust EPA --------------------------------------------------------------
+# https://www.opensourcefootball.com/posts/2020-08-20-adjusting-epa-for-strenght-of-opponent/
+epa_data <- pbp %>%
+  filter(posteam != '') %>% 
+  # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
+  dplyr::filter(!is.na(posteam)) %>%
+  dplyr::group_by(game_id, season, week, posteam, home_team) %>%
+  dplyr::summarise(
+    off_epa = mean(epa, na.rm = T),
+  ) %>%
+  dplyr::left_join(pbp %>%
+                     filter(play_type == "pass" | play_type == "run") %>%
+                     dplyr::group_by(game_id, season, week, defteam, away_team) %>%
+                     dplyr::summarise(def_epa = mean(epa, na.rm = T)),
+                   by = c("game_id", "posteam" = "defteam", "season", "week"),
+                   all.x = T
+  ) %>%
+  dplyr::mutate(opponent = ifelse(posteam == home_team, away_team, home_team)) %>%
+  dplyr::select(game_id, season, week, home_team, away_team, posteam, opponent, off_epa, def_epa)
+
+offense <- pbp %>%
+  filter(!is.na(epa) & !is.na(posteam)) %>% 
+  group_by(posteam, season) %>%
+  summarize(
+    n_pass=sum(pass, na.rm = T),
+    n_rush=sum(rush, na.rm = T),
+    epa_per_pass=sum(epa*pass, na.rm = T)/n_pass,
+    epa_per_rush=sum(epa*rush, na.rm = T)/n_rush,
+    success_per_pass=sum(pass*epa>0, na.rm = T)/n_pass,
+    success_per_rush=sum(rush*epa>0, na.rm = T)/n_rush,
+    off_epa=mean(epa, na.rm = T),
+    off_success=mean(success, na.rm = T)
+  )
+
+# Construct opponent dataset and lag the moving average of their last ten games.
+opponent_data <- epa_data %>%
+  dplyr::select(-opponent) %>%
+  dplyr::rename(
+    opp_off_epa = off_epa,
+    opp_def_epa = def_epa
+  ) %>%
+  dplyr::group_by(posteam) %>%
+  dplyr::arrange(season, week) %>%
+  dplyr::mutate(
+    opp_def_epa = pracma::movavg(opp_def_epa, n = time_series - 1, type = "s"),
+    opp_def_epa = dplyr::lag(opp_def_epa),
+    opp_off_epa = pracma::movavg(opp_off_epa, n = time_series - 1, type = "s"),
+    opp_off_epa = dplyr::lag(opp_off_epa)
+  )
+
+# Merge opponent data back in with the weekly epa data
+epa_data <- epa_data %>%
+  left_join(
+    opponent_data,
+    by = c("game_id", "season", "week", "home_team", "away_team", "opponent" = "posteam"),
+    all.x = TRUE
+  )
+
+epa_data <- epa_data %>%
+  dplyr::left_join(epa_data %>%
+                     dplyr::filter(posteam == home_team) %>%
+                     dplyr::group_by(season, week) %>%
+                     dplyr::summarise(
+                       league_mean = mean(off_epa + def_epa)
+                     ) %>%
+                     dplyr::ungroup() %>%
+                     dplyr::group_by(season) %>%
+                     dplyr::mutate(
+                       league_mean = lag(pracma::movavg(league_mean, n = as.integer(time_series), type = "s"), ) # We lag because we need to know the league mean up to that point in the season
+                     ),
+                   by = c("season", "week"),
+                   all.x = TRUE
+  )
+
+# Adjust EPA
+epa_data <- epa_data %>%
+  dplyr::mutate(
+    off_adjustment_factor = ifelse(!is.na(league_mean), league_mean - opp_def_epa, 0),
+    def_adjustment_factor = ifelse(!is.na(league_mean), league_mean - opp_off_epa, 0),
+    adjusted_off_epa = off_epa + off_adjustment_factor,
+    adjusted_def_epa = def_epa + def_adjustment_factor,
+  )
+
+chart_all <- epa_data %>% 
+  filter(season == current_season) %>% 
+  arrange(posteam) %>% 
+  group_by(posteam) %>% 
+  summarize(
+    adjusted_off_epa = mean(adjusted_off_epa, na.rm = T),
+    adjusted_def_epa = mean(adjusted_def_epa, na.rm = T)
+  ) %>% 
+  # filter(row_number() == n()) %>% 
+  left_join(teams_colors_logos, by = c("posteam" = "team_abbr"))
+
+p <- chart_all %>% 
+  ggplot(aes(x = adjusted_off_epa, y = adjusted_def_epa)) +
+  # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/10) +
+  geom_hline(yintercept = mean(chart_all$adjusted_def_epa, na.rm = T), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(chart_all$adjusted_off_epa, na.rm = T), color = "red", linetype = "dashed") +
+  geom_grob(aes(
+    x = adjusted_off_epa,
+    y = adjusted_def_epa,
+    label = grob_img_adj(team_logo_espn),
+    vp.height = 0.08
+  )) +
+  labs(x = "Adj. Offense EPA/play",
+       y = "Adj. Defense EPA/play",
+       # caption = "Data: @nflscrapR",
+       title = glue("{current_season} NFL Adjusted Team Tiers"),
+       subtitle = glue("Offense and defense adjusted EPA per play through week {n_week}\nAdjusted for previous matchups")) +
+  geom_abline(slope=slope, intercept=.4, alpha=.2) +
+  geom_abline(slope=slope, intercept=.3, alpha=.2) +
+  geom_abline(slope=slope, intercept=0, alpha=.2) +
+  geom_abline(slope=slope, intercept=.1, alpha=.2) +
+  geom_abline(slope=slope, intercept=.2, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  scale_y_reverse() +
+  theme_cw_dark +
+  theme(
+    axis.title.y = element_text(angle = 90),
+    legend.position = c(0.99, 0.99),
+    legend.justification = c(1, 1) ,
+    plot.title = element_text(size = 16),
+    #panel.grid.minor = element_blank()
+  )
+
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_adj_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
+
+
 
 # Next week match-ups -----------------------------------------------------
 if (n_week < 17) {
