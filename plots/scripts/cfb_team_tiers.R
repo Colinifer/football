@@ -17,7 +17,9 @@ con <- fx.db_con(x.host = 'localhost')
 pbp <- tbl(con, 'cfbfastR_pbp') %>% 
   filter(season == current_season & 
            !is.na(pos_team) & 
-           (rush == 1 | pass == 1)) %>% 
+           (rush == 1 | pass == 1) & 
+           !is.na(offense_conference) & 
+           !is.na(defense_conference)) %>% 
   rename(
     posteam = pos_team,
     defteam = def_pos_team,
@@ -29,10 +31,11 @@ pbp <- tbl(con, 'cfbfastR_pbp') %>%
 dbDisconnect(con)
 print(current_season)
 
-power_6_schools <- c('Big Ten', 'Pac-12', 'Big-12', 'ACC', 'SEC', 'American Athletic')
+power_6_schools <- c('Big Ten', 'Pac-12', 'Big-12', 'ACC', 'SEC', 'American Athletic', 'FBS Independents')
 
 power_6_game_ids <- pbp %>% 
-  filter(offense_conference %in% power_6_schools) %>% 
+  filter(offense_conference %in% power_6_schools & 
+           defense_conference %in% power_6_schools) %>% 
   pull(game_id) %>% 
   unique()
 
@@ -41,11 +44,11 @@ n_week <- fx.n_week(pbp)
 # If week < 10, us current weeks in season
 time_series <- dplyr::if_else(pbp %>%
                                 select(week) %>%
-                                max() - 1 < 10,
+                                max() - 1 < 6,
                               pbp %>%
                                 select(week) %>%
-                                max() - 2,
-                              10)
+                                max() - 1,
+                              6)
 
 res <- 800 # size of exported plots
 slope = -1.5 # for the tiers stuff
@@ -54,8 +57,9 @@ qb_min <- 320 # min # of qb plays
 # Adjust EPA --------------------------------------------------------------
 # https://www.opensourcefootball.com/posts/2020-08-20-adjusting-epa-for-strenght-of-opponent/
 epa_data <- pbp %>%
-  filter(posteam != '' & 
-           game_id %in% power_6_game_ids) %>% 
+  filter(posteam != '' # &
+           # game_id %in% power_6_game_ids
+         ) %>% 
   # dplyr::filter(!is.na(epa), !is.na(ep), !is.na(posteam), play_type == "pass" | play_type == "run") %>%
   dplyr::filter(!is.na(posteam)) %>%
   dplyr::group_by(game_id, season, week, posteam, home_team) %>%
@@ -63,7 +67,7 @@ epa_data <- pbp %>%
     off_epa = mean(epa, na.rm = T),
   ) %>%
   dplyr::left_join(pbp %>%
-                     filter(play_type == "pass" | play_type == "run") %>%
+                     filter(!is.na(defteam)) %>%
                      dplyr::group_by(game_id, season, week, defteam, away_team) %>%
                      dplyr::summarise(def_epa = mean(epa, na.rm = T)),
                    by = c("game_id", "posteam" = "defteam", "season", "week"),
@@ -74,7 +78,7 @@ epa_data <- pbp %>%
 
 offense <- pbp %>%
   filter(!is.na(epa) & 
-           game_id %in% power_6_game_ids &
+           # game_id %in% power_6_game_ids &
            !is.na(posteam)) %>% 
   group_by(posteam, season) %>%
   summarize(
@@ -146,9 +150,10 @@ chart_all <- epa_data %>%
     adjusted_def_epa = mean(adjusted_def_epa, na.rm = T)
   ) %>% 
   # filter(row_number() == n()) %>% 
-  left_join(teams_colors_logos, by = c("posteam" = "team_abbr"))
+  left_join(cfb_team_info, by = c("posteam" = "school"))
 
 p <- chart_all %>% 
+  filter(conference %in% power_6_schools) %>% 
   ggplot(aes(x = adjusted_off_epa, y = adjusted_def_epa)) +
   # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/10) +
   geom_hline(yintercept = mean(chart_all$adjusted_def_epa, na.rm = T), color = "red", linetype = "dashed") +
@@ -156,7 +161,7 @@ p <- chart_all %>%
   geom_grob(aes(
     x = adjusted_off_epa,
     y = adjusted_def_epa,
-    label = grob_img_adj(team_logo_espn),
+    label = grob_img_adj(logos_light),
     vp.height = 0.08
   )) +
   labs(x = "Adj. Offense EPA/play",
@@ -182,7 +187,7 @@ p <- chart_all %>%
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_adj_{current_season}.png'), data_home = 'Data: @cfbfastR', fade_borders = '')
+brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/cfb_team_tiers/cfb_team_tiers_adj_{current_season}.png'), data_home = 'Data: @cfbfastR', fade_borders = '')
 
 # Tiers -------------------------------------------------------------------
 
@@ -260,6 +265,7 @@ chart_all <- offense %>%
   filter(conference %in% power_6_schools)
 
 p <- chart_all %>% 
+  filter(conference %in% power_6_schools) %>% 
   ggplot(aes(x = off_epa, y = def_epa)) +
   # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
   geom_grob(data = chart_all,
@@ -297,6 +303,7 @@ p <- chart_all %>%
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/cfb_team_tiers/cfb_team_tiers_{current_season}.png'), data_home = 'Data: @cfbfastR', fade_borders = '')
 
 p <- chart_all %>% 
+  filter(conference %in% power_6_schools) %>% 
   ggplot(aes(x = early_down_off_epa, y = def_early_down_epa)) +
   # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
   geom_grob(data = chart_all,
@@ -335,6 +342,7 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/cfb_team_tiers/cfb_ea
 
 # Pass v Rush EPA
 p <- chart_all %>% 
+  filter(conference %in% power_6_schools) %>% 
   ggplot(aes(x = epa_per_pass, y = epa_per_rush)) +
   # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
   geom_grob(data = chart_all,
@@ -373,6 +381,7 @@ brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/cfb_team_tiers/cfb_te
 # Need to add Defense pass and rush epa/play
 
 p <- chart_all %>% 
+  filter(conference %in% power_6_schools) %>% 
   ggplot(aes(x = def_epa_per_pass, y = def_epa_per_rush)) +
   # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
   geom_grob(data = chart_all,
