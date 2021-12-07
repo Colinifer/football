@@ -75,12 +75,26 @@ gt_theme_pff <- function(data, ...) {
 # Dark Theme --------------------------------------------------------------
 
 gt_theme_cw <- function(data, ...) {
+  
+  get_list_from_ellipsis(...)
+  
   data %>%
     # Add team logos w/ web_image
     # text_transform(
     #   locations = cells_body(c(posteam)),
     #   fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'))
-    # ) %>% 
+    # ) %>%
+    text_transform(
+      locations = cells_body(
+        columns = c(headshot_url)
+      ),
+      fn = function(x) {
+        web_image(
+          url = x,
+          height = 25
+        )
+      }
+    ) %>%
     text_transform(
       locations = cells_body(
         columns = c(team_logo_espn)
@@ -99,26 +113,28 @@ gt_theme_cw <- function(data, ...) {
     ) %>%
     # hide spanner with transparent color
     # Change font color and weight for numeric col
-    tab_style(style = cell_text(font = "Chivo", size = 'xx-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
-    tab_style(style = cell_text(font = "Chivo", size = 'large', weight = 'normal'), locations = cells_title(groups = 'subtitle')) %>% 
+    tab_style(style = cell_text(font = "Chivo", size = 'xx-large', weight = 'normal'), locations = cells_title(groups = 'title')) %>% 
+    tab_style(style = cell_text(font = "Chivo", size = 'medium', weight = 'normal'), locations = cells_title(groups = 'subtitle')) %>% 
+    tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
+    tab_style(style = cell_text(align = 'left'), locations = cells_body(c(1:3))) %>% 
     tab_style(
       style = list(
         cell_text(color = color_cw[5], weight = 'normal')
       ),
       locations = cells_body(
-        columns = 3:ncol(data$`_data`)
+        columns = 4:ncol(data$`_data`)
       )
     ) %>% 
     tab_style(
-      style = cell_text(font = 'Chivo', weight = 'bold'),
+      style = cell_text(font = 'Chivo', weight = 'normal'),
       locations = cells_body(
-        columns = c(1:2)
+        columns = c(1:3)
       )
     ) %>% 
     tab_style(
       style = cell_text(font = 'Montserrat', weight = 'normal'),
       locations = cells_body(
-        columns = c(3:ncol(data$`_data`))
+        columns = c(4:ncol(data$`_data`))
       )
     ) %>% 
     # change overall table styling for borders and striping

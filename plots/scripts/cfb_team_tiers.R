@@ -20,12 +20,19 @@ pbp <- tbl(con, 'cfbfastR_pbp') %>%
            (rush == 1 | pass == 1) & 
            !is.na(offense_conference) & 
            !is.na(defense_conference)) %>% 
+  select(
+    pos_team
+    ,def_pos_team
+    ,home
+    ,away
+    ,EPA
+  ) %>% 
   rename(
-    posteam = pos_team,
-    defteam = def_pos_team,
-    home_team = home,
-    away_team = away,
-    epa = EPA
+    posteam = pos_team
+    ,defteam = def_pos_team
+    ,home_team = home
+    ,away_team = away
+    ,epa = EPA
   ) %>% 
   collect()
 dbDisconnect(con)
@@ -169,6 +176,8 @@ p <- chart_all %>%
        # caption = "Data: @cfbscrapR",
        title = glue("{current_season} CFB Adjusted Team Tiers"),
        subtitle = glue("Offense and defense adjusted EPA per play through week {n_week}\nAdjusted for previous matchups")) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
+  geom_abline(slope=slope, intercept=.5, alpha=.2) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
   geom_abline(slope=slope, intercept=0, alpha=.2) +
@@ -177,6 +186,8 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.1, alpha=.2) +
   geom_abline(slope=slope, intercept=-.2, alpha=.2) +
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.4, alpha=.2) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
   scale_y_reverse() +
   theme_cw_dark +
   theme(
@@ -190,7 +201,7 @@ p <- chart_all %>%
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/cfb_team_tiers/cfb_team_tiers_adj_{current_season}.png'), data_home = 'Data: @cfbfastR', fade_borders = '')
 
 # Tiers -------------------------------------------------------------------
-
+ 
 offense <- pbp %>%
   filter(!is.na(posteam) & 
            game_id %in% power_6_game_ids &
@@ -282,6 +293,8 @@ p <- chart_all %>%
        # caption = "Data: @cfbscrapR",
        title = glue("{current_season} CFB Team Tiers"),
        subtitle = glue("Offense and defense EPA per play through week {n_week}")) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
+  geom_abline(slope=slope, intercept=.5, alpha=.2) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
   geom_abline(slope=slope, intercept=0, alpha=.2) +
@@ -290,6 +303,8 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.1, alpha=.2) +
   geom_abline(slope=slope, intercept=-.2, alpha=.2) +
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.4, alpha=.2) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
   scale_y_reverse() +
   theme_cw_dark +
   theme(
@@ -320,6 +335,8 @@ p <- chart_all %>%
        # caption = "Data: @cfbscrapR",
        title = glue("{current_season} CFB Team Tiers"),
        subtitle = glue("Offense and defense early down EPA per play through week {n_week}")) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
+  geom_abline(slope=slope, intercept=.5, alpha=.2) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
   geom_abline(slope=slope, intercept=0, alpha=.2) +
@@ -328,6 +345,8 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.1, alpha=.2) +
   geom_abline(slope=slope, intercept=-.2, alpha=.2) +
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.4, alpha=.2) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
   scale_y_reverse() +
   theme_cw_dark +
   theme(
@@ -359,6 +378,8 @@ p <- chart_all %>%
        # caption = "Data: @cfbscrapR",
        title = glue("{current_season} CFB Offense Team Tiers"),
        subtitle = glue("Offense passing and rushing EPA per play through week {n_week}")) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
+  geom_abline(slope=slope, intercept=.5, alpha=.2) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
   geom_abline(slope=slope, intercept=0, alpha=.2) +
@@ -367,6 +388,8 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.1, alpha=.2) +
   geom_abline(slope=slope, intercept=-.2, alpha=.2) +
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.4, alpha=.2) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
   theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
@@ -398,6 +421,8 @@ p <- chart_all %>%
        # caption = "Data: @cfbscrapR",
        title = glue("{current_season} CFB Defense Team Tiers"),
        subtitle = glue("Defense passing and rushing EPA per play through week {n_week}")) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
+  geom_abline(slope=slope, intercept=.5, alpha=.2) +
   geom_abline(slope=slope, intercept=.4, alpha=.2) +
   geom_abline(slope=slope, intercept=.3, alpha=.2) +
   geom_abline(slope=slope, intercept=0, alpha=.2) +
@@ -406,6 +431,8 @@ p <- chart_all %>%
   geom_abline(slope=slope, intercept=-.1, alpha=.2) +
   geom_abline(slope=slope, intercept=-.2, alpha=.2) +
   geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=slope, intercept=-.4, alpha=.2) +
+  geom_abline(slope=slope, intercept=.6, alpha=.2) +
   scale_x_reverse() +
   scale_y_reverse() +
   theme_cw_dark +

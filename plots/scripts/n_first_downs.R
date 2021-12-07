@@ -138,18 +138,26 @@ pbp_df %>%
          first_down_rate = n_first_downs / n_dropbacks) %>% 
   arrange(-first_down_rate) %>% 
   filter(n_dropbacks > max(games_played)*8) %>% 
-  mutate(rk = row_number()) %>% 
+  mutate(rk = paste0('#',row_number())) %>%
   left_join(
     teams_colors_logos %>% 
       select(team_abbr, team_logo_espn),
     by = c('posteam' = 'team_abbr')
   ) %>% 
-  select(rk, passer_player_name, team_logo_espn, posteam, first_down_rate, success_rate) %>% 
+  left_join(
+    roster_df %>% 
+      select(
+        passer_player_id = gsis_id,
+        headshot_url
+      )
+  ) %>% 
+  select(rk, headshot_url, passer_player_name, team_logo_espn, posteam, first_down_rate, success_rate) %>% 
   gt() %>% 
   tab_header(title = 'Passer 1st Down Rate', 
              subtitle = glue('Through week {my_week} | Min. {my_week*8} dropbacks')) %>% 
   cols_label(
     rk = 'Rank',
+    headshot_url = '',
     passer_player_name = 'Player',
     team_logo_espn = '',
     posteam = 'Team',
