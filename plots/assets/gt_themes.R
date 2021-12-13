@@ -76,7 +76,7 @@ gt_theme_pff <- function(data, ...) {
 
 gt_theme_cw <- function(data, ...) {
   
-  get_list_from_ellipsis(...)
+  # get_list_from_ellipsis(...)
   
   data %>%
     # Add team logos w/ web_image
