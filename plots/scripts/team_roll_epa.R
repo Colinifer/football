@@ -19,118 +19,100 @@ pbp <- tbl(con, 'nflfastR_pbp') %>%
            season_type == 'REG' &
            !is.na(posteam) & 
            (rush == 1 | pass == 1)) %>% 
+  select(
+    season,
+    game_id,
+    week,
+    play_id,
+    posteam,
+    defteam,
+    rush,
+    pass,
+    epa
+  ) %>% 
   collect()
+dbDisconnect(con)
 print(current_season)
 
 n_week <- fx.n_week(pbp_df)
 
-# Tiers -------------------------------------------------------------------
+# Rolling EPA ---------------------------------------------------------------
+teams <- pbp %>% 
+  pull(posteam) %>% 
+  unique()
 
-ma_plays <- 100
-
-# net_epa <- 
+map(teams, function(x.team){
+  ma_plays <- 100
   
-pbp %>%
-  filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
-  mutate(team = posteam,
-         opp_team = defteam) %>% 
-  rbind(pbp %>%
-           filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
-           mutate(team = defteam,
-                  opp_team = posteam)) %>% 
-  arrange(team, game_id, play_id) %>% 
-  group_by(team, season) %>%
-  mutate(
-    play_count = row_number()
-  ) %>% 
-  select(
-    play_count,
-    game_id,
-    week,
-    team,
-    posteam,
-    defteam,
-    epa
-  ) %>% 
-  mutate(
-    off_epa = ifelse(team == posteam, epa, NA),
-    def_epa = ifelse(team == defteam, epa, NA),
-    cu_epa = cummean(epa),  #this field is not used in this vignette but it could be substituted later to graph the cumulative EPA
-    ma_epa = zoo::rollapply(epa, ma_plays, mean, na.rm = TRUE, fill = NA),
-    ma_off_epa = zoo::rollapply(off_epa, ma_plays, mean, na.rm = TRUE, fill = NA),
-    ma_def_epa = zoo::rollapply(def_epa, ma_plays, mean, na.rm = TRUE, fill = NA),
-    ma_net_epa = ma_off_epa - ma_def_epa
-  ) %>% 
-  filter(team == 'KC') %>% 
-  # select(play_count, ma_off_epa, ma_def_epa) %>% 
-  ggplot(aes()) + 
-  geom_abline(slope=0, intercept=0, alpha=.8, color = 'red') +
-  geom_line(aes(x = play_count, y = ma_off_epa), size = 1, color = 'black', linetype = 'dotted', na.rm = T) +
-  geom_line(aes(x = play_count, y = ma_def_epa), size = 1, color = 'red', linetype = 'dotted', na.rm = T) + 
-  # geom_line(aes(x = play_count, y = ma_epa), color = 'black') + 
-  # geom_smooth(aes(x = play_count, y = ma_net_epa), method = 'loess', color = 'black')
-  geom_line(aes(x = play_count, y = ma_net_epa), size = 2, color = 'black')
+  x.team_info <- nflfastR::teams_colors_logos %>% 
+    filter(team_abbr == x.team)
+  
+  x.team_name <- x.team_info %>% pull(team_name)
+  
+  print(glue("Plotting {x.team_name}'s net EPA"))
+  
+  # net_epa <- 
+  
+  net_roll_df <- pbp %>%
+    filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
+    mutate(team = posteam,
+           opp_team = defteam) %>% 
+    rbind(pbp %>%
+            filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
+            mutate(team = defteam,
+                   opp_team = posteam)) %>% 
+    arrange(team, game_id, play_id) %>% 
+    group_by(team, season) %>%
+    mutate(
+      play_count = row_number()
+    ) %>% 
+    select(
+      season,
+      play_count,
+      game_id,
+      week,
+      team,
+      posteam,
+      defteam,
+      epa
+    ) %>% 
+    mutate(
+      off_epa = ifelse(team == posteam, epa, NA),
+      def_epa = ifelse(team == defteam, epa, NA),
+      cu_epa = cummean(epa),  #this field is not used in this vignette but it could be substituted later to graph the cumulative EPA
+      ma_epa = zoo::rollapply(epa, ma_plays, mean, na.rm = TRUE, fill = NA),
+      ma_off_epa = zoo::rollapply(off_epa, ma_plays, mean, na.rm = TRUE, fill = NA),
+      ma_def_epa = zoo::rollapply(def_epa, ma_plays, mean, na.rm = TRUE, fill = NA),
+      ma_net_epa = ma_off_epa - ma_def_epa
+    ) %>% 
+    filter(team == x.team) # Selected team
 
-offense <- pbp_df %>%
-  filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
-  group_by(posteam, season)%>%
-  mutate(
-    cu_epa = cummean(epa),  #this field is not used in this vignette but it could be substituted later to graph the cumulative EPA
-    ma_epa = rollapply(epa,ma_plays,mean,align='right',fill=NA),
-    ma_epa_offense = rollapply(epa,ma_plays,mean,align='right',fill=NA),
-    ma_epa_defense = 
-    play_count = row_number(),
-    week_team = paste0("WK", ifelse(week > 9, week, paste0(0,week)), " ", defteam)
-  )
-
-defense <- pbp_df %>%
-  filter(!is.na(posteam) & (rush == 1 | pass == 1)) %>% 
-  group_by(defteam, season) %>%
-  group_by(posteam, season)%>%
-  mutate(
-    cu_epa = cummean(epa),  #this field is not used in this vignette but it could be substituted later to graph the cumulative EPA
-    ma_epa_defense = rollapply(epa,ma_plays,mean,align='right',fill=NA),
-    play_count = row_number(),
-    week_team = paste0("WK", ifelse(week > 9, week, paste0(0,week)), " ", defteam)
-  )
-
-chart_all <- offense %>% 
-  inner_join(defense, by=c("season", "posteam" = "defteam")) %>%
-  left_join(teams_colors_logos, by = c("posteam" = "team_abbr"))
-
-p <- chart_all %>% 
-  ggplot(aes(x = off_epa, y = def_epa)) +
-  geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/9) +
-  geom_hline(yintercept = mean(chart_all$def_epa, na.rm = T), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$off_epa, na.rm = T), color = "red", linetype = "dashed") +
-  labs(x = "Offense EPA/play",
-       y = "Defense EPA/play",
-       # caption = "Data: @nflscrapR",
-       title = glue("{current_season} NFL Team Tiers"),
-       subtitle = glue("Offense and defense EPA per play through week {n_week}")) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
-  scale_y_reverse() +
-  theme_cw +
-  theme(
-    axis.title.y = element_text(angle = 90),
-    legend.position = c(0.99, 0.99),
-    legend.justification = c(1, 1) ,
-    plot.title = element_text(size = 16),
-    #panel.grid.minor = element_blank()
-  )
-
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_rolling_epa_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
-
-
-end_time <- Sys.time()
-end_time - start_time
-
-rm(time_series, res, slope, qb_min, epa_data, offense, opponent_data, chart_all, matchup_chart_all, p, start_time, end_time)
-# })
+  p <- net_roll_df %>% 
+    # select(play_count, ma_off_epa, ma_def_epa) %>% 
+    ggplot(aes()) + 
+    geom_abline(slope=0, intercept=0, alpha=.8, color = 'red') +
+    geom_line(aes(x = play_count, y = ma_off_epa), size = 1, color = color_cw[7], linetype = 'dotted', na.rm = T) +
+    geom_line(aes(x = play_count, y = ma_def_epa), size = 1, color = color_cw[8], linetype = 'dotted', na.rm = T) + 
+    # geom_line(aes(x = play_count, y = ma_epa), color = 'black') + 
+    # geom_smooth(aes(x = play_count, y = ma_net_epa), method = 'loess', color = 'black')
+    geom_line(aes(x = play_count, y = ma_net_epa), size = 1.5, color = color_cw[5]) + 
+    geom_grob(data = x.team_info,
+              aes(
+                x = net_roll_df %>% filter(!is.na(ma_net_epa)) %>% pull(play_count) %>% max(),
+                y = net_roll_df %>% filter(!is.na(ma_net_epa)) %>% pull(ma_net_epa) %>% min() + .1,
+                label = grob_img_adj(team_logo_espn),
+                vp.height = 0.08
+              )) +
+    labs(title = glue('{x.team_name} Rolling Net EPA'),
+         subtitle = glue(''),
+         color = "Line Color",
+         x = 'Play Count',
+         y = 'EPA') +
+    theme_cw_dark + 
+    theme()
+  
+  brand_plot(p, asp = 8/5, save_name = glue('plots/desktop/team_epa/{x.team}_rolling_net_epa.png'),  data_home = 'Data: @nflfastR', fade_borders = '')
+  
+  end_time <- Sys.time()
+  end_time - start_time
+})
