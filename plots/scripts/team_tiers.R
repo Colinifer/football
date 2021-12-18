@@ -339,7 +339,7 @@ epa_data <- epa_data %>%
     adjusted_def_epa = def_epa + def_adjustment_factor,
   )
 
-chart_all <- epa_data %>% 
+chart_all_adj_epa <- epa_data %>% 
   filter(season == current_season) %>% 
   arrange(posteam) %>% 
   group_by(posteam) %>% 
@@ -350,11 +350,11 @@ chart_all <- epa_data %>%
   # filter(row_number() == n()) %>% 
   left_join(teams_colors_logos, by = c("posteam" = "team_abbr"))
 
-p <- chart_all %>% 
+p <- chart_all_adj_epa %>% 
   ggplot(aes(x = adjusted_off_epa, y = adjusted_def_epa)) +
   # geom_image(aes(image = team_logo_espn), size = 0.05, asp = 16/10) +
-  geom_hline(yintercept = mean(chart_all$adjusted_def_epa, na.rm = T), color = "red", linetype = "dashed") +
-  geom_vline(xintercept =  mean(chart_all$adjusted_off_epa, na.rm = T), color = "red", linetype = "dashed") +
+  geom_hline(yintercept = mean(chart_all_adj_epa$adjusted_def_epa, na.rm = T), color = "red", linetype = "dashed") +
+  geom_vline(xintercept =  mean(chart_all_adj_epa$adjusted_off_epa, na.rm = T), color = "red", linetype = "dashed") +
   geom_grob(aes(
     x = adjusted_off_epa,
     y = adjusted_def_epa,
@@ -396,38 +396,36 @@ if (n_week < 17) {
         filter(week == n_week + 1) %>% 
         select(posteam, oppteam, weekday, gametime),
       by = c('posteam')
-    ) %>% left_join(chart_all %>% 
-                      select(
-                        -season,
-                      ) %>% 
-                      rename(
-                        opp_n_pass = n_pass,
-                        opp_n_rush = n_rush,
-                        opp_epa_per_pass = epa_per_pass,
-                        opp_epa_per_rush = epa_per_rush,
-                        opp_success_per_pass = success_per_pass,
-                        opp_success_per_rush = success_per_rush,
-                        opp_off_epa = off_epa,
-                        opp_def_n_pass = def_n_pass,
-                        opp_def_n_rush = def_n_rush,
-                        opp_def_epa_per_pass = def_epa_per_pass,
-                        opp_def_epa_per_rush = def_epa_per_rush,
-                        opp_def_success_per_pass = def_success_per_pass,
-                        opp_def_success_per_rush = def_success_per_rush,
-                        opp_def_epa = def_epa,
-                        opp_def_success = def_success,
-                        opp_team_name = team_name,
-                        opp_team_id = team_id,
-                        opp_team_nick = team_nick,
-                        opp_team_color = team_color,
-                        opp_team_color2 = team_color2,
-                        opp_team_color3 = team_color3,
-                        opp_team_color4 = team_color4,
-                        opp_team_logo_wikipedia = team_logo_wikipedia,
-                        opp_team_logo_espn = team_logo_espn
-                      ),
-                    by = c('oppteam' = 'posteam')
-                    ) %>%
+    ) %>% 
+    left_join(chart_all %>% 
+                rename(
+                  opp_n_pass = n_pass,
+                  opp_n_rush = n_rush,
+                  opp_epa_per_pass = epa_per_pass,
+                  opp_epa_per_rush = epa_per_rush,
+                  opp_success_per_pass = success_per_pass,
+                  opp_success_per_rush = success_per_rush,
+                  opp_off_epa = off_epa,
+                  opp_def_n_pass = def_n_pass,
+                  opp_def_n_rush = def_n_rush,
+                  opp_def_epa_per_pass = def_epa_per_pass,
+                  opp_def_epa_per_rush = def_epa_per_rush,
+                  opp_def_success_per_pass = def_success_per_pass,
+                  opp_def_success_per_rush = def_success_per_rush,
+                  opp_def_epa = def_epa,
+                  opp_def_success = def_success,
+                  opp_team_name = team_name,
+                  opp_team_id = team_id,
+                  opp_team_nick = team_nick,
+                  opp_team_color = team_color,
+                  opp_team_color2 = team_color2,
+                  opp_team_color3 = team_color3,
+                  opp_team_color4 = team_color4,
+                  opp_team_logo_wikipedia = team_logo_wikipedia,
+                  opp_team_logo_espn = team_logo_espn
+                  ),
+              by = c('oppteam' = 'posteam')
+              ) %>%
     filter(!is.na(oppteam ))
   
   p <- matchup_chart_all %>% 
