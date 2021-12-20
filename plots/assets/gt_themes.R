@@ -74,7 +74,7 @@ gt_theme_pff <- function(data, ...) {
 
 # Dark Theme --------------------------------------------------------------
 
-gt_theme_cw <- function(data, ...) {
+gt_theme_cw <- function(data, image_columns) {
   
   # get_list_from_ellipsis(...)
   
@@ -86,18 +86,7 @@ gt_theme_cw <- function(data, ...) {
     # ) %>%
     text_transform(
       locations = cells_body(
-        columns = c(headshot_url)
-      ),
-      fn = function(x) {
-        web_image(
-          url = x,
-          height = 25
-        )
-      }
-    ) %>%
-    text_transform(
-      locations = cells_body(
-        columns = c(team_logo_espn)
+        columns = c(image_columns)
       ),
       fn = function(x) {
         web_image(

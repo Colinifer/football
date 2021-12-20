@@ -73,7 +73,7 @@ pbp_df %>%
     eckel_ratio = 'Pts/Eckel'
   ) %>% 
   fmt_percent(columns = c(eckel_rate), decimals = 1) %>% 
-  gt_theme_cw() %>% 
+  gt_theme_cw(image_columns = 'team_logo_espn') %>% 
   gtsave(filename = glue("team_stats/eckel_rate_{current_season}.png"), path = "plots/desktop")
 
 
@@ -122,7 +122,7 @@ pbp_df %>%
     total_pass_attempts = 'Pass Attempts',
     adot = 'ADoT'
   ) %>% 
-  gt_theme_cw() %>% 
+  gt_theme_cw(image_columns = c('team_logo_espn')) %>% 
   gtsave(filename = glue("qb_passing/air_yards_{current_season}.png"), path = "plots/desktop")
 
 pbp_df %>% 
@@ -165,5 +165,5 @@ pbp_df %>%
     success_rate = 'Success Rate'
   ) %>% 
   fmt_percent(columns = c(first_down_rate, success_rate), decimals = 1) %>% 
-  gt_theme_cw() %>% 
+  gt_theme_cw(image_columns = c('headshot_url', 'team_logo_espn')) %>% 
   gtsave(filename = glue("qb_passing/1db_{current_season}.png"), path = "plots/desktop")
