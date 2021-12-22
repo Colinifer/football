@@ -2,6 +2,8 @@ library(tidyverse)
 
 season <- year
 
+con <- fx.db_con(x.host = 'localhost')
+
 pbp_df <-
   # purrr::map_df(season, function(x) {
   #   readRDS(
@@ -9,7 +11,7 @@ pbp_df <-
   #     glue::glue('data/pbp/play_by_play_{x}.rds')
   #     )
   # }) %>%
-  pbp_ds %>% 
+  tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= current_season & 
            game_id != '2020_12_NO_DEN') %>% # THis game is pointless
   collect() %>% 
@@ -118,7 +120,7 @@ p <- ggplot(data = prem_epa_df, aes(x = pass_epa_prem, y = pass_freq)) +
     y = "Dropback\nFreq",
     x = "(EPA/Play on Dropbacks) - (EPA/Play on Designed Runs)"
   ) +
-  theme_cw
+  theme_cw_dark
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_dropback_{season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
