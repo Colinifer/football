@@ -122,6 +122,7 @@ pbp_df %>%
     total_pass_attempts = 'Pass Attempts',
     adot = 'ADoT'
   ) %>% 
+  fmt_number(columns = c(mean_air_yards, adot), decimals = 2) %>% 
   gt_theme_cw(image_columns = c('team_logo_espn')) %>% 
   gtsave(filename = glue("qb_passing/air_yards_{current_season}.png"), path = "plots/desktop")
 

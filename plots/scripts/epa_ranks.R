@@ -746,12 +746,55 @@ efficiency_over_time <- function(dataset, current_season, current_week, team_nam
 }
 
 
-efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = "ARI")
-efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = "BUF")
-efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = "DAL")
+# AFC ---------------------------------------------------------------------
 
-efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = "GB")
-efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = "NYG")
-efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = "TB")
+# AFC East
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'BUF')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'MIA')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'NYJ')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'NE')
+
+# AFC North
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'BAL')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'CIN')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'CLE')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'PIT')
+
+# AFC West
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'DEN')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'KC')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'LAC')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'LV')
+
+# AFC South
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'HOU')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'IND')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'JAX')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'TEN')
 
 
+# NFC ---------------------------------------------------------------------
+
+# NFC East
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'DAL')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'PHI')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'NYG')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'WAS')
+
+# NFC North
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'CHI')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'DET')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'GB')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'MIN')
+
+# NFC West
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'ARI')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'LA')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'SEA')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'SF')
+
+# NFC South
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'ATL')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'CAR')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'NO')
+efficiency_over_time(model_dataset, current_season = current_season, current_week = n_week, team_name = 'TB')

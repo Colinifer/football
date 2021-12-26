@@ -9,40 +9,44 @@
 # devtools::install_github('gregce/ipify')
 proj_name <- 'football'
 pkgs <- c(
+  # Core packages
   'devtools',
   'tidyverse',
+  'glue',
+  'initR',
+  
+  # Football packages
   'nflfastR',
+  'teamcolors',
   'nflreadr',
   'cfbfastR',
   'nfl4th',
   'ffscrapr',
   'gsisdecoder',
   'espnscrapeR',
-  'DBI',
+  
+  # DB packages
   'odbc',
   'RPostgres',
-  'arrow',
-  'shiny',
-  'qs',
-  'distill',
-  'httr',
-  'readr',
-  'pander',
-  'furrr',
-  'na.tools',
+  
+  # Web packages
+  'RCurl',
+  
+  # Stats packages
+  'pracma',
+  'DescTools',
   'zoo',
-  'ggimage',
-  'teamcolors',
-  'glue',
-  'dplyr',
-  'jsonlite',
-  'tictoc',
-  'animation',
+  'fmsb',
+  
+  # Table packages
   'gt',
   'reactable',
   'png',
   'DT',
+  
+  # ggplot packages
   'ggthemes',
+  'ggimage',
   'ggforce',
   'ggridges',
   'ggrepel',
@@ -52,49 +56,60 @@ pkgs <- c(
   'webshot',
   'gridExtra',
   'grid',
+  'animation',
+  'viridis',
+  
+  # Font packages
   'extrafont',
   'shadowtext',
-  'viridis',
+  
+  # Misc. packages
+  'furrr',
   'tidytext',
-  'RCurl',
-  'pracma',
-  'DescTools',
-  'initR'
+  'na.tools',
+  'tictoc',
+  'shiny',
+  'qs',
+  
+  # Unnecessary packages
+  'pander',
+  'distill',
+  'arrow', # incompatible w/ Apple ARM
+    
+  NULL
 )
-installed_packages <- pkgs %in%
-  rownames(installed.packages())
-if (any(installed_packages == FALSE)) {
-  install.packages(pkgs[!installed_packages])
-}
-lapply(pkgs, library, character.only = TRUE)
 
-# Detach all packages
-# lapply(paste0('package:', names(sessionInfo()$otherPkgs)), detach, character.only=TRUE, unload=TRUE)
-
-rm(pkgs, installed_packages)
+initR::fx.load_packages(pkgs)
+rm(pkgs)
 
 options(tibble.print_min=25)
-
 `%notin%` <- Negate(`%in%`)
 
-# source("../initR/init.R")
+# Initialize working directory --------------------------------------------
+
 fx.setdir(proj_name)
+
+# Create standard objects -------------------------------------------------
 
 current_season <- fx.get_year()
 year <- fx.get_year()
 
-# Create standard objects -------------------------------------------------
+source_files <- c(
+  'plots/assets/plot_theme.R',
+  'plots/assets/gt_themes.R',
+  'https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R',
+  'https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R',
+  'https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R',
+  'https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R',
+  'data/fastr_mods.R',
+  'init/init_cfb.R',
+  # 'data/cfb_fastr_mods.R'
+  NULL
+)
 
-source('plots/assets/plot_theme.R', echo = F)
-source('plots/assets/gt_themes.R')
-# source('data/fastr_scrape.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/utils.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/aggregate_game_stats.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R')
-source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R')
-source('data/fastr_mods.R')
-source('init/init_cfb.R')
-# source('data/cfb_fastr_mods.R')
+map(.x = source_files, ~source(.x, echo = F)) %>% 
+  invisible()
+
 
 # Based on NAS sleep schedule
 # if ((
