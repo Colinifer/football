@@ -9,11 +9,11 @@ current_season <- year
 # can be multiple seasons
 con <- fx.db_con(x.host = 'localhost')
 # lapply(2006:2019, function(season){
-pbp <- tbl(con, 'nflfastR_pbp') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') |> 
   filter(season == current_season &
-           season_type == 'REG') %>% 
-  collect() %>% 
-  decode_player_ids(fast = TRUE) %>% 
+           season_type == 'REG') |> 
+  collect() |> 
+  decode_player_ids(fast = TRUE) |> 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam),
          posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),
@@ -26,9 +26,9 @@ dbDisconnect(con)
 
 # compute cpoe grouped by air_yards
 cpoe <-
-  pbp %>%
-  filter(!is.na(cpoe)) %>%
-  group_by(defteam, air_yards) %>%
+  pbp |>
+  filter(!is.na(cpoe)) |>
+  group_by(defteam, air_yards) |>
   summarise(count = n(), cpoe = mean(cpoe, na.rm = T))
 
 # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
@@ -37,39 +37,39 @@ cpoe <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp %>%
-  filter(!is.na(cpoe)) %>%
-  group_by(defteam) %>%
+  pbp |>
+  filter(!is.na(cpoe)) |>
+  group_by(defteam) |>
   summarise(plays = n(),
-            total_cpoe = mean(cpoe, na.rm = T)) %>%
-  arrange(plays %>% desc()) %>%
-  arrange(total_cpoe) %>% 
-  left_join(cpoe, by = "defteam") %>%
+            total_cpoe = mean(cpoe, na.rm = T)) |>
+  arrange(plays |> desc()) |>
+  arrange(total_cpoe) |> 
+  left_join(cpoe, by = "defteam") |>
   left_join(
-    teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
+    teams_colors_logos |> select(team_abbr, team_color, team_logo_espn),
     by = c("defteam" = "team_abbr")
-  ) %>% 
-  mutate(facet_label_wrap = glue('{defteam}: {total_cpoe %>% round(2)}'),
-         rounded_cpoe = total_cpoe %>% round(2)) %>% 
+  ) |> 
+  mutate(facet_label_wrap = glue('{defteam}: {total_cpoe |> round(2)}'),
+         rounded_cpoe = total_cpoe |> round(2)) |> 
   mutate_at(vars(total_cpoe), funs(factor(., levels=unique(.))))
 
 # create data frame used to add the logos
 # arranged by name because name is used for the facet
 colors_raw <-
-  summary_df %>%
-  group_by(defteam) %>%
-  summarise(defteam = first(defteam)) %>%
+  summary_df |>
+  group_by(defteam) |>
+  summarise(defteam = first(defteam)) |>
   left_join(
-    teams_colors_logos %>% select(team_abbr, team_color),
+    teams_colors_logos |> select(team_abbr, team_color),
     by = c("defteam" = "team_abbr")
-  ) %>%
+  ) |>
   arrange(defteam)
 
 summary_images_df <- 
-  summary_df %>% 
-  select(defteam, total_cpoe, rounded_cpoe, team_logo_espn) %>% 
+  summary_df |> 
+  select(defteam, total_cpoe, rounded_cpoe, team_logo_espn) |> 
   mutate(status = color_cw[5],
-         lab_cpoe = glue('Total CPOE: {rounded_cpoe}')) %>% 
+         lab_cpoe = glue('Total CPOE: {rounded_cpoe}')) |> 
   unique()
 
 # the below used smooth algorithm uses the parameter n as the number
@@ -77,13 +77,13 @@ summary_images_df <-
 # we need exactly the same number of colors (-> n times the same color per player)
 n_eval <- 80
 colors <-
-  as.data.frame(lapply(colors_raw, rep, n_eval)) %>%
+  as.data.frame(lapply(colors_raw, rep, n_eval)) |>
   arrange(defteam)
 
 # mean data frame for the smoothed line of the whole league
 mean <-
-  summary_df %>%
-  group_by(air_yards) %>%
+  summary_df |>
+  group_by(air_yards) |>
   summarise(league = mean(cpoe, na.rm = T), league_count = n())
 
 panel_label <- summary_df$defteam
@@ -94,8 +94,8 @@ asp <- 16/16
 
 # Desktop
 p <-
-  summary_df %>% 
-  # arrange(total_cpoe %>% desc()) %>% 
+  summary_df |> 
+  # arrange(total_cpoe |> desc()) |> 
   ggplot(aes(x = air_yards, y = cpoe)) +
   geom_smooth(data = mean, aes(x = air_yards, 
                                y = league, 

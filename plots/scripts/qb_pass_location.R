@@ -1,19 +1,19 @@
-pbp_df %>% 
-  filter(!is.na(passer_player_id)) %>% 
+pbp_df |> 
+  filter(!is.na(passer_player_id)) |> 
   group_by(
     season, posteam, passer_player_name, 
-    passer_player_id) %>% 
-  summarise(n = n()) %>% 
-  arrange(-n) %>% 
+    passer_player_id) |> 
+  summarise(n = n()) |> 
+  arrange(-n) |> 
   head(25)
 
-data <- pbp_df %>% 
+data <- pbp_df |> 
   filter(
     # week == 16 &
     passer_player_id == '00-0023459' & 
       pass_attempt == 1 & 
       !is.na(pass_location)
-  ) %>% 
+  ) |> 
   mutate(
     pass_distance = case_when(
       air_yards < 0 ~ 0,
@@ -21,20 +21,20 @@ data <- pbp_df %>%
       air_yards >= 10 & air_yards < 20 ~ 2,
       air_yards >= 20 ~ 3
     )
-  ) %>% 
-  group_by(season, passer_player_id, pass_distance, pass_location) %>% 
+  ) |> 
+  group_by(season, passer_player_id, pass_distance, pass_location) |> 
   summarise(
     complete_pass = sum(complete_pass, na.rm = T),
     yards_gained = sum(yards_gained, na.rm = T),
     n = n()
-  ) %>% 
+  ) |> 
   mutate(
     completion_pct = round(complete_pass / n, 2),
-    pass_distance = pass_distance %>% as.character(),
+    pass_distance = pass_distance |> as.character(),
     heatmap_label = glue('{complete_pass}/{n}\nYds: {yards_gained}')
-  ) %>% 
+  ) |> 
   left_join(
-    roster_df %>% 
+    roster_df |> 
       select(
         gsis_id,
         full_name
@@ -58,123 +58,123 @@ ggplot(
   # scale_fill_viridis(option = 'G') +
   scale_fill_gradient(low = color_cw[3], high = color_cw[6], limits=c(0, 1)) + 
   geom_text(
-    data = data %>% filter(pass_distance == 0 & pass_location == 'left'),
+    data = data |> filter(pass_distance == 0 & pass_location == 'left'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 0 &
-                        pass_location == 'left') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 0 &
+                        pass_location == 'left') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 0 & pass_location == 'middle'),
+    data = data |> filter(pass_distance == 0 & pass_location == 'middle'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 0 &
-                        pass_location == 'middle') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 0 &
+                        pass_location == 'middle') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 0 & pass_location == 'right'),
+    data = data |> filter(pass_distance == 0 & pass_location == 'right'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 0 &
-                        pass_location == 'right') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 0 &
+                        pass_location == 'right') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 1 & pass_location == 'left'),
+    data = data |> filter(pass_distance == 1 & pass_location == 'left'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 1 &
-                        pass_location == 'left') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 1 &
+                        pass_location == 'left') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 1 & pass_location == 'middle'),
+    data = data |> filter(pass_distance == 1 & pass_location == 'middle'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 1 &
-                        pass_location == 'middle') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 1 &
+                        pass_location == 'middle') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 1 & pass_location == 'right'),
+    data = data |> filter(pass_distance == 1 & pass_location == 'right'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 1 &
-                        pass_location == 'right') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 1 &
+                        pass_location == 'right') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 2 & pass_location == 'left'),
+    data = data |> filter(pass_distance == 2 & pass_location == 'left'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 2 &
-                        pass_location == 'left') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 2 &
+                        pass_location == 'left') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 2 &
+    data = data |> filter(pass_distance == 2 &
                              pass_location == 'middle'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 2 &
-                        pass_location == 'middle') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 2 &
+                        pass_location == 'middle') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 2 &
+    data = data |> filter(pass_distance == 2 &
                              pass_location == 'right'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 2 &
-                        pass_location == 'right') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 2 &
+                        pass_location == 'right') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 3 & pass_location == 'left'),
+    data = data |> filter(pass_distance == 3 & pass_location == 'left'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 3 &
-                        pass_location == 'left') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 3 &
+                        pass_location == 'left') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 3 & pass_location == 'middle'),
+    data = data |> filter(pass_distance == 3 & pass_location == 'middle'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 3 &
-                        pass_location == 'middle') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 3 &
+                        pass_location == 'middle') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )
   ) + 
   geom_text(
-    data = data %>% filter(pass_distance == 3 & pass_location == 'right'),
+    data = data |> filter(pass_distance == 3 & pass_location == 'right'),
     aes(label = heatmap_label),
     color = ifelse(
-      data %>% filter(pass_distance == 3 &
-                        pass_location == 'right') %>% pull(completion_pct) < contrast_point,
+      data |> filter(pass_distance == 3 &
+                        pass_location == 'right') |> pull(completion_pct) < contrast_point,
       color_cw[5],
       color_cw[3]
     )

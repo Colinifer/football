@@ -5,8 +5,8 @@ current_season <- year
 
 xyac_pbp_df <- 
   # readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
-  pbp_df %>% 
-  add_xyac_mod() %>% 
+  pbp_df |> 
+  add_xyac_mod() |> 
   filter(
     season.x == current_season &
       pass_attempt == 1 &
@@ -18,7 +18,7 @@ xyac_pbp_df <-
       # wp > .2 &
       # wp < .8 &
       air_yards.x > 0
-  ) %>% 
+  ) |> 
   select(
     season = season.x,
     week = week.x,
@@ -36,14 +36,14 @@ xyac_pbp_df <-
     yac_prob = prob,
     gain,
     pass_attempt
-  ) %>% 
-  collect() %>% 
+  ) |> 
+  collect() |> 
   decode_player_ids(fast = TRUE)
-  # %>% 
+  # |> 
   #   rename_at(.vars = vars(ends_with('.x')),
   #             .funs = funs(sub('[.]x$', '', .)))
 
-cayoe <- xyac_pbp_df %>% 
+cayoe <- xyac_pbp_df |> 
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
     air_yards = air_yards,
@@ -65,17 +65,17 @@ cayoe <- xyac_pbp_df %>%
     game_played = 0,
     cayoe = cpoe * air_yards,
     sum_cayoe = 0
-  ) %>%  
-  group_by(game_id, receiver_player_id) %>%
-  mutate(game_played = ifelse(row_number() == 1, 1, 0)) %>%
-  ungroup %>%
-  # group_by(game_id, play_id, receiver_player_id) %>%
-  # mutate(completion = ifelse(row_number() == 1, 1, 0)) %>%
-  # ungroup %>%
-  group_by(game_id, play_id, receiver_player_id) %>% 
-  mutate(attempt = ifelse(row_number()==1,1,0)) %>% 
-  ungroup %>% 
-  group_by(posteam, receiver_player_id) %>%
+  ) |>  
+  group_by(game_id, receiver_player_id) |>
+  mutate(game_played = ifelse(row_number() == 1, 1, 0)) |>
+  ungroup() |>
+  # group_by(game_id, play_id, receiver_player_id) |>
+  # mutate(completion = ifelse(row_number() == 1, 1, 0)) |>
+  # ungroup |>
+  group_by(game_id, play_id, receiver_player_id) |> 
+  mutate(attempt = ifelse(row_number()==1,1,0)) |> 
+  ungroup() |> 
+  group_by(posteam, receiver_player_id) |>
   # filter()
   summarize(
     receiver = first(receiver),
@@ -96,13 +96,13 @@ cayoe <- xyac_pbp_df %>%
     # exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
     # exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
     sum_cayoe = sum(comp_air_yards-exp_air_yards, na.rm = T),
-  ) %>%
+  ) |>
   mutate(
     # half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
     # ppr_pts_diff = PPR_pts - exp_PPR_pts,
     cayoe_a = sum_cayoe / targets
-  ) %>%
-  ungroup
+  ) |>
+  ungroup()
 # filter(targets > mean(cayoe$targets)-(mean(cayoe$targets)*.6))
 
 my_week <- fx.n_week(pbp_df)
@@ -110,10 +110,10 @@ my_week <- fx.n_week(pbp_df)
 
 summary(cayoe$targets)
 
-cayoe_filtered <- cayoe %>% 
-  filter(targets >= summary(targets)[4]) %>% 
+cayoe_filtered <- cayoe |> 
+  filter(targets >= summary(targets)[4]) |> 
   left_join(
-    roster_df %>% 
+    roster_df |> 
       select(gsis_id,
              headshot_url,
              team,
@@ -126,7 +126,7 @@ cayoe_filtered <- cayoe %>%
 summary(cayoe_filtered$targets)
 
 # xFP WR table
-cayoe_filtered %>%
+cayoe_filtered |>
   select(
     games,
     headshot_url,
@@ -145,14 +145,14 @@ cayoe_filtered %>%
     # ppr_pts_diff,
     sum_cayoe,
     cayoe_a
-  ) %>%
-  arrange(-sum_cayoe) %>% 
-  dplyr::slice(1:30) %>% 
-  mutate(Rank = glue('# {row_number()}')) %>%
-  gt() %>%
+  ) |>
+  arrange(-sum_cayoe) |> 
+  dplyr::slice(1:30) |> 
+  mutate(Rank = glue('# {row_number()}')) |>
+  gt() |>
   tab_header(title = glue('Completed Air Yards Over Expected (CAYOE), {current_season}'), 
-             subtitle = glue('Through week {my_week} | Min. {summary(cayoe$targets)[4] %>% round()} pass attempts > 0 air yards')) %>% 
-  cols_move_to_start(columns = vars(Rank)) %>% 
+             subtitle = glue('Through week {my_week} | Min. {summary(cayoe$targets)[4] |> round()} pass attempts > 0 air yards')) |> 
+  cols_move_to_start(columns = vars(Rank)) |> 
   cols_label(
     games = 'GP',
     headshot_url = '',
@@ -171,13 +171,13 @@ cayoe_filtered %>%
     # ppr_pts_diff = "Pts Diff.",
     sum_cayoe = "Total CAYOE",
     cayoe_a = html("CAYOE<br>(per Pass Attempt)")
-  ) %>% 
-  fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) %>% 
-  fmt_number(columns = vars(exp_td), decimals = 1) %>% 
-  fmt_number(columns = vars(air_yards, exp_air_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
-  tab_style(style = cell_text(font = "Chivo", size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
-  tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
-  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(receiver))) %>% 
+  ) |> 
+  fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) |> 
+  fmt_number(columns = vars(exp_td), decimals = 1) |> 
+  fmt_number(columns = vars(air_yards, exp_air_yards, exp_completions), decimals = 0, sep_mark = ',') |> 
+  tab_style(style = cell_text(font = "Chivo", size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) |> 
+  tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) |> 
+  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(receiver))) |> 
   tab_style(
     style = cell_borders(
       sides = "left",
@@ -189,41 +189,41 @@ cayoe_filtered %>%
         columns = c(6,10,13,14)
       )
     )
-  ) %>% 
+  ) |> 
   tab_style(
     style = cell_text(font = "Chivo", weight = "bold"),
     locations = cells_body(
       columns = vars(Rank, receiver)
     )
-  ) %>% 
+  ) |> 
   tab_style(
     style = cell_text(font = "Montserrat"),
     locations = cells_body(
       columns = c(6:14)
     )
-  ) %>% 
-  tab_spanner(label = 'Actual', columns = vars(completions, air_yards, td)) %>% 
-  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_air_yards, exp_td)) %>% 
-  tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') %>% 
+  ) |> 
+  tab_spanner(label = 'Actual', columns = vars(completions, air_yards, td)) |> 
+  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_air_yards, exp_td)) |> 
+  tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') |> 
   data_color(
     columns = vars(sum_cayoe),
     colors = scales::col_quantile(palette = c(color_cw[8], color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$sum_cayoe), 0, min(cayoe_filtered$sum_cayoe))),
     autocolor_text = FALSE
-  ) %>% 
+  ) |> 
   data_color(
     columns = vars(cayoe_a),
     colors = scales::col_quantile(palette = c(color_cw[8], color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$cayoe_a), 0, min(cayoe_filtered$cayoe_a))),
     autocolor_text = FALSE
-  ) %>% 
+  ) |> 
   text_transform(
     locations = cells_body(vars(headshot_url)),
     fn = function(x) web_image(url = x)
-  ) %>% 
+  ) |> 
   text_transform(
     locations = cells_body(vars(posteam)),
     fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'))
-  ) %>% 
-  cols_width(vars(posteam) ~ px(45)) %>% 
+  ) |> 
+  cols_width(vars(posteam) ~ px(45)) |> 
   tab_options(
     table.font.color = color_cw[5],
     data_row.padding = '2px',
@@ -243,16 +243,16 @@ cayoe_filtered %>%
     # table.border.bottom.color = 'transparent',
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
-  ) %>% 
+  ) |> 
   opt_table_font(
     font = list(
       google_font("Chivo"),
       default_fonts()
     )
-  ) %>% 
+  ) |> 
   gtsave(filename = glue("wr_cayoe_top_{current_season}.png"), path = "plots/desktop")
 
-cayoe_filtered %>%
+cayoe_filtered |>
   select(
     games,
     headshot_url,
@@ -271,14 +271,14 @@ cayoe_filtered %>%
     # ppr_pts_diff,
     sum_cayoe,
     cayoe_a
-  ) %>%
-  arrange(sum_cayoe) %>% 
-  dplyr::slice(1:30) %>% 
-  mutate(Rank = paste0('#',row_number())) %>%
-  gt() %>%
+  ) |>
+  arrange(sum_cayoe) |> 
+  dplyr::slice(1:30) |> 
+  mutate(Rank = paste0('#',row_number())) |>
+  gt() |>
   tab_header(title = glue('Completed Air Yards Over Expected (CAYOE), {current_season}'), 
-             subtitle = glue('Through week {my_week} | Min. {summary(cayoe$targets)[4] %>% round()} pass attempts > 0 air yards')) %>% 
-  cols_move_to_start(columns = vars(Rank)) %>% 
+             subtitle = glue('Through week {my_week} | Min. {summary(cayoe$targets)[4] |> round()} pass attempts > 0 air yards')) |> 
+  cols_move_to_start(columns = vars(Rank)) |> 
   cols_label(
     games = 'GP',
     headshot_url = '',
@@ -297,13 +297,13 @@ cayoe_filtered %>%
     # ppr_pts_diff = "Pts Diff.",
     sum_cayoe = "Total CAYOE",
     cayoe_a = html("CAYOE<br>(per Pass Attempt)")
-  ) %>% 
-  fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) %>% 
-  fmt_number(columns = vars(exp_td), decimals = 1) %>% 
-  fmt_number(columns = vars(air_yards, exp_air_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
-  tab_style(style = cell_text(font = "Chivo", size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) %>% 
-  tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
-  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(receiver))) %>% 
+  ) |> 
+  fmt_number(columns = vars(sum_cayoe, cayoe_a), decimals = 2) |> 
+  fmt_number(columns = vars(exp_td), decimals = 1) |> 
+  fmt_number(columns = vars(air_yards, exp_air_yards, exp_completions), decimals = 0, sep_mark = ',') |> 
+  tab_style(style = cell_text(font = "Chivo", size = 'x-large', weight = 'bold'), locations = cells_title(groups = 'title')) |> 
+  tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) |> 
+  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(receiver))) |> 
   tab_style(
     style = cell_borders(
       sides = "left",
@@ -315,41 +315,41 @@ cayoe_filtered %>%
         columns = c(6,10,13,14)
       )
     )
-  ) %>% 
+  ) |> 
   tab_style(
     style = cell_text(font = "Chivo", weight = "bold"),
     locations = cells_body(
       columns = vars(Rank, receiver)
     )
-  ) %>% 
+  ) |> 
   tab_style(
     style = cell_text(font = "Montserrat"),
     locations = cells_body(
       columns = c(6:14)
     )
-  ) %>% 
-  tab_spanner(label = 'Actual', columns = vars(completions, air_yards, td)) %>% 
-  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_air_yards, exp_td)) %>% 
-  tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') %>% 
+  ) |> 
+  tab_spanner(label = 'Actual', columns = vars(completions, air_yards, td)) |> 
+  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_air_yards, exp_td)) |> 
+  tab_source_note(source_note = 'Chart: Colin Welsh | Data: @nflfastR') |> 
   data_color(
     columns = vars(sum_cayoe),
     colors = scales::col_quantile(palette = c(color_cw[8], color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$sum_cayoe), 0, min(cayoe_filtered$sum_cayoe))),
     autocolor_text = FALSE
-  ) %>% 
+  ) |> 
   data_color(
     columns = vars(cayoe_a),
     colors = scales::col_quantile(palette = c(color_cw[8], color_cw[2], color_cw[6]), domain = c(max(cayoe_filtered$cayoe_a), 0, min(cayoe_filtered$cayoe_a))),
     autocolor_text = FALSE
-  ) %>% 
+  ) |> 
   text_transform(
     locations = cells_body(vars(headshot_url)),
     fn = function(x) web_image(url = x)
-  ) %>% 
+  ) |> 
   text_transform(
     locations = cells_body(vars(posteam)),
     fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'))
-  ) %>% 
-  cols_width(vars(posteam) ~ px(45)) %>% 
+  ) |> 
+  cols_width(vars(posteam) ~ px(45)) |> 
   tab_options(
     table.font.color = color_cw[5],
     data_row.padding = '2px',
@@ -369,13 +369,13 @@ cayoe_filtered %>%
     # table.border.bottom.color = 'transparent',
     row.striping.background_color = color_cw[2],
     row.striping.include_table_body = TRUE
-  ) %>% 
+  ) |> 
   opt_table_font(
     font = list(
       google_font("Chivo"),
       default_fonts()
     )
-  ) %>% 
+  ) |> 
   gtsave(filename = glue("wr_cayoe_bot_{current_season}.png"), path = "plots/desktop")
 
 # rm(list = ls())

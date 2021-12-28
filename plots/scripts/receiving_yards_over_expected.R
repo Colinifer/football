@@ -1,5 +1,5 @@
-exp_air_yards_df <- pbp_df %>%
-  add_xyac_mod() %>%
+exp_air_yards_df <- pbp_df |>
+  add_xyac_mod() |>
   filter(
     season.x == current_season &
       pass_attempt == 1 &
@@ -11,7 +11,7 @@ exp_air_yards_df <- pbp_df %>%
       # wp > .2 &
       # wp < .8 &
       air_yards.x > 0
-  ) %>%
+  ) |>
   select(
     season = season.x,
     week = week.x,
@@ -29,7 +29,7 @@ exp_air_yards_df <- pbp_df %>%
     yac_prob = prob,
     gain,
     pass_attempt
-  ) %>%
+  ) |>
   mutate(
     gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
     air_yards = air_yards,
@@ -51,17 +51,17 @@ exp_air_yards_df <- pbp_df %>%
     game_played = 0,
     cayoe = cpoe * air_yards,
     sum_cayoe = 0
-  ) %>%  
-  group_by(game_id, receiver_player_id) %>%
-  mutate(game_played = ifelse(row_number() == 1, 1, 0)) %>%
-  ungroup() %>%
-  # group_by(game_id, play_id, receiver_player_id) %>%
-  # mutate(completion = ifelse(row_number() == 1, 1, 0)) %>%
-  # ungroup %>%
-  group_by(game_id, play_id, receiver_player_id) %>%
-  mutate(attempt = ifelse(row_number() == 1, 1, 0)) %>%
-  ungroup() %>%
-  group_by(posteam, receiver_player_id) %>%
+  ) |>  
+  group_by(game_id, receiver_player_id) |>
+  mutate(game_played = ifelse(row_number() == 1, 1, 0)) |>
+  ungroup() |>
+  # group_by(game_id, play_id, receiver_player_id) |>
+  # mutate(completion = ifelse(row_number() == 1, 1, 0)) |>
+  # ungroup |>
+  group_by(game_id, play_id, receiver_player_id) |>
+  mutate(attempt = ifelse(row_number() == 1, 1, 0)) |>
+  ungroup() |>
+  group_by(posteam, receiver_player_id) |>
   # filter()
   summarize(
     receiver = first(receiver),
@@ -82,24 +82,24 @@ exp_air_yards_df <- pbp_df %>%
     # exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
     # exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
     sum_cayoe = sum(comp_air_yards - exp_air_yards, na.rm = T)
-  ) %>%
+  ) |>
   mutate(# half_ppr_pts_diff = half_PPR_pts - exp_half_PPR_pts,
     # ppr_pts_diff = PPR_pts - exp_PPR_pts,
     cayoe_a = sum_cayoe / targets
-    ) %>%
-  ungroup() %>% 
-  arrange(-exp_air_yards) %>% 
-  left_join(roster_df %>% 
-              filter(season == current_season) %>% 
-              select(receiver_player_id = gsis_id, espn_id, position, headshot_url)) %>% 
-  left_join(fx.ff_free_agents(league_name = 'Beep Boop') %>% 
-              select(receiver_player_id = player_id, on_roster)) %>% 
-  filter(position == c('WR')) %>% 
-  mutate(rk = row_number()) %>% 
-  select(rk, receiver, exp_air_yards, air_yards, on_roster) %>% 
+    ) |>
+  ungroup() |> 
+  arrange(-exp_air_yards) |> 
+  left_join(roster_df |> 
+              filter(season == current_season) |> 
+              select(receiver_player_id = gsis_id, espn_id, position, headshot_url)) |> 
+  left_join(fx.ff_free_agents(league_name = 'Beep Boop') |> 
+              select(receiver_player_id = player_id, on_roster)) |> 
+  filter(position == c('WR')) |> 
+  mutate(rk = row_number()) |> 
+  select(rk, receiver, exp_air_yards, air_yards, on_roster) |> 
   filter(rk <= 30)
 
-exp_air_yards_df %>% 
+exp_air_yards_df |> 
   ggplot(aes(x = rk, y = exp_air_yards)) + 
   geom_segment(aes(xend = rk, yend = air_yards), color = color_cw[5]) + 
   geom_text(aes(y = exp_air_yards, label = receiver), color = color_cw[5]) + 

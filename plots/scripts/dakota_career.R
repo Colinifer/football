@@ -15,8 +15,8 @@ print(glue("Scraping 2006:{current_season} PBP for career results"))
 #   readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
 # })) %>% decode_player_ids(fast = T)
 con <- fx.db_con(x.host = 'localhost')
-pbp <- tbl(con, 'nflfastR_pbp') %>% 
-  filter(season >= 2006) %>% 
+pbp <- tbl(con, 'nflfastR_pbp') |> 
+  filter(season >= 2006) |> 
   select(
     season,
     week,
@@ -26,8 +26,8 @@ pbp <- tbl(con, 'nflfastR_pbp') %>%
     qb_epa,
     cpoe,
     -xyac_median_yardage
-  ) %>% 
-  collect() %>% 
+  ) |> 
+  collect() |> 
   decode_player_ids(fast = T)
 dbDisconnect(con)
 
@@ -72,18 +72,18 @@ qb_top_bottom <- pbp %>%
   ) %>% 
   mutate(car_dakota = mgcv::predict.gam(dakota_model, .))
 
-qb_top_bottom <- qb_top_bottom %>% 
-  left_join(roster_df %>% select(gsis_id, full_name, headshot_url),
+qb_top_bottom <- qb_top_bottom |> 
+  left_join(roster_df |> select(gsis_id, full_name, headshot_url),
             by = c("qb_id" = "gsis_id"))
 
 min_plays <- 450
 
-p <- qb_top_bottom %>% 
-  # left_join(roster_df %>% filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) %>%
-  # filter(!is.na(team.season) & car_plays>=min_plays & qb_id %in% qb_current_season_id) %>% 
-  filter(car_plays>=min_plays & qb_id %in% qb_current_season_id) %>% 
-  arrange(-car_dakota) %>% 
-  mutate(rank = row_number()) %>% 
+p <- qb_top_bottom |> 
+  # left_join(roster_df |> filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) |>
+  # filter(!is.na(team.season) & car_plays>=min_plays & qb_id %in% qb_current_season_id) |> 
+  filter(car_plays>=min_plays & qb_id %in% qb_current_season_id) |> 
+  arrange(-car_dakota) |> 
+  mutate(rank = row_number()) |> 
   ggplot(aes(x = curr_dakota, xend = high_dakota, y = rank, yend = rank)) +
   geom_segment(aes(x = low_dakota), color = color_cw[5], size = 0.7) +
   geom_point(aes(x = car_dakota), color = color_cw[5], shape = 5) +

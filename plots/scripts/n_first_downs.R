@@ -168,3 +168,4 @@ pbp_df %>%
   fmt_percent(columns = c(first_down_rate, success_rate), decimals = 1) %>% 
   gt_theme_cw(image_columns = c('headshot_url', 'team_logo_espn')) %>% 
   gtsave(filename = glue("qb_passing/1db_{current_season}.png"), path = "plots/desktop")
+

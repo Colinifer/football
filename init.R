@@ -79,7 +79,8 @@ pkgs <- c(
   NULL
 )
 
-initR::fx.load_packages(pkgs)
+initR::fx.load_packages(pkgs) |>
+  suppressMessages()
 rm(pkgs)
 
 options(tibble.print_min=25)
@@ -107,7 +108,7 @@ source_files <- c(
   NULL
 )
 
-map(.x = source_files, ~source(.x, echo = F)) %>% 
+map(.x = source_files, ~source(.x, echo = F)) |> 
   invisible()
 
 
@@ -132,42 +133,42 @@ map(.x = source_files, ~source(.x, echo = F)) %>%
 # nflfastR data
 con <- fx.db_con(x.host = 'localhost')
 # update_roster_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
-roster_df <- tbl(con, 'nflfastR_rosters') %>% 
-  filter(season == year) %>%
+roster_df <- tbl(con, 'nflfastR_rosters') |> 
+  filter(season == year) |>
   collect()
 # update_schedule_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
-schedule_df <- tbl(con, 'nflfastR_schedule') %>% 
-  filter(season == year) %>% 
+schedule_df <- tbl(con, 'nflfastR_schedule') |> 
+  filter(season == year) |> 
   collect()
 # update_trades_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
-trades_df <- tbl(con, 'nflfastR_trades') %>% 
-  filter(season == year) %>% 
+trades_df <- tbl(con, 'nflfastR_trades') |> 
+  filter(season == year) |> 
   collect()
 # update_draft_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
-draft_df <- tbl(con, 'nflfastR_draft') %>% 
-  filter(season == year) %>% 
+draft_df <- tbl(con, 'nflfastR_draft') |> 
+  filter(season == year) |> 
   collect()
 
-pbp_df <- tbl(con, 'nflfastR_pbp') %>% 
-  filter(season == year) %>% 
+pbp_df <- tbl(con, 'nflfastR_pbp') |> 
+  filter(season == year) |> 
   collect()
 dbDisconnect(con)
 
 
 source('init_ff.R')
 # Rosters
-fantasy_rosters <- ff_rosters(ff_conn_beep_boop) %>%
+fantasy_rosters <- ff_rosters(ff_conn_beep_boop) |>
   mutate(on_roster = TRUE,
-         league = 'Beep Boop') %>%
-  rbind(ff_rosters(ff_conn_drinkers) %>%
+         league = 'Beep Boop') |>
+  rbind(ff_rosters(ff_conn_drinkers) |>
           mutate(on_roster = TRUE,
-                 league = 'Drinkers')) %>%
-  rbind(ff_rosters(ff_conn_kepler) %>%
+                 league = 'Drinkers')) |>
+  rbind(ff_rosters(ff_conn_kepler) |>
           mutate(on_roster = TRUE,
-                 league = 'Kepler')) %>%
-  rbind(ff_rosters(ff_conn_family) %>%
+                 league = 'Kepler')) |>
+  rbind(ff_rosters(ff_conn_family) |>
           mutate(on_roster = TRUE,
-                 league = 'Family')) %>% 
+                 league = 'Family')) |> 
   left_join(roster_df %>% 
               select(
                 gsis_id,
@@ -177,10 +178,10 @@ fantasy_rosters <- ff_rosters(ff_conn_beep_boop) %>%
 # schedule_df %>% 
 #   saveRDS(glue('data/schedules/sched_{year}.rds'))
 
-matchup_df <- schedule_df %>% 
-  filter(season == year) %>% 
+matchup_df <- schedule_df |> 
+  filter(season == year) |> 
   mutate(posteam = home_team,
-         oppteam = away_team) %>%
+         oppteam = away_team) |>
   select(
     game_id,
     season,
@@ -201,10 +202,11 @@ matchup_df <- schedule_df %>%
     roof,
     surface,
     old_game_id
-  ) %>% rbind(
-    schedule_df %>%
+  ) |> 
+  rbind(
+    schedule_df |> 
       mutate(posteam = away_team,
-             oppteam = home_team) %>%
+             oppteam = home_team) |>
       select(
         game_id,
         season,
@@ -226,7 +228,8 @@ matchup_df <- schedule_df %>%
         surface,
         old_game_id
       )
-  ) %>% arrange(old_game_id)
+  ) |> 
+  arrange(old_game_id)
 
 # sr_games_df <- readRDS(glue('data/schedules/sportradar/games_{year}.rds'))
 # source('data/master_sr_pbp.R')
@@ -240,51 +243,51 @@ matchup_df <- schedule_df %>%
 
 
 # pbp_df <- readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true"))
-team_stats <- pbp_df %>%
-  calculate_team_stats_mod() %>%
+team_stats <- pbp_df |>
+  calculate_team_stats_mod() |>
   left_join(
-    pbp_df %>% 
-      group_by(posteam) %>% 
-      rename(team = posteam) %>% 
-      filter(play_type %in% c('pass', 'run')) %>% 
+    pbp_df |> 
+      group_by(posteam) |> 
+      rename(team = posteam) |> 
+      filter(play_type %in% c('pass', 'run')) |> 
       summarise(
         offense_snaps = n()
         )
-  ) %>% 
+  ) |> 
   left_join(
-    pbp_df %>% 
-      group_by(defteam) %>% 
-      rename(team = defteam) %>% 
-      filter(play_type %in% c('pass', 'run')) %>% 
+    pbp_df |> 
+      group_by(defteam) |> 
+      rename(team = defteam) |> 
+      filter(play_type %in% c('pass', 'run')) |> 
       summarise(
         defense_snaps = n()
       )
   )
 
-team_stats_weekly <- pbp_df %>% 
-  calculate_team_stats_mod(weekly = TRUE) %>% 
+team_stats_weekly <- pbp_df |> 
+  calculate_team_stats_mod(weekly = TRUE) |> 
   left_join(
-    pbp_df %>% 
-      group_by(posteam, game_id) %>% 
-      rename(team = posteam) %>% 
-      filter(play_type %in% c('pass', 'run')) %>% 
+    pbp_df |> 
+      group_by(posteam, game_id) |> 
+      rename(team = posteam) |> 
+      filter(play_type %in% c('pass', 'run')) |> 
       summarise(
         offense_snaps = n()
       ),
     by = c('team', 'game_id')
-  ) %>% 
+  ) |> 
   left_join(
-    pbp_df %>% 
-      group_by(defteam, game_id) %>% 
-      rename(team = defteam) %>% 
-      filter(play_type %in% c('pass', 'run')) %>% 
+    pbp_df |> 
+      group_by(defteam, game_id) |> 
+      rename(team = defteam) |> 
+      filter(play_type %in% c('pass', 'run')) |> 
       summarise(
         defense_snaps = n()
       ),
     by = c('team', 'game_id')
   )
 
-player_stats <- pbp_df %>% 
+player_stats <- pbp_df |> 
   calculate_player_stats_mod() 
 
 ff_free_agents <- fx.ff_free_agents(player_stats, 'Beep Boop')
@@ -300,7 +303,7 @@ ff_free_agents <- fx.ff_free_agents(player_stats, 'Beep Boop')
   #   by = c('pfr_id', 'game_id')
   # )
   
-player_stats_weekly <- pbp_df %>% 
+player_stats_weekly <- pbp_df |> 
   calculate_player_stats_mod(weekly = TRUE)
 
 

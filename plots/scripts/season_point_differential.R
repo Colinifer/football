@@ -2,7 +2,7 @@ year
 
 # all_pbp_df <-
 #   do.call(rbind, lapply(dir(glue('data/pbp'), 
-#                      full = T) %>% 
+#                      full = T) |> 
 #                        .[which(grepl('.rds', .) &
 #                                  !grepl('xyac', .))], 
 #                      function(x){
@@ -11,9 +11,8 @@ year
 #           )
 
 con <- fx.db_con(x.host = 'localhost')
-clean_all_pbp_df <-
-  tbl(con, 'nflfastR_pbp') %>%
-  filter(season_type == 'REG') %>%
+clean_all_pbp_df <- tbl(con, 'nflfastR_pbp') |>
+  filter(season_type == 'REG') |>
   select(season,
          game_id,
          week,
@@ -23,8 +22,8 @@ clean_all_pbp_df <-
          away_score,
          posteam,
          defteam,
-         -xyac_median_yardage) %>% 
-  collect() %>% 
+         -xyac_median_yardage) |> 
+  collect() |> 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam),
          posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),
@@ -40,28 +39,28 @@ clean_all_pbp_df <-
          home_team = ifelse(season < 2017 & home_team == 'LAC', 'SD', home_team),
          away_team = ifelse(season < 2017 & away_team == 'LAC', 'SD', away_team),
          home_team = ifelse(season < 2020 & home_team == 'LV', 'OAK', home_team),
-         away_team = ifelse(season < 2020 & away_team == 'LV', 'OAK', away_team)) %>% 
+         away_team = ifelse(season < 2020 & away_team == 'LV', 'OAK', away_team)) |> 
   mutate(home_result = home_score - away_score,
          away_result = away_score - home_score)
 dbDisconnect(con)
 
-all_point_diff <- clean_all_pbp_df %>% 
-  group_by(season, game_id, week, home_team, home_result) %>% 
-  summarize(result = last(home_result)) %>% 
-  select(-home_result) %>% 
-  rename(team = home_team) %>% 
-  rbind(clean_all_pbp_df %>% 
-          group_by(season, game_id, week, away_team, away_result) %>% 
-          summarize(result = last(away_result)) %>% 
-          select(-away_result) %>% 
-          rename(team = away_team)) %>%
-  arrange(season, team, week) %>% 
-  mutate(season_team = glue('{season} {team}')) %>% 
-  group_by(season_team) %>% 
+all_point_diff <- clean_all_pbp_df |> 
+  group_by(season, game_id, week, home_team, home_result) |> 
+  summarize(result = last(home_result)) |> 
+  select(-home_result) |> 
+  rename(team = home_team) |> 
+  rbind(clean_all_pbp_df |> 
+          group_by(season, game_id, week, away_team, away_result) |> 
+          summarize(result = last(away_result)) |> 
+          select(-away_result) |> 
+          rename(team = away_team)) |>
+  arrange(season, team, week) |> 
+  mutate(season_team = glue('{season} {team}')) |> 
+  group_by(season_team) |> 
   # mutate(result = lag(result) + result)
-  mutate(season_point_diff = cumsum(result)) %>% 
+  mutate(season_point_diff = cumsum(result)) |> 
   arrange(season_team, week)
-  # left_join(teams_colors_logos %>% 
+  # left_join(teams_colors_logos |> 
   #             select(team_abbr, team_color, team_color2),
   #           by = c('team' = 'team_abbr'))
 
@@ -70,39 +69,39 @@ all_point_diff$nfl_pri_dark <- NFL_pri_dark[match(all_point_diff$team, names(NFL
 # Loop through recent seasons
 # lapply(1999:2020, function(year){
 
-n_week <- fx.n_week(pbp_df %>% filter(season == year))
+n_week <- fx.n_week(pbp_df |> filter(season == year))
 
 # Get best/worst teams in current and all seasons
 best_worst_teams <- c(
   # Get best team since 1999
-  all_point_diff %>% 
-    filter(season_point_diff == all_point_diff$season_point_diff %>% 
-             max()) %>% 
+  all_point_diff |> 
+    filter(season_point_diff == all_point_diff$season_point_diff |> 
+             max()) |> 
     pull(season_team),
   # Get worst team since 1999
-  all_point_diff %>% 
-    filter(season_point_diff == all_point_diff$season_point_diff %>% 
-             min()) %>% 
+  all_point_diff |> 
+    filter(season_point_diff == all_point_diff$season_point_diff |> 
+             min()) |> 
     pull(season_team),
   # Get best team from current season
-  all_point_diff %>% 
+  all_point_diff |> 
     filter(season == year &
-             week == n_week) %>% 
-    arrange(season_point_diff %>% 
+             week == n_week) |> 
+    arrange(season_point_diff |> 
               desc()
-            ) %>% 
-    head(1) %>% 
+            ) |> 
+    head(1) |> 
     pull(season_team),
   # Get worst team from current season
-  all_point_diff %>% 
+  all_point_diff |> 
     filter(season == year &
-             week == n_week) %>% 
-    arrange(season_point_diff) %>% 
-    head(1) %>% 
+             week == n_week) |> 
+    arrange(season_point_diff) |> 
+    head(1) |> 
     pull(season_team)
 )
 
-p <- all_point_diff %>% 
+p <- all_point_diff |> 
   ggplot() + 
   geom_line(
     aes(
@@ -113,31 +112,31 @@ p <- all_point_diff %>%
     alpha = .25
     ) + 
   geom_line(
-    data = all_point_diff %>% 
+    data = all_point_diff |> 
       filter(season_team %in% best_worst_teams),
     aes(
       x = week, 
       y = season_point_diff, 
       group = factor(season_team)),
-    color = all_point_diff %>% 
-      filter(season_team %in% best_worst_teams) %>% 
+    color = all_point_diff |> 
+      filter(season_team %in% best_worst_teams) |> 
       pull(nfl_pri_dark),
     size = 1,
     alpha = 1
   ) +
   geom_label_repel(
-    data = all_point_diff %>% 
-      filter(season_team %in% best_worst_teams) %>% 
-      group_by(season_team) %>% 
+    data = all_point_diff |> 
+      filter(season_team %in% best_worst_teams) |> 
+      group_by(season_team) |> 
       filter(row_number()==n()),
     aes(x = week,
         y = season_point_diff,
         label = glue('{season_team}: {ifelse(season_point_diff>0, glue("+{season_point_diff}"),season_point_diff)}')),
     size = 2,
-    nudge_y = ifelse(all_point_diff %>% 
-                       filter(season_team %in% best_worst_teams) %>% 
-                       group_by(season_team) %>% 
-                       filter(row_number()==n()) %>% 
+    nudge_y = ifelse(all_point_diff |> 
+                       filter(season_team %in% best_worst_teams) |> 
+                       group_by(season_team) |> 
+                       filter(row_number()==n()) |> 
                        pull(season_point_diff) > 0, -50, 50),
     label.size = 0,
     segment.size = .8,
@@ -147,18 +146,18 @@ p <- all_point_diff %>%
     family = 'Montserrat'
   ) + 
   geom_point(
-    data = all_point_diff %>% 
-      filter(season_team %in% best_worst_teams) %>% 
-      group_by(season_team) %>% 
+    data = all_point_diff |> 
+      filter(season_team %in% best_worst_teams) |> 
+      group_by(season_team) |> 
       filter(row_number()==n()),
     aes(
       x = week, 
       y = season_point_diff, 
       group = factor(season_team)),
-    color = all_point_diff %>% 
-      filter(season_team %in% best_worst_teams) %>% 
-      group_by(season_team) %>% 
-      filter(row_number()==n()) %>% 
+    color = all_point_diff |> 
+      filter(season_team %in% best_worst_teams) |> 
+      group_by(season_team) |> 
+      filter(row_number()==n()) |> 
       pull(nfl_pri_dark),
     size = 1.1,
     alpha = 1

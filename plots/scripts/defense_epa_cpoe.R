@@ -10,11 +10,11 @@ current_season <- year
 # can be multiple seasons
 con <- fx.db_con(x.host = 'localhost')
 # lapply(2006:2020, function(season){
-pbp <- tbl(con, 'nflfastR_pbp') %>% 
+pbp <- tbl(con, 'nflfastR_pbp') |> 
   filter(season == current_season &
-           season_type == 'REG') %>% 
-  collect() %>% 
-  decode_player_ids(fast = TRUE) %>% 
+           season_type == 'REG') |> 
+  collect() |> 
+  decode_player_ids(fast = TRUE) |> 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam),
          posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),
@@ -27,16 +27,16 @@ dbDisconnect(con)
 
 # compute cpoe grouped by air_yards
 epa_cpoe <-
-  pbp %>%
-  filter(!is.na(cpoe) & !is.na(epa)) %>%
-  group_by(game_id, defteam) %>%
-  summarise(cpoe = mean(cpoe, na.rm = T), epa = mean(epa, na.rm = T)) %>% 
-  left_join(pbp %>%
+  pbp |>
+  filter(!is.na(cpoe) & !is.na(epa)) |>
+  group_by(game_id, defteam) |>
+  summarise(cpoe = mean(cpoe, na.rm = T), epa = mean(epa, na.rm = T)) |> 
+  left_join(pbp |>
               filter(!is.na(cpoe) &
-                       !is.na(epa)) %>%
-              group_by(defteam) %>%
+                       !is.na(epa)) |>
+              group_by(defteam) |>
               summarise(cpoe = mean(cpoe, na.rm = T), epa_per_play = mean(epa, na.rm = T)) %>%
-              mutate(season_dakota = mgcv::predict.gam(dakota_model, .)) %>%
+              mutate(season_dakota = mgcv::predict.gam(dakota_model, .)) |>
               select(-cpoe, -epa_per_play),
             by = c('defteam')
   )
@@ -47,46 +47,46 @@ epa_cpoe <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp %>%
+  pbp |>
   filter(!is.na(cpoe) & !is.na(epa)
-  ) %>% 
-  group_by(game_id, week, defteam) %>%
+  ) |> 
+  group_by(game_id, week, defteam) |>
   summarise(pa = n(),
             total_cpoe = mean(cpoe, na.rm = T),
             total_epa = mean(epa, na.rm = T)
-  ) %>%
-  left_join(pbp %>% 
+  ) |>
+  left_join(pbp |> 
               select(defteam, 
                      team = posteam
-              ) %>% 
+              ) |> 
               unique(),
             by = c('defteam')
-  ) %>% 
-  group_by(defteam) %>% 
-  mutate(season_pa = sum(pa, na.rm = T)) %>% 
-  ungroup %>% 
-  arrange(season_pa %>% 
+  ) |> 
+  group_by(defteam) |> 
+  mutate(season_pa = sum(pa, na.rm = T)) |> 
+  ungroup() |> 
+  arrange(season_pa |> 
             desc()
-  ) %>% 
-  left_join(epa_cpoe, by = c('defteam', 'game_id')) %>% 
-  arrange(season_dakota) %>% 
-  mutate(lab_dakota = glue('DAKOTA: {season_dakota %>% round(3)}')) %>% 
+  ) |> 
+  left_join(epa_cpoe, by = c('defteam', 'game_id')) |> 
+  arrange(season_dakota) |> 
+  mutate(lab_dakota = glue('DAKOTA: {season_dakota |> round(3)}')) |> 
   left_join(
-    teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
+    teams_colors_logos |> select(team_abbr, team_color, team_logo_espn),
     by = c('defteam' = 'team_abbr')
-  ) %>% mutate(season = game_id %>% substr(1, 4)) %>% 
+  ) |> mutate(season = game_id |> substr(1, 4)) |> 
   mutate_at(vars(season_dakota), funs(factor(., levels=unique(.))))
 
 # create data frame used to add the logos
 # arranged by name because name is used for the facet
 colors_raw <-
-  summary_df %>%
-  group_by(defteam) %>%
-  summarise(defteam = first(defteam)) %>%
+  summary_df |>
+  group_by(defteam) |>
+  summarise(defteam = first(defteam)) |>
   left_join(
-    teams_colors_logos %>% select(team_abbr, team_color),
+    teams_colors_logos |> select(team_abbr, team_color),
     by = c("defteam" = "team_abbr")
-  ) %>%
+  ) |>
   arrange(defteam)
 
 # the below used smooth algorithm uses the parameter n as the number
@@ -94,21 +94,21 @@ colors_raw <-
 # we need exactly the same number of colors (-> n times the same color per player)
 n_eval <- 80
 colors <-
-  as.data.frame(lapply(colors_raw, rep, n_eval)) %>%
+  as.data.frame(lapply(colors_raw, rep, n_eval)) |>
   arrange(defteam)
 
 # mean data frame for the smoothed line of the whole league
 mean <-
-  summary_df %>%
+  summary_df |>
   summarise(league_cpoe = mean(total_cpoe, na.rm = T), 
             league_epa = mean(total_epa, na.rm = T)
             )
 
 summary_images_df <- 
-  summary_df %>% 
-  select(defteam, season_dakota, lab_dakota, team_logo_espn, season_pa) %>% 
-  unique() %>% 
-  arrange(season_dakota %>% desc())
+  summary_df |> 
+  select(defteam, season_dakota, lab_dakota, team_logo_espn, season_pa) |> 
+  unique() |> 
+  arrange(season_dakota |> desc())
 
 panel_label <- summary_images_df$defteam
 names(panel_label) <- summary_images_df$season_dakota
@@ -131,7 +131,7 @@ grob_img_adj <- function(img_url, alpha = 1, whitewash = 0) {
 # create the plot. Set asp to make sure the images appear in the correct aspect ratio
 asp <- 16/16
 p <-
-  summary_df %>%
+  summary_df |>
   ggplot(aes(x = cpoe, y = epa)) +
   geom_hline(yintercept = mean$league_epa, 
              color = "red", 
@@ -149,8 +149,8 @@ p <-
   # geom_point(alpha = 0.2, aes(color = team), size = .5) +
   # scale_color_manual(values =  NFL_pri_dark,
   #                    name = "Team") +
-  geom_point(data = summary_df %>% 
-               group_by(defteam) %>% 
+  geom_point(data = summary_df |> 
+               group_by(defteam) |> 
                filter(row_number()==n()), 
              aes(fill = defteam),
              color = color_cw[5],

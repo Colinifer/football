@@ -2,22 +2,22 @@
 year
 
 ff_conn_beep_boop <- ffscrapr::espn_connect(season = year,
-                       league_id = initR::fantasy_key %>% pull(league_id) %>% nth(1),
+                       league_id = initR::fantasy_key |> pull(league_id) |> nth(1),
                        swid = swid, 
                        espn_s2 = espn_s2)
 
 ff_conn_drinkers <- ffscrapr::espn_connect(season = year,
-                                  league_id = initR::fantasy_key %>% pull(league_id) %>% nth(2),
+                                  league_id = initR::fantasy_key |> pull(league_id) |> nth(2),
                                   swid = swid, 
                                   espn_s2 = espn_s2)
 
 ff_conn_family <- ffscrapr::espn_connect(season = year,
-                                         league_id = initR::fantasy_key %>% pull(league_id) %>% nth(3),
+                                         league_id = initR::fantasy_key |> pull(league_id) |> nth(3),
                                          swid = swid, 
                                          espn_s2 = espn_s2)
 
 ff_conn_kepler <- ffscrapr::espn_connect(season = year,
-                       league_id = fantasy_key %>% pull(league_id) %>% nth(4),
+                       league_id = fantasy_key |> pull(league_id) |> nth(4),
                        swid = swid, 
                        espn_s2 = espn_s2)
 
@@ -26,29 +26,29 @@ fx.ff_free_agents <- function(player_stats_df = player_stats, league_name = 'Dri
   ff_team_name <- tibble(
     league = c('Beep Boop', 'Drinkers', 'Kepler', 'Family'),
     team = c('Rhule Tide', 'Golden Rhule', 'Team Welsh', 'Matt Rhules')
-  ) %>% 
-    filter(league == league_name) %>% 
+  ) |> 
+    filter(league == league_name) |> 
     pull(team)
   
-  df <- player_stats_df %>%
+  df <- player_stats_df |>
     left_join(
-      fantasy_rosters %>% 
+      fantasy_rosters |> 
         filter(league == league_name & 
-                 pos %in% c('RB', 'WR', 'TE')) %>% 
+                 pos %in% c('RB', 'WR', 'TE')) |> 
         select(on_roster, franchise_name, gsis_id),
       by = c('player_id' = 'gsis_id')
-    ) %>% 
+    ) |> 
     left_join(
-      roster_df %>% 
+      roster_df |> 
         select(
           season,
           position,
           gsis_id
         ),
       by = c('player_id' = 'gsis_id')
-    ) %>% 
+    ) |> 
     left_join(
-      teams_colors_logos %>% 
+      teams_colors_logos |> 
         select(
           team_abbr,
           team_logo_wikipedia,
@@ -56,12 +56,12 @@ fx.ff_free_agents <- function(player_stats_df = player_stats, league_name = 'Dri
           team_color2
         ),
       by = c('recent_team' = 'team_abbr')
-    ) %>% 
-    filter(position %in% c('RB', 'WR', 'TE')) %>% 
+    ) |> 
+    filter(position %in% c('RB', 'WR', 'TE')) |> 
     mutate(
       on_roster = case_when(is.na(on_roster) ~ FALSE,
                             TRUE ~ on_roster)
-    ) %>% 
+    ) |> 
     filter(
       on_roster == FALSE | franchise_name == ff_team_name
     )

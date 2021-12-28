@@ -2,7 +2,7 @@
 # PFF Theme ---------------------------------------------------------------
 
 gt_theme_pff <- function(data, ...) {
-  data %>%
+  data |>
     # Add team logos w/ web_image
     text_transform(
       locations = cells_body(
@@ -14,12 +14,12 @@ gt_theme_pff <- function(data, ...) {
           height = 25
         )
       }
-    ) %>%
+    ) |>
     # if missing, replace NA w/ ---
     fmt_missing(
       columns = everything(),
       missing_text = '---'
-    ) %>%
+    ) |>
     # hide spanner with transparent color
     # Change font color and weight for numeric col
     tab_style(
@@ -29,11 +29,11 @@ gt_theme_pff <- function(data, ...) {
       locations = cells_body(
         columns = 3:ncol(data$`_data`)
       )
-    ) %>%
+    ) |>
     # Make column labels and spanners all caps
-    opt_all_caps() %>%
+    opt_all_caps() |>
     # add row striping
-    opt_row_striping() %>%
+    opt_row_striping() |>
     # change overall table styling for borders and striping
     tab_options(
       column_labels.background.color = '#585d63',
@@ -48,7 +48,7 @@ gt_theme_pff <- function(data, ...) {
       column_labels.border.bottom.color = 'white',
       row.striping.background_color = '#f9f9fb',
       data_row.padding = px(3)
-    ) %>%
+    ) |>
     # change color of border separating the text from the sourcenote
     tab_style(
       style = cell_borders(
@@ -58,14 +58,14 @@ gt_theme_pff <- function(data, ...) {
         columns = everything(),
         rows = nrow(data$`_data`)
       )
-    ) %>%
+    ) |>
     # change font to Lato throughout (note no need to have Lato locally!)
     opt_table_font(
       font = c(
         google_font(name = 'Lato'),
         default_fonts()
       )
-    ) %>%
+    ) |>
     # add source note
     tab_source_note(
       source_note = md('**Data:** @nflfastR<br>**Table:** Colin Welsh')
@@ -78,12 +78,12 @@ gt_theme_cw <- function(data, image_columns) {
   
   # get_list_from_ellipsis(...)
   
-  data %>%
+  data |>
     # Add team logos w/ web_image
     # text_transform(
     #   locations = cells_body(c(posteam)),
     #   fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'))
-    # ) %>%
+    # ) |>
     text_transform(
       locations = cells_body(
         columns = c(image_columns)
@@ -94,18 +94,18 @@ gt_theme_cw <- function(data, image_columns) {
           height = 25
         )
       }
-    ) %>%
+    ) |>
     # if missing, replace NA w/ ---
     fmt_missing(
       columns = everything(),
       missing_text = '---'
-    ) %>%
+    ) |>
     # hide spanner with transparent color
     # Change font color and weight for numeric col
-    tab_style(style = cell_text(font = "Chivo", size = 'xx-large', weight = 'normal'), locations = cells_title(groups = 'title')) %>% 
-    tab_style(style = cell_text(font = "Chivo", size = 'medium', weight = 'normal'), locations = cells_title(groups = 'subtitle')) %>% 
-    tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
-    tab_style(style = cell_text(align = 'left'), locations = cells_body(c(1:3))) %>% 
+    tab_style(style = cell_text(font = "Chivo", size = 'xx-large', weight = 'normal'), locations = cells_title(groups = 'title')) |> 
+    tab_style(style = cell_text(font = "Chivo", size = 'medium', weight = 'normal'), locations = cells_title(groups = 'subtitle')) |> 
+    tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) |> 
+    tab_style(style = cell_text(align = 'left'), locations = cells_body(c(1:3))) |> 
     tab_style(
       style = list(
         cell_text(color = color_cw[5], weight = 'normal')
@@ -113,21 +113,21 @@ gt_theme_cw <- function(data, image_columns) {
       locations = cells_body(
         columns = 4:ncol(data$`_data`)
       )
-    ) %>% 
+    ) |> 
     tab_style(
       style = cell_text(font = 'Chivo', weight = 'normal'),
       locations = cells_body(
         columns = c(1:3)
       )
-    ) %>% 
+    ) |> 
     tab_style(
       style = cell_text(font = 'Montserrat', weight = 'normal'),
       locations = cells_body(
         columns = c(4:ncol(data$`_data`))
       )
-    ) %>% 
+    ) |> 
     # change overall table styling for borders and striping
-    cols_width(c(posteam) ~ px(45)) %>% 
+    cols_width(c(posteam) ~ px(45)) |> 
     tab_options(
       table.font.color = color_cw[5],
       data_row.padding = '2px',
@@ -147,7 +147,7 @@ gt_theme_cw <- function(data, image_columns) {
       # table.border.bottom.color = 'transparent',
       row.striping.background_color = color_cw[2],
       row.striping.include_table_body = TRUE
-    ) %>% 
+    ) |> 
     # change color of border separating the text from the sourcenote
     tab_style(
       style = cell_borders(
@@ -159,13 +159,13 @@ gt_theme_cw <- function(data, image_columns) {
         columns = everything(),
         rows = nrow(data$`_data`)
       )
-    ) %>% 
+    ) |> 
     opt_table_font(
       font = c(
         google_font(name = 'Montserrat'),
         default_fonts()
       )
-    ) %>% 
+    ) |> 
     # add source note
     tab_source_note(
       source_note = md('**Data:** @nflfastR<br>**Table:** Colin Welsh')

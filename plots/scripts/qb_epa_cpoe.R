@@ -10,12 +10,12 @@ current_season <- year
 # can be multiple seasons
 # lapply(2007:2019, function(season){
 con <- fx.db_con(x.host = 'localhost')
-  pbp <- tbl(con, 'nflfastR_pbp') %>% 
+  pbp <- tbl(con, 'nflfastR_pbp') |> 
     filter(season >= current_season & 
              season_type == 'REG' &
-             game_id != '2020_12_NO_DEN') %>% # This game is pointless
-    collect() %>% 
-    decode_player_ids(fast = TRUE) %>% 
+             game_id != '2020_12_NO_DEN') |> # This game is pointless
+    collect() |> 
+    decode_player_ids(fast = TRUE) |> 
     mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
            posteam = ifelse(posteam == "LA", "LAR", posteam),
            posteam = ifelse(season < 2016 & posteam == 'LAR', 'STL', posteam),
@@ -27,7 +27,7 @@ con <- fx.db_con(x.host = 'localhost')
   
   # load roster data from nflfastR data repo
   roster_df <-
-    roster_df %>% 
+    roster_df |> 
     mutate(# some headshot urls are broken. They are checked here and set to a default 
       headshot_url = dplyr::if_else(condition = full_name %in% c('Brett Basanez', 
                                                                  'JaMarcus Russell', 
@@ -42,38 +42,36 @@ con <- fx.db_con(x.host = 'localhost')
     )
   
   # compute cpoe grouped by air_yards
-  epa_cpoe <-
-    pbp %>%
-    filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)) %>%
-    group_by(game_id, passer_player_id) %>%
-    summarise(cpoe = mean(cpoe), epa = mean(epa)) %>% 
-    left_join(pbp %>%
+  epa_cpoe <- pbp |>
+    filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)) |>
+    group_by(game_id, passer_player_id) |>
+    summarise(cpoe = mean(cpoe), epa = mean(epa)) |> 
+    left_join(pbp |>
                 filter(!is.na(cpoe) &
-                         !is.na(epa) & !is.na(passer_player_id)) %>%
-                group_by(passer_player_id) %>%
+                         !is.na(epa) & !is.na(passer_player_id)) |>
+                group_by(passer_player_id) |>
                 summarise(cpoe = mean(cpoe), epa_per_play = mean(epa)) %>%
-                mutate(season_dakota = mgcv::predict.gam(dakota_model, .)) %>%
+                mutate(season_dakota = mgcv::predict.gam(dakota_model, .)) |>
                 select(-cpoe, -epa_per_play),
               by = c('passer_player_id')
     )
   
-  top_32 <- 
-    pbp %>%
+  top_32 <- pbp |>
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
-    ) %>%
-    group_by(passer_player_id) %>%
+    ) |>
+    group_by(passer_player_id) |>
     summarise(passer = first(passer),
-              posteam = posteam %>% first(),
+              posteam = posteam |> first(),
               pa = n(),
               total_cpoe = mean(cpoe),
               total_epa = mean(epa)
-    ) %>%
-    arrange(pa %>% desc()
-    ) %>% 
-    unique() %>% 
-    group_by(posteam) %>% 
-    slice(1) %>% 
-    # head(32) %>% 
+    ) |>
+    arrange(pa |> desc()
+    ) |> 
+    unique() |> 
+    group_by(posteam) |> 
+    slice(1) |> 
+    # head(32) |> 
     pull(passer_player_id)
   
   # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
@@ -82,61 +80,61 @@ con <- fx.db_con(x.host = 'localhost')
   # first arranged by number of plays to filter the 30 QBs with most pass attempts
   # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
   summary_df <-
-    pbp %>%
+    pbp |>
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
-    ) %>% 
-    group_by(game_id, week, passer_player_id) %>%
+    ) |> 
+    group_by(game_id, week, passer_player_id) |>
     summarise(pa = n(),
               total_cpoe = mean(cpoe),
               total_epa = mean(epa)
-    ) %>%
-    left_join(pbp %>% 
+    ) |>
+    left_join(pbp |> 
                 filter(!is.na(passer_player_id)
-                ) %>% 
+                ) |> 
                 select(passer_player_id, 
                        team = posteam
-                ) %>% 
+                ) |> 
                 unique(),
               by = c('passer_player_id')
-    ) %>% 
-    group_by(passer_player_id) %>% 
-    mutate(season_pa = sum(pa, na.rm = T)) %>% 
-    ungroup %>% 
-    arrange(-season_pa) %>% 
-    filter(!is.na(team)) %>% 
-    filter(passer_player_id %in% top_32) %>%
+    ) |> 
+    group_by(passer_player_id) |> 
+    mutate(season_pa = sum(pa, na.rm = T)) |> 
+    ungroup() |> 
+    arrange(-season_pa) |> 
+    filter(!is.na(team)) |> 
+    filter(passer_player_id %in% top_32) |>
     left_join(
-      roster_df %>%
+      roster_df |>
         select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
       by = c('passer_player_id' = 'gsis_id')
-    ) %>%
+    ) |>
     # left_join(
     #   as_tibble(roster_df),
     #   by = c('passer_player_id' = 'gsis' , 'team')
-    # ) %>%
+    # ) |>
     mutate(# some headshot urls are broken. They are checked here and set to a default 
       headshot_url = dplyr::if_else(RCurl::url.exists(as.character(headshot_url)), as.character(headshot_url), 'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png')
-    ) %>% 
-    left_join(epa_cpoe, by = c('passer_player_id', 'game_id')) %>% 
-    arrange(season_dakota %>% desc()) %>% 
-    mutate(lab_dakota = glue('DAKOTA: {season_dakota %>% round(3)}')) %>% 
+    ) |> 
+    left_join(epa_cpoe, by = c('passer_player_id', 'game_id')) |> 
+    arrange(season_dakota |> desc()) |> 
+    mutate(lab_dakota = glue('DAKOTA: {season_dakota |> round(3)}')) |> 
     left_join(
-      teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
+      teams_colors_logos |> select(team_abbr, team_color, team_logo_espn),
       by = c('team' = 'team_abbr')
-    ) %>% mutate(season = game_id %>% substr(1, 4),
+    ) |> mutate(season = game_id |> substr(1, 4),
                  season_dakota = factor(season_dakota, levels=unique(season_dakota)))
     # mutate_at(vars(season_dakota), funs(factor(., levels=unique(.)))) # funs is deprecated
   
   # create data frame used to add the logos
   # arranged by name because name is used for the facet
   colors_raw <-
-    summary_df %>%
-    group_by(passer_player_id) %>%
-    summarise(team = first(team), name = first(full_name)) %>%
+    summary_df |>
+    group_by(passer_player_id) |>
+    summarise(team = first(team), name = first(full_name)) |>
     left_join(
-      teams_colors_logos %>% select(team_abbr, team_color),
+      teams_colors_logos |> select(team_abbr, team_color),
       by = c("team" = "team_abbr")
-    ) %>%
+    ) |>
     arrange(name)
   
   # the below used smooth algorithm uses the parameter n as the number
@@ -144,21 +142,21 @@ con <- fx.db_con(x.host = 'localhost')
   # we need exactly the same number of colors (-> n times the same color per player)
   n_eval <- 80
   colors <-
-    as.data.frame(lapply(colors_raw, rep, n_eval)) %>%
+    as.data.frame(lapply(colors_raw, rep, n_eval)) |>
     arrange(name)
   
   # mean data frame for the smoothed line of the whole league
   mean <-
-    summary_df %>%
+    summary_df |>
     summarise(league_cpoe = mean(total_cpoe), 
               league_epa = mean(total_epa)
               )
   
   summary_images_df <- 
-    summary_df %>% 
-    select(full_name, passer_player_id, season_dakota, lab_dakota, headshot_url, team_logo_espn, season_pa) %>% 
-    unique() %>% 
-    arrange(season_dakota %>% desc()) %>% 
+    summary_df |> 
+    select(full_name, passer_player_id, season_dakota, lab_dakota, headshot_url, team_logo_espn, season_pa) |> 
+    unique() |> 
+    arrange(season_dakota |> desc()) |> 
     head(32)
   
   panel_label <- summary_images_df$full_name
@@ -182,7 +180,7 @@ con <- fx.db_con(x.host = 'localhost')
   # create the plot. Set asp to make sure the images appear in the correct aspect ratio
   asp <- 16/9.886
   p <-
-    summary_df %>%
+    summary_df |>
     ggplot(aes(x = cpoe,
                y = epa)) +
     geom_hline(
@@ -206,8 +204,8 @@ con <- fx.db_con(x.host = 'localhost')
     # scale_color_manual(values =  NFL_pri_dark,
     #                    name = "Team") +
     geom_point(
-      data = summary_df %>%
-        group_by(passer_player_id) %>%
+      data = summary_df |>
+        group_by(passer_player_id) |>
         filter(row_number() == n()),
       aes(fill = team),
       color = color_cw[5],
