@@ -12,7 +12,7 @@ get_playmaking_epa <- function(pbp){
   pbp <- pbp_df |>
     dplyr::filter(!is.na(epa) &
                     (pass == 1 | rush == 1)) |>
-    suppressMessagesssages({
+    suppressMessages({
       nflfastR::decode_player_ids()
     })
   
