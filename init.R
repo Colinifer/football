@@ -81,7 +81,6 @@ pkgs <- c(
 
 initR::fx.load_packages(pkgs) |>
   suppressMessages()
-rm(pkgs)
 
 options(tibble.print_min=25)
 `%notin%` <- Negate(`%in%`)
