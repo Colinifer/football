@@ -86,7 +86,7 @@ gt_theme_cw <- function(data, image_columns) {
     # ) |>
     text_transform(
       locations = cells_body(
-        columns = c(image_columns)
+        columns = all_of(image_columns)
       ),
       fn = function(x) {
         web_image(

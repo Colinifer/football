@@ -8,49 +8,26 @@ current_season <- year
 # load pbp for the choosen seasosn from nflfastR data repo
 # can be multiple seasons as well
 # lapply(2009:2019, function(season){
-
-# Download play-by-play data, decode player IDs, and 
-pbp_df <- pbp_ds %>% 
-  filter(season == current_season) %>% 
-  collect() %>% 
-  decode_player_ids(fast = TRUE) %>% 
+con <- fx.db_con(x.host = 'localhost')
+pbp <- tbl(con, 'nflfastR_pbp') |> 
+  filter(season == current_season &
+           season_type == 'POST') |> 
+  collect() |> 
+  decode_player_ids(fast = TRUE) |> 
   mutate(defteam = ifelse(defteam == "LA", "LAR", defteam),
          posteam = ifelse(posteam == "LA", "LAR", posteam))
+dbDisconnect(con)
 
 # load roster data from nflfastR data repo
 roster_df <-
-  readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true")) %>% 
-  decode_player_ids(fast = TRUE) %>% 
-  mutate(team.abbr = ifelse(team.abbr == "LA", "LAR", team.abbr))
+  roster_df |> 
+  mutate(team = ifelse(team == "LA", "LAR", team))
 
-
-post_season_qbs <- 
-  pbp_df %>%
-  filter(!is.na(cpoe) & 
-           !is.na(epa) & 
-           !is.na(passer_player_id) &
-           week > 17
-  ) %>%
-  group_by(passer_player_id) %>%
-  summarise(passer = first(passer),
-            posteam = posteam %>% first(),
-            pa = n(),
-            total_cpoe = mean(cpoe),
-            total_epa = mean(epa)
-  ) %>%
-  arrange(pa %>% desc()
-  ) %>% 
-  unique() %>% 
-  # group_by(posteam) %>% 
-  # slice(1) %>% 
-  # head(32) %>% 
-  pull(passer_player_id)
-
+# compute cpoe grouped by air_yards
 cpoe <-
-  pbp_df %>%
-  filter(!is.na(cpoe)  & 
-           passer_player_id %in% post_season_qbs) %>%
-  group_by(passer_player_id, air_yards) %>%
+  pbp |>
+  filter(!is.na(cpoe)) |>
+  group_by(passer_player_id, air_yards) |>
   summarise(count = n(), cpoe = mean(cpoe, na.rm = T))
 
 # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
@@ -59,71 +36,73 @@ cpoe <-
 # first arranged by number of plays to filter the 30 QBs with most pass attempts
 # The filter is set to 30 because we want to have 6 columns and 5 rows in the facet
 summary_df <-
-  pbp_df %>%
+  pbp |>
   filter(!is.na(cpoe)
-  ) %>%
-  group_by(posteam, passer_player_id) %>%
+  ) |>
+  group_by(posteam, passer_player_id) |>
   summarise(plays = n(),
             total_cpoe = mean(cpoe, na.rm = T)
-  ) %>%
-  arrange(plays %>% desc()) %>% 
-  filter(passer_player_id %in% post_season_qbs) %>% 
-  ungroup() %>% 
-  left_join(pbp_df %>% 
+  ) |>
+  arrange(plays |> desc()) |> 
+  group_by(posteam) |> 
+  filter(row_number() == 1) |> 
+  ungroup() |> 
+  left_join(pbp |> 
               filter(!is.na(passer_player_id)
-              ) %>% 
+              ) |> 
               select(passer_player_id, 
                      team = posteam
-              ) %>% 
+              ) |> 
               unique(),
             by = c('passer_player_id')
-  ) %>%
-  arrange(total_cpoe %>% 
+  ) |>
+  arrange(total_cpoe |> 
             desc()
-  ) %>%
+  ) |>
   left_join(
-    sleeper_players_df %>%
+    roster_df |>
       select(position, full_name, sportradar_id, gsis_id, espn_id, headshot_url),
     by = c('passer_player_id' = 'gsis_id')
-  ) %>%
+  ) |>
   # left_join(
-  #   as_tibble(roster_df) %>%
+  #   as_tibble(roster_df) |>
   #     select(team = team.abbr,
   #            first_name = teamPlayers.firstName,
   #            last_name = teamPlayers.lastName,
   #            gsis = teamPlayers.gsisId,
   #            headshot_url = teamPlayers.headshot_url
-  #            ) %>%
-  #     mutate(full_name = glue('{first_name} {last_name}')) %>%
-  #     select(-first_name, -last_name) %>% unique(),
+  #            ) |>
+  #     mutate(full_name = glue('{first_name} {last_name}')) |>
+  #     select(-first_name, -last_name) |> unique(),
   #   by = c('passer_player_id' = 'gsis', 'team')
-# ) %>%
+# ) |>
 mutate(# some headshot urls are broken. They are checked here and set to a default 
   headshot_url = dplyr::if_else(
     RCurl::url.exists(as.character(headshot_url)),
     as.character(headshot_url),
     'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png',
   )
-) %>%
-  left_join(cpoe, by = 'passer_player_id') %>%
+) |>
+  left_join(cpoe, by = 'passer_player_id') |>
   left_join(
-    teams_colors_logos %>% select(team_abbr, team_color, team_logo_espn),
+    teams_colors_logos |> select(team_abbr, team_color, team_logo_espn),
     by = c('team' = 'team_abbr')
-  ) %>% 
-  mutate(facet_label_wrap = glue('{full_name}: {total_cpoe %>% round(2)}'),
-         rounded_cpoe = total_cpoe %>% round(2)) %>% 
-  mutate_at(vars(total_cpoe), funs(factor(., levels=unique(.))))
+  ) |> 
+  mutate(facet_label_wrap = glue('{full_name}: {total_cpoe |> round(2)}'),
+         rounded_cpoe = total_cpoe |> round(2),
+         total_cpoe = factor(total_cpoe, levels=unique(total_cpoe))) 
+# mutate_at(vars(total_cpoe), funs(factor(., levels=unique(.)))) # funs is deprecated
 
 # create data frame used to add the logos
 # arranged by name because name is used for the facet
 colors_raw <-
-  summary_df %>%
-  group_by(passer_player_id) %>%
-  summarise(team = first(team), name = first(full_name)) %>%
+  summary_df |>
+  group_by(passer_player_id) |>
+  summarise(team = first(team), name = first(full_name)) |>
   left_join(
-    teams_colors_logos %>% select(team_abbr, team_color),
+    teams_colors_logos |> select(team_abbr, team_color),
     by = c("team" = "team_abbr")
-  ) %>%
+  ) |>
   arrange(name)
 
 # the below used smooth algorithm uses the parameter n as the number
@@ -131,33 +110,33 @@ colors_raw <-
 # we need exactly the same number of colors (-> n times the same color per player)
 n_eval <- 80
 colors <-
-  as.data.frame(lapply(colors_raw, rep, n_eval)) %>%
+  as.data.frame(lapply(colors_raw, rep, n_eval)) |>
   arrange(name)
 
 # mean data frame for the smoothed line of the whole league
 mean <-
-  summary_df %>%
-  group_by(air_yards) %>%
+  summary_df |>
+  group_by(air_yards) |>
   summarise(league = mean(cpoe, na.rm = T), league_count = n())
 
 summary_images_df <- 
-  summary_df %>% 
-  select(full_name, passer_player_id, total_cpoe, rounded_cpoe, headshot_url, team_logo_espn) %>% 
+  summary_df |> 
+  select(full_name, passer_player_id, total_cpoe, rounded_cpoe, headshot_url, team_logo_espn) |> 
   mutate(status = color_cw[5],
-         lab_cpoe = glue('Total CPOE: {rounded_cpoe}')) %>% 
+         lab_cpoe = glue('Total CPOE: {rounded_cpoe}')) |> 
   unique()
 
 # Create a named character vector to replace value with name in the facet titles
-panel_label <- summary_images_df$full_name
-names(panel_label) <- summary_images_df$total_cpoe
+panel_label <- summary_df$full_name
+names(panel_label) <- summary_df$total_cpoe
 
 # create the plot. Set asp to make sure the images appear in the correct aspect ratio
 asp <- 16/16
 
 # Desktop
 p <-
-  summary_df %>% 
-  # arrange(total_cpoe %>% desc()) %>% 
+  summary_df |> 
+  # arrange(total_cpoe |> desc()) |> 
   ggplot(aes(x = air_yards, y = cpoe)) +
   geom_smooth(data = mean, aes(x = air_yards, 
                                y = league, 
@@ -208,7 +187,7 @@ p <-
 p_desktop <- p +
   # Use the named character vector to replace CPOE rank with Player name
   facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 6) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title = element_text(size = 8),
     axis.text = element_text(size = 5),
@@ -231,7 +210,7 @@ p_desktop <- p +
 p_mobile <- p +
   # Use the named character vector to replace CPOE rank with Player name
   facet_wrap(~total_cpoe, labeller = labeller(total_cpoe = panel_label), ncol = 3) +
-  theme_cw +
+  theme_cw_dark +
   theme(
     axis.title = element_text(size = 8),
     axis.text = element_text(size = 5),
