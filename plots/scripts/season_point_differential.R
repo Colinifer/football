@@ -86,7 +86,7 @@ best_worst_teams <- c(
   # Get best team from current season
   all_point_diff |> 
     filter(season == year &
-             week == n_week) |> 
+             week == n_week) |> # Note: add if/else for postseason, and week 18 for >= 2021 season
     arrange(season_point_diff |> 
               desc()
             ) |> 
