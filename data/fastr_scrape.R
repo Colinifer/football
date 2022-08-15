@@ -6,17 +6,29 @@ current_season <- year
 
 con <- fx.db_con(x.host = 'localhost')
 
+players_df <- load_players()
+dbWriteTable(conn = con, 'nflfastR_players', players_df)
+
 roster_df <-  fast_scraper_roster(1999:year)
 dbWriteTable(conn = con, 'nflfastR_rosters', roster_df)
+
+contracts_df <- load_contracts()
+# dbWriteTable(conn = con, 'nflfastR_contracts', contracts_df)
+
+officials_df <- load_officials()
+dbWriteTable(conn = con, 'nflfastR_officials', officials_df)
+
+participation_df <- map_df(.x = 2016:most_recent_season(), ~{load_participation(seasons = .x)})
+dbWriteTable(conn = con, 'nflfastR_participation', participation_df)
 
 schedule_df <- fast_scraper_schedules(1999:year)
 dbWriteTable(con, 'nflfastR_schedule', schedule_df)
 
 trades_df <- nflreadr::load_trades()
-dbWriteTable(con, 'nflfastR_trades', trades_df)
+dbWriteTable(con, 'nflfastR_trades', trades_df, overwrite = T)
 
 draft_df <- nflreadr::load_draft_picks()
-dbWriteTable(con, 'nflfastR_draft', draft_df)
+dbWriteTable(con, 'nflfastR_draft', draft_df, overwrite = T)
 
 pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= 2006) %>% 
