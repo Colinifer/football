@@ -26,37 +26,10 @@ part_df |>
   group_by(possession_team) |> 
   count()
 
-part_df |> 
-  select(old_game_id, 
-         play_id,
-         offense_players,
-         # defense_players,
-         NULL
-         ) |> 
-  mutate(offense_players = case_when(offense_players == '' ~ as.character(NA),
-                                     TRUE ~ offense_players)) |> 
-  separate(offense_players,
-           paste0("player_", 1:11), 
-           sep=";", 
-           remove=FALSE) |> 
-  mutate(player = str_count(offense_players, ";")+1) |>
-  select(-offense_players) |> 
-  pivot_longer(cols = contains('player_'), values_to = 'gsis_id') |> 
-  select(-name) |> 
-  left_join(
-    players_df |> 
-      filter(!is.na(gsis_id)) |> 
-      select(gsis_id,
-             player_name = display_name,
-             position_group,
-             position),
-    by = c('gsis_id')
-  )
-  
-
+# 
 pbp_withpart |> 
   filter(season == 2021 & 
-            !is.na(offense_formation) & 
+           !is.na(offense_formation) & 
            play_type %in% c('run', 'pass') &
            wp <= 0.8 & ep >= .2) |> 
   group_by(possession_team,
@@ -79,6 +52,72 @@ pbp_withpart |>
   facet_wrap(~possession_team, nrow = 4) + 
   scale_x_continuous(limits = c(0,1),
                      labels = scales::percent)
+
+
+# Season snaps
+part_df |> 
+  select(old_game_id, 
+         play_id,
+         offense_players,
+         # defense_players,
+         NULL
+  ) |> 
+  left_join(
+    schedule_df |> 
+      select(old_game_id,
+             game_id,
+             season)
+  ) |> 
+  left_join(
+    pbp_df |> 
+      select(game_id, 
+             play_id, 
+             play_type)
+  ) |> 
+  filter(play_type == 'pass') |> 
+  mutate(offense_players = case_when(offense_players == '' ~ as.character(NA),
+                                     TRUE ~ offense_players)) |> 
+  separate(offense_players,
+           paste0("player_", 1:11), 
+           sep=";", 
+           remove=FALSE) |> 
+  mutate(player = str_count(offense_players, ";")+1) |>
+  select(-offense_players) |> 
+  pivot_longer(cols = contains('player_'), values_to = 'gsis_id') |> 
+  filter(!is.na(player)) |> 
+  select(-name) |> 
+  group_by(# game_id, 
+           season,
+           gsis_id) |> 
+  count() |>
+  left_join(
+    players_df |> 
+      filter(!is.na(gsis_id)) |> 
+      select(gsis_id,
+             player_name = display_name,
+             team_abbr,
+             position_group,
+             position),
+    by = c('gsis_id')
+  ) |> 
+  filter(position == 'WR') |> 
+  filter(season == current_season) |> 
+  arrange(-n) |> 
+  left_join(
+    pbp_df |> 
+      filter(season == current_season) |> 
+      calculate_player_stats() |> 
+      select(gsis_id = player_id,
+             games,
+             receiving_yards),
+    by= c('gsis_id')
+  ) |> 
+  filter(n > 200 & 
+           team_abbr %in% c('DAL', 'PHI', 'NYG', 'WAS')) |> 
+  mutate(yprr = receiving_yards / n) |> 
+  arrange(-yprr)
+
+
 
 #create chart
 pbp_withpart |> 

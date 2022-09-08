@@ -13,11 +13,32 @@ team_challenge_vector <- teams_colors_logos |>
         team = team_city
       )
   ) |> 
+  unique() |> 
   as_tibble() |> 
   mutate(team = paste0(team, ' challenged')) |> 
   pull(team)
 
-pbp_df |> 
+fx.challenge_team <- function(x.challenge_desc = challenge_desc, 
+         x.home_team_city = home_team_city, 
+         x.home_team = home_team,
+         x.away_team_city = away_team_city, 
+         x.away_team = away_team){
+  if(grepl(x.home_team_city, x.challenge_desc) == TRUE) {
+    return(x.home_team)
+  }
+  if(grepl(x.away_team_city, x.challenge_desc) == TRUE) {
+    return(x.away_team)
+  }
+}
+
+current_coaches = pbp_df |> 
+  select(coach = home_coach) |> 
+  rbind(pbp_df |> 
+          select(coach = away_coach)) |> 
+  unique() |> 
+  pull(coach)
+
+tbl(con, 'nflfastR_pbp') |> 
   filter(replay_or_challenge == 1 &
            replay_or_challenge_result %in% c('reversed', 'upheld')) |>
   select(
@@ -31,6 +52,7 @@ pbp_df |>
     posteam,
     defteam
   ) |> 
+  collect() |> 
   left_join(
     teams_colors_logos |> 
       mutate(team_city = str_remove(team_name,
@@ -54,20 +76,32 @@ pbp_df |>
          # challenge_desc = case_when(
          #   grepl('YAC', challenge_desc) == TRUE ~ sub(".* ", "", challenge_desc),
          #   TRUE ~ challenge_desc)
-         ) |>
-  mutate(challenge_team = case_when(
-    grepl('The Replay Official', desc) == FALSE & grepl(home_team_city, challenge_desc) == TRUE ~ home_team,
-    grepl('The Replay Official', desc) == FALSE & grepl(away_team_city, challenge_desc) == TRUE ~ away_team,
-    TRUE ~ as.character(NA)
-  )) |> 
-  select(challenge_team, challenge_desc) |> 
-  filter(!is.na(challenge_desc))
-  # collect() |> 
-  mutate(challenge_team = case_when(
-    grepl(team_challenge_vector, desc) == TRUE ~ 
-  ),
-         is_challenge = 1,
-         win_challenge = ifelse(replay_or_challenge_result == 'reversed', 1, 0))
+         ) |> 
+  group_by(desc) |> 
+  mutate(
+    challenge_team = case_when(
+      grepl(home_team_city, challenge_desc) == TRUE ~ home_team,
+      grepl(away_team_city, challenge_desc) == TRUE ~ away_team,
+      TRUE ~ as.character(NA),
+    ),
+    challenge_coach = case_when(
+      challenge_team == home_team ~ home_coach,
+      challenge_team == away_team ~ away_coach
+    ),
+    is_challenge = 1,
+    win_challenge = ifelse(replay_or_challenge_result == 'reversed', 1, 0)
+  ) |> 
+  ungroup() |> 
+  group_by(challenge_coach) |> 
+  summarise(
+    total_challenges = sum(is_challenge, na.rm = T),
+    challenges_won = sum(win_challenge, na.rm = T)
+  ) |> 
+  mutate(
+    challenge_win_pct = challenges_won / total_challenges
+  ) |> 
+  filter(challenge_coach %in% current_coaches) |> 
+  arrange(-challenge_win_pct)
 
 
 # 9 instances since 1999 of coaches challenges being denied

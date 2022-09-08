@@ -6,23 +6,23 @@ current_season <- year
 
 con <- fx.db_con(x.host = 'localhost')
 
-players_df <- load_players()
-dbWriteTable(conn = con, 'nflfastR_players', players_df)
+players_df <- nflreadr::load_players()
+dbWriteTable(conn = con, 'nflfastR_players', players_df, overwrite = T)
 
-roster_df <-  fast_scraper_roster(1999:year)
-dbWriteTable(conn = con, 'nflfastR_rosters', roster_df)
+roster_df <-  nflfastR::fast_scraper_roster(1999:year)
+dbWriteTable(conn = con, 'nflfastR_rosters', roster_df, overwrite = T)
 
-contracts_df <- load_contracts()
+contracts_df <- nflreadr::load_contracts()
 # dbWriteTable(conn = con, 'nflfastR_contracts', contracts_df)
 
-officials_df <- load_officials()
-dbWriteTable(conn = con, 'nflfastR_officials', officials_df)
+officials_df <- nflreadr::load_officials()
+dbWriteTable(conn = con, 'nflfastR_officials', officials_df, overwrite = T)
 
-participation_df <- map_df(.x = 2016:most_recent_season(), ~{load_participation(seasons = .x)})
-dbWriteTable(conn = con, 'nflfastR_participation', participation_df)
+participation_df <- load_participation(seasons = 2016:current_season)
+dbWriteTable(conn = con, 'nflfastR_participation', participation_df, overwrite = T)
 
-schedule_df <- fast_scraper_schedules(1999:year)
-dbWriteTable(con, 'nflfastR_schedule', schedule_df)
+schedule_df <- nflfastR::fast_scraper_schedules(1999:year)
+dbWriteTable(con, 'nflfastR_schedule', schedule_df, overwrite = T)
 
 trades_df <- nflreadr::load_trades()
 dbWriteTable(con, 'nflfastR_trades', trades_df, overwrite = T)
