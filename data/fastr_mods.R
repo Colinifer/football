@@ -172,7 +172,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     pull(game_id) |>
     unique()
   
-  nflreadr::load_rosters(pbp_season) |>
+  rosters <- nflreadr::load_rosters(pbp_season) |>
     select(player_id = gsis_id,
            contains('_id'),
            position,
@@ -195,7 +195,11 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
                  # names_to = "team",
                  values_to = "player") |> 
     filter(!is.na(player) & player != '') |> 
-    group_by(old_game_id, player) |> 
+    # group_by(old_game_id, player) |> 
+    # count() |> 
+    suppressWarnings() |> 
+    left_join(pbp,by = c('old_game_id', 'play_id')) |> 
+    group_by(old_game_id, player, play_type) |> 
     count()
   
   defense_snaps <- participation_df |> 
@@ -211,7 +215,11 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
                  # names_to = "team",
                  values_to = "player") |> 
     filter(!is.na(player) & player != '') |> 
-    group_by(old_game_id, player) |> 
+    # group_by(old_game_id, player) |> 
+    # count() |> 
+    suppressWarnings() |> 
+    left_join(pbp,by = c('old_game_id', 'play_id')) |> 
+    group_by(old_game_id, player, play_type) |> 
     count()
   
   # Prepare data ------------------------------------------------------------
