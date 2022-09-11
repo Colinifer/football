@@ -164,17 +164,55 @@ update_ngs_db <- function(season = year, db_connection = NULL){
 
 calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   
-  pbp_season <- pbp %>% 
-    pull(season) %>% 
+  pbp_season <- pbp |>
+    pull(season) |>
     unique()
   
-  nflreadr::load_rosters(pbp_season) %>% 
-    select(
-      player_id = gsis_id,
-      contains('_id'),
-      position,
-      headshot_url
-    )
+  pbp_games <- pbp |>
+    pull(game_id) |>
+    unique()
+  
+  nflreadr::load_rosters(pbp_season) |>
+    select(player_id = gsis_id,
+           contains('_id'),
+           position,
+           headshot_url)
+  
+  # Participation data ------------------------------------------------------
+  participation_df <- nflreadr::load_participation(pbp_season, 
+                                                   include_pbp = F)
+  
+  offense_snaps <- participation_df |> 
+    select(old_game_id,
+           play_id,
+           offense_players
+    ) |> 
+    separate(col = offense_players, 
+             sep = ';',
+             into = paste('offense_on', as.character(c(1:11)), sep = '_') 
+             ) |> 
+    pivot_longer(offense_on_1:offense_on_11,
+                 # names_to = "team",
+                 values_to = "player") |> 
+    filter(!is.na(player) & player != '') |> 
+    group_by(old_game_id, player) |> 
+    count()
+  
+  defense_snaps <- participation_df |> 
+    select(old_game_id,
+           play_id,
+           defense_players
+    ) |> 
+    separate(col = defense_players, 
+             sep = ';',
+             into = paste('defense_on', as.character(c(1:11)), sep = '_') 
+    ) |> 
+    pivot_longer(defense_on_1:defense_on_11,
+                 # names_to = "team",
+                 values_to = "player") |> 
+    filter(!is.na(player) & player != '') |> 
+    group_by(old_game_id, player) |> 
+    count()
   
   # Prepare data ------------------------------------------------------------
   
@@ -184,7 +222,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::mutate(
       season = substr(.data$game_id, 1, 4) %>% as.integer(),
       week = substr(.data$game_id, 6, 7) %>% as.integer()
-    ) %>%
+    ) %>% 
     dplyr::filter(.data$yards != 0) %>%
     # the list includes all plays with multiple laterals
     # and all receivers. Since the last one already is in the
@@ -198,10 +236,8 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   suppressMessages({
     # 1. for "normal" plays: get plays that count in official stats
     data <- pbp %>%
-      dplyr::filter(
-        !is.na(.data$down),
-        .data$play_type %in% c("pass", "qb_kneel", "qb_spike", "run")
-      ) %>%
+      dplyr::filter(!is.na(.data$down),
+                    .data$play_type %in% c("pass", "qb_kneel", "qb_spike", "run")) %>%
       decode_player_ids()
     
     if (!"qb_epa" %in% names(data)) data <- add_qb_epa(data)
