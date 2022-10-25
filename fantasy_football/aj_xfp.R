@@ -196,7 +196,7 @@ avg_exp_fp_df %>%
   select(
     games,
     receiver,
-    posteam = posteam.x,
+    posteam,
     targets,
     catches,
     yards,
@@ -445,10 +445,10 @@ incomplete_df <- fant_pt_dist_df %>%
     actual_PPR_points = NA,
     target = 1
   ) %>% 
-  distinct %>% 
+  distinct() %>% 
   group_by(game_id, receiver) %>% 
   mutate(game_played = ifelse(row_number()==1,1,0)) %>% 
-  ungroup
+  ungroup()
 
 
 
@@ -458,7 +458,7 @@ sampling_df <- rbind(incomplete_df, fant_pt_dist_df) %>%
   group_by(game_id, play_id)
 
 # do sim
-sim_df <- do.call(rbind, lapply(1:10000, function(x) {
+sim_df <- future_map_dfr(1:10000, function(x) {
   sampling_df %>% 
     mutate(sim_res = sample(PPR_points, 1, prob = catch_run_prob)) %>% 
     select(season, game_id, play_id, posteam, receiver, sim_res) %>% 
@@ -466,7 +466,7 @@ sim_df <- do.call(rbind, lapply(1:10000, function(x) {
     group_by(game_id, posteam, receiver) %>% 
     summarize(sim_tot = sum(sim_res, na.rm = T), .groups = 'drop') %>% 
     return
-}))
+})
 
 sim_df <- sim_df %>% mutate(sim = 1)
 
@@ -495,7 +495,7 @@ ggplot(data = sim_df, aes(x = sim_tot, group = game_id, color = game_id, fill = 
   scale_x_continuous(expand = expansion(mult = c(0.01, 0.01))) +
   scale_y_continuous(labels = percent_format(accuracy = 1), expand = expansion(mult = c(0, 0.05))) +
   scale_color_manual(values = c('#ff7f00','#9932cc')) +
-  scale_fill_manual(values = c('#ff7f00','#9932cc')) +
+  scale_fill_manual(values = c('#ff7f 00','#9932cc')) +
   labs(title = 'Sammy Watkins Expected PPR Fantasy Point Distribution',
        subtitle = 'Based on 10,000 Simulations',
        y = 'Density',

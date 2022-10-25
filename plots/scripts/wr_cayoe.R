@@ -378,4 +378,4 @@ cayoe_filtered |>
   ) |> 
   gtsave(filename = glue("wr_cayoe_bot_{current_season}.png"), path = "plots/desktop")
 
-# rm(list = ls())
+rm(xyac_pbp_df, cayoe, my_week, cayoe_filtered)

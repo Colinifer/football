@@ -19,9 +19,13 @@ pkgs <- c(
   'nflfastR',
   'teamcolors',
   'nflreadr',
+  'nflplotR',
   'cfbfastR',
   'nfl4th',
   'ffscrapr',
+  'ffopportunity',
+  'ffpros',
+  'ffsimulator',
   'gsisdecoder',
   'espnscrapeR',
   
@@ -48,6 +52,7 @@ pkgs <- c(
   'ggthemes',
   'ggimage',
   'ggforce',
+  'ggtext',
   'ggridges',
   'ggrepel',
   'ggpmisc',
@@ -129,6 +134,8 @@ map(.x = source_files, ~source(.x, echo = F)) |>
 # source("fantasy_football/ff_init.R")
 # espn_players_df <- fx.get_espn_players() # not working, relies on roster load
 
+source('data/fix_rookies.R')
+
 # nflfastR data
 con <- fx.db_con(x.host = 'localhost')
 # update_roster_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
@@ -150,11 +157,13 @@ draft_df <- tbl(con, 'nflfastR_draft') |>
 
 pbp_df <- tbl(con, 'nflfastR_pbp') |> 
   filter(season == year) |> 
-  collect()
+  collect() # |> 
+  # fix_rookies()
 dbDisconnect(con)
 
 
 source('init_ff.R')
+
 # Rosters
 fantasy_rosters <- ff_rosters(ff_conn_beep_boop) |>
   mutate(on_roster = TRUE,
@@ -162,20 +171,18 @@ fantasy_rosters <- ff_rosters(ff_conn_beep_boop) |>
   rbind(ff_rosters(ff_conn_drinkers) |>
           mutate(on_roster = TRUE,
                  league = 'Drinkers')) |>
-  rbind(ff_rosters(ff_conn_kepler) |>
-          mutate(on_roster = TRUE,
-                 league = 'Kepler')) |>
+  # rbind(ff_rosters(ff_conn_kepler) |>
+  #         mutate(on_roster = TRUE,
+  #                league = 'Kepler')) |>
   rbind(ff_rosters(ff_conn_family) |>
           mutate(on_roster = TRUE,
-                 league = 'Family')) |> 
-  left_join(roster_df %>% 
+                 league = 'Family')) |>
+  left_join(roster_df %>%
               select(
                 gsis_id,
-                espn_id),
+                espn_id) |> 
+              mutate(espn_id = as.numeric(espn_id)),
             by = c('player_id' = 'espn_id'))
-
-# schedule_df %>% 
-#   saveRDS(glue('data/schedules/sched_{year}.rds'))
 
 matchup_df <- schedule_df |> 
   filter(season == year) |> 
@@ -195,7 +202,7 @@ matchup_df <- schedule_df |>
     home_team,
     away_score,
     home_score,
-    home_result,
+    home_result = result,
     stadium,
     location,
     roof,
@@ -220,7 +227,7 @@ matchup_df <- schedule_df |>
         home_team,
         away_score,
         home_score,
-        home_result,
+        home_result = result,
         stadium,
         location,
         roof,
@@ -229,16 +236,6 @@ matchup_df <- schedule_df |>
       )
   ) |> 
   arrange(old_game_id)
-
-# sr_games_df <- readRDS(glue('data/schedules/sportradar/games_{year}.rds'))
-# source('data/master_sr_pbp.R')
-
-
-# Deprecated on M1 chipset
-# part_ds <- open_dataset('data/part/sportradar', partitioning = 'year')
-# pbp_ds <- open_dataset('data/pbp/fastr', partitioning = 'year')
-# xyac_ds <- open_dataset('data/pbp/xyac', partitioning = 'year')
-# sr_pbp_df <- readRDS('data/pbp/sportradar/sr_pbp_2020.rds')
 
 
 # pbp_df <- readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true"))
@@ -289,26 +286,16 @@ team_stats_weekly <- pbp_df |>
 player_stats <- pbp_df |> 
   calculate_player_stats_mod() 
 
-ff_free_agents <- fx.ff_free_agents(player_stats, 'Beep Boop')
-
-  # %>%
-  # left_join(
-  #   roster_df %>%
-  #     select(season, gsis_id, pfr_id),
-  #   by = c('player_id' = 'gsis_id')
-  # ) %>%
-  # left_join(
-  #   nflreadr::load_snap_counts(),
-  #   by = c('pfr_id', 'game_id')
-  # )
-  
 player_stats_weekly <- pbp_df |> 
   calculate_player_stats_mod(weekly = TRUE)
+
+ff_free_agents <- fx.ff_free_agents(player_stats, 'Beep Boop')
 
 
 
 # Update DBs --------------------------------------------------------------
 
+future::plan("multisession")
 nflfastR::update_db(
   tblname = "nflfastR_pbp",
   force_rebuild = FALSE,

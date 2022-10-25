@@ -169,11 +169,10 @@ wins_above_expected_scatter <- chart |>
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
   theme_cw_dark +
   theme(
-    plot.title = element_text(face = "bold"),
     plot.caption = element_text(hjust = 1),
     axis.text.y = element_text(angle = 0, vjust = 0.5),
     axis.title.y = element_text(angle = 90),
-    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = "bold"),
+    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5),
     legend.position = "top"
   ) + NULL
 
@@ -195,11 +194,10 @@ wins_above_expected_bar_dark <- chart |>
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
   theme_cw_dark +
   theme(
-    plot.title = element_text(face = "bold"),
     plot.caption = element_text(hjust = 1),
     axis.title.y = element_text(angle = 90),
     axis.text.y = element_text(angle = 0, vjust = 0.5),
-    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = "bold"),
+    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5),
     legend.position = "top"
   ) +
   NULL
@@ -221,11 +219,10 @@ wins_above_expected_bar_light <- chart |>
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
   theme_cw_light +
   theme(
-    plot.title = element_text(face = "bold"),
     plot.caption = element_text(hjust = 1),
     axis.title.y = element_text(angle = 90),
     axis.text.y = element_text(angle = 0, vjust = 0.5),
-    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = "bold"),
+    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5),
     legend.position = "top"
   ) +
   NULL
@@ -250,11 +247,10 @@ pythagorean_wins_above_expected_scatter <- chart |>
   # ggthemes::theme_stata(scheme = "sj", base_size = 8) +
   theme_cw_dark +
   theme(
-    plot.title = element_text(face = "bold"),
     plot.caption = element_text(hjust = 1),
     axis.text.y = element_text(angle = 0, vjust = 0.5),
     axis.title.y = element_text(angle = 90),
-    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5, face = "bold"),
+    legend.title = element_text(size = 8, hjust = 0, vjust = 0.5),
     legend.position = "top"
   ) + NULL
 

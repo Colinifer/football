@@ -25,7 +25,7 @@ ff_conn_kepler <- ffscrapr::espn_connect(season = year,
 fx.ff_free_agents <- function(player_stats_df = player_stats, league_name = 'Drinkers'){
   ff_team_name <- tibble(
     league = c('Beep Boop', 'Drinkers', 'Kepler', 'Family'),
-    team = c('Rhule Tide', 'Golden Rhule', 'Team Welsh', 'Matt Rhules')
+    team = c('Love Daktually', 'Finding Deebo', 'Team Welsh', 'Hop Skip and a W')
   ) |> 
     filter(league == league_name) |> 
     pull(team)
@@ -63,7 +63,7 @@ fx.ff_free_agents <- function(player_stats_df = player_stats, league_name = 'Dri
                             TRUE ~ on_roster)
     ) |> 
     filter(
-      on_roster == FALSE | franchise_name == ff_team_name
+      on_roster == FALSE # | franchise_name == ff_team_name
     )
   
   return(df)

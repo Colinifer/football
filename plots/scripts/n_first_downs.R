@@ -2,6 +2,11 @@ year <- current_season
 
 my_week <- fx.n_week(pbp_df)
 
+z_score <- function(x) {
+  z_score = (x-mean(x))/sd(x)
+  return(z_score)
+}
+
 # Eckel Rate/Ratio --------------------------------------------------------
 
 team_points <- pbp_df %>% 
@@ -18,9 +23,81 @@ team_points <- pbp_df %>%
   group_by(posteam) %>% 
   summarise(
     total_points_for = sum(posteam_result, na.rm = T)
-  )
+  ) |> 
+  mutate(total_points_for_z_score = z_score(total_points_for)) |> 
+  arrange(-total_points_for_z_score)
+
+pbp_df |> 
+  arrange(old_game_id, play_id) |> 
+  filter(!is.na(posteam)) |> 
+  select(game_id, home_team, away_team, posteam, drive, drive_start_yard_line, drive_end_yard_line) |> 
+  unique() |> 
+  mutate(drive_start_yard_line = ifelse(drive_start_yard_line == 50, paste(posteam, drive_start_yard_line), drive_start_yard_line),
+         drive_end_yard_line = ifelse(drive_end_yard_line == 50, paste(posteam, drive_end_yard_line), drive_end_yard_line)) |> 
+  separate(col = drive_start_yard_line, 
+           sep = ' ',
+           into = c('drive_start_field_side', 'drive_start_yardline')
+  ) |> 
+  separate(col = drive_end_yard_line, 
+           sep = ' ',
+           into = c('drive_end_field_side', 'drive_end_yardline')
+  ) |> 
+  mutate(
+    drive_start_yardline = ifelse(drive_start_field_side == posteam, 100-as.numeric(drive_start_yardline), as.numeric(drive_start_yardline)),
+    drive_end_yardline = ifelse(drive_end_field_side == posteam, 100-as.numeric(drive_end_yardline), as.numeric(drive_end_yardline)),
+    eckel_drive = ifelse(drive_end_yardline <= 40, 1, 0)
+  ) |> 
+  group_by(posteam) |> 
+  summarise(
+    drives = n(),
+    eckel_drive = sum(eckel_drive, na.rm = T)
+  ) |> 
+  mutate(eckel_ratio = eckel_drive/drives) |> 
+  arrange(-eckel_ratio)
+
+pbp_df |> 
+  arrange(old_game_id, play_id) |> 
+  filter(!is.na(posteam)) |> 
+  group_by(posteam) |> 
+  summarise(
+    plays = sum(play, na.rm = T),
+    success = sum(success, na.rm = T)
+  ) |> 
+  mutate(success_rate = success/plays, 
+         success_rate_z_score = (success_rate-mean(success_rate))/sd(success_rate)) |> 
+  arrange(-success_rate_z_score)
+
+pbp_df |> 
+  arrange(old_game_id, play_id) |> 
+  filter(!is.na(posteam)) |> 
+  select(game_id, drive, posteam, 
+         series, series_result, series_success) |> 
+  unique() |> 
+  group_by(posteam) |> 
+  summarise(
+    series = n(),
+    series_success = sum(series_success, na.rm = T)
+  ) |> 
+  mutate(series_success_rate = series_success/series,
+         series_success_rate_percentile_rank = rank(series_success_rate)/length(series_success_rate),
+         series_success_z_score = (series_success_rate-mean(series_success_rate))/sd(series_success_rate)) |> 
+  arrange(-series_success_z_score)
+
+pbp_df |> 
+  arrange(old_game_id, play_id) |> 
+  filter(!is.na(posteam)) |> 
+  select(game_id, drive, posteam, 
+         series, series_result, series_success) |> 
+  unique() |> 
+  summarise(
+    series = n(),
+    series_success = sum(series_success, na.rm = T)
+  ) |> 
+  mutate(series_success_rate = series_success/series) |> 
+  arrange(-series_success_rate)
 
 pbp_df %>% 
+  # filter(season == 2021) |> 
   filter(!is.na(posteam)) %>% 
   mutate(
     eckel_success = ifelse((down == 1 & yardline_100 <= 40) | (yards_gained > 40 & touchdown == 1), 1, 0)

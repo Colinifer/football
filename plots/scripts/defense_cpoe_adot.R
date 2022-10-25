@@ -149,7 +149,7 @@ p_desktop <- p +
     axis.ticks = element_line(color = color_cw[5], size = 0.3),
     axis.ticks.length = unit(2, 'pt'),
     axis.title.y = element_text(angle = 90),
-    plot.title = element_text(size = 12, face = "bold"),
+    plot.title = element_text(size = 12),
     plot.subtitle = element_text(size = 6),
     # plot.margin = margin(1, 1, 1, 1, unit = "cm"),
     panel.background = element_rect(fill = color_cw[2]),
@@ -158,7 +158,7 @@ p_desktop <- p +
     legend.position = "none",
     legend.title = element_blank(),
     legend.text = element_blank(),
-    strip.text = element_text(size = 4, hjust = 0.5, face = "bold")
+    strip.text = element_text(size = 4, hjust = 0.5)
   )
 
 p_mobile <- p +
@@ -170,7 +170,7 @@ p_mobile <- p +
     axis.ticks = element_line(color = color_cw[5], size = 0.3),
     axis.ticks.length = unit(2, 'pt'),
     axis.title.y = element_text(angle = 90),
-    plot.title = element_text(size = 12, face = "bold"),
+    plot.title = element_text(size = 12),
     plot.subtitle = element_text(size = 6),
     plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
     panel.background = element_rect(fill = color_cw[2]),
@@ -179,7 +179,7 @@ p_mobile <- p +
     legend.position = "none",
     legend.title = element_blank(),
     legend.text = element_blank(),
-    strip.text = element_text(size = 4, hjust = 0.5, face = "bold")
+    strip.text = element_text(size = 4, hjust = 0.5)
   )
 
 # save the plot

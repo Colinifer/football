@@ -1,4 +1,4 @@
-current_season <- 2021
+current_season <- year
 
 nfl_colors <- tibble(
   NFL_pri %>% names(), 

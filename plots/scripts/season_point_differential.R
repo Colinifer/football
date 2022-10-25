@@ -192,5 +192,5 @@ brand_plot(p_dark,  asp = 16/10, save_name = glue('plots/desktop/team_tiers/seas
 brand_plot(p_light,  asp = 16/10, save_name = glue('plots/desktop/team_tiers/season_point_diff_{year}_light.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 
-# rm(clean_all_pbp_df, all_point_diff, best_worst_teams, p)
+rm(clean_all_pbp_df, all_point_diff, best_worst_teams, p, p_dark, p_light)
 # })

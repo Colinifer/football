@@ -1,26 +1,26 @@
 pkgs <- c(
-  "ggplot2",
-  "gridExtra",
-  "grid",
-  "png",
-  "cowplot",
-  "colorspace",
-  "extrafont",
-  "RCurl",
-  "ggpmisc",
-  "magick",
-  "ggimage",
-  "shadowtext",
-  "ggrepel",
-  "scales",
-  "magrittr",
-  "tidyverse",
-  "gganimate",
-  "gt",
-  "showtext",
-  "jsonlite",
-  "curl",
-  "viridis"
+  'ggplot2',
+  'gridExtra',
+  'grid',
+  'png',
+  'cowplot',
+  'colorspace',
+  'extrafont',
+  'RCurl',
+  'ggpmisc',
+  'magick',
+  'ggimage',
+  'shadowtext',
+  'ggrepel',
+  'scales',
+  'magrittr',
+  'tidyverse',
+  'gganimate',
+  'gt',
+  'showtext',
+  'jsonlite',
+  'curl',
+  'viridis'
 )
 installed_packages <- pkgs %in%
   rownames(installed.packages())
@@ -33,22 +33,22 @@ lapply(pkgs, library, character.only = TRUE)
 extrafont::loadfonts(quiet = TRUE)
 
 # Import fonts from Google
-# sysfonts::font_add_google(name = "Chivo", family = "chivo")
-# sysfonts::font_add_google(name = "Montserrat", family = "montserrat")
+# sysfonts::font_add_google(name = 'Chivo', family = 'chivo')
+# sysfonts::font_add_google(name = 'Montserrat', family = 'montserrat')
 # showtext_auto()
 
 # Create color palette
 color_cw <-
   c(
-    "#1D2329",
-    "#2C343A",
-    "#38424B",
-    "#16191C",
-    "#e0e0e0",
-    "#1AB063",
-    "#0580DC",
-    "#D64964",
-    "#959595"
+    'dark_grey_1' = '#1D2329',
+    'dark_grey_2' = '#2C343A',
+    'dark_grey_3' = '#38424B',
+    'black' = '#16191C',
+    'white' = '#e0e0e0',
+    'green' = '#1AB063',
+    'blue' = '#0580DC',
+    'red' = '#D64964',
+    'grey' = '#959595'
   )
 
 # functions to retrieve images
@@ -78,7 +78,7 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, dark = TRUE
         rasterGrob(
           image = image_read(wordmark_path(facet_id[i])) %>% 
             image_background(color_cw[3]) %>% 
-            image_border(color_cw[3], "30x30"),
+            image_border(color_cw[3], '30x30'),
           vp = viewport(height = .8, width = .6)
         )
       tot_tree <- grobTree(team_wd)
@@ -105,8 +105,8 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, dark = TRUE
   
   # showtext_auto()
   
-  author_txt <- textGrob(data_author, x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=ifelse(dark == TRUE, color_cw[5], color_cw[1]), fontfamily="Montserrat", fontsize=6), hjust=0)
-  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=ifelse(dark == TRUE, color_cw[5], color_cw[1]), fontfamily="Montserrat", fontsize=6), hjust=1)
+  author_txt <- textGrob(data_author, x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=ifelse(dark == TRUE, color_cw[5], color_cw[1]), fontfamily='Montserrat', fontsize=6), hjust=0)
+  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=ifelse(dark == TRUE, color_cw[5], color_cw[1]), fontfamily='Montserrat', fontsize=6), hjust=1)
   # footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c('grey95', 'darkblue'), space = 'rgb')(1000)), draw = F)
   footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c(ifelse(dark == TRUE, color_cw[1], '#fcfcfc')), space = 'rgb')(1000)), draw = F)
   footer <- grobTree(footer_bg, author_txt, data_txt)
@@ -161,24 +161,24 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, dark = TRUE
 # main cw theme
 theme_cw_dark <-  theme(
   line = element_line(lineend = 'round', color = color_cw[1]),
-  text = element_text(family = "Montserrat", color = color_cw[5]),
+  text = element_text(family = 'Montserrat', color = color_cw[5]),
   plot.background = element_rect(fill = color_cw[1], color = 'transparent'),
   panel.border = element_rect(color = color_cw[1], fill = NA),
   panel.background = element_rect(fill = color_cw[2], color = 'transparent'),
   axis.ticks = element_line(color = color_cw[5], size = 0.5),
   axis.ticks.length = unit(2.75, 'pt'),
-  axis.title = element_text(family = "Chivo", face = "bold", size = 8),
+  axis.title = element_text(family = 'Chivo', face = 'bold', size = 8),
   axis.title.y = element_text(angle = 90, vjust = 0.5),
   axis.text = element_text(size = 7, color = color_cw[5]),
-  plot.title = element_text(family = "Chivo", face = "bold", size = 14),
+  plot.title = element_text(family = 'Chivo', face = 'bold', size = 14),
   plot.subtitle = element_text(size = 8),
-  plot.caption = element_text(family = "Montserrat", size = 5),
+  plot.caption = element_text(family = 'Montserrat', size = 5),
   legend.background = element_rect(fill = color_cw[2], color = color_cw[5]),
   legend.key = element_blank(),
   panel.grid.minor = element_blank(),
   panel.grid.major = element_line(color = color_cw[4], size = 0.3),
   strip.background = element_rect(fill = color_cw[3]),
-  strip.text = element_text(size = 6, color = color_cw[5], family = "Chivo"),
+  strip.text = element_text(size = 6, color = color_cw[5], family = 'Chivo'),
   legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
   panel.spacing.x = unit(0.1, 'lines')
@@ -186,24 +186,24 @@ theme_cw_dark <-  theme(
 
 theme_cw_light <-  theme(
   line = element_line(lineend = 'round', color = color_cw[5]),
-  text = element_text(family = "Montserrat", color = color_cw[1]),
+  text = element_text(family = 'Montserrat', color = color_cw[1]),
   plot.background = element_rect(fill = '#fcfcfc', color = 'transparent'),
   panel.border = element_rect(color = color_cw[5], fill = NA),
   panel.background = element_rect(fill = color_cw[5], color = 'transparent'),
   axis.ticks = element_line(color = color_cw[1], size = 0.5),
   axis.ticks.length = unit(2.75, 'pt'),
-  axis.title = element_text(family = "Chivo", face = "bold", size = 8, color = color_cw[3]),
+  axis.title = element_text(family = 'Chivo', face = 'bold', size = 8, color = color_cw[3]),
   axis.title.y = element_text(angle = 90, vjust = 0.5),
   axis.text = element_text(size = 7, color = color_cw[1]),
-  plot.title = element_text(family = "Chivo", face = "bold", size = 14),
+  plot.title = element_text(family = 'Chivo', face = 'bold', size = 14),
   plot.subtitle = element_text(size = 8, color = color_cw[3]),
-  plot.caption = element_text(family = "Montserrat", size = 5),
+  plot.caption = element_text(family = 'Montserrat', size = 5),
   legend.background = element_rect(fill = color_cw[5], color = color_cw[5]),
   legend.key = element_blank(),
   panel.grid.minor = element_blank(),
   panel.grid.major = element_line(color = '#fcfcfc', size = 0.3),
   strip.background = element_rect(fill = color_cw[5]),
-  strip.text = element_text(size = 6, color = color_cw[3], family = "Chivo"),
+  strip.text = element_text(size = 6, color = color_cw[3], family = 'Chivo'),
   legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
   panel.spacing.x = unit(0.1, 'lines')
@@ -212,7 +212,7 @@ theme_cw_light <-  theme(
 # StatButler theme for animations
 vid_theme_SB <-  theme(
   line = element_line(lineend = 'round', color='darkblue'),
-  text = element_text(family = "chivo", color='darkblue'),
+  text = element_text(family = 'chivo', color='darkblue'),
   plot.background = element_rect(fill = 'grey95', color = 'transparent'),
   panel.border = element_rect(color = 'darkblue', fill = NA),
   panel.background = element_rect(fill = 'white', color = 'transparent'),
@@ -229,7 +229,7 @@ vid_theme_SB <-  theme(
   panel.grid.major = element_line(color='grey70', size = 0.9),
   axis.title.y = element_text(angle = 0, vjust = 0.5),
   strip.background = element_blank(),
-  strip.text = element_text(size = 18, color = 'darkblue', family = "chivo")
+  strip.text = element_text(size = 18, color = 'darkblue', family = 'chivo')
 )
 				     
 table_theme_SB <- function (data) {
@@ -304,8 +304,8 @@ make_gradient <- function(deg, n = 500, col = color_cw[1], corner = F) {
   mat <- matrix(data = alpha(col, mat/(n+1)), ncol = n)
   grid::rasterGrob(
     image = mat,
-    width = unit(1, "npc"),
-    height = unit(1, "npc"), 
+    width = unit(1, 'npc'),
+    height = unit(1, 'npc'), 
     interpolate = TRUE
   )
 }
@@ -351,7 +351,7 @@ grob_img_adj<-function(img_url, alpha = 0, whitewash = 0) {
 
 # used to create branded videos
 Scene2 <- ggproto(
-  "Scene2",
+  'Scene2',
   gganimate:::Scene,
   plot_frame = function(self, plot, i, newpage = is.null(vp), vp = NULL, widths = NULL, heights = NULL, ...) {
     plot <- self$get_frame(plot, i)
@@ -372,9 +372,9 @@ Scene2 <- ggproto(
     if (!is.null(heights)) plot$heights <- heights
     if (newpage) grid.newpage()
     grDevices::recordGraphics(
-      requireNamespace("gganimate", quietly = TRUE),
+      requireNamespace('gganimate', quietly = TRUE),
       list(),
-      getNamespace("gganimate")
+      getNamespace('gganimate')
     )
     if (is.null(vp)) {
       grid.draw(plot)
@@ -433,18 +433,18 @@ body(animate_SB) <- body(animate_SB) %>%
 
 color_SB <-
   c(
-    "#ff7f00", # orange
-    "#9932cc", # purple
-    "#8cff72", # green
-    "#00008b", # blue
-    "#51dbd8", # turqoise
-    "#674b00", # gold
-    "#ff66cf", # pink
-    "#8f8f8f",
-    "#ff0000",
-    "#e1ed00",
-    "#0b5209",
-    "#636363"
+    '#ff7f00', # orange
+    '#9932cc', # purple
+    '#8cff72', # green
+    '#00008b', # blue
+    '#51dbd8', # turqoise
+    '#674b00', # gold
+    '#ff66cf', # pink
+    '#8f8f8f',
+    '#ff0000',
+    '#e1ed00',
+    '#0b5209',
+    '#636363'
   )
 
 NFL_pri <- c(

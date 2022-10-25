@@ -179,48 +179,52 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
            headshot_url)
   
   # Participation data ------------------------------------------------------
-  participation_df <- nflreadr::load_participation(pbp_season, 
-                                                   include_pbp = F)
-  
-  offense_snaps <- participation_df |> 
-    select(old_game_id,
-           play_id,
-           offense_players
-    ) |> 
-    separate(col = offense_players, 
-             sep = ';',
-             into = paste('offense_on', as.character(c(1:11)), sep = '_') 
-             ) |> 
-    pivot_longer(offense_on_1:offense_on_11,
-                 # names_to = "team",
-                 values_to = "player") |> 
-    filter(!is.na(player) & player != '') |> 
-    # group_by(old_game_id, player) |> 
-    # count() |> 
-    suppressWarnings() |> 
-    left_join(pbp,by = c('old_game_id', 'play_id')) |> 
-    group_by(old_game_id, player, play_type) |> 
-    count()
-  
-  defense_snaps <- participation_df |> 
-    select(old_game_id,
-           play_id,
-           defense_players
-    ) |> 
-    separate(col = defense_players, 
-             sep = ';',
-             into = paste('defense_on', as.character(c(1:11)), sep = '_') 
-    ) |> 
-    pivot_longer(defense_on_1:defense_on_11,
-                 # names_to = "team",
-                 values_to = "player") |> 
-    filter(!is.na(player) & player != '') |> 
-    # group_by(old_game_id, player) |> 
-    # count() |> 
-    suppressWarnings() |> 
-    left_join(pbp,by = c('old_game_id', 'play_id')) |> 
-    group_by(old_game_id, player, play_type) |> 
-    count()
+  if (all(pbp_season >= 2016, na.rm = TRUE)) {
+    participation_df <- nflreadr::load_participation(pbp_season, 
+                                 include_pbp = F)
+    
+    offense_snaps <- participation_df |> 
+      select(old_game_id,
+             play_id,
+             offense_players
+      ) |> 
+      separate(col = offense_players, 
+               sep = ';',
+               into = paste('offense_on', as.character(c(1:11)), sep = '_') 
+      ) |> 
+      pivot_longer(offense_on_1:offense_on_11,
+                   # names_to = "team",
+                   values_to = "player") |> 
+      filter(!is.na(player) & player != '') |> 
+      # group_by(old_game_id, player) |> 
+      # count() |> 
+      suppressWarnings() |> 
+      left_join(pbp,by = c('old_game_id', 'play_id')) |> 
+      filter(play_type != 'no_play') |> 
+      group_by(old_game_id, player, play_type, qb_dropback, pass_attempt, complete_pass, sack, penalty) |> 
+      count()
+    
+    defense_snaps <- participation_df |> 
+      select(old_game_id,
+             play_id,
+             defense_players
+      ) |> 
+      separate(col = defense_players, 
+               sep = ';',
+               into = paste('defense_on', as.character(c(1:11)), sep = '_') 
+      ) |> 
+      pivot_longer(defense_on_1:defense_on_11,
+                   # names_to = "team",
+                   values_to = "player") |> 
+      filter(!is.na(player) & player != '') |> 
+      # group_by(old_game_id, player) |> 
+      # count() |> 
+      suppressWarnings() |> 
+      left_join(pbp,by = c('old_game_id', 'play_id')) |> 
+      filter(play_type != 'no_play') |> 
+      group_by(old_game_id, player, play_type) |> 
+      count()
+  }
   
   # Prepare data ------------------------------------------------------------
   
@@ -292,9 +296,10 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::filter(.data$play_type %in% c("pass", "qb_spike")) %>%
     dplyr::group_by(.data$passer_player_id, .data$week, .data$season) %>% 
     dplyr::summarize(
-      passing_yards_after_catch = sum((.data$passing_yards - .data$air_yards) * .data$complete_pass, na.rm = TRUE),
       name_pass = dplyr::first(.data$passer_player_name),
       team_pass = dplyr::first(.data$posteam),
+      dropbacks = sum(qb_dropback, na.rm = T),
+      passing_yards_after_catch = sum((.data$passing_yards - .data$air_yards) * .data$complete_pass, na.rm = TRUE),
       passing_yards = sum(.data$passing_yards, na.rm = TRUE),
       passing_tds = sum(.data$touchdown == 1 & .data$td_team == .data$posteam & .data$complete_pass == 1),
       interceptions = sum(.data$interception),
@@ -359,6 +364,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       team_rush = dplyr::first(.data$posteam),
       yards = sum(.data$rushing_yards, na.rm = TRUE),
       tds = sum(.data$td_player_id == .data$rusher_player_id, na.rm = TRUE),
+      scrambles = sum(.data$qb_scramble, na.rm = T),
       carries = dplyr::n(),
       rushing_fumbles = sum(.data$fumble == 1 & .data$fumbled_1_player_id == .data$rusher_player_id & is.na(.data$lateral_rusher_player_id)),
       rushing_fumbles_lost = sum(.data$fumble_lost == 1 & .data$fumbled_1_player_id == .data$rusher_player_id & is.na(.data$lateral_rusher_player_id)),
@@ -591,12 +597,12 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
                 by = c('game_id', 'week')) %>% 
       mutate(
         name_snaps = paste0(substr(first_name, 1, 1), '.', last_name),
-        offense_snaps = offense_snaps %>% as.integer(),
-        offense_pct = offense_pct,
-        defense_snaps = defense_snaps %>% as.integer(),
-        defense_pct = defense_pct,
-        st_snaps = st_snaps %>% as.integer(),
-        st_pct = st_pct
+        offense_snaps = .data$offense_snaps %>% as.integer(),
+        offense_pct = .data$offense_pct,
+        defense_snaps = .data$defense_snaps %>% as.integer(),
+        defense_pct = .data$defense_pct,
+        st_snaps = .data$st_snaps %>% as.integer(),
+        st_pct = .data$st_pct
       ) %>% 
       select(
         player_id = gsis_id,
@@ -613,14 +619,47 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
              season = as.integer(NA),
              name_snaps = as.character(NA))
   }
-
   
+  if (length(which(data_seasons >= 2016)) > 0) {
+    routes_df <- nflreadr::load_participation(seasons = data_seasons[data_seasons >= 2016]) %>%
+      select(old_game_id,
+             play_id,
+             offense_players
+      ) |> 
+      separate(col = offense_players, 
+               sep = ';',
+               into = paste('offense_on', as.character(c(1:11)), sep = '_') 
+      ) |> 
+      pivot_longer(offense_on_1:offense_on_11,
+                   # names_to = "team",
+                   values_to = "player_id") |> 
+      filter(!is.na(player_id) & player_id != '') |> 
+      # group_by(old_game_id, player) |> 
+      # count() |> 
+      suppressWarnings() |> 
+      left_join(pbp,by = c('old_game_id', 'play_id')) |> 
+      filter(play_type != 'no_play') |> 
+      # group_by(season, old_game_id, week, player_id, play_type, qb_dropback, pass_attempt, complete_pass, sack, penalty) |> 
+      # count() |> 
+      left_join(roster_df %>%
+                  select(season, gsis_id, first_name, last_name, position),
+                by = c('season', 'player_id' = 'gsis_id')) |> 
+      mutate(route_run = case_when(position %in% c('RB', 'TE', 'WR') & qb_dropback == 1 ~ 1,
+                                   TRUE ~ 0)
+             ) |> 
+      group_by(player_id, first_name, last_name, position, week, season) |> 
+      summarise(routes_run = sum(route_run, na.rm = T)) |> 
+      filter(position %in% c('QB', 'RB', 'TE', 'WR') &
+               !is.na(player_id))
+  }
+      
   # Combine all stats -------------------------------------------------------
   
   # combine all the stats together
   player_df <- pass_df %>%
     dplyr::full_join(rush_df, by = c("player_id", "week", "season")) %>%
     dplyr::full_join(rec_df, by = c("player_id", "week", "season")) %>%
+    dplyr::full_join(routes_df, by = c("player_id", "week", "season")) %>%
     dplyr::full_join(st_tds, by = c("player_id", "week", "season")) %>% 
     dplyr::full_join(snaps_df, by = c("player_id", "week", "season")) %>% 
     dplyr::left_join(s_type, by = c("season", "week")) %>%
@@ -659,7 +698,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       "rushing_first_downs", "rushing_epa", "rushing_2pt_conversions", "hvt",
       
       # receiving stats
-      "receptions", "targets", "receiving_yards", "receiving_tds", "receiving_fumbles",
+      "routes_run", "receptions", "targets", "receiving_yards", "receiving_tds", "receiving_fumbles",
       "receiving_fumbles_lost", "receiving_air_yards", "receiving_yards_after_catch",
       "receiving_first_downs", "receiving_epa", "receiving_2pt_conversions", "racr",
       "target_share", "air_yards_share", "wopr", "hvt",
@@ -671,7 +710,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::filter(!is.na(.data$player_id))
   
   player_df_nas <- is.na(player_df)
-  epa_index <- which(dimnames(player_df_nas)[[2]] %in% c("season_type", "game_id", "week", "passing_epa", "rushing_epa", "receiving_epa", "dakota", "racr", "target_share", "air_yards_share", "wopr", "pacr"))
+  epa_index <- which(dimnames(player_df_nas)[[2]] %in% c("player_name", "recent_team", "season_type", "game_id", "week", "passing_epa", "rushing_epa", "receiving_epa", "dakota", "racr", "target_share", "air_yards_share", "wopr", "pacr"))
   player_df_nas[,epa_index] <- c(FALSE)
   
   player_df[player_df_nas] <- 0
@@ -738,6 +777,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         hvt = sum(.data$hvt, na.rm = TRUE),
         
         # receiving
+        # routes_run = sum(.data$qb_dropbacks),
         receptions = sum(.data$receptions),
         targets = sum(.data$targets),
         receiving_yards = sum(.data$receiving_yards),
@@ -1289,45 +1329,47 @@ add_xyac_mod <- function(pbp, ...) {
     # testing only
     # pbp <- g
     
-    pbp <- pbp %>% dplyr::select(-tidyselect::contains('xyac'))
+    source('https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_additional_functions.R')
+    
+    pbp <- pbp |> dplyr::select(-tidyselect::contains('xyac'))
     
     # for joining at the end
-    pbp <- pbp %>%
+    pbp <- pbp |>
       dplyr::mutate(index = 1:dplyr::n())
     
     # prepare_xyac_data helper function shown below
-    passes <- prepare_xyac_data(pbp) %>%
+    passes <- prepare_xyac_data(pbp) |>
       dplyr::filter(.data$valid_pass == 1, .data$distance_to_goal != 0)
     
     if (!nrow(passes) == 0) {
       # user_message("Computing xyac...", "todo")
-      join_data <- passes %>%
+      join_data <- passes |>
         dplyr::select(
           "index", "distance_to_goal", "season", "week", "home", "posteam", "roof",
           "half_seconds_remaining", "down", "ydstogo",
           "posteam_timeouts_remaining", "defteam_timeouts_remaining",
           "original_spot" = "yardline_100", "original_ep" = "ep", "air_epa", "air_yards"
-        ) %>%
+        ) |>
         dplyr::mutate(
           down = as.integer(.data$down),
           ydstogo = as.integer(.data$ydstogo),
           original_ydstogo = .data$ydstogo
-        ) %>%
+        ) |>
         dplyr::select("index":"ydstogo", "original_ydstogo", dplyr::everything())
       
       xyac_vars <-
         stats::predict(
           fastrmodels::xyac_model,
-          as.matrix(passes %>% xyac_model_select())
-        ) %>%
-        tibble::as_tibble() %>%
-        dplyr::rename(prob = "value") %>%
+          as.matrix(passes |> xyac_model_select())
+        ) |>
+        tibble::as_tibble() |>
+        dplyr::rename(prob = "value") |>
         dplyr::bind_cols(
           tibble::tibble(
             "yac" = rep_len(-5:70, length.out = nrow(passes) * 76),
             "index" = rep(passes$index, times = rep_len(76, length.out = nrow(passes)))
-          ) %>%
-            dplyr::left_join(join_data, by = "index") %>%
+          ) |>
+            dplyr::left_join(join_data, by = "index") |>
             dplyr::mutate(
               half_seconds_remaining = dplyr::if_else(
                 .data$half_seconds_remaining <= 6,
@@ -1335,8 +1377,8 @@ add_xyac_mod <- function(pbp, ...) {
                 .data$half_seconds_remaining - 6
               )
             )
-        ) %>%
-        dplyr::group_by(.data$index) %>%
+        ) |>
+        dplyr::group_by(.data$index) |>
         dplyr::mutate(
           max_loss = dplyr::if_else(.data$distance_to_goal < 95, -5, .data$distance_to_goal - 99),
           max_gain = dplyr::if_else(.data$distance_to_goal > 70, 70, .data$distance_to_goal),
@@ -1350,9 +1392,9 @@ add_xyac_mod <- function(pbp, ...) {
           ),
           # get end result for each possibility
           yardline_100 = .data$distance_to_goal - .data$yac
-        ) %>%
-        dplyr::filter(.data$yac >= .data$max_loss, .data$yac <= .data$max_gain) %>%
-        dplyr::select(-.data$cum_prob) %>%
+        ) |>
+        dplyr::filter(.data$yac >= .data$max_loss, .data$yac <= .data$max_gain) |>
+        dplyr::select(-.data$cum_prob) |>
         dplyr::mutate(
           posteam_timeouts_pre = .data$posteam_timeouts_remaining,
           defeam_timeouts_pre = .data$defteam_timeouts_remaining,
@@ -1377,23 +1419,23 @@ add_xyac_mod <- function(pbp, ...) {
           ),
           # ydstogo can't be bigger than yardline
           ydstogo = dplyr::if_else(.data$ydstogo >= .data$yardline_100, as.integer(.data$yardline_100), as.integer(.data$ydstogo))
-        ) %>%
+        ) |>
         dplyr::ungroup()
       
-      pbp <- pbp %>%
-        dplyr::left_join(xyac_vars, by = "index") %>%
+      pbp <- pbp |>
+        dplyr::left_join(xyac_vars, by = "index") |>
         dplyr::select(-.data$index)
       
       # message_completed("added xyac variables", ...)
     } else { # means no valid pass plays in the pbp
-      pbp <- pbp %>%
+      pbp <- pbp |>
         dplyr::mutate(
           xyac_epa = NA_real_,
           xyac_mean_yardage = NA_real_,
           xyac_median_yardage = NA_real_,
           xyac_success = NA_real_,
           xyac_fd = NA_real_
-        ) %>%
+        ) |>
         dplyr::select(-.data$index)
       # user_message("No non-NA values for xyac calculation detected. xyac variables set to NA", "info")
     }
