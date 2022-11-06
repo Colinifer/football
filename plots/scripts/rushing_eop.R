@@ -46,12 +46,12 @@ ep$ep_weekly |>
     total_fantasy_points_diff = total_fantasy_points - total_fantasy_points_exp,
   ) |> 
   left_join(
-    fx.ff_free_agents(player_stats, 'Drinkers') |> 
+    fx.ff_free_agents(player_stats, 'Beep Boop') |> 
       select(player_id, franchise_name) |> 
       mutate(roster_status = 'free_agent') |> 
       rbind(
         fantasy_rosters |> 
-          filter(league == 'Drinkers' & franchise_name != 'Finding Deebo') |> 
+          filter(league == 'Beep Boop' & franchise_name != 'Love Daktually') |> 
           select(espn_id = player_id, franchise_name) |> 
           left_join(roster_df |> 
                       mutate(espn_id = as.numeric(espn_id)) |> 
@@ -60,8 +60,8 @@ ep$ep_weekly |>
           mutate(roster_status = 'on_roster') |> 
           rbind(
             fantasy_rosters |>
-              filter(league == 'Drinkers' &
-                       franchise_name == 'Finding Deebo') |>
+              filter(league == 'Beep Boop' &
+                       franchise_name == 'Love Daktually') |>
               select(espn_id = player_id, franchise_name) |>
               left_join(
                 roster_df |>
