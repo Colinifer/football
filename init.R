@@ -1,6 +1,8 @@
 # Packages & Init Setup ---------------------------------------------------
 
 # devtools::install_github("nflverse/nflfastR")
+# devtools::install_github("ffverse/ffopportunity")
+# devtools::install_github("dynastyprocess/ffpros")
 # devtools::install_github("guga31bb/nfl4th")
 # devtools::install_github("saiemgilani/cfbfastR")
 # devtools::install_github("dynastyprocess/ffscrapr")
