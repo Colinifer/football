@@ -92,9 +92,11 @@ initR::fx.load_packages(pkgs) |>
 options(tibble.print_min=25)
 `%notin%` <- Negate(`%in%`)
 
+
 # Initialize working directory --------------------------------------------
 
 fx.setdir(proj_name)
+
 
 # Create standard objects -------------------------------------------------
 
@@ -118,18 +120,21 @@ map(.x = source_files, ~source(.x, echo = F)) |>
   invisible()
 
 
-# Based on NAS sleep schedule
-# if ((
-#   Sys.Date() %>% lubridate::wday() > 1 & # If day is greater than Sunday
-#   Sys.Date() %>% lubridate::wday() < 6 & # and day is less than Saturday
-#   Sys.time() %>% format("%H") %>% as.integer() >= 17 & # and greater than 5PM
-#   Sys.time() %>% format("%H") %>% as.integer() <= 23 # and less than 12AM
-# ) == TRUE) {
-#   con <- fx.db_con()
-#   # source("../initR/con.R")
-#   dbListTables(con)
-#   dbDisconnect(con)
-# }
+# Update DBs --------------------------------------------------------------
+
+future::plan("multisession")
+nflfastR::update_db(
+  tblname = "nflfastR_pbp",
+  force_rebuild = FALSE,
+  db_connection = initR::fx.db_con(x.host = 'localhost')
+)
+
+cfbfastR::update_cfb_db(
+  tblname = 'cfbfastR_pbp',
+  force_rebuild = FALSE,
+  db_connection = initR::fx.db_con(x.host = 'localhost')
+)
+
 
 # Create variables & dataframes -------------------------------------------
 # sleeper_players_df <- fx.get_sleeper_api_players()
@@ -162,6 +167,14 @@ pbp_df <- tbl(con, 'nflfastR_pbp') |>
   collect() # |> 
   # fix_rookies()
 dbDisconnect(con)
+
+# inherit update_db arguments
+# Not working before 2013
+update_player_stats_db()
+update_player_stats_weekly_db()
+# Not working before 2006
+update_team_stats_db()
+update_team_stats_weekly_db()
 
 
 source('init_ff.R')
@@ -240,7 +253,6 @@ matchup_df <- schedule_df |>
   arrange(old_game_id)
 
 
-# pbp_df <- readRDS(url("https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_2020.rds?raw=true"))
 team_stats <- pbp_df |>
   calculate_team_stats_mod() |>
   left_join(
@@ -261,6 +273,7 @@ team_stats <- pbp_df |>
         defense_snaps = n()
       )
   )
+
 
 team_stats_weekly <- pbp_df |> 
   calculate_team_stats_mod(weekly = TRUE) |> 
@@ -285,35 +298,26 @@ team_stats_weekly <- pbp_df |>
     by = c('team', 'game_id')
   )
 
+
 player_stats <- pbp_df |> 
   calculate_player_stats_mod() 
 
+
 player_stats_weekly <- pbp_df |> 
   calculate_player_stats_mod(weekly = TRUE)
+
 
 ff_free_agents <- fx.ff_free_agents(player_stats, 'Beep Boop')
 
 
 
-# Update DBs --------------------------------------------------------------
 
-future::plan("multisession")
-nflfastR::update_db(
-  tblname = "nflfastR_pbp",
-  force_rebuild = FALSE,
-  db_connection = initR::fx.db_con(x.host = 'localhost')
-)
+# Update Backuo DBs -------------------------------------------------------
 
 nflfastR::update_db(
   tblname = "nflfastR_pbp",
   force_rebuild = FALSE,
   db_connection = initR::fx.db_con()
-)
-
-cfbfastR::update_cfb_db(
-  tblname = 'cfbfastR_pbp',
-  force_rebuild = FALSE,
-  db_connection = initR::fx.db_con(x.host = 'localhost')
 )
 
 cfbfastR::update_cfb_db(
