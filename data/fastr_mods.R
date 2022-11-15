@@ -855,7 +855,7 @@ update_player_stats_weekly_db <- function(con = fx.db_con(x.host = 'localhost'),
   on.exit(dbDisconnect(con))
   
   table <- 'nflfastR_player_stats_weekly'
-  
+    
   existing_ids <- tbl(con, table) |>
     filter(season == nflreadr::get_current_season()) |>
     select(game_id) |>
@@ -873,6 +873,10 @@ update_player_stats_weekly_db <- function(con = fx.db_con(x.host = 'localhost'),
     filtered_delete_game_ids <- filtered_pbp |> 
       pull(game_id) |> 
       unique()
+    
+    if (dbExistsTable(con, table) == FALSE){
+      dbCreateTable(con, table, player_stats_weekly)
+    }
     
     dbExecute(con, 
               glue('DELETE FROM "{table}" WHERE game_id IN ({paste0(as.character(paste0("\'", filtered_delete_game_ids, "\'")), collapse = ", ")});')
@@ -1422,14 +1426,23 @@ update_team_stats_weekly_db <- function(con = fx.db_con(x.host = 'localhost'), p
     
     delete_game_ids <- team_stats_weekly |> pull(game_id) |> unique()
     
+    if (dbExistsTable(con, table) == FALSE){
+      dbCreateTable(con, table, team_stats_weekly)
+    }
+    
     dbExecute(con, 
               glue('DELETE FROM "{table}" WHERE game_id IN ({paste0(as.character(paste0("\'", filtered_delete_game_ids, "\'")), collapse = ", ")});')
               )
     
-    dbWriteTable(con, table, team_stats_weekly, append = TRUE)
+    dbWriteTable(con, 
+                 table, 
+                 team_stats_weekly, 
+                 append = TRUE)
+    
   } else {
-    print('Player Stats is already up-to-date!')
+    print('Team Stats is already up-to-date!')
   }
+  
   on.exit(dbDisconnect(con))
 }
 
@@ -1438,7 +1451,7 @@ update_team_stats_db <- function(con = fx.db_con(x.host = 'localhost'), pbp = pb
   
   table <- 'nflfastR_team_stats'
   
-  player_stats <- pbp |> 
+  team_stats <- pbp |> 
     calculate_team_stats_mod(weekly = FALSE) |> 
     mutate(season = unique(pbp$season)) |> 
     select(season, everything())
@@ -1447,13 +1460,17 @@ update_team_stats_db <- function(con = fx.db_con(x.host = 'localhost'), pbp = pb
     pull(season) |> 
     unique()
   
+  if (dbExistsTable(con, table) == FALSE){
+    dbCreateTable(con, table, team_stats)
+  }
+  
   dbExecute(con, 
             glue('DELETE FROM "{table}" WHERE season IN ({paste0(as.character(paste0("\'", delete_seasons, "\'")), collapse = ", ")});')
   )
   
   dbWriteTable(con, 
                table, 
-               player_stats, 
+               team_stats, 
                append = TRUE)
 }
 
