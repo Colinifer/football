@@ -892,7 +892,7 @@ update_player_stats_db <- function(con = fx.db_con(x.host = 'localhost'), pbp = 
   
   player_stats <- pbp |> 
     calculate_player_stats_mod(weekly = FALSE) |> 
-    mutate(season = unique(pbp$season)) |> 
+    mutate(season = unique(pbp$season[1])) |> 
     select(season, everything())
   
   delete_seasons <- pbp |> 

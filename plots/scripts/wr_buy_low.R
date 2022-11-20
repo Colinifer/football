@@ -19,15 +19,11 @@ abline(h = 0, lty = 2)
 
 summary(receiver_model)
 
-receiver_model$coefficients['(Intercept)']
-receiver_model$coefficients['target_share']
-receiver_model$coefficients['receiving_air_yards']
-receiver_model$coefficients['wopr']
-# 
+
 # receiver_stats_model |> write_csv('~/Desktop/receiver_stats.csv')
 
 receiver_stats_model |> 
   mutate(
-    exp_fantasy_points = receiver_model$coefficients['(Intercept)'] + receiver_model$coefficients['target_share']*target_share + receiver_model$coefficients['receiving_air_yards']*receiving_air_yards + receiver_model$coefficients['wopr']*wopr
-  ) |> 
-  arrange(-exp_fantasy_points)
+    exp_fantasy_points = predict(receiver_model, cur_data()),
+    fantasy_point_delta = fantasy_points_half_ppr - exp_fantasy_points) |> 
+  arrange(fantasy_point_delta)

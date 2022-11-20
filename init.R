@@ -312,17 +312,84 @@ ff_free_agents <- fx.ff_free_agents(player_stats, 'Beep Boop')
 
 
 
-# Update Backuo DBs -------------------------------------------------------
+# Update DBs -------------------------------------------------------
 
-nflfastR::update_db(
-  tblname = "nflfastR_pbp",
-  force_rebuild = FALSE,
-  db_connection = initR::fx.db_con()
-)
 
-cfbfastR::update_cfb_db(
-  tblname = 'cfbfastR_pbp',
-  force_rebuild = FALSE,
-  db_connection = initR::fx.db_con()
-)
+# Maverick
+  nflfastR::update_db(
+    tblname = "nflfastR_pbp",
+    force_rebuild = FALSE,
+    db_connection = initR::fx.db_con(x.host = 'Maverick.local')
+  )
+  cfbfastR::update_cfb_db(
+    tblname = 'cfbfastR_pbp',
+    force_rebuild = FALSE,
+    db_connection = initR::fx.db_con(x.host = 'Maverick.local')
+  )
+
+  
+  
+# Moose
+  
+  # nflfastR::update_db(
+  #   tblname = "nflfastR_pbp",
+  #   force_rebuild = FALSE,
+  #   db_connection = initR::fx.db_con(x.host = 'Moose.local')
+  # )
+  # cfbfastR::update_cfb_db(
+  #   tblname = 'cfbfastR_pbp',
+  #   force_rebuild = FALSE,
+  #   db_connection = initR::fx.db_con(x.host = 'Moose.local')
+  # )
+  
+  nflfastR::update_db(
+    tblname = "nflfastR_pbp",
+    force_rebuild = FALSE,
+    db_connection = initR::fx.db_con(x.port = '4433')
+  )
+  cfbfastR::update_cfb_db(
+    tblname = 'cfbfastR_pbp',
+    force_rebuild = FALSE,
+    db_connection = initR::fx.db_con(x.port = '4433')
+  )
+  update_player_stats_db(con = initR::fx.db_con(x.port = '4433'),
+                         pbp = pbp_df |> filter(season == season))
+  update_player_stats_weekly_db(con = initR::fx.db_con(x.port = '4433'),
+                                pbp = pbp_df |> filter(season == season))
+  
+  update_team_stats_db(con = initR::fx.db_con(x.port = '4433'),
+                       pbp = pbp_df |> filter(season == season))
+  update_team_stats_weekly_db(con = initR::fx.db_con(x.port = '4433'),
+                              pbp = pbp_df |> filter(season == season))
+  
+  # nflfastR::update_db(
+  #   tblname = "nflfastR_pbp",
+  #   force_rebuild = FALSE,
+  #   db_connection = initR::fx.db_con(x.host = 'Iceman.local')
+  # )
+  # cfbfastR::update_cfb_db(
+  #   tblname = 'cfbfastR_pbp',
+  #   force_rebuild = FALSE,
+  #   db_connection = initR::fx.db_con(x.host = 'Iceman.local')
+  # )
+  
+  nflfastR::update_db(
+    tblname = "nflfastR_pbp",
+    force_rebuild = FALSE,
+    db_connection = initR::fx.db_con()
+  )
+  cfbfastR::update_cfb_db(
+    tblname = 'cfbfastR_pbp',
+    force_rebuild = FALSE,
+    db_connection = initR::fx.db_con()
+  )
+  update_player_stats_db(con = initR::fx.db_con(),
+                         pbp = pbp_df |> filter(season == season))
+  update_player_stats_weekly_db(con = initR::fx.db_con(),
+                                pbp = pbp_df |> filter(season == season))
+  
+  update_team_stats_db(con = initR::fx.db_con(),
+                       pbp = pbp_df |> filter(season == season))
+  update_team_stats_weekly_db(con = initR::fx.db_con(),
+                              pbp = pbp_df |> filter(season == season))
  
