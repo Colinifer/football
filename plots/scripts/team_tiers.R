@@ -49,7 +49,8 @@ time_series <- dplyr::if_else(pbp |>
   10)
 
 res <- 800 # size of exported plots
-slope = -1.5 # for the tiers stuff
+off_def_slope = -1.5 # for offense & defense comparison (offense is 1.5x more important than defense)
+pass_rush_slope <- -1 # for pass & rush comparison
 qb_min <- 320 # min # of qb plays
 
 
@@ -134,14 +135,14 @@ p <- chart_all |>
        # caption = 'Data: @nflscrapR',
        title = glue('{current_season} NFL Team Tiers'),
        subtitle = glue('Offense and defense EPA per play through week {n_week}')) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=.4, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=.3, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=0, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=.1, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=.2, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=-.1, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=-.2, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=-.3, alpha=.2) +
   scale_y_reverse() +
   theme_cw_dark +
   theme(
@@ -155,8 +156,7 @@ p <- chart_all |>
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
 
-  # Rotate ---
-
+# Rotate ---
 off_epa_min <- -.3
 off_epa_max <- .3
 def_epa_min <- -.3
@@ -245,14 +245,14 @@ p <- chart_all |>
        # caption = 'Data: @nflscrapR',
        title = glue('{current_season} NFL Team Tiers'),
        subtitle = glue('Offense and defense early down EPA per play through week {n_week}')) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=.4, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=.3, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=0, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=.1, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=.2, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=-.1, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=-.2, alpha=.2) +
+  geom_abline(slope=off_def_slope, intercept=-.3, alpha=.2) +
   scale_y_reverse() +
   theme_cw_dark +
   theme(
@@ -283,14 +283,14 @@ p <- chart_all |>
        # caption = 'Data: @nflscrapR',
        title = glue('{current_season} NFL Offense Team Tiers'),
        subtitle = glue('Offense passing and rushing EPA per play through week {n_week}')) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=.4, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=.3, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=0, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=.1, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=.2, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=-.1, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=-.2, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=-.3, alpha=.2) +
   theme_cw_dark +
   theme(
     axis.title.y = element_text(angle = 90),
@@ -321,14 +321,14 @@ p <- chart_all |>
        # caption = 'Data: @nflscrapR',
        title = glue('{current_season} NFL Defense Team Tiers'),
        subtitle = glue('Defense passing and rushing EPA per play through week {n_week}')) +
-  geom_abline(slope=slope, intercept=.4, alpha=.2) +
-  geom_abline(slope=slope, intercept=.3, alpha=.2) +
-  geom_abline(slope=slope, intercept=0, alpha=.2) +
-  geom_abline(slope=slope, intercept=.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-  geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=.4, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=.3, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=0, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=.1, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=.2, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=-.1, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=-.2, alpha=.2) +
+  geom_abline(slope=pass_rush_slope, intercept=-.3, alpha=.2) +
   scale_x_reverse() +
   scale_y_reverse() +
   theme_cw_dark +
@@ -455,14 +455,14 @@ if (max(pbp$week) >= 10) {
          # caption = 'Data: @nflscrapR',
          title = glue('{current_season} NFL Adjusted Team Tiers'),
          subtitle = glue('Offense and defense adjusted EPA per play through week {n_week}\nAdjusted for previous matchups')) +
-    geom_abline(slope=slope, intercept=.4, alpha=.2) +
-    geom_abline(slope=slope, intercept=.3, alpha=.2) +
-    geom_abline(slope=slope, intercept=0, alpha=.2) +
-    geom_abline(slope=slope, intercept=.1, alpha=.2) +
-    geom_abline(slope=slope, intercept=.2, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.4, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.3, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=0, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.1, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.2, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.1, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.2, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.3, alpha=.2) +
     scale_y_reverse() +
     theme_cw_dark +
     theme(
@@ -533,14 +533,14 @@ if (n_week < 17) {
          # caption = 'Data: @nflscrapR',
          title = glue('{current_season} NFL Team Tiers Matchups through Week {n_week}'),
          subtitle = glue('Team offense and week {n_week + 1} opponent defense EPA per play')) +
-    geom_abline(slope=slope, intercept=.4, alpha=.2) +
-    geom_abline(slope=slope, intercept=.3, alpha=.2) +
-    geom_abline(slope=slope, intercept=0, alpha=.2) +
-    geom_abline(slope=slope, intercept=.1, alpha=.2) +
-    geom_abline(slope=slope, intercept=.2, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.4, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.3, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=0, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.1, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.2, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.1, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.2, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.3, alpha=.2) +
     theme_cw_dark +
     theme(
       axis.title.y = element_text(angle = 90),
@@ -569,14 +569,14 @@ if (n_week < 17) {
          # caption = 'Data: @nflscrapR',
          title = glue('{current_season} NFL Team Tiers Passing Matchups through Week {n_week}'),
          subtitle = glue('Team passing offense and week {n_week + 1} opponent passing defense EPA per play')) +
-    geom_abline(slope=slope, intercept=.4, alpha=.2) +
-    geom_abline(slope=slope, intercept=.3, alpha=.2) +
-    geom_abline(slope=slope, intercept=0, alpha=.2) +
-    geom_abline(slope=slope, intercept=.1, alpha=.2) +
-    geom_abline(slope=slope, intercept=.2, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.4, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.3, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=0, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.1, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.2, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.1, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.2, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.3, alpha=.2) +
     theme_cw_dark +
     theme(
       axis.title.y = element_text(angle = 90),
@@ -605,14 +605,14 @@ if (n_week < 17) {
          # caption = 'Data: @nflscrapR',
          title = glue('{current_season} NFL Team Tiers Rushing Matchups through Week {n_week}'),
          subtitle = glue('Team rushing offense and week {n_week + 1} opponent rushing defense EPA per play')) +
-    geom_abline(slope=slope, intercept=.4, alpha=.2) +
-    geom_abline(slope=slope, intercept=.3, alpha=.2) +
-    geom_abline(slope=slope, intercept=0, alpha=.2) +
-    geom_abline(slope=slope, intercept=.1, alpha=.2) +
-    geom_abline(slope=slope, intercept=.2, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.1, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.2, alpha=.2) +
-    geom_abline(slope=slope, intercept=-.3, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.4, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.3, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=0, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.1, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=.2, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.1, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.2, alpha=.2) +
+    geom_abline(slope=off_def_slope, intercept=-.3, alpha=.2) +
     theme_cw_dark +
     theme(
       axis.title.y = element_text(angle = 90),
@@ -627,5 +627,5 @@ if (n_week < 17) {
 end_time <- Sys.time()
 end_time - start_time
 
-rm(pbp, time_series, res, slope, qb_min, epa_data, offense, defense, opponent_data, chart_all, matchup_chart_all, p, start_time, end_time)
+rm(pbp, time_series, res, off_def_slope, pass_rush_slope, qb_min, epa_data, offense, defense, opponent_data, chart_all, matchup_chart_all, p, start_time, end_time)
 # })
