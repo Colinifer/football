@@ -101,7 +101,7 @@ p <- qb_top_bottom |>
   theme_cw_dark +
   theme(
     plot.title = element_text(size = 12),
-    plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
+    # plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
     axis.ticks.y = element_blank(),
     axis.text.y = element_blank(),
     panel.grid.major.y = element_blank(),

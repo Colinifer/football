@@ -101,7 +101,8 @@ server <- function(input, output, session) {
   
   # Seasons
   choices_seasons <- reactive({
-    con <- initR::fx.db_con(x.host = 'localhost',
+    con <- initR::fx.db_con(# x.host = 'localhost',
+                            x.port = '4433',
                             x.dbname = 'football')
     on.exit(dbDisconnect(con), add = TRUE)
     
@@ -136,7 +137,8 @@ server <- function(input, output, session) {
   
   # Roster DF
   roster_df <- reactive({
-    con <- initR::fx.db_con(x.host = 'localhost',
+    con <- initR::fx.db_con(#x.host = 'localhost',
+                            x.port = '4433', 
                             x.dbname = 'football')
     on.exit(dbDisconnect(con), add = TRUE)
     
@@ -155,7 +157,8 @@ server <- function(input, output, session) {
     i.season <- as.integer(input$rx.season[1])
     i.columns <- as.character(input$rx.stats_type[1])
     
-    con <- initR::fx.db_con(x.host = 'localhost',
+    con <- initR::fx.db_con(#x.host = 'localhost',
+                            x.port = '4433', 
                             x.dbname = 'football')
     
     # roster_df <- tbl(con, glue('nflfastR_rosters')) |> 
@@ -166,7 +169,7 @@ server <- function(input, output, session) {
     team_information <- c("team", "season")
     team_passing_stats <- c("completions", "attempts", "passing_yards", "passing_tds", "interceptions",
     "sacks", "passing_air_yards", "passing_yards_after_catch",
-    "passing_first_downs", "passing_epa", "pacr", "dakota")
+    "passing_first_downs", "passing_epa", "pacr", "anya", "dakota")
     team_receiving_stats <- c("receptions", "targets", "receiving_yards", "receiving_tds", 
                               "receiving_air_yards", "receiving_yards_after_catch",
                               "receiving_first_downs", "receiving_epa", "racr",

@@ -2,8 +2,8 @@ library(randomForest)
 library(caTools)
 library(caret)
 
-
-rf_all <-  tbl(fx.db_con(x.host = 'localhost'), 'nflfastR_player_stats')  |> 
+con <- fx.db_con(x.host = 'localhost')
+rf_all <-  tbl(con, 'nflfastR_player_stats')  |> 
   filter(season == current_season) |> 
   collect() |> 
   left_join(tbl(con, 'nflfastR_rosters') |> 
@@ -15,6 +15,7 @@ rf_all <-  tbl(fx.db_con(x.host = 'localhost'), 'nflfastR_player_stats')  |>
   filter(position %in% c('QB', 'WR', 'RB', 'TE') & 
            fantasy_points_half_ppr > 5) |> 
   mutate(position = as.factor(position))
+dbDisconnect(con)
 
 rf_all
 
@@ -26,7 +27,7 @@ sample <- sample.split(rf_all$player_id, SplitRatio = 0.7)
 rf_train  <- subset(rf_all, sample == TRUE)
 rf_test   <- subset(rf_all, sample == FALSE)
 
-# Run teh random forest classification
+# Run the random forest classification
 rf_pos <- randomForest(position ~ carries + rushing_yards + rushing_fumbles + rushing_tds + targets +
                receptions + receiving_yards + receiving_yards_after_catch + receiving_fumbles + 
                receiving_tds + receiving_air_yards + attempts + completions + passing_yards + 
@@ -63,14 +64,21 @@ rf_df |>
 
 print(rf_pos)
 
-print(importance(rf_pos,type = 2))
+importance(rf_pos,type = 2)
 
 
 # Count fantasy teams for replacement level
 f_teams <- 10
 
 # Total exp players
-(f_teams*1.5)+(f_teams*7)+(f_teams*7)+(f_teams*2)
+# QB
+(f_teams*1.5) + 
+  # RB
+  (f_teams*7) + 
+  # WR
+  (f_teams*7) + 
+  # TE
+  (f_teams*1.5)
 
 
 replacement_ranks <- player_stats |>

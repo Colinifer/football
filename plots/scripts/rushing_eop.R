@@ -11,12 +11,6 @@ ep <- pbp_df |>
   ep_predict() |> 
   ep_summarize()
 
-ep$ep_pbp_rush
-
-ep_load(season = 2020:2021, type = "weekly")
-
-ep <- ep_build(season = 2022)
-
 ep |>
   filter(!is.na(player_id)) |> 
   select(

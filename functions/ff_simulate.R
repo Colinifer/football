@@ -19,12 +19,9 @@ player_rankings |>
   arrange(ecr) |> 
   filter(pos %in% c('QB', 'WR', 'RB', 'TE'))
 
-
 ff_sim_week <- ff_simulate_week(conn = ff_conn_beep_boop, n = 10000)
 
 ff_sim_week
 
 plot(ff_sim_week,type = "luck")
 plot(ff_sim_week,type = "points")
-
-

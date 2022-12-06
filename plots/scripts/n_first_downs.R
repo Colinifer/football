@@ -27,6 +27,13 @@ team_points <- pbp_df %>%
   mutate(total_points_for_z_score = z_score(total_points_for)) |> 
   arrange(-total_points_for_z_score)
 
+team_points |> 
+  filter(!is.na((posteam))) |> 
+  ggplot(aes(x = factor(posteam, levels = team_points$posteam), y = total_points_for)) + 
+  nflplotR::geom_nfl_logos(aes(team_abbr = posteam), height = 0.1) +
+  theme_cw_dark
+
+
 pbp_df |> 
   arrange(old_game_id, play_id) |> 
   filter(!is.na(posteam)) |> 
