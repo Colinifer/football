@@ -205,19 +205,35 @@ p <- chart_all |>
                                     margin = margin(r = 10),
                                     face = 'bold'), 
         plot.margin = margin(1, .5, .5, 0, unit = 'in'), 
+        plot.background = element_rect(color = 'transparent', 
+                                       fill = 'transparent'),
+        panel.background = element_rect(color = 'transparent',
+                                        fill = 'transparent'),
+        panel.border = element_rect(color = 'transparent'),
         panel.grid.minor = element_blank()) +
   # hack together a title and subtitle
-  geom_text(aes(x = .3, y = -0.3), label = glue('{year} NFL Team Tiers'), angle = -1 * rotation, vjust = -2.5, fontface = 'bold', size = 4, family = 'Montserrat', color = color_cw[5]) +
-  geom_text(aes(x = .3, y = -0.25), label = glue('Offense and defense EPA per play through week {n_week}'), angle = -1 * rotation, vjust = -2.5, fontface = 'bold', size = 4, family = 'Montserrat', color = color_cw[5]) +
+  # geom_text(aes(x = .3, y = -0.3), label = glue('{year} NFL Team Tiers'), angle = -1 * rotation, vjust = -2.5, fontface = 'bold', size = 4, family = 'Montserrat', color = color_cw[5]) +
+  # geom_text(aes(x = .3, y = -0.25), label = glue('Offense and defense EPA per play through week {n_week}'), angle = -1 * rotation, vjust = -2.5, fontface = 'bold', size = 4, family = 'Montserrat', color = color_cw[5]) +
   # hack together a few chart guides (ie, 'Good D, Bad D')
   geom_richtext(aes(x = 0.225, y = 0.225, label = 'Good O, Bad D'), angle = -1 * rotation, size = 3, family = 'Montserrat', fontface = 'bold', color = 'black', fill = color_cw['blue'], label.size = 0)  +
   geom_richtext(aes(x = -0.225, y = -0.225, label = 'Bad O, Good D'), angle = -1 * rotation,  size = 3, family = 'Montserrat',  fontface = 'bold', color = 'black', fill = color_cw['blue'], label.size = 0)   +
   geom_richtext(aes(x = -0.225, y = 0.225, label = 'Bad O, Bad D'), angle = -1 * rotation, size = 3, family = 'Montserrat', fontface = 'bold', color = 'black',  fill = color_cw['red'], label.size = 0)  +
   geom_richtext(aes(x = 0.225, y = -0.225, label = 'Good O, Good D'), angle = -1 * rotation,  size = 3, family = 'Montserrat', fontface = 'bold', color = 'black', fill = color_cw['green'], label.size = 0) 
 
+p_background <- ggplot() + 
+  labs(title = glue('{current_season} NFL Team Tiers'),
+       subtitle = glue('Offense and defense EPA per play through week {n_week}')) + 
+  theme_cw_dark +
+  theme(panel.background = element_rect(fill = color_cw[1], 
+                                        color = 'transparent'),
+        plot.title = element_text(family = 'Chivo',
+                                  face = 'bold', 
+                                  size = 16))
+
 # save plot
 png(glue('plots/desktop/team_tiers/team_tiers_diamond_{year}.png'), res = 300, width = 6, height = 6, units = 'in', bg = color_cw[1])
 
+print(p_background)
 print(p, vp=viewport(angle=rotation,  
                      width = unit(6, 'in'), 
                      height = unit(6, 'in'))) |> 

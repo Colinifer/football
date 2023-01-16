@@ -61,7 +61,7 @@ ESPN_logo_url = function(x) ifelse(is.na(x),NA,ifelse(x=='KC',paste0('https://ra
 .tm_div_order_alt <- c('BUF', 'MIA', 'NE', 'NYJ', 'DAL', 'NYG', 'PHI', 'WAS', 'BAL', 'CIN', 'CLE', 'PIT', 'CHI', 'DET', 'GB', 'MIN', 'HOU', 'IND', 'JAX', 'TEN', 'ATL', 'CAR', 'NO', 'TB', 'DEN', 'KC', 'LAC', 'LV', 'ARI', 'LA', 'SEA', 'SF')
 
 # main function to save my branded plots
-brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 5, dark = TRUE, data_author = '', data_home = '', fade_borders = '', fade_prop = 0.5, axis_rot = F, tm_wordmarks = F) {
+brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 4, dark = TRUE, data_author = '', data_home = '', fade_borders = '', fade_prop = 0.5, axis_rot = F, tm_wordmarks = F) {
 	
     ## start by adding team wordmarks
   if (tm_wordmarks) {
@@ -167,13 +167,21 @@ theme_cw_dark <-  theme(
   panel.background = element_rect(fill = color_cw[2], color = 'transparent'),
   axis.ticks = element_line(color = color_cw[5], size = 0.5),
   axis.ticks.length = unit(2.75, 'pt'),
-  axis.title = element_text(family = 'Chivo', face = 'bold', size = 8),
-  axis.title.y = element_text(angle = 90, vjust = 0.5),
-  axis.text = element_text(size = 7, color = color_cw[5]),
-  plot.title = element_text(family = 'Chivo', face = 'bold', size = 14),
+  axis.title = element_text(family = 'Chivo', 
+                            # face = 'bold', 
+                            size = 8),
+  axis.title.y = element_text(angle = 90, 
+                              vjust = 0.5),
+  axis.text = element_text(size = 7, 
+                           color = color_cw[5]),
+  plot.title = element_text(family = 'Chivo', 
+                            # face = 'bold', 
+                            size = 14),
   plot.subtitle = element_text(size = 8),
   plot.caption = element_text(family = 'Montserrat', size = 5),
-  legend.background = element_rect(fill = color_cw[2], color = color_cw[5]),
+  legend.background = element_rect(fill = color_cw[2], 
+                                   # color = color_cw[5]
+                                   ),
   legend.key = element_blank(),
   panel.grid.minor = element_blank(),
   panel.grid.major = element_line(color = color_cw[4], size = 0.3),

@@ -95,7 +95,7 @@ ep |>
          total_fantasy_points_exp,
          total_fantasy_points,
          total_fantasy_points_diff) |> 
-  arrange(-total_fantasy_points_exp_ppg) |> 
+  arrange(-total_fantasy_points_exp) |> 
   filter(position %in% c('WR', 'TE', 'RB')) |> 
   ungroup() |> 
   mutate(rk = rank(-total_fantasy_points_exp)) |> 

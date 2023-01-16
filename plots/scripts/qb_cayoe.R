@@ -1,3 +1,7 @@
+# QB Components
+# https://twitter.com/LuckyProphet5/status/1600237644533096450
+
+
 # Data --------------------------------------------------------------------
 
 xyac_pbp_df <- 

@@ -28,6 +28,7 @@ pkgs <- c(
   # Web packages
   'RCurl',
   'DT',
+  'reactable',
   NULL
 )
 initR::fx.load_packages(pkgs) |>
@@ -85,7 +86,9 @@ ui <- fluidPage(
   
   # Table
   h2('Data'),
-  column(width = 12, DT::dataTableOutput(outputId = 'table'))
+  column(width = 12, 
+         DT::dataTableOutput(outputId = 'table')
+         )
 )
 
 

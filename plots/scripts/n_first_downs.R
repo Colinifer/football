@@ -7,34 +7,40 @@ z_score <- function(x) {
   return(z_score)
 }
 
-# Eckel Rate/Ratio --------------------------------------------------------
 
-team_points <- pbp_df %>% 
+# Total Points For --------------------------------------------------------
+
+team_points <- pbp_df |> 
+  arrange(old_game_id, play_id) |> 
+  filter(!is.na(posteam)) |> 
   mutate(
     posteam_result = case_when(
       posteam == home_team ~ home_score,
       posteam == away_team ~ away_score
     )
   ) %>% 
-  group_by(game_id, posteam) %>% 
+  group_by(game_id, posteam) |> 
   summarise(
     posteam_result = custom_mode(posteam_result)
-  ) %>% 
-  group_by(posteam) %>% 
+  ) |> 
+  group_by(posteam) |> 
   summarise(
     total_points_for = sum(posteam_result, na.rm = T)
   ) |> 
-  mutate(total_points_for_z_score = z_score(total_points_for)) |> 
-  arrange(-total_points_for_z_score)
+  mutate(total_points_for_z_score = round(z_score(total_points_for), 2)) |> 
+  arrange(total_points_for_z_score)
 
 team_points |> 
   filter(!is.na((posteam))) |> 
-  ggplot(aes(x = factor(posteam, levels = team_points$posteam), y = total_points_for)) + 
-  nflplotR::geom_nfl_logos(aes(team_abbr = posteam), height = 0.1) +
+  ggplot(aes(x = factor(posteam, levels = posteam), y = total_points_for)) + 
+  coord_flip() + 
+  nflplotR::geom_nfl_logos(aes(team_abbr = posteam), height = 0.066) +
   theme_cw_dark
 
 
-pbp_df |> 
+# Eckel Rate/Ratio --------------------------------------------------------
+
+eckel_rate <- pbp_df |> 
   arrange(old_game_id, play_id) |> 
   filter(!is.na(posteam)) |> 
   select(game_id, home_team, away_team, posteam, drive, drive_start_yard_line, drive_end_yard_line) |> 
@@ -60,9 +66,21 @@ pbp_df |>
     eckel_drive = sum(eckel_drive, na.rm = T)
   ) |> 
   mutate(eckel_ratio = eckel_drive/drives) |> 
-  arrange(-eckel_ratio)
+  arrange(eckel_ratio)
 
-pbp_df |> 
+eckel_rate |> 
+  filter(!is.na((posteam))) |> 
+  ggplot(aes(x = factor(posteam, levels = posteam), y = eckel_ratio)) + 
+  ylim(round(min(eckel_rate$eckel_ratio), 2)-.05, 
+       round(max(eckel_rate$eckel_ratio), 2)+.05) + 
+  coord_flip() + 
+  nflplotR::geom_nfl_logos(aes(team_abbr = posteam), height = 0.066) + 
+  theme_cw_dark
+
+
+# Success Rate ------------------------------------------------------------
+
+success_rate <- pbp_df |> 
   arrange(old_game_id, play_id) |> 
   filter(!is.na(posteam)) |> 
   group_by(posteam) |> 
@@ -72,9 +90,20 @@ pbp_df |>
   ) |> 
   mutate(success_rate = success/plays, 
          success_rate_z_score = (success_rate-mean(success_rate))/sd(success_rate)) |> 
-  arrange(-success_rate_z_score)
+  arrange(success_rate_z_score)
 
-pbp_df |> 
+success_rate |> 
+  filter(!is.na((posteam))) |> 
+  ggplot(aes(x = factor(posteam, levels = posteam), y = success_rate_z_score)) + 
+  ylim(-3, 3) + 
+  coord_flip() + 
+  nflplotR::geom_nfl_logos(aes(team_abbr = posteam), height = 0.066) + 
+  theme_cw_dark
+
+
+# Series Success ----------------------------------------------------------
+
+series_success <- pbp_df |> 
   arrange(old_game_id, play_id) |> 
   filter(!is.na(posteam)) |> 
   select(game_id, drive, posteam, 
@@ -88,7 +117,15 @@ pbp_df |>
   mutate(series_success_rate = series_success/series,
          series_success_rate_percentile_rank = rank(series_success_rate)/length(series_success_rate),
          series_success_z_score = (series_success_rate-mean(series_success_rate))/sd(series_success_rate)) |> 
-  arrange(-series_success_z_score)
+  arrange(series_success_z_score)
+
+series_success |> 
+  filter(!is.na((posteam))) |> 
+  ggplot(aes(x = factor(posteam, levels = posteam), y = series_success_z_score)) + 
+  ylim(-3, 3) + 
+  coord_flip() + 
+  nflplotR::geom_nfl_logos(aes(team_abbr = posteam), height = 0.066) + 
+  theme_cw_dark
 
 pbp_df |> 
   arrange(old_game_id, play_id) |> 
@@ -161,28 +198,31 @@ pbp_df %>%
   gtsave(filename = glue("team_stats/eckel_rate_{current_season}.png"), path = "plots/desktop")
 
 
-pbp_df %>% 
-  filter(!is.na(passer_player_id)) %>% 
-  group_by(passer_player_id) %>% 
+
+# Air Yards ---------------------------------------------------------------
+
+tbl <- pbp_df |> 
+  filter(!is.na(passer_player_id)) |> 
+  group_by(passer_player_id) |> 
   summarise(
     passer_player_name = custom_mode(passer_player_name),
     posteam = custom_mode(posteam),
     games_played = n_distinct(game_id),
     total_air_yards = sum(air_yards, na.rm = TRUE),
-    mean_air_yards = mean(air_yards, na.rm = TRUE),
+    mean_air_yards = round(mean(air_yards, na.rm = TRUE), 2),
     total_pass_attempts = sum(pass_attempt, na.rm = TRUE)
-  ) %>% 
-  ungroup() %>% 
+  ) |> 
+  ungroup() |> 
   mutate(
-    adot = total_air_yards / total_pass_attempts
-  ) %>% 
-  filter(total_pass_attempts >= (max(games_played)*8)) %>% 
-  arrange(-mean_air_yards) %>% 
+    adot = round(total_air_yards / total_pass_attempts, 2)
+  ) |> 
+  filter(total_pass_attempts >= (max(games_played)*8)) |> 
+  arrange(-mean_air_yards) |> 
   left_join(
-    teams_colors_logos %>% 
+    teams_colors_logos |>  
       select(team_abbr, team_logo_espn),
     by = c('posteam' = 'team_abbr')
-  ) %>% 
+  ) |> 
   select(
     passer_player_name,
     team_logo_espn,
@@ -192,10 +232,63 @@ pbp_df %>%
     mean_air_yards,
     total_pass_attempts,
     adot
-  ) %>% 
-  gt() %>% 
+  ) |> 
+  reactable(
+    columns = list(
+      passer_player_name = colDef('Player'),
+      team_logo_espn = colDef('',
+                              sortable = FALSE,
+                              filterable = FALSE,
+                              cell = function(value) {
+                                image <-
+                                  img(src = value,
+                                      style = "height: 24px;",
+                                      alt = value
+                                      )
+                                tagList(div(style = "display: inline-block; width: 45px;", image))
+                              }),
+      posteam = colDef('Team'),
+      games_played = colDef('GP'),
+      total_air_yards = colDef('Total Air Yards'),
+      mean_air_yards = colDef('Mean Air Yards'),
+      total_pass_attempts = colDef('Pass Attempts'),
+      adot = colDef('ADoT')
+    ),
+    filterable = TRUE,
+    showPageSizeOptions = TRUE,
+    striped = TRUE,
+    highlight = TRUE,
+    theme = reactableTheme(
+      color = "hsl(233, 9%, 87%)",
+      backgroundColor = "hsl(233, 9%, 19%)",
+      borderColor = "hsl(233, 9%, 22%)",
+      stripedColor = "hsl(233, 12%, 22%)",
+      highlightColor = "hsl(233, 12%, 24%)",
+      inputStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
+      selectStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
+      pageButtonHoverStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
+      pageButtonActiveStyle = list(backgroundColor = "hsl(233, 9%, 28%)")
+    )
+  )
+
+tbl
+
+div(
+  class = 'salary',
+  div(
+    # this can be called with CSS now via .title
+    class = 'title',
+    h2('Air Yards'),
+    glue('Through week {my_week}')
+  ),
+  tbl,
+  # I use a span here so I can assigna  color to this text
+  tags$span(style = "color:#C8C8C8", "TABLE: @THOMAS_MOCK | DATA: PRO-FOOTBALL-REFERENCE.COM & OVERTHECAP.COM")
+)
+
+  gt() |> 
   tab_header(title = 'Air Yards', 
-             subtitle = glue('Through week {my_week}')) %>% 
+             subtitle = glue('Through week {my_week}')) |> 
   cols_label(
     passer_player_name = 'Player',
     team_logo_espn = 'Team',
@@ -205,9 +298,9 @@ pbp_df %>%
     mean_air_yards = 'Mean Air Yards',
     total_pass_attempts = 'Pass Attempts',
     adot = 'ADoT'
-  ) %>% 
-  fmt_number(columns = c(mean_air_yards, adot), decimals = 2) %>% 
-  gt_theme_cw(image_columns = c('team_logo_espn')) %>% 
+  ) |> 
+  fmt_number(columns = c(mean_air_yards, adot), decimals = 2) |> 
+  gt_theme_cw(image_columns = c('team_logo_espn')) |> 
   gtsave(filename = glue("qb_passing/air_yards_{current_season}.png"), path = "plots/desktop")
 
 pbp_df %>% 
