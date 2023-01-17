@@ -11,7 +11,7 @@ rf_all <-  tbl(con, 'nflfastR_player_stats')  |>
               collect() |>
               select(season, gsis_id, position),
             by = c('season', 'player_id' = 'gsis_id')) |>
-  select(season, player_id, player_name, position, 7:ncol(player_stats)) |> 
+  select(season, player_id, player_name, position, 6:ncol(player_stats)) |> 
   filter(position %in% c('QB', 'WR', 'RB', 'TE') & 
            fantasy_points_half_ppr > 5) |> 
   mutate(position = as.factor(position))
@@ -26,6 +26,14 @@ set.seed(1)
 sample <- sample.split(rf_all$player_id, SplitRatio = 0.7)
 rf_train  <- subset(rf_all, sample == TRUE)
 rf_test   <- subset(rf_all, sample == FALSE)
+
+# plot clusters
+rf_train |> 
+  filter(position %in% c('WR', 'TE') & 
+           offense_snaps > 0) |> 
+  # select(position, targets, offense_snaps) |> 
+  ggplot(aes(x = offense_snaps, y = receiving_air_yards)) + 
+  geom_point(aes(color = position))
 
 # Run the random forest classification
 rf_pos <- randomForest(position ~ carries + rushing_yards + rushing_fumbles + rushing_tds + targets +
