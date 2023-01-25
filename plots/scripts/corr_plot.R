@@ -84,6 +84,8 @@ scoring_history <- ffscrapr::ff_scoringhistory(conn = ff_conn_beep_boop,
                                                season = c(2020:2022)
                                                )
 
+# player_score <- ffscrapr::ff_playerscores(conn = ff_conn_beep_boop)
+
 corr_ready_df <- scoring_history |> 
   filter(pos %in% c('QB', 'WR', 'TE', 'RB')) |> 
   group_by(team, week, pos) |> 

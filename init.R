@@ -9,6 +9,7 @@
 # devtools::install_github("jthomasmock/espnscrapeR")
 # devtools::install_github("colinifer/initR", auth_token = Sys.getenv('authtoken'))
 # devtools::install_github('gregce/ipify')
+
 proj_name <- 'football'
 pkgs <- c(
   # Core packages
@@ -154,7 +155,7 @@ schedule_df <- tbl(con, 'nflfastR_schedule') |>
   filter(season == year) |> 
   collect()
 # update_trades_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
-trades_df <- tbl(con, 'nflfastR_trades') |> 
+trades_df <- tbl(con, 'nflfastR_trades') |>
   filter(season == year) |> 
   collect()
 # update_draft_db(season = year, db_connection = fx.db_con(x.host = 'localhost'))
@@ -300,10 +301,12 @@ team_stats_weekly <- pbp_df |>
 
 
 player_stats <- pbp_df |> 
+  filter(season_type == 'REG') |> 
   calculate_player_stats_mod() 
 
 
 player_stats_weekly <- pbp_df |> 
+  filter(season_type == 'REG') |> 
   calculate_player_stats_mod(weekly = TRUE)
 
 

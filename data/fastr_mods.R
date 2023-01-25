@@ -173,7 +173,8 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     unique()
   
   rosters <- nflreadr::load_rosters(pbp_season) |>
-    select(player_id = gsis_id,
+    select(season,
+           player_id = gsis_id,
            contains('_id'),
            position,
            headshot_url)
@@ -181,31 +182,40 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   # Participation data ------------------------------------------------------
   if (all(pbp_season >= 2016, na.rm = TRUE)) {
     participation_df <- nflreadr::load_participation(pbp_season, 
-                                 include_pbp = F)
+                                 include_pbp = F) |> 
+      mutate(
+        season = as.numeric(substr(nflverse_game_id, 1, 4))
+      ) |> 
+      select(season, everything())
     
-    offense_snaps <- participation_df |> 
-      select(old_game_id,
+    offense_snaps <- participation_df |>
+      select(season,
+             old_game_id,
              play_id,
-             offense_players
-      ) |> 
-      separate(col = offense_players, 
-               sep = ';',
-               into = paste('offense_on', as.character(c(1:11)), sep = '_') 
-      ) |> 
+             offense_players) |>
+      separate(
+        col = offense_players,
+        sep = ';',
+        into = paste('offense_on', as.character(c(1:11)), sep = '_')
+        ) |> 
       pivot_longer(offense_on_1:offense_on_11,
-                   # names_to = "team",
+                   names_to = "players_on",
                    values_to = "player") |> 
       filter(!is.na(player) & player != '') |> 
       # group_by(old_game_id, player) |> 
       # count() |> 
       suppressWarnings() |> 
-      left_join(pbp,by = c('old_game_id', 'play_id')) |> 
+      left_join(pbp, by = c('season', 'old_game_id', 'play_id')) |> 
       filter(play_type != 'no_play') |> 
-      group_by(old_game_id, player, play_type, qb_dropback, pass_attempt, complete_pass, sack, penalty) |> 
+      group_by(season, season_type, old_game_id, player, play_type, 
+               qb_dropback, pass_attempt, complete_pass, 
+               sack, penalty
+               ) |> 
       count()
     
     defense_snaps <- participation_df |> 
-      select(old_game_id,
+      select(season,
+             old_game_id,
              play_id,
              defense_players
       ) |> 
@@ -214,15 +224,15 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
                into = paste('defense_on', as.character(c(1:11)), sep = '_') 
       ) |> 
       pivot_longer(defense_on_1:defense_on_11,
-                   # names_to = "team",
+                   names_to = "players_on",
                    values_to = "player") |> 
       filter(!is.na(player) & player != '') |> 
       # group_by(old_game_id, player) |> 
       # count() |> 
       suppressWarnings() |> 
-      left_join(pbp,by = c('old_game_id', 'play_id')) |> 
+      left_join(pbp ,by = c('season', 'old_game_id', 'play_id')) |> 
       filter(play_type != 'no_play') |> 
-      group_by(old_game_id, player, play_type) |> 
+      group_by(season, season_type, old_game_id, player, play_type) |> 
       count()
   }
   
@@ -258,7 +268,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     two_points <- pbp %>%
       dplyr::filter(.data$two_point_conv_result == "success") %>%
       dplyr::select(
-        "week", "season", "posteam",
+        "week", "season", "season_type", "posteam",
         "pass_attempt", "rush_attempt",
         "passer_player_name", "passer_player_id",
         "rusher_player_name", "rusher_player_id",
@@ -294,7 +304,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   # get passing stats
   pass_df <- data %>%
     dplyr::filter(.data$play_type %in% c("pass", "qb_spike")) %>%
-    dplyr::group_by(.data$passer_player_id, .data$week, .data$season) %>% 
+    dplyr::group_by(.data$passer_player_id, .data$week, .data$season, .data$season_type) %>% 
     dplyr::summarize(
       name_pass = dplyr::first(.data$passer_player_name),
       team_pass = dplyr::first(.data$posteam),
@@ -323,11 +333,11 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::rename(player_id = .data$passer_player_id) %>%
     dplyr::ungroup()
   
-  if (isTRUE(weekly)) pass_df <- add_dakota(pass_df, pbp = pbp, weekly = weekly)
+  if (isTRUE(weekly)) {pass_df <- add_dakota(pass_df, pbp = pbp, weekly = weekly)}
   
   pass_two_points <- two_points %>%
     dplyr::filter(.data$pass_attempt == 1) %>%
-    dplyr::group_by(.data$passer_player_id, .data$week, .data$season) %>%
+    dplyr::group_by(.data$passer_player_id, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarise(
       # need name_pass and team_pass here for the full join in the next pipe
       name_pass = custom_mode(.data$passer_player_name),
@@ -340,7 +350,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   pass_df <- pass_df %>%
     # need a full join because players without passing stats that recorded
     # a passing two point (e.g. WRs) are dropped in any other join
-    dplyr::full_join(pass_two_points, by = c("player_id", "week", "season", "name_pass", "team_pass")) %>%
+    dplyr::full_join(pass_two_points, by = c("player_id", "week", "season", "season_type", "name_pass", "team_pass")) %>%
     dplyr::mutate(passing_2pt_conversions = dplyr::if_else(is.na(.data$passing_2pt_conversions), 0L, .data$passing_2pt_conversions)) %>%
     dplyr::filter(!is.na(.data$player_id))
   
@@ -355,7 +365,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   # rush df 1: primary rusher
   rushes <- data %>%
     dplyr::filter(.data$play_type %in% c("run", "qb_kneel")) %>%
-    dplyr::group_by(.data$rusher_player_id, .data$week, .data$season) %>% 
+    dplyr::group_by(.data$rusher_player_id, .data$week, .data$season, .data$season_type) %>% 
     dplyr::mutate(
       hvt = ifelse(yardline_100 <= 10, 1, 0)
     ) %>% 
@@ -377,7 +387,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   # rush df 2: lateral
   laterals <- data %>%
     dplyr::filter(!is.na(.data$lateral_rusher_player_id)) %>%
-    dplyr::group_by(.data$lateral_rusher_player_id, .data$week, .data$season) %>%
+    dplyr::group_by(.data$lateral_rusher_player_id, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarize(
       lateral_yards = sum(.data$lateral_rushing_yards, na.rm = TRUE),
       lateral_fds = sum(.data$first_down_rush, na.rm = TRUE),
@@ -399,7 +409,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   
   # rush df: join
   rush_df <- rushes %>%
-    dplyr::left_join(laterals, by = c("rusher_player_id", "week", "season")) %>%
+    dplyr::left_join(laterals, by = c("rusher_player_id", "week", "season", "season_type")) %>%
     dplyr::mutate(
       lateral_yards = dplyr::if_else(is.na(.data$lateral_yards), 0, .data$lateral_yards),
       lateral_tds = dplyr::if_else(is.na(.data$lateral_tds), 0L, .data$lateral_tds),
@@ -416,14 +426,14 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       hvt_percentage = hvt / carries
     ) %>%
     dplyr::rename(player_id = .data$rusher_player_id) %>%
-    dplyr::select("player_id", "week", "season", "name_rush", "team_rush",
+    dplyr::select("player_id", "week", "season", "season_type", "name_rush", "team_rush",
                   "rushing_yards", "carries", "rushing_tds", "rushing_fumbles",
                   "rushing_fumbles_lost", "rushing_first_downs", "rushing_epa", "hvt") %>%
     dplyr::ungroup()
   
   rush_two_points <- two_points %>%
     dplyr::filter(.data$rush_attempt == 1) %>%
-    dplyr::group_by(.data$rusher_player_id, .data$week, .data$season) %>%
+    dplyr::group_by(.data$rusher_player_id, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarise(
       # need name_rush and team_rush here for the full join in the next pipe
       name_rush = custom_mode(.data$rusher_player_name),
@@ -436,7 +446,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   rush_df <- rush_df %>%
     # need a full join because players without rushing stats that recorded
     # a rushing two point (mostly QBs) are dropped in any other join
-    dplyr::full_join(rush_two_points, by = c("player_id", "week", "season", "name_rush", "team_rush")) %>%
+    dplyr::full_join(rush_two_points, by = c("player_id", "week", "season", "season_type", "name_rush", "team_rush")) %>%
     dplyr::mutate(rushing_2pt_conversions = dplyr::if_else(is.na(.data$rushing_2pt_conversions), 0L, .data$rushing_2pt_conversions)) %>%
     dplyr::filter(!is.na(.data$player_id))
   
@@ -454,7 +464,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::mutate(
       hvt = ifelse(yardline_100 <= 10, 1, 0)
     ) %>% 
-    dplyr::group_by(.data$receiver_player_id, .data$week, .data$season) %>%
+    dplyr::group_by(.data$receiver_player_id, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarize(
       name_receiver = dplyr::first(.data$receiver_player_name),
       team_receiver = dplyr::first(.data$posteam),
@@ -500,7 +510,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   # receiver df 3: team receiving for WOPR
   rec_team <- data %>%
     dplyr::filter(!is.na(.data$receiver_player_id)) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>%
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarize(
       team_targets = dplyr::n(),
       team_air_yards = sum(.data$air_yards, na.rm = TRUE),
@@ -510,7 +520,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   # rec df: join
   rec_df <- rec %>%
     dplyr::left_join(laterals, by = c("receiver_player_id", "week", "season")) %>%
-    dplyr::left_join(rec_team, by = c("team_receiver" = "posteam", "week", "season")) %>%
+    dplyr::left_join(rec_team, by = c("team_receiver" = "posteam", "week", "season", "season_type")) %>%
     dplyr::mutate(
       lateral_yards = dplyr::if_else(is.na(.data$lateral_yards), 0, .data$lateral_yards),
       lateral_tds = dplyr::if_else(is.na(.data$lateral_tds), 0L, .data$lateral_tds),
@@ -539,7 +549,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       wopr = 1.5 * .data$target_share + 0.7 * .data$air_yards_share
     ) %>%
     dplyr::rename(player_id = .data$receiver_player_id) %>%
-    dplyr::select("player_id", "week", "season", "name_receiver", "team_receiver",
+    dplyr::select("player_id", "week", "season", "season_type", "name_receiver", "team_receiver",
                   "receiving_yards", "receiving_air_yards", "receiving_yards_after_catch",
                   "receptions", "targets", "receiving_tds", "receiving_fumbles",
                   "receiving_fumbles_lost", "receiving_first_downs", "receiving_epa",
@@ -547,7 +557,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   
   rec_two_points <- two_points %>%
     dplyr::filter(.data$pass_attempt == 1) %>%
-    dplyr::group_by(.data$receiver_player_id, .data$week, .data$season) %>%
+    dplyr::group_by(.data$receiver_player_id, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarise(
       # need name_receiver and team_receiver here for the full join in the next pipe
       name_receiver = custom_mode(.data$receiver_player_name),
@@ -560,12 +570,14 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   rec_df <- rec_df %>%
     # need a full join because players without receiving stats that recorded
     # a receiving two point are dropped in any other join
-    dplyr::full_join(rec_two_points, by = c("player_id", "week", "season", "name_receiver", "team_receiver")) %>%
+    dplyr::full_join(rec_two_points, by = c("player_id", "week", "season", "season_type", "name_receiver", "team_receiver")) %>%
     dplyr::mutate(receiving_2pt_conversions = dplyr::if_else(is.na(.data$receiving_2pt_conversions), 0L, .data$receiving_2pt_conversions)) %>%
     dplyr::filter(!is.na(.data$player_id))
   
   rec_df_nas <- is.na(rec_df)
-  epa_index <- which(dimnames(rec_df_nas)[[2]] == c("receiving_epa", "racr", "target_share", "air_yards_share", "wopr"))
+  epa_index <- suppressWarnings(
+    which(dimnames(rec_df_nas)[[2]] == c("receiving_epa", "racr", "target_share", "air_yards_share", "wopr"))
+    )
   rec_df_nas[,epa_index] <- c(FALSE)
   
   rec_df[rec_df_nas] <- 0
@@ -575,7 +587,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   
   st_tds <- pbp %>%
     dplyr::filter(.data$special == 1 & !is.na(.data$td_player_id)) %>%
-    dplyr::group_by(.data$td_player_id, .data$week, .data$season) %>%
+    dplyr::group_by(.data$td_player_id, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarise(
       name_st = custom_mode(.data$td_player_name),
       team_st = custom_mode(.data$td_team),
@@ -589,12 +601,24 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   if (length(which(data_seasons >= 2013)) > 0) {
     snaps_df <-
       nflreadr::load_snap_counts(seasons = data_seasons[data_seasons >= 2013]) %>%
+      mutate(season_type = case_when(
+        game_type == 'REG' ~ 'REG',
+        game_type %in% c('WC', 'DIV', 'CON', 'SB') ~ 'POST',
+        TRUE ~ game_type
+      )) |> 
       left_join(roster_df %>%
                   select(gsis_id, pfr_id, first_name, last_name),
                 by = c('pfr_player_id' = 'pfr_id')) %>% 
       left_join(schedule_df %>% 
-                  select(game_id, week),
-                by = c('game_id', 'week')) %>% 
+                  select(game_id, week, game_type) |> 
+                  rename(season_type = game_type) |> 
+                  mutate(season_type = case_when(
+                    season_type == 'REG' ~ 'REG',
+                    season_type %in% c('WC', 'DIV', 'CON', 'SB') ~ 'POST',
+                    TRUE ~ season_type
+                  )),
+                by = c('game_id', 'week', 'season_type')) %>% 
+      filter(!is.na(gsis_id)) |> 
       mutate(
         name_snaps = paste0(substr(first_name, 1, 1), '.', last_name),
         offense_snaps = .data$offense_snaps %>% as.integer(),
@@ -608,6 +632,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         player_id = gsis_id,
         week,
         season,
+        season_type,
         name_snaps,
         team_snaps = team,
         offense_snaps:st_pct
@@ -617,6 +642,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       mutate(player_id = as.character(NA),
              week = as.integer(NA),
              season = as.integer(NA),
+             season_type = as.character(NA),
              name_snaps = as.character(NA))
   }
   
@@ -647,14 +673,15 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       mutate(route_run = case_when(position %in% c('RB', 'TE', 'WR') & qb_dropback == 1 ~ 1,
                                    TRUE ~ 0)
              ) |> 
-      group_by(player_id, first_name, last_name, position, week, season) |> 
+      group_by(player_id, first_name, last_name, position, week, season, season_type) |> 
       summarise(routes_run = sum(route_run, na.rm = T)) |> 
       filter(position %in% c('QB', 'RB', 'TE', 'WR') &
                !is.na(player_id))
   } else {
-    routes_df <- as_tibble(matrix(vector(), 0, 7, 
+    routes_df <- as_tibble(matrix(vector(), 0, 8, 
                                   dimnames = list(c(), c("player_id",  "first_name", "last_name", 
-                                                         "position", "week", "season", "routes_run"))
+                                                         "position", "week", "season", "season_type", 
+                                                         "routes_run"))
     )) |> 
       mutate(
         player_id = as.character(player_id),
@@ -663,6 +690,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         position = as.character(position),
         week = as.integer(week),
         season = as.integer(season),
+        season_type = as.character(season_type),
         routes_run = as.double(routes_run),
       )
   }
@@ -671,12 +699,12 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   
   # combine all the stats together
   player_df <- pass_df %>%
-    dplyr::full_join(rush_df, by = c("player_id", "week", "season")) %>%
-    dplyr::full_join(rec_df, by = c("player_id", "week", "season")) %>%
-    dplyr::full_join(routes_df, by = c("player_id", "week", "season")) %>%
-    dplyr::full_join(st_tds, by = c("player_id", "week", "season")) %>% 
-    dplyr::full_join(snaps_df, by = c("player_id", "week", "season")) %>% 
-    dplyr::left_join(s_type, by = c("season", "week")) %>%
+    dplyr::full_join(rush_df, by = c("player_id", "week", "season", "season_type")) %>%
+    dplyr::full_join(rec_df, by = c("player_id", "week", "season", "season_type")) %>%
+    dplyr::full_join(routes_df, by = c("player_id", "week", "season", "season_type")) %>%
+    dplyr::full_join(st_tds, by = c("player_id", "week", "season", "season_type")) %>%
+    dplyr::full_join(snaps_df, by = c("player_id", "week", "season", "season_type")) %>%
+    dplyr::left_join(s_type, by = c("season", "season_type", "week")) %>%
     dplyr::mutate(
       player_name = dplyr::case_when(
         !is.na(.data$name_pass) ~ .data$name_pass,
@@ -684,7 +712,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         !is.na(.data$name_receiver) ~ .data$name_receiver,
         !is.na(.data$name_snaps) ~ .data$name_snaps,
         TRUE ~ .data$name_st
-      ),
+      ), 
       recent_team = dplyr::case_when(
         !is.na(.data$team_pass) ~ .data$team_pass,
         !is.na(.data$team_rush) ~ .data$team_rush,
@@ -693,7 +721,10 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         TRUE ~ .data$team_st
       )
     ) %>% 
-    dplyr::left_join(data %>% select(season, game_id, week, recent_team = posteam) %>% unique(), by = c('season', 'week', 'recent_team')) %>% 
+    dplyr::left_join(
+      data %>% select(season, season_type, game_id, week, recent_team = posteam) %>% unique(),
+      by = c('season', 'season_type', 'week', 'recent_team')
+    ) %>% 
     dplyr::select(tidyselect::any_of(c(
       
       # id information
@@ -753,7 +784,7 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         potential_offense_snaps = .data$offense_snaps / .data$offense_pct,
         potential_st_snaps = .data$st_snaps / .data$st_pct
       ) %>% 
-      dplyr::group_by(.data$player_id) %>%
+      dplyr::group_by(.data$player_id, .data$season, .data$season_type) %>%
       dplyr::summarise(
         player_name = custom_mode(.data$player_name),
         games = dplyr::n(),
@@ -851,68 +882,70 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
 
 # Player Stats Update DB --------------------------------------------------
 
-update_player_stats_weekly_db <- function(con = fx.db_con(x.host = 'localhost'), pbp = pbp_df) {
+update_player_stats_weekly_db <- function(con = fx.db_con(x.host = 'localhost'),
+                                          player_stats_weekly_df = player_stats_weekly) {
   on.exit(dbDisconnect(con))
   
   table <- 'nflfastR_player_stats_weekly'
-    
-  existing_ids <- tbl(con, table) |>
-    filter(season == nflreadr::get_current_season()) |>
-    select(game_id) |>
-    collect() |>
-    pull(game_id) |> 
+  
+  delete_seasons <- player_stats_weekly_df |>
+    pull(season) |>
     unique()
   
-  filtered_pbp <- pbp |> 
-    filter(!game_id %in% existing_ids) 
-  
-  if (nrow(filtered_pbp) > 0) {
-    player_stats_weekly <- filtered_pbp |> 
-      calculate_player_stats_mod(weekly = TRUE)
+  if (dbExistsTable(con, table) == TRUE) {
     
-    filtered_delete_game_ids <- filtered_pbp |> 
-      pull(game_id) |> 
-      unique()
-    
-    if (dbExistsTable(con, table) == FALSE){
-      dbCreateTable(con, table, player_stats_weekly)
-    }
-    
-    dbExecute(con, 
-              glue('DELETE FROM "{table}" WHERE game_id IN ({paste0(as.character(paste0("\'", filtered_delete_game_ids, "\'")), collapse = ", ")});')
+    dbExecute(
+      con,
+      glue(
+        'DELETE FROM "{table}" WHERE season IN ({paste0(as.character(paste0("\'", delete_seasons, "\'")), collapse = ", ")});'
+      )
     )
     
-    dbWriteTable(con, 
-                 table, 
-                 player_stats_weekly, 
+    dbWriteTable(con,
+                 table,
+                 player_stats_weekly_df,
                  append = TRUE)
   } else {
-    print('Player Stats is already up-to-date!')
+    dbCreateTable(con,
+                  table,
+                  player_stats_weekly_df)
   }
 }
 
-update_player_stats_db <- function(con = fx.db_con(x.host = 'localhost'), pbp = pbp_df) {
+update_player_stats_db <- function(con = fx.db_con(x.host = 'localhost'),
+                                   player_stats_df = player_stats) {
+  
   on.exit(dbDisconnect(con))
   
   table <- 'nflfastR_player_stats'
   
-  player_stats <- pbp |> 
-    calculate_player_stats_mod(weekly = FALSE) |> 
-    mutate(season = unique(pbp$season)) |> 
-    select(season, everything())
+  # player_stats <- pbp |>
+  #   calculate_player_stats_mod(weekly = FALSE) |>
+  #   mutate(season = unique(pbp$season[1])) |>
+  #   select(season, everything())
   
-  delete_seasons <- pbp |> 
-    pull(season) |> 
+  delete_seasons <- player_stats_df |> 
+    pull(season) |>
     unique()
   
-  dbExecute(con, 
-            glue('DELETE FROM "{table}" WHERE season IN ({paste0(as.character(paste0("\'", delete_seasons, "\'")), collapse = ", ")});')
-  )
-  
-  dbWriteTable(con, 
-               table, 
-               player_stats, 
-               append = TRUE)
+  if (dbExistsTable(con, table) == TRUE) {
+    
+    dbExecute(
+      con,
+      glue(
+        'DELETE FROM "{table}" WHERE season IN ({paste0(as.character(paste0("\'", delete_seasons, "\'")), collapse = ", ")});'
+      )
+    )
+    
+    dbWriteTable(con,
+                 table,
+                 player_stats_df,
+                 append = TRUE)
+  } else {
+    dbCreateTable(con,
+                  table,
+                  player_stats_df)
+  }
 }
 
 # Team stats --------------------------------------------------------------
@@ -952,7 +985,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
     two_points <- pbp %>%
       dplyr::filter(.data$two_point_conv_result == "success") %>%
       dplyr::select(
-        "week", "season", "posteam",
+        "week", "season", "season_type", "posteam",
         "pass_attempt", "rush_attempt",
         "passer_player_name", "passer_player_id",
         "rusher_player_name", "rusher_player_id",
@@ -985,7 +1018,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   # get passing stats
   pass_df <- data %>%
     dplyr::filter(.data$play_type %in% c("pass", "qb_spike")) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>% 
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>% 
     dplyr::summarize(
       passing_yards_after_catch = sum((.data$passing_yards - .data$air_yards) * .data$complete_pass, na.rm = TRUE),
       passing_yards = sum(.data$passing_yards, na.rm = TRUE),
@@ -1009,7 +1042,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   
   pass_two_points <- two_points %>%
     dplyr::filter(.data$pass_attempt == 1) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>%
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarise(
       passing_2pt_conversions = dplyr::n()
     ) %>%
@@ -1019,7 +1052,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   pass_df <- pass_df %>%
     # need a full join because players without passing stats that recorded
     # a passing two point (e.g. WRs) are dropped in any other join
-    dplyr::full_join(pass_two_points, by = c("team", "week", "season")) %>%
+    dplyr::full_join(pass_two_points, by = c("team", "week", "season", "season_type")) %>%
     dplyr::mutate(passing_2pt_conversions = dplyr::if_else(is.na(.data$passing_2pt_conversions), 0L, .data$passing_2pt_conversions)) %>%
     dplyr::filter(!is.na(.data$team))
   
@@ -1034,7 +1067,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   # rush df 1: primary rusher
   rushes <- data %>%
     dplyr::filter(.data$play_type %in% c("run", "qb_kneel")) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>% 
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>% 
     dplyr::mutate(
       hvt = ifelse(yardline_100 <= 10, 1, 0)
     ) %>% 
@@ -1054,7 +1087,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   # rush df 2: lateral
   laterals <- data %>%
     dplyr::filter(!is.na(.data$lateral_rusher_player_id)) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>% 
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>% 
     dplyr::mutate(
       lateral_hvt = ifelse(yardline_100 <= 10, 1, 0)
     ) %>% 
@@ -1080,7 +1113,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   
   # rush df: join
   rush_df <- rushes %>%
-    dplyr::left_join(laterals, by = c("team", "week", "season")) %>%
+    dplyr::left_join(laterals, by = c("team", "week", "season", "season_type")) %>%
     dplyr::mutate(
       lateral_hvts = dplyr::if_else(is.na(.data$lateral_hvts), 0, .data$lateral_hvts),
       lateral_yards = dplyr::if_else(is.na(.data$lateral_yards), 0, .data$lateral_yards),
@@ -1099,14 +1132,14 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
       hvt_percentage = hvts / carries
     ) %>%
     # dplyr::rename(team = .data$posteam) %>%
-    dplyr::select("team", "week", "season", 
+    dplyr::select("team", "week", "season", "season_type",
                   "rushing_yards", "carries", "rushing_tds", "rushing_fumbles",
                   "rushing_fumbles_lost", "rushing_first_downs", "rushing_epa", "hvts") %>%
     dplyr::ungroup()
   
   rush_two_points <- two_points %>%
     dplyr::filter(.data$rush_attempt == 1) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>%
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarise(
       # need name_rush and team_rush here for the full join in the next pipe
       rushing_2pt_conversions = dplyr::n()
@@ -1117,7 +1150,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   rush_df <- rush_df %>%
     # need a full join because players without rushing stats that recorded
     # a rushing two point (mostly QBs) are dropped in any other join
-    dplyr::full_join(rush_two_points, by = c("team", "week", "season")) %>%
+    dplyr::full_join(rush_two_points, by = c("team", "week", "season", "season_type")) %>%
     dplyr::mutate(rushing_2pt_conversions = dplyr::if_else(is.na(.data$rushing_2pt_conversions), 0L, .data$rushing_2pt_conversions)) %>%
     dplyr::filter(!is.na(.data$team))
   
@@ -1135,7 +1168,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::mutate(
       receiving_redzone_target = ifelse(yardline_100 <= 35, 1, 0)
     ) %>% 
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>%
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarize(
       yards = sum(.data$receiving_yards, na.rm = TRUE),
       receptions = sum(.data$complete_pass == 1),
@@ -1158,7 +1191,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::mutate(
       lateral_receiving_redzone_target = ifelse(yardline_100 <= 25, 1, 0)
     ) %>% 
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>%
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarize(
       lateral_receiving_receiving_redzone_targets = sum(.data$lateral_receiving_redzone_target, na.rm = TRUE),
       lateral_yards = sum(.data$lateral_receiving_yards, na.rm = TRUE),
@@ -1179,7 +1212,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
         dplyr::select("season", "week", "team" = .data$team_abbr, "lateral_yards" = .data$yards) %>%
         dplyr::mutate(lateral_tds = 0L, lateral_att = 1L)
     ) %>% 
-    group_by(team, week, season) %>% 
+    group_by(team, week, season, season_type) %>% 
     summarize(
       lateral_receiving_receiving_redzone_targets = sum(.data$lateral_receiving_receiving_redzone_targets, na.rm = TRUE),
       lateral_yards = sum(.data$lateral_yards, na.rm = TRUE),
@@ -1193,7 +1226,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   # receiver df 3: team receiving for WOPR
   rec_team <- data %>%
     dplyr::filter(!is.na(.data$receiver_player_id)) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>%
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarize(
       team_targets = dplyr::n(),
       team_air_yards = sum(.data$air_yards, na.rm = TRUE),
@@ -1203,8 +1236,8 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   
   # rec df: join
   rec_df <- rec %>%
-    dplyr::left_join(laterals, by = c("team", "week", "season")) %>%
-    dplyr::left_join(rec_team, by = c("team", "week", "season")) %>%
+    dplyr::left_join(laterals, by = c("team", "week", "season", "season_type")) %>%
+    dplyr::left_join(rec_team, by = c("team", "week", "season", "season_type")) %>%
     dplyr::mutate(
       lateral_receiving_receiving_redzone_targets = ifelse(is.na(.data$lateral_receiving_receiving_redzone_targets), 0, .data$lateral_receiving_receiving_redzone_targets),
       lateral_yards = dplyr::if_else(is.na(.data$lateral_yards), 0, .data$lateral_yards),
@@ -1224,7 +1257,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
       racr = .data$receiving_yards / .data$receiving_air_yards
     ) %>%
     # dplyr::rename(team = .data$posteam) %>%
-    dplyr::select("team", "week", "season", 
+    dplyr::select("team", "week", "season", "season_type",
                   "receiving_yards", "receiving_air_yards", "receiving_yards_after_catch",
                   "receptions", "targets", "receiving_tds", "receiving_fumbles",
                   "receiving_fumbles_lost", "receiving_first_downs", "receiving_epa",
@@ -1232,7 +1265,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   
   rec_two_points <- two_points %>%
     dplyr::filter(.data$pass_attempt == 1) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>%
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarise(
       receiving_2pt_conversions = dplyr::n()
     ) %>%
@@ -1242,12 +1275,14 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   rec_df <- rec_df %>%
     # need a full join because players without receiving stats that recorded
     # a receiving two point are dropped in any other join
-    dplyr::full_join(rec_two_points, by = c("team", "week", "season")) %>%
+    dplyr::full_join(rec_two_points, by = c("team", "week", "season", "season_type")) %>%
     dplyr::mutate(receiving_2pt_conversions = dplyr::if_else(is.na(.data$receiving_2pt_conversions), 0L, .data$receiving_2pt_conversions)) %>%
     dplyr::filter(!is.na(.data$team))
   
   rec_df_nas <- is.na(rec_df)
-  epa_index <- which(dimnames(rec_df_nas)[[2]] == c("receiving_epa", "racr"))
+  epa_index <- suppressWarnings(
+    which(dimnames(rec_df_nas)[[2]] == c("receiving_epa", "racr"))
+  )
   rec_df_nas[,epa_index] <- c(FALSE)
   
   rec_df[rec_df_nas] <- 0
@@ -1257,7 +1292,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   
   st_tds <- pbp %>%
     dplyr::filter(.data$special == 1 & !is.na(.data$td_player_id)) %>%
-    dplyr::group_by(.data$posteam, .data$week, .data$season) %>%
+    dplyr::group_by(.data$posteam, .data$week, .data$season, .data$season_type) %>%
     dplyr::summarise(
       special_teams_tds = sum(.data$touchdown, na.rm = TRUE)
     ) %>%
@@ -1272,10 +1307,10 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   
   # combine all the stats together
   team_df <- pass_df %>%
-    dplyr::full_join(rush_df, by = c("team", "week", "season")) %>%
-    dplyr::full_join(rec_df, by = c("team", "week", "season")) %>%
-    dplyr::full_join(st_tds, by = c("team", "week", "season")) %>%
-    dplyr::left_join(s_type, by = c("season", "week")) %>% 
+    dplyr::full_join(rush_df, by = c("team", "week", "season", 'season_type')) %>%
+    dplyr::full_join(rec_df, by = c("team", "week", "season", 'season_type')) %>%
+    dplyr::full_join(st_tds, by = c("team", "week", "season", 'season_type')) %>%
+    dplyr::left_join(s_type, by = c("season", "season_type", "week")) %>% 
     dplyr::left_join(data %>% select(season, game_id, week, team = posteam) %>% unique(), by = c('season', 'team', 'week')) %>% 
     dplyr::select(tidyselect::any_of(c(
       
@@ -1329,7 +1364,7 @@ calculate_team_stats_mod <- function(pbp, weekly = FALSE) {
   # if user doesn't want week-by-week input, aggregate the whole df
   if (isFALSE(weekly)) {
     team_df <- team_df %>%
-      dplyr::group_by(.data$team) %>%
+      dplyr::group_by(.data$team, .data$season, .data$season_type) %>%
       dplyr::summarise(
         games = dplyr::n(),
         # passing

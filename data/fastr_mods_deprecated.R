@@ -872,6 +872,10 @@ update_player_stats_weekly_db <- function(con = fx.db_con(x.host = 'localhost'),
       pull(game_id) |> 
       unique()
     
+    if (dbExistsTable(con, table) == FALSE){
+      dbCreateTable(con, table, player_stats_weekly)
+    }
+    
     dbExecute(con, 
               glue('DELETE FROM "{table}" WHERE game_id IN ({paste0(as.character(paste0("\'", filtered_delete_game_ids, "\'")), collapse = ", ")});')
     )
@@ -892,7 +896,7 @@ update_player_stats_db <- function(con = fx.db_con(x.host = 'localhost'), pbp = 
   
   player_stats <- pbp |> 
     calculate_player_stats_mod(weekly = FALSE) |> 
-    mutate(season = unique(pbp$season[1])) |> 
+    mutate(season = unique(pbp$season)) |> 
     select(season, everything())
   
   delete_seasons <- pbp |> 

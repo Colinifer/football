@@ -40,7 +40,7 @@ con <- fx.db_con(x.host = 'localhost')
                                                                  'Lem Burnham',
                                                                  'Cleo Lemon'), true = 'http://static.nfl.com/static/content/public/image/fantasy/transparent/200x200/default.png', false = as.character(headshot_url))
     )
-  
+
   # compute cpoe grouped by air_yards
   epa_cpoe <- pbp |>
     filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)) |>
@@ -74,6 +74,28 @@ con <- fx.db_con(x.host = 'localhost')
     # head(32) |> 
     pull(passer_player_id)
   
+  epa_density <- pbp |>
+    filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)) |>
+    group_by(game_id, passer_player_id) |>
+    summarise(cpoe = mean(cpoe), epa = mean(epa)) |> 
+    left_join(pbp |>
+                filter(!is.na(cpoe) &
+                         !is.na(epa) & !is.na(passer_player_id)) |>
+                group_by(passer_player_id) |>
+                summarise(cpoe = mean(cpoe), epa_per_play = mean(epa)) %>%
+                mutate(season_dakota = mgcv::predict.gam(dakota_model, .)) |>
+                select(-cpoe, -epa_per_play),
+              by = c('passer_player_id')
+    ) |>
+    filter(!is.na(cpoe) & !is.na(epa) & !is.na(passer_player_id)
+    )
+  
+  epa_density |>
+    ggplot(aes(x = cpoe, y = epa)) + 
+    geom_density_2d() + 
+    geom_point()
+
+
   # summarise cpoe using player ID (note that player ids are 'NA' for 'no_play' plays. 
   # Since we would filter those plays anyways we can use the id here)
   # The correct name is being joined using the roster data

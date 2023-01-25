@@ -16,6 +16,12 @@
 				"username": "publiccolin",
 				"password": "VYgIlmCeNg3wIoLe"
 			}
-		]
-	}
-}
+		],
+		"editor.defaultFormatter": "Mikhail-Arkhipov.r",
+		"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		}
+	},
+	"r.bracketedPaste": true,
+	"r.rterm.mac": "/usr/local/bin/radian"
+  }
