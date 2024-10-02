@@ -1,6 +1,7 @@
 # Packages & Init Setup ---------------------------------------------------
 
 # devtools::install_github("nflverse/nflfastR")
+# devtools::install_github("nflverse/nflreadr")
 # devtools::install_github("ffverse/ffopportunity")
 # devtools::install_github("dynastyprocess/ffpros")
 # devtools::install_github("guga31bb/nfl4th")
@@ -112,13 +113,21 @@ source_files <- c(
   'https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R',
   'https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R',
   'data/fastr_mods.R',
+  'R/matchups.R',
+  'R/plot_team_tiers.R',
+  'R/wins_above_expectation.R',
+  'R/plot_series_results.R',
+  'R/plot_team_pace.R',
   'init/init_cfb.R',
   # 'data/cfb_fastr_mods.R'
   NULL
 )
 
-map(.x = source_files, ~source(.x, echo = F)) |> 
+map(.x = source_files, ~try(source(.x, echo = F))) |> 
   invisible()
+
+fx.wins_above_expectation()
+fx.plot_epa_team_tiers()
 
 
 # Update DBs --------------------------------------------------------------
@@ -179,20 +188,20 @@ update_team_stats_weekly_db()
 
 
 source('init_ff.R')
+source("assets/density_functions.R")
+source("assets/ffpros.R")
 
 # Rosters
-fantasy_rosters <- ff_rosters(ff_conn_beep_boop) |>
+fantasy_rosters <- ffscrapr::ff_rosters(ff_conn_beep_boop) |>
   mutate(on_roster = TRUE,
          league = 'Beep Boop') |>
-  rbind(ff_rosters(ff_conn_drinkers) |>
+  mutate(self = case_when(franchise_id == 8 ~ TRUE,
+                          TRUE ~ FALSE)) |> 
+  rbind(ffscrapr::ff_rosters(ff_conn_kepler) |>
           mutate(on_roster = TRUE,
-                 league = 'Drinkers')) |>
-  # rbind(ff_rosters(ff_conn_kepler) |>
-  #         mutate(on_roster = TRUE,
-  #                league = 'Kepler')) |>
-  rbind(ff_rosters(ff_conn_family) |>
-          mutate(on_roster = TRUE,
-                 league = 'Family')) |>
+                 league = 'Kepler') |> 
+          mutate(self = case_when(franchise_id == 2 ~ TRUE,
+                                  TRUE ~ FALSE))) |>
   left_join(roster_df %>%
               select(
                 gsis_id,
@@ -200,58 +209,7 @@ fantasy_rosters <- ff_rosters(ff_conn_beep_boop) |>
               mutate(espn_id = as.numeric(espn_id)),
             by = c('player_id' = 'espn_id'))
 
-matchup_df <- schedule_df |> 
-  filter(season == year) |> 
-  mutate(posteam = home_team,
-         oppteam = away_team) |>
-  select(
-    game_id,
-    season,
-    game_type,
-    week,
-    gameday,
-    weekday,
-    gametime,
-    posteam,
-    oppteam,
-    away_team,
-    home_team,
-    away_score,
-    home_score,
-    home_result = result,
-    stadium,
-    location,
-    roof,
-    surface,
-    old_game_id
-  ) |> 
-  rbind(
-    schedule_df |> 
-      mutate(posteam = away_team,
-             oppteam = home_team) |>
-      select(
-        game_id,
-        season,
-        game_type,
-        week,
-        gameday,
-        weekday,
-        gametime,
-        posteam,
-        oppteam,
-        away_team,
-        home_team,
-        away_score,
-        home_score,
-        home_result = result,
-        stadium,
-        location,
-        roof,
-        surface,
-        old_game_id
-      )
-  ) |> 
-  arrange(old_game_id)
+matchup_df <- fx.matchups(schedule_df)
 
 
 team_stats <- pbp_df |>
@@ -308,11 +266,6 @@ player_stats <- pbp_df |>
 player_stats_weekly <- pbp_df |> 
   filter(season_type == 'REG') |> 
   calculate_player_stats_mod(weekly = TRUE)
-
-
-ff_free_agents <- fx.ff_free_agents(player_stats, 'Beep Boop')
-
-
 
 
 # Update DBs -------------------------------------------------------

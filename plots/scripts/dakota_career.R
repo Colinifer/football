@@ -106,8 +106,8 @@ p <- qb_top_bottom |>
     axis.text.y = element_blank(),
     panel.grid.major.y = element_blank(),
     legend.title = element_text(family = "Chivo",
-                                size = 10),
-    legend.text = element_text(size = 8),
+                                size = 7),
+    legend.text = element_text(size = 5),
     legend.position = c(.88, .1725)
   )
 

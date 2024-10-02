@@ -26,8 +26,7 @@ pbp <- tbl(con, 'nflfastR_pbp') |>
 dbDisconnect(con)
 
 # compute cpoe grouped by air_yards
-epa_cpoe <-
-  pbp |>
+epa_cpoe <- pbp |>
   filter(!is.na(cpoe) & !is.na(epa)) |>
   group_by(game_id, defteam) |>
   summarise(cpoe = mean(cpoe, na.rm = T), epa = mean(epa, na.rm = T)) |> 

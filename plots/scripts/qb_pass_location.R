@@ -9,8 +9,8 @@ pbp_df |>
 
 data <- pbp_df |> 
   filter(
-    # week == 16 &
-    passer_player_id == '00-0023459' & 
+    # week == 22 &
+    passer_player_id == '00-0033873' & 
       pass_attempt == 1 & 
       !is.na(pass_location)
   ) |> 
@@ -56,7 +56,8 @@ ggplot(
     linetype = 1
   ) + 
   # scale_fill_viridis(option = 'G') +
-  scale_fill_gradient(low = color_cw[3], high = color_cw[6], limits=c(0, 1)) + 
+  # scale_fill_gradient(low = color_cw[3], high = color_cw[6], limits = c(0, 1)) +
+  scale_fill_gradient2(low = color_cw[8], mid = color_cw[3], high = color_cw[7], midpoint = .5, limits = c(0, 1)) +
   geom_text(
     data = data |> filter(pass_distance == 0 & pass_location == 'left'),
     aes(label = heatmap_label),
@@ -194,7 +195,7 @@ ggplot(
       '2' = '10-19 yds',
       '3' = '20+ yds'
     )
-  ) + 
+  ) +
   labs(
     title = glue('{first(data$full_name)} Completion Percentage by Zone'),
     subtitle = glue('{first(data$season)} Season')

@@ -3,21 +3,12 @@ year
 
 ff_conn_beep_boop <- ffscrapr::espn_connect(season = year,
                        league_id = initR::fantasy_key |> pull(league_id) |> nth(1),
-                       swid = swid, 
-                       espn_s2 = espn_s2)
+                       swid = initR::swid, 
+                       espn_s2 = initR::espn_s2)
 
-ff_conn_drinkers <- ffscrapr::espn_connect(season = year,
-                                  league_id = initR::fantasy_key |> pull(league_id) |> nth(2),
-                                  swid = swid, 
-                                  espn_s2 = espn_s2)
-
-ff_conn_family <- ffscrapr::espn_connect(season = year,
-                                         league_id = initR::fantasy_key |> pull(league_id) |> nth(3),
-                                         swid = swid, 
-                                         espn_s2 = espn_s2)
 
 ff_conn_kepler <- ffscrapr::espn_connect(season = year,
-                       league_id = fantasy_key |> pull(league_id) |> nth(4),
+                       league_id = initR::fantasy_key |> pull(league_id) |> nth(2),
                        swid = swid, 
                        espn_s2 = espn_s2)
 

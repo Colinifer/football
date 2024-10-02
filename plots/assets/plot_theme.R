@@ -61,12 +61,23 @@ ESPN_logo_url = function(x) ifelse(is.na(x),NA,ifelse(x=='KC',paste0('https://ra
 .tm_div_order_alt <- c('BUF', 'MIA', 'NE', 'NYJ', 'DAL', 'NYG', 'PHI', 'WAS', 'BAL', 'CIN', 'CLE', 'PIT', 'CHI', 'DET', 'GB', 'MIN', 'HOU', 'IND', 'JAX', 'TEN', 'ATL', 'CAR', 'NO', 'TB', 'DEN', 'KC', 'LAC', 'LV', 'ARI', 'LA', 'SEA', 'SF')
 
 # main function to save my branded plots
-brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 4, dark = TRUE, data_author = '', data_home = '', fade_borders = '', fade_prop = 0.5, axis_rot = F, tm_wordmarks = F) {
-	
-    ## start by adding team wordmarks
+brand_plot <- function(orig_plot,
+                       save_name,
+                       asp = 1,
+                       base_size = 4,
+                       dark = TRUE,
+                       data_author = '',
+                       data_home = '',
+                       fade_borders = '',
+                       fade_prop = 0.5,
+                       axis_rot = F,
+                       tm_wordmarks = F) {
+  ## start by adding team wordmarks
   if (tm_wordmarks) {
     orig_plot_bld <- ggplot_gtable(ggplot_build(orig_plot))
-    grob_strip_index <- which(sapply(orig_plot_bld$grob, function(x) x$name)=='strip')
+    grob_strip_index <-
+      which(sapply(orig_plot_bld$grob, function(x)
+        x$name) == 'strip')
     facet_id <- sapply(grob_strip_index, function(grb) {
       orig_plot_bld$grobs[[grb]]$grobs[[1]]$children[[2]]$children[[1]]$label
     })
@@ -76,8 +87,8 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 4, dark = TRUE
     for (i in 1:length(facet_id)) {
       team_wd <-
         rasterGrob(
-          image = image_read(wordmark_path(facet_id[i])) %>% 
-            image_background(color_cw[3]) %>% 
+          image = image_read(wordmark_path(facet_id[i])) %>%
+            image_background(color_cw[3]) %>%
             image_border(color_cw[3], '30x30'),
           vp = viewport(height = .8, width = .6)
         )
@@ -87,74 +98,165 @@ brand_plot <- function(orig_plot, save_name, asp = 1, base_size = 4, dark = TRUE
     }
     orig_plot <- ggdraw(orig_plot_bld)
   }
-
+  
   logo_size <- 0.05
   
   ## is image taller than wider? if so, make sure the width is at least the base_size
   if (asp < 1) {
-    base_size_rat_wid <- (5/base_size)
-    logo_size <- (5/base_size) * logo_size * asp
+    base_size_rat_wid <- (5 / base_size)
+    logo_size <- (5 / base_size) * logo_size * asp
     base_size <- base_size / asp
   } else {
-    base_size_rat_wid <- (5/base_size) / asp
-    logo_size <- (5/base_size) * logo_size
+    base_size_rat_wid <- (5 / base_size) / asp
+    logo_size <- (5 / base_size) * logo_size
   }
   
-  ## local logo to read in
-  # logo_file <- readPNG(getURLContent('https://raw.githubusercontent.com/ajreinhard/data-viz/master/ggplot/statbutler.png'))
-  
-  # showtext_auto()
-  
-  author_txt <- textGrob(data_author, x=unit(0.01 * (base_size_rat_wid), 'npc'), gp=gpar(col=ifelse(dark == TRUE, color_cw[5], color_cw[1]), fontfamily='Montserrat', fontsize=6), hjust=0)
-  data_txt <- textGrob(data_home, x=unit(1 - (.01 * (base_size_rat_wid)), 'npc'), gp=gpar(col=ifelse(dark == TRUE, color_cw[5], color_cw[1]), fontfamily='Montserrat', fontsize=6), hjust=1)
+  author_txt <-
+    textGrob(
+      data_author,
+      x = unit(0.01 * (base_size_rat_wid), 'npc'),
+      gp = gpar(
+        col = ifelse(dark == TRUE, color_cw[5], color_cw[1]),
+        fontfamily = 'Montserrat',
+        fontsize = 6
+      ),
+      hjust = 0
+    )
+  data_txt <-
+    textGrob(
+      data_home,
+      x = unit(1 - (.01 * (
+        base_size_rat_wid
+      )), 'npc'),
+      gp = gpar(
+        col = ifelse(dark == TRUE, color_cw[5], color_cw[1]),
+        fontfamily = 'Montserrat',
+        fontsize = 6
+      ),
+      hjust = 1
+    )
   # footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c('grey95', 'darkblue'), space = 'rgb')(1000)), draw = F)
-  footer_bg <- grid.rect(x = unit(seq(0.5,1.5,length=1000), 'npc'), gp=gpar(col = 'transparent', fill = colorRampPalette(c(ifelse(dark == TRUE, color_cw[1], '#fcfcfc')), space = 'rgb')(1000)), draw = F)
+  footer_bg <-
+    grid.rect(
+      x = unit(seq(0.5, 1.5, length = 1000), 'npc'),
+      gp = gpar(col = 'transparent', fill = colorRampPalette(c(
+        ifelse(dark == TRUE, color_cw[1], '#fcfcfc')
+      ), space = 'rgb')(1000)),
+      draw = F
+    )
   footer <- grobTree(footer_bg, author_txt, data_txt)
-
   
-  if (axis_rot) {axis_adj <- 90} else {axis_adj <- 0}
-
-  if (fade_borders!='') {
+  
+  if (axis_rot) {
+    axis_adj <- 90
+  } else {
+    axis_adj <- 0
+  }
+  
+  if (fade_borders != '') {
     ## set up bounds for fade plot
-    x_lim <- axis_limits_x(orig_plot) * fade_prop + ggplot_build(orig_plot)$layout$panel_params[[1]]$x.range * (1-fade_prop)
-    y_lim <- axis_limits_y(orig_plot) * fade_prop + ggplot_build(orig_plot)$layout$panel_params[[1]]$y.range * (1-fade_prop)
+    x_lim <-
+      axis_limits_x(orig_plot) * fade_prop + ggplot_build(orig_plot)$layout$panel_params[[1]]$x.range * (1 -
+                                                                                                           fade_prop)
+    y_lim <-
+      axis_limits_y(orig_plot) * fade_prop + ggplot_build(orig_plot)$layout$panel_params[[1]]$y.range * (1 -
+                                                                                                           fade_prop)
     
     if (axis_rot) {
-      x_lim <- axis_limits_x(orig_plot) * fade_prop + ggplot_build(orig_plot)$layout$panel_params[[1]]$y.range * (1-fade_prop)
-      y_lim <- axis_limits_y(orig_plot) * fade_prop + ggplot_build(orig_plot)$layout$panel_params[[1]]$x.range * (1-fade_prop)
+      x_lim <-
+        axis_limits_x(orig_plot) * fade_prop + ggplot_build(orig_plot)$layout$panel_params[[1]]$y.range * (1 -
+                                                                                                             fade_prop)
+      y_lim <-
+        axis_limits_y(orig_plot) * fade_prop + ggplot_build(orig_plot)$layout$panel_params[[1]]$x.range * (1 -
+                                                                                                             fade_prop)
     }
     
     ## figure out which sides to fade
     border_layers <- c()
-    if (grepl('t',fade_borders)) {
-      border_layers <- c(border_layers, annotation_custom(make_gradient(deg = 270 + axis_adj), xmin=-Inf, xmax=Inf, ymin=y_lim[2], ymax=Inf))
+    if (grepl('t', fade_borders)) {
+      border_layers <-
+        c(
+          border_layers,
+          annotation_custom(
+            make_gradient(deg = 270 + axis_adj),
+            xmin = -Inf,
+            xmax = Inf,
+            ymin = y_lim[2],
+            ymax = Inf
+          )
+        )
     }
-    if (grepl('b',fade_borders)) {
-      border_layers <- c(border_layers, annotation_custom(make_gradient(deg = 90 + axis_adj), xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=y_lim[1]))
+    if (grepl('b', fade_borders)) {
+      border_layers <-
+        c(
+          border_layers,
+          annotation_custom(
+            make_gradient(deg = 90 + axis_adj),
+            xmin = -Inf,
+            xmax = Inf,
+            ymin = -Inf,
+            ymax = y_lim[1]
+          )
+        )
     }
-    if (grepl('r',fade_borders)) {
-      border_layers <- c(border_layers, annotation_custom(make_gradient(deg = 0 - axis_adj), xmin=x_lim[2], xmax=Inf, ymin=-Inf, ymax=Inf))
+    if (grepl('r', fade_borders)) {
+      border_layers <-
+        c(
+          border_layers,
+          annotation_custom(
+            make_gradient(deg = 0 - axis_adj),
+            xmin = x_lim[2],
+            xmax = Inf,
+            ymin = -Inf,
+            ymax = Inf
+          )
+        )
     }
-    if (grepl('l',fade_borders)) {
-      border_layers <- c(border_layers, annotation_custom(make_gradient(deg = 180 - axis_adj), xmin=-Inf, xmax=x_lim[1], ymin=-Inf, ymax=Inf))
+    if (grepl('l', fade_borders)) {
+      border_layers <-
+        c(
+          border_layers,
+          annotation_custom(
+            make_gradient(deg = 180 - axis_adj),
+            xmin = -Inf,
+            xmax = x_lim[1],
+            ymin = -Inf,
+            ymax = Inf
+          )
+        )
     }
     orig_plot$layers <- c(orig_plot$layers, border_layers)
     
     ## add axis (or not) to unfaded
     orig_plot <- orig_plot +
       theme(
-        axis.line.y.left = element_line(color = ifelse(grepl('l',fade_borders), 'transparent', color_cw[5])),
-        axis.line.y.right = element_line(color = ifelse(grepl('r',fade_borders), 'grey95', color_cw[3])),
-        axis.line.x.top = element_line(color = ifelse(grepl('t',fade_borders), 'grey95', color_cw[3])),
-        axis.line.x.bottom = element_line(color = ifelse(grepl('b',fade_borders), 'transparent', color_cw[5])),
-	panel.border = element_rect(color = color_cw[2], size = 0.1),
+        axis.line.y.left = element_line(color = ifelse(
+          grepl('l', fade_borders), 'transparent', color_cw[5]
+        )),
+        axis.line.y.right = element_line(color = ifelse(
+          grepl('r', fade_borders), 'grey95', color_cw[3]
+        )),
+        axis.line.x.top = element_line(color = ifelse(
+          grepl('t', fade_borders), 'grey95', color_cw[3]
+        )),
+        axis.line.x.bottom = element_line(color = ifelse(
+          grepl('b', fade_borders), 'transparent', color_cw[5]
+        )),
+        panel.border = element_rect(color = color_cw[2], size = 0.1),
       )
   }
   
-  plt.final <- grid.arrange(orig_plot, footer, heights=unit(c(1, 12), c('null','pt')))
+  plt.final <-
+    grid.arrange(orig_plot, footer, heights = unit(c(1, 12), c('null', 'pt')))
   # plt <- ggdraw(plt.final) + draw_image(logo_file, x = 0.002 * (base_size_rat_wid), y = 0, hjust = 0, vjust = 0, height = logo_size, width = 0.08 * (base_size_rat_wid))
   plt <- ggdraw(plt.final)
-  ggsave(save_name, plt, dpi = 700, height = base_size, width = base_size * (asp))
+  ggsave(
+    save_name,
+    plt,
+    dpi = 500,
+    height = base_size,
+    width = base_size * (asp)
+  )
   # showtext_end()
 }
 
@@ -165,7 +267,7 @@ theme_cw_dark <-  theme(
   plot.background = element_rect(fill = color_cw[1], color = 'transparent'),
   panel.border = element_rect(color = color_cw[1], fill = NA),
   panel.background = element_rect(fill = color_cw[2], color = 'transparent'),
-  axis.ticks = element_line(color = color_cw[5], size = 0.5),
+  axis.ticks = element_line(color = color_cw[5], linewidth = 0.5),
   axis.ticks.length = unit(2.75, 'pt'),
   axis.title = element_text(family = 'Chivo', 
                             # face = 'bold', 
@@ -179,15 +281,17 @@ theme_cw_dark <-  theme(
                             size = 14),
   plot.subtitle = element_text(size = 8),
   plot.caption = element_text(family = 'Montserrat', size = 5),
+  legend.title = element_text(family = 'Chivo', size=8),
+  legend.text = element_text(size=6),
   legend.background = element_rect(fill = color_cw[2], 
                                    # color = color_cw[5]
                                    ),
   legend.key = element_blank(),
+  legend.position = 'bottom',
   panel.grid.minor = element_blank(),
-  panel.grid.major = element_line(color = color_cw[4], size = 0.3),
+  panel.grid.major = element_line(color = color_cw[4], linewidth = 0.3),
   strip.background = element_rect(fill = color_cw[3]),
   strip.text = element_text(size = 6, color = color_cw[5], family = 'Chivo'),
-  legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
   panel.spacing.x = unit(0.1, 'lines')
 )
@@ -198,7 +302,7 @@ theme_cw_light <-  theme(
   plot.background = element_rect(fill = '#fcfcfc', color = 'transparent'),
   panel.border = element_rect(color = color_cw[5], fill = NA),
   panel.background = element_rect(fill = color_cw[5], color = 'transparent'),
-  axis.ticks = element_line(color = color_cw[1], size = 0.5),
+  axis.ticks = element_line(color = color_cw[1], linewidth = 0.5),
   axis.ticks.length = unit(2.75, 'pt'),
   axis.title = element_text(family = 'Chivo', face = 'bold', size = 8, color = color_cw[3]),
   axis.title.y = element_text(angle = 90, vjust = 0.5),
@@ -206,13 +310,15 @@ theme_cw_light <-  theme(
   plot.title = element_text(family = 'Chivo', face = 'bold', size = 14),
   plot.subtitle = element_text(size = 8, color = color_cw[3]),
   plot.caption = element_text(family = 'Montserrat', size = 5),
+  legend.title = element_text(family = 'Chivo', size=8),
+  legend.text = element_text(size=6),
   legend.background = element_rect(fill = color_cw[5], color = color_cw[5]),
   legend.key = element_blank(),
+  legend.position = 'bottom',
   panel.grid.minor = element_blank(),
-  panel.grid.major = element_line(color = '#fcfcfc', size = 0.3),
+  panel.grid.major = element_line(color = '#fcfcfc', linewidth = 0.3),
   strip.background = element_rect(fill = color_cw[5]),
   strip.text = element_text(size = 6, color = color_cw[3], family = 'Chivo'),
-  legend.position = 'bottom',
   panel.spacing.y = unit(0, 'lines'),
   panel.spacing.x = unit(0.1, 'lines')
 )
@@ -224,7 +330,7 @@ vid_theme_SB <-  theme(
   plot.background = element_rect(fill = 'grey95', color = 'transparent'),
   panel.border = element_rect(color = 'darkblue', fill = NA),
   panel.background = element_rect(fill = 'white', color = 'transparent'),
-  axis.ticks = element_line(color = 'darkblue', size = 1.5),
+  axis.ticks = element_line(color = 'darkblue', linewidth = 1.5),
   axis.ticks.length = unit(8.25, 'pt'),
   axis.title = element_text(size = 24),
   axis.text = element_text(size = 21, color = 'darkblue'),
@@ -234,7 +340,7 @@ vid_theme_SB <-  theme(
   legend.background = element_rect(fill = 'grey90', color = 'darkblue'),
   legend.key = element_blank(),
   panel.grid.minor = element_blank(),
-  panel.grid.major = element_line(color='grey70', size = 0.9),
+  panel.grid.major = element_line(color='grey70', linewidth = 0.9),
   axis.title.y = element_text(angle = 0, vjust = 0.5),
   strip.background = element_blank(),
   strip.text = element_text(size = 18, color = 'darkblue', family = 'chivo')

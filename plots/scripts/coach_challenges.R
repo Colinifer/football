@@ -38,7 +38,7 @@ current_coaches = pbp_df |>
   unique() |> 
   pull(coach)
 
-tbl(con, 'nflfastR_pbp') |> 
+data <- tbl(con, 'nflfastR_pbp') |> 
   filter(replay_or_challenge == 1 &
            replay_or_challenge_result %in% c('reversed', 'upheld')) |>
   select(
@@ -98,10 +98,27 @@ tbl(con, 'nflfastR_pbp') |>
     challenges_won = sum(win_challenge, na.rm = T)
   ) |> 
   mutate(
+    challenges_lost = total_challenges - challenges_won,
     challenge_win_pct = challenges_won / total_challenges
   ) |> 
   filter(challenge_coach %in% current_coaches) |> 
-  arrange(-challenge_win_pct)
-
+  arrange(challenges_won) |> 
+  pivot_longer(cols = c('challenges_won', 'challenges_lost'),
+               names_to = 'outcome',
+               values_to = 'challenges') |> 
+  mutate(challenge_coach = factor(challenge_coach, levels = unique(challenge_coach)))
 
 # 9 instances since 1999 of coaches challenges being denied
+
+
+p <- data |> 
+  ggplot(aes(x = challenge_coach, 
+             y = challenges, 
+             fill = outcome)) + 
+  geom_bar(position = 'stack', stat="identity") + 
+  scale_fill_manual(values = unname(c(color_cw[8], color_cw[7]))) +
+  coord_flip() + 
+  labs(title = 'Current coaching challenge records') + 
+  theme_cw_dark
+
+p

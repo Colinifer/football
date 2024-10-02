@@ -1,0 +1,7 @@
+{
+    "DB_HOST": "localhost",
+    "DB_DATABASE": "football",
+    "DB_USER": "publiccolin",
+    "DB_PASSWORD": "VYgIlmCeNg3wIoLe",
+    "DB_PORT": 4432
+}

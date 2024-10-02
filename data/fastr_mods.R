@@ -295,6 +295,18 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
   
   # Get data seasons
   data_seasons <- pbp %>% pull(season) %>% unique()
+  
+  # we'll join some player information like position or full name later
+  # so we load it here to be able to use it for racr ids as well
+  player_info <- nflreadr::load_players() %>%
+    dplyr::select(
+      "player_id" = "gsis_id",
+      "player_display_name" = "display_name",
+      "player_name" = "short_name",
+      "position",
+      "position_group",
+      "headshot_url" = "headshot"
+    )
 
   # load gsis_ids of FBs and RBs for RACR
   racr_ids <- nflreadr::qs_from_url("https://github.com/nflverse/nflfastR-roster/raw/master/data/nflfastR-RB_ids.qs")
@@ -464,7 +476,10 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
     dplyr::mutate(
       hvt = ifelse(yardline_100 <= 10, 1, 0)
     ) %>% 
-    dplyr::group_by(.data$receiver_player_id, .data$week, .data$season, .data$season_type) %>%
+    dplyr::group_by(.data$receiver_player_id, 
+                    .data$week, 
+                    .data$season, 
+                    .data$season_type) %>%
     dplyr::summarize(
       name_receiver = dplyr::first(.data$receiver_player_name),
       team_receiver = dplyr::first(.data$posteam),
@@ -607,8 +622,9 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
         TRUE ~ game_type
       )) |> 
       left_join(roster_df %>%
-                  select(gsis_id, pfr_id, first_name, last_name),
-                by = c('pfr_player_id' = 'pfr_id')) %>% 
+                  select(season, gsis_id, pfr_id, first_name, last_name),
+                by = c("pfr_player_id" = "pfr_id", "season"),
+                relationship = "many-to-many") %>% 
       left_join(schedule_df %>% 
                   select(game_id, week, game_type) |> 
                   rename(season_type = game_type) |> 
@@ -722,8 +738,9 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       )
     ) %>% 
     dplyr::left_join(
-      data %>% select(season, season_type, game_id, week, recent_team = posteam) %>% unique(),
-      by = c('season', 'season_type', 'week', 'recent_team')
+      data %>% select(season, season_type, week, recent_team = posteam, game_id) %>% unique(),
+      by = c("season", "season_type", "week", "recent_team"),
+      relationship = "many-to-many"
     ) %>% 
     dplyr::select(tidyselect::any_of(c(
       
@@ -870,11 +887,26 @@ calculate_player_stats_mod <- function(pbp, weekly = FALSE) {
       ) %>% 
       add_dakota(pbp = pbp, weekly = weekly) %>%
       dplyr::select(
-        .data$player_id:.data$pacr,
-        .data$dakota,
+        "player_id":"pacr",
+        tidyselect::any_of("dakota"),
         dplyr::everything()
       )
   }
+  
+  # data is missing position and player name can be messed up in pbp
+  # so we join player information next
+  player_df <- player_df %>%
+    dplyr::select(-"player_name") %>%
+    dplyr::left_join(player_info, by = "player_id") %>%
+    dplyr::select(
+      "player_id",
+      "player_name",
+      "player_display_name",
+      "position",
+      "position_group",
+      "headshot_url",
+      dplyr::everything()
+    )
   
   return(player_df)
 }
