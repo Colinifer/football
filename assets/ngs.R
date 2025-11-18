@@ -1,21 +1,31 @@
 library(httr)
+library(jsonlite)
 
 # NFL Pro
 
 url <- "https://pro.nfl.com/api/stats/players-offense/receiving/season"
 
-cookies <- httr::set_cookies(
+nflpro_auth_cookie <- fromJSON("config.json")$NFLPRO_COOKIE
+nflpro_auth_token <- fromJSON("config.json")$NFLPRO_AUTH
+
+nflpro_cookies <- httr::set_cookies(
   "nfl_web_sdk_plugin_storage" = ",percentPageViewed|lastRecPage|nfl pro:stats:receiving:season leaders|string,percentPageViewed|percentPageViewed|100|number,percentPageViewed|initialPageViewed|100|number,percentPageViewed|maxPageViewed|1172|number",
   "nflcs.prod.crossDomainStorageCleared" = "true",
   "nflcs.prod.keyStoreDomainSyncList"	= "id.nfl.com",
-  "nflcs.prod.nfl.user"	= "eyJjYWxsSWQiOiIwMzliZTFmNzVlMzg0MDJiOGIxYWQ2MGM0NDY1MGRiZCIsImVycm9yQ29kZSI6MCwiYXBpVmVyc2lvbiI6MiwidGltZSI6IjIwMjQtMDktMjBUMDI6NDc6MTkuMTQyWiIsInJlZ2lzdGVyZWRUaW1lc3RhbXAiOjE1ODQ4MDA1OTYwMDAsIlVJRCI6IjA5NTkwY2Q3MTA0ZDMxNmU0OWZmZDI5NDRmMTEzOWM1IiwiVUlEU2lnbmF0dXJlIjoiMk95NjROQVdiNHlMQVFpZG10VlhtV3l4RFdNPSIsInNpZ25hdHVyZVRpbWVzdGFtcCI6IjE3MjY4MDA0MzkiLCJjcmVhdGVkIjoiMjAyMC0wMy0yMVQxNDoyMzoxNi42NzFaIiwiY3JlYXRlZFRpbWVzdGFtcCI6MTU4NDgwMDU5NjAwMCwiZGF0YSI6eyJvd25JZCI6eyJjb25uZWN0aW9ucyI6W3siZmlkbzJDcmVkZW50aWF…ZhdWx0UmVnU2NyZWVuU2V0IjoiTWFpblNjcmVlblNldCIsImRlZmF1bHRNb2JpbGVSZWdTY3JlZW5TZXQiOiJNYWluU2NyZWVuU2V0Iiwic2Vzc2lvbkV4cGlyYXRpb24iOi0yLCJyZW1lbWJlclNlc3Npb25FeHBpcmF0aW9uIjoxNTc3ODQ3NiwiYXBpRG9tYWluIjoidXMxLmdpZ3lhLmNvbSIsImVuYWJsZWRQcm92aWRlcnMiOiIqIiwibGFuZyI6ImVuIiwic3RvcmFnZURvbWFpbk92ZXJyaWRlIjoiYXV0aC1pZC5uZmwuY29tIiwiY3VzdG9tRXZlbnRNYXAiOnsiZXZlbnRNYXAiOlt7ImV2ZW50cyI6IioiLCJhcmdzIjpbbnVsbF19XX0sIkFQSUtleSI6IjRfOWlKVmtUeXJPek1KbFV1NjZaQlJLZyJ9LCJvcGVyYXRpb24iOiIvYWNjb3VudHMuZ2V0QWNjb3VudEluZm8ifQ=="
+  "nflcs.prod.nfl.user"	= nflpro_auth_cookie
 )
 
-headers <- httr::add_headers(
+nflpro_headers <- httr::add_headers(
   `User-Agent` = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:129.0) Gecko/20100101 Firefox/129.0",
-  `Authorization` = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRJZCI6ImU1MzVjN2MwLTgxN2YtNDc3Ni04OTkwLTU2NTU2ZjhiMTkyOCIsImNsaWVudEtleSI6IjRjRlVXNkRtd0pwelQ5TDdMckczcVJBY0FCRzVzMDRnIiwiaXNzIjoiTkZMIiwiZGV2aWNlSWQiOiJlODQxNzkzYi00YTY3LTRjYzEtOGJjNi1kOWZjMDgxMDIwZDAiLCJwbGFucyI6W3sicGxhbiI6ImZyZWUiLCJleHBpcmF0aW9uRGF0ZSI6IjIwMjUtMDktMzAiLCJzb3VyY2UiOiJORkwiLCJzdGFydERhdGUiOiIyMDI0LTA5LTI5Iiwic3RhdHVzIjoiQUNUSVZFIiwidHJpYWwiOmZhbHNlfSx7InBsYW4iOiJORkxfUExVU19QUkVNSVVNIiwicHVyY2hhc2VDaGFubmVsIjoiIiwiYmlsbGluZ1R5cGUiOiJzZWFzb25hbCIsImV4cGlyYXRpb25EYXRlIjoiMjAyNS0wOS0wMyIsImV4dGVybmFsU3Vic2NyaXB0aW9uSWQiOiI2NDk0NTQxMjMiLCJzb3VyY2UiOiJXRUIiLCJzdGFydERhdGUiOiIyMDIzLTA5LTExIiwic3RhdHVzIjoiQUNUSVZFIiwidHJpYWwiOnRydWV9LHsicGxhbiI6Ik5GTF9QTFVTX1BSRU1JVU0iLCJwdXJjaGFzZUNoYW5uZWwiOiIiLCJiaWxsaW5nVHlwZSI6InNlYXNvbmFsIiwiZXhwaXJhdGlvbkRhdGUiOiIyMDI1LTA5LTAzIiwiZXh0ZXJuYWxTdWJzY3JpcHRpb25JZCI6IjY0OTQ1NDEyMyIsInNvdXJjZSI6IldFQiIsInN0YXJ0RGF0ZSI6IjIwMjMtMDktMTEiLCJzdGF0dXMiOiJBQ1RJVkUiLCJ0cmlhbCI6dHJ1ZX1dLCJEaXNwbGF5TmFtZSI6IldFQl9ERVNLVE9QX0RFU0tUT1AiLCJOb3RlcyI6IiIsImZvcm1GYWN0b3IiOiJERVNLVE9QIiwibHVyYUFwcEtleSI6IlNaczU3ZEJHUnhiTDcyOGxWcDdEWVEiLCJwbGF0Zm9ybSI6IkRFU0tUT1AiLCJwcm9kdWN0TmFtZSI6IldFQiIsInJvbGVzIjpbImNvbnRlbnQiLCJleHBlcmllbmNlIiwiZm9vdGJhbGwiLCJ1dGlsaXRpZXMiLCJ0ZWFtcyIsInBsYXkiLCJsaXZlIiwiaWRlbnRpdHkiLCJuZ3Nfc3RhdHMiLCJwYXltZW50c19hcGkiLCJuZ3NfdHJhY2tpbmciLCJuZ3NfcGxhdGZvcm0iLCJuZ3NfY29udGVudCIsIm5nc19jb21iaW5lIiwibmdzX2FkdmFuY2VkX3N0YXRzIiwibmZsX3BybyIsImVjb21tIiwibmZsX2lkX2FwaSIsImZyZWUiLCJORkxfUExVU19QUkVNSVVNIiwiTkZMX1BMVVNfUFJFTUlVTSJdLCJjaXR5IjoieW9yayIsImNvdW50cnlDb2RlIjoiVVMiLCJkbWFDb2RlIjoiNTY2IiwiaG1hVGVhbXMiOlsiMTA0MDAzMjUtNDhkZS0zZDZhLWJlMjktOGY4Mjk0MzdmNGM4IiwiMTA0MDM3MDAtYjkzOS0zY2JkLTNkMTYtMjRkNGQ2NzQyZmEyIiwiMTA0MDM5MDAtODI1MS02ODkyLWQ4MWMtNDM0ODUyNWMyZDQ3Il0sInJlZ2lvbiI6IlBBIiwiemlwQ29kZSI6IjE3NDA4IiwiYnJvd3NlciI6IkZpcmVmb3giLCJjZWxsdWxhciI6ZmFsc2UsImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsInVpZCI6IjA5NTkwY2Q3MTA0ZDMxNmU0OWZmZDI5NDRmMTEzOWM1IiwiZXhwIjoxNzI3NjUwMDA1fQ.IQ5tUBNQ65_o5DRRpdA2-5zM44DdoOp_zAnzYObgAoc")
+  `Authorization` = nflpro_auth_token,
+  `Cache-Control`= "max-age=60",
+  `Sec-Fetch-Dest`= "empty",
+  `Sec-Fetch-Mode`= "cors",
+  `Sec-Fetch-Site`= "same-origin",
+  `Priority`= "u=0"
+)
 
-url <- glue::glue("https://pro.nfl.com/api/stats/players-offense/receiving/season") |> 
+url <- glue::glue("https://pro.nfl.com/api/secured/stats/players-offense/receiving/season") |> 
   httr::modify_url(
     query = list(
       limit = "35",
@@ -66,16 +76,17 @@ map_df(
 
 
 
-get_nflpro_single_game_table <- function(table_type = 'passing', week = 1, season = 2024) {
+get_nflpro_single_game_table <- function(
+    token = nflpro_auth_token,
+    table_type = 'passing', 
+    week = 1, 
+    season = nflreadr::most_recent_season()
+    ) {
   
   
   ### take a two second break in between calls
   ### only need this step if you're running this function repeatedly
   Sys.sleep(sample(2:7, 1))
-  
-  headers <- httr::add_headers(
-    `User-Agent` = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:129.0) Gecko/20100101 Firefox/129.0",
-    `Authorization` = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRJZCI6ImU1MzVjN2MwLTgxN2YtNDc3Ni04OTkwLTU2NTU2ZjhiMTkyOCIsImNsaWVudEtleSI6IjRjRlVXNkRtd0pwelQ5TDdMckczcVJBY0FCRzVzMDRnIiwiaXNzIjoiTkZMIiwiZGV2aWNlSWQiOiJlODQxNzkzYi00YTY3LTRjYzEtOGJjNi1kOWZjMDgxMDIwZDAiLCJwbGFucyI6W3sicGxhbiI6ImZyZWUiLCJleHBpcmF0aW9uRGF0ZSI6IjIwMjUtMDktMjUiLCJzb3VyY2UiOiJORkwiLCJzdGFydERhdGUiOiIyMDI0LTA5LTI1Iiwic3RhdHVzIjoiQUNUSVZFIiwidHJpYWwiOmZhbHNlfSx7InBsYW4iOiJORkxfUExVU19QUkVNSVVNIiwicHVyY2hhc2VDaGFubmVsIjoiIiwiYmlsbGluZ1R5cGUiOiJzZWFzb25hbCIsImV4cGlyYXRpb25EYXRlIjoiMjAyNS0wOS0wMyIsImV4dGVybmFsU3Vic2NyaXB0aW9uSWQiOiI2NDk0NTQxMjMiLCJzb3VyY2UiOiJXRUIiLCJzdGFydERhdGUiOiIyMDIzLTA5LTExIiwic3RhdHVzIjoiQUNUSVZFIiwidHJpYWwiOnRydWV9LHsicGxhbiI6Ik5GTF9QTFVTX1BSRU1JVU0iLCJwdXJjaGFzZUNoYW5uZWwiOiIiLCJiaWxsaW5nVHlwZSI6InNlYXNvbmFsIiwiZXhwaXJhdGlvbkRhdGUiOiIyMDI1LTA5LTAzIiwiZXh0ZXJuYWxTdWJzY3JpcHRpb25JZCI6IjY0OTQ1NDEyMyIsInNvdXJjZSI6IldFQiIsInN0YXJ0RGF0ZSI6IjIwMjMtMDktMTEiLCJzdGF0dXMiOiJBQ1RJVkUiLCJ0cmlhbCI6dHJ1ZX1dLCJEaXNwbGF5TmFtZSI6IldFQl9ERVNLVE9QX0RFU0tUT1AiLCJOb3RlcyI6IiIsImZvcm1GYWN0b3IiOiJERVNLVE9QIiwibHVyYUFwcEtleSI6IlNaczU3ZEJHUnhiTDcyOGxWcDdEWVEiLCJwbGF0Zm9ybSI6IkRFU0tUT1AiLCJwcm9kdWN0TmFtZSI6IldFQiIsInJvbGVzIjpbImNvbnRlbnQiLCJleHBlcmllbmNlIiwiZm9vdGJhbGwiLCJ1dGlsaXRpZXMiLCJ0ZWFtcyIsInBsYXkiLCJsaXZlIiwiaWRlbnRpdHkiLCJuZ3Nfc3RhdHMiLCJwYXltZW50c19hcGkiLCJuZ3NfdHJhY2tpbmciLCJuZ3NfcGxhdGZvcm0iLCJuZ3NfY29udGVudCIsIm5nc19jb21iaW5lIiwibmdzX2FkdmFuY2VkX3N0YXRzIiwibmZsX3BybyIsImVjb21tIiwibmZsX2lkX2FwaSIsImZyZWUiLCJORkxfUExVU19QUkVNSVVNIiwiTkZMX1BMVVNfUFJFTUlVTSJdLCJjaXR5IjoicGhpbGFkZWxwaGlhIiwiY291bnRyeUNvZGUiOiJVUyIsImRtYUNvZGUiOiI1MDQiLCJobWFUZWFtcyI6WyIxMDQwMzcwMC1iOTM5LTNjYmQtM2QxNi0yNGQ0ZDY3NDJmYTIiXSwicmVnaW9uIjoiUEEiLCJ6aXBDb2RlIjoiMTkxNDYiLCJicm93c2VyIjoiRmlyZWZveCIsImNlbGx1bGFyIjpmYWxzZSwiZW52aXJvbm1lbnQiOiJwcm9kdWN0aW9uIiwidWlkIjoiMDk1OTBjZDcxMDRkMzE2ZTQ5ZmZkMjk0NGYxMTM5YzUiLCJleHAiOjE3MjcyMzgyNDZ9.0PPHeDHn8izwDbTLVCOZ8Wp2OSQOF3jw8nACR6_S3aE")
   
   ### vector to map week to appropriate text
   season_length = ifelse(season < 2021, 17, 18)
@@ -90,14 +101,16 @@ get_nflpro_single_game_table <- function(table_type = 'passing', week = 1, seaso
     "limit" = "3997"
   )
   
-  url <- glue::glue("https://pro.nfl.com/api/stats/{url_modifier}/week") |> 
+  url <- glue::glue("https://pro.nfl.com/api/secured/stats/{url_modifier}/season") |> 
     httr::modify_url(
       query = params
     )
   
+  print(url)
+  
   data <- httr::GET(
     url = url,
-    headers
+    httr::add_headers(Authorization = token)
   ) |> 
     httr::content(as = 'parsed') |> 
     (function(i) i[[gsub('ing', 'ers', table_type)]])() |> 
@@ -111,8 +124,43 @@ get_nflpro_single_game_table <- function(table_type = 'passing', week = 1, seaso
   return(data)
 }
 
+get_nflpro_pbp <- function(
+    token = nflpro_auth_token, 
+    old_game_id
+) {
+  
+  
+  ### take a two second break in between calls
+  ### only need this step if you're running this function repeatedly
+  Sys.sleep(sample(2:7, 1))
+  
+  params <- list(
+    "gameId" = old_game_id
+  )
+  
+  url <- glue::glue("https://pro.nfl.com/api/secured/plays/playlist/game") |> 
+    httr::modify_url(
+      query = params
+    )
+  
+  print(url)
+  
+  data <- httr::GET(
+    url = url,
+    httr::add_headers(Authorization = token)
+  ) |> 
+    httr::content(as = 'text') |> 
+    fromJSON(simplifyDataFrame = TRUE) |> 
+    as_tibble() |> 
+    flatten() |> 
+    as_tibble()
+  
+  return(data)
+}
+
 # passing, rushing, receiving, and defending table_type
 pass_df <- get_nflpro_single_game_table(
+  token = nflpro_auth_token,
   table_type = "passing",
   week = 1,
   season = 2024
@@ -136,8 +184,10 @@ def_df <- get_nflpro_single_game_table(
   season = 2024
 )
 
-
-pass_df
+nflpro_pbp_df <- get_nflpro_pbp(
+  token = nflpro_auth_token,
+  old_game_id = 2024122600
+)
 
 
 # Next Gen Stats

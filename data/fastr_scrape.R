@@ -4,7 +4,11 @@ library(viridis)
 
 current_season <- year
 
-con <- fx.db_con(x.host = 'localhost')
+con <- fx.db_con(
+  x.user = 'publiccolin', 
+  x.password = 'VYgIlmCeNg3wIoLe',
+  x.host = 'localhost'
+)
 
 players_df <- nflreadr::load_players()
 dbWriteTable(conn = con, 'nflfastR_players', players_df, overwrite = T)
@@ -12,13 +16,15 @@ dbWriteTable(conn = con, 'nflfastR_players', players_df, overwrite = T)
 roster_df <-  nflfastR::fast_scraper_roster(1999:year)
 dbWriteTable(conn = con, 'nflfastR_rosters', roster_df, overwrite = T)
 
-contracts_df <- nflreadr::load_contracts()
-# dbWriteTable(conn = con, 'nflfastR_contracts', contracts_df)
+contracts_df <- nflreadr::load_contracts() |> 
+  rename(detail = cols) |> 
+  unnest(cols = c(detail), names_sep = '_')
+dbWriteTable(conn = con, 'nflfastR_contracts', contracts_df, overwrite = T)
 
 officials_df <- nflreadr::load_officials()
 dbWriteTable(conn = con, 'nflfastR_officials', officials_df, overwrite = T)
 
-participation_df <- load_participation(seasons = 2016:current_season)
+participation_df <- nflreadr::load_participation(seasons = 2016:(current_season-1))
 dbWriteTable(conn = con, 'nflfastR_participation', participation_df, overwrite = T)
 
 schedule_df <- nflfastR::fast_scraper_schedules(1999:year)
@@ -29,6 +35,9 @@ dbWriteTable(con, 'nflfastR_trades', trades_df, overwrite = T)
 
 draft_df <- nflreadr::load_draft_picks()
 dbWriteTable(con, 'nflfastR_draft', draft_df, overwrite = T)
+
+logos_df <- nflfastR::teams_colors_logos
+dbWriteTable(conn = con, 'nflfastR_logos', logos_df, overwrite = T)
 
 pbp <- tbl(con, 'nflfastR_pbp') %>% 
   filter(season >= 2006) %>% 

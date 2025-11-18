@@ -138,11 +138,22 @@ nflfastR::update_db(
   force_rebuild = FALSE,
   db_connection = initR::fx.db_con(x.host = 'localhost')
 )
+# nflreadr::clear_cache()
 
 cfbfastR::update_cfb_db(
   tblname = 'cfbfastR_pbp',
   force_rebuild = FALSE,
   db_connection = initR::fx.db_con(x.host = 'localhost')
+)
+
+
+cfbfastR:::get_missing_cfb_games(
+  completed_games = cfbfastR:::load_games() |> 
+    dplyr::filter(.data$season >= 2014) %>%
+    dplyr::arrange(.data$week) %>%
+    dplyr::select("game_id", "season"),
+  dbConnection = initR::fx.db_con(x.host = 'moose.local'),
+  tablename = 'cfbfastR_pbp'
 )
 
 

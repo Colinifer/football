@@ -134,12 +134,12 @@ create_fp_dist_rankings <- function(fp_dist_df,
                                     print_plot = TRUE) {
   
   worst_rank <- fp_dist_df |> 
-    filter(self == TRUE) |> 
+    filter(self == TRUE) |>
     pull(worst) |> 
     max()
   
   worst_ecr <- fp_dist_df |> 
-    filter(self == TRUE) |> 
+    filter(self == TRUE) |>
     pull(ecr) |> 
     max()
   

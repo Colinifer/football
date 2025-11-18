@@ -54,9 +54,6 @@ clean_fp_ranks(fp_ranks = fp_ranks, "Kepler") |>
   create_fp_dist_df() |> 
   create_fp_dist_rankings()
 
-clean_fp_ranks(fp_ranks = fp_ros_ranks, "Kepler") |> 
-  filter(is.na(franchise_id) | self == TRUE)
-
 
 # rest of season
 clean_fp_ros_ranks_df <- clean_fp_ranks(fp_ranks = fp_ros_ranks)
