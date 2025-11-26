@@ -151,6 +151,7 @@ p <- chart_all |>
     legend.justification = c(1, 1) ,
     plot.title = element_text(size = 16),
     #panel.grid.minor = element_blank()
+    NULL
   )
 
 brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
@@ -316,8 +317,16 @@ p <- chart_all |>
     #panel.grid.minor = element_blank()
   )
 
-brand_plot(p, asp = 16/10, save_name = glue('plots/desktop/team_tiers/team_off_pass_and_rush_tiers_{current_season}.png'), data_home = 'Data: @nflfastR', fade_borders = '')
 
+brand_plot(
+    p,
+    asp = 16 / 10,
+    save_name = glue(
+        'plots/desktop/team_tiers/team_off_pass_and_rush_tiers_{current_season}.png'
+    ),
+    data_home = 'Data: @nflfastR',
+    fade_borders = ''
+)
 # Need to add Defense pass and rush epa/play
 
 p <- chart_all |> 

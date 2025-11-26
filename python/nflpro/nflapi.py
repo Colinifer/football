@@ -323,19 +323,23 @@ class NFLProAPI:
 
         url = "https://api.nfl.com/identity/v3/token/refresh"
         payload = {
-            "clientKey": account_info.get("clientKey"),
-            "clientSecret": account_info.get("clientSecret"),
-            "deviceId": account_info.get("deviceId"),
-            "deviceInfo": account_info.get("deviceInfo"),
+            "clientKey": self.clientKey,
+            "clientSecret": self.clientSecret,
+            "deviceId": self.deviceId,
+            "deviceInfo": self.deviceInfo,
             "networkType": "other",
             "signatureTimestamp": account_info.get("signatureTimestamp"),
             "uid": account_info.get("UID"),
             "uidSignature": account_info.get("UIDSignature"),
-            "refreshToken": account_info.get("refreshToken"),
+            "refreshToken": self.refreshToken,
         }
         headers = {"Content-Type": "application/json"}
         try:
-            response = self.session.post(url, headers=headers, json=payload)
+            response = self.session.post(
+                url,
+                headers=headers,
+                json=payload,
+            )
             response.raise_for_status()
             token_data = response.json()
             self.access_token = token_data.get("accessToken")

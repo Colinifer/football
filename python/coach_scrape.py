@@ -95,8 +95,8 @@ nflpro_api = nflpro.NFLProAPI()
 # %%
 today = datetime.now(UTC).strftime("%Y-%m-%d")
 
-plays_df = query_to_dataframe(
-    conn=create_connection(config=config),
+plays_df = nflpro.query_to_dataframe(
+    conn=nflpro.create_connection(config=config),
     query="""select
         season,
         week,
@@ -115,15 +115,15 @@ plays_df = query_to_dataframe(
       where season = (select max(season) from "nflfastR_pbp")
         and play = 1
         and posteam = %s
-        and penalty_player_name = %s
-        and week = 8
+        and rusher_player_name = %s
+        and week = 11
         and game_date < %s
     order by epa desc
     --limit 10
     """,
     params=(
-        "NYG",
-        "D.Slayton",
+        "JAX",
+        "B.Tuten",
         today,
     ),
     print_query=True,
@@ -146,8 +146,13 @@ nflpro.download_film_from_dataframe(
 
 # %%
 
-df = query_to_dataframe(
-    conn=create_connection(config=config),
+nflpro_api._get_account_info()
+
+
+# %%
+
+df = nflpro.query_to_dataframe(
+    conn=nflpro.create_connection(config=config),
     query="""select *
     from "nflfastR_pbp"
     where season = (select max(season) from "nflfastR_pbp")
