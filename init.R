@@ -113,12 +113,12 @@ source_files <- c(
   'https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_xyac.R',
   'https://raw.githubusercontent.com/nflverse/nflfastR/master/R/helper_add_nflscrapr_mutations.R',
   'data/fastr_mods.R',
-  'R/matchups.R',
-  'R/plot_team_tiers.R',
-  'R/wins_above_expectation.R',
-  'R/plot_series_results.R',
-  'R/plot_team_pace.R',
-  'init/init_cfb.R',
+  # 'R/matchups.R',
+  # 'R/plot_team_tiers.R',
+  # 'R/wins_above_expectation.R',
+  # 'R/plot_series_results.R',
+  # 'R/plot_team_pace.R',
+  # 'init/init_cfb.R',
   # 'data/cfb_fastr_mods.R'
   NULL
 )
@@ -126,8 +126,8 @@ source_files <- c(
 map(.x = source_files, ~try(source(.x, echo = F))) |> 
   invisible()
 
-fx.wins_above_expectation()
-fx.plot_epa_team_tiers()
+# fx.wins_above_expectation()
+# fx.plot_epa_team_tiers()
 
 
 # Update DBs --------------------------------------------------------------
@@ -152,7 +152,7 @@ cfbfastR:::get_missing_cfb_games(
     dplyr::filter(.data$season >= 2014) %>%
     dplyr::arrange(.data$week) %>%
     dplyr::select("game_id", "season"),
-  dbConnection = initR::fx.db_con(x.host = 'moose.local'),
+  dbConnection = initR::fx.db_con(x.host = 'localhost'),
   tablename = 'cfbfastR_pbp'
 )
 
@@ -208,17 +208,19 @@ fantasy_rosters <- ffscrapr::ff_rosters(ff_conn_beep_boop) |>
          league = 'Beep Boop') |>
   mutate(self = case_when(franchise_id == 8 ~ TRUE,
                           TRUE ~ FALSE)) |> 
-  rbind(ffscrapr::ff_rosters(ff_conn_kepler) |>
-          mutate(on_roster = TRUE,
-                 league = 'Kepler') |> 
-          mutate(self = case_when(franchise_id == 2 ~ TRUE,
-                                  TRUE ~ FALSE))) |>
+  # rbind(ffscrapr::ff_rosters(ff_conn_kepler) |>
+  #         mutate(on_roster = TRUE,
+  #                league = 'Kepler') |> 
+  #         mutate(self = case_when(franchise_id == 2 ~ TRUE,
+  #                                 TRUE ~ FALSE))) |>
   left_join(roster_df %>%
               select(
                 gsis_id,
                 espn_id) |> 
               mutate(espn_id = as.numeric(espn_id)),
             by = c('player_id' = 'espn_id'))
+
+ffscrapr::ff_standings(ff_conn_beep_boop)
 
 matchup_df <- fx.matchups(schedule_df)
 

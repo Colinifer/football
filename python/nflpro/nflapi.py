@@ -27,12 +27,33 @@ Dependencies:
 import logging
 import os
 import time
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 import requests
 from dotenv import load_dotenv
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+
+@dataclass
+class APIError:
+    """Structured error information for API failures.
+
+    Attributes:
+        message (str): Human-readable error message.
+        status_code (int | None): HTTP status code if available.
+        endpoint (str): The endpoint that was being accessed.
+        response_text (str | None): Response text from the server if available.
+
+    """
+
+    message: str
+    status_code: int | None
+    endpoint: str
+    response_text: str | None = None
 
 
 class NFLProAPI:
@@ -46,6 +67,9 @@ class NFLProAPI:
                 from the .env file.
 
         """
+        # Initialize logger
+        self.logger = logging.getLogger(__name__)
+
         load_dotenv()
         self.api_key: str | None = os.getenv("NFLPRO_API_KEY")
         self.login_token: str | None = os.getenv("NFLPRO_LOGIN_TOKEN")
@@ -63,9 +87,27 @@ class NFLProAPI:
             raise ValueError(msg)
 
         self.base_url: str = "https://pro.nfl.com"
+
+        # Configure session with retry logic and connection pooling
         self.session: requests.Session = requests.Session()
+        retry_strategy = Retry(
+            total=3,
+            status_forcelist=[429, 500, 502, 503, 504],
+            backoff_factor=1,
+            allowed_methods=["GET", "POST"],
+        )
+        adapter = HTTPAdapter(
+            max_retries=retry_strategy,
+            pool_connections=10,
+            pool_maxsize=20,
+        )
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
+
         self.access_token: str | None = None
         self.expires_at: float | None = None
+        # Token refresh buffer in seconds (5 minutes)
+        self.token_refresh_buffer: int = 300
 
         # Centralized endpoint configuration
         self.endpoints: dict[str, dict[str, Any]] = {
@@ -302,8 +344,19 @@ class NFLProAPI:
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as e:
-            msg = f"Error fetching account info: {e}"
-            logging.exception(msg)
+            status_code = (
+                getattr(e.response, "status_code", None)
+                if hasattr(e, "response")
+                else None
+            )
+            self.logger.error(
+                "Failed to fetch account info",
+                extra={
+                    "status_code": status_code,
+                    "error_message": str(e),
+                    "url": url,
+                },
+            )
             return None
 
     def _refresh_token(self, print_token: bool | None = None) -> None:
@@ -316,7 +369,7 @@ class NFLProAPI:
         """
         account_info = self._get_account_info()
         if not account_info:
-            logging.warning(
+            self.logger.warning(
                 "Failed to get account info.Cannot refresh token.",
             )
             return
@@ -345,10 +398,21 @@ class NFLProAPI:
             self.access_token = token_data.get("accessToken")
             self.expires_at = time.time() + token_data.get("expiresIn", 0)
             if print_token is not None:
-                logging.info(self.access_token)
+                self.logger.info(self.access_token)
         except requests.exceptions.RequestException as e:
-            msg = f"Error refreshing token: {e}"
-            logging.exception(msg)
+            status_code = (
+                getattr(e.response, "status_code", None)
+                if hasattr(e, "response")
+                else None
+            )
+            self.logger.error(
+                "Failed to refresh token",
+                extra={
+                    "status_code": status_code,
+                    "error_message": str(e),
+                    "url": url,
+                },
+            )
 
     def _make_api_call(
         self,
@@ -371,18 +435,21 @@ class NFLProAPI:
             JSON response from the API, or None if error.
 
         """
-        if not self.access_token or self.expires_at <= time.time():
-            logging.info("Refreshing Token")
+        if (
+            not self.access_token
+            or self.expires_at <= time.time() + self.token_refresh_buffer
+        ):
+            self.logger.info("Refreshing Token")
             self._refresh_token()
             if not self.access_token:
-                logging.info("Failed to get a valid access token.")
+                self.logger.warning("Failed to get a valid access token.")
                 return None
 
         config = self.endpoints.get(endpoint_key, {})
         url = self.base_url + config.get("url", "")
 
         if print_url:
-            logging.info(url)
+            self.logger.info(url)
 
         default_headers = {
             "Authorization": f"Bearer {self.access_token}",
@@ -393,15 +460,11 @@ class NFLProAPI:
         if headers:
             default_headers.update(headers)
 
-        params = {
-            **params,
-        }
-
         try:
             response = (
                 self.session.post(
                     url,
-                    headers=headers,
+                    headers=default_headers,
                     json=json,
                     params=params,
                 )
@@ -415,8 +478,31 @@ class NFLProAPI:
             response.raise_for_status()
             return response.json()
         except requests.exceptions.RequestException as e:
-            msg = f"Error fetching stats from {url}: {e}"
-            logging.exception(msg)
+            status_code = (
+                getattr(e.response, "status_code", None)
+                if hasattr(e, "response")
+                else None
+            )
+            response_text = (
+                getattr(e.response, "text", None) if hasattr(e, "response") else None
+            )
+
+            error = APIError(
+                message=str(e),
+                status_code=status_code,
+                endpoint=endpoint_key,
+                response_text=response_text,
+            )
+
+            self.logger.error(
+                "API request failed",
+                extra={
+                    "endpoint": error.endpoint,
+                    "status_code": error.status_code,
+                    "error_message": error.message,
+                    "url": url,
+                },
+            )
             return None
 
     def get_play_film(  # noqa: PLR0915
@@ -455,10 +541,13 @@ class NFLProAPI:
                 or None if an error occurs.
 
         """
-        if not self.access_token or self.expires_at <= time.time():
+        if (
+            not self.access_token
+            or self.expires_at <= time.time() + self.token_refresh_buffer
+        ):
             self._refresh_token()
             if not self.access_token:
-                logging.warning(
+                self.logger.warning(
                     "Failed to get a valid access token. Cannot fetch stats.",
                 )
                 return None
@@ -467,14 +556,10 @@ class NFLProAPI:
             mcp_playback_id = str(mcp_playback_id)
 
         config = self.endpoints.get("play_film", {})
-        url = (
-            "https://api.nfl.com"
-            + config.get("url", "")
-            + f"/{mcp_playback_id}"
-        )
+        url = "https://api.nfl.com" + config.get("url", "") + f"/{mcp_playback_id}"
 
         if print_url:
-            logging.info(url)
+            self.logger.info(url)
 
         default_headers = {
             "Authorization": f"Bearer {self.access_token}",
@@ -518,8 +603,20 @@ class NFLProAPI:
             return response.json()
 
         except requests.exceptions.RequestException as e:
-            msg = f"Error fetching stats from {url}: {e}"
-            logging.exception(msg)
+            status_code = (
+                getattr(e.response, "status_code", None)
+                if hasattr(e, "response")
+                else None
+            )
+            self.logger.error(
+                "Failed to fetch play film",
+                extra={
+                    "status_code": status_code,
+                    "error_message": str(e),
+                    "url": url,
+                    "mcp_playback_id": mcp_playback_id,
+                },
+            )
             return None
 
     def _save_playlist(
@@ -530,20 +627,50 @@ class NFLProAPI:
     ) -> None:
         """Save the playlist content to a file."""
         if isinstance(playlist_filename, bool):
-            playlist_filename = (
-                f"playlist_{mcp_playback_id}.m3u8"  # Default filename
-            )
+            playlist_filename = f"playlist_{mcp_playback_id}.m3u8"  # Default filename
 
         playlist_path = Path(playlist_filename)
         output_dir = playlist_path.parent
 
         if output_dir and not Path.exists(output_dir):
-            Path.makedirs(output_dir, exist_ok=True)
+            Path(output_dir).mkdir(parents=True, exist_ok=True)
 
         with Path(playlist_filename).open("w") as f:
             f.write(response.text)
         msg = f"Playlist saved to {playlist_filename}"
-        logging.info(msg)
+        self.logger.info(msg)
+
+    def _get_stats(
+        self,
+        endpoint_key: str,
+        season: str = "2025",
+        week: int | None = None,
+        headers: dict[str, Any] | None = None,
+        **kwargs: dict[str, Any],
+    ) -> dict[str, Any] | None:
+        """Generic method to fetch stats for a given season and week.
+
+        Args:
+            endpoint_key (str): The endpoint key to use for the API call.
+            season (str): The season for which to fetch stats.
+                Defaults to "2025".
+            week (Optional[int]): The week for which to fetch stats.
+                Defaults to None.
+            headers (Optional[Dict[str, Any]]): Custom headers for the request.
+                Defaults to None.
+            **kwargs (Optional[Dict[str, Any]]): Additional keyword arguments.
+
+        Returns:
+            Optional[Dict[str, Any]]: The JSON response from the API,
+                or None if an error occurs.
+
+        """
+        params = {"season": season}
+        if week:
+            params["week"] = week
+        params.update(kwargs)
+
+        return self._make_api_call(endpoint_key, params, headers)
 
     def get_fantasy_stats(
         self,
@@ -570,12 +697,7 @@ class NFLProAPI:
 
         """
         endpoint_key = "fantasy_week" if week else "fantasy_season"
-        params = {"season": season}
-        if week:
-            params["week"] = week
-        params.update(kwargs)
-
-        return self._make_api_call(endpoint_key, params, headers)
+        return self._get_stats(endpoint_key, season, week, headers, **kwargs)
 
     def get_passing_stats(
         self,
@@ -600,12 +722,7 @@ class NFLProAPI:
                 or None if an error occurs.
 
         """
-        params = {"season": season}
-        if week:
-            params["week"] = week
-        params.update(kwargs)
-
-        return self._make_api_call("passing_week", params, headers)
+        return self._get_stats("passing_week", season, week, headers, **kwargs)
 
     def get_rushing_stats(
         self,
@@ -631,12 +748,7 @@ class NFLProAPI:
                 or None if an error occurs.
 
         """
-        params = {"season": season}
-        if week:
-            params["week"] = week
-        params.update(kwargs)
-
-        return self._make_api_call("rushing_week", params, headers)
+        return self._get_stats("rushing_week", season, week, headers, **kwargs)
 
     def get_receiving_stats(
         self,
@@ -662,12 +774,7 @@ class NFLProAPI:
                 or None if an error occurs.
 
         """
-        params = {"season": season}
-        if week:
-            params["week"] = week
-        params.update(kwargs)
-
-        return self._make_api_call("receiving_week", params, headers)
+        return self._get_stats("receiving_week", season, week, headers, **kwargs)
 
     def get_team_offense_stats(
         self,
@@ -693,12 +800,7 @@ class NFLProAPI:
                 or None if an error occurs.
 
         """
-        params = {"season": season}
-        if week:
-            params["week"] = week
-        params.update(kwargs)
-
-        return self._make_api_call("team_offense_week", params, headers)
+        return self._get_stats("team_offense_week", season, week, headers, **kwargs)
 
     def get_team_defense_stats(
         self,
@@ -723,12 +825,7 @@ class NFLProAPI:
                 or None if an error occurs.
 
         """
-        params = {"season": season}
-        if week:
-            params["week"] = week
-        params.update(kwargs)
-
-        return self._make_api_call("team_defense_week", params, headers)
+        return self._get_stats("team_defense_week", season, week, headers, **kwargs)
 
     def get_weeks(
         self,
@@ -1026,7 +1123,7 @@ class NFLProAPI:
                 break
 
         if formatted_df is None:
-            logging.warning("Unrecognized stats data format.")
+            self.logger.warning("Unrecognized stats data format.")
             return pd.DataFrame()
 
         return formatted_df
@@ -1045,12 +1142,10 @@ class NFLProAPI:
             pd.DataFrame: Flattened DataFrame with schedule information.
 
         """
-        weeks_list = weeks_dict[
-            "weeks"
-        ]  # Access the list of game dictionaries
-        weeks_data: list[
-            dict[str, Any]
-        ] = []  # Initialize an empty list to hold the data
+        weeks_list = weeks_dict["weeks"]  # Access the list of game dictionaries
+        weeks_data: list[dict[str, Any]] = (
+            []
+        )  # Initialize an empty list to hold the data
 
         for week in weeks_list:
             row: dict[str, Any] = {
@@ -1176,15 +1271,16 @@ class NFLProAPI:
 
         Returns:
             pd.DataFrame: Flattened DataFrame with play-by-play information.
+
         """
         plays_list = pbp_dict.get(
             "plays",
             [],
         )  # Access the list of play dictionaries
 
-        plays_data = list[
-            dict[str, Any]
-        ] = []  # Initialize an empty list to hold the data
+        plays_data: list[dict[str, Any]] = (
+            []
+        )  # Initialize an empty list to hold the data
 
         for play in plays_list:
             row: dict[str, Any] = {

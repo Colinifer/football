@@ -115,15 +115,15 @@ plays_df = nflpro.query_to_dataframe(
       where season = (select max(season) from "nflfastR_pbp")
         and play = 1
         and posteam = %s
-        and rusher_player_name = %s
-        and week = 11
+        and receiver_player_name = %s
+        and week = 19
         and game_date < %s
     order by epa desc
     --limit 10
     """,
     params=(
-        "JAX",
-        "B.Tuten",
+        "LA",
+        "P.Nacua",
         today,
     ),
     print_query=True,

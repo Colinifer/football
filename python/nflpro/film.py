@@ -81,8 +81,9 @@ def download_playlist(  # noqa: PLR0915
 
         with Path(output_filename).open("wb") as f:
             # Removed encoding since we're writing binary
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)  # Write the chunk directly
+            f.writelines(
+                response.iter_content(chunk_size=8192),
+            )  # Write the chunk directly
 
         msg = f"Successfully downloaded playlist from \
             {m3u8_url} to {output_filename}"
@@ -294,6 +295,7 @@ def download_play_film(
     posteam: str,
     play_id: str,
     save_playlist: bool | None = None,
+    save_api_playlist: bool = False,
 ) -> None:
     """Download play film footage.
 
@@ -307,6 +309,8 @@ def download_play_film(
         play_id (str): Play ID.
         save_playlist (Optional[bool]): Whether to save the m3u8 playlist file.
             Defaults to None.
+        save_api_playlist (bool): Whether to save the API playlist to ../../playlists/.
+            Defaults to False.
 
     Returns:
         None
@@ -326,7 +330,11 @@ def download_play_film(
         play_film_data = nfl_pro_api.get_play_film(
             mcp_playback_id=playback_id,
             print_url=True,
-            playlist_filename=f"../playlists/{game_id_elias}-{play_id}.m3u8",
+            playlist_filename=(
+                f"../playlists/{game_id_elias}-{play_id}.m3u8"
+                if save_api_playlist
+                else None
+            ),
         )
 
         if play_film_data and "accessUrl" in play_film_data:
@@ -374,6 +382,7 @@ def download_film(
 
     Returns:
         None
+
     """
     game_id = row[column_names["game_id"]]
     game_elias = row[column_names["old_game_id"]]
@@ -427,6 +436,7 @@ def download_film_from_dataframe(
             names to actual column names in plays_df.
             Required keys: "game_id", "old_game_id", "nfl_api_id", \
                 "posteam", "play_id".
+
     """
     for _, row in plays_df.iterrows():
         download_film(
