@@ -1,19 +1,28 @@
 # %%
-from typing import Any, Dict, List, Optional, Union
+import atexit
+import os
+import socket
+import subprocess
+import time
+from typing import Any
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import psycopg2
 import seaborn as sns
+from dotenv import load_dotenv
 from psycopg2 import sql
 
-
 # %%
+
+load_dotenv()
+
+
 class QueryEngine:
-    """
-    A flexible PostgreSQL query engine that safely builds and executes queries
-    using parameterized statements to prevent SQL injection.
+    """PostgreSQL query engine for safe query execution.
+
+    Safely builds and executes queries using parameterized statements to prevent SQL injection.
     """
 
     VALID_AGGREGATIONS = {
@@ -42,20 +51,65 @@ class QueryEngine:
     }
     VALID_LOGICAL = {"and", "or"}
 
-    def __init__(self, conn_params):
+    def __init__(self, conn_params, ssh_params=None):
         """Initialize the query engine with a database connection.
 
         Args:
-            connection: psycopg2 connection object
+        ----
+            conn_params: dict of postgres connection parameters
+            ssh_config: dict containing ssh_host, ssh_username, ssh_pkey (path),
+                        and remote_bind_address (db_host, db_port)
 
         """
-        connection = psycopg2.connect(**conn_params)
-        self.conn = connection
+        self.tunnel_proc = None
+        # if ssh_params["host"] and ssh_params{"host"}:
+        if ssh_params and ssh_params.get("profile"):
+            # Register cleanup immediately so it runs
+            # even if __init__ fails later
+            atexit.register(self.close)
+            self.tunnel_proc = subprocess.Popen(
+                [
+                    "ssh",
+                    "-o",
+                    "ExitOnForwardFailure=yes",
+                    "-o",
+                    "BatchMode=yes",
+                    "-L",
+                    f"{conn_params["port"]}:{conn_params["host"]}:{conn_params["port"]}",
+                    f"{ssh_params["profile"]}",
+                    "-N",
+                ],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.PIPE,
+            )
+            # time.sleep(2)  # Give the tunnel a moment to open
+            # Wait for the port to become available (ready-check)
+            port = int(conn_params["port"])
+            for _ in range(50):  # Try for up to 5 seconds
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+                    sock.settimeout(0.1)
+                    if sock.connect_ex(("127.0.0.1", port)) == 0:
+                        break
+                time.sleep(0.1)
+
+        self.conn = psycopg2.connect(**conn_params)
 
     def close(self):
-        """Close the database connection."""
-        if self.conn:
-            self.conn.close()
+        """Close connection and terminate tunnel process."""
+        if hasattr(self, "conn") and self.conn:
+            try:
+                self.conn.close()
+            except Exception:
+                pass
+            self.conn = None
+
+        if self.tunnel_proc and self.tunnel_proc.poll() is None:
+            self.tunnel_proc.terminate()
+            try:
+                self.tunnel_proc.wait(timeout=2)
+            except subprocess.TimeoutExpired:
+                self.tunnel_proc.kill()
+            self.tunnel_proc = None
 
     def __enter__(self):
         """Context manager entry."""
@@ -65,11 +119,11 @@ class QueryEngine:
         """Context manager exit - ensures connection is closed."""
         self.close()
 
-    def execute_query(self, query_config: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """
-        Execute a query based on the configuration dictionary.
+    def execute_query(self, query_config: dict[str, Any]) -> list[dict[str, Any]]:
+        """Execute a query based on the configuration dictionary.
 
         Args:
+        ----
             query_config: Dictionary containing query parameters:
                 - table (str): Table name (required)
                 - columns (list): List of column definitions (required)
@@ -86,9 +140,11 @@ class QueryEngine:
                 - distinct (bool): Use SELECT DISTINCT (optional, default False)
 
         Returns:
+        -------
             List of dictionaries containing the query results
 
         Example:
+        -------
             query_config = {
                 "table": "sales",
                 "columns": [
@@ -104,6 +160,7 @@ class QueryEngine:
                 "order_by": [{"column": "total_amount", "direction": "desc"}],
                 "limit": 10
             }
+
         """
         table = query_config.get("table")
         if not table:
@@ -138,18 +195,18 @@ class QueryEngine:
             results = cursor.fetchall()
 
             # Convert to list of dictionaries
-            return [dict(zip(column_names, row)) for row in results]
+            return [dict(zip(column_names, row, strict=False)) for row in results]
 
     def _build_query(
         self,
         table: str,
-        columns: List[Union[str, Dict]],
-        filters: Dict,
-        group_by: List[str],
-        order_by: List[Union[str, Dict]],
-        having: Optional[Dict],
-        limit: Optional[int],
-        offset: Optional[int],
+        columns: list[str | dict],
+        filters: dict,
+        group_by: list[str],
+        order_by: list[str | dict],
+        having: dict | None,
+        limit: int | None,
+        offset: int | None,
         distinct: bool,
     ) -> tuple:
         """Build the SQL query and parameters."""
@@ -181,7 +238,7 @@ class QueryEngine:
         if group_by:
             group_identifiers = [sql.Identifier(col) for col in group_by]
             group_clause = sql.SQL(" GROUP BY {}").format(
-                sql.SQL(", ").join(group_identifiers)
+                sql.SQL(", ").join(group_identifiers),
             )
 
         # Build HAVING clause
@@ -206,11 +263,12 @@ class QueryEngine:
                         raise ValueError(f"Invalid order direction: {direction}")
                     order_parts.append(
                         sql.SQL("{} {}").format(
-                            sql.Identifier(col_name), sql.SQL(direction)
-                        )
+                            sql.Identifier(col_name),
+                            sql.SQL(direction),
+                        ),
                     )
             order_clause = sql.SQL(" ORDER BY {}").format(
-                sql.SQL(", ").join(order_parts)
+                sql.SQL(", ").join(order_parts),
             )
 
         # Build LIMIT and OFFSET clauses
@@ -237,7 +295,7 @@ class QueryEngine:
 
         return query, params
 
-    def _build_column_expression(self, col: Union[str, Dict]) -> sql.Composable:
+    def _build_column_expression(self, col: str | dict) -> sql.Composable:
         """Build a column expression, potentially with aggregation."""
         if isinstance(col, str):
             if col == "*":
@@ -262,13 +320,10 @@ class QueryEngine:
                 # Special handling for string_agg which requires a delimiter
                 if agg == "string_agg":
                     delimiter = col.get("delimiter", ", ")
-                    agg_expr = sql.SQL("{}({}, %s)").format(
-                        sql.SQL(agg.upper()), col_expr
-                    )
-                    # Note: delimiter param would need to be handled separately
-                    # For simplicity, using default here
-                    agg_expr = sql.SQL("{}({}, ", ")").format(
-                        sql.SQL(agg.upper()), col_expr
+                    # Use sql.Literal to safely inject the delimiter string
+                    agg_expr = sql.SQL("STRING_AGG({}, {})").format(
+                        col_expr,
+                        sql.Literal(delimiter),
                     )
                 else:
                     agg_expr = sql.SQL("{}({})").format(sql.SQL(agg.upper()), col_expr)
@@ -285,7 +340,7 @@ class QueryEngine:
 
         raise ValueError(f"Invalid column specification: {col}")
 
-    def _build_where_clause(self, filter_group: Dict) -> tuple:
+    def _build_where_clause(self, filter_group: dict) -> tuple:
         """Build WHERE clause with parameterized values from a filter group."""
         if not filter_group or not filter_group.get("conditions"):
             return sql.SQL(""), []
@@ -321,8 +376,9 @@ class QueryEngine:
                     ):
                         conditions.append(
                             sql.SQL("{} {} NULL").format(
-                                sql.Identifier(col), sql.SQL(op.upper())
-                            )
+                                sql.Identifier(col),
+                                sql.SQL(op.upper()),
+                            ),
                         )
                     else:
                         raise ValueError("IS/IS NOT operators require NULL value")
@@ -334,8 +390,10 @@ class QueryEngine:
                     placeholders = sql.SQL(", ").join([sql.Placeholder()] * len(value))
                     conditions.append(
                         sql.SQL("{} {} ({})").format(
-                            sql.Identifier(col), sql.SQL(op.upper()), placeholders
-                        )
+                            sql.Identifier(col),
+                            sql.SQL(op.upper()),
+                            placeholders,
+                        ),
                     )
                     params.extend(value)
 
@@ -343,8 +401,10 @@ class QueryEngine:
                 else:
                     conditions.append(
                         sql.SQL("{} {} {}").format(
-                            sql.Identifier(col), sql.SQL(op.upper()), sql.Placeholder()
-                        )
+                            sql.Identifier(col),
+                            sql.SQL(op.upper()),
+                            sql.Placeholder(),
+                        ),
                     )
                     params.append(value)
 
@@ -357,11 +417,10 @@ class QueryEngine:
 def plot_density(
     data: pd.DataFrame,
     x_col: str,
-    group_col: Optional[str] = None,
-    ax: Optional[plt.Axes] = None,
-) -> Union[plt.Axes, np.ndarray]:
-    """
-    Generates a 1D density plot for a specified variable.
+    group_col: str | None = None,
+    ax: plt.Axes | None = None,
+) -> plt.Axes | np.ndarray:
+    """Generate a 1D density plot for a specified variable.
 
     If a 'group_col' is provided, this function creates a vertical stack of
     density plots, with one subplot for each unique value in the group column.
@@ -371,6 +430,7 @@ def plot_density(
     the given Axes object or creates a new one.
 
     Args:
+    ----
         data (pd.DataFrame): The pandas DataFrame containing the data to plot.
         x_col (str): The name of the column to be plotted on the x-axis.
         group_col (Optional[str, optional): The name of the column to create
@@ -381,8 +441,10 @@ def plot_density(
             Defaults to None.
 
     Returns:
+    -------
         Union[plt.Axes, np.ndarray]: The matplotlib Axes object for a single
             plot, or a numpy array of Axes objects for grouped plots.
+
     """
     if group_col:
         # Create a vertical subplot for each group
@@ -437,16 +499,28 @@ def plot_density(
 
 
 # %%
+SSH_PARAMS = {
+    "profile": "moose",
+}
+
 DB_CONNECTION_PARAMS = {
-    "dbname": "football",
-    "user": "publiccolin",
-    "password": "VYgIlmCeNg3wIoLe",
-    "host": "localhost",
-    "port": 4432,
+    "dbname": os.getenv("DB_NAME"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASS"),
+    "host": os.getenv("DB_HOST_REMOTE"),
+    "port": os.getenv("DB_PORT_REMOTE"),
+}
+
+DB_CONNECTION_PARAMS = {
+    "dbname": os.getenv("DB_NAME"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASS"),
+    "host": os.getenv("DB_HOST_LOCAL"),
+    "port": os.getenv("DB_PORT_LOCAL"),
 }
 
 # %%
-with QueryEngine(DB_CONNECTION_PARAMS) as engine:
+with QueryEngine(DB_CONNECTION_PARAMS, SSH_PARAMS) as engine:
     # Example 1: Basic query with aggregations
     query_config = {
         "table": "nflfastR_pbp",
@@ -496,6 +570,8 @@ with QueryEngine(DB_CONNECTION_PARAMS) as engine:
     }
 
     results = engine.execute_query(query_config)
+
+# %%
 
 # %%
 df = pd.DataFrame(results)
