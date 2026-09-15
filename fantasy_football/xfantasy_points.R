@@ -1,0 +1,580 @@
+# Data --------------------------------------------------------------------
+
+year
+
+pbp_df <- 
+  # readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{year}.rds?raw=true')))
+  readRDS(glue('data/pbp/xyac_play_by_play_{year}.rds')) %>% 
+  decode_player_ids(fast = TRUE) %>% 
+  rename_at(.vars = vars(ends_with('.x')),
+            .funs = funs(sub('[.]x$', '', .)))
+
+my_week <- fx.n_week(pbp_df)
+
+# Receivers ---------------------------------------------------------------
+
+# Average Expected Fantasy Points - Receivers
+avg_exp_fp_df <- pbp_df %>% 
+  filter(pass_attempt==1 & season_type=='REG' & two_point_attempt==0 & !is.na(receiver_id)) %>% 
+  select(
+    season, 
+    game_id, 
+    play_id, 
+    posteam, 
+    receiver, 
+    receiver_player_id, 
+    receiver_id, 
+    yardline_100, 
+    air_yards, 
+    actual_yards_gained = yards_gained, 
+    complete_pass, 
+    cp, 
+    yac_prob = prob, 
+    gain) %>% 
+  mutate(
+    gain = ifelse(yardline_100==air_yards, yardline_100, gain),
+    yac_prob = ifelse(yardline_100==air_yards, 1, yac_prob),
+    PPR_points = 1 + gain/10 + ifelse(gain == yardline_100, 6, 0),
+    half_PPR_points = .5 + gain/10 + ifelse(gain == yardline_100, 6, 0),
+    catch_run_prob = cp * yac_prob,
+    exp_PPR_points = PPR_points * catch_run_prob,
+    exp_half_PPR_points = half_PPR_points * catch_run_prob,
+    exp_yards = gain * catch_run_prob,
+    actual_outcome = ifelse(actual_yards_gained==gain & complete_pass==1, 1, 0),
+    actual_PPR_points = ifelse(actual_outcome==1, PPR_points, 0),
+    actual_half_PPR_points = ifelse(actual_outcome==1, half_PPR_points, 0),
+    target = 0,
+    game_played = 0
+  )  %>% 
+  group_by(game_id, receiver) %>% 
+  mutate(game_played = ifelse(row_number()==1,1,0)) %>% 
+  ungroup %>% 
+  group_by(game_id, play_id, receiver) %>% 
+  mutate(target = ifelse(row_number()==1,1,0)) %>% 
+  ungroup %>% 
+  group_by(posteam, receiver) %>% 
+  summarize(
+    # Basic stats
+    receiver_id = unique(receiver_id),
+    games = sum(game_played, na.rm = T),
+    targets = sum(target, na.rm = T),
+    targets_pg = targets / games,
+    catches = sum(actual_outcome, na.rm = T),
+    catches_pg = catches / games,
+    yards = sum(ifelse(actual_outcome==1, gain, 0), na.rm = T),
+    yards_pg = yards / games,
+    air_yards = sum(ifelse(actual_outcome==1, air_yards, 0), na.rm = T),
+    air_yards_pg = air_yards / games,
+    td = sum(ifelse(gain==yardline_100, actual_outcome, 0), na.rm = T),
+    td_pg = td / games,
+    # Fantasy points
+    PPR_pts = sum(actual_PPR_points, na.rm = T),
+    PPR_pts_pg = PPR_pts / games,
+    half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
+    half_PPR_pts_pg = half_PPR_pts / games,
+    # Expected
+    exp_catches = sum(ifelse(target==1, cp, NA), na.rm = T),
+    exp_catches_pg = exp_catches / games,
+    exp_yards = sum(exp_yards, na.rm = T),
+    exp_yards_pg = exp_yards / games,
+    exp_td = sum(ifelse(gain==yardline_100, catch_run_prob, 0), na.rm = T),
+    exp_td_pg = exp_td / games,
+    exp_td_pg = exp_td / games,
+    exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
+    exp_PPR_pts_pg = exp_PPR_pts / games,
+    exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
+    exp_half_PPR_pts_pg = exp_half_PPR_pts / games,
+  ) %>% 
+  mutate(
+    half_PPR_pts_diff = half_PPR_pts - exp_half_PPR_pts,
+    half_PPR_pts_pg_diff = half_PPR_pts_pg - exp_half_PPR_pts_pg,
+    PPR_pts_diff = PPR_pts - exp_PPR_pts,
+    PPR_pts_pg_diff = PPR_pts_pg - exp_PPR_pts_pg
+  ) %>% 
+  ungroup %>% 
+  left_join(
+    sleeper_players_df %>%
+      select(position, sportradar_id, gsis_id, espn_id, headshot_url, injury_status),
+    by = c("receiver_id" = "gsis_id")
+  ) %>%
+  left_join(espn_players_df %>%
+              select(id, status, team_id = onTeamId, injured),
+            by = c("espn_id" = "id")) %>% 
+  unique()
+
+avg_exp_fp_df %>% 
+  filter(status != "ONTEAM") %>% 
+  arrange(-air_yards)
+
+avg_exp_fp_df %>% 
+  filter(status != "ONTEAM",
+         games >= 3) %>%
+  arrange(-air_yards_pg)
+
+avg_exp_fp_df %>% 
+  filter(status != "ONTEAM") %>% 
+  arrange(-targets_pg)
+
+library(gt)
+# make the table
+
+# 1/2 PPR xFP table
+avg_exp_fp_df %>%
+  # filter(injured != TRUE & (status != 'ONTEAM' | team_id == 8)) %>% 
+  filter(injured != TRUE) %>% 
+  select(
+    games,
+    receiver,
+    posteam,
+    targets,
+    catches,
+    yards,
+    td,
+    half_PPR_pts_pg,
+    exp_catches,
+    exp_yards,
+    exp_td,
+    exp_half_PPR_pts_pg,
+    half_PPR_pts_pg_diff,
+    status,
+    team_id
+  ) %>%
+  arrange(-half_PPR_pts_pg) %>% 
+  dplyr::slice(1:50) %>% 
+  mutate(Rank = glue('#{row_number()}')) %>%
+  # filter(status != 'ONTEAM' | team_id == 8) %>% 
+  # select(-status, team_id) %>% 
+  gt() %>%
+  tab_header(title = 'Expected Receiving 1/2 PPR Fantasy Points, 2019') %>% 
+  cols_move_to_start(columns = vars(Rank)) %>% 
+  cols_label(
+    games = 'GP',
+    receiver = '',
+    posteam = '',
+    targets = 'Targ',
+    catches = 'Rec',
+    yards = 'Yds',
+    td = 'TD',
+    half_PPR_pts_pg = 'FP',
+    exp_catches = 'Rec',
+    exp_yards = 'Yds',
+    exp_td = 'TD',
+    exp_half_PPR_pts_pg = 'FP',
+    half_PPR_pts_pg_diff = "Pts Diff."
+  ) %>% 
+  fmt_number(columns = vars(exp_td, half_PPR_pts_pg, exp_half_PPR_pts_pg, half_PPR_pts_pg_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(yards, exp_yards, exp_catches), decimals = 0, sep_mark = ',') %>% 
+  tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
+  tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
+  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(receiver))) %>% 
+  tab_spanner(label = 'Actual', columns = vars(catches, yards, td, half_PPR_pts_pg)) %>% 
+  tab_spanner(label = 'Expected', columns = vars(exp_catches, exp_yards, exp_td, exp_half_PPR_pts_pg)) %>% 
+  tab_source_note(source_note = '') %>% 
+  data_color(
+    columns = vars(half_PPR_pts_pg),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$half_PPR_pts_pg %>% max(),
+        avg_exp_fp_df$half_PPR_pts_pg %>% min()
+      ),
+      reverse = TRUE
+    ),
+    # anyway to automate?
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(exp_half_PPR_pts_pg),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$exp_half_PPR_pts_pg %>% max(),
+        avg_exp_fp_df$exp_half_PPR_pts_pg %>% min()
+      ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(half_PPR_pts_pg_diff),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$half_PPR_pts_pg_diff %>% max(),
+        avg_exp_fp_df$half_PPR_pts_pg_diff %>% min()
+      ),
+      reverse = TRUE
+    ),
+    autocolor_text = FALSE
+  ) %>% 
+  text_transform(
+    locations = cells_body(vars(posteam)),
+    fn = function(x) web_image(url = paste0('https://a.espncdn.com/i/teamlogos/nfl/500/',x,'.png'))
+  ) %>% 
+  cols_width(vars(posteam) ~ px(45)) %>% 
+  tab_options(
+    table.font.color = color_cw[5],
+    data_row.padding = '2px',
+    row_group.padding = '3px',
+    column_labels.border.bottom.color = color_cw[5],
+    column_labels.border.bottom.width = 1.4,
+    table_body.border.top.color = color_cw[5],
+    row_group.border.top.width = 1.5,
+    row_group.border.top.color = 'transparent',
+    table_body.border.bottom.width = 0.7,
+    table_body.border.bottom.color = 'transparent',
+    row_group.border.bottom.width = 1,
+    row_group.border.bottom.color = color_cw[5],
+    table.border.top.color = 'transparent',
+    table.background.color = color_cw[1],
+    table_body.hlines.color = color_cw[3],
+    table.border.bottom.color = 'transparent',
+    row.striping.background_color = color_cw[2],
+    row.striping.include_table_body = TRUE
+  ) %>%
+  gtsave(filename = glue("xFP_share_half_ppr_{pbp_df$season[1]}.png"), path = "fantasy_football/plots")
+  # )
+
+
+# Full PPR xFP table
+avg_exp_fp_df %>%
+  select(
+    games,
+    receiver,
+    posteam,
+    targets,
+    catches,
+    yards,
+    td,
+    PPR_pts_pg,
+    exp_catches,
+    exp_yards,
+    exp_td,
+    exp_PPR_pts_pg,
+    PPR_pts_pg_diff
+  ) %>%
+  arrange(-exp_PPR_pts_pg) %>% 
+  dplyr::slice(1:50) %>% 
+  mutate(Rank = paste0('#',row_number())) %>%
+  gt() %>%
+  tab_header(title = 'Expected Receiving PPR Fantasy Points, 2019') %>% 
+  cols_move_to_start(columns = vars(Rank)) %>% 
+  cols_label(
+    games = 'GP',
+    receiver = '',
+    posteam = '',
+    targets = 'Targ',
+    catches = 'Rec',
+    yards = 'Yds',
+    td = 'TD',
+    PPR_pts_pg = 'FP',
+    exp_catches = 'Rec',
+    exp_yards = 'Yds',
+    exp_td = 'TD',
+    exp_PPR_pts_pg = 'FP',
+    PPR_pts_pg_diff = "Pts Diff."
+  ) %>% 
+  fmt_number(columns = vars(exp_td, PPR_pts_pg, exp_PPR_pts_pg, PPR_pts_pg_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(yards, exp_yards, exp_catches), decimals = 0, sep_mark = ',') %>% 
+  tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
+  tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
+  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(receiver))) %>% 
+  tab_spanner(label = 'Actual', columns = vars(catches, yards, td, PPR_pts_pg)) %>% 
+  tab_spanner(label = 'Expected', columns = vars(exp_catches, exp_yards, exp_td, exp_PPR_pts_pg)) %>% 
+  tab_source_note(source_note = '') %>% 
+  data_color(
+    columns = vars(PPR_pts_pg),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$PPR_pts_pg %>% max(),
+        avg_exp_fp_df$PPR_pts_pg %>% min()
+      ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(exp_PPR_pts_pg),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$exp_PPR_pts_pg %>% max(),
+        avg_exp_fp_df$exp_PPR_pts_pg %>% min()
+      ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(PPR_pts_pg_diff),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        avg_exp_fp_df$PPR_pts_pg_diff %>% max(),
+        avg_exp_fp_df$PPR_pts_pg_diff %>% min()
+      ),
+      reverse = TRUE
+    ),
+    autocolor_text = FALSE
+  ) %>% 
+  text_transform(
+    locations = cells_body(vars(posteam)),
+    fn = function(x) web_image(url = glue('https://a.espncdn.com/i/teamlogos/nfl/500/{x}.png'))
+  ) %>% 
+  cols_width(vars(posteam) ~ px(45)) %>% 
+  tab_options(
+    table.font.color = color_cw[5],
+    data_row.padding = '2px',
+    row_group.padding = '3px',
+    column_labels.border.bottom.color = color_cw[5],
+    column_labels.border.bottom.width = 1.4,
+    table_body.border.top.color = color_cw[5],
+    row_group.border.top.width = 1.5,
+    row_group.border.top.color = 'transparent',
+    table_body.border.bottom.width = 0.7,
+    table_body.border.bottom.color = 'transparent',
+    row_group.border.bottom.width = 1,
+    row_group.border.bottom.color = color_cw[5],
+    table.border.top.color = 'transparent',
+    table.background.color = color_cw[1],
+    table.border.bottom.color = 'transparent',
+    row.striping.background_color = color_cw[2],
+    row.striping.include_table_body = TRUE
+  ) %>% 
+  gtsave(filename = glue("xFP_share_ppr_{pbp_df$season[1]}.png"), path = "fantasy_football/plots")
+
+# requires:
+# install.packages("webshot")
+# library(webshot)
+# webshot::install_phantomjs()
+
+
+# Quarterbacks ------------------------------------------------------------
+
+# Completed Air Yards Over Expected
+cayoe <- pbp_df %>%
+  filter(pass_attempt == 1 &
+           season_type == 'REG' &
+           two_point_attempt == 0 & !is.na(receiver_id) &
+           !is.na(receiver_id) &
+           !is.na(penalty)
+           # wp > .2 &
+           # wp < .8 &
+           # air_yards > 0
+         ) %>% 
+  select(
+    season,
+    game_id,
+    play_id,
+    posteam,
+    passer,
+    passer_player_id,
+    passer_id,
+    receiver,
+    receiver_player_id,
+    receiver_id,
+    yardline_100,
+    air_yards,
+    actual_yards_gained = yards_gained,
+    complete_pass,
+    cp,
+    cpoe,
+    yac_prob = prob,
+    gain,
+    pass_attempt
+  ) %>%
+  mutate(
+    gain = ifelse(yardline_100 == air_yards, yardline_100, gain),
+    yac_prob = ifelse(yardline_100 == air_yards, 1, yac_prob),
+    PPR_points = 1 + gain / 10 + ifelse(gain == yardline_100, 6, 0),
+    half_PPR_points = .5 + gain / 10 + ifelse(gain == yardline_100, 6, 0),
+    catch_run_prob = cp * yac_prob,
+    exp_PPR_points = PPR_points * catch_run_prob,
+    exp_half_PPR_points = half_PPR_points * catch_run_prob,
+    exp_yards = gain * catch_run_prob,
+    actual_outcome = ifelse(actual_yards_gained == gain &
+                              complete_pass == 1, 1, 0),
+    actual_PPR_points = ifelse(actual_outcome == 1, PPR_points, 0),
+    actual_half_PPR_points = ifelse(actual_outcome == 1, half_PPR_points, 0),
+    # completion = 0,
+    attempt = 0,
+    game_played = 0,
+    cayoe = cpoe * air_yards,
+    sum_cayoe = 0
+  ) %>%
+  group_by(game_id, passer_player_id) %>%
+  mutate(game_played = ifelse(row_number() == 1, 1, 0)) %>%
+  ungroup %>%
+  # group_by(game_id, play_id, passer) %>%
+  # mutate(completion = ifelse(row_number() == 1, 1, 0)) %>%
+  # ungroup %>%
+  group_by(game_id, play_id, receiver) %>% 
+  mutate(attempt = ifelse(row_number()==1,1,0)) %>% 
+  ungroup %>% 
+  group_by(posteam, passer) %>%
+  # filter()
+  summarize(
+    # Basic stats
+    season = unique(season),
+    games = sum(game_played, na.rm = T),
+    pass_attempts = sum(attempt, na.rm = T),
+    completions = sum(actual_outcome, na.rm = T),
+    yards = sum(ifelse(actual_outcome == 1, gain, 0), na.rm = T),
+    td = sum(ifelse(gain == yardline_100, actual_outcome, 0), na.rm = T),
+    # Fantasy points
+    PPR_pts = sum(actual_PPR_points, na.rm = T),
+    half_PPR_pts = sum(actual_half_PPR_points, na.rm = T),
+    # Expected
+    exp_completions = sum(ifelse(attempt == 1, cp, NA), na.rm = T),
+    exp_yards = sum(exp_yards, na.rm = T),
+    exp_td = sum(ifelse(gain == yardline_100, catch_run_prob, 0), na.rm = T),
+    exp_PPR_pts = sum(exp_PPR_points, na.rm = T),
+    exp_half_PPR_pts = sum(exp_half_PPR_points, na.rm = T),
+    sum_cayoe = sum(yards-exp_yards, na.rm = T),
+    # Per game ---
+    # Basic stats
+    pass_attempts_pg = pass_attempts / games,
+    completions_pg = completions / games,
+    yards_pg = yards / games,
+    td_pg =  td / games,
+    # Fantasy points
+    PPR_pts_pg = PPR_pts / games,
+    half_PPR_pts_pg = half_PPR_pts / games,
+    # Expected
+    exp_completions_pg = exp_completions / games,
+    exp_yards_pg = exp_yards / games,
+    exp_td_pg = exp_td / games,
+    exp_PPR_pts_pg = exp_PPR_pts / games,
+    exp_half_PPR_pts_pg = exp_half_PPR_pts / games
+  ) %>%
+  mutate(
+    half_PPR_pts_diff = half_PPR_pts - exp_half_PPR_pts,
+    PPR_pts_diff = PPR_pts - exp_PPR_pts,
+    cayoe_a = sum_cayoe / pass_attempts
+  ) %>%
+  ungroup %>%
+  # filter(pass_attempts > mean(cayoe$pass_attempts)-(mean(cayoe$pass_attempts)*.6))
+  filter(pass_attempts > (quantile(pass_attempts)[3]))
+
+
+# xFP QB table
+cayoe %>%
+  select(
+    games,
+    passer,
+    posteam,
+    pass_attempts,
+    completions,
+    yards,
+    td,
+    PPR_pts,
+    half_PPR_pts,
+    exp_completions,
+    exp_yards,
+    exp_td,
+    exp_PPR_pts,
+    exp_half_PPR_pts,
+    PPR_pts_diff,
+    half_PPR_pts_diff
+  ) %>%
+  arrange(-exp_half_PPR_pts) %>% 
+  dplyr::slice(1:50) %>% 
+  mutate(Rank = paste0('#',row_number())) %>%
+  gt() %>%
+  tab_header(title = paste('Expected Passing Yards,', cayoe$season[1]), 
+             subtitle = paste('Data through week', my_week, 'SNF', '|', 'Min.', quantile(cayoe$pass_attempts)[3],'pass attempts and > 0 air yards | CAYOE = Complete Air Yards over expected')) %>% 
+  cols_move_to_start(columns = vars(Rank)) %>% 
+  cols_label(
+    games = 'GP',
+    passer = '',
+    posteam = '',
+    pass_attempts = 'Pass Attempts',
+    completions = 'Comp.',
+    yards = 'Yds',
+    td = 'TD',
+    PPR_pts = 'FP',
+    exp_completions = 'xComp.',
+    exp_yards = 'xYds',
+    exp_td = 'xTD',
+    exp_PPR_pts = 'xFP',
+    exp_half_PPR_pts = 'x1/2FP',
+    PPR_pts_diff = "Pts Diff.",
+    half_PPR_pts_diff = "1/2 Pts Diff."
+  ) %>% 
+  fmt_number(columns = vars(exp_td, PPR_pts, exp_PPR_pts, PPR_pts_diff, exp_half_PPR_pts, half_PPR_pts, half_PPR_pts_diff), decimals = 1) %>% 
+  fmt_number(columns = vars(yards, exp_yards, exp_completions), decimals = 0, sep_mark = ',') %>% 
+  tab_style(style = cell_text(size = 'x-large'), locations = cells_title(groups = 'title')) %>% 
+  tab_style(style = cell_text(align = 'center', size = 'medium'), locations = cells_body()) %>% 
+  tab_style(style = cell_text(align = 'left'), locations = cells_body(vars(passer))) %>% 
+  tab_spanner(label = 'Actual', columns = vars(completions, yards, td, PPR_pts, half_PPR_pts)) %>% 
+  tab_spanner(label = 'Expected', columns = vars(exp_completions, exp_yards, exp_td, exp_PPR_pts, exp_half_PPR_pts)) %>% 
+  tab_source_note(source_note = 'Data: @nflfastR') %>% 
+  data_color(
+    columns = vars(PPR_pts),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        cayoe$PPR_pts %>% max(), 
+        cayoe$PPR_pts %>% min()
+        ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(exp_PPR_pts),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        cayoe$exp_PPR_pts %>% max(), 
+        cayoe$exp_PPR_pts %>% min()
+        ),
+      reverse = TRUE
+    ),
+    # need to adjust for full PPR point scale
+    autocolor_text = FALSE
+  ) %>%
+  data_color(
+    columns = vars(PPR_pts_diff),
+    colors = scales::col_numeric(
+      palette = c(color_cw[6], color_cw[2]),
+      domain = c(
+        cayoe$PPR_pts_diff %>% max(), 
+        cayoe$PPR_pts_diff %>% min()
+        ),
+      reverse = TRUE
+    ),
+    autocolor_text = FALSE
+  ) %>%  
+  text_transform(
+    locations = cells_body(vars(posteam)),
+    fn = function(x) web_image(url = paste0('https://a.espncdn.com/i/teamlogos/nfl/500/',x,'.png'))
+  ) %>% 
+  cols_width(vars(posteam) ~ px(45)) %>% 
+  tab_options(
+    table.font.color = color_cw[5],
+    data_row.padding = '2px',
+    row_group.padding = '3px',
+    column_labels.border.bottom.color = color_cw[5],
+    column_labels.border.bottom.width = 1.4,
+    table_body.border.top.color = color_cw[5],
+    row_group.border.top.width = 1.5,
+    row_group.border.top.color = '#999999',
+    table_body.border.bottom.width = 0.7,
+    table_body.border.bottom.color = '#999999',
+    row_group.border.bottom.width = 1,
+    row_group.border.bottom.color = color_cw[5],
+    table.border.top.color = 'transparent',
+    table.background.color = color_cw[1],
+    table.border.bottom.color = 'transparent',
+    row.striping.background_color = color_cw[2],
+    row.striping.include_table_body = TRUE
+  ) %>% 
+  gtsave(filename = glue("xFP_QB_fp_{cayoe$season[1]}.png"), path = "fantasy_football/plots", vwidth = 1500)
+
+rm(avg_exp_fp_df, cayoe)

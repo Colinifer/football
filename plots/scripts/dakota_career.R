@@ -1,0 +1,121 @@
+library(zoo)
+library(viridis)
+source('plots/assets/plot_theme.R')
+load(url('https://github.com/guga31bb/metrics/blob/master/dakota_model.rda?raw=true'))
+
+current_season <- year
+start_time <- Sys.time()
+
+# roster_df <- readRDS(url('https://github.com/guga31bb/nflfastR-data/blob/master/roster-data/roster.rds?raw=true')) %>% 
+#   left_join(readRDS(url('https://github.com/ajreinhard/NFL/blob/master/nflfastR%20ID%20mapping/gsis_map.rds?raw=true')), by = c('teamPlayers.gsisId' = 'gsis')) %>% 
+#   mutate(ID = ifelse(is.na(ID), teamPlayers.gsisId, ID))
+
+print(glue("Scraping 2006:{current_season} PBP for career results"))
+# pbp <- do.call(rbind, lapply(2006:year, function(yr) {
+#   readRDS(url(glue('https://github.com/guga31bb/nflfastR-data/blob/master/data/play_by_play_{yr}.rds?raw=true')))
+# })) %>% decode_player_ids(fast = T)
+con <- fx.db_con(x.host = 'localhost')
+pbp <- tbl(con, 'nflfastR_pbp') |> 
+  filter(season >= 2006) |> 
+  select(
+    season,
+    week,
+    game_id,
+    passer_id,
+    rusher_id,
+    qb_epa,
+    cpoe,
+    -xyac_median_yardage
+  ) |> 
+  collect() |> 
+  decode_player_ids(fast = T)
+dbDisconnect(con)
+
+all_qb_id <- pbp %>% 
+  pull(passer_id) %>% table %>% 
+  .[which(. >= 50)] %>% 
+  names
+
+qb_current_season_id <- pbp %>% 
+  filter(season == current_season) %>% 
+  pull(passer_id) %>% 
+  table %>% 
+  .[which(. >= 3)] %>%
+  names
+
+qb_top_bottom <- pbp %>% 
+  mutate(qb_id = ifelse(is.na(passer_id), rusher_id, passer_id)) %>%
+  filter(qb_id %in% all_qb_id) %>% 
+  group_by(qb_id) %>%
+  rename(play_cpoe = cpoe) %>% 
+  mutate(
+    play_num = row_number(),
+    week_desc = paste0(season, ' Week ', week),
+    qb_epa_cap = ifelse(qb_epa <= -4.5, -4.5, qb_epa),
+    epa_per_play = rollapply(qb_epa_cap, 200, mean, align='right', fill=NA, na.rm = T),
+    cpoe = rollapply(play_cpoe, 200, mean, align='right', fill=NA, na.rm = T),
+    gm_list = rollapply(game_id, 200, function(x) paste(rev(unique(x)),collapse = '\n'), align='right', fill=NA),
+    end_game = ifelse(game_id != lead(game_id) | is.na(lead(game_id)), 1, 0),
+    game_num = cumsum(end_game),
+    last_throw = ifelse(play_num == max(play_num), 1, NA)
+  ) %>% 
+  ungroup %>% 
+  mutate(dakota = mgcv::predict.gam(dakota_model, .)) %>%
+  group_by(qb_id) %>%
+  summarise(
+    car_plays = n(),
+    curr_dakota = max(last_throw * dakota, na.rm = T),
+    high_dakota = max(dakota, na.rm = T),
+    low_dakota = min(dakota, na.rm = T),
+    epa_per_play =  mean(epa_per_play, na.rm = T),
+    cpoe = mean(cpoe, na.rm = T)
+  ) %>% 
+  mutate(car_dakota = mgcv::predict.gam(dakota_model, .))
+
+qb_top_bottom <- qb_top_bottom |> 
+  left_join(roster_df |> select(gsis_id, full_name, headshot_url),
+            by = c("qb_id" = "gsis_id"))
+
+min_plays <- 450
+
+p <- qb_top_bottom |> 
+  # left_join(roster_df |> filter(team.season >= (as.integer(year) - 1)), by = c('qb_id' = 'teamPlayers.gsisId')) |>
+  # filter(!is.na(team.season) & car_plays>=min_plays & qb_id %in% qb_current_season_id) |> 
+  filter(car_plays>=min_plays & qb_id %in% qb_current_season_id) |> 
+  arrange(-car_dakota) |> 
+  mutate(rank = row_number()) |> 
+  ggplot(aes(x = curr_dakota, xend = high_dakota, y = rank, yend = rank)) +
+  geom_segment(aes(x = low_dakota), color = color_cw[5], size = 0.7) +
+  geom_point(aes(x = car_dakota), color = color_cw[5], shape = 5) +
+  geom_point(aes(fill = curr_dakota), size = 3, color = color_cw[2], shape = 21, stroke = 0.7) +
+  geom_shadowtext(aes(x = low_dakota - 0.005, label = full_name, family = "Montserrat"), hjust = 1, color = color_cw[5], bg.color = color_cw[2], size = 2.2, bg.r = 0.2) +
+  # geom_image(aes(x = low_dakota - 0.005, image = headshot_url), size = .025, na.rm = T) +
+  scale_y_reverse(expand = expansion(mult = c(0.02, 0.04))) +
+  scale_x_continuous(limits = c(-0.15,0.4), expand = expansion(mult = 0)) +
+  scale_fill_viridis(option = "A") +
+  labs(title = 'Range of Career DAKOTA Rating' ,
+       subtitle = glue('Diamond = Career average, Dot = Last 200 Plays\nMin. {min_plays} QB plays'),
+       fill = "Index score",
+       x = 'EPA+CPOE Composite Index (DAKOTA)',
+       y = NULL) +
+  theme_cw_dark +
+  theme(
+    plot.title = element_text(size = 12),
+    # plot.margin = margin(.25, 1, .25, .25, unit = "cm"),
+    axis.ticks.y = element_blank(),
+    axis.text.y = element_blank(),
+    panel.grid.major.y = element_blank(),
+    legend.title = element_text(family = "Chivo",
+                                size = 7),
+    legend.text = element_text(size = 5),
+    legend.position = c(.88, .1725)
+  )
+
+# p
+
+brand_plot(p, asp = 1/1.25, save_name = 'plots/desktop/dakota_career.png', data_home = 'DAKOTA courtesy of @benbbaldwin | Data: @nflfastR', fade_borders = '')
+
+end_time <- Sys.time()
+end_time - start_time
+
+rm(pbp, all_qb_id, qb_current_season_id, qb_top_bottom, min_plays, start_time, end_time)
