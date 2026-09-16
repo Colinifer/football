@@ -21,16 +21,24 @@ enable_error_code = [
 ]
 
 [tool.ruff]
-target-version = "py311" #: note: please prefer the latest version of Python
-line-length = 79
+target-version = "py313"
+line-length = 88
 
 [tool.ruff.lint]
-select = ["ALL"]
-# Conflicting rules generate a warning, disable them by default
-ignore = ["D203", "D213"] # Consider ignoring specific rules on a per-project basis
+select = ["B", "E", "F", "I", "RUF", "S", "SIM", "UP", "FAST"]
+ignore = ["E501", "S311", "RUF012"]
 
-[tool.ruff.pylint]
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**" = ["S101", "D103", "D104"]
+
+[tool.ruff.lint.pylint]
 max-statements = 20
 max-returns = 3
 max-args = 7
 max-nested-blocks = 3
+
+[tool.uv.workspace]
+members = [
+    "airflow",
+    "fantasy_recap",
+]
