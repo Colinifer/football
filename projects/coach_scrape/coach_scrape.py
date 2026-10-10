@@ -47,7 +47,7 @@ def parse_args() -> argparse.Namespace:
         "--teams",
         "-t",
         nargs="+",
-        default=["CIN"],
+        default=None,
         help="One or more team abbreviations (e.g. -t CIN PHI). Default: ['CIN']",
     )
     # 2. Optional player filters
@@ -75,7 +75,7 @@ def parse_args() -> argparse.Namespace:
         "--week",
         "-w",
         type=int,
-        default=2,
+        default=None,
         help="NFL week number. Default: 2",
     )
     parser.add_argument(
@@ -237,12 +237,12 @@ sub_sep = "-" * 60
 print(
     f"\n{sep}",
     "\nQuery:",
-    "\n{sep}\n\n{query}\n\n{sub_sep}\n",
+    f"\n{sep}\n\n{query}\n\n{sub_sep}\n",
 )
 print(
     f"\n{sep}",
     "\nPlays:",
-    "\n{sep}\n",
+    f"\n{sep}\n",
 )
 
 print(plays_df)

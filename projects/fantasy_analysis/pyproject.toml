@@ -1,0 +1,15 @@
+[project]
+name = "fantasy-analysis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "feedparser>=6.0.14",
+    "langchain>=1.4.4",
+    "langchain-core>=1.6.9",
+    "langchain-google-genai>=4.4.0",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+]
