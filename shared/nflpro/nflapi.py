@@ -71,19 +71,28 @@ class NFLProAPI:
         self.logger = logging.getLogger(__name__)
 
         load_dotenv()
-        self.api_key: str | None = os.getenv("NFLPRO_API_KEY")
-        self.login_token: str | None = os.getenv("NFLPRO_LOGIN_TOKEN")
-        self.cookie: str | None = os.getenv("NFLPRO_COOKIE")
 
+        # Direct token (from browser session for premium access / coaches film)
+        self.access_token: str | None = os.getenv("NFLPRO_ACCESS_TOKEN")
+        self.cookie: str | None = os.getenv("NFLPRO_COOKIE")
+        self.oidc_access_token: str | None = os.getenv("OIDC_ACCESS_TOKEN")
+        self.uid: str | None = os.getenv("NFL_UID")
+
+        # Client credentials for automatic app token generation
         self.clientKey: str | None = os.getenv("CLIENT_KEY")
         self.clientSecret: str | None = os.getenv("CLIENT_SECRET")
+
+        # Optional device / refresh info if used elsewhere
         self.deviceId: str | None = os.getenv("DEVICE_ID")
         self.deviceInfo: str | None = os.getenv("DEVICE_INFO")
         self.refreshToken: str | None = os.getenv("REFRESH_TOKEN")
 
-        if not all([self.api_key, self.login_token, self.cookie]):
-            msg = "API credentials (key, token, or cookie) \
-                are missing from the .env file."
+        # Validate that we have either an explicit token or client credentials
+        if not self.access_token and not (self.clientKey and self.clientSecret):
+            msg = (
+                "Either NFLPRO_ACCESS_TOKEN or both CLIENT_KEY and CLIENT_SECRET "
+                "must be set in the .env file."
+            )
             raise ValueError(msg)
 
         self.base_url: str = "https://pro.nfl.com"
@@ -104,9 +113,10 @@ class NFLProAPI:
         self.session.mount("https://", adapter)
         self.session.mount("http://", adapter)
 
-        self.access_token: str | None = None
-        self.expires_at: float | None = None
-        # Token refresh buffer in seconds (5 minutes)
+        # If token was provided in .env, assume 24h validity; otherwise initialize as None
+        self.expires_at: float | None = (
+            time.time() + 86400 if self.access_token else None
+        )
         self.token_refresh_buffer: int = 300
 
         # Centralized endpoint configuration
@@ -317,101 +327,106 @@ class NFLProAPI:
             },
         }
 
-    def _get_account_info(self) -> dict[str, Any] | None:
-        """Fetch account information using APIKey and login_token.
+    # def _get_account_info(self) -> dict[str, Any] | None:
+    #     """Fetch account information using APIKey and login_token.
 
-        Returns:
-            Optional[Dict[str, Any]]: Account information as a dictionary,
-                or None if an error occurs.
+    #     Returns:
+    #         Optional[Dict[str, Any]]: Account information as a dictionary,
+    #             or None if an error occurs.
 
-        """
-        url = "https://auth-id.nfl.com/accounts.getAccountInfo"
-        headers = {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Cookie": self.cookie,
-        }
-        data = {
-            "APIKey": self.api_key,
-            "login_token": self.login_token,
-            "include": "profile,data",
-            "lang": "en",
-            "sdk": "js_latest",
-            "authMode": "cookie",
-            "format": "json",
-        }
-        try:
-            response = self.session.post(url, headers=headers, data=data)
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            status_code = (
-                getattr(e.response, "status_code", None)
-                if hasattr(e, "response")
-                else None
-            )
-            self.logger.error(
-                "Failed to fetch account info",
-                extra={
-                    "status_code": status_code,
-                    "error_message": str(e),
-                    "url": url,
-                },
-            )
-            return None
+    #     """
+    #     url = "https://auth-id.nfl.com/accounts.getAccountInfo"
+    #     headers = {
+    #         "Content-Type": "application/x-www-form-urlencoded",
+    #         "Cookie": self.cookie,
+    #     }
+    #     data = {
+    #         "APIKey": self.api_key,
+    #         "login_token": self.login_token,
+    #         "include": "profile,data",
+    #         "lang": "en",
+    #         "sdk": "js_latest",
+    #         "authMode": "cookie",
+    #         "format": "json",
+    #     }
+    #     try:
+    #         response = self.session.post(url, headers=headers, data=data)
+    #         response.raise_for_status()
+    #         return response.json()
+    #     except requests.exceptions.RequestException as e:
+    #         status_code = (
+    #             getattr(e.response, "status_code", None)
+    #             if hasattr(e, "response")
+    #             else None
+    #         )
+    #         self.logger.error(
+    #             "Failed to fetch account info",
+    #             extra={
+    #                 "status_code": status_code,
+    #                 "error_message": str(e),
+    #                 "url": url,
+    #             },
+    #         )
+    #         return None
 
     def _refresh_token(self, print_token: bool | None = None) -> None:
-        """Refresh the access token using client credentials and signatures.
-
-        Args:
-        print_token (Optional[bool]): Whether to print the access token.
-            Defaults to None.
-
-        """
-        account_info = self._get_account_info()
-        if not account_info:
-            self.logger.warning(
-                "Failed to get account info.Cannot refresh token.",
-            )
+        """Fetch or refresh the access token using OIDC credentials or client key/secret."""
+        # 1. Check for manual override in .env
+        env_token = os.getenv("NFLPRO_ACCESS_TOKEN")
+        if env_token:
+            self.access_token = env_token
+            self.expires_at = time.time() + 86400  # Default 24h validity for static token
+            if print_token:
+                self.logger.info("Using static token from NFLPRO_ACCESS_TOKEN: %s", self.access_token)
             return
 
-        url = "https://api.nfl.com/identity/v3/token/refresh"
-        payload = {
+        # 2. Perform OIDC token exchange
+        url = "https://api.nfl.com/identity/v3/token"
+        headers = {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:147.0) Gecko/20100101 Firefox/147.0",
+            "Accept": "application/json, text/plain, */*",
+            "Origin": "https://pro.nfl.com",
+            "Referer": "https://pro.nfl.com/",
+        }
+
+        data: dict[str, Any] = {
             "clientKey": self.clientKey,
             "clientSecret": self.clientSecret,
-            "deviceId": self.deviceId,
-            "deviceInfo": self.deviceInfo,
-            "networkType": "other",
-            "signatureTimestamp": account_info.get("signatureTimestamp"),
-            "uid": account_info.get("UID"),
-            "uidSignature": account_info.get("UIDSignature"),
-            "refreshToken": self.refreshToken,
         }
-        headers = {"Content-Type": "application/json"}
+
+        if self.deviceId:
+            data["deviceId"] = self.deviceId
+        if self.deviceInfo:
+            data["deviceInfo"] = self.deviceInfo
+        if self.oidc_access_token:
+            data["oidcAccessToken"] = self.oidc_access_token
+        if self.uid:
+            data["uid"] = self.uid
+
         try:
-            response = self.session.post(
-                url,
-                headers=headers,
-                json=payload,
-            )
+            response = self.session.post(url, headers=headers, data=data, timeout=10)
             response.raise_for_status()
             token_data = response.json()
             self.access_token = token_data.get("accessToken")
-            self.expires_at = time.time() + token_data.get("expiresIn", 0)
-            if print_token is not None:
-                self.logger.info(self.access_token)
-        except requests.exceptions.RequestException as e:
-            status_code = (
-                getattr(e.response, "status_code", None)
-                if hasattr(e, "response")
-                else None
+
+            # expiresIn may be epoch timestamp or seconds delta
+            raw_exp = token_data.get("expiresIn", 3600)
+            self.expires_at = (
+                float(raw_exp) if float(raw_exp) > time.time() else time.time() + float(raw_exp)
             )
+
+            if print_token:
+                self.logger.info("Access token refreshed: %s", self.access_token)
+
+        except requests.exceptions.RequestException as e:
+            status_code = getattr(e.response, "status_code", None) if hasattr(e, "response") else None
+            response_text = getattr(e.response, "text", None) if hasattr(e, "response") else None
             self.logger.error(
-                "Failed to refresh token",
-                extra={
-                    "status_code": status_code,
-                    "error_message": str(e),
-                    "url": url,
-                },
+                "Failed to refresh token (Status: %s): %s - Response: %s",
+                status_code,
+                e,
+                response_text,
             )
 
     def _make_api_call(
@@ -422,41 +437,48 @@ class NFLProAPI:
         print_url: bool | None = None,
         json: dict[str, Any] | None = None,
     ) -> dict[str, Any] | None:
-        """Centralized method to make a secured API call.
+        """Centralized method to make an authenticated NFL Pro API call.
 
         Args:
             endpoint_key (str): Key for the endpoint configuration.
             params (Dict[str, Any]): Query parameters for the API call.
             headers (Optional[Dict[str, Any]]): Custom headers.
-            print_url (Optional[bool]): Whether to print the URL.
-            json (Optional[Dict[str, Any]]): JSON payload for POST.
+            print_url (Optional[bool]): Whether to log the request URL.
+            json (Optional[Dict[str, Any]]): JSON payload for POST requests.
 
         Returns:
-            JSON response from the API, or None if error.
+            JSON response from the API as a dictionary, or None if error.
 
         """
+        # Ensure we have an unexpired access token
         if (
             not self.access_token
+            or not self.expires_at
             or self.expires_at <= time.time() + self.token_refresh_buffer
         ):
-            self.logger.info("Refreshing Token")
+            self.logger.info("Refreshing token before API call")
             self._refresh_token()
             if not self.access_token:
-                self.logger.warning("Failed to get a valid access token.")
+                self.logger.warning("Failed to obtain a valid access token.")
                 return None
 
         config = self.endpoints.get(endpoint_key, {})
         url = self.base_url + config.get("url", "")
 
         if print_url:
-            self.logger.info(url)
+            self.logger.info("Request URL: %s", url)
 
         default_headers = {
             "Authorization": f"Bearer {self.access_token}",
             "Accept": "application/json, text/plain, */*",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:147.0) Gecko/20100101 Firefox/147.0",
+            "Referer": "https://pro.nfl.com/",
+            "Origin": "https://pro.nfl.com",
         }
 
-        # Update default headers with optional headers, if any
+        if self.cookie:
+            default_headers["Cookie"] = self.cookie
+
         if headers:
             default_headers.update(headers)
 
@@ -467,41 +489,43 @@ class NFLProAPI:
                     headers=default_headers,
                     json=json,
                     params=params,
+                    timeout=15,
                 )
                 if json
                 else self.session.get(
                     url,
                     headers=default_headers,
                     params=params,
+                    timeout=15,
                 )
             )
             response.raise_for_status()
             return response.json()
-        except requests.exceptions.RequestException as e:
-            status_code = (
-                getattr(e.response, "status_code", None)
-                if hasattr(e, "response")
-                else None
-            )
-            response_text = (
-                getattr(e.response, "text", None) if hasattr(e, "response") else None
-            )
 
-            error = APIError(
-                message=str(e),
-                status_code=status_code,
-                endpoint=endpoint_key,
-                response_text=response_text,
-            )
+        except requests.exceptions.HTTPError as e:
+            status_code = getattr(e.response, "status_code", None)
+            response_text = getattr(e.response, "text", None)
+
+            # If 401 Unauthorized, force a refresh for subsequent calls
+            if status_code == 401:
+                self.logger.warning("Access token rejected (401). Invalidating cached token.")
+                self.access_token = None
+                self.expires_at = None
 
             self.logger.error(
-                "API request failed",
-                extra={
-                    "endpoint": error.endpoint,
-                    "status_code": error.status_code,
-                    "error_message": error.message,
-                    "url": url,
-                },
+                "API request failed for endpoint '%s' (Status: %s): %s - Response: %s",
+                endpoint_key,
+                status_code,
+                e,
+                response_text,
+            )
+            return None
+
+        except requests.exceptions.RequestException as e:
+            self.logger.error(
+                "Network or connection error for endpoint '%s': %s",
+                endpoint_key,
+                e,
             )
             return None
 

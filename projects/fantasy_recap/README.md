@@ -10,13 +10,23 @@ A Python CLI application built with `uv` that connects to your PostgreSQL footba
    uv sync
    ```
 
-## Usage
+## Interactive Streamlit Dashboard
 
-Run any SQL script from the `sql/` folder by passing its filename as an argument:
+Launch the interactive Free Agent, Roster Analytics, and Density Distribution Dashboard:
 
 ```bash
-uv run main.py <filename.sql>
+uv run streamlit run app.py
 ```
+
+### Dashboard Features
+- **My Roster:** View all players on your fantasy team, their positional breakdown, weekly averages, and floor/ceiling.
+- **Free Agent Explorer:** Filter and sort available free agents by key metrics (Target Share, Air Yards Share, WOPR, ADOT, Fantasy PPG, Projections) with an interactive Target Share vs. Air Yards opportunity map.
+- **Player Deep-Dive & Density Comparison:** Compare multiple players with overlaid **KDE density distribution curves**, **Box/Violin plots**, **Game Trajectory line charts**, and **Multi-Dimensional Radar charts** across receptions, total yards, air yards, ADOT, targets, and fantasy points.
+- **Waiver Swap Analyzer:** Select a player from your roster to drop and a free agent to add to calculate expected point/volume deltas and decision recommendations.
+
+---
+
+## Usage (CLI SQL Execution)
 
 ## Example: Reproducing Free Agent Projections
 

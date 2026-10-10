@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "shared"
+version = "0.1.0"
+description = "Shared football tools and utilities"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.34.0",
+    "pandas>=3.0.0",
+    "python-dotenv>=1.2.0",
+    "urllib3>=2.8.0",
+    "pydantic>=2.5.0",
+    "sqlalchemy>=2.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["nflpro", "models"]

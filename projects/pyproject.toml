@@ -41,4 +41,5 @@ max-nested-blocks = 3
 members = [
     "airflow",
     "fantasy_recap",
+    "coach_scrape",
 ]

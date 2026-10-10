@@ -1,0 +1,17 @@
+[project]
+name = "coach-scrape"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "pandas>=3.0.5",
+    "psycopg2-binary>=2.9.13",
+    "requests>=2.34.2",
+    "shared",
+    "urllib3>=2.8.0",
+]
+
+[tool.uv.sources]
+shared = { path = "../../shared", editable = true }
