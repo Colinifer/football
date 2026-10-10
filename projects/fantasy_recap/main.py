@@ -1,7 +1,8 @@
 import os
 import sys
-from dotenv import load_dotenv
+
 import pandas as pd
+from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 
 # Load .env from the parent football directory
@@ -41,7 +42,7 @@ def main():
         sys.exit(1)
 
     print(f"Reading SQL from {sql_path}...")
-    with open(sql_path, "r") as f:
+    with open(sql_path) as f:
         query = f.read()
 
     try:
